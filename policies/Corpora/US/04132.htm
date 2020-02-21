@@ -1,0 +1,2662 @@
+<!doctype html>
+<html id="top" lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Privacy policy | Northwest Power and Conservation Council</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"6356743070",applicationID:"122251770"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
+<link rel="shortcut icon" href="https://www.nwcouncil.org/sites/all/themes/nwc_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-180x180.png" rel="apple-touch-icon-precomposed" sizes="180x180" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57" />
+<link href="sites/all/themes/nwc_theme/apple-touch-icon.png" rel="apple-touch-icon-precomposed" />
+<meta name="og:url" content="https://www.nwcouncil.org/privacy-policy" />
+<meta name="og:title" content="Privacy policy" />
+<meta name="fb:app_id" content="355319631241" />
+<meta name="og:type" content="page" />
+<link rel="shortlink" href="/node/88" />
+<link rel="canonical" href="/privacy-policy" />
+<meta name="google-site-verification" content="UA-37762622-1" />
+  <link type="text/css" rel="stylesheet" href="https://www.nwcouncil.org/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.nwcouncil.org/sites/default/files/css/css_tGTNtRAsNJmcVz4r7F6YCijbrQGDbBmziHSrRd1Stqc.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.nwcouncil.org/sites/default/files/css/css_TxArBkqf_KoT5cskGXsMM4bMjCK8lcg34vHMqJit_rg.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.nwcouncil.org/sites/default/files/css/css_g6Rhqpnz9j5zNTQ431Dxh3qUk5TvKO2keM1XM4b9SQQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.nwcouncil.org/sites/default/files/css/css_QlvSEk1hwOYwGKdXp1O83jm2tLw0TM3W-kWZEx593rs.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://www.nwcouncil.org/sites/default/files/css/css_A8JnjnSRTsda48e9N7ARTCSjLKnCsJfFeMdxgz1mBts.css" media="print" />
+  <script type="text/javascript">document.documentElement.setAttribute('data-useragent', navigator.userAgent);</script>
+  <!--[if IE 7 ]> <script type="text/javascript">document.documentElement.className += ' ie7';</script> <![endif]-->
+  <!--[if IE 8 ]> <script type="text/javascript">document.documentElement.className += ' ie8';</script> <![endif]-->
+  <!--[if IE 9 ]> <script type="text/javascript">document.documentElement.className += ' ie9';</script> <![endif]-->
+  <script src="/sites/all/themes/boots/boots_core/js/modernizr.js"></script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-88 node-type-page" >
+  <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5PCCTKD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PCCTKD');</script>
+<!-- End Google Tag Manager --><div id="wrap">
+    
+<div class="accessibility-links">
+  <a class="skip-link" href="#main">Skip to main content</a>
+</div>
+
+<!-- Site Top -->
+
+<div id="page" class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="row">
+          <a class="site-logo" href="/">
+            <img src="/sites/all/themes/nwc_theme/logo.svg">          </a>
+          <div class="mobile-menu-toggles">
+            <div class="mobile-menu-toggles__search"></div>
+            <div class="mobile-menu-toggles__menu"></div>
+          </div>
+             <div data-type="region" data-name="header" class="">
+    <div class="container"><div class="row"><aside data-type="block" id="block-menu-header-menu" class="col-xs-12 col-sm-2 col-md-2 col-lg-2" data-module="menu" data-delta="header-menu">
+
+      <h2 class="block__title"  class="">Header Menu</h2>
+    
+    <div class="block__content">
+    <ul class="nav"><li class="first last collapsed"><a href="/contact">Contact</a></li>
+</ul>  </div>
+  </aside>
+<aside data-type="block" id="block-search-api-page-search" class="col-xs-12 col-sm-9 col-md-9 col-lg-9" data-module="search_api_page" data-delta="search">
+
+      <h2 class="block__title"  class="">Search</h2>
+    
+    <div class="block__content">
+    <form action="/privacy-policy" method="post" id="search-api-page-search-form-search" accept-charset="UTF-8"><div><div class="form-group form-item form-type-textfield form-item-keys-20">
+  <label class="sr-only" for="edit-keys-20">Enter your keywords </label>
+ <input placeholder="Enter your keywords" type="text" id="edit-keys-20" name="keys_20" value="" size="15" maxlength="128" class="form-control" />
+</div>
+<input type="hidden" name="id" value="20" />
+<input class="btn btn-default form-submit" type="submit" id="edit-submit-20" name="op" value="Search" /><input type="hidden" name="form_build_id" value="form--591QSwChrf2N1P6WdLh1FpGdxpc5HwAhqPVJ9CjpFI" />
+<input type="hidden" name="form_id" value="search_api_page_search_form_search" />
+</div></form>  </div>
+  </aside>
+</div></div>  </div>
+         </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+         <div data-type="region" data-name="header_bottom" class="">
+    <div class="container"><div class="row"><aside data-type="block" id="block-rich-menu-rich-menu-primary-menu" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="rich_menu" data-delta="rich-menu-primary-menu">
+
+      
+    <div class="block__content">
+    
+<div data-type="region-container" data-name="rich-menu">
+  <div class="container">
+    <div class="row">
+      <a tabindex="-1" data-type="toggle" data-name="toggle-mobile" class="toggle-mobile-menu menu-open" href="#mobile-menu"><span>Menu</span></a>
+      <div role="navigation" data-type="region" data-name="dropdown-menu">
+        <ul class="rich-menu">
+                      <li class="rich-menu__menu-link-item about"
+                          >
+                              <div class="menu-link-item__menu-bg"></div>
+                            <a href="#" class="menu-link-item__dropdown-toggle"></a>
+              <a
+                class="menu-link-item__link panel-link about"
+                data-path="about"
+                href="/about"
+              >
+                About              </a>
+              <div data-type="region" data-name="rich_menu" class="rich-menu-item" id="rich-menu-item-id-1">
+  <div class="rich-menu-item__inner">
+    <div class="container header">
+      <div class="row">
+        <div class="header__inner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+<!--            -->
+
+          <div class="header__bg-image">
+            <div class="bg-image__image" style="background-image: url(https://www.nwcouncil.org/sites/default/files/rock-creek-montana.jpg);"></div>
+          </div>
+
+                      <div class="header__text">
+              <h4>Integrating energy and the environment in the Columbia River Basin</h4>
+            </div>
+                                <div class="header__cta">
+              <a href="/about" class="btn">About the Council</a>            </div>
+                  </div>
+      </div>
+    </div>
+    <div class="container content" data-name="content" data-type="rich_menu" data-tiles-selector="688">
+            <div class="container"><div class="row"><aside data-type="block" id="block-bean-bean-link-100" class="bean-link-style bean-link col-xs-12 col-sm-6 col-md-6 col-lg-6" data-module="bean" data-delta="bean-link-100">
+
+      
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-link clearfix" about="/block/bean-link-100" typeof="">
+  <div class="content">
+    <ul class="linkbeanstyle"><li class="first"><a href="https://www.nwcouncil.org/about/mission-and-strategy">Mission and Strategy</a></li>
+<li><a href="https://www.nwcouncil.org/contact">Members and Staff</a></li>
+<li><a href="https://www.nwcouncil.org/about/bylaws">Bylaws</a></li>
+<li><a href="https://www.nwcouncil.org/about/policies">Policies</a></li>
+<li class="last"><a href="https://www.nwcouncil.org/about/careers">Careers / RFPs</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div></div>    </div>
+    <div class="container footer">
+      <div class="row">
+        <div class="block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </li>
+                      <li class="rich-menu__menu-link-item news"
+                          >
+                            <a href="#" class="menu-link-item__dropdown-toggle"></a>
+              <a
+                class="menu-link-item__link panel-link news"
+                data-path="news"
+                href="/news"
+              >
+                News              </a>
+              <div data-type="region" data-name="rich_menu" class="rich-menu-item" id="rich-menu-item-id-2">
+  <div class="rich-menu-item__inner">
+    <div class="container header">
+      <div class="row">
+        <div class="header__inner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+<!--            -->
+
+          <div class="header__bg-image">
+            <div class="bg-image__image" style="background-image: url(https://www.nwcouncil.org/sites/default/files/Screen%20Shot%202018-01-12%20at%2012.53.03%20PM.png);"></div>
+          </div>
+
+                      <div class="header__text">
+              <h4>See what the Council is up to.</h4>
+            </div>
+                                <div class="header__cta">
+              <a href="/news" class="btn">Read the latest news</a>            </div>
+                  </div>
+      </div>
+    </div>
+    <div class="container content" data-name="content" data-type="rich_menu" data-tiles-selector="689">
+            <div class="container"><div class="row"><aside data-type="block" id="block-bean-news-bean-link-1" class="bean-link-style bean-link col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="news-bean-link-1">
+
+      
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-link clearfix" about="/block/news-bean-link-1" typeof="">
+  <div class="content">
+    <ul class="linkbeanstyle"><li class="first"><a href="https://www.nwcouncil.org/news">Read All News</a></li>
+<li><a href="https://www.nwcouncil.org/news/press-resources">Press Resources</a></li>
+<li><a href="https://www.nwcouncil.org/news/newsletters">Newsletters</a></li>
+<li class="last"><a href="https://www.nwcouncil.org/news/international-columbia-river">International Columbia River</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+<aside data-type="block" id="block-bean-news-bean-link-2" class="bean-link-style bean-link col-xs-12 col-sm-8 col-md-8 col-lg-8" data-module="bean" data-delta="news-bean-link-2">
+
+      <h2 class="block__title"  class="">Explore News by Topic</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-link clearfix" about="/block/news-bean-link-2" typeof="">
+  <div class="content">
+    <ul class="linkbeanstyle"><li class="first"><a href="https://www.nwcouncil.org/news?topics%5B0%5D=Fish%20and%20wildlife">Fish and Wildlife Planning</a></li>
+<li><a href="https://www.nwcouncil.org/news?topics%5B0%5D=Fish%20and%20wildlife&amp;tags%5B0%5D=Salmon%20and%20Steelhead">Salmon and Steelhead</a></li>
+<li><a href="https://www.nwcouncil.org/news?topics%5B0%5D=Fish%20and%20wildlife&amp;tags%5B0%5D=Wildlife">Wildlife</a></li>
+<li><a href="https://www.nwcouncil.org/news?topics%5B0%5D=Energy">Energy Planning</a></li>
+<li><a href="https://www.nwcouncil.org/news?tags%5B0%5D=Energy%20Efficiency">Energy Efficiency</a></li>
+<li class="last"><a href="https://www.nwcouncil.org/">Demand Response</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div></div>    </div>
+    <div class="container footer">
+      <div class="row">
+        <div class="block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </li>
+                      <li class="rich-menu__menu-link-item fish-and-wildlife"
+                          >
+                            <a href="#" class="menu-link-item__dropdown-toggle"></a>
+              <a
+                class="menu-link-item__link panel-link fish-and-wildlife"
+                data-path="fish-and-wildlife"
+                href="/fish-and-wildlife"
+              >
+                Fish and Wildlife              </a>
+              <div data-type="region" data-name="rich_menu" class="rich-menu-item" id="rich-menu-item-id-3">
+  <div class="rich-menu-item__inner">
+    <div class="container header">
+      <div class="row">
+        <div class="header__inner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+<!--            -->
+
+          <div class="header__bg-image">
+            <div class="bg-image__image" style="background-image: url(https://www.nwcouncil.org/sites/default/files/milada-vigerova-35570.jpg);"></div>
+          </div>
+
+                      <div class="header__text">
+              <h4>The Council works to protect and enhance fish and wildlife in the Columbia River Basin. 
+Its Fish & Wildlife Program guides project funding by the Bonneville Power Administration.</h4>
+            </div>
+                                <div class="header__cta">
+              <a href="/fish-and-wildlife" class="btn">Fish &amp; Wildlife overview</a>            </div>
+                  </div>
+      </div>
+    </div>
+    <div class="container content" data-name="content" data-type="rich_menu" data-tiles-selector="690">
+            <div class="container"><div class="row"><aside data-type="block" id="block-bean-fw-bean-container-1" class="bean-container bean-container col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="fw-bean-container-1">
+
+      
+    <div class="block__content">
+    <div class="content" data-name="content" data-type="bean_container" data-tiles-selector="fw-bean-container-1"><div class="entity entity-bean bean-bean-container clearfix" about="/block/fw-bean-container-1" typeof="">
+  <div class="content">
+    <div class="container"><div class="row"><aside data-type="block" id="block-bean-fw-bean-menu-1" class="bean-menu-style bean-menu-block col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="fw-bean-menu-1">
+
+      <h2 class="block__title"  class=""><a href="https://www.nwcouncil.org/reports/2014-columbia-river-basin-fish-and-wildlife-program">The Fish and Wildlife Program</a></h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/fw-bean-menu-1" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first leaf"><a href="/fw/program/2018-amendments">Fish and Wildlife Program 2018/19 Amendment Process</a></li>
+<li class="leaf"><a href="/reports/2014-columbia-river-basin-fish-and-wildlife-program">2014 Columbia River Basin Fish and Wildlife Program</a></li>
+<li class="leaf"><a href="/subbasin-plans">Subbasin Plans</a></li>
+<li class="collapsed"><a href="/fish-and-wildlife/project-reviews-and-recommendations" title="">Project Reviews and Recommendations</a></li>
+<li class="last leaf"><a href="/fish-and-wildlife/fish-and-wildlife-program/amendment-process-part-1">Amendment Process (Part 1)</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div><div class="row"><aside data-type="block" id="block-bean-fish-and-wildlife-independen-221" class="bean-menu-style bean-menu-block col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="fish-and-wildlife-independen-221">
+
+      <h2 class="block__title"  class="">Independent Review Groups</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/fish-and-wildlife-independen-221" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first collapsed"><a href="/fish-and-wildlife/fw-independent-advisory-committees/independent-economic-advisory-board">Independent Economic Analysis Board (IEAB)</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-independent-advisory-committees/independent-scientific-advisory-board">Independent Scientific Advisory Board (ISAB)</a></li>
+<li class="last collapsed"><a href="/fish-and-wildlife/fw-independent-advisory-committees/independent-scientific-review-panel">Independent Scientific Review Panel (ISRP)</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div></div>  </div>
+</div>
+</div>  </div>
+  </aside>
+<aside data-type="block" id="block-bean-fw-bean-menu-3" class="bean-menu-style bean-menu-block col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="fw-bean-menu-3">
+
+      <h2 class="block__title"  class="">Forums and Workgroups</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/fw-bean-menu-3" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first leaf"><a href="/fish-and-wildlife/forums-and-workgroups/om-strategic-plan">Asset Management Subcommittee</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-forums-and-workgroups/ocean-and-plume-science-and-management-forum">Ocean and Plume Science and Management Forum</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-forums-and-workgroups/regional-coordination">Regional Coordination</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-forums-and-workgroups/science-policy-exchange">Science and Policy Exchange</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-forums-and-workgroups/toxic-workgroup" title="">Toxics Workgroup</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/forums-and-workgroups/rme">Columbia Basin Research, Monitoring and Evaluation Workgroup</a></li>
+<li class="last leaf"><a href="/fish-and-wildlife/forums-and-workgroups/hatchery">Informal Hatchery Workgroup</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+<aside data-type="block" id="block-bean-fw-bean-menu-4" class="bean-menu-style bean-menu-block col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="fw-bean-menu-4">
+
+      <h2 class="block__title"  class="">Topics</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/fw-bean-menu-4" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first collapsed"><a href="/fish-and-wildlife/fw-topics/adaptive-management" title="">Adaptive Management</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/topics/reintroduction-anadromous-fish-above-chief-joseph-and-grand-coulee">Anadromous Fish Mitigation</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-topics/blocked-area-mitigation">Blocked Areas</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/topics/high-level-implementation-indicators">High-level Indicators</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/topics/invasive-species">Invasive and Non-Native Species</a></li>
+<li class="collapsed"><a href="/fish-and-wildlife/fw-topics/predation" title="">Predation</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-topics/protected-areas">Protected Areas</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-topics/research-plan-updates">Research Plan</a></li>
+<li class="collapsed"><a href="/fish-and-wildlife/resource-tools-and-maps">Resource Tools and Maps</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/topics/sealions" title="&quot;Freshwater Slaughter&quot; story of sea lions&#039; effect on salmon runs">Sea Lions</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/topics/sockeye">Sockeye</a></li>
+<li class="leaf"><a href="/fish-and-wildlife/fw-topics/white-sturgeon">Sturgeon</a></li>
+<li class="last leaf"><a href="/fish-and-wildlife/topics/pike-problem" title="About invasive pike">The Pike Problem</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div></div>    </div>
+    <div class="container footer">
+      <div class="row">
+        <div class="block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </li>
+                      <li class="rich-menu__menu-link-item energy"
+                          >
+                            <a href="#" class="menu-link-item__dropdown-toggle"></a>
+              <a
+                class="menu-link-item__link panel-link energy"
+                data-path="energy"
+                href="/energy"
+              >
+                Energy              </a>
+              <div data-type="region" data-name="rich_menu" class="rich-menu-item" id="rich-menu-item-id-4">
+  <div class="rich-menu-item__inner">
+    <div class="container header">
+      <div class="row">
+        <div class="header__inner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+<!--            -->
+
+          <div class="header__bg-image">
+            <div class="bg-image__image" style="background-image: url(https://www.nwcouncil.org/sites/default/files/power-tower-lightning.jpg);"></div>
+          </div>
+
+                      <div class="header__text">
+              <h4>The Council develops a plan, updated every five years, to ensure the region’s power supply and acquire cost-effective energy efficiency.</h4>
+            </div>
+                                <div class="header__cta">
+              <a href="/energy" class="btn">Energy overview</a>            </div>
+                  </div>
+      </div>
+    </div>
+    <div class="container content" data-name="content" data-type="rich_menu" data-tiles-selector="1182">
+            <div class="container"><div class="row"><aside data-type="block" id="block-bean-bean-container-2511" class="bean-container bean-container col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="bean-container-2511">
+
+      
+    <div class="block__content">
+    <div class="content" data-name="content" data-type="bean_container" data-tiles-selector="bean-container-2511"><div class="entity entity-bean bean-bean-container clearfix" about="/block/bean-container-2511" typeof="">
+  <div class="content">
+    <div class="container"><div class="row"><aside data-type="block" id="block-bean-the-seventh-northwest-power-2520" class="bean-menu-style bean-menu-block col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="the-seventh-northwest-power-2520">
+
+      <h2 class="block__title"  class="">THE NORTHWEST POWER PLAN</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/the-seventh-northwest-power-2520" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first leaf"><a href="/2021-northwest-power-plan">The 2021 Northwest Power Plan</a></li>
+<li class="leaf"><a href="/energy/7th-northwest-power-plan/about-seventh-power-plan">The Seventh Power Plan</a></li>
+<li class="last leaf"><a href="/power-planning">Planning Process and Past Power Plans</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div><div class="row"><aside data-type="block" id="block-bean-technical-tools-and-models-2525" class="bean-menu-style bean-menu-block col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="technical-tools-and-models-2525">
+
+      <h2 class="block__title"  class="">TECHNICAL TOOLS AND MODELS</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/technical-tools-and-models-2525" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first leaf"><a href="/regional-portfolio-model">Regional Portfolio Model</a></li>
+<li class="last leaf"><a href="/energy/energy-advisory-committees/system-analysis-advisory-committee/genesys-%E2%80%93-generation-evaluation-system-model">Generation Evaluation System Model (GENESYS)</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div></div>  </div>
+</div>
+</div>  </div>
+  </aside>
+<aside data-type="block" id="block-bean-energy-advisory-committees-2487" class="bean-menu-style bean-menu-block col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="energy-advisory-committees-2487">
+
+      <h2 class="block__title"  class=""><a href="https://www.nwcouncil.org/energy/advisorycommittees">Energy Advisory Committees</a></h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/energy-advisory-committees-2487" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first leaf"><a href="/energy/energy-advisory-committees/conservation-resources-advisory-committee">Conservation Resources Advisory Committee</a></li>
+<li class="leaf"><a href="/energy/energy-advisory-committees/demand-forecast-advisory-committee">Demand Forecast Advisory Committee</a></li>
+<li class="leaf"><a href="/energy/energy-advisory-committees/demand-response-advisory-committee">Demand Response Advisory Committee</a></li>
+<li class="leaf"><a href="/energy/energy-advisory-committees/generating-resources-advisory-committee">Generating Resources Advisory Committee</a></li>
+<li class="leaf"><a href="/energy/energy-advisory-committees/natural-gas-advisory-committee">Natural Gas Advisory Committee</a></li>
+<li class="leaf"><a href="/energy/energy-advisory-committees/resource-adequacy-advisory-committee">Resource Adequacy Advisory Committee</a></li>
+<li class="leaf"><a href="/energy/energy-advisory-committees/system-analysis-advisory-committee">System Analysis Advisory Committee</a></li>
+<li class="leaf"><a href="/energy/regional-technical-forum">Regional Technical Forum</a></li>
+<li class="leaf"><a href="/energy/energy-advisory-committees/rtf-policy-advisory-committee">RTF Policy Advisory Committee</a></li>
+<li class="leaf"><a href="/system-integration-forum" title="">System Integration Forum</a></li>
+<li class="last leaf"><a href="/energy/energy-advisory-committees/resource-strategies-advisory-committee">Resource Strategies Advisory Committee (Not Active)</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+<aside data-type="block" id="block-bean-bean-container-2489" class="bean-container bean-container col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="bean-container-2489">
+
+      
+    <div class="block__content">
+    <div class="content" data-name="content" data-type="bean_container" data-tiles-selector="bean-container-2489"><div class="entity entity-bean bean-bean-container clearfix" about="/block/bean-container-2489" typeof="">
+  <div class="content">
+    <div class="container"><div class="row"><aside data-type="block" id="block-bean-energy-topics-2506" class="bean-menu-style bean-menu-block col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="energy-topics-2506">
+
+      <h2 class="block__title"  class="">Energy Topics</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/energy-topics-2506" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first leaf"><a href="/energy/energy-topics/energy-efficiency">Energy Efficiency</a></li>
+<li class="leaf"><a href="/energy/energy-topics/demand-response">Demand Response</a></li>
+<li class="collapsed"><a href="/energy/energy-topics/power-supply">Power Supply</a></li>
+<li class="leaf"><a href="/energy/energy-topics/resource-adequacy">Resource Adequacy</a></li>
+<li class="leaf"><a href="/energy/energy-topics/energy-storage">Energy Storage</a></li>
+<li class="last leaf"><a href="/energy/energy-topics/hydropower">Hydropower</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div><div class="row"><aside data-type="block" id="block-bean-energy-forums-and-workgroup-2497" class="bean-menu-style bean-menu-block col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="energy-forums-and-workgroup-2497">
+
+      <h2 class="block__title"  class="">Energy Forums and Workgroups</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-menu-block clearfix" about="/block/energy-forums-and-workgroup-2497" typeof="">
+  <div class="content">
+    <ul class="nav"><li class="first leaf"><a href="/energy/energy-topics/demand-response/pacific-northwest-demand-response-project">Pacific NW Demand Response Project</a></li>
+<li class="last leaf"><a href="/energy/energy-forums-and-workgroups/northwest-wind-integration-forum" title="">Northwest Wind Integration Forum (Archive)</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+</div></div>  </div>
+</div>
+</div>  </div>
+  </aside>
+</div></div>    </div>
+    <div class="container footer">
+      <div class="row">
+        <div class="block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </li>
+                      <li class="rich-menu__menu-link-item meetings"
+                          >
+                            <a href="#" class="menu-link-item__dropdown-toggle"></a>
+              <a
+                class="menu-link-item__link panel-link meetings"
+                data-path="meetings"
+                href="/calendar"
+              >
+                Meetings              </a>
+              <div data-type="region" data-name="rich_menu" class="rich-menu-item" id="rich-menu-item-id-5">
+  <div class="rich-menu-item__inner">
+    <div class="container header">
+      <div class="row">
+        <div class="header__inner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+<!--            -->
+
+          <div class="header__bg-image">
+            <div class="bg-image__image" ></div>
+          </div>
+
+                                <div class="header__cta">
+              <a href="/calendar" class="btn"></a>            </div>
+                  </div>
+      </div>
+    </div>
+    <div class="container content" data-name="content" data-type="rich_menu" data-tiles-selector="692">
+            <div class="container"><div class="row"><aside data-type="block" id="block-nwc-meeting-nwc-meeting-calendar-promotion" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="nwc_meeting" data-delta="nwc_meeting_calendar_promotion">
+
+      
+    <div class="block__content">
+    <div class='calendar-promo'>
+
+      <a class="next-meeting" href="/meeting/council-meeting-february-11-2020">
+      <img class="calendar-icon" src="/sites/all/themes/nwc_theme/images/icons/calendar-o--white.svg"/>
+      <span class="next-meeting__text">See next Council meeting</span>
+      <span class="next-meeting__date">February 11 - 12, 2020 in Portland &rsaquo;</span>
+    </a>
+  
+    
+
+  <a class="previous-meeting" href="/calendar">
+    <img class="calendar-icon" src="/sites/all/themes/nwc_theme/images/icons/calendar-o--white.svg"/>
+    <span>See all meetings &rsaquo;</span>
+  </a>
+  
+</div>
+  </div>
+  </aside>
+</div><div class="row"><aside data-type="block" id="block-bean-meeting-bean-rte-2" class="bean-rte-rte col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="meeting-bean-rte-2">
+
+      
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-rte-rte clearfix" about="/block/meeting-bean-rte-2" typeof="">
+  <div class="content">
+    <div class="field field-name-field-description field-type-text-long field-label-hidden c">
+        <p><a href="/" class="cta">View all council meetings</a> <a href="/calendar" class="cta">View full calendar</a></p>  </div>
+  </div>
+</div>
+  </div>
+  </aside>
+</div><div class="row"><aside data-type="block" id="block-bean-nwc-cal-bean-4612" class="bean-calendar col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="nwc-cal-bean-4612">
+
+      
+    <div class="block__content">
+    <div class="entity entity-bean bean-nwc-cal-bean clearfix" about="/block/nwc-cal-bean-4612" typeof="">
+  <div class="content">
+    <div class="calendar-tile-wrapper">
+  <div class="calendar-tile-header">
+    <div class="calendar-tile-header-inner">
+      <h4 class="calendar-tile-title">Recent and Upcoming Meetings</h4>
+
+      <div class="calendar-tile-navigation">
+        <a href="#" class="calendar-tile-navigation-prev"><span>Previous</span></a>
+        <span class="calendar-tile-navigation-help">Swipe left or right</span>
+        <a href="#" class="calendar-tile-navigation-next"><span>Next</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="calendar-tile-content">
+    <div class="calendar-tile-content-inner">
+      <ul class="calendar-tile-content-nodes">
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jul 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">23</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-july-23-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: July 23, 2019</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jul 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">25</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/conservation-resources-adv-committee-2021-power-plan-july-25-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Conservation Resources Adv. Committee - 2021 Power Plan</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">12</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/regional-coordination-forum-august-12-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:00 pm&mdash;5:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Regional Coordination Forum</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">13</span>
+                                          - <span class="date-end">14</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-august-13-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">13</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/public-hearing-proposed-amendments-fish-and-wildlife-program-august-13-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:00 pm&mdash;6:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Public Hearing on Proposed Amendments to the Fish and Wildlife Program</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">20</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/grac_saac_2019_0820" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;3:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Generating Resources / System Analysis Advisory Committees meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">21</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/demand-response-advisory-committee-august-21-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:45 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Demand Response Advisory Committee</span>
+                  </a>
+                                  <a href="/meeting/public-hearing-proposed-amendments-fish-and-wildlife-program-august-21-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:00 pm&mdash;6:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Public Hearing on Proposed Amendments to the Fish and Wildlife Program</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">22</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/public-hearing-proposed-amendments-fish-and-wildlife-program-august-22-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:00 pm&mdash;6:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Public Hearing on Proposed Amendments to the Fish and Wildlife Program</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">26</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/resource-adequacy-advisory-committee-technical-committee-august-26-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:30 pm&mdash;3:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Resource Adequacy Advisory Committee - Technical Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">27</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-august-27-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: August 27, 2019</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Aug 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Fri</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">30</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/raac-steering-committee-webinar-august-30-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">10:00 am&mdash;11:00 am</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RAAC Steering Committee WEBINAR</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Sep 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">10</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/demand-forecast-advisory-committee-september-10-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;12:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Demand Forecast Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Sep 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">11</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/rtf-policy-advisory-committee-meeting-september-11-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;12:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Policy Advisory Committee Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Sep 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">12</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/columbia-basin-habitat-rme-strategy-webinar-september-12-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">12:00 pm&mdash;1:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Columbia Basin Habitat RM&E Strategy Webinar</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Sep 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">17</span>
+                                          - <span class="date-end">18</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-september-17-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Sep 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">17</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/public-hearing-proposed-amendments-fish-and-wildlife-program-september-17-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:00 pm&mdash;6:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Public Hearing on Proposed Amendments to the Fish and Wildlife Program</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Sep 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">24</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-september-24-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: September 24, 2019</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Sep 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">25</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/generating-resources-advisory-committee-september-25-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;3:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Generating Resources Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Sep 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">30</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/public-hearing-proposed-amendments-fish-and-wildlife-program-september-30-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:00 pm&mdash;6:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Public Hearing on Proposed Amendments to the Fish and Wildlife Program</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">01</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/demand-response-adv-comm-webinar-draft-residential-dr-product-assumptions-october-1-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">10:00 am&mdash;12:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Demand Response Adv. Comm. Webinar - Draft Residential DR Product Assumptions</span>
+                  </a>
+                                  <a href="/meeting/columbia-basin-habitat-rme-strategy-workshop-1-october-1-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:30 pm&mdash;4:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Columbia Basin Habitat RM&E Strategy Workshop #1</span>
+                  </a>
+                                  <a href="/meeting/public-hearing-proposed-amendments-fish-and-wildlife-program-october-1-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:00 pm&mdash;6:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Public Hearing on Proposed Amendments to the Fish and Wildlife Program</span>
+                  </a>
+                                  <a href="/meeting/public-hearing-proposed-amendments-fish-and-wildlife-program-october-1-2019-0" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:00 pm&mdash;6:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Public Hearing on Proposed Amendments to the Fish and Wildlife Program</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">08</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/large-group-technical-consultation-fish-and-wildlife-program-october-8-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:00 pm&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Large-group Technical Consultation on the Fish and Wildlife Program</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">15</span>
+                                          - <span class="date-end">16</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-october-15-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">15</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/public-hearing-proposed-amendments-fish-and-wildlife-program-october-15-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:00 pm&mdash;6:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Public Hearing on Proposed Amendments to the Fish and Wildlife Program</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">22</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-october-22-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: October 22, 2019</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">23</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/columbia-basin-habitat-rme-strategy-workshop-boise-id-october-23-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;12:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Columbia Basin Habitat RM&E Strategy Workshop-Boise</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">24</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/conservation-resources-advisory-committee-october-24-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Conservation Resources Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">28</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/columbia-basin-habitat-rme-strategy-workshop-dalles-october-28-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;12:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Columbia Basin Habitat RM&E Strategy Workshop - The Dalles</span>
+                  </a>
+                                  <a href="/meeting/hatchery-workgroup-october-28-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:00 pm&mdash;3:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Informal Hatchery Workgroup</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">29</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/generating-resources-advisory-committee-october-29-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Generating Resources Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Oct 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">30</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/demand-response-advisory-committee-october-30-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:45 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Demand Response Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Nov 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">06</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/system-analysis-advisory-committee-november-6-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;2:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">System Analysis Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Nov 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">12</span>
+                                          - <span class="date-end">13</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-november-12-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Nov 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">13</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/columbia-basin-habitat-rme-strategy-workshop-portland-november-13-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:00 pm&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Columbia Basin Habitat RM&E Strategy Workshop - Portland</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Nov 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">14</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/proposal-form-webinar-resident-fish-and-sturgeon-reivew-november-14-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;11:00 am</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Proposal Form Webinar - Resident Fish and Sturgeon Review</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Nov 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">18</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/columbia-basin-habitat-rme-strategy-workshop-wenatchee-november-18-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">12:30 pm&mdash;3:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Columbia Basin Habitat RM&E Strategy Workshop - Wenatchee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Nov 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">19</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-november-19-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: November 19, 2019</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">04</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/conservation-resources-advisory-committee-december-4-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;2:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Conservation Resources Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">05</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/proposal-form-webinar-resident-fish-and-sturgeon-review-december-5-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;11:00 am</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Proposal Form Webinar - Resident Fish and Sturgeon Review</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Fri</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">06</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/generating-resources-advisory-committee-december-6-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Generating Resources Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">10</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-december-10-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting via Webinar</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">12</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/demand-response-advisory-committee-december-12-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Demand Response Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">16</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/2019-12-modernizing-columbia-river-treaty" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">5:30 pm&mdash;7:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Town Hall Meeting on Modernizing the Columbia River Treaty</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">17</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-december-17-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: December 17, 2019</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">18</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/natural-gas-advisory-comm-webinar-december-18-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;12:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Natural Gas Advisory Comm. Webinar</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Dec 2019</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">19</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/system-analysis-advisory-comm-webinar-december-19-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:30 pm&mdash;4:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">System Analysis Advisory Comm. WEBINAR</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jan 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">07</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/generating-resource-advisory-committee-january-7-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;12:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Generating Resource Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jan 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">08</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/program-goals-and-objectives-workshop-january-8-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">10:00 am&mdash;5:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Program Goals and Objectives Workshop</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jan 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">09</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/program-goals-and-objectives-workgroup-january-9-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">8:30 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Program Goals and Objectives Workgroup</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jan 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">14</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-january-14-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node calendar-tile-content-nodes-node-active ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jan 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">22</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/wednesday-january-22-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: January 22, 2020</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jan 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">23</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/system-analysis-advisory-comm-webinar-january-23-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:00 pm&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">System Analysis Advisory Comm. </span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jan 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">29</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/conservation-resources-advisory-committee-january-29-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Conservation Resources Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jan 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">30</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/demand-forecast-advisory-committee-webinar-january-30-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:30 pm&mdash;4:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Demand Forecast Advisory Committee Webinar</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Feb 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">10</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/salmon-and-steelhead-strategy-performance-indicator-workshop-february-10-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">8:30 am&mdash;4:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">1st Salmon and Steelhead Strategy Performance Indicator Workshop</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Feb 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">11</span>
+                                          - <span class="date-end">12</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-february-11-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Feb 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">12</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/resident-fish-and-sturgeon-strategy-performance-indicator-workshop-february-12-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">1:00 pm&mdash;4:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Resident Fish and Sturgeon Strategy Performance Indicator Workshop</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Feb 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">19</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-february-19-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: February 19, 2020</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Feb 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">20</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/demand-response-advisory-committee-february-20-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Demand Response Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Feb 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Thu</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">27</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/generating-resources-advisory-committee-february-27-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 pm&mdash;12:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Generating Resources Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Mar 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">10</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/sif-2021-power-plan-scenario-review-march-10-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">SIF: 2021 Power Plan Scenario Review</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Mar 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Fri</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">13</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/rtf-policy-advisory-committee-meeting-march-11-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;3:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Policy Advisory Committee Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Mar 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">16</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/2nd-salmon-and-steelhead-strategy-performance-indicator-workshop-march-16-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">8:30 am&mdash;4:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">2nd Salmon and Steelhead Strategy Performance Indicator Workshop</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Mar 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">17</span>
+                                          - <span class="date-end">18</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-march-17-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Mar 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">18</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/lamprey-strategy-performance-indicator-workshop-march-18-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">8:30 am&mdash;4:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Lamprey Strategy Performance Indicator Workshop</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Mar 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">24</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-march-24-2019" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: March 24, 2019</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Mar 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">31</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/conservation-resources-advisory-committee-march-31-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:30 am&mdash;3:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Conservation Resources Advisory Committee</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Apr 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Mon</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">13</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/3rd-salmon-and-steelhead-strategy-performance-indicator-workshop-april-13-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">8:30 am&mdash;4:30 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">3rd Salmon and Steelhead Strategy Performance Indicator Workshop</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Apr 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">14</span>
+                                          - <span class="date-end">15</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-april-14-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Apr 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">21</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-april-21-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: April 21, 2020</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">May 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">12</span>
+                                          - <span class="date-end">13</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-may-12-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">May 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">19</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-may-19-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: May 19, 2020</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jun 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Fri</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">05</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/rtf-policy-advisory-committee-meeting-june-5-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;3:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Policy Advisory Committee Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jun 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">16</span>
+                                          - <span class="date-end">17</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-june-16-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jun 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">23</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="http://rtf.nwcouncil.org/meeting/rtf-meeting-june-23-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                          <span class="calendar-tile-content-nodes-node-meetings-meeting-title-time">9:00 am&mdash;4:00 pm</span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">RTF Meeting: June 23, 2020</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+                  <li class="calendar-tile-content-nodes-node ">
+                        <article class="node-type-meeting view-mode-calendar">
+              <div class="calendar-tile-content-nodes-node-date">
+                  <span class="calendar-tile-content-nodes-node-date-month">
+                      <span class="date-start">Jul 2020</span>
+                                      </span>
+                <span class="calendar-tile-content-nodes-node-date-day">
+                    <span class="date-start">Tue</span>
+                                      <span class="date-end">Wed</span>
+                                  </span>
+                <span class="calendar-tile-content-nodes-node-date-date">
+                  <span class="date-start">14</span>
+                                          - <span class="date-end">15</span>
+                                      </span>
+              </div>
+              <div class="calendar-tile-content-nodes-node-meetings">
+                                  <a href="/meeting/council-meeting-july-2020" class="calendar-tile-content-nodes-node-meetings-meeting calendar-tile-content-nodes-node-meetings-meeting-subcommittee">
+                    <span class="icon-icon_bullet_calendar"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                        <span class="calendar-tile-content-nodes-node-meetings-meeting-title">Council Meeting</span>
+                  </a>
+                              </div>
+            </article>
+            
+          </li>
+              </ul>
+
+      <div class="calendar-tile-content-actions">
+        <a href="/calendar?type[0]=Council%20meetings" class="calendar-tile-content-actions-view">View Council Meetings</a>
+        <a href="/calendar" class="calendar-tile-content-actions-view">View all Meetings</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+  </aside>
+</div></div>    </div>
+    <div class="container footer">
+      <div class="row">
+        <div class="block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </li>
+                      <li class="rich-menu__menu-link-item reports-and-documents"
+                          >
+                              <div class="menu-link-item__menu-bg"></div>
+                            <a href="#" class="menu-link-item__dropdown-toggle"></a>
+              <a
+                class="menu-link-item__link panel-link reports-and-documents"
+                data-path="reports-and-documents"
+                href="/reports"
+              >
+                Reports and Documents              </a>
+              <div data-type="region" data-name="rich_menu" class="rich-menu-item" id="rich-menu-item-id-6">
+  <div class="rich-menu-item__inner">
+    <div class="container header">
+      <div class="row">
+        <div class="header__inner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+<!--            -->
+
+          <div class="header__bg-image">
+            <div class="bg-image__image" ></div>
+          </div>
+
+                      <div class="header__text">
+              <h4>Browse reports and documents relevant to the Council's work on fish and wildlife and energy planning, as well as administrative reports.</h4>
+            </div>
+                                <div class="header__cta">
+              <a href="/reports" class="btn">Browse reports</a>            </div>
+                  </div>
+      </div>
+    </div>
+    <div class="container content" data-name="content" data-type="rich_menu" data-tiles-selector="693">
+            <div class="container"><div class="row"><aside data-type="block" id="block-bean-report-bean-link-1" class="bean-link-style bean-link col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="report-bean-link-1">
+
+      <h2 class="block__title"  class="">Reports by Topic</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-link clearfix" about="/block/report-bean-link-1" typeof="">
+  <div class="content">
+    <ul class="linkbeanstyle"><li class="first"><a href="https://www.nwcouncil.org/reports/seventh-power-plan">Power Plan</a></li>
+<li><a href="https://www.nwcouncil.org/reports/2014-columbia-river-basin-fish-and-wildlife-program">Fish and Wildlife Program</a></li>
+<li><a href="https://www.nwcouncil.org/subbasin-plans">Subbasin Plans</a></li>
+<li><a href="https://www.nwcouncil.org/reports?tags%5B0%5D=Financial%20Reports">Financial Reports</a></li>
+<li><a href="https://www.nwcouncil.org/fish-and-wildlife/fw-independent-advisory-committees/independent-scientific-advisory-board">Independent Scientific Advisory Board</a></li>
+<li><a href="https://www.nwcouncil.org/fish-and-wildlife/fw-independent-advisory-committees/independent-scientific-review-panel">Independent Scientific Review Panel</a></li>
+<li class="last"><a href="https://www.nwcouncil.org/fish-and-wildlife/fw-independent-advisory-committees/independent-economic-advisory-board">Independent Economic Analysis Board</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+<aside data-type="block" id="block-bean-report-bean-container-1" class="bean-container bean-container col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="report-bean-container-1">
+
+      
+    <div class="block__content">
+    <div class="content" data-name="content" data-type="bean_container" data-tiles-selector="report-bean-container-1"><div class="entity entity-bean bean-bean-container clearfix" about="/block/report-bean-container-1" typeof="">
+  <div class="content">
+    <div class="container"><div class="row"><aside data-type="block" id="block-bean-report-bean-link-3" class="bean-link-style bean-link col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="bean" data-delta="report-bean-link-3">
+
+      <h2 class="block__title"  class=""><a href="https://www.nwcouncil.org/reports/columbia-river-history">Columbia River History Project</a></h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-link clearfix" about="/block/report-bean-link-3" typeof="">
+  <div class="content">
+      </div>
+</div>
+  </div>
+  </aside>
+</div></div>  </div>
+</div>
+</div>  </div>
+  </aside>
+</div></div>    </div>
+    <div class="container footer">
+      <div class="row">
+        <div class="block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </li>
+                  </ul>
+        <div class="dismss-nav">Close</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  </aside>
+</div></div>  </div>
+     </div>
+    <div class="header__menu-dropdown-spacer">
+      <div class="menu-dropdown-spacer__bg-images"></div>
+    </div>
+  </div>
+
+  <!-- Console Messages -->
+  
+  
+    <!-- Content Top -->
+    <div data-type="region" data-name="content_top" class="">
+    <div class="container"><div class="row"><aside data-type="block" id="block-ombucleanup-page-title" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="ombucleanup" data-delta="page_title">
+
+      
+    <div class="block__content">
+    <div class="page-title-banner">
+  <div class="page-title-banner__text-wrapper">
+    <h1 class="page-title">Privacy policy</h1>
+
+    
+    <!-- News fields -->
+
+    
+    <!-- Report fields -->
+
+    
+    <!-- Meeting fields -->
+
+    
+    <!-- Contact fields -->
+
+    
+  </div>
+
+  </div>
+
+  </div>
+  </aside>
+</div><div class="row"><aside data-type="block" id="block-nwc-base-nwc-base-social-share" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="nwc_base" data-delta="nwc_base_social_share">
+
+      <h2 class="block__title"  class="">Share</h2>
+    
+    <div class="block__content">
+    <div class="addthis_inline_share_toolbox"></div>  </div>
+  </aside>
+</div></div>  </div>
+  
+  
+  
+  <div data-type="region-container" data-name="core" class="content-main" id="content-main">
+    <div class="container">
+      <div class="row">
+
+        <!-- Sidebar First-->
+        
+        <!-- Main Content -->
+                <div id="main" class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+            <div data-type="region" data-name="content" class="">
+    <div class="container"><div class="row"><aside data-type="block" id="block-system-main" class="tile col-xs-12 col-sm-12 col-md-12 col-lg-12" data-module="system" data-delta="main" data-width="12" data-offset="0" data-width-default="12">
+
+      
+    <div class="block__content">
+    <article class="node node-page" about="/privacy-policy" typeof="foaf:Document">
+
+      <span property="dc:title" content="Privacy policy" class="rdf-meta element-hidden"></span>
+  
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden c">
+        <p>Information We Collect</p>
+
+<ul><li>When you visit our website to read pages or download information, we automatically collect and store information about devices you use to access our website such as hardware, operating system and device identifiers.  We also collect and store search queries, internet protocol address, browser type, internet addresses that link to our website, your activities on our site along with date and time stamps. </li></ul><p>How we use the Information we collect</p>
+
+<ul><li>We use the data information collected, in aggregate form, to measure the amount of traffic we receive to different sections of our website and to make the site more useful to visitors.  We also collect information and monitor network traffic for website security purposes. </li><li>We do not share any information we collect with anyone beyond Council and Council staff except when required by law or Council policy or to maintain or improve website functionality.</li></ul><p>If You Subscribe to Council newsletters or news feeds</p>
+
+<ul><li>If you choose to subscribe to Council newsletters or news feeds, your email address is used only for that purpose by Council email services, and every email to you includes a clear “Unsubscribe” link. </li></ul><p>Links to Third-Party Websites</p>
+
+<ul><li>This website contains links to other sites.  Please be aware that we are not responsible for the content or privacy practices of such other sites.  Once you navigate to another site, you are subject to the privacy policies of the new site. </li></ul><p>Council’s Social Media Presence</p>
+
+<ul><li>Any interactions with the Council through social media (Facebook, LinkedIn, etc.) are subject to the privacy settings of each social media platform. </li></ul><p>Limitation of Liability</p>
+
+<ul><li>No content provided on the site is to be construed as legal, professional or financial advice.</li></ul>  </div>
+
+  
+  
+</article>
+  </div>
+  </aside>
+</div></div>  </div>
+        </div>
+        
+        <!-- Sidebar Second -->
+        
+        <!-- Sidebar Second Nav-->
+              </div>
+    </div>
+  </div>
+
+  <!-- Content Bottom -->
+  
+  <!-- Sections -->
+  
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer__top">
+         <div data-type="region" data-name="footer" class="">
+    <div class="container"><div class="row"><aside data-type="block" id="block-nwc-base-nwc-base-signup" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="nwc_base" data-delta="nwc_base_signup">
+
+      <h2 class="block__title"  class="">Sign up for our Newsletter</h2>
+    
+    <div class="block__content">
+    <!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+  <form action="https://nwcouncil.us4.list-manage.com/subscribe/post?u=258727a20b735ffdbd1dd8093&amp;id=4c220054c7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+      <div id="mc_embed_signup_scroll">
+        <div class="mc-field-group">
+          <input type="email" value="" required="" name="EMAIL" placeholder="Email address" class="required email" id="mce-EMAIL">
+        </div>
+        <div class="mc-field-group">
+          <input type="text" value="" name="FNAME" placeholder="First name (optional)" class="" id="mce-FNAME">
+        </div>
+        <div class="mc-field-group">
+          <input type="text" value="" name="LNAME" placeholder="Last name (optional)" class="" id="mce-LNAME">
+        </div>
+        <div class="mc-field-group input-group">
+          <ul>
+            <li><input type="checkbox" value="8" name="group[19085][8]" id="mce-group[19085]-19085-0"><label for="mce-group[19085]-19085-0">Spotlight</label></li>
+            <li><input type="checkbox" value="64" name="group[19085][64]" id="mce-group[19085]-19085-1"><label for="mce-group[19085]-19085-1">Council meeting notifications</label></li>
+          </ul>
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_258727a20b735ffdbd1dd8093_4c220054c7" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+  </form>
+</div>
+<!--End mc_embed_signup-->  </div>
+  </aside>
+<aside data-type="block" id="block-bean-footer-contact" class="bean-link-style bean-link col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="footer-contact">
+
+      <h2 class="block__title"  class=""><a href="https://www.nwcouncil.org/contact">Contact</a></h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-bean-link clearfix" about="/block/footer-contact" typeof="">
+  <div class="content">
+    <ul class="linkbeanstyle"><li class="first"><a href="https://www.nwcouncil.org/central-office">Central Office</a></li>
+<li><a href="https://www.nwcouncil.org/contact/idaho-office">Idaho Office</a></li>
+<li><a href="https://www.nwcouncil.org/contact/montana-office">Montana Office</a></li>
+<li><a href="https://www.nwcouncil.org/contact/oregon-office">Oregon Office</a></li>
+<li><a href="https://www.nwcouncil.org/contact/washington-office">Washington Office</a></li>
+<li class="last"><a href="https://www.nwcouncil.org/contact/council-members">Council Members</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </aside>
+<aside data-type="block" id="block-bean-footer-social" class="sociallinks col-xs-12 col-sm-4 col-md-4 col-lg-4" data-module="bean" data-delta="footer-social">
+
+      <h2 class="block__title"  class="">Social Media:</h2>
+    
+    <div class="block__content">
+    <div class="entity entity-bean bean-sociallinks clearfix" about="/block/footer-social" typeof="">
+  <div class="content">
+    <div class="field field-name-field-sociallinks-sociallinks field-type-sociallinks field-label-hidden">
+        <a href="https://facebook.com/nwcouncil" title="Facebook" class="sociallink sociallink-facebook"><span>Facebook</span></a>      <a href="https://twitter.com/nwcouncil" title="Twitter" class="sociallink sociallink-twitter"><span>Twitter</span></a>      <a href="https://www.instagram.com/nwcouncil" title="Instagram" class="sociallink sociallink-instagram"><span>Instagram</span></a>      <a href="https://www.linkedin.com/company/nwcouncil" title="LinkedIn" class="sociallink sociallink-linkedin"><span>LinkedIn</span></a>      <a href="https://www.vimeo.com/nwcouncil" title="Vimeo" class="sociallink sociallink-vimeo"><span>Vimeo</span></a>      <a href="https://www.flickr.com/nwcouncil" title="Flickr" class="sociallink sociallink-flickr"><span>Flickr</span></a>  </div>
+  </div>
+</div>
+  </div>
+  </aside>
+</div></div>  </div>
+     </div>
+    <div class="footer__bottom">
+         <div data-type="region" data-name="footer_bottom" class="">
+    <div class="container"><div class="row"><aside data-type="block" id="block-ombucleanup-copyright" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-module="ombucleanup" data-delta="copyright">
+
+      
+    <div class="block__content">
+    <p>Copyright <em class="placeholder">2020</em></p>  </div>
+  </aside>
+<aside data-type="block" id="block-menu-footer-menu" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-module="menu" data-delta="footer-menu">
+
+      <h2 class="block__title"  class="">Footer Menu</h2>
+    
+    <div class="block__content">
+    <ul class="nav"><li class="first leaf active-trail active"><a href="/privacy-policy" class="active-trail active">Privacy policy</a></li>
+<li class="last leaf"><a href="/terms-conditions">Terms &amp; Conditions</a></li>
+</ul>  </div>
+  </aside>
+</div></div>  </div>
+     </div>
+  </div>
+
+</div>
+
+<!-- Site Bottom -->
+  <script type="text/javascript" src="https://www.nwcouncil.org/sites/default/files/js/js_EebRuRXFlkaf356V0T2K_8cnUVfCKesNTxdvvPSEhCM.js"></script>
+<script type="text/javascript" src="https://www.nwcouncil.org/sites/default/files/js/js_L5lwMOvaffDwORLovVK5q42Z1Wud9Y2QZ3j3Y979LN4.js"></script>
+<script type="text/javascript" src="https://www.nwcouncil.org/sites/default/files/js/js_FWXM95kI-AJR5DIvSgE2FZrM7Y7JbvIZxEa_Fwwysu0.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a60dc40aa882702"></script>
+<script type="text/javascript" src="https://www.nwcouncil.org/sites/default/files/js/js_uCV55yHBT3wba5R9jXM8mtVl07mpTmE-tj7Cg_VdUts.js"></script>
+<script type="text/javascript" src="https://www.nwcouncil.org/sites/default/files/js/js_R9wQiYaJmZK-CjrujlJNxMCiN5VMyVQO8qQSwOI5rXU.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"nwc_theme","theme_token":"U6Lk-xitcg0J69b9M8cYcf928YDHVDIt90IQRYciSl4","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/contrib\/select2\/js\/Drupal.select2.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.button.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.mouse.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.draggable.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.position.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.resizable.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.dialog.min.js":1,"sites\/all\/modules\/custom\/ombucleanup\/js\/drupal.external-links.js":1,"sites\/all\/libraries\/select2\/select2.min.js":1,"sites\/all\/modules\/features\/nwc_tiles\/js\/calendar-carousel.js":1,"sites\/all\/themes\/nwc_theme\/js\/calendar-tile.js":1,"sites\/all\/libraries\/owlcarousel\/dist\/owl.carousel.min.js":1,"\/\/s7.addthis.com\/js\/300\/addthis_widget.js#pubid=ra-5a60dc40aa882702":1,"sites\/all\/modules\/custom\/ombucleanup\/js\/drupal.disable-ajax.js":1,"sites\/all\/themes\/boots\/boots_core\/js\/boots_core.js":1,"sites\/all\/themes\/boots\/boots_grid\/js\/vendor\/fastclick.js":1,"sites\/all\/themes\/boots\/boots_grid\/js\/boots-grid-alerts.js":1,"sites\/all\/themes\/boots\/boots_grid\/js\/boots-grid-menus.js":1,"sites\/all\/themes\/boots\/boots_grid\/js\/boots-grid-contextual.js":1,"sites\/all\/themes\/boots\/boots_grid\/js\/boots-grid-fastclick.js":1,"sites\/all\/themes\/nwc_theme\/..\/boots\/boots_grid\/js\/vendor\/waypoints\/jquery.waypoints.js":1,"sites\/all\/themes\/nwc_theme\/..\/boots\/boots_grid\/js\/vendor\/waypoints\/shortcuts\/sticky.min.js":1,"sites\/all\/themes\/nwc_theme\/..\/boots\/boots_grid\/js\/features\/top-link.js":1,"sites\/all\/themes\/nwc_theme\/js\/zoom.js":1,"sites\/all\/themes\/nwc_theme\/js\/global.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custom\/ombucleanup\/css\/admin.overrides.css":1,"sites\/all\/libraries\/select2\/select2.css":1,"sites\/all\/modules\/contrib\/select2\/css\/select2_integration.css":1,"sites\/all\/libraries\/owlcarousel\/dist\/assets\/owl.carousel.min.css":1,"sites\/all\/modules\/custom\/social_links\/css\/field_sociallinks.css":1,"sites\/all\/themes\/boots\/boots_grid\/css\/boots-grid-screen.css":1,"sites\/all\/themes\/nwc_theme\/css\/screen.css":1,"sites\/all\/themes\/boots\/boots_grid\/css\/boots-grid-print.css":1,"sites\/all\/themes\/nwc_theme\/css\/print.css":1}},"backend":false,"frontend":true,"select_2":{"excludes":{"by_id":{"values":["core-content-select"],"reg_exs":[]},"by_class":["tabledrag-hide","select2-exclude","phpdebugbar-datasets-switcher"],"by_selectors":[]},"branch":3,"default_settings":{"separator":"\u00b6","jqui_sortable":false,"dropdownAutoWidth":true,"width":"element","containerCssClass":"","minimumResultsForSearch":15},"process_all_selects_on_page":true,"no_version_check":false,"elements":[],"settings_updated":false},"urlIsAjaxTrusted":{"\/privacy-policy":true}});
+//--><!]]>
+</script>
+  </div>
+<div id="top-link"><a href="#top"><span>Top</span></a></div>
+
+<!--LinkedIn Insight Tag code begin -->
+<script type="text/javascript">
+  _linkedin_partner_id = "440282";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+  (function(){var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=440282&fmt=gif" />
+</noscript>
+<!--LinkedIn Insight Tag code end -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6356743070","applicationID":"122251770","transactionName":"NFdXYxZTWkJWV0BRWg0ddFQQW1tfGFpbXFA8QlRQAW1CWFJD","queueTime":0,"applicationTime":1259,"atts":"GBBUFV5JSUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

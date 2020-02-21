@@ -1,0 +1,624 @@
+
+
+<!doctype html>  
+
+<!--[if IEMobile 7 ]> <html lang="en-US" prefix="og: http://ogp.me/ns#"class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js"><!--<![endif]-->
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"c2c010f3d0",applicationID:"8569578"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+		<title>Privacy Policy - Farmer Mac</title>	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<link rel="pingback" href="https://www.farmermac.com/xmlrpc.php">
+  		<link rel="icon" type="image/png" href="/wp-content/themes/farmermac/images/favicon.png">
+  		<script src="https://use.typekit.net/jbw2tlp.js"></script>
+  		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+  		
+  		
+  		
+  	  		
+  		
+  		<!-- enqueue these on production site -->
+  		<!--	<script src="/wp-content/themes/farmermac/library/js/init.js"></script> -->
+
+
+  		<!-- end of enqueue... -->
+
+		<!-- wordpress head functions -->
+		
+<!-- This site is optimized with the Yoast SEO plugin v10.1.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.farmermac.com/privacy-policy/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Privacy Policy - Farmer Mac" />
+<meta property="og:description" content="This Website Privacy Policy (“Policy”) describes how the Federal Agricultural Mortgage Corporation (“Farmer Mac,” “we,” or “our”) treats information collected or provided in connection with your (“you,” “your,” or “user”) use of the Farmer Mac website located at https://www.farmermac.com (“Site”).  This Policy applies only to information collected through the Site.  Our separate privacy policy for...  Read more &raquo;" />
+<meta property="og:url" content="https://www.farmermac.com/privacy-policy/" />
+<meta property="og:site_name" content="Farmer Mac" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="This Website Privacy Policy (“Policy”) describes how the Federal Agricultural Mortgage Corporation (“Farmer Mac,” “we,” or “our”) treats information collected or provided in connection with your (“you,” “your,” or “user”) use of the Farmer Mac website located at https://www.farmermac.com (“Site”).  This Policy applies only to information collected through the Site.  Our separate privacy policy for... Read more &raquo;" />
+<meta name="twitter:title" content="Privacy Policy - Farmer Mac" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//www.farmermac.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.farmermac.com/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='page-list-style-css'  href='https://www.farmermac.com/wp-content/plugins/page-list/css/page-list.css?ver=5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='monthly-mortgage-calculator-plugin-styles-css'  href='https://www.farmermac.com/wp-content/plugins/mortgage-and-loan-calculator/public/assets/css/public.css?ver=2.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://www.farmermac.com/wp-content/themes/farmermac/library/css/bootstrap.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wpbs-style-css'  href='https://www.farmermac.com/wp-content/themes/farmermac/style.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='pcs-styles-css'  href='https://www.farmermac.com/wp-content/plugins/post-content-shortcodes/styles/default-styles.css?ver=1.0' type='text/css' media='screen' />
+<script type='text/javascript' src='https://www.farmermac.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.farmermac.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.farmermac.com/wp-content/plugins/mortgage-and-loan-calculator/public/assets/js/jquery.validate.js?ver=1.7'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mlc_obj = {"ajax_url":"https:\/\/www.farmermac.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.farmermac.com/wp-content/plugins/mortgage-and-loan-calculator/public/assets/js/public.js?ver=2.0.0'></script>
+<script type='text/javascript' src='https://www.farmermac.com/wp-content/themes/farmermac/library/js/bootstrap.min.js?ver=1.2'></script>
+<script type='text/javascript' src='https://www.farmermac.com/wp-content/themes/farmermac/library/js/scripts.js?ver=1.2'></script>
+<script type='text/javascript' src='https://www.farmermac.com/wp-content/themes/farmermac/library/js/modernizr.full.min.js?ver=1.2'></script>
+<link rel='https://api.w.org/' href='https://www.farmermac.com/wp-json/' />
+<link rel='shortlink' href='https://www.farmermac.com/?p=862' />
+<link rel="alternate" type="application/json+oembed" href="https://www.farmermac.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.farmermac.com%2Fprivacy-policy%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.farmermac.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.farmermac.com%2Fprivacy-policy%2F&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				
+		
+		
+		
+		<!-- end of wordpress head -->
+		<!-- IE8 fallback moved below head to work properly. Added respond as well. Tested to work. -->
+			<!-- media-queries.js (fallback) -->
+		<!--[if lt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
+		<![endif]-->
+
+		<!-- html5.js -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->	
+		
+			<!-- respond.js -->
+		<!--[if lt IE 9]>
+		          <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+		<![endif]-->	
+			
+			
+			<script type="text/javascript">
+			setTimeout(function(){var a=document.createElement("script");
+			var b=document.getElementsByTagName("script")[0];
+			a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0060/4377.js?"+Math.floor(new Date().getTime()/3600000);
+			a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+			</script>
+			
+			<!-- Global site tag (gtag.js) - AdWords: 834051204 -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=AW-834051204"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+			 
+			  gtag('config', 'AW-834051204');
+			</script>
+			
+			     	</head>
+	
+	<body class="page-template-default page page-id-862" data-spy="scroll" data-target="#menu-products"  data-offset="0">
+	
+	
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WD3K9V"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WD3K9V');</script>
+	<!-- End Google Tag Manager -->
+	
+	
+	
+	<header role="banner">
+				
+			<div class="navbar navbar-default navbar-fixed-top cbp-af-header hblue">
+				<div class="container-header">
+          
+					<div class="navbar-header cbp-af-inner">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+						<a class="navbar-brand" title="Delivering the capital and commitment  rural America deserves" href="/">
+						
+						<img src="/wp-content/themes/farmermac/images/logo.png">								</a>
+						
+						<a class="navbar-brand-sm" title="Delivering the capital and commitment  rural America deserves" href="#">
+						
+						<img src="/wp-content/uploads/logo-sm.png">
+						</a>
+					</div>
+
+					<div class="collapse navbar-collapse navbar-responsive-collapse">
+					
+					<div class="hdr-container hidden-xs">
+					
+					<ul class="list-inline">
+					
+					<li><a href="https://www.efarmermac.com/" target="_blank"><img src="/wp-content/themes/farmermac/images/lock.png" class="lock1" onclick="dataLayer.push({‘login’: ‘Top Page’});"><img src="/wp-content/themes/farmermac/images/lockw.png" class="lock2" onclick="dataLayer.push({‘login’: ‘Top Page’});"></a></li>
+					
+					<li class="cta-contact menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact/">Contact</a>
+					
+					
+					</ul>
+					
+					</div>
+					
+						<ul id="menu-main" class="nav navbar-nav"><li id="menu-item-237" class="hidden-sm homebtn menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="https://www.farmermac.com/">Home</a></li>
+<li id="menu-item-3941" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.farmermac.com/about/">About Us<b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li id="menu-item-10711" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about/#01">Who is Farmer Mac?</a></li>
+	<li id="menu-item-10712" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about/#our-beliefs">Our Beliefs</a></li>
+	<li id="menu-item-10713" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about/#leadership">Our Leadership</a></li>
+	<li id="menu-item-10714" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about/#history">Our History</a></li>
+	<li id="menu-item-10715" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about/#meet">Meet Some of the Team</a></li>
+	<li id="menu-item-10716" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about/#discoverag">Discover Ag</a></li>
+	<li id="menu-item-10718" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/about/#careers">Join our Team</a></li>
+</ul>
+</li>
+<li id="menu-item-944" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/products-solutions/">Our Products &#038; Solutions</a></li>
+<li id="menu-item-11977" class="menu-item menu-item-type-post_type_archive menu-item-object-oursolutionsinaction"><a href="https://www.farmermac.com/oursolutionsinaction/">Our Solutions in Action</a></li>
+<li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/investors/">Investors</a></li>
+<li id="menu-item-6488" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.farmermac.com/news-events/">News &#038; Events<b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li id="menu-item-10742" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/news-events/events/">Events</a></li>
+	<li id="menu-item-10743" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/news-events/webinars/">Webinars</a></li>
+	<li id="menu-item-10744" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/news-events/press-releases/">Press Releases</a></li>
+	<li id="menu-item-10745" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/news-events/forward/">Farmer Mac Forward</a></li>
+	<li id="menu-item-10746" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/news-events/daves-gps/">Dave&#8217;s GPS</a></li>
+	<li id="menu-item-10747" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/news-events/in-the-news/">In The News</a></li>
+	<li id="menu-item-10748" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/news-events/the-feed/">The Feed</a></li>
+</ul>
+</li>
+<li id="menu-item-262" class="dropdown menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.farmermac.com/resources/">Resources<b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li id="menu-item-10719" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/resources/relationships/">Farmer Mac Relationships</a></li>
+	<li id="menu-item-10720" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/resources/payment-calculator/">Payment Calculator</a></li>
+	<li id="menu-item-10721" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/resources/the-power-of-agpower/">The Power of AgPower</a></li>
+	<li id="menu-item-10722" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/resources/faq/">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-267" class="cta-contact contact-edit menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.farmermac.com/contact/">Contact</a></li>
+</ul>
+					
+					</div>
+
+				</div> <!-- end .container -->
+			</div> <!-- end .navbar -->
+		
+		
+	
+										
+		</header> <!-- end header -->
+		
+		<div class="container">
+		
+		<!-- Wrapper -->
+<div id="slideit">
+	<!-- Open/close buttons -->
+	<input id="open-item" name="simple-graph" type="radio" />
+	<input id="close-item" name="simple-graph" type="radio" checked="checked"  />
+	<!-- Open label -->
+	<label for="open-item" class="open">&nbsp;<span class="cf-phone"></span>&nbsp;</label>
+	<section>
+		<!-- Close label -->
+		<label for="close-item" class="close">&times;</label>
+		<div class="wrap">
+			<!-- Main title -->
+			<!-- Data 1 -->
+			<a href="/contact"><b>Contact Us</b>
+			<br/>To learn more</a>
+		</div>
+	</section>
+</div>
+<!-- / Wrapper -->
+<!--[if IE 9]>
+	<style type="text/css">
+		#slideit .data span { background: #6E7293; }
+		#slideit input#open-item:checked ~ section .data span { background: #6E7293; }
+	</style>
+<![endif]-->		
+
+			
+			<div id="content" class="clearfix row">
+			
+				<div id="main" class="col-sm-12 clearfix" role="main">
+
+										
+					<article id="post-862" class="clearfix post-862 page type-page status-publish hentry" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						
+						<header>
+							
+							<div class="page-header"><h1 class="page-title" itemprop="headline">Privacy Policy</h1></div>
+						
+						</header> <!-- end article header -->
+					
+						<section class="post_content clearfix" itemprop="articleBody">
+							<p class="lead">This Website Privacy Policy (“Policy”) describes how the Federal Agricultural Mortgage Corporation (“Farmer Mac,” “we,” or “our”) treats information collected or provided in connection with your (“you,” “your,” or “user”) use of the Farmer Mac website located at <a href="https://www.farmermac.com">https://www.farmermac.com</a> (“Site”).  This Policy applies only to information collected through the Site.  Our separate privacy policy for the Farmer Mac lending and servicing portal is located at <a href="https://www.efarmermac.com/SecureAccess/Login.aspx">https://www.efarmermac.com/SecureAccess/Login.aspx</a>.</p>
+<p>Please read this Policy carefully.  By visiting the Site or otherwise providing information to Farmer Mac through the Site, you are consenting to the collection, use, and sharing of your information as described in this Policy.</p>
+<p>The information that we collect in connection with our Site is controlled by Farmer Mac, which is headquartered in the United States at 1999 K Street, NW, 4<sup>th</sup> Floor, Washington, DC 20006.  As a result, that information may be transferred to and processed in the United States, as described in the section below titled “Information for Individuals Outside the United States.”</p>
+<h3></h3>
+<h3><strong>Information We Collect</strong></h3>
+<p>We and our service providers collect a variety of information through the Site.  We may collect information from you directly when you provide it to us through the Site.  We may also automatically collect certain information about you and your computer, smartphone, or other device when you use, access, or interact with our Site.</p>
+<p><strong><em>Information you provide.</em></strong> You can visit the Site without submitting any information that we can use to identify you directly.  However, if you use certain features on the Site, you may be required to provide personal information.  For example, if you contact us through the Site, sign up for updates or presentations, such as webinars we offer, or fill out forms to inquire about becoming an investor or to inquire about farm land loans, we will collect information including, but not limited to, your name, email address, phone number, city, state, the name of your institution and FDIC number, information about your property, your farm loan, and your current lender, your FICO credit score range, as well as any other personal information you provide.  We collect information entered into forms even if you do not complete or submit the form.</p>
+<p>If you submit an application for employment with Farmer Mac, we will receive your resume and any other information you provide to us to be considered for a position.  To submit an application, we may use a third-party service provider through which you will submit your materials.</p>
+<p>We do not collect or retain the information you enter into the payment calculator we provide on the Site.  The calculator’s functions are performed by your computer and the results are displayed in your browser and viewable only by you (and anyone else you allow to view your screen).</p>
+<p><strong><em>Information collected automatically.</em>  </strong>When you use our Site, we or our third-party service providers may automatically receive and record certain information.  For example, this may include your device’s IP address, user-agent string, information about your use of the Site during your current session and over time (including the pages you view and the files you download), the date and time of your visit, links you click, searches conducted, the website visited before navigating to the Site, your software and hardware attributes (including browser and operating system type and version, device type, and device identifiers), and your general location inferred from IP address.  To obtain that information, we or our third-party service providers may use a variety of technologies to recognize your device and collect information about your Site usage, including:</p>
+<ul>
+<li><strong><em>Server logs. </em></strong>When you use the Site, we automatically receive and record certain information from your computer (or other device) and your browser.  To obtain that information, we may use server logs or applications that recognize your device and gather information about its online activity.</li>
+<li><strong><em>Cookies.</em></strong>We also use cookies on the Site.  Cookies are small files that are stored on your device by your web browser.  A cookie allows us to recognize whether you have visited before and may store user preferences and other information.  If you are concerned about having cookies on your device, you can set your browser to refuse all cookies or to indicate when a cookie is being set, allowing you to decide whether to accept it.  You can also delete cookies from your device.  However, if you choose to block or delete cookies, certain features of the Site may not operate correctly.</li>
+<li><strong><em>Web beacons, tags, pixels, and similar technologies. </em></strong>The Site or the emails that you receive from us may use an application known as a “web beacon” (also known as a “pixel” or “tag”) and similar technologies.  Web beacons are small strings of code that provide a method for delivering a graphic image on a web page or in an email message for the purpose of transferring data.  For example, it may allow an email sender to determine whether a user has opened a particular email.</li>
+<li><strong><em>Mobile advertising IDs.</em></strong> We may use mobile advertising identifiers (such as Apple’s IDFA or Google’s Advertising ID) to collect information for interest-based advertising and analytics purposes, as described in the section below titled “Interest-Based Advertising and Analytics.”</li>
+</ul>
+<p>We may combine information collected through the Site with information that we collect in other contexts, such as information from our email communications or phone calls with you, or information we obtain from third parties.  We will treat that combined information in accordance with this Policy.</p>
+<h3></h3>
+<h3><strong>How We Use Information We Collect</strong></h3>
+<p>We and our service providers use the information that we collect for a variety of purposes, including:</p>
+<ul>
+<li><strong>Providing the Site. </strong>To provide our Site to you;</li>
+<li><strong>Communicating with you.</strong> To communicate with you about the Site, any webinars or presentations for which you sign up, and to respond to your questions or requests about the Site or the services offered by us;</li>
+<li><strong>Considering you for employment with us. </strong>To consider your application for employment with us;</li>
+<li><strong>Sending newsletters or other promotional messages.</strong> To send you newsletters or other promotional messages about our services or other services that may be of interest to you;</li>
+<li><strong>Tailoring our content and advertisements.</strong> To tailor content on the Site and target our advertising, including as described in the section below titled “Interest-Based Advertising and Analytics”;</li>
+<li><strong>Conducting analytics and improving our Site.</strong> To count and recognize users of the Site, analyze how the Site is used, improve the Site, create new products and services, and conduct analytics, including as described in the section below titled “Interest-Based Advertising and Analytics”;</li>
+<li><strong>Compiling aggregated and de-identified information.</strong> To compile aggregated and de-identified statistics or reports that we may share with third parties;</li>
+<li><strong>Legal purposes.</strong> For legal or other necessary purposes, including as described below in the section titled “How We Share Information”; or</li>
+<li><strong>Lawful business purposes</strong>. Where permitted by law, for other purposes related to managing our business.</li>
+</ul>
+<h3></h3>
+<h3><strong>How We Share Information</strong></h3>
+<p>We share information with third parties for a variety of reasons, including as follows:</p>
+<ul>
+<li><strong>Service providers.</strong> We use third-party service providers to help us manage and improve our Site.  These service providers may collect and use your information to assist us in achieving the purposes discussed in this Policy.  For example, we may use third parties to assist with hosting our Site, perform data storage and processing services, host webinars, monitor for fraud, collect employment applications, send emails on our behalf, perform analytics, and tailor our advertising.</li>
+<li><strong>Partners, Affiliates and Subsidiaries. </strong>We may share information with our partners, affiliates and subsidiaries for uses described in this Policy.</li>
+<li><strong>Lenders</strong>. When you fill out a loan inquiry form on our Site, we share the information you enter into the form with our network of lenders (which may include community banks, Farm Credit System institutions, and other agricultural lenders) to offer you loan rates and terms.</li>
+<li><strong>Our Experts and Advisors.</strong> We may share your information, as necessary, with experts and advisors who assist us with operating our business and complying with the law, including external legal counsel, notaries, auditors, and tax advisors.</li>
+<li><strong>Your Agents or Representatives. </strong>We may share your information with your agents or representatives including financial advisors, trustee, legal representative, financial institutions or other third parties, as requested by you.</li>
+<li><strong>Transaction Participants.</strong> We may share your information with other transaction participants such as issuers, borrowers, potential investors, and advisors as relevant to your interactions with us.</li>
+<li><strong>Market Research Companies. </strong>We may share information with market research companies or for the purpose of assessing information about our business or client base.</li>
+<li>We may share information with other persons as agreed with you or as required or expressly permitted by applicable law.</li>
+<li><strong>Third-party plugins.</strong> The Site may integrate certain third-party plugins (such as a Facebook “like” button and Twitter “follow” button).  Even if you do not click on these plugins, they may collect information about you, such as your IP address and the pages that you view.  They also may set and/or access a cookie or use similar tracking technologies.  These plugins are governed by the privacy policy of the company providing them.</li>
+<li><strong>Facebook Custom Audiences and Similar Programs.</strong> We may work with Facebook and other social media entities to deliver advertisements to our users via the Facebook Custom Audiences program or a similar third-party program.  To identify and reach our users on Facebook or another third-party service, we may share information such as an email address or phone number (when you provide it through the Site) with Facebook or another third-party service.  For more information about custom audience targeting and how to adjust your social media advertising preferences, please review the privacy policy of your social media provider.</li>
+<li><strong>Legal purposes.</strong> We may use or share your information with third parties when we believe, in our sole reasonable discretion, that doing so is necessary to:
+<ul>
+<li>comply with applicable law or a court order, subpoena, or other legal process;</li>
+<li>investigate, prevent, or take action on illegal or prohibited activities, suspected fraud, violations of our rules or terms and conditions, or situations involving threats to other users, our property, or the property or physical safety of any person or third party;</li>
+<li>establish, protect, or exercise our legal rights or defend against legal claims;</li>
+<li>respond to requests from public and government authorities, and to cooperate with law enforcement, government, regulatory, or other similar agencies or authorities to which we or our affiliates are subject or submit; or</li>
+<li>for other legal reasons.</li>
+</ul>
+</li>
+<li><strong>Company transfers.</strong> We may share your information with third parties to facilitate the financing, securitization, insuring, merger, acquisition, sale, assignment, bankruptcy, or other disposal of all or part of Farmer Mac or its assets.</li>
+<li><strong>Aggregated and de-identified information.</strong> We may share aggregated and de-identified information with third parties, such as by publishing or sharing reports with third parties about trends in the usage of the Site.</li>
+</ul>
+<h3></h3>
+<h3><strong>Interest-Based Advertising and Analytics </strong></h3>
+<p>We work with certain third parties to collect information to engage in analytics, auditing, research, and reporting.  These third parties may use server logs, web beacons, tags, pixels, mobile advertising IDs (such as Apple’s IDFA or Google’s Advertising ID), and similar technologies, and they may set and access cookies on your computer or other device. In particular, our Site uses Google Analytics and Crazy Egg to help collect and analyze certain information for the purposes discussed above.  You may learn more about Google Analytics’ data practices by clicking <a href="http://www.google.com/analytics/learn/privacy.html">here</a> and opt out of the use of cookies in web browsers by Google Analytics by clicking <a href="https://tools.google.com/dlpage/gaoptout">here</a>.  You may opt out of the use of cookies by Crazy Egg <a href="https://www.crazyegg.com/opt-out">here</a>.</p>
+<p>We also work with third parties to provide targeted advertising services that are customized based on your online activities over time and across unaffiliated websites and devices (“interest-based advertising”).  For example, these third parties may use the fact that you visited our Site to target online ads for Farmer Mac to you on non-Farmer Mac sites.  These third parties may also use information about your use of our Site to help target non-Farmer Mac advertisements based on your online behavior in general.  These third parties may also use information to establish connections among related web browsers and devices (such as smartphones, tablets, and computers) for advertising, analytics, attribution, and reporting purposes (“cross-device linking”).</p>
+<p>For more information about interest-based advertising and cross-device linking, please visit the <a href="http://www.networkadvertising.org/understanding-digital-advertising">Network Advertising Initiative website</a> and the <a href="http://www.aboutads.info/">Digital Advertising Alliance (“DAA”) website</a>.  You may also opt out of interest-based advertising and cross-device linking in web browsers on your current browser or device by following the instructions below.</p>
+<p>To opt out in web browsers, please visit <a href="http://optout.aboutads.info/">http://optout.aboutads.info/</a> and <a href="http://optout.networkadvertising.org">http://optout.networkadvertising.org</a>.  To help preserve the choices that you make in the DAA’s WebChoices page, you can install the DAA’s “Protect My Choices” extension that is available at <a href="http://www.aboutads.info/PMC">http://www.aboutads.info/PMC</a>.</p>
+<p>Please note that the opt-out will apply only to the specific browser or device from which you opt out, so you will need to opt out separately on all of your browsers and devices.  If you delete or reset your cookies or mobile advertising identifiers, change browsers, or use a different device, any opt-out cookie or tool may no longer work and you will need to opt out again.</p>
+<p>The use of online tracking mechanisms by third parties is subject to those third parties’ own privacy policies and not this Policy.  If you prefer to prevent third parties from setting and accessing cookies on your computer or other device, you may set your browser to block cookies.  Although our Site currently does not respond to “do not track” browser headers, you can limit certain tracking and analytics by taking the steps discussed above.</p>
+<h3></h3>
+<h3><strong>Third-Party Links </strong></h3>
+<p>The Site may contain links to websites or services of third parties.  If you follow a link to any of these websites or services, please note that these websites and any services that may be accessible through them have their own privacy policies.  We are not responsible for the privacy practices of other websites or services or the information you share through those other websites or services.  We encourage our users to be aware when they leave the Site and to read the privacy policies applicable to third-party websites and services.  This Policy applies solely to information collected in connection with the Site.</p>
+<h3></h3>
+<h3><strong>Data Security and Retention</strong></h3>
+<p>Farmer Mac uses reasonable physical, technical, and administrative safeguards to protect your information against loss or unauthorized access, use, modification, or deletion.  However, no security program is 100% secure, so we cannot guarantee the absolute security of your information.</p>
+<p>Farmer Mac retains your information for as long as reasonably necessary for its legitimate business purposes, to provide the Site to you, to fulfill the purposes described in this Policy, or as required by law.</p>
+<h3></h3>
+<h3><strong>Your Rights and Choices</strong></h3>
+<p>Farmer Mac provides you with choices to review, access, and update your information or to exercise your data protection rights as follows:</p>
+<ul>
+<li>If you no longer want to receive our newsletters or other promotional communications, please follow the “unsubscribe” instructions included at the bottom of each message. Please note that if you unsubscribe from our promotional communications, you may still receive administrative messages from us.</li>
+<li>If you would like to opt out of interest-based advertising, please follow the instructions above in the section titled “Interest-Based Advertising and Analytics.”</li>
+<li>You may have additional rights under applicable laws to request access to, correction of, deletion of, or restrictions on the processing of certain information. You also may have rights under applicable laws to opt out of or withdraw consent to further processing, request copies of your data, or lodge a complaint with a data protection authority in your jurisdiction.  To make a request or inquire about your rights, please send us an email at <a href="mailto:privacy@farmermac.com">privacy@farmermac.com</a>.  For your protection, we may implement only those requests related to information that we have associated with the email address you use to send us your request, and we may need to verify your identity before implementing your request.</li>
+</ul>
+<h3></h3>
+<h3><strong>California Residents</strong></h3>
+<p>California Civil Code Section 1798.83 permits California residents to request certain information regarding our disclosure of personal information to third parties for their direct marketing purposes. To make such a request, please contact us by <a href="mailto:privacy@farmermac.com">privacy@farmermac.com</a>.</p>
+<h3></h3>
+<h3><strong>Information for Individuals Outside the United States</strong></h3>
+<p>The information that we collect through or in connection with our Site may be transferred to and processed in the United States for the purposes described above.  Farmer Mac may also subcontract the processing of your data to, or otherwise share your data with, third parties in the United States or other countries outside your country of residence.  The data protection laws in these countries may be different from, and less stringent than, those in your country of residence.  By visiting and using the Site, or otherwise providing information to Farmer Mac, you explicitly consent to this transfer and processing.</p>
+<h3></h3>
+<h3><strong>Children</strong></h3>
+<p>The Site is not intended for or directed to individuals that are deemed to be children under applicable data protection or privacy laws.  We request that those individuals do not provide information to us through the Site.</p>
+<h3></h3>
+<h3><strong>Changes to This Policy  </strong></h3>
+<p>We may revise this Policy periodically in the future.  If we make any material changes, we will post the revised Policy on our Site with an effective date indicating when the revised Policy will take effect.  We encourage you to review this Policy periodically.</p>
+<h3></h3>
+<h3><strong>Contacting Us</strong></h3>
+<p>If you have any questions or comments about this Policy, please e-mail us at <a href="mailto:privacy@farmermac.com">privacy@farmermac.com</a>.</p>
+<p>&nbsp;</p>
+<p>Last updated: August 2019</p>
+					
+						</section> <!-- end article section -->
+						
+						<footer>
+			
+														
+						</footer> <!-- end article footer -->
+					
+					</article> <!-- end article -->
+					
+					
+							
+					
+								
+				</div> <!-- end #main -->
+    
+    
+			</div> <!-- end #content -->
+
+</div></div>
+
+
+    
+   						       						    
+   						    
+   						    
+   						    <style>#panel-fct { 
+   						    	background: url(https://www.farmermac.com/wp-content/uploads/2015/05/001.jpg) 50% 0 fixed; 
+   						    	height: auto;  
+   						    	margin: 0 auto; 
+   						        width: 100%; 
+   						       background-repeat: no-repeat;
+   						       background-position: center center;
+   						         background-size:   cover; 
+   						        padding: 0px 0;
+   						    }</style>
+   						    
+   						    
+   						    <div id="panel-fct" class="panel-ios-fix">
+   						    		<div class="panel2inner">
+   						    		
+   						    		<h3>Brand Value #7</h3>
+   						    		
+   						    		<h3 style="text-align: center;">Passion for Rural America</h3>
+<p style="text-align: center;" class="lead">Share your passion for serving the people who help America set the global standard in agriculture and rural utilities while advancing the livelihood of rural communities.</p>
+   						    		
+   						    		<a href="/about/" class="cta-header">More reasons to choose Farmer Mac</a>
+   						  					
+   						    
+   						    
+   						     		
+   						     
+   						        						     </div>
+   						     
+   						     					       						     					    
+   						     					    
+   						     					    
+
+
+
+		
+		
+		
+		</div></div>
+
+
+		</div></div>
+		
+		<div class="footerpanel"><footer role="contentinfo">
+			
+					<div class="container">
+			
+						<div id="content" class="clearfix row">
+			
+			
+			
+			<div class="col-sm-4">
+			
+			<div class="footerpanel-logo"><img  src="/wp-content/uploads/fmstacked.png"></div>
+			
+			<div class="row"> <div class="col-sm-6">
+			
+			<p>1999 K Street, NW
+			<br/>4th Floor
+			<br/>Washington DC 20006
+			<br/>
+			Phone: 800-879-3276
+			
+			<div class="loginul hidden-xs"><a href="https://www.efarmermac.com/" class="cta-login" onclick="dataLayer.push({‘event’: ‘login’, 'location':'Bottom Page'});" target="_blank"><span class="icon icon-k">&nbsp;</span>Login</a>
+			</div>
+			</div>
+			<div class="col-sm-6">
+			
+			<p>9169 Northpark Drive  
+			<br/>Johnston, IA 50131
+			
+			<br/>
+			Phone: 866-452-2617 
+			
+		<ul class="footer-social">
+		<li><a href="https://www.facebook.com/farmermacnews" target="_blank" class="icon icon-E">
+		&nbsp;
+		</a></li>
+		<li><a href="https://twitter.com/farmermacnews" target="_blank" class="icon icon-R">
+		&nbsp;
+		</a></li>
+		<li><a href="https://www.linkedin.com/company/farmer-mac" target="_blank" class="icon icon-L">
+		&nbsp;</a>
+		</li>
+		
+		
+							</ul>
+							
+							
+							
+			</div>
+			<div class="loginul visible-xs"><a href="https://www.efarmermac.com/" class="cta-login" target="_blank"><span class="icon icon-k">&nbsp;</span>Login</a></div>
+			
+			
+			
+				
+				
+				
+			</div>
+						</div>
+			<div class="col-sm-8 explodednav hidden-xs">
+			<div class="row">
+			<div class="col-sm-4">
+			<ul>
+			<li><a href="/"><b>Home</b></a></li>
+			
+			</ul>
+			
+			<ul>
+			<li><a href="/about/"><b>About</b></a></li>
+			<li><a href="/about/#our-beliefs">Our Beliefs</a></li>
+			<li><a href="/about/#leadership">Our Leadership</a></li>
+			<li><a href="/about/#history">History</a></li>
+			<li><a href="/about/#meet">Meet Some of Our Team</a></li>
+			<li><a href="/about/#discoverag">Discover Ag</a></li>
+			<li><a href="/about/#careers">Careers</a></li>
+			</ul>
+			
+			
+			
+			
+			
+			</div>
+			
+			<div class="col-sm-4">
+			<ul>
+			<li><a href="/products-solutions/"><b>Products &amp; Services</b></a></li>
+			
+			
+			
+			
+			</ul>
+		
+		
+			<ul>
+			<li><a href="/investors/"><b>Investors</b></a></li>
+			
+			
+			<li><a href="/investors/corporate-governance/">Corporate Governance</a></li>
+			<li><a href="/investors/press-releases/">Press Releases</a></li>
+			<li><a href="/investors/financial-information/">Financial Information</a></li>
+			<li><a href="/investors/events-presentations/">Events &amp; Presentations</a></li>
+			<li><a href="/investors/debt-securities/">Debt Securities</a></li>
+			<li><a href="/investors/agricultural-mortgage-backed-securities/">Agricultural Mortgage Backed Securities</a></li>
+			<li><a href="/investors/investor-faqs/">Investor FAQs</a></li>
+			<li><a href="/investors/information-request/">Information Request</a></li>
+			
+			
+			
+			
+			
+			</ul>
+			</div>
+			
+			<div class="col-sm-4">
+			<ul>
+			<li><a href="/news-events/"><b>News &amp; Events</b></a></li>
+			<li><a href="/news-events/upcoming-events/">Events</a></li>
+			<li><a href="/news-events/webinars/">Webinars</a></li>
+			</ul>
+			
+			<ul>
+			<li><a href="/resources/"><b>Resources</b></a></li>
+			<li><a href="/resources/relationships/">Farmer Mac Relationships</a></li>
+			
+			<li><a href="/resources/payment-calculator/">Payment Calculator</a></li>
+			<li><a href="/resources/the-power-of-agpower/">The Power of AgPower</a></li>
+
+			<li><a href="/resources/faq/">FAQs</a></li>
+
+			</ul>
+			
+			
+			<ul>
+			<li><a href="/contact/"><b>Contact</b></a></li>
+			
+			
+			
+			</ul>
+			</div>
+			</div></div>
+			
+			
+				
+			</div>		
+					
+				<hr>
+				
+				<div class="row">
+				
+				<div class="col-sm-6">
+				<br/>&copy; 2020 Federal Agricultural Mortgage Corporation. All Rights Reserved.
+				<br/><a href="/terms-conditions">Terms &amp; Conditions</a> &nbsp;|&nbsp; <a href="/privacy-policy/">Privacy Policy</a> &nbsp;|&nbsp; <a href="/sitemap/">Sitemap</a>
+				</div>
+				
+				
+				<div class="col-sm-6 ftr-sub-right">
+				<form class="ftr-form navbar-form navbar-right" role="search" method="get" id="searchform" action="https://www.farmermac.com/">
+					<div class="form-group">
+						<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="Search" data-provide="typeahead" data-items="4" data-source=''>
+					</div>
+				</form>
+				
+				</div>
+				
+				
+				
+					
+				</div>		
+					
+									
+				</div> <!-- end #inner-footer -->
+				
+			</footer> <!-- end footer -->
+		
+		</div> <!-- end #container -->
+				</div>
+		<!--[if lt IE 7 ]>
+  			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+		<![endif]-->
+		
+		
+			
+			
+		
+		<script>function expand(e){e.style.display="none"==e.style.display?"block":"none"}function wpex_toggle(e,n,l){el=document.getElementById("wpexlink"+e),el.innerHTML=el.innerHTML==n?l:n,expand(document.getElementById("wpex"+e))}</script><script type='text/javascript'>
+/* <![CDATA[ */
+var sta_settings = {"distance":"80","speed":"500","exceptions":"#accordion, #accordionb, #collapse-upcoming, #faq"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.farmermac.com/wp-content/plugins/scroll-to-anchor/includes/../js/scroll-to-anchor.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.farmermac.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+<div id="mindloop_disclaimer"></div>
+
+
+
+<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" ></script>
+
+<script src="/wp-content/themes/farmermac/library/js/classie.js"></script>
+<script src="/wp-content/themes/farmermac/library/js/header.js"></script>
+<script src="/wp-content/themes/farmermac/library/js/scrollspy.js"></script>
+
+
+
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c2c010f3d0","applicationID":"8569578","transactionName":"YldUN0VUCENWWxJbVlsddwBDXAleGEgHVVw=","queueTime":0,"applicationTime":1367,"atts":"ThBXQQ1OG00=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

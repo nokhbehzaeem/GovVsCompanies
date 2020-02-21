@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA">
+<head><title>
+	HollyFrontier Corporation - Privacy Statement
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":905,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport" /><meta content="An independent petroleum refiner in the United States with operations throughout the mid-continent, southwestern and Rocky Mountain regions. Subsidiaries of HollyFrontier produce and market gasoline, diesel, jet fuel, asphalt, heavy products and specialty lubricant products. Additionally, HollyFrontier owns Petro-Canada Lubricants Inc. whose Mississauga, Ontario facility produces 15,600 barrels per day of base oils and other specialized lubricant products." name="description" /><meta content="zwMZz5otVfIrteZKJ15WDBMVrKg0qcQDleK2HtViDtg" name="google-site-verification" /><script type='text/javascript'>window.mobileRedirect = { mobileEnabled: 0, deepLinkUrl: '/m'}</script>
+    <script type="text/javascript" src="/js/mobileRedirect.js">
+    </script>
+    
+    <link type="text/css" rel="stylesheet" media="screen" href="//s2.q4cdn.com/255514451/files/js/jquery.fancybox.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700" />
+<link type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/255514451/files/js/slick/slick.css" />
+<link type="image/x-icon" rel="icon" media="" href="//s2.q4cdn.com/255514451/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s2.q4cdn.com/255514451/files/favicon.ico" />
+<link rel="stylesheet" media="all" href="https://www.hollyfrontier.com/css/default.css" />
+<link rel="stylesheet" media="print" href="//s2.q4cdn.com/255514451/files/css/print.css" />
+<!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s2.q4cdn.com/255514451/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.hollyfrontier.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/255514451/files/css/global.css?v=23036" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/255514451/files/css/client.css?v=22503" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s2.q4cdn.com/255514451/files/css/print.css" /><script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/255514451/files/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://www.hollyfrontier.com/js/doctracking.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/255514451/files/js/icheck.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/255514451/files/js/slick/slick-min.js"></script>
+<script type="text/javascript" src="//q4implementation.s3.amazonaws.com/widgets/latest/q4.email-validation.min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="//s2.q4cdn.com/255514451/files/js/respond.min.js"></script>
+<script type="text/javascript" src="https://www.hollyfrontier.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-60086608-1'}];
+
+$.each(trackingCodes, function (i, data) {
+    if (data.qualifier == "Q4") {
+        ga('create', data.trackingCode, 'auto'); // Q4 tracker
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+    } else {
+        ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+        ga(data.qualifier + '.set', 'anonymizeIp', true);
+        ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+    }
+});</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="Sectionhome PageDefault PagePrivacyStatement LayoutThreeColumnLayout Languageen-CA">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PagePrivacyStatement SectionPrivacyStatement ParentSection_home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.27.0.2'; }
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="LayoutDefault LayoutThreeColumn">
+	<div class="LayoutDefaultInner">
+		<div class="HeaderContainer">
+			<div class="PaneHeader"><div class="container clearfix"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="HtmlTextContainer HeadIcons">
+    
+    <div class="ContentContainer">
+        <!-- a href="#" class="MailIcon"><img src="//s2.q4cdn.com/255514451/files/images/mail_icon.png" alt="mail" /></a --> <a href="#" class="SearchIcon" style="float: right;"><img src="//s2.q4cdn.com/255514451/files/images/search_icon.png" alt="search" /></a>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="BlankModuleContainer ToggleMenu">
+    
+    
+</div></span><span class='HeaderPaneDiv4'><div id="_ctrl0_ctl15_divModuleContainer" class="ClientLogo"><a href="http://www.hollyfrontier.com/home/default.aspx" id="_ctrl0_ctl15_hrefLink"><img src="//s2.q4cdn.com/255514451/files/images/sticky_logo.png" id="_ctrl0_ctl15_img1" border="0" alt="Homepage" /></a><br /></div>
+</span><span class='HeaderPaneDiv5'><nav class="navbar-collapse collapse"><ul class="level1">
+	<li class="selected has-children home"><a href="http://www.hollyfrontier.com/home/default.aspx">Home</a><ul class="level2">
+		<li class="has-children"><a href="http://www.hollyfrontier.com/about-us/corporate-profile/default.aspx">About Us</a><ul class="level3">
+			<li><a href="http://www.hollyfrontier.com/about-us/corporate-profile/default.aspx">Corporate Profile</a></li><li><a href="http://www.hollyfrontier.com/about-us/mission-and-values/default.aspx">Mission &amp; Values</a></li><li><a href="http://www.hollyfrontier.com/about-us/company-history/default.aspx">Company History</a></li><li><a href="http://www.hollyfrontier.com/about-us/leadership/default.aspx">Leadership</a></li><li><a href="http://www.hollyfrontier.com/about-us/holly-energy-partners/default.aspx">Holly Energy Partners</a></li><li><a href="http://www.hollyfrontier.com/operations/products/lubricants-and-specialty-products">Lubricants &amp; Specialty Products</a></li>
+		</ul></li><li class="has-children"><a href="http://www.hollyfrontier.com/operations/refineries/default.aspx">Operations</a><ul class="level3">
+			<li class="has-children"><a href="http://www.hollyfrontier.com/operations/refineries/default.aspx">Refineries</a><ul class="level4">
+				<li><a href="http://www.hollyfrontier.com/operations/refineries/cheyenne/default.aspx">Cheyenne Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/el-dorado/default.aspx">El Dorado Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/navajo/default.aspx">Navajo Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/tulsa/default.aspx">Tulsa Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/woods-cross/default.aspx">Woods Cross Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/Petro-Canada-Lubricants/default.aspx">Petro-Canada Lubricants</a></li>
+			</ul></li><li class="has-children"><a href="http://www.hollyfrontier.com/operations/products/default.aspx">Products</a><ul class="level4">
+				<li><a href="http://www.hollyfrontier.com/operations/products/light-products/default.aspx">Light Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/lubricants-and-specialty-products/default.aspx">Lubricants &amp; Specialty Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/asphalt-and-heavy-products/default.aspx">Asphalt &amp; Heavy Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/safety-data-sheets/default.aspx">Safety Data Sheets</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="http://investor.hollyfrontier.com/index.cfm">Investor Relations</a><ul class="level3">
+			<li><a href="http://investor.hollyfrontier.com/releases.cfm">Press Releases</a></li><li><a href="https://hollyfrontiercorporation.gcs-web.com/events-and-presentations/events">Events &amp; Presentations</a></li><li class="has-children"><a href="http://investor.hollyfrontier.com/stockquote.cfm">Stock Information</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/stockquote.cfm">Stock Quote &amp; Chart</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/historic-stock-lookup">Historic Stock Lookup</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/investment-calculator">Investment Calculator</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/dividends-splits">Dividend History</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/analyst-coverage">Analyst Coverage</a></li>
+			</ul></li><li class="has-children"><a href="http://investor.hollyfrontier.com/sec.cfm">Financial Information</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/sec.cfm">SEC Filings</a></li><li><a href="http://investor.hollyfrontier.com/financial-information/annual-reports">Annuals And Proxy</a></li><li><a href="http://investor.hollyfrontier.com/results.cfm">Quarterly Results</a></li>
+			</ul></li><li><a href="http://investor.hollyfrontier.com/historical-hfc-index?field_nir_event_start_date_value_3=2018">HollyFrontier Index</a></li><li><a href="https://hollyfrontiercorporation.gcs-web.com/governance">Corporate Governance </a></li><li class="has-children"><a href="https://hollyfrontiercorporation.gcs-web.com/investor-faqs">Shareholder Services</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/investor-faqs">Investor FAQS</a></li><li><a href="http://investor.hollyfrontier.com/transfer-agent">Stock Transfer Agent</a></li><li><a href="http://investor.hollyfrontier.com/contactus.cfm">Contact IR</a></li>
+			</ul></li>
+		</ul></li><li><a href="/Careers/Career-Profile">Careers</a></li><li><a href="http://www.hollyfrontier.com/contact-us/default.aspx">Contact Us</a></li><li><a href="http://www.hollyfrontier.com/Citizenship/default.aspx">CITIZENSHIP REPORT</a></li>
+	</ul></li>
+</ul></nav>
+</span></span></div></div>
+			<div class="PaneNavigation"><div class="container clearfix"></div></div>
+			<div class="PaneHeader2"><div class="clearfix"><span class='HeaderPane2Div6'><nav class="MobileNav"><ul class="level1">
+	<li class="selected has-children home"><a href="http://www.hollyfrontier.com/home/default.aspx">Home</a><ul class="level2">
+		<li class="has-children"><a href="http://www.hollyfrontier.com/about-us/corporate-profile/default.aspx">About Us</a><ul class="level3">
+			<li><a href="http://www.hollyfrontier.com/about-us/corporate-profile/default.aspx">Corporate Profile</a></li><li><a href="http://www.hollyfrontier.com/about-us/mission-and-values/default.aspx">Mission &amp; Values</a></li><li><a href="http://www.hollyfrontier.com/about-us/company-history/default.aspx">Company History</a></li><li><a href="http://www.hollyfrontier.com/about-us/leadership/default.aspx">Leadership</a></li><li><a href="http://www.hollyfrontier.com/about-us/holly-energy-partners/default.aspx">Holly Energy Partners</a></li><li><a href="http://www.hollyfrontier.com/operations/products/lubricants-and-specialty-products">Lubricants &amp; Specialty Products</a></li>
+		</ul></li><li class="has-children"><a href="http://www.hollyfrontier.com/operations/refineries/default.aspx">Operations</a><ul class="level3">
+			<li class="has-children"><a href="http://www.hollyfrontier.com/operations/refineries/default.aspx">Refineries</a><ul class="level4">
+				<li><a href="http://www.hollyfrontier.com/operations/refineries/cheyenne/default.aspx">Cheyenne Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/el-dorado/default.aspx">El Dorado Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/navajo/default.aspx">Navajo Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/tulsa/default.aspx">Tulsa Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/woods-cross/default.aspx">Woods Cross Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/Petro-Canada-Lubricants/default.aspx">Petro-Canada Lubricants</a></li>
+			</ul></li><li class="has-children"><a href="http://www.hollyfrontier.com/operations/products/default.aspx">Products</a><ul class="level4">
+				<li><a href="http://www.hollyfrontier.com/operations/products/light-products/default.aspx">Light Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/lubricants-and-specialty-products/default.aspx">Lubricants &amp; Specialty Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/asphalt-and-heavy-products/default.aspx">Asphalt &amp; Heavy Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/safety-data-sheets/default.aspx">Safety Data Sheets</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="http://investor.hollyfrontier.com/index.cfm">Investor Relations</a><ul class="level3">
+			<li><a href="http://investor.hollyfrontier.com/releases.cfm">Press Releases</a></li><li><a href="https://hollyfrontiercorporation.gcs-web.com/events-and-presentations/events">Events &amp; Presentations</a></li><li class="has-children"><a href="http://investor.hollyfrontier.com/stockquote.cfm">Stock Information</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/stockquote.cfm">Stock Quote &amp; Chart</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/historic-stock-lookup">Historic Stock Lookup</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/investment-calculator">Investment Calculator</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/dividends-splits">Dividend History</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/analyst-coverage">Analyst Coverage</a></li>
+			</ul></li><li class="has-children"><a href="http://investor.hollyfrontier.com/sec.cfm">Financial Information</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/sec.cfm">SEC Filings</a></li><li><a href="http://investor.hollyfrontier.com/financial-information/annual-reports">Annuals And Proxy</a></li><li><a href="http://investor.hollyfrontier.com/results.cfm">Quarterly Results</a></li>
+			</ul></li><li><a href="http://investor.hollyfrontier.com/historical-hfc-index?field_nir_event_start_date_value_3=2018">HollyFrontier Index</a></li><li><a href="https://hollyfrontiercorporation.gcs-web.com/governance">Corporate Governance </a></li><li class="has-children"><a href="https://hollyfrontiercorporation.gcs-web.com/investor-faqs">Shareholder Services</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/investor-faqs">Investor FAQS</a></li><li><a href="http://investor.hollyfrontier.com/transfer-agent">Stock Transfer Agent</a></li><li><a href="http://investor.hollyfrontier.com/contactus.cfm">Contact IR</a></li>
+			</ul></li>
+		</ul></li><li><a href="/Careers/Career-Profile">Careers</a></li><li><a href="http://www.hollyfrontier.com/contact-us/default.aspx">Contact Us</a></li><li><a href="http://www.hollyfrontier.com/Citizenship/default.aspx">CITIZENSHIP REPORT</a></li>
+	</ul></li>
+</ul></nav>
+</span><span class='HeaderPane2Div7'><div id="_ctrl0_ctl24_divModuleContainer" class="ModuleContainer ModuleSearch">
+	
+    <div class="ModuleContainerInnerTop">
+        <div class="ModuleContainerInner">
+	        <span id="_ctrl0_ctl24_lblSearchText" class="SearchText"></span><input name="_ctrl0$ctl24$txtSearchInput" type="text" id="_ctrl0_ctl24_txtSearchInput" class="SearchInput" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl24$btnSearch&#39;, &#39;&#39;); " />
+            <input type="submit" name="_ctrl0$ctl24$btnSearch" value="Search" id="_ctrl0_ctl24_btnSearch" class="ModuleButton SearchButton" />
+            
+        </div>
+    </div>
+</div>
+</span><span class='HeaderPane2Div8'><div id="_ctrl0_ctl27_divModuleContainer" class="HeaderImageContainer">
+    <div class="HeaderImage">
+        <img src='//s2.q4cdn.com/255514451/files/design/header_default_en.jpg' alt='privacy-statement'>
+    </div>
+</div></span><span class='HeaderPane2Div9'><div id="_ctrl0_ctl30_divModuleContainer" class="ModuleContent ModuleContainer StockQuoteHeaderContainer stock-widget">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.min.js"></script>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.11.min.js"></script>
+
+<script>
+    $('.stock-widget').stockQuote({
+       dateFormat: 'm/dd/yy',
+       changeCls: ['down', 'up'],
+       stock: ['NYSE:HFC'],
+       stockTpl: (
+        '{{#.}}' +
+            '<div class="StockContainer"> ' +
+                '<span  class="StockDescription1">NYSE: HFC</span> ' +
+                '<a href="http://investor.hollyfrontier.com/stockquote.cfm"  class="StockPrice" target="_blank">{{tradePrice}}</a> ' +
+                '<span  class="StockPChange StockPrice>{{uodSymbol}}"><span class="StockIndicator">{{uodSymbol}}</span>{{percChange}}%</span> ' +
+                '<span  class="StockDate">{{tradeDate}} PM ET</span> ' +
+            '</div> ' +
+        '{{/.}}'
+       )
+    });
+</script>
+        </div>
+    </div>
+</div></span><span class='HeaderPane2Div10'><div id="_ctrl0_ctl33_divModuleContainer" class="LogoSlider"><a href="http://www.hollyfrontier.com/home/default.aspx" id="_ctrl0_ctl33_hrefLink"><img src="//s2.q4cdn.com/255514451/files/images/logo.png" id="_ctrl0_ctl33_img1" border="0" alt="Home" /></a><br /></div>
+</span></div></div>
+		</div>
+		<div class="PaneContentInner">
+			<div class="PaneLeft"><div class="clearfix"><span class='LeftPaneDiv'><span class='LeftPaneDiv11'><nav class="SecondaryNav bs-sidenav"><ul class="level1">
+	<li class="selected has-children home"><a href="http://www.hollyfrontier.com/home/default.aspx">Home</a><ul class="level2">
+		<li class="has-children"><a href="http://www.hollyfrontier.com/about-us/corporate-profile/default.aspx">About Us</a><ul class="level3">
+			<li><a href="http://www.hollyfrontier.com/about-us/corporate-profile/default.aspx">Corporate Profile</a></li><li><a href="http://www.hollyfrontier.com/about-us/mission-and-values/default.aspx">Mission &amp; Values</a></li><li><a href="http://www.hollyfrontier.com/about-us/company-history/default.aspx">Company History</a></li><li><a href="http://www.hollyfrontier.com/about-us/leadership/default.aspx">Leadership</a></li><li><a href="http://www.hollyfrontier.com/about-us/holly-energy-partners/default.aspx">Holly Energy Partners</a></li><li><a href="http://www.hollyfrontier.com/operations/products/lubricants-and-specialty-products">Lubricants &amp; Specialty Products</a></li>
+		</ul></li><li class="has-children"><a href="http://www.hollyfrontier.com/operations/refineries/default.aspx">Operations</a><ul class="level3">
+			<li class="has-children"><a href="http://www.hollyfrontier.com/operations/refineries/default.aspx">Refineries</a><ul class="level4">
+				<li><a href="http://www.hollyfrontier.com/operations/refineries/cheyenne/default.aspx">Cheyenne Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/el-dorado/default.aspx">El Dorado Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/navajo/default.aspx">Navajo Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/tulsa/default.aspx">Tulsa Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/woods-cross/default.aspx">Woods Cross Refinery</a></li><li><a href="http://www.hollyfrontier.com/operations/refineries/Petro-Canada-Lubricants/default.aspx">Petro-Canada Lubricants</a></li>
+			</ul></li><li class="has-children"><a href="http://www.hollyfrontier.com/operations/products/default.aspx">Products</a><ul class="level4">
+				<li><a href="http://www.hollyfrontier.com/operations/products/light-products/default.aspx">Light Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/lubricants-and-specialty-products/default.aspx">Lubricants &amp; Specialty Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/asphalt-and-heavy-products/default.aspx">Asphalt &amp; Heavy Products</a></li><li><a href="http://www.hollyfrontier.com/operations/products/safety-data-sheets/default.aspx">Safety Data Sheets</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="http://investor.hollyfrontier.com/index.cfm">Investor Relations</a><ul class="level3">
+			<li><a href="http://investor.hollyfrontier.com/releases.cfm">Press Releases</a></li><li><a href="https://hollyfrontiercorporation.gcs-web.com/events-and-presentations/events">Events &amp; Presentations</a></li><li class="has-children"><a href="http://investor.hollyfrontier.com/stockquote.cfm">Stock Information</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/stockquote.cfm">Stock Quote &amp; Chart</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/historic-stock-lookup">Historic Stock Lookup</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/investment-calculator">Investment Calculator</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/dividends-splits">Dividend History</a></li><li><a href="http://investor.hollyfrontier.com/stock-information/analyst-coverage">Analyst Coverage</a></li>
+			</ul></li><li class="has-children"><a href="http://investor.hollyfrontier.com/sec.cfm">Financial Information</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/sec.cfm">SEC Filings</a></li><li><a href="http://investor.hollyfrontier.com/financial-information/annual-reports">Annuals And Proxy</a></li><li><a href="http://investor.hollyfrontier.com/results.cfm">Quarterly Results</a></li>
+			</ul></li><li><a href="http://investor.hollyfrontier.com/historical-hfc-index?field_nir_event_start_date_value_3=2018">HollyFrontier Index</a></li><li><a href="https://hollyfrontiercorporation.gcs-web.com/governance">Corporate Governance </a></li><li class="has-children"><a href="https://hollyfrontiercorporation.gcs-web.com/investor-faqs">Shareholder Services</a><ul class="level4">
+				<li><a href="http://investor.hollyfrontier.com/investor-faqs">Investor FAQS</a></li><li><a href="http://investor.hollyfrontier.com/transfer-agent">Stock Transfer Agent</a></li><li><a href="http://investor.hollyfrontier.com/contactus.cfm">Contact IR</a></li>
+			</ul></li>
+		</ul></li><li><a href="/Careers/Career-Profile">Careers</a></li><li><a href="http://www.hollyfrontier.com/contact-us/default.aspx">Contact Us</a></li><li><a href="http://www.hollyfrontier.com/Citizenship/default.aspx">CITIZENSHIP REPORT</a></li>
+	</ul></li>
+</ul></nav>
+</span></span></div></div>
+			<div class="container"><div class="clearfix"><div class="PaneBreadcrumb"><span class='BreadcrumbPaneDiv13'><div id="_ctrl0_ctl39_divModuleContainer" class="Breadcrumb"><a href="http://www.hollyfrontier.com/home/default.aspx" id="_ctrl0_ctl39_hrefHome" class="BreadcrumbHomeLink">Home</a><span class='BreadcrumbSeparator'>&raquo;</span>Privacy Statement
+
+<div class="ClearFix"></div>
+</div>
+</span></div></div></div>
+			<div class="PaneContent"><div class="container clearfix"><span class='ContentPaneDiv'><span class='ContentPaneDiv1'><div id="_ctrl0_ctl51_divModuleContainer" class="HtmlTextContainer">
+    
+    <div class="ContentContainer">
+        <p>HollyFrontier Corporation and its subsidiaries and affiliates (“HFC,” “us” or “we”) are committed to safeguarding your privacy online. Please read the following policy to understand how your personal information will be treated as you make full use of our website.</p>
+<p>Some web pages created by HFC use cookies, which are small text files that may be placed on a website user’s hard disk for record-keeping purposes. It is essentially the user’s identification card and cannot be executed as code or deliver viruses. It is unique to each user and can only be read by the server that issued it. The purpose of a cookie is to tell the server that a user has returned to the webpage. Cookies, in and of themselves, do not personally identify users, they only identify the user’s computer. A cookie does not give this website access to your computer.</p>
+<p>Many websites use cookies to provide useful features for their customers. Most browsers are set-up to accept cookies, but users have the option to set their browsers up to refuse cookies. Users will not be able to take full advantage of this website if the option to refuse cookies is elected.</p>
+<p>We will not send users of this website any unsolicited information, including but not limited to, emails regarding any commercial offers or any advertisements. We value the relationship we have with our website users, customers, and future customers and we respect your privacy concerns.</p>
+<p>This policy may change without prior notice. If you have any questions, feel free to contact us.</p>
+    </div>
+</div></span></span></div></div>
+			<div class="PaneRight"><div class="container clearfix"><span class='RightPaneDiv'></span></div></div>
+		</div>
+		<div class="FooterContainer">
+			<div class="PaneFooter"><div class="container clearfix"><span class='FooterPaneDiv'><span class='FooterPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript">
+// Placeholder 
+function lang_focus(name, element) {
+    $(element).val(name);
+    $(element).focus(function() {
+        if (element.value == name) element.value = '';
+    });
+
+    $(element).blur(function() {
+        if (!element.value.length) element.value = name;
+    });
+}
+
+$(document).ready(function() {
+    $("a.fancybox").fancybox();
+
+    $('.StockQuoteHeaderContainer a').prop({
+        href: 'http://investor.hollyfrontier.com/stockquote.cfm',
+        target: '_blank'
+    });
+
+    // mobile navigation
+    $('.ToggleMenu').click(function() {
+        $('.MobileNav').slideToggle();
+        $('body').toggleClass('openNav');
+        $("html, body").animate({ scrollTop: 0 }, 0);
+    });
+    $('.MobileNav .level2 > li.has-children > a').append('<span class="drop-icon"></span>');
+    $('.MobileNav .level2 .has-children > a').on('click',function(e){
+        var $this = $(this),
+            $parent = $this.parent();     
+        if ( !$parent.hasClass('open') ) {
+            e.preventDefault();
+            $parent.addClass('open').find('>ul').slideDown();
+            $parent.siblings().removeClass('open').find('>ul').slideUp();
+            $parent.siblings().find('.open').removeClass('open').find('ul').hide();
+        }
+    });
+
+    // search
+    $('.SearchIcon').on('click', function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $('.PaneHeader2 .ModuleSearch').fadeOut();
+        } else {
+            $(this).addClass('active');
+            $('.PaneHeader2 .ModuleSearch').fadeIn();
+        }
+
+    });
+
+    $(window).on('scroll', function() {
+        var top = $(document).scrollTop();
+
+        if (top > 0) {
+            $('.ClientLogo').show();
+        } else {
+            $('.ClientLogo').hide();
+        }
+    });
+
+    // mailing list sign up
+    $('.MailIcon').on('click', function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $('.PaneHeader2 .MailingListSignupContainer').fadeOut();
+        } else {
+            $(this).addClass('active');
+            $('.PaneHeader2 .MailingListSignupContainer').fadeIn();
+        }
+
+    });
+
+    // Custom Checkbox
+    $('input[type="checkbox"]').iCheck({
+        handle: 'checkbox',
+        checkboxClass: 'icheckbox'
+    });
+
+    // Search
+    $('.ModuleSearch').find('input[type="text"]').filter(function() {
+        var name = "Search";
+        lang_focus(name, this);
+    });
+
+    // Email
+    $('.MailingListSignupContainer').find('input[type="text"]').filter(function() {
+        var name = "Email";
+        lang_focus(name, this);
+    });
+
+
+    $('.navbar-collapse .level2 li.has-children').hover(
+        function() {
+            $(this).find('>ul').show();
+        },
+        function() {
+            $(this).find('>ul').hide();
+        }
+    );
+});
+</script>
+</div></span><span class='FooterPaneDiv14'><div id="_ctrl0_ctl42_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl42_divModuleContainer" class="FooterLinks">
+	
+	<ul id="_ctrl0_ctl42_qlList" class="FooterLinks">
+		
+				
+				<li class="QuickLinkRow"><a target="" href="/Careers/Career-Profile/">Careers</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRowAlt"><a target="_self" href="http://www.hollyfrontier.com/accessibility/default.aspx">Accessibility</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRow"><a target="" href="/Equal-Employment-Opportunity/default.aspx">EEO</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRowAlt"><a target="_self" href="http://www.hollyfrontier.com/Site-Map/default.aspx">Site Map</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRow"><a target="_self" href="http://www.hollyfrontier.com/privacy-statement/default.aspx">Privacy</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRowAlt"><a target="_blank" href="//s2.q4cdn.com/255514451/files/doc_downloads/2019/Human-Rights-Policy-(final-9-11-19)-(1).pdf">Human Rights Policy</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRow"><a target="_self" href="http://www.hollyfrontier.com/Terms-Of-Use/default.aspx">Terms of Use</a>
+				
+			
+	</ul>
+</div>
+</span><span class='FooterPaneDiv15'><div id="_ctrl0_ctl45_divModuleContainer" class="HtmlTextContainer Copyright">
+    
+    <div class="ContentContainer">
+        © Copyright 2019 HollyFrontier Corporation
+    </div>
+</div></span><span class='FooterPaneDiv16'>
+<div class="Q4FooterContainer">
+	<a href="http://www.q4inc.com/default.aspx?SectionId=b3095048-4b70-4791-8724-1add37478433" id="_ctrl0_ctl48_hrefWebsiteRecording" target="_blank"><span id="_ctrl0_ctl48_lblWebsiteRecording" class="WebsiteRecording">Powered By Q4 Inc.</span> <span id="_ctrl0_ctl48_lblVersion" class="Version">5.27.0.2</span></a>
+</div></span></span></div></div>
+			<div class="PaneFooter2"><div class="container clearfix"></div></div>
+			<div class="PaneQ4Footer"><div class="container clearfix"></div></div>
+		</div>
+	</div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

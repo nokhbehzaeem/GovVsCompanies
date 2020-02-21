@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a4cc726ee7","applicationID":"81896881","transactionName":"IloPFRAKCVRcF0tYQxVcAg0HFkpITAcIUFI=","queueTime":2,"applicationTime":77,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a4cc726ee7",applicationID:"81896881"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<title>DailyJournal</title>
+<link rel="stylesheet" media="all" href="/assets/application-d3e46718036372f97d286550de870ec9.css" data-turbolinks-track="true" />
+<script src='https://dme0ih8comzn4.cloudfront.net/js/feather.js' type='text/javascript'></script>
+<script src='https://www.google.com/recaptcha/api.js' type='text/javascript'></script>
+<script src='https://js.stripe.com/v3/' type='text/javascript'></script>
+<script src="/assets/application-a23f428150c94ffed2bf714fcf16a946.js" data-turbolinks-track="true"></script>
+<meta name="stripe-key" content="pk_live_tXpieNnQSAyexYzd3anViSV6" />
+<link rel="shortcut icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/dailyjournal-prod/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/dailyjournal-prod/favicon-16x16.png" />
+<link rel="shortcut icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/dailyjournal-prod/favicon-32x32.png" />
+<link rel="shortcut icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/dailyjournal-prod/favicon-96x96.png" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="bxTrjCG8J0rbxaV33dH5VT4h4wm+zC+ghIRSg2ZVf+N/1yDn/hWgncJM7kW+SIvJ5Oj2rhtZPfarcQoWcB6eTg==" />
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport'>
+<meta content='zE7teSjBeHkRGPyDBucqzeSMyWtjpWcN5T4kjXyGfJE' name='google-site-verification'>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', "UA-74935004-1", 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<script async='async' src='//www.googletagservices.com/tag/js/gpt.js'></script>
+<script src='//connect.soundcloud.com/sdk/sdk-3.2.1.js'></script>
+<style>
+  @media print {
+    .container {
+      display: none !important;
+    }
+  
+    .print-ad {
+      display: block !important
+    }
+  }
+</style>
+</head>
+<body data-controller-action='public' data-controller='articles' data-env='production' data-impaired='false' id=''>
+<div class='print-ad'>
+<img src='https://s3-us-west-2.amazonaws.com/dailyjournal-prod/dj_logo_high_rez.png'>
+<br>
+<p></p>
+For reprint rights or to purchase a copy of your Daily Journal photo, email jeremy@reprintpros.com for prices or call 949-702-5390.
+<p></p>
+To buy more copies, call 866-531-1492 or email subscribe@dailyjournal.com
+</div>
+<div class='hide' id='content-warning'>
+This is the property of the Daily Journal Corporation and fully protected by copyright.
+It is made available only to Daily Journal subscribers for personal or collaborative purposes
+and may not be distributed, reproduced, modified, stored or transferred without written permission.
+Please click "Reprint" to order presentation-ready copies to distribute to clients or use in commercial
+marketing materials or for permission to post on a website. and copyright (showing year of publication) at the bottom.
+</div>
+
+<div id='header-space'></div>
+<header>
+<div class='container'>
+<div class='top-nav'>
+<div class='col-xs-2 col-sm-1 col-md-2'>
+<div id='top-nav-logo'>
+<div class='btn-group'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+<div class='hidden-sm hidden-xs'>
+<span><img src="/assets/DJcorp-3e67bca6d548495aae62568255aefadd.png" alt="Djcorp" /></span>
+<i class='fa fa-caret-down'></i>
+</div>
+<div class='visible-mobile-sm'>
+<i class='fa fa-bars'></i>
+</div>
+</a>
+<div class='dropdown-menu dropdown-items'>
+<div class='corporation-links'>
+<a class='dropdown-item' href='http://www.dailycommerce.news' target='_blank'>Daily Commerce (Los Angeles, CA)</a>
+<a class='dropdown-item' href='http://www.sdtranscript.com' target='_blank'>The Daily Transcript (San Diego, CA)</a>
+<a class='dropdown-item' href='http://www.riversidejournal.news' target='_blank'>Riverside Business Journal</a>
+<a class='dropdown-item' href='http://www.ocreporter.news' target='_blank'>Orange County Reporter</a>
+<a class='dropdown-item' href='http://www.postrecord.news' target='_blank'>San Jose Post-Record</a>
+<a class='dropdown-item' href='http://www.intercityexpress.news' target='_blank'>The Inter-City Express (Oakland, CA)</a>
+<a class='dropdown-item' href='http://www.dailyrecorder.news' target='_blank'>The Daily Recorder (Sacramento, CA)</a>
+<a class='dropdown-item' href='http://www.recordreporter.com' target='_blank'>The Record Reporter (Phoenix, AZ)</a>
+<a class='dropdown-item' href='http://Redloc.com' target='_blank'>REDLOC Online</a>
+</div>
+<div class='additional-mobile-links'>
+<h4 style='padding-left: 10px;'>Legal Notices</h4>
+<a class='dropdown-item' href='http://DBAStore.com' target='_blank'>DBAstore</a>
+<a class='dropdown-item' href='http://LegalAdStore.com' target='_blank'>LegalAdstore</a>
+<a class='dropdown-item' href='https://adtech.dailyjournal.com' target='_blank'>Adtech</a>
+<hr>
+<a href="/mcle">MCLE</a>
+<a href="/offices">DJ Corporation</a>
+<a target="_blank" href="/job_listings?job_location=Los+Angeles">Classifieds</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/expert-witnesses/' target='_blank'>Experts</a>
+<h4 style='padding-left: 10px;'>Resources</h4>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/adr/' target='_blank'>ADR Providers</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/attorney-specialties/' target='_blank'>Attorneys (advertising)</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/cle/' target='_blank'>MCLE Providers</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/recruitment/' target='_blank'>Recruitment</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/technology/' target='_blank'>Technology</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='hidden-sm col-sm-8 nav-top-padding'>
+<div class='top-nav-links'>
+<ul>
+<li class='hidden-sm hidden-xs'>
+<div class='btn-group'><a href="/">Home</a></div>
+</li>
+<li class='hidden-xs'>
+<div class='btn-group'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+Legal Notices
+<i class='fa fa-caret-down'></i>
+</a>
+<div class='dropdown-menu dropdown-items'>
+<a class='dropdown-item' href='http://DBAStore.com' target='_blank'>DBAstore</a>
+<a class='dropdown-item' href='http://LegalAdStore.com' target='_blank'>LegalAdstore</a>
+<a class='dropdown-item' href='https://adtech.dailyjournal.com' target='_blank'>Adtech</a>
+</div>
+</div>
+</li>
+<li class='hidden-sm hidden-xs'>
+<div class='btn-group'><a href="/mcle">MCLE</a></div>
+</li>
+<li class='hidden-xs'>
+<div class='btn-group'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+About
+<i class='fa fa-caret-down'></i>
+</a>
+<div class='dropdown-menu dropdown-items'>
+<a class="dropdown-item" href="/mission">Mission</a>
+<a class="dropdown-item" href="/offices">Offices</a>
+<a class="dropdown-item" href="/staff">Editorial Staff</a>
+<a class="dropdown-item" href="/advertising">Advertising</a>
+<a target="_blank" href="https://s3-us-west-2.amazonaws.com/dailyjournal-prod/footers/editorial_calendars/000/000/001/original/DJ_Editorial_Calendar_2020.pdf?1576182079">Editorial Calendar</a>
+</div>
+</div>
+</li>
+<li class='hidden-xs'>
+<div class='btn-group'><a target="_blank" href="/job_listings?job_location=Los+Angeles">Classifieds</a></div>
+</li>
+<li class='hidden-xs'>
+<div class='btn-group'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+Resources
+<i class='fa fa-caret-down'></i>
+</a>
+<div class='dropdown-menu dropdown-items'>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/adr/' target='_blank'>ADR Providers</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/attorney-specialties/' target='_blank'>Attorneys (advertising)</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/cle/' target='_blank'>MCLE Providers</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/recruitment/' target='_blank'>Recruitment</a>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/technology/' target='_blank'>Technology</a>
+<a href="/legal_links">Legal Links</a>
+</div>
+</div>
+</li>
+<li class='hidden-sm hidden-xs'>
+<div class='btn-group'>
+<a class='dropdown-item' href='http://legacy.callawyer.com/lrc-field/expert-witnesses/' target='_blank'>Experts</a>
+</div>
+</li>
+<li class='hidden-xs'>
+<div class='btn-group'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+Submit
+<i class='fa fa-caret-down'></i>
+</a>
+<div class='dropdown-menu dropdown-items'>
+<a class="dropdown-item" href="/verdicts_and_settlements/new">Verdicts</a>
+<a class="dropdown-item" href="/deal-makers/new">Dealmakers</a>
+<a class="dropdown-item" href="/on-the-move/new">On The Move</a>
+<a class="dropdown-item" href="/profile_submission">Profiles</a>
+<a class="dropdown-item" href="/perspective">Columns</a>
+<a class="dropdown-item" href="/nominations">Nominations</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class='col-xs-10 col-sm-11 col-md-2 nav-top-padding text-right'>
+<div class='sign-in-out'>
+<a href="/dj_subscriptions/new">Subscribe | </a>
+<a href="/users/sign_in">Sign In
+<div class='fa fa-user'></div>
+</a></div>
+</div>
+<div class='clearfix'></div>
+</div>
+<div class='row'>
+<div class='logo-container'>
+<div class='dj-container'>
+<a href="/"><img class="logo" src="https://s3-us-west-2.amazonaws.com/dailyjournal-prod/dj_logo_high_rez.png" alt="Dj logo high rez" />
+</a></div>
+<div class='cal-lawyer-container'>
+<a target="_blank" href="http://www.callawyer.com/"><img class="logo cal-lawyer" src="https://s3-us-west-2.amazonaws.com/dailyjournal-prod/Callawyerlogo.png" alt="Callawyerlogo" />
+</a></div>
+</div>
+</div>
+<div class='row'>
+<div class='col-md-12'>
+<div class='collapse' id='collapseSearch'>
+<div id='main-search-bar'>
+<div class='box-wrap no-bg' style='margin-bottom: 0; border-bottom: none;'>
+<form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<div class='row nav-search'>
+<div class='col-sm-12 col-md-3'>
+<h6>Filter by date</h6>
+<div class='form-inline'>
+<input type="text" name="start_date" id="start_date" class="js-start-date js-datepicker form-control date-range" data-provide="datepicker" data-date-format="MM dd, yyyy" placeholder="Start date" autocomplete="off" />
+<span class='by-date-separator'>&nbsp;to&nbsp;</span>
+<input type="text" name="end_date" id="end_date" class="js-end-date js-datepicker form-control date-range" data-provide="datepicker" data-date-format="MM dd, yyyy" placeholder="End date" autocomplete="off" />
+</div>
+
+</div>
+<div class='col-md-2'>
+<h6>Exact Phrase</h6>
+<input type="text" name="match_phrase" id="match_phrase" class="form-control" />
+</div>
+<div class='col-md-2'>
+<h6>Not the words</h6>
+<input type="text" name="must_not_have_words" id="must_not_have_words" class="form-control" />
+</div>
+<div class='col-md-3'>
+<h6>
+At least one of the words
+<div class='fa fa-info-circle' data-placement='top' data-toggle='tooltip' title="Tip: Find articles that have any one of these words. Don't use commas"></div>
+</h6>
+<input type="text" name="may_include" id="may_include" class="form-control" />
+</div>
+<div class='col-md-2'>
+<h6>
+All the words
+<div class='fa fa-info-circle' data-placement='top' data-toggle='tooltip' title="Tip: Find articles that contain all of these words. Don't use commas"></div>
+</h6>
+<div class='common-search-wrap'>
+<input type="text" name="search" id="search" class="form-control" />
+<button type="submit" value="Search Daily Journal" title="Submit Search" class="btn btn-primary"><i class='fa fa-search'></i>
+</button></div>
+</div>
+</div>
+</form>
+
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row hidden-sm hidden-xs'>
+<div class='col-md-12'>
+<div id='subscribe-bar'>
+<span id='subscribe-bar-text'>Subscribe to the Daily Journal for access to Daily Appellate Reports, Verdicts, Judicial Profiles and more...</span>
+<a class="btn btn-primary inline subscribe-btn hidden-xs" href="/dj_subscriptions/new">Subscribe</a>
+<a class="btn btn-primary btn-block visible-xs subscribe-btn" href="/users/sign_in">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<div class='container'>
+</div>
+
+
+
+
+<input type="hidden" name="search_down" id="search_down" value="false" />
+<div aria-labelledby='myModalLabel' class='modal' id='search-down-modal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+<h3 class='modal-title'>Search Is Currently Unavailable</h3>
+</div>
+<div class='modal-body'>
+<div class='row'>
+<div class='col-md-3'></div>
+<div class='col-md-6'>
+<p>The Daily Journal search functionality is currently unavailable. We will have this back up as soon as possible.</p>
+</div>
+<div class='col-md-3'></div>
+</div>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal' type='button'>Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class='container' id='main-content-wrapper'>
+<div class='index-type' data-indtype='Public Homepage'></div>
+<div class='row text-center'>
+<div class='col-md-12'>
+<div class='long-ad' id='public-top-banner'></div>
+</div>
+</div>
+
+<div class='row'>
+<div class='col-xs-12 col-md-5'>
+<div id='page-title'>
+Djc website privacy policy
+</div>
+</div>
+<div class='col-md-7'>
+<div class='pull-right'>
+
+</div>
+
+</div>
+</div>
+<hr class='thick' style='margin-top: 0 !important;'>
+
+<div class='row'>
+<div class='col-xs-12 col-md-3'>
+<h6>
+</h6>
+<a aria-controls='searchingCollapse' aria-expanded='false' class='js-categories-toggle list-group-item list-heading' data-toggle='collapse' href='#searchingCollapse' role='button'>
+<h3>
+Search Filters
+<span class='js-categories-arrow pull-right fa fa-chevron-circle-right active'></span>
+</h3>
+</a>
+<div class='collapse in vs-form' id='searchingCollapse'>
+<ul class='list-group'>
+<form action="/public/Community%20News" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<h6>Filter by date</h6>
+<div class='form-inline'>
+<input type="text" name="start_date" id="start_date" class="js-start-date js-datepicker form-control date-range" data-provide="datepicker" data-date-format="MM dd, yyyy" placeholder="Start date" autocomplete="off" />
+<span class='by-date-separator'>&nbsp;to&nbsp;</span>
+<input type="text" name="end_date" id="end_date" class="js-end-date js-datepicker form-control date-range" data-provide="datepicker" data-date-format="MM dd, yyyy" placeholder="End date" autocomplete="off" />
+</div>
+
+<h6>Search by Headline</h6>
+<div class='common-search-wrap'>
+<input type="text" name="search_by_title" id="search_by_title" placeholder="Headline" class="form-control" />
+<button type="submit" value="Search by articles" title="Submit Search" class="btn btn-primary"><i class='fa fa-search'></i>
+</button></div>
+</form>
+
+<div class='clearfix'></div>
+</ul>
+</div>
+
+<div class='text-center'>
+<div class='row'>
+<div class='col-md-12'>
+<div class='box-ad' id='article-ad-1'></div>
+<div class='box-ad' id='article-ad-2'></div>
+</div>
+</div>
+
+</div>
+</div>
+<div class='col-xs-12 col-md-9'>
+<div class='clearfix'></div>
+<h3>
+<i>
+No results were found!
+</i>
+</h3>
+
+<div class='pull-right'>
+
+</div>
+
+</div>
+</div>
+
+
+<div class='row'>
+<div class='col-md-12'>
+<div class='long-ad' id='public-bottom-banner'></div>
+</div>
+</div>
+
+</div>
+<div class='container'>
+<div id='footer-bottom'>
+<div class='row'>
+<div class='col-sm-12'>
+<h6>
+<ul class='list-inline'>
+<li>
+<a href="/copyright">&copy;
+2020 Daily Journal Corporation.
+All Rights Reserved.
+</a></li>
+<li>
+<a href="/feedbacks/new">Feedback</a>
+</li>
+<li><a href="/advertising">Advertise With Us</a></li>
+<li><a href="/printing_services">Printing Services</a></li>
+<li><a href="/privacy">Privacy</a></li>
+<li><a href="/user_agreement">User Agreement</a></li>
+<li><a target="_blank" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0000783412">SEC</a></li>
+<li><a target="_blank" href="https://legacy.dailyjournal.com/public/pubMain.cfm?seloption=XBRL%20Documents&amp;pubdate=&amp;shNewsType=ContactUs&amp;NewsId=-1&amp;sdivId=">XBRL</a></li>
+<li>
+<div class='btn-group dropup'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+About
+<i class='fa fa-caret-up'></i>
+</a>
+<div class='dropdown-menu dropdown-items'>
+<a class="dropdown-item" href="/mission">Mission</a>
+<a class="dropdown-item" href="/offices">Offices</a>
+<a class="dropdown-item" href="/staff">Editorial Staff</a>
+</div>
+</div>
+</li>
+<li>
+<div class='btn-group dropup'>
+<a aria-expanded='false' aria-haspopup='true' class='dropdown-toggle' data-toggle='dropdown'>
+Submit
+<i class='fa fa-caret-up'></i>
+</a>
+<div class='dropdown-menu dropdown-items'>
+<a class="dropdown-item" href="/verdicts_and_settlements/new">Verdicts</a>
+<a class="dropdown-item" href="/deal-makers/new">Dealmakers</a>
+<a class="dropdown-item" href="/on-the-move/new">On The Move</a>
+<a class="dropdown-item" href="/job_listings/new">Job listing</a>
+<a class="dropdown-item" href="/nominations">Nominations</a>
+<a class="dropdown-item" href="/profile_submission">Profiles</a>
+<a class="dropdown-item" href="/perspective">Columns</a>
+</div>
+</div>
+</li>
+</ul>
+</h6>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby='footerFeedbackModalLabel' class='modal' id='footerFeedbackModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>&times;</span>
+</button>
+<h3 class='modal-title' id='footerFeedbackModalLabel'>How can we help you?</h3>
+</div>
+<div class='modal-body'>
+
+</div>
+</div>
+</div>
+</div>
+
+</body>
+<script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-8069570-3', 'auto');
+  ga('send', 'pageview');
+  
+  $(document).ready(ready);
+  $(document).on('load page:load', ready);
+</script>
+</html>

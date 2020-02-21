@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQ8FWV9TDRABVlFSAQQCVlU=",licenseKey:"04d273ebc4",applicationID:"120065501"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(20),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(21),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(21),a=t(20);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(18),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=f(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(13),u=t(11).generateTracePayload,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(16),w=t(15),v=window.XMLHttpRequest;s.features.xhr=!0,t(10),t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=u(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)}),d.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=f(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=u(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(20),s=t(21),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],15:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],16:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],17:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?a("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&a("timing",["fcp",Math.floor(t.startTime)])})}function o(t){if(t instanceof c&&!u){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:s.now()-e,u=!0,a("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var i,a=t("handle"),s=t("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){i=new PerformanceObserver(r);try{i.observe({entryTypes:["paint"]})}catch(f){}}if("addEventListener"in document){var u=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(t){document.addEventListener(t,o,!1)})}}},{}],18:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],19:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],20:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],21:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],22:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(20),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(20),u=t("ee"),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(14),t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(22)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+<link rel="canonical" href="https://www.cms.gov/privacy" />
+<meta name="description" content="Types of information we collectHow CMS uses information collected on CMS.govHow CMS uses cookies &amp; other technologies on CMS.govYour choices about tracking &amp; data collection on CMS.govHow CMS uses third-party websites &amp; applications with CMS.gov" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://www.cms.gov/privacy" />
+</head-placeholder>
+    <title>Privacy Policy | CMS</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_PM8VZwL-tEiXHkwEq4OAOcW8cQK04WfDnlt_Vvq8SyY.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_0OTu6iaNTvmsYFDG9bSenA5DdOT4o6Us6Gohwno4eVY.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Z5jMg7P_bjcW9iUzujI7oaechMyxQTUqZhHJ_aYSq04.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_NzziHnZDEsyfqY16gaCAghdHaORd05WpYdH-msiP6Og.css" />
+</css-placeholder>
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+</js-placeholder>
+  </head>
+  <body class="layout-no-sidebars path-node page-node-type-generic-page">
+  <div class='ds-u-visibility--screen-reader' id='liveText' aria-live='assertive'></div>
+  <script type="text/javascript" src="//assets.cms.gov/resources/cms/javascript/tealiumTagLoad.js"></script>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <div id="page-wrapper" class="ds-l-container">
+
+      <div id="page">
+
+        <header id="header" class="header" aria-label="Site header">
+          <a href="#skipNavTarget" class="visually-hidden focusable skip-link">Skip to main content</a>
+
+            <div class="region region-cms-header">
+
+    <button class="navbar-toggle navbar-toggle-primary-menu" aria-expanded = "false" aria-label="Main" aria-haspopup="true">
+      <i class="fa fa-bars" focusable="false"></i>
+    </button>
+
+    <div id="mobile-primary-menu-container" aria-hidden="true">
+      <div class="mobile-primary-menu-container-inner">
+        <div class="header">
+          <button class="close-mobile-trigger primary-close" aria-label="Close Main">
+            <i class="fas fa-times fa-2x" focusable="false"></i>
+          </button>
+          <img alt="CMS.gov Logo White" src="/themes/custom/cms_drupal_global/images/responsive/CMSgov-Logo-White.svg">
+          <button class="navbar-toggle navbar-toggle-secondary-menu" aria-expanded = "false" aria-label="Resources" aria-haspopup="true">
+            <i class="fas fa-ellipsis-v" focusable="false"></i>
+          </button>
+        </div>
+        <div class="content">
+        </div>
+      </div>
+    </div>
+
+
+    <button class="navbar-toggle navbar-toggle-secondary-menu" aria-expanded = "false" aria-label="Resources" aria-haspopup="true">
+      <i class="fas fa-ellipsis-v" focusable="false"></i>
+    </button>
+
+    <div id="mobile-secondary-menu-container" aria-hidden="true">
+      <div class="mobile-secondary-menu-container-inner">
+        <div class="header">
+          <button class="navbar-toggle navbar-toggle-primary-menu" aria-expanded = "false" aria-label="Main" aria-haspopup="true">
+            <i class="fa fa-bars" focusable="false"></i>
+          </button>
+          <img alt="CMS.gov Logo White" src="/themes/custom/cms_drupal_global/images/responsive/CMSgov-Logo-White.svg">
+          <button class="close-mobile-trigger secondary-close" aria-label="Close Resources">
+            <i class="fas fa-times fa-2x" focusable="false"></i>
+          </button>
+        </div>
+        <div class="content">
+        </div>
+      </div>
+    </div>
+
+    <nav aria-labelledby="block-cmsglobalsecondarymenu-menu"  id="block-cmsglobalsecondarymenu" data-block-plugin-id="system_menu_block:cms-global-secondary-menu" class="block block-menu navigation menu--cms-global-secondary-menu">
+  <div class="inner">
+                    
+    <h2 class="visually-hidden" id="block-cmsglobalsecondarymenu-menu">Header</h2>
+    
+
+              
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/" title="Home" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                <li class="menu-item">
+        <a href="/About-CMS/About-CMS" title="About CMS" data-drupal-link-system-path="node/132926">About CMS</a>
+              </li>
+                <li class="menu-item">
+        <a href="/newsroom" title="Newsroom" data-drupal-link-system-path="node/43871">Newsroom</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.archive-it.org/collections/2744" title="Archive">Archive</a>
+              </li>
+                <li class="menu-item">
+        <a href="/" title="Share" data-drupal-link-system-path="&lt;front&gt;">Share</a>
+              </li>
+                <li class="menu-item">
+        <a href="/About-CMS/Agency-Information/Aboutwebsite" title="Help" data-drupal-link-system-path="node/169781">Help</a>
+              </li>
+                <li class="menu-item">
+        <a href="/" title="Print" data-drupal-link-system-path="&lt;front&gt;">Print</a>
+              </li>
+        </ul>
+  
+
+
+      </div>
+</nav>
+<div id="block-cmsmediashareblock" data-block-plugin-id="block_content:eae9bdb7-cf27-4751-af56-d0103adfa387" class="block block-block-content block-block-contenteae9bdb7-cf27-4751-af56-d0103adfa387">
+  <!-- Modal Popup Block-->
+  <div class="cms-share-modal" id="cmsShareModal">
+    <div class="cms-share-content">
+      <div class="cms-share-title-bar">
+        <div class="cms-share-title">Bookmark & Share</div>
+        <button class="shareClose" aria-label="Close Share Widget">
+          <img src="/themes/custom/cms_drupal_global/images/share-widget/modal_close.png" alt="Share-Widget Close button"/>
+        </button>
+      </div>
+        <!-- end div class cms-share-title-bar -->
+
+      <div id="cms-share-list">
+        <ul>
+          <li>
+            <a href="https://twitter.com/intent/tweet?status=Home%20-%20Centers%20for%20Medicare%20%26%20Medicaid%20Services&url=https%3A%2F%2Fwww.cms.gov%2F" target="_blank">
+              <img alt="" src="/themes/custom/cms_drupal_global/images/twitter.png" />
+              <span>Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.blogger.com/blog-this.g?t&u=https%3A%2F%2Fwww.cms.gov%2F&n=Home%20-%20Centers%20for%20Medicare%20%26%20Medicaid%20Services" target="_blank">
+              <img alt="" src="/themes/custom/cms_drupal_global/images/blogger.png" />
+              <span>Blogger</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cms.gov%2F" target="_blank">
+              <img alt="" src="/themes/custom/cms_drupal_global/images/facebook.png" />
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.reddit.com/submit?url=https%3A%2F%2Fwww.cms.gov%2F&title=Home%20-%20Centers%20for%20Medicare%20%26%20Medicaid%20Services" target="_blank">
+              <img alt="" src="/themes/custom/cms_drupal_global/images/reddit.jpg" />
+              <span>Reddit</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.stumbleupon.com/submit?url=https%3A%2F%2Fwww.cms.gov%2F&title=Home%20-%20Centers%20for%20Medicare%20%26%20Medicaid%20Services" target="_blank">
+              <img alt="" src="/themes/custom/cms_drupal_global/images/stumbleupon.png" />
+              <span>Stumble Upon</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to&su=Home%20-%20Centers%20for%20Medicare%20%26%20Medicaid%20Services&body=https%3A%2F%2Fwww.cms.gov%2F" target="_blank">
+              <img alt="" src="/themes/custom/cms_drupal_global/images/gmail.png" />
+              <span>Gmail</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fwww.cms.gov%2F&t=Home%20-%20Centers%20for%20Medicare%20%26%20Medicaid%20Services&s=" target="_blank">
+              <img alt="" src="/themes/custom/cms_drupal_global/images/tumblr.png" />
+              <span>Tumbler</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="block-cmsglobalheaderlogo" data-block-plugin-id="block_content:10fd23f0-2059-4627-8ec9-2098d588ca1c" class="block block-block-content block-block-content10fd23f0-2059-4627-8ec9-2098d588ca1c">
+  
+    
+      <div class="content">
+     <span class="create-date"> </span> 
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://www.cms.gov/"><img alt="CMS.gov Centers for Medicare &amp; Medicaid Services" src="/themes/custom/cms_drupal_global/images/site-logo.png" /></a></p></div>
+      
+    </div>
+  </div>
+<div class="views-exposed-form block block-views block-views-exposed-filter-blockcms-of-acquia-search-page global-header-search" data-drupal-selector="views-exposed-form-cms-of-acquia-search-page" id="block-exposedformcms-of-acquia-searchpage" data-block-plugin-id="views_exposed_filter_block:cms_of_acquia_search-page">
+
+  
+    
+      <div class="content">
+     <span class="create-date"> </span> 
+      <form action="/cms-search" method="get" id="views-exposed-form-cms-of-acquia-search-page" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search form-item-search">
+      <label for="edit-search">Search</label>
+        
+		<input  data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+
+
+        </div>
+<div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-field-date-min form-item-field-date-min">
+      <label for="edit-field-date-min">Date</label>
+        
+		<input  data-drupal-selector="edit-field-date-min" type="text" id="edit-field-date-min" name="field_date[min]" value="" size="30" maxlength="128" class="form-text" />
+
+
+
+        </div>
+<div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-field-date-max form-item-field-date-max">
+      <label for="edit-field-date-max">And</label>
+        
+		<input  data-drupal-selector="edit-field-date-max" type="text" id="edit-field-date-max" name="field_date[max]" value="" size="30" maxlength="128" class="form-text" />
+
+
+
+        </div>
+<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-sort-by form-item-sort-by">
+      <label for="edit-sort-by">Sort by</label>
+        <select data-drupal-selector="edit-sort-by" id="edit-sort-by" name="sort_by" class="form-select"><option value="search_api_relevance" selected="selected">Best Match</option><option value="field_date">Newest First</option></select>
+        </div>
+<div class="js-form-item form-item js-form-type-select form-type-select js-form-item-items-per-page form-item-items-per-page">
+      <label for="edit-items-per-page-acquia-search">Items per page</label>
+        <select data-drupal-selector="edit-items-per-page" id="edit-items-per-page-acquia-search" name="items_per_page" class="form-select"><option value="10" selected="selected">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="All">View All</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-cms-of-acquia-search" type="submit" id="edit-submit-cms-of-acquia-search" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+</div>
+
+</form>
+
+    </div>
+  </div>
+<nav aria-labelledby="block-cmsglobalprimarymenu-menu"  id="block-cmsglobalprimarymenu" data-block-plugin-id="system_menu_block:cms-global-primary-menu" class="block block-menu navigation menu--cms-global-primary-menu">
+  <div class="inner">
+                    
+    <h2 class="visually-hidden" id="block-cmsglobalprimarymenu-menu">Site</h2>
+    
+
+              
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/Medicare/Medicare" title="Medicare" data-drupal-link-system-path="node/132906">Medicare</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.medicaid.gov/" title="Medicaid/CHIP">Medicaid/CHIP</a>
+              </li>
+                <li class="menu-item">
+        <a href="/Medicare-Medicaid-Coordination/Medicare-MedicaidCoordination" title="Medicare-Medicaid Coordination" data-drupal-link-system-path="node/132931">Medicare-Medicaid Coordination</a>
+              </li>
+                <li class="menu-item">
+        <a href="/CCIIO" title="Private Insurance" data-drupal-link-system-path="node/191061">Private Insurance</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://innovation.cms.gov/" title="Innovation Center">Innovation Center</a>
+              </li>
+                <li class="menu-item">
+        <a href="/Regulations-and-Guidance/Regulations-and-Guidance" title="Regulations &amp; Guidance" data-drupal-link-system-path="node/132921">Regulations &amp; Guidance</a>
+              </li>
+                <li class="menu-item">
+        <a href="/Research-Statistics-Data-and-Systems/Research-Statistics-Data-and-Systems" title="Research, Statistics, Data &amp; Systems" data-drupal-link-system-path="node/132891">Research, Statistics, Data &amp; Systems</a>
+              </li>
+                <li class="menu-item">
+        <a href="/Outreach-and-Education/Outreach-and-Education" title="Outreach &amp; Education" data-drupal-link-system-path="node/132886">Outreach &amp; Education</a>
+              </li>
+        </ul>
+  
+
+
+      </div>
+</nav>
+<div id="block-cms-drupal-global-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+     <span class="create-date"> </span> 
+        <nav class="breadcrumb" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ul>
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  Privacy Policy
+              </li>
+        </ul>
+  </nav>
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+        </header>
+        
+        <main>
+          <div id="main-wrapper" class="clearfix">
+
+            
+
+            <div id="main" class="clearfix">
+              <div class="ds-l-row">
+
+                <!-----3 Column----->
+                <!-- Have to check the length of the leftnav to see if the menu is there. -->
+                                  <div class="ds-l-col--12 cms-global-center">
+                    <inner>
+                        <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-cms-drupal-global-page-title" data-block-plugin-id="page_title_block" class="block block-core block-page-title-block">
+  
+    
+      <div class="content">
+     <span class="create-date"> </span> 
+      
+  <h1 id="skipNavTarget"  class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Privacy Policy
+     	<div class="title-border"></div></span>
+</h1>
+  <div class="title-border"></div>
+
+
+    </div>
+  </div>
+<div id="block-cms-drupal-global-content" data-block-plugin-id="system_main_block" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+     <span class="create-date"> </span> 
+        
+  <div about="/privacy" class="node node--type-generic-page node--view-mode-full clearfix">
+    <div class="node__content clearfix">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="/privacy/index#h54sjsyz19p0bxvl76ovmlft1x1hhm5">Types of information we collect</a><br /><a href="/privacy/index#h82sjsyz1ov91q88h6l13fk73yz86xv7">How CMS uses information collected on CMS.gov</a><br /><a href="/privacy/index#h14sjsyz2zgdm48rjrhbecrckpyst">How CMS uses cookies &amp; other technologies on CMS.gov</a><br /><a href="/privacy/index#h36sjsyz3h3s1cy0bsc18suadm1bd01ws">Your choices about tracking &amp; data collection on CMS.gov</a><br /><a href="/privacy/index#h57sjsyz3r1jqc1oje1naete3bvoi6g">How CMS uses third-party websites &amp; applications with CMS.gov</a><br /><a href="/privacy/index#h80sjsyz423t2npzty1b0n3ronfc7by">How CMS protects your personal information</a><br /><a href="/privacy/index#h99sjsyz4azc1idrrfx1tlats91rlg990">How long CMS keeps data &amp; how it’s accessed</a><br /><a href="/privacy/index#h117sjsyz4n6f1yjg5781985kyl1v7chl9">Children &amp; privacy on CMS.gov</a><br /><a href="/privacy/index#h134sjsyz4uo111k60ip1gp33o71w967j5">Links to other sites</a><br /><a href="/privacy/index#h181sjsyz6deixvzkd5xcucsuuqmi86">Additional privacy information</a></p>
+
+<h2>CMS.gov Privacy Policy</h2>
+
+<p>Protecting your privacy is very important to us. This privacy policy describes what information we collect, why we collect it, and what we do with it.  This privacy notice covers CMS.gov, marketplace.cms.gov, innovation.cms.gov, partnershipforpatients.cms.gov, and hfpp.cms.gov.  These websites are referred to as “CMS.gov” throughout the rest of this notice and are maintained and operated by the Centers for Medicare &amp; Medicaid Services (CMS).  The privacy notice for other CMS websites not listed above is available at <a href="/About-CMS/Agency-Information/Aboutwebsite/Privacy-Policy">https://www.cms.gov/About-CMS/Agency-Information/Aboutwebsite/Privacy-Policy.html</a>.</p>
+
+<p>CMS.gov doesn’t collect name, contact information, or other similar information through these websites unless you choose to provide it. We do collect other, limited, non-personally identifiable information automatically from visitors who read, browse, and/or download information from our website. We do this so we can understand how the website is being used and how we can make it more helpful. For more information, see <a href="/privacy/index#h54sjsyz19p0bxvl76ovmlft1x1hhm5">Types of information we collect</a>.</p>
+
+<p>Personally identifiable information (PII), defined by the Office of Management and Budget (OMB), refers to information that can be used to distinguish or trace an individual's identity, like their name, Medicare Number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, like date and place of birth, mother’s maiden name, etc. Medicare Fee-for-Service eligibility and enrollment information and claims data are considered protected health information (PHI) under the Health Insurance Portability and Accountability Act (1996) (HIPAA) regulations.</p>
+
+<p>We don’t sell any information you provide when you visit CMS.gov. For information on how we share information, see <a href="/privacy/index#h82sjsyz1ov91q88h6l13fk73yz86xv7">How CMS uses information collected on CMS.gov</a>.</p>
+
+<p> </p>
+
+<h2 id="h54sjsyz19p0bxvl76ovmlft1x1hhm5">Types of information we collect</h2>
+
+<h3>Information which is automatically collected:</h3>
+
+<h4>When you browse:</h4>
+
+<p>Certain information about your visit can be collected when you browse websites. When you browse CMS.gov, we, and in some cases, our third-party service providers, can collect the following types of information about your visit, including:</p>
+
+<ul><li>Domain from which you accessed the internet (like Verizon.com if you’re using a Verizon account).</li>
+	<li>IP address (an IP or internet protocol address is a number that’s automatically assigned to a device connected to the internet).</li>
+	<li>Approximate geographic location based on the IP address of the user’s local system.</li>
+	<li>Operating system for the device that you’re using and information about the browser you used when visiting the site. The operating system is software that directs a computer’s basic functions, like executing programs and managing storage.</li>
+	<li>Date and time of your visit.</li>
+	<li>Pages you visited.</li>
+	<li>Address of the website that connected you to CMS.gov (like Google.com or Bing.com).</li>
+	<li>Device type (like desktop computer, tablet, or type of mobile device).</li>
+	<li>Screen resolution.</li>
+	<li>Browser language.</li>
+	<li>Geographic location.</li>
+	<li>Time spent on page.</li>
+	<li>Scroll depth (measures how much of a web page was viewed).</li>
+	<li>Your actions on CMS.gov (like clicking a button).</li>
+</ul><p>For more information, see <a href="/privacy/index#h57sjsyz3r1jqc1oje1naete3bvoi6g">How CMS uses third-party websites &amp; applications with CMS.gov</a>.</p>
+
+<p>We use this information to:</p>
+
+<ul><li>Measure the number of visitors to CMS.gov.</li>
+	<li>Help make our website more useful for visitors.</li>
+	<li>Improve our public education and outreach through digital advertising.</li>
+</ul><p>Also, this information is sometimes used to personalize the content we show you on third-party sites. For more information on our practices, see <a href="/privacy/index#h57sjsyz3r1jqc1oje1naete3bvoi6g">How CMS uses third-party websites &amp; applications with CMS.gov</a>.</p>
+
+<p> </p>
+
+<h3>Information you may provide:</h3>
+
+<h4>When you request information:</h4>
+
+<p>We collect information, including your email address, to deliver alerts or eNewsletters. We use this information to complete the subscription process and provide you with information. You can opt out of these communications at any time by editing your <a href="https://public.govdelivery.com/accounts/USCMS/subscriber/new?preferences=true">subscription preferences</a>.</p>
+
+<p> </p>
+
+<h2 id="h82sjsyz1ov91q88h6l13fk73yz86xv7">How CMS uses information collected on CMS.gov</h2>
+
+<h3>Sending you CMS messages:</h3>
+
+<p>We use the email address you provide us to send emails related to CMS.</p>
+
+<h3>Conducting surveys to improve services:</h3>
+
+<p>We use online surveys to collect opinions and feedback. You don’t have to answer these questions. If you do answer these questions, don’t include any PII/PHI in your answers. We analyze and use the information from these surveys to improve the CMS.gov website. The information is available only to CMS managers, members of the CMS communications and web teams, and other designated federal staff and contractors who require this information to perform their duties.</p>
+
+<h3>Using third-party tools for website analytics</h3>
+
+<p>We use a variety of third-party web tools for web analytics. We don’t collect any PII/PHI with these tools.  We use these tools to collect basic information about visits to CMS.gov. This information is then used to maintain the website, including:</p>
+
+<ul><li>Monitoring website stability</li>
+	<li>Measuring website traffic</li>
+	<li>Optimizing website content</li>
+	<li>Helping make the website more useful to visitors</li>
+</ul><p>CMS staff analyzes the data collected from these tools. Reports are available only to CMS managers, teams who implement programs represented on CMS.gov, members of the CMS communications and web teams, and other designated federal staff and contractors who need this information to perform their jobs.</p>
+
+<p> </p>
+
+<h3>Using third-party tools for outreach and education through digital advertising:</h3>
+
+<p>We use third-party web services to conduct outreach and education through the use of digital advertising for CMS.gov. These third-party services may collect information through the use of web beacons (also called pixels) that are located on our pages. A web beacon is a see-through graphic image (usually 1 pixel x 1 pixel) that's placed on a web page and, in combination with a cookie, allows us to collect information regarding the use of the web page that contains the web beacon.</p>
+
+<p>We use web beacons to tell when a user is redirected to CMS.gov by clicking or otherwise interacting with a CMS advertisement that we ran on another website. This is known as “click tracking” or “conversion tracking,” and we use it to better target CMS advertisements (known as “retargeting”) to inform consumers about the services available through CMS.gov. For more information on how these tools work, see <a href="/privacy/index#h57sjsyz3r1jqc1oje1naete3bvoi6g">How CMS uses third-party websites &amp; applications with CMS.gov</a>.</p>
+
+<p>We also use third-party tools to help deliver advertising. Vendors that operate the third-party tools may also gather information about your visits to third-party sites outside of CMS.gov. While we don't track your internet activity outside of CMS.gov, our vendors may use information collected automatically by visiting CMS.gov, and combine it with data they collect elsewhere for targeted advertising purposes. You can opt out of this type of data collection via Privacy Manager, Ad Choices, and Do Not Track. For methods to opt out of this type of collection, see <a href="/privacy/index#h36sjsyz3h3s1cy0bsc18suadm1bd01ws">Your choices about tracking &amp; data collection on CMS.gov</a>.</p>
+
+<p>The outreach and education analytics tools provide reports which aggregate data like the number of clicks on advertisements. The reports are available only to CMS managers, teams who implement programs represented on CMS.gov, members of the CMS.gov communications and web teams, and other designated federal staff and contractors who need this information to perform their duties.</p>
+
+<p> </p>
+
+<h2 id="h14sjsyz2zgdm48rjrhbecrckpyst">How CMS uses cookies &amp; other technologies on CMS.gov</h2>
+
+<p>The Office of Management and Budget Memo <a href="https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2010/m10-22.pdf">M-10-22</a>, Guidance for Online Use of Web Measurement and Customization Technologies, allows federal agencies to use session and persistent cookies to improve the delivery of services.</p>
+
+<p>When you visit a website, its server may generate a piece of text known as a “cookie” to place on your device. The cookie, which is unique to your browser, allows the server to "remember" specific information about your visit while you’re connected. The cookie makes it easier for you to use the dynamic features of web pages. Information that you enter into CMS.gov isn’t associated with cookies on CMS.gov. Depending on the third-party tool’s business practices, privacy policies, terms of service, and/or the privacy settings you selected, information you’ve provided to third parties could be used to identify you when you visit CMS.gov. These third parties don’t/won’t share your identity with CMS or the Department of Health and Human Services (HHS).</p>
+
+<p>There are 2 types of cookies - single session (temporary) and multi-session (persistent). Single session cookies last only as long as your internet browser is open. Once you close your browser, the session cookie disappears. Persistent cookies are stored on your device for longer periods. Both types of cookies create an ID that’s unique to your device.</p>
+
+<ul><li><strong>Session cookies</strong>: We use session cookies for technical purposes, like to allow better navigation through our website. These cookies let our server know that you’re continuing a visit to our website. The OMB Memo M-10-22 Guidance defines our use of session cookies as "Usage Tier 1—Single Session.” The policy says, "This tier encompasses any use of single session web measurement and customization technologies."</li>
+	<li><strong>Persistent cookies</strong>: We use persistent cookies to understand the differences between new and returning visitors to CMS.gov. Persistent cookies remain on your device between visits to our website until they expire or are removed by the user. The OMB Memorandum M-10-22 Guidance defines our use of persistent cookies as "Usage Tier 2—Multi-session without personally identifiable information.” The policy says, "This tier encompasses any use of multi-session web measurement and customization technologies when no PII is collected." We don’t use persistent cookies to collect PII. We don’t identify a user by using cookies.</li>
+</ul><p>CMS also uses these technologies on CMS.gov:</p>
+
+<ul><li><strong>Persistent cookies for digital advertising</strong>: Similar to persistent cookies identified above, CMS uses persistent cookies for outreach through digital advertising. These cookies can also be created on third-party websites and remain on your device between visits to our website until they expire or you remove them. Consistent with OMB guidance for “Usage Tier 2”, we don’t use persistent cookies for outreach to collect PII. CMS doesn’t identify a user by using such technologies.</li>
+	<li><strong>Web beacons for digital advertising (also called pixels and/or tracking tags)</strong>: See-through images placed on certain pages of CMS.gov are typically used in conjunction with cookies and aren’t stored on your device. When you access these pages, web beacons generate a notice of your visit. For information on how we use web beacons, see <a href="/privacy/index#h57sjsyz3r1jqc1oje1naete3bvoi6g">How CMS uses third-party websites &amp; applications with CMS.gov</a>.</li>
+	<li><strong>Website log files</strong>: These are used as an analysis tool and to tell how visitors use CMS.gov, how often they return, and how they navigate through the website.</li>
+	<li><strong>Flash</strong>: Flash is used to assess the performance of the site and as a player for selected videos depending on the browser a device is using.</li>
+	<li><strong>Local Storage Objects</strong>: We use Flash Local Storage Objects (“LSOs”) to store your preferences and to personalize your visit.</li>
+</ul><p> </p>
+
+<h2 id="h36sjsyz3h3s1cy0bsc18suadm1bd01ws">Your choices about tracking &amp; data collection on CMS.gov</h2>
+
+<p>CMS.gov offers a Privacy Manager which gives you control over what tracking and data collection takes place during your visit. Third-party tools are enabled by default to provide a quality consumer experience.</p>
+
+<p>The Privacy Manager provides you with the choice to opt in or to opt out of the different categories of third-party tools used by CMS.gov: Advertising, Analytics, or Social Media. The Privacy Manager prevents cookies, web beacons, and Local Storage Objects from being placed on your device. The Privacy Manager also prevents third-party tools from loading regardless of your cookie settings, which provides you with an additional layer of privacy that prevents the tool from loading at all. Because the Privacy Manager creates a cookie in your browser, the opt in and opt out choices you make through the Privacy Manager will only be effective on the device and browser you used to make your choices, and your choices will expire when the cookie expires. Once the cookie is created, the Privacy Manager will retain your settings for 3 years from the date of your most recent visit. You may revisit the Privacy Manager to change or renew your choices at any time.</p>
+
+<p><strong><a href="/privacy/index#">Modify privacy options</a></strong></p>
+
+<p>If you disable cookies in your browser, our Privacy Manager won’t be able to store your preferences and won’t function properly. If you don’t wish to use our Privacy Manager to opt out of the tools used by CMS.gov, you can opt out of tools individually, or via the Digital Advertising Alliance (“DAA”) AdChoices icon, discussed in the next subsection.</p>
+
+<p>If you opt out of the tools used by CMS.gov via the Privacy Manager or by opting out of the tools directly, you’ll still have access to information and resources at CMS.gov.</p>
+
+<p><strong>AdChoices</strong>: We include the AdChoices icon on all digital advertising that uses “conversion tracking” or “retargeting.” To learn about conversion tracking, targeted advertising, and retargeting, see <a href="/privacy/index#h57sjsyz3r1jqc1oje1naete3bvoi6g">How CMS uses third-party websites &amp; applications with CMS.gov</a>. The AdChoices icon is usually at or near the corner of digital ads. When you click on the AdChoices icon, it will provide information on what company served the ad and information on how to opt out. Learn more about AdChoices.</p>
+
+<p><strong>Do Not Track</strong>: We automatically observe the “Do Not Track” browser setting for digital advertising that uses “conversion tracking” or “retargeting.” If “Do Not Track” is set before a device visits CMS.gov, third-party conversion tracking and retargeting tools won’t load on the website. To learn more about conversion tracking and retargeting, see <a href="/privacy/index#h57sjsyz3r1jqc1oje1naete3bvoi6g">How CMS uses third-party websites &amp; applications with CMS.gov</a>. <a href="https://www.eff.org/issues/do-not-track">Learn more about Do Not Track and how to set the Do Not Track setting in your browser</a>.</p>
+
+<p> </p>
+
+<h2 id="h57sjsyz3r1jqc1oje1naete3bvoi6g">How CMS uses third-party websites &amp; applications with CMS.gov</h2>
+
+<p>CMS.gov uses a variety of technologies and social media services to communicate and interact with the public. These third-party websites and applications include popular social networking and media websites, open source software communities, and more.</p>
+
+<h3>Third-party websites:</h3>
+
+<p>Your activity on the third-party websites that CMS.gov links to (like Facebook or Twitter) is governed by the security and privacy policies of those websites. You should review the privacy policies of all websites before using them so you understand how your information may be used.</p>
+
+<h3>Website analytics tools:</h3>
+
+<p>These tools collect basic site usage information, like:</p>
+
+<ul><li>How many visits CMS.gov gets</li>
+	<li>The pages visited</li>
+	<li>Time spent on CMS.gov</li>
+	<li>The number of return visits to CMS.gov</li>
+	<li>The approximate geographic location of the device used to access CMS.gov</li>
+	<li>Types of devices used</li>
+</ul><p>This information is used to maintain the website, including:</p>
+
+<ul><li>Monitoring website stability</li>
+	<li>Measuring website traffic</li>
+	<li>Optimizing website content</li>
+	<li>Improving your experience</li>
+</ul><p>Use the CMS.gov Privacy Manager to opt out of website analytics tools.</p>
+
+<p> </p>
+
+<h3>Digital advertising tools for outreach &amp; education:</h3>
+
+<p>We use third-party tools to support our digital advertising outreach and education efforts. These tools enable us to reach new people and provide information to previous visitors. To use these tools, we use these technologies on CMS.gov:</p>
+
+<p><strong>Click tracking</strong>: We use click tracking to identify the ads that are most helpful to consumers and efficient for outreach. This enables us to improve the performance of ads that consumers click on. When users click on links from ads, data about what ad was viewed is collected. Reports are generated about ad performance – including the total number of views and clicks an ad received.</p>
+
+<p><strong>Conversion tracking</strong>: We use conversion tracking to identify ads that are helpful to consumers and efficient for outreach. It enables us to improve the performance of ads viewed by consumers. When a CMS.gov ad is viewed on a third-party site (like a banner ad), a cookie is placed in the browser of the device the ad was viewed on. If this device later visits CMS.gov, the visit is linked to the ad viewed on the same device. Use the CMS.gov Privacy Manager to opt out of advertising tools. Users can click on the “AdChoices” icon in the corner of our ads to opt out of this Ad Targeting. Users who have set their browser to “Do Not Track” will automatically be opted out of conversion tracking. For more information about AdChoices and Do Not Track, see <a href="/privacy/index#h36sjsyz3h3s1cy0bsc18suadm1bd01ws">Your choices about tracking &amp; data collection on CMS.gov</a>.</p>
+
+<p><strong>Retargeting</strong>: We use retargeting to provide information to consumers who have previously visited CMS.gov, like reminders about upcoming enrollment deadlines. Retargeting enables us to improve the performance of ads by delivering them to relevant audiences, like recent visitors to CMS.gov. During a visit to CMS.gov, a cookie is placed in the browser of the devices used to view the website. When that same device is used to visit third-party websites that are displaying CMS.gov ads, ads for CMS.gov may be shown to that device because it had previously visited CMS.gov. Using these cookies, we don't collect information about the third-party websites visited by a device. Reports are generated about ad performance – including the total number of views and clicks an ad received. Use the CMS.gov Privacy Manager to opt out of advertising tools. Users can click on the “AdChoices” icon in the corner of our ads to opt out of this Ad Targeting. Users who have set their browser to “Do Not Track” will automatically be opted out of conversion tracking. For more information about AdChoices and Do Not Track, see <a href="/privacy/index#h36sjsyz3h3s1cy0bsc18suadm1bd01ws">Your choices about tracking &amp; data collection on CMS.gov</a>.</p>
+
+<p><strong>Targeted advertising</strong>: We use third-party vendors to engage in targeted advertising (also called online behavioral or interest-based advertising) to provide information to consumers across their online activities. Targeted advertising involves the collection of data from a particular computer or device. Data regarding web viewing behaviors or application use is gathered to predict user preferences or interests. We can have ads delivered to computers or devices based on the preferences or interests inferred from the web-viewing behaviors or application use.</p>
+
+<p>Third-party vendors engaged by us may also target advertising based on information automatically collected (not information you provide) when you browse our websites or other websites on the internet. You can opt out of this type of data collection via our Privacy Manager, Ad Choices, and Do Not Track. For methods to opt out of this type of collection, see <a href="/privacy/index#h36sjsyz3h3s1cy0bsc18suadm1bd01ws">Your choices about tracking &amp; data collection on CMS.gov</a>.</p>
+
+<p>We may consider new third-party tools or the use of new third-party websites, but we'll first assess the tool or website before it’s used in connection with CMS.gov. We'll provide notice to the public before adding any new tool to CMS.gov. These assessments include a description about how information will be collected, accessed, secured, and stored. <a href="/privacy/third-party-privacy-policies">See a list of the third-party tools currently being used on CMS.gov</a><a href="/privacy/third-party-privacy-policies">. </a><a href="https://www.hhs.gov/pia/index">See risk assessments for third-party websites and applications</a><a href="/privacy/third-party-privacy-policies">.</a></p>
+
+<p> </p>
+
+<h2 id="h80sjsyz423t2npzty1b0n3ronfc7by">How CMS protects your personal information</h2>
+
+<p>You don’t have to give us personal information when you visit CMS.gov, but if you want to get alerts or e-newsletters, you’ll need to give us your email address to subscribe.</p>
+
+<p>If you choose to give us PII in an email, request for information, paper or electronic form, questionnaire, survey, etc., we’ll the information you give us only long enough to respond to your question or to fulfill the stated purpose of the communication.</p>
+
+<p>If we need to contact you, we’ll save your personal information in a record system designed to retrieve information about you by personal identifier (name, personal email address, home mailing address, personal or mobile phone number, etc.) and keep the information you give us safe according to the <a href="https://www.gpo.gov/fdsys/pkg/USCODE-2012-title5/pdf/USCODE-2012-title5-partI-chap5-subchapII-sec552a.pdf">Privacy Act of 1974</a>, as amended (<a href="https://www.gpo.gov/fdsys/granule/USCODE-2010-title5/USCODE-2010-title5-partI-chap5-subchapII-sec552a/content-detail.html">5 U.S.C. Section 552a</a>).</p>
+
+<p>If we have a record system to retrieve information about you so we can carry out our mission, a Privacy Act Notification Statement should be prominently displayed out in the open on the public-facing website or form asking you for PII. The statement has to address these 5 criteria:</p>
+
+<ol><li>The legal authorization we have to collect information about you</li>
+	<li>Why we’re collecting information</li>
+	<li>Routine ways we disclose information outside of our websites</li>
+	<li>Whether or not you legally have to give us the information we’re asking for</li>
+	<li>What happens if you choose to not us the information we’re asking for</li>
+</ol><p>For more information about CMS.gov’s privacy policy, email <a href="mailto:Privacy@cms.hhs.gov">Privacy@cms.hhs.gov</a>.</p>
+
+<p>Third-party services are web-based technologies that aren’t exclusively operated or controlled by a government entity, or that involve significant participation of a nongovernment entity. These services may be separate websites or may be applications embedded within our websites. The list of third-party services includes links to relevant third-party privacy policies.</p>
+
+<p> </p>
+
+<h2 id="h99sjsyz4azc1idrrfx1tlats91rlg990">How long CMS keeps data &amp; how it’s accessed</h2>
+
+<p>We'll keep data collected long enough to achieve the specified objective for which they were collected. Once the specified objective is achieved, the data will be retired or destroyed in accordance with published draft records schedules of CMS as approved by the National Archives and Records Administration.</p>
+
+<p>We don't store information from cookies on our systems. The persistent cookies used with third-party tools on CMS.gov can be stored on a user’s local system and are set to expire at varying time periods depending upon the cookie. We assess whether the expiration date of a cookie exceeds one year and <a href="https://www.hhs.gov/pia/index.html">provides an explanation</a> as to why cookies with a longer life are used on the site in the associated Third-Party Website or Application Privacy Impact Assessment.</p>
+
+<p> </p>
+
+<h2 id="h117sjsyz4n6f1yjg5781985kyl1v7chl9">Children &amp; privacy on CMS.gov</h2>
+
+<p>We believe it’s important to protect the privacy of children online. The Children’s Online Privacy Protection Act (COPPA) governs information gathered online from or about children under the age of 13. CMS.gov isn’t intended to solicit information of any kind from children under age 13.</p>
+
+<p> </p>
+
+<h2 id="h134sjsyz4uo111k60ip1gp33o71w967j5">Links to other sites</h2>
+
+<p>CMS.gov may link to other HHS websites, other government websites, and/or private organizations (like health care providers). We link to other websites solely for your convenience and education. When you follow a link to an external site, you’re leaving CMS.gov and the external site’s privacy and security policies will apply. Non-federal websites don’t necessarily operate under the same laws, regulations, and policies as federal websites. Other than third-party websites highlighted in this privacy notice, we aren’t responsible for the contents of external web pages and a link to a page doesn’t constitute an endorsement.</p>
+
+<h3>Social media &amp; other sites that require registration</h3>
+
+<p>We use social media websites (listed below) to:</p>
+
+<ul><li>Increase government transparency</li>
+	<li>Improve information sharing</li>
+	<li>Promote public participation</li>
+	<li>Encourage partnership with CMS</li>
+</ul><p><strong>Social media websites aren’t government websites or applications. They’re controlled or operated by the social media website.</strong> We don’t own, manage, or control social media websites. In addition, we don’t collect, maintain, or disseminate information posted by visitors to those social media websites. If you choose to provide information to a social media website through registration or other interaction with the website, the use of any information you provide is controlled by your relationship with the social media website. For example, any information that you provide to register on Facebook is voluntarily contributed and isn’t maintained by us. This information may be available to our social media page administrators in whole or part, based on a user's privacy settings on the social media website. However, we won’t use PII, if provided by you to a social media website or other website that requires registration, for targeted advertising or retargeting. Although you may voluntarily contribute to a social media website with the intent to share the information with others on a CMS social media page, to protect your privacy, don’t disclose PII about yourself or others.</p>
+
+<p>We don’t keep separate records or accounting of any social media website users or their interaction with the CMS.gov pages on social media websites. We don’t store or share this information. User information is retained by social media websites in accordance with the website’s policies. See each social media website’s privacy policy to see how long user information is retained after an account has been deleted. To learn more about how each social media website uses and maintains information visit their privacy policy, as follows:</p>
+
+<ul><li><a href="https://www.facebook.com/policies">Facebook</a></li>
+	<li><a href="https://twitter.com/en/privacy">Twitter</a></li>
+	<li><a href="https://www.youtube.com/static?template=privacy_guidelines">YouTube</a></li>
+	<li><a href="https://www.linkedin.com/legal/privacy-policy">LinkedIn</a></li>
+</ul><h2> </h2>
+
+<h2 id="h181sjsyz6deixvzkd5xcucsuuqmi86">Additional privacy information</h2>
+
+<p><a href="/Research-Statistics-Data-and-Systems/Computer-Data-and-Systems/Privacy/index">Get more information about CMS privacy policies.</a></p></div>
+      
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+
+                                          </inner>
+                  </div>
+                                  
+              </div>
+            </div>
+
+            <div class="ds-l-row">
+              <div class="ds-l-col--12">
+                
+              </div>
+            </div>
+          </div>
+        </main>
+        
+        <footer>
+          <div class="ds-l-container footer-header">
+            <div class="ds-l-row">
+              <div class="ds-l-lg-col--3 ds-l-md-col--5 footer-hcol1">
+                <div class="inner"><button class="btn btn-primary" id="footer_home_btn" onclick="window.location.href='https://www.cms.gov';return false;" title="CMS.gov Home">Home</button><a class="footer-cms-logo" href="/"><img alt="CMS.gov Logo" data-entity-type="" data-entity-uuid="" height="34" src="/themes/custom/cms_drupal_global/images/cms.gov-footer.png" typeof="foaf:Image"></a></div>
+              </div>
+              <div class="ds-l-lg-col--9 ds-l-md-col--7 footer-hcol2">
+                <div class="inner"><span>A federal government website managed and paid for by the U.S. Centers for Medicare &
+                Medicaid Services. 7500 Security Boulevard, Baltimore, MD 21244</span> <a class="footer-hhs" href="http://www.hhs.gov"><img alt="Department of Health and Human Services USA" class="footer-hhs" data-entity-type="" data-entity-uuid="" height="64" src="/themes/custom/cms_drupal_global/images/hhslogo.png" typeof="foaf:Image" width="52"></a></div>
+              </div>
+            </div>
+          </div>
+
+            <div class="region region-cms-footer">
+    <div  id="block-cmshhswebsitescmsglobalfooter" data-block-plugin-id="system_menu_block:cms-hhs-websites-cms-global" class="block block-menu navigation menu--cms-hhs-websites-cms-global">
+  <div class="inner">
+      
+  <h2 id="block-cmshhswebsitescmsglobalfooter-menu">CMS &amp; HHS Websites [CMS Global Footer]</h2>
+  
+
+        
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="https://www.medicare.gov/" title="Medicare.gov">Medicare.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.mymedicare.gov/" title="MyMedicare.gov">MyMedicare.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.medicaid.gov/" title="Medicaid.gov">Medicaid.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.insurekidsnow.gov/" title="InsureKidsNow.gov">InsureKidsNow.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.healthcare.gov/" title="HealthCare.gov">HealthCare.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.hhs.gov/open/index.html" title="HHS.gov/Open">HHS.gov/Open</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+</div>
+<div  id="block-toolscmsglobalfooter" data-block-plugin-id="system_menu_block:tools-cms-global-footer-" class="block block-menu navigation menu--tools-cms-global-footer-">
+  <div class="inner">
+      
+  <h2 id="block-toolscmsglobalfooter-menu">Tools [CMS Global Footer]</h2>
+  
+
+        
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/apps/acronyms" title="Acronyms">Acronyms</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.archive-it.org/collections/2744" title="Archive">Archive</a>
+              </li>
+                <li class="menu-item">
+        <a href="/apps/contacts/" title="Contacts">Contacts</a>
+              </li>
+                <li class="menu-item">
+        <a href="/apps/glossary/" title="Glossary">Glossary</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+</div>
+<div  id="block-helpfullinkscmsglobalfooter" data-block-plugin-id="system_menu_block:helpful-links-cms-global-fo" class="block block-menu navigation menu--helpful-links-cms-global-fo">
+  <div class="inner">
+      
+  <h2 id="block-helpfullinkscmsglobalfooter-menu">Helpful Links [CMS Global Footer]</h2>
+  
+
+        
+              <ul class="clearfix menu">
+                    <li class="menu-item">
+        <a href="/About-CMS/Agency-Information/Aboutwebsite" title="Web Policies &amp; Important Links" data-drupal-link-system-path="node/169781">Web Policies &amp; Important Links</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://developer.cms.gov/" title="For Developers">For Developers</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.medicare.gov/about-us/plain-writing" title="Plain Language">Plain Language</a>
+              </li>
+                <li class="menu-item">
+        <a href="" title="Privacy settings">Privacy Settings</a>
+              </li>
+                <li class="menu-item">
+        <a href="/Center/freedom-of-information-act-center.html" title="Freedom of Information Act" data-drupal-link-system-path="media/205961">Freedom of Information Act</a>
+              </li>
+                <li class="menu-item">
+        <a href="/About-CMS/Agency-Information/Aboutwebsite/NoFearAct" title="No Fear Act" data-drupal-link-system-path="node/171021">No Fear Act</a>
+              </li>
+                <li class="menu-item">
+        <a href="/About-CMS/Agency-Information/Aboutwebsite/CMSNondiscriminationNotice" title="Nondiscrimination/Accessibility" data-drupal-link-system-path="node/177836">Nondiscrimination/Accessibility</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.hhs.gov/" title="HHS.gov">HHS.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.oig.hhs.gov" title="Inspector General">Inspector General</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.usa.gov/" title="USA.gov">USA.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="/About-CMS/Agency-Information/Aboutwebsite/Help" title="Help with file formats &amp; plug-ins" data-drupal-link-system-path="node/169881">Help with file formats &amp; plug-ins</a>
+              </li>
+        </ul>
+  
+
+
+    </div>
+</div>
+
+  </div>
+
+
+        <div id="email-widget"><span class="email-icon"><img alt="Email Icon" data-entity-type="" data-entity-uuid="" height="58" src="/themes/custom/cms_drupal_global/images/footer-email.png" typeof="foaf:Image" width="76"></span>
+          <div id="email-block">
+          <h2>Receive Email Updates</h2>
+              <form accept-charset="UTF-8" action="https://public.govdelivery.com/accounts/USCMS/subscribers/qualify" id="email-footer-form" method="post" data-drupal-form-fields="email-footer-input,email-submit">
+          <div aria-label="Enter your email address for email updates" id="email-form"><input aria-label="Enter your email address:" name="email" placeholder="type your email here" type="text"> <input id="email-submit" name="email-footer-submit" type="submit" value="Submit"></div>
+          </form>
+          <div aria-role="alert" id="emailError">&nbsp;</div>
+          </div>
+
+          <div class="footer-social">
+            <h2>Connect with CMS</h2>
+            <ul>
+              <li>
+                <a href="https://twitter.com/cmsgov">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                  <div class="ds-u-visibility--screen-reader">Twitter link</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/CMSHHSgov">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                  <div class="ds-u-visibility--screen-reader">Youtube link</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/pages/Centers-for-Medicare-and-Medicaid-Services/130543856995834">
+                  <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                  <div class="ds-u-visibility--screen-reader">Facebook link</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/centers-for-medicare-&amp;-medicaid-services/">
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  <div class="ds-u-visibility--screen-reader">Linkedin link</div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.cms.gov/Outreach-and-Education/Outreach/CMSFeeds/index">
+                  <i class="fas fa-rss" aria-hidden="true"></i>
+                  <div class="ds-u-visibility--screen-reader">RSS Feed link</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </footer>
+      </div>
+    </div>
+
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/414586","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/cms-search":true},"cms_search_settings":{"isShowMoreTopics":null},"ajax":[],"user":{"uid":0,"permissionsHash":"2c1d03175d041ef77389869066ffbd44ab3e23a2151bdd905ea5aab8f609e533"}}</script>
+<script src="/sites/default/files/js/js_uD3OjGImIq0uyrVSXsZ4sZIcrVUySI6SBnIT9xhSI34.js"></script>
+</js-bottom-placeholder>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"04d273ebc4","applicationID":"120065501","transactionName":"ZgBRMRcAXxVRAENYX19KcgYRCF4IHydFREBQCW8LCgVUOnMMWUVCXglfABc9fwlUBmFYVUYmXAsRE14KXAZFHA5HDFYS","queueTime":0,"applicationTime":10294,"atts":"SkdSR18aTBs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

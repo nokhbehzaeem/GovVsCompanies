@@ -1,0 +1,940 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Webchemy | About</title>
+<link rel="icon" type="image/png" href="../icon.png" />
+<link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
+<script src="../gallery/images/imdata.js"></script>
+<style>
+body {
+	margin: 0;
+	font-family: 'Oxygen', sans-serif;
+	min-width: 1024px;
+}
+::selection {
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+}
+#wide01 {
+	background-color: #000;
+	background-image: url(head.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#innerHead {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 315px;
+	position: relative;
+}
+
+#headTopButtons {
+	font-size: 13px;
+}
+
+#headBitbof {
+	background: #373737;
+	color: #aaa;
+	display: block;
+	line-height: 40px;
+	height: 40px;
+	width: 150px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+	text-decoration: none;
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+}
+#headBitbof:hover {
+	background: #474747;
+	color: #eee;
+	padding-top: 20px;
+}
+#headDonate {
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	line-height: 40px;
+	height: 40px;
+	width: 150px;
+	background: #659b39;
+	color: #f2ffa9;
+	display: block;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+}
+#headDonate:hover {
+	background: #7fb83d;
+	color: #fff;
+	padding-top: 20px;
+}
+
+#headAndroid {
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	line-height: 40px;
+	height: 40px;
+	width: 140px;
+	background: #5F989B;
+	color: #fff;
+	display: block;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+	text-decoration: none;
+}
+#headAndroid:hover {
+	background: #6CC8CC;
+	color: #fff;
+	padding-top: 20px;
+}
+
+#headGithub {
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	line-height: 40px;
+	height: 40px;
+	width: 140px;
+	background: #666;
+	color: #ddd;
+	display: block;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+	text-decoration: none;
+}
+#headGithub:hover {
+	background: #777;
+	color: #fff;
+	padding-top: 20px;
+}
+#headForum {
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	line-height: 40px;
+	height: 40px;
+	width: 140px;
+	background: #4e4e4e;
+	color: #ddd;
+	display: block;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+	text-decoration: none;
+}
+#headForum:hover {
+	background: #5e5e5e;
+	color: #fff;
+	padding-top: 20px;
+}
+
+
+
+#appButtonsContainer {
+	display: block;
+	width: 200px;
+	background-color: #fff;
+	height: 49px;
+	font-weight: bold;
+	
+	position: absolute;
+	margin-left: -100px;
+	top: 245px;
+	left: 480px;
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+}
+
+
+#appButtonsContainer a {
+	display: block;
+	float: left;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 49px;
+	font-size: 18px;
+	text-decoration: none;
+	text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+	transition: all 0.1s ease-in-out;
+}
+
+#appButtonsContainer a:hover {
+	text-decoration: underline;
+}
+
+#startWebButton {
+	background: #777;
+	color: #fff;
+}
+#startWebButton:hover {
+	background: #999;
+}
+
+#startAndroidButton {
+	background: #a1b90c;
+	
+	color: #fff;
+	background-image: url(playStoreIcon.png);
+	background-repeat: no-repeat;
+	background-position: 10px 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding-left: 20px;
+}
+#startAndroidButton:hover {
+	background-color: #b3c833;
+}
+
+
+#startDrawingButton {
+	display: block;
+	width: 300px;
+	background-color: #fff;
+	color: #000;
+	height: 33px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 8px;
+	position: absolute;
+	margin-left: -150px;
+	padding-top: 16px;
+	top: 245px;
+	left: 480px;
+	cursor: pointer;
+	box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+	text-decoration: none;
+	-webkit-transition: background 0.2s ease-out, color 0.2s ease-out;
+	-moz-transition: background 0.2s ease-out, color 0.2s ease-out;
+	-o-transition: background 0.2s ease-out, color 0.2s ease-out;
+	-ms-transition: background 0.2s ease-out, color 0.2s ease-out;
+}
+#startDrawingButton:hover {
+	box-shadow: 0px 0px 8px 2px rgba(255,255,255,0.8);
+	background-color: #000;
+	color: #fff;
+}
+#startDrawingButton:active {
+	box-shadow: 0px 0px 10px 5px rgba(255,255,255,1);
+	background-color: #000;
+	color: #fff;
+}
+
+
+
+#wide02 {
+	background-color: #222;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+#inner02 {
+	width: 960px;
+	height: 540px;
+	background-image: url(videoPreview.jpg);
+	background-position: 0 20px;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	cursor: pointer;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	-o-transition: opacity 0.3s;
+	-ms-transition: opacity 0.3s;
+}
+#inner02Playing {
+	width: 960px;
+	height: 540px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#videoButton {
+	width: 180px;
+	height: 180px;
+	border-radius: 90px;
+	background-color: #000;
+	box-shadow: 0 0px 20px 5px rgba(255,255,255,1);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 180px;
+	color: #fff;
+	text-align: center;
+	background-image: url("playSymbol.png");
+	background-position: 58px center;
+	background-repeat: no-repeat;
+}
+#videoText {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 50px;
+}
+#wide03 {
+	background-color: #ccc;
+	background-image: url(aboutBG01.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1346px 100%;
+}
+.innerCell {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+.innerCell i {
+	opacity: 0.7;
+	font-size: 17px;
+}
+#inner03 {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 448px;
+	position: relative;
+	display:table;
+}
+.aboutBlockRight {
+	width: 350px;
+	font-size: 19px;
+	margin-left: 600px;
+	text-align: justify;
+	color: #333;
+}
+.aboutBlockRight a {
+	color: #000;
+	text-decoration: none;
+	background-image: url(linkim.png);
+	background-position: right 10px;
+	padding-right: 15px;
+	background-repeat: no-repeat;
+}
+.aboutBlockRight a:hover {
+	text-decoration: underline;
+	//color: #fff;
+}
+.aboutBlockRightWhite {
+	width: 350px;
+	font-size: 19px;
+	margin-left: 600px;
+	text-align: justify;
+	color: #fff;
+}
+.aboutBlockRightWhite a {
+	color: #fff;
+	text-decoration: none;
+	background-image: url(linkimWhite.png);
+	background-position: right 10px;
+	padding-right: 15px;
+	background-repeat: no-repeat;
+}
+.aboutBlockRightWhite a:hover {
+	text-decoration: underline;
+	//color: #fff;
+}
+.aboutBlockLeft {
+	width: 350px;
+	font-size: 19px;
+	text-align: justify;
+	color: #333;
+}
+.aboutBlockLeft a {
+	color: #000;
+	text-decoration: none;
+	background-image: url(linkim.png);
+	background-position: right 10px;
+	padding-right: 15px;
+	background-repeat: no-repeat;
+}
+.aboutBlockLeft a:hover {
+	text-decoration: underline;
+	//color: #fff;
+}
+.aboutHead {
+	font-size: 35px;
+	color: #000;
+}
+.aboutHeadWhite {
+	font-size: 35px;
+	color: #fff;
+}
+.soundsGreat {
+	font-size: 30px;
+	margin-top: 38px;
+	color: #333;
+}
+#wide04 {
+	background-color: #eee;
+	background-image: url(devices.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	//background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+}
+#inner04 {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 448px;
+	position: relative;
+	display:table;
+}
+#wide05 {
+	background-color: #888;
+	background-image: url(opensource.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#inner05 {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 448px;
+	position: relative;
+	display:table;
+}
+#wide06 {
+	background-color: #eee;
+	background-image: url(grow.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	//background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+}
+#inner06 {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 448px;
+	position: relative;
+	display:table;
+}
+#wide07 {
+	//background-color: #FFE6C2;
+	background-image: linear-gradient(to right, rgba(255,230,194,0) 0%, rgba(255,230,194,1) 50%, rgba(255,230,194,0) 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#inner07 {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 130px;
+	position: relative;
+	display:table;
+}
+#wide08Footer {
+	background-color: #fff;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#inner08 {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 200px;
+	position: relative;
+	color: #555;
+	display:table;
+}
+#inner08 a {
+	color: #777;
+	text-decoration: none;
+}
+#inner08 a:hover {
+	color: #666;
+	text-decoration: underline;
+}
+
+.footerRow {
+	float: left;
+	width: 20%;
+	margin-top: 50px;
+}
+.footerRowBorder {
+	float: left;
+	width: 20%;
+	margin-top: 50px;
+	
+}
+
+#soureLink {
+	width: 100%;
+	background-color: #333;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	display: block;
+	background-image: url(github.png);
+	background-position: 5% 50%;
+	backgroun-repeat: no-repeat;
+	-webkit-transition: background 0.2s ease-out, color 0.2s ease-out;
+	-moz-transition: background 0.2s ease-out, color 0.2s ease-out;
+	-o-transition: background 0.2s ease-out, color 0.2s ease-out;
+	-ms-transition: background 0.2s ease-out, color 0.2s ease-out;
+	width: 340px;
+}
+#soureLink:hover {
+	text-decoration: none;
+	color: #fff;
+	background-color: #aaa;
+	
+}
+#kloxboyCredits {
+	position: absolute;
+	left: 473px;
+	top: 100px;
+	opacity: 0.7;
+}
+#klekiLink {
+	position: absolute;
+	left: 718px;
+	top: 405px;
+	opacity: 0.7;
+}
+hr {
+	height: 0;
+	border: none;
+	border-bottom: dashed 1px #aaa;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	
+}
+
+#WebchemyAppSharingDiv {
+	position: absolute;
+	left: 0px;
+	top: 200px;
+	padding-top: 15px;
+	opacity: 0.8;
+	padding-left: 20px;
+	margin-left: -20px;
+}
+#WebchemyAppSharingDiv:hover {
+	opacity: 1;
+}
+#share_fbook {
+	height: 30px;
+}
+#share_twitter {
+	height: 30px;
+}
+#share_gplus {
+	height: 30px;
+}
+
+#share_fbook2 {
+	float: left;
+	width: 103px;
+}
+#share_twitter2 {
+	float: left;
+}
+#share_gplus2 {
+	float: left;
+}
+
+
+#WebchemyAppSharingDivBottom {
+	position: absolute;
+	left: 500px;
+	top: 50px;
+	padding-left: 20px;
+	margin-left: -20px;
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+}
+
+#galleryBox {
+	position: absolute;
+	right: 0px;
+	bottom: 20px;
+	width: 200px;
+	height: 160px;
+	background: #aaa;
+	background-size: cover;
+	background-position: center center;
+	border-bottom: 40px solid rgba(255,255,255,1);
+	-webkit-transition: all 0.2s ease-out, color 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out, color 0.2s ease-out;
+	-o-transition: all 0.2s ease-out, color 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out, color 0.2s ease-out;
+	-webkit-filter: saturate(20%);
+	-moz-filter: saturate(20%);
+}
+#galleryBox:hover {
+	border-bottom: 40px solid rgba(0,0,0,1);
+	-webkit-filter: saturate(100%);
+	-moz-filter: saturate(100%);
+}
+
+#galleryBox a {
+	display: block;
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	color: #357;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	border-top: 160px solid rgba(144, 101, 85, 0.2);
+	-webkit-transition: all 0.2s ease-out, color 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out, color 0.2s ease-out;
+	-o-transition: all 0.2s ease-out, color 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out, color 0.2s ease-out;
+	text-decoration: none;
+}
+#galleryBox a:hover {
+	border-top: 160px solid rgba(144, 101, 85, 0);
+	box-shadow: 0 0 10px #fff;
+	color: #fff;
+}
+#playStoreButton {
+	background: none;
+	padding-right: 0;
+	display: block;
+	margin-left: 110px;
+	margin-top: -14px;
+	width: 161px;
+	opacity: 0.9;
+	transition: opacity 0.2 ease-in-out;
+}
+#playStoreButton:hover {
+	opacity: 1;
+}
+
+<div id="wide07">
+<div id="inner07">
+Sounds great? Let others know!
+<div id="WebchemyAppSharingDivBottom">
+
+
+
+</style>
+
+<script>
+
+var LIB = {};
+LIB.css = function (el, style) {
+	var i;
+	for (i in style) {
+		if (style.hasOwnProperty(i)) {
+			if (i === "transform") {
+				el.style.WebkitTransform = style[i];
+				el.style.MozTransform = style[i];
+				el.style.OTransform = style[i];
+				el.style.msTransform = style[i];
+			} else if (i === "transformOrigin") {
+				el.style.WebkitTransformOrigin = style[i];
+				el.style.MozTransformOrigin = style[i];
+				el.style.OTransformOrigin = style[i];
+				el.style.msTransformOrigin = style[i];
+			} else if (i === "transition") {
+				el.style.WebkitTransition = style[i];
+				el.style.MozTransition = style[i];
+				el.style.OTransition = style[i];
+				el.style.msTransition = style[i];
+			} else if (i === "boxSizing") {
+				el.style.WebkitBoxSizing = style[i];
+				el.style.MozBoxSizing = style[i];
+				el.style.boxSizing = style[i]; //ie, opera
+			} else {
+				el.style[i] = style[i];
+			}
+		}
+	}
+};
+
+function popup() {
+	var div = document.createElement("div");
+	div.style.position = "fixed";
+	div.style.left = 0;
+	div.style.top = 0;
+	div.style.width = "100%";
+	div.style.height = "100%";
+	LIB.css(div, {
+		transition: "opacity 0.3s linear",
+		opacity: 0
+	});
+	setTimeout(function() {
+		LIB.css(div, {
+			opacity: 1
+		});
+	}, 20);
+	
+	
+	var bg = document.createElement("div");
+	bg.style.position = "absolute";
+	bg.style.left = 0;
+	bg.style.top = 0;
+	bg.style.width = "100%";
+	bg.style.height = "100%";
+	bg.style.backgroundColor = "rgba(0,0,0,0.5)";
+	
+	
+	var content = document.createElement("div");
+	content.style.position = "absolute";
+	content.style.left = "50%";
+	content.style.top = "100px";
+	content.style.backgroundColor = "#fff";
+	content.style.width = "500px";
+	content.style.height = "380px";
+	content.style.marginLeft = "-250px";
+	content.style.padding = "20px";
+	content.style.borderRadius = "10px";
+	
+	var closeButton = document.createElement("div");
+	closeButton.innerHTML = "X";
+	closeButton.style.position = "absolute";
+	closeButton.style.left = "502px";
+	closeButton.style.top = "10px";
+	closeButton.style.fontSize = "20px";
+	closeButton.style.fontWeight = "bold";
+	closeButton.style.color = "#555";
+	closeButton.style.cursor = "pointer";
+	closeButton.style.padding = "5px";
+	content.appendChild(closeButton);
+	
+	var header = document.createElement("div");
+	header.innerHTML = "Show your support, make a donation";
+	header.style.marginTop = "10px";
+	header.style.marginLeft = "15px";
+	header.style.fontSize = "26px";
+	header.style.color = "#76c100";
+	
+	var text = document.createElement("div");
+	text.innerHTML = "<br/><span style=\"font-size:18px; color: #999;\"><b>Webchemy is free, open-source, and without ads.<br/>But it was a lot of hard work.</b></span><br/><br/>If you enjoyed using this web-app, please consider making a donation. Not only will you repay the developer for their efforts but you will also support continued work on this project.<br/><br/>Thank you.<hr /><center>Donate to bitbof (creator of Webchemy):</center>";
+	text.style.marginTop = "10px";
+	text.style.marginLeft = "15px";
+	text.style.marginRight = "15px";
+	text.style.fontSize = "16px";
+	text.style.textAlign = "justify";
+	text.style.lineHeight = "21px";
+	text.style.color = "#666";
+	
+	
+	var donateButton = document.createElement("div");
+	donateButton.innerHTML = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="DPYMU2MYJCZ7Y"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online."><img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1"></form>';
+	donateButton.style.marginLeft = "auto";
+	donateButton.style.marginRight = "auto";
+	donateButton.style.width = "140px";
+	donateButton.style.marginTop = "10px";
+	
+	content.appendChild(header);
+	content.appendChild(text);
+	content.appendChild(donateButton);
+	
+	div.appendChild(bg);
+	div.appendChild(content);
+	
+	function close() {
+		LIB.css(div, {
+			opacity: 0
+		});
+		setTimeout(function() {
+			document.body.removeChild(div);
+		}, 310);
+	}
+	
+	closeButton.onclick = function() {
+		close();
+	};
+	bg.onclick = function() {
+		close();
+	};
+	document.body.appendChild(div);
+}
+function startVideo() {
+	var div = document.getElementById("inner02");
+	div.innerHTML = '<iframe width="960" height="540" src="http://www.youtube.com/embed/3-hvXj7E_Gw?hd=1&amp;showsearch=0&amp;autoplay=1&amp;rel=0&amp" frameborder="0" allowfullscreen=""></iframe>';
+	div.id = "inner02Playing";
+}
+function main() {
+	console.log(imdata);
+	var galleryBtn = document.getElementById("galleryBox");
+	console.log(galleryBtn);
+	galleryBtn.style.backgroundImage = "url(../gallery/images/" + imdata[Math.floor(Math.random() * imdata.length)].imMedium + ")";
+}
+
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-2041825-5', 'auto');
+ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+
+<div id="wide01">
+<div id="innerHead">
+<div id="headTopButtons">
+<a id="headBitbof" href="http://bitbof.com">A Project by bitbof</a>
+<!--<span id="headDonate" onClick="popup()">Make a Donation</span>-->
+<a id="headGithub" href="http://github.com/bitbof/webchemy">Fork on Github</a>
+<a id="headForum" href="http://webchemy.tumblr.com"><b>Tumblr</b></a>
+<!--<a id="headAndroid" href="https://play.google.com/store/apps/details?id=com.bitbof.webchemy">Android App</a>-->
+</div>
+<div id="WebchemyAppSharingDiv">
+	<div id="share_fbook"><iframe id="iframefbook" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwebchemy.org&amp;layout=button_count&amp;show_faces=false&amp;width=55&amp;action=like&amp;colorscheme=light&amp;locale=en_US" style="width:90px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>	<div id="share_twitter">		<iframe id="iframetwitter" src="http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwebchemy.org&amp;text=Check%20this%20out!&amp;count=count" style="width:110px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>	</div>	<div id="share_gplus">		<iframe id="iframeplusone" src="https://plusone.google.com/u/0/_/+1/fastbutton?url=http%3A%2F%2Fwebchemy.org&amp;size=medium&amp;lang=de" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:74px; height:20px;" align="left"></iframe>	</div>
+</div>
+
+<div id="appButtonsContainer">
+<a id="startWebButton" href="http://webchemy.org">
+Start Drawing
+</a>
+
+</div>
+
+<div id="galleryBox"><a href="http://webchemy.tumblr.com">User Gallery</a></div>
+</div>
+</div>
+<div id="wide02">
+<div id="inner02" onClick="startVideo()">
+<iframe width="960" height="540" src="http://www.youtube.com/embed/3-hvXj7E_Gw?hd=1&amp;showsearch=0&amp;rel=0&amp" frameborder="0" allowfullscreen=""></iframe>
+<!--<div id="videoButton"></div>-->
+<!--<div id="videoText">The Cross-Platform Sketching App</div>-->
+</div>
+</div>
+
+<div id="wide03">
+<div id="inner03">
+	<div class="innerCell">
+		<div class="aboutBlockRight">
+		<span class="aboutHead">Interesting Tools in a New Place</span><br/><br/>
+		Webchemy is a cross-platform web and mobile-app for creating idea sparking sketches.<br/>
+		<br/>
+		Based on the desktop application <i><a href="http://al.chemy.org/">Alchemy</a></i>, Webchemy takes some of its drawing tools and brings them to the web & mobile devices.
+		</div>
+	</div>
+</div>
+</div>
+
+<div id="wide04">
+<div id="inner04">
+	<div class="innerCell">
+		<div class="aboutBlockLeft">
+		<div id="kloxboyCredits"><a target="_blank" href="http://derklox.deviantart.com/">Artwork by DerKlox</a></div>
+		<span class="aboutHead">Cross-Platform</span><br/><br/>
+		Webchemy isn't just a web app that runs on your desktop computer or laptop.<br/>
+		<br/>
+		You can also make full use of it on your iPad, iPhone, Android via the browser.<br/>
+		No matter what your form factor - large screen, mobile touch screen, mouse, pen tablet - Webchemy won't become awkward to use.<br/>
+		</div>
+	</div>
+</div>
+</div>
+<div id="wide05">
+<div id="inner05">
+	<div class="innerCell">
+		<div class="aboutBlockRightWhite">
+		<span class="aboutHeadWhite">Open Source</span><br/><br/>
+		What's better than a free tool? One that you can change, add to, and learn from.
+		Thus Webchemy is licensed under GPLv3, which gives you access to its source code and thereby enables you to change any part of it as you like.<br/>
+		<br/>
+		You can get the source code here:<br/><br/><a id="soureLink" href="https://github.com/bitbof/webchemy">GITHUB REPOSITORY</a>
+		</div>
+	</div>
+</div>
+</div>
+<div id="wide06">
+<div id="inner06">
+	<div class="innerCell">
+		<div class="aboutBlockLeft">
+		<div id="klekiLink"><a target="_blank" href="http://kleki.com">Web-App Kleki</a></div>
+		<span class="aboutHead">Let Your Ideas Evolve</span><br/><br/>
+		Webchemy is great for generating new ideas, but at some point it's better to take your concepts and let them evolve within other tools (maybe even one that you created yourself).
+		That's why you can export your creations as PNG and SVG (Scalable Vector Graphics).<br/>
+		<br/>
+		I hope you enjoy Webchemy!
+		</div>
+	</div>
+</div>
+</div>
+<div id="wide07">
+<div id="inner07">
+<div class="soundsGreat">Some community videos:</div>
+
+<iframe style="margin-top:20px" width="960" height="540" src="http://www.youtube.com/embed/videoseries?list=PLEwyLb78MLYn0Tj1b6F37uwOCOAanTD7X" frameborder="0" allowfullscreen></iframe>
+
+
+</div>
+</div><div id="wide07">
+<div id="inner07">
+<div class="soundsGreat">Let others know about Webchemy.<br/><br/><br/><br/></div>
+
+<div id="WebchemyAppSharingDivBottom">
+	<div id="share_fbook2"><iframe id="iframefbook" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwebchemy.org&amp;layout=button_count&amp;show_faces=false&amp;width=55&amp;action=like&amp;colorscheme=light&amp;locale=en_US" style="width:90px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div>
+	<div id="share_twitter2"><iframe id="iframetwitter" src="http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwebchemy.org&amp;text=Create%20idea%20sparking%20sketches%20with%20Webchemy!&amp;count=count" style="width:110px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>	</div>
+	<div id="share_gplus2">	<iframe id="iframeplusone" src="https://plusone.google.com/u/0/_/+1/fastbutton?url=http%3A%2F%2Fwebchemy.org&amp;size=medium&amp;lang=de" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:74px; height:20px;" align="left"></iframe>	</div>
+</div>
+<div id="appButtonsContainer" style="top: 100px">
+<a id="startWebButton" href="http://webchemy.org">
+Start Drawing
+</a>
+</div>
+</div>
+</div>
+<div id="wide08Footer">
+<div id="inner08">
+	<div class="footerRowBorder">
+		<b>Webchemy</b><br/>
+		<a href="http://webchemy.org">Web App</a><br/>
+		<a href="https://github.com/bitbof/webchemy">Source Code</a><br />
+	</div>
+	<div class="footerRowBorder">
+		<b>Community</b><br/>
+		<a href="http://webchemy.org/gallery">Gallery</a><br />
+		<a href="http://webchemy.tumblr.com">Tumblr</a><br />
+		
+	</div>
+	<div class="footerRowBorder">
+		<b>About The Developer</b><br/>
+		<a href="http://bitbof.com">bitbof.com</a><br/>		
+	</div>
+	<div class="footerRow">
+		<b>Alchemy</b><br/>
+		<a href="http://al.chemy.org">Alchemy Homepage</a><br/>		
+		<a href="http://al.chemy.org/forum/">Alchemy Forum</a>
+	</div>
+	<div class="footerRow">
+		<center>webchemy.org<br/>
+		by bitbof 2014</center>
+	</div>
+</div>
+</div>
+<div style="display:none">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="8KMGQ8XBS2SYW">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="PayPal � The safer, easier way to pay online.">
+<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+<script>
+main();
+</script>
+</body>
+</html>

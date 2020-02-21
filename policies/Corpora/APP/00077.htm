@@ -1,0 +1,1139 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"bb199f70cb",applicationID:"222037236"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="1200">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+			
+	<!-- OneTrust Cookies Consent Notice start -->
+	
+	<script
+		src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+		type="text/javascript"
+		charset="UTF-8"
+		data-domain-script="9e086639-197f-4fae-bc88-01b3c52c332b"
+	></script>
+
+	<script type="text/javascript">
+		function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end -->
+		
+						<script src="https://cdn.blueconic.net/nexstar.js"></script>
+	
+	
+<!-- BoB -->
+<script async type="text/javascript" id="bob_tag_loader">
+var page_url = "https:\/\/www.mypanhandle.com\/privacy-policy\/" || "";
+var cats = "About Us" || "";
+var bob_kw = "" || "";
+var bob_desc = "Updated: December 1, 2016 Privacy Policy 1. General Thank you for visiting mypanhandle.com, which is operated by WMBB, affiliates of Nexstar Broadcasting, Inc. and Mission Broadcasting, Inc. (&quot;Nexstar&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). We respect the privacy of visitors to our websites, mobile sites, and applications (each a &quot;Property&quot; and collectively the &quot;Properties&quot;). Because we gather [&hellip;]" || "";
+var bob_story_author = "" || "";
+var cat_data = "&cats=" + encodeURIComponent(cats) + "&bob_kw=" + encodeURIComponent(bob_kw) + "&bob_desc=" + encodeURIComponent(bob_desc) + "&story_author=" + encodeURIComponent(bob_story_author) + "&page_url=" + encodeURIComponent(page_url);
+
+var bob_cb = '1';
+bob_cb = ((new Date()).getTime() + "" + Math.floor(Math.random() * 1000000)).substr(0, 16);
+(function () {
+var bob_tag = document.createElement('script');
+bob_tag.type = 'text/javascript';
+bob_tag.async = true;
+bob_tag.id = "bob_tag";
+bob_tag.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'bob.dmpxs.com/static/bob_001.js?bob_cb=' + bob_cb + cat_data;
+var bts = document.getElementsByTagName('script')[0];
+bts.parentNode.insertBefore(bob_tag, bts);
+})();
+</script>
+
+
+
+			
+	
+	
+<!-- Prebid -->
+<script>
+	window.isPrebidEnabled = false;
+</script>
+
+
+				
+<!-- Index Exchange -->
+<script async src="https://js-sec.indexww.com/ht/p/184979-164251977320883.js"></script> 	
+	
+<!-- A9 APS -->
+<script>
+	window.isApsEnabled = true;
+</script>
+
+
+<!-- A9 APS -->
+<script type="text/javascript">
+!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+apstag.init({"pubID":"3410","adServer":"googletag"});
+</script>
+
+				
+<!-- Confiant ad fraud protection -->
+<script async="" src="https://confiant-integrations.global.ssl.fastly.net/Y2Nn8JmiAY8HpnF4sl5n7J71jaI/gpt_and_prebid/config.js"></script> 	
+	
+<script type="text/javascript">
+(function() {
+	var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+	_sf_async_config.uid = "23192";
+	_sf_async_config.domain = "mypanhandle.com";
+	_sf_async_config.flickerControl = false; 	_sf_async_config.useCanonical = true;
+	_sf_async_config.useCanonicalDomain = true;
+})();
+</script>
+<script async src="//static.chartbeat.com/js/chartbeat_mab.js"></script>
+
+	
+<!-- Google Publisher Tag -->
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+<!-- End Google Publisher Tag -->
+
+
+	
+<!-- Google Tag Manager dataLayer -->
+<script>
+var dataLayer = window.dataLayer = window.dataLayer || [];
+dataLayer.push({});
+</script>
+<!-- End Google Tag Manager dataLayer  -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',"GTM-KJJZHXD");</script>
+<!-- End Google Tag Manager -->
+	
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',"GTM-KXKNHL");</script>
+<!-- End Google Tag Manager -->
+	
+	
+	
+	<title>Privacy Policy | WMBB - mypanhandle.com</title>
+<link rel='dns-prefetch' href='//s7.addthis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="WMBB - mypanhandle.com &raquo; Feed" href="https://www.mypanhandle.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="WMBB - mypanhandle.com &raquo; Comments Feed" href="https://www.mypanhandle.com/comments/feed/" />
+<script class="wp-asset-manager page_attributes" type="text/javascript">window.amScripts = window.amScripts || {}; window.amScripts["page_attributes"] = {"page_url":"https:\/\/www.mypanhandle.com\/privacy-policy\/","page_slug":"privacy-policy","page_type":"story","page_category":"about_us","article_id":7,"subpath":"\/about_us"}</script><script class="wp-asset-manager ns-ad-loader-js" type="text/javascript">!function(e){var t={};function n(i){if(t[i])return t[i].exports;var o=t[i]={i:i,l:!1,exports:{}};return e[i].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=e,n.c=t,n.d=function(e,t,i){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:i})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var i=Object.create(null);if(n.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(i,o,function(t){return e[t]}.bind(null,o));return i},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/wp-content/themes/nexstar/client/build/",n(n.s=249)}({249:function(e,t,n){e.exports=n(250)},250:function(e,t,n){"use strict";var i=s(n(251)),o=s(n(252));function s(e){return e&&e.__esModule?e:{default:e}}var a=window.amScripts.page_attributes;window.googletag=window.googletag||{},window.googletag.cmd=googletag.cmd||[],googletag.cmd.push(function(){var e=function(e,t,n){var i=void 0;try{i=e.slot[t].apply(e.slot,n)}catch(e){i="[unknown]"}return i};googletag.pubads().addEventListener("slotRenderEnded",function(t){if(t.slot){var n=t.slot,i=t.isEmpty,o=t.size,s=n.getSlotElementId(),a="AD SLOT RENDERED {\n  containerId: "+s+",\n  isEmpty: "+i+",\n  size: "+o+",\n  adUnitPath: "+e(t,"getAdUnitPath")+",\n  position: "+e(t,"getTargeting",["pos"])+",\n}";if(window.setTimeout(function(){console.info(a)},10),s.startsWith("acm-ad-tag-adhesion")&&!i){var r=document.getElementById(s).parentNode;r.classList.remove("pre-render"),r.querySelector(".close-btn-container").addEventListener("click",function(e){e.preventDefault(),r.parentNode.remove()},!1)}if(s.startsWith("acm-ad-tag-oop")&&!i&&document.body.classList.add("has-loaded-super-billboard-ad"),s&&!i&&"function"==typeof document.getElementById(s).closest){var d=document.getElementById(s).closest(".ad-unit");d&&d.classList.add("ad-unit--is-rendered")}}})}),googletag.cmd.push(function(){googletag.pubads().enableSingleRequest(),googletag.pubads().enableAsyncRendering(),googletag.pubads().collapseEmptyDivs(),googletag.companionAds().setRefreshUnfilledSlots(!0),googletag.pubads().disableInitialLoad(),googletag.pubads().enableVideoAds(),googletag.enableServices()}),googletag.cmd.push(function(){var e=googletag.pubads();a.article_id&&e.setTargeting("pid",String(a.article_id)),a.page_type&&e.setTargeting("pagetype",a.page_type)});var r=new i.default(window.googletag,window.isApsEnabled,window.isPrebidEnabled);window.addEventListener("nsDfpSlotRendered",r.setUpSlot),(0,o.default)(function(){r.initVisibleSlots()}),window.addEventListener("nsDfpRefreshSlots",r.refreshSlots)},251:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}();var o=function(){function e(t){var n=this,i=arguments.length>1&&void 0!==arguments[1]&&arguments[1],o=arguments.length>2&&void 0!==arguments[2]&&arguments[2];!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.apstagSlots=[],this.prebidSlots=[],this.prebidData={priceGranularity:[],sizeConfig:[],slotMap:{}},this.googletag=t,this.isApsEnabled=i,this.isPrebidJSEnabled=o,this.setUpSlot=this.setUpSlot.bind(this),this.refreshSlots=this.refreshSlots.bind(this),this.isPrebidJSEnabled&&(window.pbjs=window.pbjs||{},window.pbjs.que=pbjs.que||[],window.prebidData&&(this.prebidData=window.prebidData),window.pbjs.que.push(function(){window.pbjs.setConfig({sizeConfig:n.prebidData.sizeConfig,priceGranularity:n.prebidData.priceGranularity})}))}return i(e,[{key:"setUpSlot",value:function(e){var t=this,n=e.detail.id,i=document.getElementById(n);if(i){var o=JSON.parse(i.dataset.slot);if(o&&Object.keys(o).length){var s=JSON.parse(i.dataset.unit);if(s&&Object.keys(s).length){var a=i.dataset.path;if(a){var r=JSON.parse(i.dataset.targeting);this.pushCmd(function(){var e=null;if((e=o.is_oop?t.googletag.defineOutOfPageSlot(a,n):t.googletag.defineSlot(a,o.size,n))&&(r&&Object.keys(r).forEach(function(t){e.setTargeting(t,r[t])}),o.sizes.length&&e.defineSizeMapping(o.sizes),o.is_companion&&e.addService(t.googletag.companionAds()),e.addService(t.googletag.pubads())),e){var i=[];if(e.getSizes?i=e.getSizes(window.innerWidth,window.innerHeight).map(function(e){return[e.getWidth(),e.getHeight()]}):o.sizes.length&&(i=Object.values(o.sizes.reduce(function(e,t){var n=e;return t[1].forEach(function(e){n[e.join(",")]=e}),n},{}))),i.length&&(i=i.filter(function(e){return!(88===e[0]&&31===e[1])})),i.length&&(t.apstagSlots.push({sizes:i,slotID:e.getSlotElementId(),slotName:e.getAdUnitPath()}),t.isPrebidJSEnabled)){var s=r&&r.pos,d=t.getPrebidBidsForSlot(s);s&&d.length&&t.prebidSlots.push({code:e.getSlotElementId(),mediaTypes:{banner:{sizes:i}},bids:d})}}})}}}}}},{key:"getPrebidBidsForSlot",value:function(e){return e&&this.prebidData.slotMap&&this.prebidData.slotMap[e]?this.prebidData.slotMap[e]:[]}},{key:"initVisibleSlots",value:function(){var e=this;this.pushCmd(function(){e.googletag.pubads().getSlots().forEach(function(t){e.pushCmd(function(){e.googletag.display(t.getSlotElementId())})})}),this.refreshSlots()}},{key:"refreshSlots",value:function(){var e=this;this.pushCmd(function(){e.initPrebidRequest(function(){e.googletag.pubads().refresh()})})}},{key:"initPrebidRequest",value:function(e){this.isPrebidJSEnabled?this.isApsEnabled?this.fetchHeaderBids(this.apstagSlots,this.prebidSlots,2e3,e):this.fetchHeaderBids([],this.prebidSlots,2e3,e):this.isApsEnabled?this.fetchHeaderBids(this.apstagSlots,[],2e3,e):this.pushCmd(e)}},{key:"fetchHeaderBids",value:function(e,t,n,i){var o=this,s=this.constructor.apstag(),a=[],r=this.isApsEnabled&&e.length;r&&a.push("a9"),t.length&&a.push("prebid");var d={adserverRequestSent:!1};a.forEach(function(e){d[e]=!1});var l=function(){!0!==d.adserverRequestSent&&(d.adserverRequestSent=!0,d.sendAdserverRequest=!0,o.googletag.cmd.push(function(){r&&s.setDisplayBids(),o.isPrebidJSEnabled&&window.pbjs.setTargetingForGPTAsync(),i()}))},u=function(e){!0!==d.adserverRequestSent&&("a9"===e?d.a9=!0:"prebid"===e&&(d.prebid=!0),a.map(function(e){return d[e]}).filter(Boolean).length===a.length&&l())};r&&s.fetchBids({slots:e,timeout:n},function(){u("a9")}),o.isPrebidJSEnabled&&window.pbjs.que.push(function(){window.pbjs.addAdUnits(t),window.pbjs.requestBids({bidsBackHandler:function(){u("prebid")}})}),window.setTimeout(function(){l()},n)}},{key:"pushCmd",value:function(e){this.googletag.cmd.push(e)}}],[{key:"apstag",value:function(){return window.apstag||null}}]),e}();t.default=o},252:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e){"complete"===document.readyState&&e(),document.addEventListener("DOMContentLoaded",e)}}});
+//# sourceMappingURL=adLoader.d5cb9e97b5481ab88c0a.bundle.min.js.map</script><meta name='google-site-verification' content='J69KSIREsgq_3lTgnPwBTGmTI9pvz7VKTDbiEcwjNZM' /><!-- WP SEO -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.mypanhandle.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+<style>
+	:root {
+		--primary_color: #3F5EDB;
+		--alert_banner_label_sep: '/';
+	}
+</style>
+<link rel='stylesheet' id='all-css-0' href='https://www.mypanhandle.com/wp-includes/css/dist/block-library/style.min.css?m=1576710961g' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link crossorigin="anonymous" rel='stylesheet' id='ns-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lora%3A400%2C400i%2C700%2C700i%7CRoboto+Condensed%3A400%2C700&#038;ver=1.0' media='all' />
+<link rel='stylesheet' id='all-css-2' href='https://www.mypanhandle.com/_static/??-eJyVzMsOwiAQheEXskwvUOjC+CzDMFQUaFNo9PG1xqUbdycnfz54rA0tuXKuUK+cuEDmZ6m4AcVwvHYP0QGVAnNcLEZBRns/tcaNg+q9IWNtJ1LI4t2c4A8PtxoosmDlSCrsUVuWskPWfvwJpr1Z4z6HXODGdUW6f5zvPvJLOndKm2mQulUvDadNag==' type='text/css' media='all' />
+<style id='ns-article-css-inline-css'>
+.article--is-condensed .article-content { max-height: 600px; }
+</style>
+<script type='text/javascript' src='https://www.mypanhandle.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZdVrKOPT4FubmZ6UWJJql5uZh5QsX2uraGpuZm5oYGlmXEWACWpILM='></script>
+<link rel='https://api.w.org/' href='https://www.mypanhandle.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mypanhandle.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.mypanhandle.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="https://www.mypanhandle.com/privacy-policy/" />
+<link rel='shortlink' href='https://www.mypanhandle.com/?p=7' />
+<link rel="alternate" type="application/json+oembed" href="https://www.mypanhandle.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mypanhandle.com%2Fprivacy-policy%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.mypanhandle.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mypanhandle.com%2Fprivacy-policy%2F&#038;format=xml" />
+<style id="lakana-art-direction"></style>
+			<meta property="fb:pages" content="49632871657" />
+			
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<style type='text/css'>img#wpstats{display:none}</style><script type="text/javascript" src=""></script>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Privacy Policy" />
+<meta property="og:url" content="https://www.mypanhandle.com/privacy-policy/" />
+<meta property="og:description" content="Updated: December 1, 2016Privacy Policy1. General Thank you for visiting mypanhandle.com, which is operated by WMBB, affiliates of Nexstar Broadcasting, Inc. and Mission Broadcasting, Inc. (&quot;N…" />
+<meta property="article:published_time" content="2019-05-30T09:30:32+00:00" />
+<meta property="article:modified_time" content="2019-07-29T20:56:48+00:00" />
+<meta property="og:site_name" content="WMBB - mypanhandle.com" />
+<meta property="og:image" content="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-512Icon-2.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="Privacy Policy" />
+<meta name="twitter:image" content="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-512Icon-2.png?w=240" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Privacy Policy" />
+<meta name="twitter:description" content="Updated: December 1, 2016Privacy Policy1. General Thank you for visiting mypanhandle.com, which is operated by WMBB, affiliates of Nexstar Broadcasting, Inc. and Mission Broadcasting, Inc. (&quot;N…" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-512Icon-2.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-512Icon-2.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-512Icon-2.png?w=180" />
+<meta name="msapplication-TileImage" content="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-512Icon-2.png?w=270" />
+</head>
+
+<body class="privacy-policy page-template page-template-page-full-width page-template-page-full-width-php page page-id-7 wp-custom-logo">
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KJJZHXD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KXKNHL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		
+<header id="masthead" class="site-header" role="banner" data-component="siteHeader">
+	<div class="site-header__content">
+					<p class="screen-reader-text"><a href="https://www.mypanhandle.com/" rel="home">WMBB - mypanhandle.com</a></p>
+		
+		<div class="site-header__branding">
+			<div class="site-header__branding__content">
+				<div class="site-header__logo">
+					<a href="https://www.mypanhandle.com/" rel="home">
+						<img src="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-My-Panhandle-Vector-Logo-DO-NOT-DELETE-2.png" alt="About Us" />
+						<div class="site-header__logo-bg" style="background-image: url('https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-My-Panhandle-Vector-Logo-DO-NOT-DELETE-2.png');"></div>
+					</a>
+				</div>
+				<div class="site-header__weather">
+											<a href="https://www.mypanhandle.com/weather/">
+							<span class="site-header__weather-region">Panama City</span>
+							<span class="site-header__weather-forecast">
+								<span class="site-header__weather-forecast__text">59&deg;</span>
+								<figure class="site-header__weather-forecast__icon">
+									<span class="weather-icon weather-icon-sm weather-icon-light-97"></span>
+								</figure>
+							</span>
+						</a>
+									</div>
+				<div class="site-header__widget">
+					<div class="site-header__sponsor">
+						<aside class="ad-unit ad-unit--microbar ad-unit--microbar--header">
+															<span class="ad_unit__label">Sponsored By</span>
+														<div class="ad-unit__content">
+								  <div   id="acm-ad-tag-header-microbar-header-microbar"   data-slot='{"pos":"header-microbar","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[88,31],"sizes":[[[900,0],[[88,31]]],[[0,0],[]]],"amp_multi_size":"88x31","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"}'   data-unit='{"tag":"header-microbar","tag_id":"header-microbar","dfp_id":"5678","tag_name":"nx.wmbb","ad_disabled":"0"}'   data-targeting='{"pos":"header-microbar","fold":"atf","category":"about_us","kw":"privacy-policy"}'   data-path='/5678/nx.wmbb/about_us'  ></div>  <script>  (function () {   try {    var event = new CustomEvent(     "nsDfpSlotRendered",     {      detail: {       id: 'acm-ad-tag-header-microbar-header-microbar'      }     }    );     window.dispatchEvent(event);   } catch (err) {}  })();  </script>  							</div>
+						</aside>
+
+					</div>
+					<button class="site-header__toggle" aria-controls="supernav" aria-expanded="false">
+						<span class="screen-reader-text">Toggle Menu</span>
+						<span class="icon icon--navicon">
+							
+<svg aria-hidden="true" tabindex="-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.969 12.063">
+	<title>Open Navigation</title>
+	<path fill="#fff" d="M.793 1.556h18.363a.778.778 0 1 0 0-1.555H.793a.854.854 0 0 0-.809.778.73.73 0 0 0 .809.777zm18.363 3.695H.793a.778.778 0 1 0 0 1.555h18.363a.778.778 0 1 0 0-1.555zm0 5.25H.793a.779.779 0 1 0 0 1.556h18.363a.779.779 0 1 0 0-1.557z" />
+</svg>
+						</span>
+						<span class="icon icon--close">
+							
+<svg aria-hidden="true" tabindex="-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.85 16.875">
+	<title>Close Navigation</title>
+	<path fill="#fff" d="M9.65 8.454l6.88-7.063a.809.809 0 0 0 0-1.15.782.782 0 0 0-1.14 0L8.52 7.305 1.37.241a.782.782 0 0 0-1.14 0 .809.809 0 0 0 0 1.15l7.15 7.063-7.15 7.063a.809.809 0 0 0 0 1.15.824.824 0 0 0 .6.219.787.787 0 0 0 .59-.219l7.15-7.063 6.87 7.063a.824.824 0 0 0 .6.219.619.619 0 0 0 .54-.219.792.792 0 0 0 0-1.15z" />
+</svg>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<nav id="siteNavigation" class="site-header__navigation">
+			<div class="site-header__search-full">
+				
+<form role="search" class="site-header__search-form" action="https://www.mypanhandle.com/">
+	<span class="screen-reader-text">Search</span>
+	<input type="search" name="s" placeholder="Site Search..." />
+	<input type="submit" name="submit" value="" />
+</form>
+			</div>
+
+			<div class="site-header__navigation__content">
+				<h2 class="screen-reader-text">Primary Menu</h2>
+
+
+				<ul id="supernav" class="menu">
+	<li id="menu-item-1949" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-articles menu-item-1949"><a href="https://www.mypanhandle.com/news/">News</a>
+<div class="dropnav dropnav--4-col dropnav--full-width">
+	<div class="dropnav__section dropnav__section--sub-menu dropnav__section--quarter">
+		<ul class="sub-menu" data-columns="1">
+	<li id="menu-item-1958" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1958"><a href="https://www.mypanhandle.com/news/special-reports/">Special Reports</a></li>
+	<li id="menu-item-32786" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32786"><a href="https://www.mypanhandle.com/your-local-election-headquarters1/">Your Local Election Headquarters</a></li>
+	<li id="menu-item-32669" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32669"><a href="https://www.mypanhandle.com/news-13-this-morning/">News 13 This Morning</a></li>
+	<li id="menu-item-170709" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-170709"><a href="https://www.mypanhandle.com/the-daily-pledge/">The Daily Pledge</a></li>
+	<li id="menu-item-67757" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-67757"><a href="https://www.mypanhandle.com/entertainment-news/">Entertainment News</a></li>
+</ul>
+</div><div class="dropnav__section dropnav__section--article-list dropnav__section--quarter"><div class="article-list article-list--top-story"><h3 class="article-list__heading">Top Stories</h3><div class="article-list__content"><article class="article-list__article article-list__article--is-stacked article-list__article--has-thumb article-list__article--is-media-type">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/news/project-canopy-gifts-trees-to-local-students/"
+									>
+			
+				Project Canopy gifts trees to local students
+							</a>
+					</h4>
+	
+	
+	
+	
+	</div>
+
+	<figure class="article-list__article-thumb">
+					<a
+				href="https://www.mypanhandle.com/news/project-canopy-gifts-trees-to-local-students/"
+							>
+		
+		<div class="article-list__article-image-wrapper">
+			
+<div class="image-wrapper landscape">
+	<img
+		src="https://i1.wp.com/www.mypanhandle.com/wp-content/uploads/sites/88/2020/01/Project-Canopy-gifts-trees-to-local-students.jpg?w=2000&#038;ssl=1"
+		alt=""
+		srcset=""
+		sizes=""
+	/>
+</div>
+
+							
+<span aria-hidden="true" tabindex="-1" class="article-list__article-mediaicon">
+	<span class="article-list__article-mediaicon-svg">
+		<svg viewBox="0 0 24 24">
+			<path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+		</svg>
+	</span>
+	</span>
+					</div>
+
+					</a>
+			</figure>
+	</article></div></div></div><div class="dropnav__section dropnav__section--article-list dropnav__section--quarter"><div class="article-list article-list--top-story"><h3 class="article-list__heading article-list__heading--hidden">Top Stories</h3><div class="article-list__content"><article class="article-list__article article-list__article--is-stacked article-list__article--has-thumb article-list__article--is-media-type">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/news/local-young-mom-fighting-for-her-life-after-delivering-twins/"
+									>
+			
+				Local, young mom fighting for her life after delivering twins
+							</a>
+					</h4>
+	
+	
+	
+	
+	</div>
+
+	<figure class="article-list__article-thumb">
+					<a
+				href="https://www.mypanhandle.com/news/local-young-mom-fighting-for-her-life-after-delivering-twins/"
+							>
+		
+		<div class="article-list__article-image-wrapper">
+			
+<div class="image-wrapper landscape">
+	<img
+		src="https://i1.wp.com/www.mypanhandle.com/wp-content/uploads/sites/88/2020/01/IMG_9822.jpg?w=2000&#038;ssl=1"
+		alt=""
+		srcset=""
+		sizes=""
+	/>
+</div>
+
+							
+<span aria-hidden="true" tabindex="-1" class="article-list__article-mediaicon">
+	<span class="article-list__article-mediaicon-svg">
+		<svg viewBox="0 0 24 24">
+			<path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+		</svg>
+	</span>
+	</span>
+					</div>
+
+					</a>
+			</figure>
+	</article></div></div></div><div class="dropnav__section dropnav__section--article-list dropnav__section--quarter"><div class="article-list article-list--bulleted"><h3 class="article-list__heading article-list__heading--hidden">Top Stories</h3><div class="article-list__content"><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/news/panama-city/panama-city-celebrates-arbor-day-by-planting-trees/"
+									>
+			
+				Panama City celebrates Arbor Day by planting trees
+							</a>
+					</h4>
+	
+	
+	
+	
+			
+<span aria-hidden="true" tabindex="-1" class="article-list__article-mediaicon">
+	<span class="article-list__article-mediaicon-svg">
+		<svg viewBox="0 0 24 24">
+			<path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+		</svg>
+	</span>
+	</span>
+	</div>
+
+</article><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/news/attorney-general-ashley-moody-makes-stop-in-parker/"
+									>
+			
+				Attorney General Ashley Moody makes stop in Parker
+							</a>
+					</h4>
+	
+	
+	
+	
+			
+<span aria-hidden="true" tabindex="-1" class="article-list__article-mediaicon">
+	<span class="article-list__article-mediaicon-svg">
+		<svg viewBox="0 0 24 24">
+			<path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+		</svg>
+	</span>
+	</span>
+	</div>
+
+</article><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/news/kids-across-the-panhandle-celebrate-childrens-week/"
+									>
+			
+				Kids across the Panhandle celebrate &#8216;Children&#8217;s Week&#8217;
+							</a>
+					</h4>
+	
+	
+	
+	
+			
+<span aria-hidden="true" tabindex="-1" class="article-list__article-mediaicon">
+	<span class="article-list__article-mediaicon-svg">
+		<svg viewBox="0 0 24 24">
+			<path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+		</svg>
+	</span>
+	</span>
+	</div>
+
+</article><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/news/the-early-learning-coalition-of-northwest-florida-prepares-for-literacy-week/"
+									>
+			
+				The Early Learning Coalition of Northwest Florida prepares for Literacy Week
+							</a>
+					</h4>
+	
+	
+	
+	
+			
+<span aria-hidden="true" tabindex="-1" class="article-list__article-mediaicon">
+	<span class="article-list__article-mediaicon-svg">
+		<svg viewBox="0 0 24 24">
+			<path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+		</svg>
+	</span>
+	</span>
+	</div>
+
+</article></div></div></div></div></li>
+<li id="menu-item-139633" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-139633"><a href="http://www.MyPanhandle.com/video">Video</a>
+<div class="dropnav dropnav--1-col">
+	<div class="dropnav__section dropnav__section--sub-menu">
+		<ul class="sub-menu" data-columns="1">
+	<li id="menu-item-170710" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-170710"><a href="http://www.MyPanhandle.com/video">Video Center</a></li>
+	<li id="menu-item-82647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82647"><a href="https://www.mypanhandle.com/live-stream/">Live Stream</a></li>
+</ul>
+</div></div></li>
+<li id="menu-item-1954" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1954"><a href="https://www.mypanhandle.com/weather/">Weather</a>
+<div class="dropnav dropnav--1-col">
+	<div class="dropnav__section dropnav__section--sub-menu">
+		<ul class="sub-menu" data-columns="1">
+	<li id="menu-item-83773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83773"><a href="https://www.mypanhandle.com/interactive-radar/">VIPIR Radar</a></li>
+	<li id="menu-item-2060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2060"><a href="https://www.mypanhandle.com/map-center/">Map Center</a></li>
+	<li id="menu-item-32788" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32788"><a href="https://www.mypanhandle.com/weather/weather-alerts/">Weather Alerts</a></li>
+	<li id="menu-item-74473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74473"><a href="https://www.mypanhandle.com/hurricane-hq/">Hurricane HQ</a></li>
+	<li id="menu-item-200454" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200454"><a href="https://www.mypanhandle.com/draw-the-weather/">Draw the Weather</a></li>
+</ul>
+</div></div></li>
+<li id="menu-item-1952" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-has-articles menu-item-1952"><a href="https://www.mypanhandle.com/sports/">Sports</a>
+<div class="dropnav dropnav--4-col dropnav--full-width">
+	<div class="dropnav__section dropnav__section--sub-menu dropnav__section--quarter">
+		<ul class="sub-menu" data-columns="1">
+	<li id="menu-item-1960" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1960"><a href="https://www.mypanhandle.com/sports/scholar-athlete/">Scholar Athlete</a></li>
+	<li id="menu-item-32787" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32787"><a href="https://www.mypanhandle.com/sports/local-sports/">Local Sports</a></li>
+	<li id="menu-item-121875" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-121875"><a href="https://www.mypanhandle.com/sports/friday-night-fever/">Friday Night Fever</a></li>
+	<li id="menu-item-131635" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-131635"><a href="https://www.mypanhandle.com/sports/the-big-game/">The Big Game</a></li>
+</ul>
+</div><div class="dropnav__section dropnav__section--article-list dropnav__section--quarter"><div class="article-list article-list--top-story"><h3 class="article-list__heading">Top Stories</h3><div class="article-list__content"><article class="article-list__article article-list__article--is-stacked article-list__article--has-thumb">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/sports/ap-source-giants-hiring-garrett-as-offensive-coordinator/"
+									>
+			
+				Giants hire Garrett as OC, Graham as DC
+							</a>
+					</h4>
+	
+	
+	
+	
+	</div>
+
+	<figure class="article-list__article-thumb">
+					<a
+				href="https://www.mypanhandle.com/sports/ap-source-giants-hiring-garrett-as-offensive-coordinator/"
+							>
+		
+		<div class="article-list__article-image-wrapper">
+			
+<div class="image-wrapper landscape">
+	<img
+		src="https://i1.wp.com/www.mypanhandle.com/wp-content/uploads/sites/88/2020/01/f14431f0e1e840c5abeea734356e9be1.jpg?w=2000&#038;ssl=1"
+		alt=""
+		srcset=""
+		sizes=""
+	/>
+</div>
+
+					</div>
+
+					</a>
+			</figure>
+	</article></div></div></div><div class="dropnav__section dropnav__section--article-list dropnav__section--quarter"><div class="article-list article-list--top-story"><h3 class="article-list__heading article-list__heading--hidden">Top Stories</h3><div class="article-list__content"><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/sports/nba-pushes-back-plans-for-april-vote-on-schedule-changes/"
+									>
+			
+				NBA pushes back plans for April vote on schedule changes
+							</a>
+					</h4>
+	
+	
+	
+	
+	</div>
+
+</article></div></div></div><div class="dropnav__section dropnav__section--article-list dropnav__section--quarter"><div class="article-list article-list--bulleted"><h3 class="article-list__heading article-list__heading--hidden">Top Stories</h3><div class="article-list__content"><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/sports/astros-owner-crane-expects-to-hire-new-manager-by-feb-3/"
+									>
+			
+				Astros owner Crane expects to hire new manager by Feb. 3
+							</a>
+					</h4>
+	
+	
+	
+	
+	</div>
+
+</article><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/sports/local-sports/sneads-volleyball-player-jordyn-riano-signs-with-florida-gateway/"
+									>
+			
+				Snead&#8217;s volleyball player Jordyn Riano signs with Florida Gateway
+							</a>
+					</h4>
+	
+	
+	
+	
+			
+<span aria-hidden="true" tabindex="-1" class="article-list__article-mediaicon">
+	<span class="article-list__article-mediaicon-svg">
+		<svg viewBox="0 0 24 24">
+			<path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+		</svg>
+	</span>
+	</span>
+	</div>
+
+</article><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/sports/local-sports/wewahitcka-wrestling-team-holds-annual-gator-brawl/"
+									>
+			
+				Wewahitchka wrestling team holds annual Gator Brawl
+							</a>
+					</h4>
+	
+	
+	
+	
+			
+<span aria-hidden="true" tabindex="-1" class="article-list__article-mediaicon">
+	<span class="article-list__article-mediaicon-svg">
+		<svg viewBox="0 0 24 24">
+			<path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+		</svg>
+	</span>
+	</span>
+	</div>
+
+</article><article class="article-list__article">
+<div
+	class="article-list__article-text"
+	data-article-list-id=""
+	data-article-text-classes="article-list__article-text"
+	data-article-thumb-classes="article-list__article-thumb"
+	data-current-image-context="[]"
+>
+			<h4 class="article-list__article-title">
+							<a
+					href="https://www.mypanhandle.com/sports/ex-usa-gymnastics-trainer-has-sexual-assault-count-dropped/"
+									>
+			
+				Ex-USA Gymnastics trainer has sexual assault count dropped
+							</a>
+					</h4>
+	
+	
+	
+	
+	</div>
+
+</article></div></div></div></div></li>
+<li id="menu-item-32668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32668"><a href="https://www.mypanhandle.com/your-events/">Community Calendar</a></li>
+<li id="menu-item-200452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-200452"><a href="https://www.mypanhandle.com/contests/">Contests</a>
+<div class="dropnav dropnav--1-col">
+	<div class="dropnav__section dropnav__section--sub-menu">
+		<ul class="sub-menu" data-columns="1">
+	<li id="menu-item-197837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197837"><a href="https://www.mypanhandle.com/2020-contest-winners/">2020 Contest Winners</a></li>
+	<li id="menu-item-197770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197770"><a href="https://www.mypanhandle.com/fan-of-the-day/">Fan of the Day</a></li>
+	<li id="menu-item-194261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194261"><a href="https://www.mypanhandle.com/win-coconut-creek-tickets/">Win Coconut Creek Tickets</a></li>
+	<li id="menu-item-194130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194130"><a href="https://www.mypanhandle.com/draw-the-weather/">Draw the Weather</a></li>
+	<li id="menu-item-124739" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124739"><a href="https://mypanhandleprofootball.upickem.net/#/registration/login?AffiliateID=WMBB">Pro Football Challenge</a></li>
+	<li id="menu-item-200453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200453"><a href="https://www.mypanhandle.com/rock-it-lanes-birthday-club/">Rock It Lanes Birthday Club</a></li>
+</ul>
+</div></div></li>
+<li id="menu-item-87077" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-87077"><a href="https://www.mypanhandle.com/marketplace/">Features</a>
+<div class="dropnav dropnav--1-col">
+	<div class="dropnav__section dropnav__section--sub-menu">
+		<ul class="sub-menu" data-columns="1">
+	<li id="menu-item-141414" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-141414"><a href="https://www.mypanhandle.com/border-report-tour/">Border Report Tour</a></li>
+	<li id="menu-item-85071" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85071"><a href="http://www.perry-young.com">LawCall</a></li>
+	<li id="menu-item-84261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84261"><a href="https://www.mypanhandle.com/open-for-biz/">Open for Biz</a></li>
+	<li id="menu-item-2064" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2064"><a href="https://www.mypanhandle.com/buddycheck13/">Buddy Check</a></li>
+	<li id="menu-item-67273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67273"><a href="https://www.mypanhandle.com/wellness-network/">Dr. Oz Wellness Network</a></li>
+	<li id="menu-item-174410" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-174410"><a href="https://www.mypanhandle.com/home-for-the-holidays/">Home for the Holidays</a></li>
+</ul>
+</div></div></li>
+<li id="menu-item-82645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-82645"><a href="https://www.mypanhandle.com/contact-us/">About Us</a>
+<div class="dropnav dropnav--1-col">
+	<div class="dropnav__section dropnav__section--sub-menu">
+		<ul class="sub-menu" data-columns="1">
+	<li id="menu-item-88152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88152"><a href="https://www.mypanhandle.com/meet-the-team/">Meet the Team</a></li>
+	<li id="menu-item-82646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82646"><a href="https://www.mypanhandle.com/contact-us/">Contact Us</a></li>
+	<li id="menu-item-139550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139550"><a href="https://nexstar.wd5.myworkdayjobs.com/nexstar">Careers at WMBB | Nexstar</a></li>
+	<li id="menu-item-1947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1947"><a href="https://www.mypanhandle.com/programming/">Our Programming</a></li>
+	<li id="menu-item-1946" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1946"><a href="https://www.mypanhandle.com/tv-guide/">TV Guide</a></li>
+	<li id="menu-item-142263" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-142263"><a href="https://www.mypanhandle.com/about-us/antenna-reception/">Antenna Reception</a></li>
+</ul>
+</div></div></li>
+</ul>
+
+				<div class="site-header__search-drop">
+					<a class="site-header__search-drop__toggle" href="#">
+						<span class="screen-reader-text">Search</span>
+						<span class="icon">
+							
+<svg  aria-hidden="true" tabindex="-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
+	<title>Search</title>
+	<path d="M15.72 15.4l-3.75-3.8a7 7 0 0 0 1.72-4.612 6.851 6.851 0 1 0-6.85 6.98 6.713 6.713 0 0 0 3.72-1.127l3.85 3.9a.9.9 0 0 0 .65.276.92.92 0 0 0 .66-.276.965.965 0 0 0 0-1.341zM1.85 6.984a4.991 4.991 0 1 1 4.99 5.087 5.036 5.036 0 0 1-4.99-5.09z" />
+</svg>
+						</span>
+					</a>
+					
+<form role="search" class="site-header__search-form" action="https://www.mypanhandle.com/">
+	<span class="screen-reader-text">Search</span>
+	<input type="search" name="s" placeholder="What are you looking for?" />
+	<input type="submit" name="submit" value="Search" />
+</form>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+
+		<div class="site-content-wrapper">
+			
+<div class="alert-banners js-alert-banners has-messages">
+	
+	<div class="weather-alerts" data-react-component="WeatherAlerts"></div>
+</div>
+
+
+			
+<div id="content" class="site-content">
+	<aside class="ad-unit ad-unit--leaderboard">
+		<div class="ad-unit__content">
+			  <div   id="acm-ad-tag-billboard1-billboard1"   data-slot='{"pos":"billboard1","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[320,50],"sizes":[[[1280,0],[[728,90],[970,250],[970,90],[970,30]]],[[1024,0],[[728,90],[970,250],[970,90],[970,30]]],[[768,0],[[728,90]]],[[641,0],[[320,50]]],[[0,0],[[320,50]]]],"amp_multi_size":"320x50","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"}'   data-unit='{"tag":"billboard1","tag_id":"billboard1","dfp_id":"5678","tag_name":"nx.wmbb","ad_disabled":"0"}'   data-targeting='{"pos":"billboard1","fold":"atf","category":"about_us","kw":"privacy-policy"}'   data-path='/5678/nx.wmbb/about_us'  ></div>  <script>  (function () {   try {    var event = new CustomEvent(     "nsDfpSlotRendered",     {      detail: {       id: 'acm-ad-tag-billboard1-billboard1'      }     }    );     window.dispatchEvent(event);   } catch (err) {}  })();  </script>  		</div>
+	</aside>
+
+			<div class="zone-container--below-supernav">
+					</div>
+	
+	
+	<div class="site-content__layout">
+		
+		
+		
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main">
+
+				
+
+<article id="post-7" class="article post-7 page type-page status-publish hentry category-about-us">
+	<header class="page-header">
+		<h1 class="page-title">Privacy Policy</h1>	</header>
+
+	
+	<div class="article-content rich-text">
+		<link href="https://media.wkrg.com/nxsglobal/global/theme/images/legal-docs.css" rel="stylesheet" type="text/css" />
+<div class="legal-doc">
+<p class="updated"><strong>Updated: December 1, 2016</strong></p>
+<h1>Privacy Policy</h1>
+<p><strong>1. General</strong> Thank you for visiting <span id="siteDomain">mypanhandle.com</span>, which is operated by <span id="callLetters">WMBB</span>, affiliates of Nexstar Broadcasting, Inc. and Mission Broadcasting, Inc. (&quot;Nexstar&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). We respect the privacy of visitors to our websites, mobile sites, and applications (each a &quot;Property&quot; and collectively the &quot;Properties&quot;). Because we gather certain types of information from users of our Properties, we feel that you should know how we collect, use, disclose, manage and store such information. This privacy policy (&quot;Privacy Policy&quot;) describes, among other things, the types of information collected about you when you visit our Properties; how your information may be used and when it may be disclosed; how you can control the use and disclosure of your information; and how your information is protected.</p>
+<p>This Privacy Policy does not apply to any information you may provide to us offline or through any means other than our Properties. For example, this Privacy Policy does not apply to information that you provide to us at a live event, or when you respond by postal mail or telephone to a survey or an invitation to enter a sweepstakes or contest, or to any other instances in which we may collect information from you offline. This Privacy Policy also does not cover any information collected through any other site or application even if the other site or application is linked to our Properties.</p>
+<p>Please read this Privacy Policy carefully so that you understand our online privacy practices. Your continued use of, and/or participation on our Properties, indicates your acceptance of this Privacy Policy and of the collection, use, disclosure, management and storage of your Personal Information as described below. By visiting our Properties, you agree that your visit and any dispute regarding our privacy practices is governed by this Privacy Policy and our Terms of Use.</p>
+<p>From time to time we may revise this Privacy Policy to reflect industry initiatives or changes in the law, our Personal Information collection and use practices, and/or the features of the Properties or technology. Your continued use of, and/or participation on, the Properties after we post a revised version of this Privacy Policy, signifies your acceptance of the revised Privacy Policy. Such modified Privacy Policy will be posted on this page. It is therefore important that you review this Privacy Policy regularly to ensure you are updated as to any changes.</p>
+<p><strong>2. Types of Information We Collect From You.</strong> We may collect information that individually identifies you (&quot;Personal Information&quot;). Personal Information may include but is not limited to: your name; physical address; phone number; e-mail address; or any combination of information that individually identifies you.</p>
+<p>We may also collect information that does not individually identify you (&quot;Other Information&quot;). Other Information may include but is not limited to: any combination of information that does not individually identify you; statistical and aggregated data on the specific pages you access or visit; or any information that is not otherwise defined as Personal Information.</p>
+<p><strong>3. Collection of Your Personal Information and Other Information</strong> <em>Information Provided Directly to Us.</em> We believe that we can enhance your experience on our Properties through the information you share with us. However, you may choose to enjoy some of the content and features on our Properties without directly providing us with any information about you; but, as described below, some information is automatically collected when you visit our Properties. In addition, in order for you to take advantage of certain features and services offered on our Properties, you may be required to provide us with Personal Information.</p>
+<p>The Properties provide certain activities in which we gather Personal Information from users of the Properties, such as an activity that requires that a user complete a registration process and receive/select a &quot;user name&quot; and password. Registration to participate in these Property activities may require the submission of your email address, zip code, date of birth and other Personal Information. Other Information and Personal Information that may be submitted include your password hints, gender, personal interests, industry you work in, occupation/role, household income, communication preferences, preferred news source, and any other information you provide to us in order to use a Property feature or service. If you choose to make a purchase or sign up for a paid subscription service, we will ask for additional information, such as your credit card number and billing address. You may also provide us with photographs or video materials that contain Personal Information about you. In addition, you may have the ability to opt in to additional subscription services, such as email news alerts or promotional and marketing information to be received directly from our advertisers (those who pay us to place advertisements on our Properties) which may require you to provide certain Personal Information.</p>
+<p>We may collect Personal Information and Other Information from the testimonials or posts you may provide. If you submit any testimonials to be posted on our Properties, we will obtain your consent prior to using your name and testimonial.</p>
+<p>We may also collect Personal Information about you when such information is provided by another individual on your behalf (for example, if another individual submits a birthday notice with your name and email address). For certain activities you may be asked to submit a person&#39;s name, address, phone number and/or email address.</p>
+<p><em>Information Collected Automatically.</em> In addition to the information that you may provide to us, our Properties also automatically collect Personal Information and/or Other Information about you that may include information related to your computer, including your browser type, operating system and computer monitor resolution; your Internet Protocol (IP) address (the number automatically assigned to your computer whenever you access the Internet and that can sometimes be used to derive your general geographic area); sites and/or applications you visited before and after visiting our Properties; web pages and advertisements you view; links you click on our Properties; unique identifiers, including mobile device identification numbers, that can identify the physical location of such devices in accordance with applicable law (provided that if we choose to implement such functionality, we will obtain your consent on your first use of the service); information collected through cookies, web beacons, and other technologies; information about your interactions with video content, such as the type of content viewed; information about your interactions with email messages, such as the links clicked on and whether the messages were opened or forwarded; and standard server log information.</p>
+<p><em>Information Obtained from Other Sources.</em> Where permitted by applicable law, we may also obtain Other Information (e.g. demographic information, interests, purchases, etc.) and/or Personal Information about you from other sources, including through interactive applications (such as mobile devices, third-party services, and embedded video players), from co-branded partners, from sites/applications (for example, on our pages on Facebook), and from commercially available sources (such as data aggregators and public databases).</p>
+<p><em>Combining Information.</em> Please note that all of the information we collect about you may be combined, to help us tailor our communications to you and to develop rich online content and services across the Properties.</p>
+<p><em>Wireless Device Information.</em> Unless otherwise provided in a separate registration page, we do not request for marketing purposes, contact information for a mobile phone, text messaging or any wireless device that includes a domain name address (such as &quot;wireless.bellsouth.com&quot;) as part of the contact information. Federal law prohibits the sending of commercial marketing email messages directly to a wireless device that uses a domain name, unless you have first given your affirmative consent. We may inadvertently collect a wireless device number that includes a domain name when you send us an inquiry or register for a contest/sweepstakes or membership club. However, we will not knowingly use that contact information for sending commercial marketing email. We reserve the right to respond to user inquiries or requests sent via a wireless device that uses a domain name, as such messages are not deemed to be commercial marketing email.</p>
+<p><strong>4. Cookies and Similar Technologies</strong> You should be aware that Other Information and data may be automatically collected on the Properties through the use of cookies, web beacons and other similar technologies. While the data collected through the use of such technologies does not contain Personal Information, once you choose to furnish our Properties with Personal Information, this information may be linked to the data stored in a cookie and such information may be used to personalize your experience with our Properties (for example, recognizing you by name when you return the Property), saving your password in password protected areas or enabling you to use shopping carts on our Properties. Web beacons and cookies may also be used to collect, aggregate and analyze anonymous tracking data to help measure and track traffic and general user behavior. We may also use such technologies to help us offer you more relevant information or products and services of interest to you. Cookies also identify you to our servers allowing you the opportunity to avoid reentering your email and password each time you access the Properties.</p>
+<p>Our third party service providers, advertisers and affiliates may use cookies, web beacons and other similar technologies to manage or measure the performance of their information displayed or delivered over our Properties. For more information regarding this use, please see our Links to Third Party Sites and/or Applications&quot; section below.</p>
+<p>We may also use technical methods in our HTML emails that we send to you to determine whether you have opened or forwarded an email and/or clicked on links in those emails, to customize the display of banner advertising and other messages to you, to determine whether you have made an inquiry or purchase in response to a particular email and other similar activities. These technical methods may enable us to collect and use your Personal Information.</p>
+<p><strong>5. Social Networking</strong> You can also engage with our content, such as videos, games, applications, and other offerings, on or through third-party social networking sites, such as Facebook, Twitter and other third-party social media plug-ins and applications. When you engage with our content on or through third party social networking sites, plug-ins, and/or applications, you may allow us to have access to certain information from your social media profile (e.g., name, e-mail address, photo(s), gender, birthday, location, your list of friends, people you follow and/or who follow you, the posts or the &quot;likes&quot; you make) to deliver the content or as part of the operation of the application or plug-in. We may also obtain Other Information (e.g., content viewed, game performance, high scores, and information regarding advertisements within the content you have been shown and may have clicked on) from your interaction with our content.</p>
+<p>When you provide Personal Information and/or Other Information from your social media account, it can help enable us to do things like (1) give you exclusive content, (2) personalize your online experience with us within and outside our Properties, and (3) contact you through the social networking sites or directly by sending you the latest news, special offerings, and rewards. By doing so, you consent to the use of this information in accordance with our Privacy Policy. When you provide Personal Information and/or Other Information to us through an application, on our Properties, or on social networking sites (e.g., in the form of a post or through profile information to be viewed by others), it may be publicly viewed by other members of these sites and/or applications and we cannot prevent further use of the information by third parties.</p>
+<p>Through some social networking sites&#39; privacy settings, you can control what data you share. For more information about how social networking sites handle your Personal Information, please refer to their privacy policies and terms of use.</p>
+<p><strong>6. Our Use of Your Information</strong> We use your Personal Information and Other Information, to provide you with features, services or goods, or information you request, to respond to your questions or comments related to us or the Properties, and to enable you to participate in features such as surveys, polls, contests/sweepstakes, activities, and message boards. We also use your Personal Information and Other Information to notify you about updates, new features, programming and promotions that may be of interest to you. We may use your Personal Information and Other Information collected, to communicate with you when you have won a contest or sweepstakes, or to contact you about your account with us. We use the Personal Information and Other Information that you provide about others to enable us to send them your gifts, cards, or emails you may wish to send from our Properties.</p>
+<p>We may use your Personal Information and Other Information for hiring, operational and business purposes, or to find out how we can improve our company and Properties via surveys or online tracking mechanisms. We may use aggregated Personal Information and Other Information collected directly during the registration process and/or via cookies, web beacons, and other similar technologies to help us evaluate and modify existing services and features, as well as provide demographic and geographic information to advertisers. We may also use your Personal Information and Other Information to develop new services and features that may be of interest to you.</p>
+<p>We may use the Personal Information and Other Information you provide about yourself or others to enforce the legal terms of use for our Properties and for any other purpose for which you provided the information.</p>
+<p>If you choose to submit content for publication, we may publish your screen name and/or other data you have provided.</p>
+<p>Although we hope you find the content we provide to you through our Properties to be useful, you may always opt out of receiving communications from us by changing your privacy preferences in your member profile, or by deleting your profile from our database. Please see the opt-out procedures in &quot;Your Choices Regarding Your Personal Information and Receipt of Communications&quot; section set forth below for more information.</p>
+<p><strong>7. Our Disclosure of Your Information</strong> We may share information, including your Personal Information and Other Information, with our affiliates, service providers and advertisers. We may also disclose your Personal Information in response to a court order or subpoena, in response to a law enforcement agency request; when we have reason to believe that disclosing this information is necessary to identify, contact, or bring legal action against someone who may be causing injury to or interference with (either intentionally or unintentionally) our rights or to anyone that could be harmed by such activities; in situations involving threats to the physical safety of any person; where it is necessary to investigate, prevent or take action regarding illegal activity or suspected fraud; or as otherwise required by law. We may transfer Personal Information and Other Information about you if we are acquired by, sold to or merged with another company.</p>
+<p>Our agents and contractors who have access to your Personal Information and Other Information are required to protect the information in a manner consistent with our Privacy Policy and may not use the information for any other purposes other than to carry out the activity they are performing on our behalf. However, we may disclose your Personal Information and Other Information to third parties who are not covered by this Privacy Policy (e.g., marketers, retailers, non-profit organizations, participatory databases) that want to market products or services to you. To opt out of having your Personal Information sent to third parties for direct marketing purposes, please see the Section below titled, &quot;Your Choices Regarding Your Personal Information and Receipt of Communications&quot;, for more information.</p>
+<p>When you choose to enter a sweepstakes, contest, or other promotion, and in accordance with the terms and conditions of the promotion, your Personal Information may be disclosed to sponsors and third parties who help administer the promotion, including in connection with winner selection and prize fulfillment. Your Personal Information also may be disclosed as required by law, such as on a winners list. Also, by entering a promotion, you are agreeing to the official rules that govern that promotion, including allowing the sponsors to use your name, voice, and likeness in advertising and marketing associated with the promotion in accordance with applicable law.</p>
+<p>Our Properties may offer shopping services, which may be offered by us or by a firm that operates a store under contract with us. If our Properties offer shopping or other commercial services, you will be asked to use a customer order form to request information, products, and services. The order form will ask you to give us contact information (like name or email address), financial information (like account or credit card numbers), and demographic information (like zip code or age). We will use the financial information that you provide to bill you for products and services. By giving us your credit card and related Personal Information, you are authorizing our store to give that information to the merchant and the credit card company in order to confirm and fulfill your order. We will use contact information from the order form to fulfill your orders. We may also use contact data to get in touch with you when necessary. We will not otherwise use or distribute your financial information without your prior approval.</p>
+<p>We and our Properties continue to expand our online presence in order to offer users rich and deep interactive experiences. We may share information we collect about you through our Properties so that we can provide you with information about products and services that might interest you.</p>
+<p>We may share aggregated or anonymized data with third parties. This information cannot be used to individually identify you. Much of the information we collect is in the form of aggregated statistics, such as the traffic generated by visits on various pages within our Properties, and the habits and preferences of our audience. Such aggregated data does not include any information that would identify you personally. We may use such aggregated data and disclose it to third parties as we see fit.</p>
+<p>If you have signed up to receive our emails and prefer not to receive marketing information from our Properties, follow the unsubscribe instructions provided on any such email you receive from our Properties.</p>
+<p>This Privacy Policy addresses only our use of information we collect from you online. It does not apply to information you choose to disclose to other parties whether through chat rooms, forums, personal ads or interactive areas of our Properties that allow you to submit or post your own content or the like. We cannot prevent such information from being used in a manner that may violate this Privacy Policy, the law, or your personal privacy and safety. Accordingly, information you disclose on message boards, in chat rooms and forums, through content you provide or in any other way can be viewed, collected and/or used by others and we are not responsible for information you disclose in this manner.</p>
+<p><strong>8. Links to Third Party Sites and/or Applications</strong> We may sometimes offer content that is sponsored by or co-branded with identified third parties. The Properties may also contain links to the sites and/or applications of third parties not affiliated with us, such as advertisers. If you click on an advertiser&#39;s advertisement, you will link to the advertiser&#39;s site and/or application.</p>
+<p>Once you leave our Properties via such a link or by clicking on an advertisement, you should check the applicable privacy policy of the third parties, advertiser site, or application to determine how they will handle any information they collect from you. You understand, acknowledge and agree that these links are provided solely as a convenience to you and not as an endorsement by us. We are NOT responsible for the privacy practices or the content on any of these other sites or applications, including any sites or applications that may indicate a special relationship or &quot;partnership&quot; with us. If you decide to access any of the third-party sites or applications linked to the Properties, you do so entirely at your own risk.</p>
+<div id="advertising"></div>
+<p><strong>9. Third Party Online Advertising</strong> We may work with one or more advertisers, advertising agencies, advertising networks, and/or audience segment providers to help deliver advertisements or other content on our Properties. These third parties may utilize cookies, web beacons, or similar technologies on your computer, mobile, or other device to serve you advertisements or content tailored to your perceived or stated interests and/or preferences based on information you provided, and/or your browsing behavior, on the Properties and/or other sites and applications you have visited. These third parties may also use such technologies to help determine whether you previously have seen particular advertisements or content and to avoid sending you duplicates. In doing so, these third parties collect information such as your browser type, your operating system, web pages visited, time of visits, content viewed, ads viewed, and other click stream data. You may learn more about interest-based advertising at <a href="http://www.aboutads.info" target="_blank" rel="noopener noreferrer">http://www.aboutads.info</a>.</p>
+<p>In all of the above instances, our Privacy Policy will not apply to any information collected by these third parties. This collection of information is not under our control and such third party information practices may be different than ours.</p>
+<p>Further, these third parties may offer you a way to choose not to have your information used for interest-based advertising purposes (sometimes called online behavioral advertising). To opt-out and/or manage your preferences for interest-based advertising, please visit the Network Advertising Initiative Consumer Opt-Out Page at <a href="http://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">http://www.aboutads.info/choices</a>, the Digital Advertising Alliance Consumer Choice Page at <a href="http://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">http://www.aboutads.info/choices</a>, the European Interactive Digital Advertising Alliance online choice page at <a href="http://www.youronlinechoices.eu" target="_blank" rel="noopener noreferrer">http://www.youronlinechoices.eu</a>, and the Digital Advertising Alliance of Canada online choice page at <a href="http://www.youradchoices.ca/" target="_blank" rel="noopener noreferrer">http://www.youradchoices.ca</a>. We adhere to the Digital Advertising Alliance&#39;s Self-Regulatory Principles for Online Behavioral Advertising.</p>
+<p>Please note that if you choose to opt out of having your information used to deliver advertisements tailored to your interests, you will continue to see advertisements on our Properties, but these advertisements may not be as relevant to you.</p>
+<p><strong>10. Your Choices Regarding Your Personal Information and Receipt of Communications.</strong> We respect your privacy and your ability to choose what information you share with us and what communications you receive from us.</p>
+<p><em>Personal Information.</em> You may elect not to provide us with any Personal Information by not creating an account on the Properties or registering for any Property sponsored promotion, contest or sweepstakes, etc. To the extent that you have created an account and/or registered on the Properties, but wish to remove or modify your Personal Information contained in our database, you may delete or modify your account profile at any time (if applicable), or send an e-mail to <a href="mailto:PrivacyAdministrator@nexstar.tv">PrivacyAdministrator@nexstar.tv</a> with your specific request to disable your account profile or modify/delete your Personal Information.</p>
+<p>If you ask us to disable your account profile or modify/delete your Personal Information, we will satisfy such request within a reasonable period of time. However, we may need to retain some information about you in order to satisfy our legal and security obligations. For example, some of your Personal Information may remain in back-up storage even if you ask us to delete it.</p>
+<p>If you would like to prevent disclosure of your Personal Information for use in direct marketing by a third party, you may opt out by informing Nexstar to discontinue such disclosure, by e-mail to <a href="mailto:PrivacyAdministrator@nexstar.tv">PrivacyAdministrator@nexstar.tv</a> or by mail at the following address:</p>
+<address><strong>Digital Privacy Administrator</strong><br />
+Nexstar Broadcasting, Inc.<br />
+545 E. John Carpenter Freeway, Suite 700<br />
+Irving, TX 75062</address>
+<p><em>Testimonials</em> You may elect not to provide us with any testimonials by not submitting such testimonial. To the extent that you have submitted a testimonial, you may modify or delete your testimonial at any time by sending an e-mail to <a href="mailto:PrivacyAdministrator@nexstar.tv">PrivacyAdministrator@nexstar.tv</a> with your specific request to modify/delete your testimonial.</p>
+<p><em>Discontinuing Receipt of Nexstar Communications.</em> If you receive any communication from us that you prefer not to receive (e.g., e-mails, text/voice messages, or push notifications), you may elect to discontinue receipt of such communications from us.</p>
+<p>To discontinue receipt of future e-mail communications from us, you may modify your contact options in your account profile (if applicable), follow the unsubscribe instructions contained in any email communication, or send an e-mail to PrivacyAdministrator@nexstar.tv requesting that e-mail communications be discontinued. However, even if you unsubscribe from receiving email communications, we still may need to send you communications relating to your use of our Properties, such as service announcements.</p>
+<p>To discontinue receipt of text and/or voice messages, you may do so by following the instructions contained in any such message (e.g., texting &quot;STOP&quot; in response to a text message). In certain instances, you may receive one additional message confirming your request has been received. In addition, you may text &quot;HELP&quot; for help with text messages. If you are still having problems regarding text and/or voice messages, you can send an email to PrivacyAdministrator@nexstar.tv. Neither Nexstar, its agents nor mobile carriers are liable for delayed or undelivered messages.</p>
+<p>To discontinue receipt of push notifications, please adjust the settings on your mobile device or within our application.</p>
+<p><em>Sharing of Personal Information.</em> If you do not want your Personal Information shared with third parties in the manner discussed in &quot;Our Disclosure of Your Information&quot; section above, please notify Nexstar by e-mail to <a href="mailto:PrivacyAdministrator@nexstar.tv">PrivacyAdministrator@nexstar.tv</a> or at the following address:</p>
+<address><strong>Digital Privacy Administrator</strong><br />
+Nexstar Broadcasting, Inc.<br />
+545 E. John Carpenter Freeway, Suite 700<br />
+Irving, TX 75062</address>
+<p><em>Do Not Track</em> We support the Do Not Track browser setting. When you have Do Not Track enabled in your browser, we will not collect browser-related information about you. For more information regarding Do Not Track, including how to turn on Do Not Track, visit www.donottrack.us. We encourage users who are interested in limiting the information we collect to search online for tools and services (e.g., NAI&#39;s consumer opt-out gateway or the Google Analytics Opt-out Browser Add-on) to prevent or opt-out of collection.</p>
+<p><em>Cookies</em> If you do not want information collected through the use of &quot;cookies&quot; there is a simple procedure in most browsers that allows you to deny or accept cookies. You may set your browser to accept all or certain cookies, block all or certain cookies, or require your consent before accepting a cookie. Blocking our cookies will affect your online experience and may prevent you from experiencing certain features of our Properties.</p>
+<p><strong>11. Reviewing or Correcting Your Personal Information</strong> If you&#39;ve created a password protected account within our Properties, you can access that account to review and update the Personal Information you provided. You may also update or amend your information by sending an email to <a href="mailto:PrivacyAdministrator@nexstar.tv">PrivacyAdministrator@nexstar.tv</a>. We will provide you with a list of your Personal Information within thirty (30) calendar days from receipt of your request. There may be certain instances in which we may not be able to provide the Personal Information, such as when access would violate the privacy of another individual or when access is prohibited by law.</p>
+<p><strong>12. Your California Privacy Rights</strong> California law allows California residents, once a year and free of charge, to request information about certain types of Personal Information (if any) that a business has disclosed to third parties for their direct marketing purposes in the prior calendar year. However, under the law, we are not required to provide this information as long as we: (1) notify you that you have the right to prevent disclosure of Personal Information, and (2) provide you with a cost-free means to exercise that right. If you are a California resident and would like to prevent disclosure of your Personal Information for use in direct marketing by a third party, you may opt out by informing Nexstar to discontinue such disclosure. If you desire to opt out, please notify Nexstar by e-mail to PrivacyAdministrator@nexstar.tv or by mail at the following address:</p>
+<address><strong>Digital Privacy Administrator</strong><br />
+Nexstar Broadcasting, Inc.<br />
+545 E. John Carpenter Freeway, Suite 700<br />
+Irving, TX 75062</address>
+<p>Additionally, if you are a California resident under the age of 18, and a registered user of any Property where this Privacy Policy is posted, you may request and potentially obtain removal of content or Personal Information you have publicly posted. To make such a request, please send an e-mail to caleraser@nexstar.tv. All requests must provide: (a) a detailed description of the specific content or Personal Information you want removed; (b) information reasonably sufficient to permit us to locate the content or Personal Information, including but not limited to the name and URL (if applicable) of the Property where such information is located; and (c) your registered username and contact information reasonably sufficient to contact you if we have questions. We shall not accept requests via postal mail, telephone, or facsimile. We are not responsible for requests that are not properly sent, and may not be able to respond or take appropriate action if you do not provide complete information. Please also note that requests for removal do not ensure removal of the content or Personal Information you have posted, and there may be circumstances in which the law does not require or allow for removal even if requested.</p>
+<p><strong>13. Security of Information</strong> We take reasonable security precautions to secure the Personal Information that you choose to provide against the loss, misuse, alteration or unauthorized access of such information. Unfortunately, no transmission of data over the Internet is guaranteed to be completely secure. It may be possible for third parties not under our control to intercept or access transmissions or private communications unlawfully. While we strive to protect your Personal Information, we cannot ensure or warrant the security of any Personal Information that you transmit to us. Any such transmission is done at your own risk.</p>
+<p>We do not and will not ever request your login information, password or credit card information in an unsecured or unsolicited email or telephone communication. This practice is commonly known as &quot;phishing.&quot; For more information about &quot;phishing&quot; and protecting your Personal Information from identity theft, you may want to visit the Federal Trade Commission at <a href="http://www.ftc.gov" target="_blank" rel="noopener noreferrer">www.ftc.gov</a>.</p>
+<p><strong>14. Our Commitment to Children&#39;s Privacy</strong> Our Properties are intended for a general audience and we do not knowingly collect or store Personal Information about children under the age of 13. We may ask for a birth date to ensure that we are not collecting Personal Information from children under 13 or to identify when additional steps may need to be taken in connection with Personal Information collected from children under 18. In those instances where we have actual knowledge that we are collecting Personal Information from children or the Properties offer a service directed toward children, we will comply with applicable laws.</p>
+<p><strong>15. Applicable Law</strong> We control and operate our Properties from the United States. The Properties are not intended to subject us to the laws or jurisdiction of any state, country or territory other than that of the United States. Please note that we do not represent or warrant that the Properties are appropriate for use in any particular jurisdiction. Those who choose to access the Properties do so at their own initiative and are responsible for complying with all applicable laws, rules and regulations. Further by using and participating in our Properties or providing us with your information, you consent to the collection, transfer, storage, access and processing of your information in and/or outside of the jurisdiction in which you reside.</p>
+<p><strong>16. Updates</strong> This Privacy Policy is effective as of December 1, 2016. Because Internet technologies are rapidly changing, we reserve the right to make changes to this Privacy Policy at any time, in our sole discretion. All changes will be promptly posted on this page, with an updated &quot;effective date.&quot; Your continued viewing, browsing, use or access of the Properties following our posting of an updated Privacy Policy will constitute your binding acceptance of those changes.</p>
+<p><strong>17. Contact Information</strong> If you have any questions or comments about our Privacy Policy please send an e-mail to <a href="mailto:PrivacyAdministrator@nexstar.tv">PrivacyAdministrator@nexstar.tv</a>.</p>
+</div>
+
+		
+		
+			</div><!-- .rich-text -->
+
+	</article><!-- #post-## -->
+
+			</main>
+		</div>
+
+			</div>
+
+			<aside class="ad-unit ad-unit--leaderboard">
+			<div class="ad-unit__content">
+				  <div   id="acm-ad-tag-leaderboard3-leaderboard3"   data-slot='{"pos":"leaderboard3","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[320,50],"sizes":[[[1280,0],[[728,90]]],[[1024,0],[[728,90]]],[[768,0],[[728,90]]],[[641,0],[[320,50]]],[[0,0],[[320,50]]]],"amp_multi_size":"320x50","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"btf"}'   data-unit='{"tag":"leaderboard3","tag_id":"leaderboard3","dfp_id":"5678","tag_name":"nx.wmbb","ad_disabled":"0"}'   data-targeting='{"pos":"leaderboard3","fold":"btf","category":"about_us","kw":"privacy-policy"}'   data-path='/5678/nx.wmbb/about_us'  ></div>  <script>  (function () {   try {    var event = new CustomEvent(     "nsDfpSlotRendered",     {      detail: {       id: 'acm-ad-tag-leaderboard3-leaderboard3'      }     }    );     window.dispatchEvent(event);   } catch (err) {}  })();  </script>  			</div>
+		</aside>
+	
+	
+</div><!-- #content -->
+		</div>
+
+		<footer id="footer" class="site-footer">
+	<div class="site-footer__site-branding">
+		<div class="site-footer__logo">
+			<a href="https://www.mypanhandle.com/" rel="home">
+				<img src="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/06/cropped-My-Panhandle-Vector-Logo-DO-NOT-DELETE-2.png" alt="WMBB" />
+			</a>
+		</div>
+	</div>
+
+		<div class="site-footer__social">
+		<h2>Follow Us</h2>
+		
+<aside class="social-links social-links--default">
+	<ul class="social-links__list">
+					<li class="social-links__list-item social-links__list-item--facebook">
+				<a href="https://www.facebook.com/WMBBTV">
+					
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+	<title>Facebook</title>
+	<style type="text/css">
+		.facebook-st0{fill:#4267B2;}
+		.facebook-st1{fill:#FFFFFF;}
+	</style>
+	<path class="facebook-st0" d="M54.8,0H3.2C1.43,0,0,1.43,0,3.2v51.6C0,56.57,1.43,58,3.2,58h0H31V35.57h-7.55v-8.78H31v-6.46
+		c0-7.49,4.58-11.57,11.26-11.57c2.25,0,4.5,0.11,6.74,0.34v7.83h-4.6c-3.64,0-4.35,1.72-4.35,4.26v5.59h8.7l-1.13,8.78H40V58h14.8
+		c1.77,0,3.2-1.43,3.2-3.2l0,0V3.2C58,1.43,56.57,0,54.8,0L54.8,0z"/>
+	<path id="f" class="facebook-st1" d="M40,58V35.57h7.57l1.13-8.78H40V21.2c0-2.54,0.71-4.26,4.35-4.26H49V9.1c-2.24-0.23-4.5-0.35-6.75-0.34
+	C35.56,8.76,31,12.84,31,20.33v6.46h-7.55v8.78H31V58H40z"/>
+</svg>
+				</a>
+			</li>
+							<li class="social-links__list-item social-links__list-item--twitter">
+				<a href="https://www.twitter.com/wmbbtv">
+					
+<svg version="1.1" id="Logo__x2014__FIXED" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 259.77 218.57" style="enable-background:new 0 0 33 33;" xml:space="preserve">
+	<title>Twitter</title>
+	<style type="text/css">
+		.twitter-st0{fill:none;}
+		.twitter-st1{fill:#1DA1F2;}
+	</style>
+	<g>
+		<rect x="-69.49" y="-90.72" class="twitter-st0" width="400" height="400"/>
+		<path class="twitter-st1" d="M84.13,210.87c94.34,0,145.94-78.16,145.94-145.94c0-2.22-0.05-4.43-0.15-6.63
+			c10.01-7.24,18.72-16.27,25.59-26.56c-9.19,4.08-19.08,6.83-29.46,8.07c10.59-6.35,18.72-16.4,22.55-28.37
+			c-9.91,5.88-20.89,10.15-32.57,12.45c-9.36-9.97-22.69-16.21-37.44-16.21c-28.33,0-51.3,22.97-51.3,51.29
+			c0,4.03,0.45,7.94,1.33,11.69C86,68.53,48.2,48.12,22.91,17.09c-4.41,7.58-6.95,16.39-6.95,25.78c0,17.8,9.06,33.5,22.82,42.69
+			c-8.41-0.26-16.32-2.57-23.23-6.42c-0.01,0.21-0.01,0.43-0.01,0.65c0,24.84,17.68,45.58,41.15,50.28c-4.31,1.17-8.84,1.8-13.52,1.8
+			c-3.3,0-6.52-0.33-9.64-0.93c6.53,20.38,25.46,35.21,47.92,35.62c-17.56,13.76-39.67,21.96-63.7,21.96
+			c-4.14,0-8.22-0.24-12.24-0.71C28.21,202.38,55.16,210.87,84.13,210.87"/>
+	</g>
+</svg>
+				</a>
+			</li>
+							<li class="social-links__list-item social-links__list-item--instagram">
+				<a href="https://www.instagram.com/WMBBnews">
+					<img src="https://www.mypanhandle.com/wp-content/themes/nexstar/client/src/images/footer/social/instagram.png" alt="Instagram" />
+				</a>
+			</li>
+									<li class="social-links__list-item social-links__list-item--youtube">
+				<a href="https://www.youtube.com/channel/UCfnsWGN5thNUp_QKObM58bA/featured">
+					
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 192 192" style="enable-background:new 0 0 192 192;" xml:space="preserve">
+	<title>YouTube</title>
+	<style type="text/css">
+		.youtube-st0{fill:#FF0000;}
+		.youtube-st1{fill:#FFFFFF;}
+	</style>
+	<g id="XMLID_184_">
+		<path id="XMLID_182_" class="youtube-st0" d="M180.32,53.36c-2.02-7.62-7.99-13.62-15.56-15.66C151.04,34,96,34,96,34s-55.04,0-68.76,3.7
+			c-7.57,2.04-13.54,8.04-15.56,15.66C8,67.18,8,96,8,96s0,28.82,3.68,42.64c2.02,7.62,7.99,13.62,15.56,15.66
+			C40.96,158,96,158,96,158s55.04,0,68.76-3.7c7.57-2.04,13.54-8.04,15.56-15.66C184,124.82,184,96,184,96S184,67.18,180.32,53.36z"
+			/>
+		<polygon id="XMLID_1355_" class="youtube-st1" points="78,122.17 124,96 78,69.83 	"/>
+	</g>
+</svg>
+				</a>
+			</li>
+							<li class="social-links__list-item social-links__list-item--rss">
+				<a href="https://www.mypanhandle.com/feed">
+					
+<svg xmlns="http://www.w3.org/2000/svg" width="25.66" height="26.875" viewBox="0 0 25.66 26.875">
+	<title>RSS Feed</title>
+	<defs>
+		<style>
+			.rss-cls-1 {
+				fill: #1da64a;
+				fill-rule: evenodd;
+			}
+		</style>
+	</defs>
+	<path class="rss-cls-1" d="M1069.12,199.9a3.3,3.3,0,0,0-2.48,1.07,3.817,3.817,0,0,0,0,5.195,3.409,3.409,0,0,0,4.96,0,3.817,3.817,0,0,0,0-5.195A3.3,3.3,0,0,0,1069.12,199.9Zm8.06-4.775a16.173,16.173,0,0,0-4.73-3.467,15.718,15.718,0,0,0-5.57-1.538h-0.1a1.042,1.042,0,0,0-.78.325,1.164,1.164,0,0,0-.38.9v2.579a1.211,1.211,0,0,0,.3.822,1.086,1.086,0,0,0,.75.382,11.111,11.111,0,0,1,7.14,3.524,12.117,12.117,0,0,1,3.37,7.478,1.153,1.153,0,0,0,.36.792,1.089,1.089,0,0,0,.78.316h2.47a1.044,1.044,0,0,0,.85-0.4,1.173,1.173,0,0,0,.31-0.917,17.83,17.83,0,0,0-1.46-5.845A17.228,17.228,0,0,0,1077.18,195.12Zm11.92,1.251a26.894,26.894,0,0,0-5.36-8.128,25.591,25.591,0,0,0-7.76-5.616,24.376,24.376,0,0,0-9.14-2.292h-0.06a1.074,1.074,0,0,0-.8.344,1.162,1.162,0,0,0-.36.879v2.731a1.17,1.17,0,0,0,.32.831,1.062,1.062,0,0,0,.77.373,19.909,19.909,0,0,1,7.45,1.948,20.954,20.954,0,0,1,6.12,4.422,21.822,21.822,0,0,1,4.22,6.418,22.1,22.1,0,0,1,1.85,7.8,1.174,1.174,0,0,0,.35.812,1.126,1.126,0,0,0,.81.334h2.61a1.06,1.06,0,0,0,.84-0.382,1.162,1.162,0,0,0,.33-0.9A27.61,27.61,0,0,0,1089.1,196.371Z" transform="translate(-1065.62 -180.344)"/>
+</svg>
+				</a>
+			</li>
+							<li class="social-links__list-item social-links__list-item--email">
+				<a href="mailto:news@wmbb.com">
+					
+<svg xmlns="http://www.w3.org/2000/svg" width="29.35" height="22" viewBox="0 0 29.35 22">
+	<title>Email</title>
+	<defs>
+		<style>
+			.email-cls-1 {
+				fill: #eb6823;
+				fill-rule: evenodd;
+			}
+		</style>
+	</defs>
+	<path class="email-cls-1" d="M1168.41,189.824a0.347,0.347,0,0,1,.56.269v11.719a2.75,2.75,0,0,1-2.75,2.751h-23.84a2.75,2.75,0,0,1-2.75-2.751V190.1a0.338,0.338,0,0,1,.55-0.269c1.29,1,2.99,2.263,8.83,6.51,1.21,0.882,3.25,2.739,5.29,2.727,2.04,0.017,4.12-1.879,5.29-2.727C1165.43,192.093,1167.13,190.821,1168.41,189.824Zm-14.11,7.4c1.33,0.023,3.24-1.674,4.2-2.373,7.61-5.518,8.19-6,9.94-7.375a1.381,1.381,0,0,0,.53-1.083v-1.089a2.75,2.75,0,0,0-2.75-2.75h-23.84a2.75,2.75,0,0,0-2.75,2.75V186.4a1.359,1.359,0,0,0,.53,1.083c1.75,1.37,2.33,1.857,9.93,7.375,0.96,0.7,2.88,2.4,4.21,2.373h0Z" transform="translate(-1139.62 -182.562)"/>
+</svg>
+				</a>
+			</li>
+			</ul>
+</aside>
+	</div>
+	
+		<div class="site-footer__apps">
+		<h2>News App</h2>
+		<div class="app-links">
+							<div class="app-link">
+					<a href="https://apps.apple.com/by/app/wmbb-news-13/id439776650">
+						<img src="https://www.mypanhandle.com/wp-content/themes/nexstar/client/src/images/footer/app-stores/appstore_footer.png" alt="Get the iOS app" />
+					</a>
+				</div>
+										<div class="app-link">
+					<a href="https://play.google.com/store/apps/details?id=com.wmbb.android&#038;hl=en_US">
+						<img src="https://www.mypanhandle.com/wp-content/themes/nexstar/client/src/images/footer/app-stores/googleplay_footer.png" alt="Get the Android app from Google Play" />
+					</a>
+				</div>
+					</div>
+	</div>
+	<div class="site-footer__weather-apps">
+		<h2>Weather App</h2>
+		<div class="app-links">
+							<div class="app-link">
+					<a href="https://itunes.apple.com/us/app/wmbb-weather/id918668410?mt=8">
+						<img src="https://www.mypanhandle.com/wp-content/themes/nexstar/client/src/images/footer/app-stores/appstore_footer.png" alt="Get the iOS Weather app" />
+					</a>
+				</div>
+										<div class="app-link">
+					<a href="https://play.google.com/store/apps/details?id=com.newssynergy.wmbbweather&#038;hl=en_US">
+						<img src="https://www.mypanhandle.com/wp-content/themes/nexstar/client/src/images/footer/app-stores/googleplay_footer.png" alt="Get the Android Weather app from Google Play" />
+					</a>
+				</div>
+					</div>
+	</div>
+	
+	
+<div class="site-footer__primary-nav">
+	</div>
+
+<div class="site-footer__secondary-nav">
+	<div class="menu-footer-secondary-container"><ul id="menu-footer-secondary" class="menu"><li id="menu-item-2082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2082"><a href="https://www.mypanhandle.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-2083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2083"><a href="https://www.mypanhandle.com/about-us/">About Us</a></li>
+<li id="menu-item-2084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2084"><a href="https://www.mypanhandle.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-2085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2085"><a href="https://www.mypanhandle.com/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-2086" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2086"><a href="https://www.mypanhandle.com/wp-content/uploads/sites/88/2019/10/WMBB-FCC-EEO-2019-Final.pdf">EEO Report</a></li>
+<li id="menu-item-2087" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2087"><a href="https://publicfiles.fcc.gov/tv-profile/wmbb">FCC Public File</a></li>
+<li id="menu-item-2088" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2088"><a href="https://media.mypanhandle.com/nxsglobal/global/theme/NexstarCCCertification.pdf">CC Certification</a></li>
+</ul></div></div>
+
+	<div class="site-footer__network-branding">
+								<a href="https://www.nexstar.tv" title="Go to Nexstar">
+				<img src="https://www.mypanhandle.com/wp-content/themes/nexstar/client/src/images/footer/nexstar-logo-white-nmg.png" alt="LAKANA">
+			</a>
+			</div>
+	<div class="site-footer__copyright">
+		&copy; 1998 - 2020 Nexstar Broadcasting, Inc. | All Rights Reserved.	</div>
+</footer>
+	</div><!-- #page -->
+
+	
+<script type='text/javascript'>
+(function() {
+	var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+
+	_sf_async_config.sections = "About Us";
+	_sf_async_config.authors = "";
+	function loadChartbeat() {
+			var e = document.createElement('script');
+			var n = document.getElementsByTagName('script')[0];
+			e.type = 'text/javascript';
+			e.async = true;
+			e.src = '//static.chartbeat.com/js/chartbeat.js';
+			n.parentNode.insertBefore(e, n);
+	}
+	loadChartbeat();
+})();
+</script>
+
+	
+	<aside class="ad-unit ad-unit--adhesion">
+		<div class="ad-unit__content pre-render">
+			<div class="close-btn-container">
+				<div class="close-btn" aria-label="Close Viewport Adhesion Ad">&times; Close Ad</div>
+			</div>
+			  <div   id="acm-ad-tag-adhesion-adhesion"   data-slot='{"pos":"adhesion","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[320,50],"sizes":[[[1280,0],[[728,90]]],[[1024,0],[[728,90]]],[[768,0],[[728,90]]],[[480,0],[[320,50]]],[[0,0],[[320,50]]]],"amp_multi_size":"320x50","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"}'   data-unit='{"tag":"adhesion","tag_id":"adhesion","dfp_id":"5678","tag_name":"nx.wmbb","ad_disabled":"0"}'   data-targeting='{"pos":"adhesion","fold":"atf","category":"about_us","kw":"privacy-policy"}'   data-path='/5678/nx.wmbb/about_us'  ></div>  <script>  (function () {   try {    var event = new CustomEvent(     "nsDfpSlotRendered",     {      detail: {       id: 'acm-ad-tag-adhesion-adhesion'      }     }    );     window.dispatchEvent(event);   } catch (err) {}  })();  </script>  		</div>
+	</aside>
+
+	<div id="aria-dialog-overlay"></div>
+	<script>
+var wpApiSettings = {"root":"https:\/\/www.mypanhandle.com\/wp-json\/","nonce":"5eb8695198","versionString":"wp\/v2\/"};
+</script>
+<script>
+var lakana = {"a9":{"aps":{"enabled":"1","ad_server":"googletag","pub_id":"3410"}},"addthis_script_url":"https:\/\/s7.addthis.com\/js\/300\/addthis_widget.js#pubid=ra-5b7190c0239b8829","auto_refresh":{"landing_duration":"10","post_duration":"20","disable_homepage":"0"},"blueconic_enabled":"1","blueconic_script_url":"https:\/\/cdn.blueconic.net\/nexstar.js","chartbeat":{"enabled":"1","uid":"23192"},"confiant":{"script_url":"https:\/\/confiant-integrations.global.ssl.fastly.net\/Y2Nn8JmiAY8HpnF4sl5n7J71jaI\/gpt_and_prebid\/config.js","enabled":"1"},"copyright_text":"Copyright 2020 Nexstar Broadcasting, Inc. All rights reserved. This material may not be published, broadcast, rewritten, or redistributed.","devcon":{"status":"1","data_key":"f0d16886-0300-4694-9b7b-37da481f4449","data_e":"5"},"gtm":{"id":"GTM-KJJZHXD"},"id":"1","index_exchange":{"script_url":"https:\/\/js-sec.indexww.com\/ht\/p\/184979-164251977320883.js"},"nativo_enabled":"1","revcontent":{"status":"1"},"send_to_news":{"enabled":"1"},"weather":{"wsi_cid":"878507589"}};
+var nexstar = {"alert_banners":{"l10n":{"nexstar":{"label_sep":"\/"}},"summary_messages":{"Breaking News":[],"Live Now":[],"Weather Alerts":[],"Closings":[]},"messages":{"Breaking News":[],"Live Now":[],"Weather Alerts":[],"Closings":[]},"settings":{"Breaking News":{"id":16,"slug":"breaking-news","term_name":"Breaking News","label":"Breaking News","summary_only":false,"url":"#\/","view_options":"number_of_areas"},"Live Now":{"id":17,"slug":"live-now","term_name":"Live Now","label":"Live Now","summary_only":false,"url":"#\/","view_options":"number_of_areas"},"Weather Alerts":{"id":18,"slug":"weather-alerts","term_name":"Weather Alerts","label":"Weather Alerts","summary_only":true,"url":"https:\/\/www.mypanhandle.com\/weather\/weather-alerts\/","view_options":"number_of_areas"},"Closings":{"id":9769,"slug":"closings","term_name":"Closings","label":"Closings","summary_only":false,"url":"#\/","view_options":"number_of_areas"}},"modified_time":{"Breaking News":[],"Live Now":[],"Weather Alerts":[],"Closings":"Jan 17, 2020 \/ 11:09 PM CST"}},"app_links":{"google_play_link":"https:\/\/play.google.com\/store\/apps\/details?id=com.wmbb.android&hl=en_US","google_play_weather_link":"https:\/\/play.google.com\/store\/apps\/details?id=com.newssynergy.wmbbweather&hl=en_US","ios_app_store_link":"https:\/\/apps.apple.com\/by\/app\/wmbb-news-13\/id439776650","ios_app_store_weather_link":"https:\/\/itunes.apple.com\/us\/app\/wmbb-weather\/id918668410?mt=8"},"article_bins":{"rest_endpoint":"https:\/\/www.mypanhandle.com\/wp-json\/nexstar\/v1\/article-bin"},"auto_refresh":{"landing_duration":"","post_duration":"","disable_homepage":"0"},"blueconic_enabled":"1","call_letters":"WMBB","chartbeat":{"domain":"mypanhandle.com"},"continue_reading_cta":{"l10n":{"cta_text":"Continue Reading"},"breakpoint":768,"min_content_height":600},"copyright_start_year":"1998","devcon":{"status":"0"},"dfp":{"mobile_desktop_breakpoint":1024,"register_event":"nsDfpSlotRendered","slots":{"adhesion":{"pos":"adhesion","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[320,50],"sizes":[[[1280,0],[[728,90]]],[[1024,0],[[728,90]]],[[768,0],[[728,90]]],[[480,0],[[320,50]]],[[0,0],[[320,50]]]],"amp_multi_size":"320x50","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"},"billboard1":{"pos":"billboard1","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[320,50],"sizes":[[[1280,0],[[728,90],[970,250],[970,90],[970,30]]],[[1024,0],[[728,90],[970,250],[970,90],[970,30]]],[[768,0],[[728,90]]],[[641,0],[[320,50]]],[[0,0],[[320,50]]]],"amp_multi_size":"320x50","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"},"header-microbar":{"pos":"header-microbar","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[88,31],"sizes":[[[900,0],[[88,31]]],[[0,0],[]]],"amp_multi_size":"88x31","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"},"hover":{"pos":"hover","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[1,1],"sizes":[[[900,0],[[1,1]]],[[0,0],[]]],"amp_multi_size":"1x1","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"},"leader_mr1":{"pos":"leader_mr1","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[300,250],"sizes":[[[1152,0],[[728,90]]],[[0,0],[[300,250]]]],"amp_multi_size":"300x250","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"btf"},"leaderboard1":{"pos":"leaderboard1","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[320,50],"sizes":[[[1280,0],[[728,90]]],[[1024,0],[[728,90]]],[[768,0],[[728,90]]],[[641,0],[[320,50]]],[[0,0],[[320,50]]]],"amp_multi_size":"320x50","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"mid"},"leaderboard2":{"pos":"leaderboard2","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[320,50],"sizes":[[[1280,0],[[728,90]]],[[1024,0],[[728,90]]],[[768,0],[[728,90]]],[[641,0],[[320,50]]],[[0,0],[[320,50]]]],"amp_multi_size":"320x50","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"mid"},"leaderboard3":{"pos":"leaderboard3","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[320,50],"sizes":[[[1280,0],[[728,90]]],[[1024,0],[[728,90]]],[[768,0],[[728,90]]],[[641,0],[[320,50]]],[[0,0],[[320,50]]]],"amp_multi_size":"320x50","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"btf"},"microbar":{"pos":"microbar","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[88,31],"sizes":[[[0,0],[[88,31]]]],"amp_multi_size":"88x31","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"mid"},"mr1":{"pos":"mr1","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[300,250],"sizes":[[[1280,0],[[300,250]]],[[1024,0],[[300,250]]],[[768,0],[[300,250]]],[[641,0],[[300,250]]],[[0,0],[[300,250]]]],"amp_multi_size":"300x250","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"mid"},"mr1_mobile":{"pos":"mr1_mobile","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[300,250],"sizes":[[[900,0],[]],[[0,0],[[300,250]]]],"amp_multi_size":"300x250","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"},"mr2":{"pos":"mr2","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[300,250],"sizes":[[[1280,0],[[300,250]]],[[1024,0],[[300,250]]],[[768,0],[[300,250]]],[[641,0],[[300,250]]],[[0,0],[[300,250]]]],"amp_multi_size":"300x250","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"mid"},"mr3":{"pos":"mr3","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[300,250],"sizes":[[[1280,0],[[300,250]]],[[1024,0],[[300,250]]],[[768,0],[[300,250]]],[[641,0],[[300,250]]],[[0,0],[[300,250]]]],"amp_multi_size":"300x250","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"mid"},"mr4":{"pos":"mr4","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[300,250],"sizes":[[[1280,0],[[300,250]]],[[1024,0],[[300,250]]],[[768,0],[[300,250]]],[[641,0],[[300,250]]],[[0,0],[[300,250]]]],"amp_multi_size":"300x250","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"mid"},"mr_combo1":{"pos":"mr_combo1","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[300,250],"sizes":[[[1280,0],[[300,600],[300,250]]],[[1024,0],[[300,600],[300,250]]],[[768,0],[[300,250]]],[[641,0],[[300,250]]],[[0,0],[[300,250]]]],"amp_multi_size":"300x250","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"},"mr_combo2":{"pos":"mr_combo2","is_companion":true,"is_oop":false,"refresh_on_resize":true,"size":[300,250],"sizes":[[[1280,0],[[300,600],[300,250]]],[[1024,0],[[300,600],[300,250]]],[[768,0],[[300,250]]],[[641,0],[[300,250]]],[[0,0],[[300,250]]]],"amp_multi_size":"300x250","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"btf"},"oop":{"pos":"oop","is_companion":true,"is_oop":true,"refresh_on_resize":true,"size":[1,1],"sizes":[[[0,0],[[1,1]]]],"amp_multi_size":"1x1","lazyload":false,"wx_targeting":[],"module_refreshable":false,"fold":"atf"}}},"extended_scroll":{"l10n":{"more_in_category_read_more":"Read the Full Article","more_in_category_title":"More %s Stories","more_stories_read_more":"Read more stories","more_stories_title":"More Stories"},"max_blocks_per_snippet":2,"more_stories_read_more_link":"\/news\/","num_more_in_category_posts":3,"num_more_stories_posts":4},"footer_logo":"71957","ga":{"id":"UA-37144901-46"},"gtm":{"id":"GTM-KXKNHL"},"home_url":"https:\/\/www.mypanhandle.com\/","homepage":{"l10n":{"hero_title":"Headlines","hero_read_more_title":"More Top Stories","headline_list_read_more_title":"More %s News","top_stories_title":"Top Stories","top_stories_read_more_title":"More Top Stories"},"default_hero_read_more_link":"https:\/\/www.mypanhandle.com\/news\/","num_headline_lists":6,"num_headline_list_articles":5,"num_hero_articles":5,"num_top_stories_articles":10,"top_stories_read_more_link":"https:\/\/www.mypanhandle.com\/news\/"},"id":"88","lead_media":{"allowed_block_types":["lakana\/anvplayer"],"video":{"autoplay":"1"}},"logo":"71957","name":"WMBB - mypanhandle.com","nativo_enabled":"1","onetrust":{"consent_script_src":"","templates_script_src":"https:\/\/cdn.cookielaw.org\/scripttemplates\/otSDKStub.js"},"primary_color":"#3F5EDB","related_posts":{"l10n":{"default_title":"Related Content"}},"revcontent":{"status":"1","web_id":"114888","amp_id":"114657","amp_wrapper":"mypanhandle_114657","app_code":"<div id=\"rc-widget-46a01d\" data-rc-widget data-widget-host=\"habitat\" data-endpoint=\"\/\/trends.revcontent.com\" data-widget-id=\"116105\"><\/div>\r\n<script type=\"text\/javascript\" src=\"\/\/assets.revcontent.com\/master\/delivery.js\" defer=\"defer\"><\/script>"},"section_fronts":{"l10n":{"headlines":"Headlines","more_headlines_title":"More %s Headlines","top_stories_title":"Top Stories"},"hero_read_more_link":"https:\/\/www.mypanhandle.com\/news\/","num_headline_lists":6,"num_headline_list_articles":5,"num_hero_articles":5,"num_top_stories_articles":10,"top_stories_read_more_link":"https:\/\/www.mypanhandle.com\/news\/"},"send_to_news":{"url":"http:\/\/embed.sendtonews.com\/oembed\/?fk=eVi47GiI&cid=9384&sound=off&format=json&offsetx=0&offsety=140&floatwidth=400&floatposition=top-right&float=on","enabled":"1"},"sidebar":{"l10n":{"dont_miss_title":"Don't Miss"},"num_dont_miss_articles":7},"social_links":{"email":"news@wmbb.com","facebook":"https:\/\/www.facebook.com\/WMBBTV","instagram":"https:\/\/www.instagram.com\/WMBBnews","pinterest":"","rss":"https:\/\/www.mypanhandle.com\/feed","twitter":"https:\/\/www.twitter.com\/wmbbtv","youtube":"https:\/\/www.youtube.com\/channel\/UCfnsWGN5thNUp_QKObM58bA\/featured"},"supernav":{"l10n":{"close_navigation":"Close Navigation","open_navigation":"Open Navigation","looking_for?":"What are you looking for?","primary_menu":"Primary Menu","toggle_menu":"Toggle Menu","top_stories":"Top Stories"},"max_depth":2,"nav_menu_location":"supernav","num_children_per_column":7,"num_columns":4,"num_columns_without_thumbnails":1,"num_posts_in_column_with_thumbnails":1,"num_posts_in_column_without_thumbnails":4,"post_type_feature":"supernav"},"template_variables":{"l10n":{"article_date":"M j, Y \/ h:i A T","article_time_format":"h:i A T","article_list_by":"by %1$s %2$s %3$s","article_list_category":"%1$s \/ %2$s","author_by":"by: %s","author_sep":", ","infinite_button_text":"Load More","infinite_error_text":"Error loading articles","infinite_loading":"Loading...","more":"More","more_term":"More %s","next_page":"Next page","now_playing":"Now Playing","previous_page":"Previous page","posted":"Posted: %s","read_more_arrow":"Read More &raquo;","relative_date_format":"%s ago","search":"Search","sep":"\/","share_this_story":"Share this story","site_search":"Site Search...","snippet_date":"M j, Y","sponsored_by":"Sponsored By","top_stories_from":"Top Stories From %s","updated":"Updated: %s","up_next":"Up Next","video":"Video","exit_sticky_player":"Exit sticky player","form_processing":"Processing...","form_message_sent":"Message Sent!","form_error":"Error"},"num_404_top_stories_articles":5},"weather":{"city_name":"","latitude":"","longitude":"","zipcode":"32401"},"weather_alerts":{"l10n":{"loading_alerts":"Checking for current alerts","no_current_alerts":"There are no active weather alerts. Check back later."}}};
+var weatherAlerts = {"alert_types":["Air Quality Alert","Air Stagnation Advisory","Arroyo And Small Stream Flood Advisory","Ashfall Advisory","Ashfall Warning","Avalanche Advisory","Avalanche Warning","Avalanche Watch","Beach Hazards Statement","Blizzard Warning","Blizzard Watch","Blowing Dust Advisory","Blowing Dust Warning","Brisk Wind Advisory","Child Abduction Emergency","Civil Danger Warning","Civil Emergency Message","Coastal Flood Advisory","Coastal Flood Statement","Coastal Flood Warning","Coastal Flood Watch","Dense Fog Advisory","Dense Smoke Advisory","Dust Advisory","Dust Storm Warning","Earthquake Warning","Evacuation - Immediate","Excessive Heat Warning","Excessive Heat Watch","Extreme Cold Warning","Extreme Cold Watch","Extreme Fire Danger","Extreme Wind Warning","Fire Warning","Fire Weather Watch","Flash Flood Statement","Flash Flood Warning","Flash Flood Watch","Flood Advisory","Flood Statement","Flood Warning","Flood Watch","Freeze Warning","Freeze Watch","Freezing Fog Advisory","Freezing Rain Advisory","Freezing Spray Advisory","Frost Advisory","Gale Warning","Gale Watch","Hard Freeze Warning","Hard Freeze Watch","Hazardous Materials Warning","Hazardous Seas Warning","Hazardous Seas Watch","Hazardous Weather Outlook","Heat Advisory","Heavy Freezing Spray Warning","Heavy Freezing Spray Watch","High Surf Advisory","High Surf Warning","High Wind Warning","High Wind Watch","Hurricane Force Wind Warning","Hurricane Force Wind Watch","Hurricane Local Statement","Hurricane Warning","Hurricane Watch","Hydrologic Advisory","Hydrologic Outlook","Ice Storm Warning","Lake Effect Snow Advisory","Lake Effect Snow Warning","Lake Effect Snow Watch","Lake Wind Advisory","Lakeshore Flood Advisory","Lakeshore Flood Statement","Lakeshore Flood Warning","Lakeshore Flood Watch","Law Enforcement Warning","Local Area Emergency","Low Water Advisory","Marine Weather Statement","Nuclear Power Plant Warning","Radiological Hazard Warning","Red Flag Warning","Rip Current Statement","Severe Thunderstorm Warning","Severe Thunderstorm Watch","Severe Weather Statement","Shelter In Place Warning","Short Term Forecast","Small Craft Advisory","Small Craft Advisory For Hazardous Seas","Small Craft Advisory For Rough Bar","Small Craft Advisory For Winds","Small Stream Flood Advisory","Snow Squall Warning","Special Marine Warning","Special Weather Statement","Storm Surge Warning","Storm Surge Watch","Storm Warning","Storm Watch","Tornado Warning","Tornado Watch","Tropical Depression Local Statement","Tropical Storm Local Statement","Tropical Storm Warning","Tropical Storm Watch","Tsunami Advisory","Tsunami Warning","Tsunami Watch","Typhoon Local Statement","Typhoon Warning","Typhoon Watch","Urban And Small Stream Flood Advisory","Volcano Warning","Wind Chill Advisory","Wind Chill Warning","Wind Chill Watch","Winter Storm Warning","Winter Storm Watch","Winter Weather Advisory"],"fips":["12005","12059","12013","12045","12091","12131","12133","12037","12063","12077"]};
+</script>
+<script type='text/javascript' src='https://www.mypanhandle.com/_static/??-eJydjEkSgyAQAD8UQWVRD6m8ZRiGBAtRWSp5fvCYa65d3c3fR+cjhmop8zVzOHyX6KyUC9t8ZGu+8abgHgvFwsuLtiZG+uQCiWPwFzXVB3vVz7AbCGxU1sGsAZ2GUcDSOzcwU6MN9McUUvHYStVrYzRNVqp2RzEbKX6vj+0+qGlehJx6tX4BHg1MmQ=='></script>
+<script async src='https://s7.addthis.com/js/300/addthis_widget.js?ver=1.0#pubid=ra-5b7190c0239b8829'></script>
+<script>
+var addthis_config=addthis_config||{};addthis_config.data_track_addressbar=false;addthis_config.data_track_clickback=false;
+</script>
+<script type='text/javascript' src='https://www.mypanhandle.com/wp-includes/js/wp-embed.min.js?m=1576710963g'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-202003.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.1',blog:'162794876',post:'7',tz:'-6',srv:'www.mypanhandle.com'} ]);
+	_stq.push([ 'clickTrackerInit', '162794876', '7' ]);
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb199f70cb","applicationID":"222037236","transactionName":"MQNTMhdXDxECABBZDAhJchMWQg4PTBQUHxVUSVIHEVMGDREKAUNMTllhWgxSXzk\/BzkbSg==","queueTime":0,"applicationTime":583,"atts":"HURERF9NHE5BAkYKGBsb","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

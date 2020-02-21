@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!-- Page Basics ======================================= -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Superior Energy - Superior Energy Services Privacy Policy</title>
+<meta name="description" content="Superior Energy recognizes that privacy is a primary concern for Internet users. To protect your privacy, we do not sell, share, or rent your personal information in any way.">
+<meta name="keywords" content="privacy policy" >
+
+
+<!-- CSS  ============================================= -->
+<link rel="stylesheet" href="/assets-css/spn-2018.css">
+<link rel="stylesheet" href="/assets-css/masthead-2018.css">
+
+<!--[if lte IE 8]>  
+<link rel="stylesheet" href="ie.css">  
+<![endif]-->
+<!-- FONTS ============================================= -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+
+<!-- JS, JQuery ======================================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-3404176-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script');
+ga.src = ('https:' == document.location.protocol ?
+    'https://ssl' : 'http://www') +
+    '.google-analytics.com/ga.js';
+ga.setAttribute('async', 'true');
+document.documentElement.firstChild.appendChild(ga);
+})();
+</script>
+<!-- Favicon + icons =================================== -->
+<link rel="icon" href="/favicons/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+</head>
+
+<body>
+<div id="wrapper">
+ <div id="header"> 
+  
+  <div id="logo"> <a href="/"><img src="/assets-imgDocMedia/img-logos/logo-superior-energy.png" alt="Superior Energy Services" title="Superior Energy Services"/></a> </div>
+<div class="containerHeader">
+  <div class="containerStockTicker"> 
+        <div id="stockPrice"> </div>
+    <script>
+  $(document).ready(function(){
+  $.ajax({
+    type:"get",
+    url:"/json/SPN.json",
+	  success: function(data){
+		  result="";
+		  i=0;
+		  
+		  //assign variables to fields in json file, for later manipulation
+		 
+		  htmlSymbol = data[i].symbol;
+		  htmlLastTrade = data[i].lastTrade; // this is the last price that the stock sold for //
+		  htmlChangeNumber = data[i].changeNumber;		  
+		  
+		  //trim values to two decimal points
+		  
+		  htmlLastTrade = htmlLastTrade.toFixed(2);			  
+		  //htmlChangeNumber = htmlChangeNumber.toFixed(2);
+				htmlChangeNumber = (htmlChangeNumber*100/100).toFixed(2);
+				
+		  
+		  
+		 if (htmlChangeNumber > 0) {
+			 /*alert("more than 0");*/
+			 result= "Stock Quote: " + htmlSymbol + " &nbsp;$" + htmlLastTrade + "<i class='fa fa-arrow-up green'></i> <span class=green;'>" + htmlChangeNumber + "</span>";
+		 }
+		 
+		  else if (htmlChangeNumber < 0){
+			  /*alert("less than 0");*/
+			  result= "Stock Quote: " + htmlSymbol + " &nbsp;$" + htmlLastTrade + "<i class='fa fa-arrow-down red'></i> <span class=red>" + htmlChangeNumber + "</span>";
+			  
+		  }
+		  else {
+			  <!--alert("0");-->
+			result= "Stock Quote: " + htmlSymbol + " &nbsp;$" + htmlLastTrade;
+			 
+		  } 
+		  
+		 $("#stockPrice").html(result);
+    }
+  });
+});
+    </script> 
+
+  
+  </div>
+  <div class="brandsSelect">
+    <select id="brandsSelect" name="subsidiary" onchange="window.location=this.value;">
+      
+<option value="https://SuperiorEnergy.com/brands/">-- Superior Energy Brands --</option>
+<option value="https://SuperiorEnergy.com/brands/balance-point-control/">Balance Point Control</option>
+<option value="https://SuperiorEnergy.com/brands/complete-energy-services-fluid-management/">Complete Energy Services - Fluid Management</option>
+<option value="https://SuperiorEnergy.com/brands/concentric-pipe-and-tool-rentals/">Concentric Pipe &amp; Tool Rentals</option>
+<option value="https://SuperiorEnergy.com/brands/connection-technology/">Connection Technology</option>
+<option value="https://SuperiorEnergy.com/brands/CSI-technologies/">CSI Technologies</option>
+<option value="https://SuperiorEnergy.com/brands/HB-rentals/">HB Rentals</option>
+<option value="https://SuperiorEnergy.com/brands/international-snubbing-services/">International Snubbing Services</option>
+<option value="https://SuperiorEnergy.com/brands/spn-well-services/">SPN Well Services</option>
+<option value="https://SuperiorEnergy.com/brands/stabil-drill/">Stabil Drill</option>
+<option value="https://SuperiorEnergy.com/brands/superior-energy-completion-services/">Superior Energy - Completion Services</option>
+<option value="https://SuperiorEnergy.com/brands/warrior/">Warrior</option>
+<option value="https://SuperiorEnergy.com/brands/wild-well-control/">Wild Well Control</option>
+<option value="https://SuperiorEnergy.com/brands/workstrings-international/">Workstrings International</option>
+
+    </select>
+  </div>
+	<div style="height:66px;">&nbsp;</div>
+  <!--div id="search_small">
+    <form action="/search/" method="get">
+      <input name="search_text" value="Search" maxlength="50" autocomplete="off" id="inputSearchSmall" onFocus="if(this.value=='Search'){this.value='';this.style.color='#000000';}" onBlur="if(this.value==''){this.value='Search';this.style.color='#999999';}">
+    </form>
+  </div-->
+</div>
+<div id="nav">
+  <ul>
+    <li id="navHome"><a href="/"><span>Home</span></a></li>
+<li id="navAbout"><a href="/about/"><span>About Us</span></a>
+ <ul>
+  <li><a href="/about/corporate-governance/">Corporate Governance</a></li>
+  <li><a href="/about/leadership/">Leadership</a></li>
+  <li><a href="/about/company-history/">Company History</a></li>
+  <li><a href="/about/shared-core-values/">Shared Core Values</a></li>
+  <li><a href="/about/mission-and-vision/">Mission and Vision</a></li>
+  <li><a href="/about/health-safety-environment-quality/">Health, Safety, Environment &amp; Quality </a></li>
+ </ul>
+</li>
+<li id="navProducts"><a href="/products-and-services/"><span>Products &amp; Services</span></a>
+ <ul>
+  <li><a href="/products-and-services/drilling-products-and-services/">Drilling Products &amp; Services</a></li>
+  <li><a href="/products-and-services/onshore-completion-workover/">Onshore Completion &amp; Workover Services</a></li>
+  <li><a href="/products-and-services/production-services/">Production Services</a></li>
+  <li><a href="/products-and-services/technical-solutions/">Technical Solutions</a></li>
+ </ul>
+</li>
+<li id="navBrands"><a href="/brands/"><span>Brands</span></a>
+ <ul>
+  
+<li><a href="https://SuperiorEnergy.com/brands/balance-point-control/">Balance Point Control</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/complete-energy-services-fluid-management/">Complete Energy Services - Fluid Management</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/concentric-pipe-and-tool-rentals/">Concentric Pipe &amp; Tool Rentals</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/connection-technology/">Connection Technology</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/CSI-technologies/">CSI Technologies</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/HB-rentals/">HB Rentals</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/international-snubbing-services/">International Snubbing Services</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/SPN-well-services/">SPN Well Services</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/stabil-drill/">Stabil Drill</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/superior-energy-completion-services/">Superior Energy - Completion Services</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/warrior/">Warrior</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/wild-well-control/">Wild Well Control</a></li>
+<li><a href="https://SuperiorEnergy.com/brands/workstrings-international/">Workstrings International</a></li>
+
+ </ul>
+</li>
+<li id="navRegions"><a href="/operational-regions/"><span>Regions</span></a>
+ <ul>
+  <li><a href="/operational-regions/africa/">Africa</a></li>
+  <li><a href="/operational-regions/asia-pacific/">Asia Pacific</a></li>
+  <li><a href="/operational-regions/europe/">Europe</a></li>
+  <li><a href="/operational-regions/middle-east/">Middle East</a></li>
+  <li><a href="/operational-regions/north-america/">North America</a></li>
+  <li><a href="/operational-regions/latin-america/">Latin America</a></li>
+ </ul>
+</li>
+<li id="navIR"><a href="https://ir.superiorenergy.com/"><span>Investor Relations</span></a>
+ <ul>
+  <li><a href="https://ir.superiorenergy.com/stock-information/stock-quote">Stock Quote</a></li>
+  <li><a href="https://ir.superiorenergy.com/news-releases">News Releases</a></li>
+  <li><a href="https://ir.superiorenergy.com/analyst-coverage">Analyst Coverage</a></li>
+  <li><a href="https://ir.superiorenergy.com/annual-reports">Annual Reports</a></li>
+  <li><a href="https://ir.superiorenergy.com/sec-filings">SEC Filings</a></li>
+  <li><a href="https://ir.superiorenergy.com/non-gaap-reconciliation">Non-GAAP Reconciliation</a></li>
+  <li><a href="https://ir.superiorenergy.com/presentations">Presentations</a></li>
+  <li><a href="https://ir.superiorenergy.com/email-alerts">Email Alerts</a></li>
+  <li><a href="https://ir.superiorenergy.com/document-request">Information Request</a></li>
+  <li><a href="https://ir.superiorenergy.com/stock-purchase-service">Transfer Agent</a></li>
+  <li><a href="https://ir.superiorenergy.com/static-files/2e5cc3ba-1e70-426c-a0e9-ffff19971584" target="_blank">UK Tax Policy and Strategy</a></li>
+  <li><a href="https://ir.superiorenergy.com/tax">Tax Consequences for Former Complete Shareholders</a></li>
+ </ul>
+</li>
+<li id="navCareers"><a href="/careers/" ><span>Careers</span></a>
+ <ul>
+  <li><a href="https://hub-superiorenergy.icims.com">Search Jobs</a></li>
+  <li><a href="https://careers-superiorenergy.icims.com/connect/login?redirect=welcome&hashed=-435828181">Returning User Login</a></li>
+  <li><a href="/about/">About the Company</a></li>
+  <li><a href="/careers/e-verify/">E-Verify</a></li>
+  <li><a href="/careers/equal-employment-opportunity-policy">Equal Employment Opportunity Policy</a></li>
+  <li><a href="https://media.icims.com/training/candidatefaq/faq.html">Frequently Asked Questions</a></li>
+ </ul>
+</li>
+<li id="navContact"><a href="/contact-us/" ><span>Contact Us</span></a></li>
+
+  </ul>
+</div>
+ 
+  
+ </div>
+ <div id="breadcrumb"><script src="/assets-j/MPBackLinks.js"></script> </div>
+ <div id="content">
+  <div id="callout" style="margin-top: 12px;">
+   <div class="bucket">
+    <p class="callOutHeader">Contact</p>
+    
+    <ul class="rightContact">
+ <li>Superior Energy Services</li>
+ <li>1001 Louisiana Street</li>
+ <li>Suite 2900</li>
+ <li>Houston, TX 77002 </li>
+ <li style="padding-top: 18px;">Phone: +1 713 654 2200</li>
+ <li>Fax: +1 713 654 2205</li>
+</ul>
+
+    <p class="callOutHeader">Resources</p>
+    <ul class="rightResources">
+     <li><a href="/assets-imgDocMedia/superior-energy/literature/commitment-statement.pdf" target="_blank" class="pdf">Data Protection Commitment Statement</a></li>
+     <li><a href="/assets-imgDocMedia/superior-energy/literature/data-protection-policy.pdf" target="_blank" class="pdf">Data Protection Policy</a></li>
+     <li><a href="/assets-imgDocMedia/superior-energy/literature/privacy-notice-company-personnel.pdf" target="_blank" class="pdf">Privacy Notice for Company Personnel</a></li>
+     <li><a href="/assets-imgDocMedia/superior-energy/literature/privacy-notice-customers-suppliers.pdf" target="_blank" class="pdf">Privacy Notice for Customers and Suppliers</a></li>
+     <li><a href="/assets-imgDocMedia/superior-energy/literature/privacy-policy.pdf" target="_blank" class="pdf">Privacy Policy</a></li>
+    </ul>
+    </ul>
+   </div>
+  </div>
+  <div id="contentMain" style="width: 700px;">
+   <h1>Privacy Policy</h1>
+   <h2>Information we collect and how we use it</h2>
+   <h3>Personal Information</h3>
+   <p>You may choose to provide personal information (such as your name and email address) on this Web site ("Site"). For example, if you email us through the "Contact Us" link or any other company email address found on this Site, or use the "Live Chat Support" function on the Careers page of this Site, you will be providing us with your name and email address and any additional information you may choose to disclose. If you would like to receive company news alerts from the Superior Investors Relations staff, we ask for your explicit consent together with your email address so we can send you the news alerts. Additionally, subject to giving your explicit prior consent, we occasionally may ask visitors to this Site to participate in an online survey. If you choose to participate in such a survey, you may be asked to provide your name and email address, as well as various personal and/or non-personal information.</p>
+   <h3>Information We Share</h3>
+   <p>We do not sell, share, rent or otherwise disclose personal information about our Site visitors, except where certain safeguards and contractual arrangements have been put in place.  We only share personal information we hold with third parties, including but not limited to our service providers, if: (i) we have a lawful basis for doing so; (ii) sharing the information complies with our <a href="/about/corporate-governance/data-protection/">Privacy Notice(s)</a>; and (iii) the third party has agreed to comply with the required data security policies and procedures and put adequate security measures in place. Superior reserves the right to share your information with its subsidiaries and affiliates if the recipient has a job-related need to know the information. We also reserve the right to transfer your information to any party or parties which may merge with or acquire all or substantially all of the assets or outstanding stock of Superior, provided the transfer is in compliance with the criteria outlined above.</p>
+   <p>Superior reserves the right to share your information with its subsidiaries and affiliates.  We also reserve the right to transfer your information to any party or parties which may merge with or acquire all or substantially all of the assets or outstanding stock of Superior.</p>
+   <h3>Information We Transfer</h3>
+   <p>We may transfer the personal information we collect on this Site to other countries where we do business. Information on when international transfers may occur and how they are managed can be found in our <a href="/about/corporate-governance/data-protection/">Privacy Notice(s)</a>.</p>
+   <h3>Links to Other Sites</h3>
+   <p>Superior Energy contains links to other Web sites that may have different and even conflicting privacy policies from ours. We do our best to link to responsible sites, but we are not responsible for the privacy practices of these sites.</p>
+   <h3>Children's Privacy</h3>
+   <p>Although our Site is a general audience Web site that is not specifically designed for or targeted at children, the protection and safety of children is very important to Superior and we therefore encourage parents and guardians to participate in and supervise the online activities of their children.</p>
+   <p>We do not knowingly collect, use or disseminate any personally identifiable information from children under the age of 13. If, however, we become aware that personally identifiable information regarding a child under the age of 13 has been collected at our Site, we will remove that information from our systems. </p>
+   <h3>How We Protect Personal Information</h3>
+   <p>Superior utilizes various safeguards to protect against the unauthorized use or disclosure of the personal information you provide on this Site. We use secure socket layer (SSL) technology to help keep the personal information you provide on this Site secure.</p>
+   <p>While Superior Energy takes every measure to protect your information, no data transmission over the Internet or any wireless network can be guaranteed 100% secure. Therefore, we cannot ensure or warrant the security of the information you transmit to us, and you do so at your own risk.</p>
+   <h3>Updates to Our Privacy Policy</h3>
+   <p>This Privacy Policy may be updated periodically and without prior notice. We will post a prominent notice on this Site to notify you of any significant changes to our Privacy Policy.</p>
+   <h3>Personal Information Changes</h3>
+   <p>You may, at any time, review, update, or change your personal information by emailing or calling us.  You may also exercise any of your rights under applicable data protection laws as explained in our <a href="/about/corporate-governance/data-protection/">Privacy Notice(s)</a>.</p>
+   <h3>How to Contact Us</h3>
+   <p>If you have any questions or comments about this Privacy Policy, if you would like us to update the personal information we have on file for you or to exercise your legal rights in respect of your personal information, please contact us by:</p>
+   <ul>
+    <li>Emailing <a href="mailto:dataprotection@superiorenergy.com">dataprotection@superiorenergy.com</a> or calling us at 713-654-2200</li>
+    <li>Further information on data protection can be accessed <a href="/about/corporate-governance/data-protection/">here</a>.</li>
+   </ul>
+  </div>
+ </div>
+</div>
+<footer class="clear"> 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
+<div id="footer">
+	<div class="containerFooter">
+		<div>
+			<div class="column">
+				<ul class="columnList floatRight employee-list">
+					<li>Employee Resources</li>
+					<li id="myIntranet">
+						<a href="https://webmail.superiorenergy.com/" target="_blank">Employee Webmail</a>
+					</li>
+					<li id="myMail">
+						<a href="https://intranet.superiorenergy.com/" target="_blank">Employee Intranet</a>
+					</li>
+					<li id="mySafety">
+						<a href="https://superiorenergyservices.sharepoint.com/my-superior/Pages/safety/default.aspx" target="_blank">My Safety</a>
+					</li>
+					<li id="myBenefits">
+						<a href="http://bit.ly/my-superior-benefits" target="_blank">My Benefits</a>
+					</li>
+					<li id="myData">
+						<a href="http://superiorenergy.ultipro.com" target="_blank">My Data</a>
+					</li>
+					<li id="myTraining">
+						<a href="https://superiorenergy.sabacloud.com/" target="_blank">My Training</a>
+					</li>
+					<li id="myTime">
+						<a href="http://time.superiorenergy.com" target="_blank">My Time</a>
+					</li>
+					<li id="my123">
+						<a href="https://secure.logmeinrescue.com/Customer/Code.aspx" target="_blank">LOGMEIN123</a>
+					</li>
+				</ul>
+			</div>
+			<div class="column">
+				<ul class="columnList floatRight superiorList">
+					<li>Superior Energy</li>
+					<li id="about">
+						<a href="/about/">About</a>
+					</li>
+					<li id="products-services">
+						<a href="/products-and-services/">Products &amp; Services</a>
+					</li>
+					<li id="brands">
+						<a href="/brands/">Brands</a>
+					</li>
+					<li id="regions">
+						<a href="/operational-regions/">Regions</a>
+					</li>
+					<li id="investor">
+						<a href="http://ir.superiorenergy.com/">Investor Relations</a>
+					</li>
+					<li id="careers">
+						<a href="/careers/">Careers</a>
+					</li>
+				</ul>
+			</div>
+			<div class="column">
+				<ul class="columnList floatRight">
+					<li>Customer Help</li>
+					<li id="contact">
+						<a href="/contact-us/">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="columnSocial">
+				<ul class="columnList inlineList floatRight">
+					<li id="facebook">
+						<a href="https://www.facebook.com/SuperiorEnergy" target="_blank">
+							<i class="fab fa-facebook-square fa-2x blue" aria-hidden="true"></i>
+						</a>
+					<li id="linkedIn">
+						<a href="https://www.linkedin.com/company/superior-energy-services" target="_blank"><i class="fab fa-linkedin fa-2x blue" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<br class="clear">
+	</div>
+</div>
+<div class="footer2">
+	<div class="container">
+		<ul class="noBullet legalList">
+			<li id="site-map">
+				<a href="/sitemap/">Site Map</a>
+			</li>
+			<li id="terms">
+				<a href="/website-terms-of-use/">Terms of Use</a>
+			</li>
+			<li id="privacy">
+				<a href="/privacy/">Privacy Policy</a>
+			</li>
+		</ul>
+		<div class="footerDisclaimer">
+			
+			<p>&copy;<script> document.write(new Date().getFullYear());</script> Superior Energy Services, Inc. Superior's Terms and Conditions for use of this website apply. Data provided by Nasdaq. Minimum 15 minutes delayed.</p>
+			
+		</div>
+	</div>
+</div>
+ 
+</footer>
+</body>
+</html>

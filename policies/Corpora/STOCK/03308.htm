@@ -1,0 +1,943 @@
+
+
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+
+					<!-- OneTrust Cookies Consent Notice start -->
+			<script src="https://cdn.cookielaw.org/langswitch/f067144a-2140-4f1e-9d90-d3d1a7ac8de4.js" type="text/javascript" charset="UTF-8"></script>
+			<script type="text/javascript">
+			function OptanonWrapper() { }
+			</script>
+			<!-- OneTrust Cookies Consent Notice end -->
+			
+<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KJDTQGC');</script>
+	<!-- End Google Tag Manager -->
+
+					
+					
+						
+
+	
+					
+					
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/assets/favicons/site.webmanifest">
+	<link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#ffffff">
+	<link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- CSS -->
+	<link href="//fonts.googleapis.com/css?family=Titillium+Web:300,400,700" type="text/css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+	<link href="/css/fal-default-print.css" type="text/css" rel="stylesheet" media="print">
+	<link href="/css/fal-fvd.css" type="text/css" rel="stylesheet">
+				<link type="text/css" rel="stylesheet" href="/blockonomicon/blocks.css">
+	<!-- JS -->
+	<script>
+				// Some debug info for caching.
+		console.log('Cache key: ');
+			</script>
+	<script>
+		// CSRF Token
+		window.csrfTokenName = 'CRAFT_CSRF_TOKEN';
+		window.csrfTokenValue = 'y8thKEZIM8NxrUousiki_HjcsGcnNiaTrpGX_kSaDdfNadRd7bxaWYaSGG4iLXawOeshGsNkdaM95Oc4VAVV_sak2aoDxVm-vAyTLKqILAs=';
+	</script>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="/js/jquery.flexslider-min.js"></script>
+	<script src="/js/jquery.selectric.js"></script>
+	<script src="/js/quotes.js"></script>
+	<script src="/js/fal-fvd.js"></script>
+		<script type="application/javascript" src="/blockonomicon/blocks.js"></script>
+
+	<script>
+		function confirmBox(txt, url) { if (confirm(txt)) { window.location.href=url; } }
+
+		function cycleDisplay(name) { if (name.length > 0) { document.getElementById(name).style.display = (document.getElementById(name).style.display == "block" ) ? "none" : "block"; } }
+
+		function hideDisplay(name) { if (name.length > 0) { document.getElementById(name).style.display = "none"; } }
+
+		function isEmail(string) { if (string.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) { return true; } else { return false; } }
+
+		function cycleKeyResources(iteration) { if (document.getElementById('key_resources_expanding_area_'+iteration).style.display == "none" )  { $("#key_resources_expanding_area_"+iteration).slideDown(600); $("#key_resources_bar_icon_"+iteration).html('-'); } else { $("#key_resources_expanding_area_"+iteration).slideUp(600);	$("#key_resources_bar_icon_"+iteration).html('+'); } }
+
+		function toggleAbilityToScroll() { }
+
+		function displayVideo(id) { document.getElementById('fullscreen_video_holder').innerHTML = '<iframe id="fullscreen_video" src="https://www.youtube.com/embed/'+id+'?rel=0&amp;showinfo=0&vq=hd720&autoplay=1&color=white" frameborder="0" allowfullscreen width="320" height="180"></iframe>'; $('#fullscreen_video_holder').css("margin-top",($(window).height()-180)/2); $("#fullscreen_video_overlay").fadeIn(200); }
+		function displayVideoByVideoId(id) { document.getElementById('fullscreen_video_holder').innerHTML = '<iframe id="fullscreen_video" src="/overlay_video?id='+id+'" frameborder="0" allowfullscreen width="320" height="180" seamless="seamless"></iframe>'; $('#fullscreen_video_holder').css("margin-top",($(window).height()-180)/2); $("#fullscreen_video_overlay").fadeIn(200); }
+
+		function closeFullscreenVideoOverlay() { $("#fullscreen_video_overlay").fadeOut(200); document.getElementById('fullscreen_video_holder').innerHTML = ''; }
+
+		function displayInformation(id) { document.getElementById('fullscreen_information_holder').innerHTML = '<iframe id="fullscreen_information" src="/member-bios/'+id+'" frameborder="0" allowfullscreen width="96%" height="2000"></iframe>'; $('#fullscreen_information_holder').css("margin-top",70); $("#fullscreen_information_overlay").fadeIn(200); scrollTo(0,0); }
+
+		function closeFullscreenInformationOverlay() { $("#fullscreen_information_overlay").fadeOut(200); document.getElementById('fullscreen_information_holder').innerHTML = ''; }
+
+		var input_default_text = ''; //'SEARCH';
+
+		function openSearch() { document.getElementById('criteria').value = input_default_text;	$("#search_overlay").fadeIn(200);	document.getElementById('criteria').focus(); $("#criteria").get(0).setSelectionRange(0,0); }
+
+		function closeSearch() { $("#search_overlay").fadeOut(200); }
+
+		function submitForm(theid,thexml) { var req = null; if (window.XMLHttpRequest) { req = new XMLHttpRequest(); if (req.overrideMimeType) { req.overrideMimeType('text/xml'); } } else if (window.ActiveXObject) { try { req = new ActiveXObject("Msxml2.XMLHTTP"); } catch (e) { try { req = new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) { } } } req.onreadystatechange = function() { if(req.readyState == 4) { if(req.status == 200) { document.getElementById(theid).innerHTML = req.responseText; } else{ document.getElementById(theid).innerHTML = ""; } } }; req.open("GET", thexml+"&amp;random="+ Math.random(), true); req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); req.send(null); }
+	</script>
+	<script>
+		function cycleMenu(name) { if (name.length > 0) {	document.getElementById(name).style.display = (document.getElementById(name).style.display == "block" ) ? "none" : "block";	} }
+	</script>
+
+	<!-- Full Story -->
+	<script>
+		window['_fs_debug'] = false;
+		window['_fs_host'] = 'fullstory.com';
+		window['_fs_org'] = 'D166V';
+		window['_fs_namespace'] = 'FS';
+		(function(m,n,e,t,l,o,g,y){
+		if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+		g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+		o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+		y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+		g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};g.event=function(i,v){g('event',{n:i,p:v})};
+		g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+		g.consent=function(a){g("consent",!arguments.length||a)};
+		g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+		g.clearUserCookie=function(){};
+		})(window,document,window['_fs_namespace'],'script','user');
+	</script>
+
+
+	<!-- SEO -->
+	<meta name="description" content="" />
+								<title>FalconStor - Privacy Policy</title>
+			
+	<!-- GA -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-1539214-6', 'falconstor.com');
+		ga('require', 'displayfeatures');
+	  ga('send', 'pageview');
+		var myintervalid = setInterval(function() {ga('send', 'event', 'top', 'top', 'top');},30000);
+		setTimeout(function(){clearInterval(myintervalid);},1800000);
+	</script>
+	<!-- Bing -->
+	<meta name="msvalidate.01" content="87CDA3DCF9EFE056D0F2C803E6DB5656" />
+	
+<title>FalconStor Software | Privacy Policy</title><meta name="generator" content="SEOmatic">
+<meta name="keywords" content="data management, data mobility, storage orchestration, storage capacity planning, disaster recovery, backup and archive, virtual tape library, cloud">
+<meta name="description" content="FalconStor is a modern, comprehensive, and easy-to-use data management software platform for your most demanding storage and data use cases.">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="robots" content="all">
+<meta content="390046088238345" property="fb:profile_id">
+<meta content="en_US" property="og:locale">
+<meta content="FalconStor Software" property="og:site_name">
+<meta content="website" property="og:type">
+<meta content="https://www.falconstor.com/legal/privacy-policy" property="og:url">
+<meta content="Privacy Policy" property="og:title">
+<meta content="FalconStor is a modern, comprehensive, and easy-to-use data management software platform for your most demanding storage and data use cases." property="og:description">
+<meta content="https://www.falconstor.com/assets/images/_1200x630_crop_center-center_82_none/logo_color_fs.jpg?mtime=1554852031" property="og:image">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
+<meta content="This is the cropped FS version of the FalconStor Software logo." property="og:image:alt">
+<meta content="https://vimeo.com/falconstorsoftware" property="og:see_also">
+<meta content="https://www.youtube.com/user/FalconStor/" property="og:see_also">
+<meta content="https://www.linkedin.com/company/falconstor-software/" property="og:see_also">
+<meta content="https://en.wikipedia.org/wiki/FalconStor_Software" property="og:see_also">
+<meta content="https://twitter.com/FalconStor" property="og:see_also">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@falconstor">
+<meta name="twitter:creator" content="@falconstor">
+<meta name="twitter:title" content="FalconStor Software | Privacy Policy">
+<meta name="twitter:description" content="FalconStor is a modern, comprehensive, and easy-to-use data management software platform for your most demanding storage and data use cases.">
+<meta name="twitter:image" content="https://www.falconstor.com/assets/images/_800x418_crop_center-center_82_none/logo_color_fs.jpg?mtime=1554852031">
+<meta name="twitter:image:width" content="800">
+<meta name="twitter:image:height" content="418">
+<meta name="twitter:image:alt" content="This is the cropped FS version of the FalconStor Software logo.">
+<meta name="google-site-verification" content="bJhfMscYQrdQqA9S1USkeA9nRMuoYw-QU8c4k6uCeoM">
+<meta name="msvalidate.01" content="87CDA3DCF9EFE056D0F2C803E6DB5656">
+<link href="https://www.falconstor.com/legal/privacy-policy" rel="canonical">
+<link href="https://www.falconstor.com/" rel="home">
+<link type="text/plain" href="https://www.falconstor.com/humans.txt" rel="author">
+<link href="https://www.falconstor.com/legal/privacy-policy" rel="alternate" hreflang="x-default"></head>
+
+<body class="layout--sidebar page--legal-entry">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJDTQGC"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	
+		
+<div class="device--desktop">
+	<div id="header_large">
+		<div id="header_large_navigation">
+			<div style="float: left; margin-top: 42px; width: 200px;">
+				<a href="/">
+					<img alt="FalconStor" src="/images/falconstor-logo.png" style="height: 16px; width: auto;" />
+				</a>
+			</div>
+			<div style="float: left; padding-top: 42px; text-align: right; width: 756px;">
+									<div style="float: right; margin: 0 20px 0 0;">
+						<ul class="menu">
+							<li>
+								<a href="/contact" style="font-size: 12pt; font-weight: 600;">Contact</a>
+																	<ul>
+																			</ul>
+															</li>
+						</ul>
+					</div>
+									<div style="float: right; margin: 0 20px 0 0;">
+						<ul class="menu">
+							<li>
+								<a href="/support/support-services" style="font-size: 12pt; font-weight: 600;">Support</a>
+																	<ul>
+																					<li>
+												<a href="/support/support-services">Support &amp; Services</a>
+											</li>
+																					<li>
+												<a href="/document-library">Document Library</a>
+											</li>
+																					<li>
+												<a href="/certification-matrix">Certification Matrix</a>
+											</li>
+																					<li>
+												<a href="https://falconstorsoftware.force.com/customers/login">Customer Support Community</a>
+											</li>
+																					<li>
+												<a href="https://falconstorsoftware.force.com/partners/login">Partner Support Community</a>
+											</li>
+																					<li>
+												<a href="/support/service-announcements">Service Announcements</a>
+											</li>
+																			</ul>
+															</li>
+						</ul>
+					</div>
+									<div style="float: right; margin: 0 20px 0 0;">
+						<ul class="menu">
+							<li>
+								<a href="/partners" style="font-size: 12pt; font-weight: 600;">Partners</a>
+																	<ul>
+																					<li>
+												<a href="partners/all">Find a Partner</a>
+											</li>
+																					<li>
+												<a href="https://falconstor.channeltivity.com/BecomeAPartner">Become a Partner</a>
+											</li>
+																			</ul>
+															</li>
+						</ul>
+					</div>
+									<div style="float: right; margin: 0 20px 0 0;">
+						<ul class="menu">
+							<li>
+								<a href="/about" style="font-size: 12pt; font-weight: 600;">About</a>
+																	<ul>
+																					<li>
+												<a href="/about">Company</a>
+											</li>
+																					<li>
+												<a href="/news">News</a>
+											</li>
+																					<li>
+												<a href="/blog">Blog</a>
+											</li>
+																					<li>
+												<a href="/video-library">Videos</a>
+											</li>
+																					<li>
+												<a href="/investors">Investor Relations</a>
+											</li>
+																					<li>
+												<a href="/careers">Careers</a>
+											</li>
+																			</ul>
+															</li>
+						</ul>
+					</div>
+									<div style="float: right; margin: 0 20px 0 0;">
+						<ul class="menu">
+							<li>
+								<a href="/products" style="font-size: 12pt; font-weight: 600;">Products</a>
+																	<ul>
+																					<li>
+												<a href="/products">Products Overview</a>
+											</li>
+																					<li>
+												<a href="/products/virtual-tape-library">Virtual Tape Library (VTL)</a>
+											</li>
+																					<li>
+												<a href="/products/fdmp">Data Mastery Platform (FDMP)</a>
+											</li>
+																					<li>
+												<a href="/products/continuous-data-protector">Continuous Data Protector (CDP)</a>
+											</li>
+																					<li>
+												<a href="/products/network-storage-server">Network Storage Server (NSS)</a>
+											</li>
+																					<li>
+												<a href="/customers">Case Studies</a>
+											</li>
+																			</ul>
+															</li>
+						</ul>
+					</div>
+								<div style="clear: both;"></div>
+			</div>
+			<div style="float: left; padding-top: 38px; width: 180px;">
+				<a href="/request-a-demo" style="background-color: #E9191E; color: white; padding: 4px 0; text-align: center; display: block; text-decoration:none;">REQUEST A DEMO</a>
+							</div>
+			<div style="clear: both;"></div>
+		</div>
+		<div style="position: absolute; top: 0px; left: 0; width: 100%; height: 100px; background-color: white; z-index: -1;"></div>
+		<div style="position: absolute; top: 100px; left: 0; width: 100%; height: 16px; background-image: url(/images/HDR-shadow-2.png); background-repeat: repeat-x;"></div>
+</div>
+
+
+<div id="headerprint">
+	<img alt="FalconStor" src="/images/falconstor-logo.png" style="height: 16px; width: auto;" />
+</div>
+
+<div id="page_pushdown" style="height: 100px;"></div>
+</div>
+
+
+<div class="device--mobile">
+	<div id="menu" style="display: none; position: absolute; top: 50px; left: 0; width: 100%; z-index: 1000001;">
+		<div style="background-color: rgba(255,255,255,1.0);">
+			<div class="menurow demo" style="border-top: solid 1px darkgray;" onclick="location.href='/request-a-demo';">REQUEST A DEMO</div>
+			<div class="menurow" onclick="location.href='/';">Home</div>
+
+												<div class="menurow" style="text-transform: uppercase;">
+						<script>
+							var channel_expanded = 0;
+						</script>
+						<div onclick="if ( channel_expanded == 0 ) { $('#parents1').slideDown(); channel_expanded = 1; document.getElementById('channel1').innerHTML = '&ndash;';} else { $('#parents1').slideUp(); channel_expanded = 0; document.getElementById('channel1').innerHTML = '+'; }"
+							style="float: left; width: 90%;">Products</div>
+						<div id="channel1" onclick="if ( channel_expanded == 0 ) { $('#parents1').slideDown(); channel_expanded = 1; document.getElementById('channel1').innerHTML = '&ndash;'; } else { $('#parents1').slideUp(); channel_expanded = 0; document.getElementById('channel1').innerHTML = '+'; }"
+							style="float: right; font-size: 34px; height: 38px; margin-top: -17px; overflow: hidden; text-align: right; width: 10%;">+</div>
+						<div style="clear: both; height: 0;"></div>
+						<div id="parents1" style="display: none;">
+								<ul style="color: #455560;">
+																				<li>
+												<a href="/products" style="color: #455560">Products Overview</a>
+											</li>
+																				<li>
+												<a href="/products/virtual-tape-library" style="color: #455560">Virtual Tape Library (VTL)</a>
+											</li>
+																				<li>
+												<a href="/products/fdmp" style="color: #455560">Data Mastery Platform (FDMP)</a>
+											</li>
+																				<li>
+												<a href="/products/continuous-data-protector" style="color: #455560">Continuous Data Protector (CDP)</a>
+											</li>
+																				<li>
+												<a href="/products/network-storage-server" style="color: #455560">Network Storage Server (NSS)</a>
+											</li>
+																				<li>
+												<a href="/customers" style="color: #455560">Case Studies</a>
+											</li>
+																	</ul>
+						</div>
+					</div>
+					<div class="menurowrulegray"></div>
+																<div class="menurow" style="text-transform: uppercase;">
+						<script>
+							var channel_expanded = 0;
+						</script>
+						<div onclick="if ( channel_expanded == 0 ) { $('#parents2').slideDown(); channel_expanded = 1; document.getElementById('channel2').innerHTML = '&ndash;';} else { $('#parents2').slideUp(); channel_expanded = 0; document.getElementById('channel2').innerHTML = '+'; }"
+							style="float: left; width: 90%;">About</div>
+						<div id="channel2" onclick="if ( channel_expanded == 0 ) { $('#parents2').slideDown(); channel_expanded = 1; document.getElementById('channel2').innerHTML = '&ndash;'; } else { $('#parents2').slideUp(); channel_expanded = 0; document.getElementById('channel2').innerHTML = '+'; }"
+							style="float: right; font-size: 34px; height: 38px; margin-top: -17px; overflow: hidden; text-align: right; width: 10%;">+</div>
+						<div style="clear: both; height: 0;"></div>
+						<div id="parents2" style="display: none;">
+								<ul style="color: #455560;">
+																				<li>
+												<a href="/about" style="color: #455560">Company</a>
+											</li>
+																				<li>
+												<a href="/news" style="color: #455560">News</a>
+											</li>
+																				<li>
+												<a href="/blog" style="color: #455560">Blog</a>
+											</li>
+																				<li>
+												<a href="/video-library" style="color: #455560">Videos</a>
+											</li>
+																				<li>
+												<a href="/investors" style="color: #455560">Investor Relations</a>
+											</li>
+																				<li>
+												<a href="/careers" style="color: #455560">Careers</a>
+											</li>
+																	</ul>
+						</div>
+					</div>
+					<div class="menurowrulegray"></div>
+																<div class="menurow" style="text-transform: uppercase;">
+						<script>
+							var channel_expanded = 0;
+						</script>
+						<div onclick="if ( channel_expanded == 0 ) { $('#parents3').slideDown(); channel_expanded = 1; document.getElementById('channel3').innerHTML = '&ndash;';} else { $('#parents3').slideUp(); channel_expanded = 0; document.getElementById('channel3').innerHTML = '+'; }"
+							style="float: left; width: 90%;">Partners</div>
+						<div id="channel3" onclick="if ( channel_expanded == 0 ) { $('#parents3').slideDown(); channel_expanded = 1; document.getElementById('channel3').innerHTML = '&ndash;'; } else { $('#parents3').slideUp(); channel_expanded = 0; document.getElementById('channel3').innerHTML = '+'; }"
+							style="float: right; font-size: 34px; height: 38px; margin-top: -17px; overflow: hidden; text-align: right; width: 10%;">+</div>
+						<div style="clear: both; height: 0;"></div>
+						<div id="parents3" style="display: none;">
+								<ul style="color: #455560;">
+																				<li>
+												<a href="partners/all" style="color: #455560">Find a Partner</a>
+											</li>
+																				<li>
+												<a href="https://falconstor.channeltivity.com/BecomeAPartner" style="color: #455560">Become a Partner</a>
+											</li>
+																	</ul>
+						</div>
+					</div>
+					<div class="menurowrulegray"></div>
+																<div class="menurow" style="text-transform: uppercase;">
+						<script>
+							var channel_expanded = 0;
+						</script>
+						<div onclick="if ( channel_expanded == 0 ) { $('#parents4').slideDown(); channel_expanded = 1; document.getElementById('channel4').innerHTML = '&ndash;';} else { $('#parents4').slideUp(); channel_expanded = 0; document.getElementById('channel4').innerHTML = '+'; }"
+							style="float: left; width: 90%;">Support</div>
+						<div id="channel4" onclick="if ( channel_expanded == 0 ) { $('#parents4').slideDown(); channel_expanded = 1; document.getElementById('channel4').innerHTML = '&ndash;'; } else { $('#parents4').slideUp(); channel_expanded = 0; document.getElementById('channel4').innerHTML = '+'; }"
+							style="float: right; font-size: 34px; height: 38px; margin-top: -17px; overflow: hidden; text-align: right; width: 10%;">+</div>
+						<div style="clear: both; height: 0;"></div>
+						<div id="parents4" style="display: none;">
+								<ul style="color: #455560;">
+																				<li>
+												<a href="/support/support-services" style="color: #455560">Support &amp; Services</a>
+											</li>
+																				<li>
+												<a href="/document-library" style="color: #455560">Document Library</a>
+											</li>
+																				<li>
+												<a href="/certification-matrix" style="color: #455560">Certification Matrix</a>
+											</li>
+																				<li>
+												<a href="https://falconstorsoftware.force.com/customers/login" style="color: #455560">Customer Support Community</a>
+											</li>
+																				<li>
+												<a href="https://falconstorsoftware.force.com/partners/login" style="color: #455560">Partner Support Community</a>
+											</li>
+																				<li>
+												<a href="/support/service-announcements" style="color: #455560">Service Announcements</a>
+											</li>
+																	</ul>
+						</div>
+					</div>
+					<div class="menurowrulegray"></div>
+																<div class="menurow" style="text-transform: uppercase;">
+						<script>
+							var channel_expanded = 0;
+						</script>
+						<div onclick="location.href='/contact'; if ( channel_expanded == 0 ) { $('#parents5').slideDown(); channel_expanded = 1; document.getElementById('channel5').innerHTML = '';} else { $('#parents5').slideUp(); channel_expanded = 0; document.getElementById('channel5').innerHTML = ''; }"
+							style="float: left; width: 90%;">Contact</div>
+						<div id="channel5" onclick="if ( channel_expanded == 0 ) { $('#parents5').slideDown(); channel_expanded = 1; document.getElementById('channel5').innerHTML = ''; } else { $('#parents5').slideUp(); channel_expanded = 0; document.getElementById('channel5').innerHTML = ''; }"
+							style="float: right; font-size: 34px; height: 38px; margin-top: -17px; overflow: hidden; text-align: right; width: 10%;"></div>
+						<div style="clear: both; height: 0;"></div>
+						<div id="parents5" style="display: none;">
+						</div>
+					</div>
+					<div class="menurowrulegray"></div>
+
+							
+			<div class="menurow" style="border-bottom: solid 5px #E9191E; height: 92px;">
+				<div style="padding-bottom: 15px;">LET'S CONNECT</div>
+				<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+					<a href="https://www.facebook.com/pages/FalconStor-Software/1031440400208743" target="_blank">
+						<img alt="Facebook" src="/images/facebook-icon-gray-retina.png" style="width: 32px;" />
+					</a>
+				</div>
+				<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+					<a href="https://twitter.com/FalconStor" target="_blank">
+						<img alt="Twitter" src="/images/twitter-icon-gray-retina.png" style="width: 32px;" />
+					</a>
+				</div>
+				<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+					<a href="https://www.linkedin.com/company/falconstor-software" target="_blank">
+						<img alt="LinkedIn" src="/images/linkedin-icon-gray-retina.png" style="width: 32px;" />
+					</a>
+				</div>
+				<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+					<a href="https://www.youtube.com/user/FalconStor" target="_blank">
+						<img alt="YouTube" src="/images/youtube-icon-gray-retina.png" style="width: 32px;" />
+					</a>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="header_mobile" style="position: relative; background-color: #FFFFFF; height: 50px; width: 100%; ">
+
+		<div style="position: absolute; top: 15px; left: 15px;" onclick="location.href='/';">
+			<img alt="FalconStor" src="/images/falconstor-logo.png" style="height: 14px; width: auto;" />
+		</div>
+
+		<div style="position: absolute; top: 15px; right: 65px;">
+			<a class="phone_symbol_link" href="tel:+1.631.777.5188">
+				<span class="lnr lnr-phone-handset" style="color: #5A5B5D; font-size: 19pt;"></span>
+			</a>
+		</div>
+
+
+
+
+
+		<div style="position: absolute; top: 14px; right: 17px; height: 12px; width: 18px;" onclick="cycleDisplay('menu'); toggleAbilityToScroll();">
+			<!-- hamburger menu ( from here: http://callmenick.com/post/animating-css-only-hamburger-menu-icons ) -->
+			<button id="hamburger_menu" class="c-hamburger c-hamburger--htx">
+				<span>toggle menu</span>
+			</button>
+
+			<script>
+				(function () {
+					"use strict";
+					var toggles = document.querySelectorAll(".c-hamburger");
+					for (var i = toggles.length - 1; i >= 0; i--) {
+						var toggle = toggles[i];
+						toggleHandler(toggle);
+					};
+
+					function toggleHandler(toggle) {
+						toggle.addEventListener("click", function (e) {
+							e.preventDefault();
+							(this.classList.contains("is-active") === true) ? this.classList.remove("is-active"): this.classList.add(
+								"is-active");
+						});
+					}
+				})();
+			</script>
+		</div>
+	</div>
+
+
+	<div style="background-color: #EEEEEE; height: 1px; width: 100%;"></div>
+
+	<script type="text/javascript">
+		window.addEventListener("scroll", function () {
+
+			if (window.scrollY > 96 && $('#menu').css('display') == 'none') {
+				$('#fixedDiv').fadeIn(700);
+			} else {
+				$('#fixedDiv').fadeOut(100);
+			}
+			if (window.scrollY > 600 && $('#menu').css('display') == 'none') {
+				$('#topOfPageDiv').fadeIn(700);
+			} else {
+				$('#topOfPageDiv').fadeOut(100);
+			}
+
+			if ($(window).scrollTop() + window.innerHeight > $(document).height()) {
+				document.getElementById("topOfPageDiv").style.bottom = '115px';
+			} else {
+				document.getElementById("topOfPageDiv").style.bottom = '70px';
+			}
+		}, false);
+	</script>
+
+	<div id="fixedDiv" onclick="$('#fixedDiv').hide(); window.scrollTo(0,0); cycleDisplay('menu'); toggleAbilityToScroll(); $('#hamburger_menu').click();"
+	    style="display: none; position: fixed; top: 7px; right: 6px; width: 36px; z-index: 1000000;">
+		<div style="border: solid 1px #FFFFFF; border-radius: 16px; width: 32px; height: 32px; position: absolute; top: 0; left: 0;"></div>
+		<div style="background-color: #000000; width: 32px; height: 32px; border-radius: 17px; opacity: 0.15; position: absolute; top: 1px; left: 1px;"></div>
+		<div style="background-color: #FFFFFF; position: absolute; top: 11px; left: 8px; height: 2px; width: 18px;"></div>
+		<div style="background-color: #FFFFFF; position: absolute; top: 16px; left: 8px; height: 2px; width: 18px;"></div>
+		<div style="background-color: #FFFFFF; position: absolute; top: 21px; left: 8px; height: 2px; width: 18px;"></div>
+	</div>
+
+	<div id="topOfPageDiv" onclick="$('#topOfPageDiv').hide(); window.scrollTo(0,0);" style="display: none; position: fixed; bottom: 70px; right: 6px; width: 36px; z-index: 1000000;">
+		<div style="border: solid 1px #FFFFFF; border-radius: 16px; width: 32px; height: 32px; position: absolute; top: 0; left: 0;"></div>
+		<div style="background-color: #000000; width: 32px; height: 32px; border-radius: 17px; opacity: 0.15; position: absolute; top: 1px; left: 1px;"></div>
+		<div style="background-color: #FFFFFF; position: absolute; top: 14px; left: 7px; height: 2px; width: 12px; -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg);"></div>
+		<div style="background-color: #FFFFFF; position: absolute; top: 14px; left: 15px; height: 2px; width: 12px; -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg);"></div>
+	</div>
+
+</div>
+
+		<!-- Main -->
+		<main class="site--main">
+			<div class="site--container">
+					<div class="layout">
+		<div class="wrapper">
+			<div class="body">
+				<div class="component--breadcrumbs" id="breadcrumbs">
+</div>
+
+<div class="module module--text" style="text-align: left">
+    <h1>PRIVACY POLICY</h1>
+<p><em>Revised 15 March 2019</em></p><p>Some areas of our Site may request or require personal information. This Privacy Policy explains why we request or require that information and what we do that information. <br /><br /><strong>Why we collect personal information</strong> <br /><br />We collect personal information because it helps us deliver a superior level of customer service. It enables us to give you convenient access to our products and services and focus on categories of greatest interest to you. In addition, your personal information helps us keep you posted on the latest product announcements, software updates, special offers, and events that you might like to hear about. We need this information to help us improve our services to you; we want to make it easier to tailor our products and services to your particular needs. We also want you to have the most enjoyable Internet experience possible. With that in mind, we collect personal information and other data in order to:</p>
+
+<ul><li>Make the website easier for you to use by not having to enter information more than once.</li><li>Provide information faster.</li><li>Create content more relevant to you.</li><li>Adjust the website to your personal preferences.</li><li>Help you quickly find products, services or information available from FalconStor.</li><li>Make improvements to the website.</li><li>Assess general trends within the website.</li><li>Alert you to new products and services that we think might be of interest to you. This might be done through direct contact with you or by customized postings on our websites.</li><li>Where you have given us your permission we also might authorize other companies to contact you directly.</li><li>Enable you to use certain customized features and to save information for later visits to the website.</li><li>Create and deliver other similar business-related features and services. Offer you occasional opportunities to provide us with feedback about our products or services.</li></ul>
+<p><strong>Types of information we collect</strong></p>
+
+<p>We collect information to deliver the products and services you request and to help improve your user experience. Some information that we collect from you can be used to identify you or may be used in connection with other information to identify you. This information is called “personal information” and includes your name, postal address, email address, phone number, and payment information. </p>
+
+<p>Other types of information that we collect, and store in log files, includes s internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, operating system, date/time stamp, and clickstream data. <br /><br />We use this information, which does not identify individual users, to analyze trends, to administer the site, to track users' movements around the site and to gather demographic information about our user base as a whole. We will not use this particular information collected to market directly to that person. <br /><br /></p>
+
+<p><strong>When we disclose your information </strong><br /><br />We take your privacy very seriously. Be assured that we do not sell or rent your contact information to other marketers. To help us provide superior service, your personal information may be shared with legal entities within the FalconStor Software group globally who will safeguard it in accordance with FalconStor's privacy policy. There are also times when it may be advantageous for us to make certain personal information about you available to companies that we have a strategic relationship with or that perform work for us to provide products and services to you on our behalf. These companies may help us process information, extend credit, fulfill customer orders, deliver products to you, manage and enhance customer data, provide customer service, assess your interest in our products and services, or conduct customer research or satisfaction surveys. These companies are also obligated to protect your personal information in accordance with these policies. Without such information being made available, it would be difficult for you to purchase products, have products delivered to you, receive customer service, provide us feedback to improve our products and services, or access certain services, offers, and content on the Site. <br /><br />At times we may be required by law or litigation to disclose your personal information. We may also disclose information about you if we determine that for national security, law enforcement, or other issues of public importance, disclosure is necessary. <br /><br /><strong>How we protect your personal information</strong> <br /><br />FalconStor Software operates in many countries throughout the world. Information may be collected in the U.S. and transferred to outside the U.S. in certain instances. <br /><br />We take precautions to protect your personal information, including our policy of allowing access to this personal information to only to those individuals and entities with a need to know. We also use available technology and encryption, when legally required or when appropriate for your protection, to provide a more secure environment and to reduce the chance of unauthorized access. <br /><br />Personal information is stored in a secure environment protected by a combination of physical and technical measures. The information may be kept in separate locations or it may be aggregated into reports, lists or databanks. There is no general public access to this information. In some cases, the personal information may be encrypted before you conduct your transaction, using appropriate secure technology. If you send us correspondence such as email or postal mail, or contact us by phone, we may collect such information in a file specific to you. These files will also be stored in secure locations. <br /><br />Always keep in mind, however, that the Internet is not a secure system and you should always be cautious about the information you disclose while you are online. Although we take steps to protect your personal information against loss, misuse and alteration, as is the case with all computer networks linked to the Internet, we cannot absolutely guarantee the security of your personal information provided over the Internet and we will not be responsible for loss, misuse or alteration of the Personal Information. <br /><br /><strong>Cookies and other technologies</strong> <br /><br />As is standard practice on many corporate websites, our Site uses "cookies" and other technologies to help us understand which parts of our websites are the most popular, where our visitors are going, and how much time they spend there. For more information about FalconStor’s and its partners’ use of cookies, please see our full Cookie Policy.<br /><br /><strong>What is the process for reviewing and correcting information?</strong> <br /><br />You may request a copy of the personal information that we have collected. You may also correct any inaccuracies contained in this Personal Information. We do not typically charge for information requests, however, we may charge you a reasonable fee to cover our costs if your information request is particularly complex or excessive. We will require proof of your identity. Users in the EU have a right to the receive following information: </p>
+
+<ul><li>the personal information pertaining to you that is being processed;</li><li>who has access to your personal information; and</li><li>how your personal information is being used.</li></ul><p>Please address requests to Web Service Representative, FalconStor Software, Inc., 701 Brazos Street, Suite 400, Austin, Texas 78701 or contact <a href="https://www.falconstor.com/contact">our website administrator.</a> Under most circumstances, we will provide you with a readable copy of the personal information within 30 days of your request and we strive acknowledge your request within 14 days. You may challenge the data that we hold about you, and, where appropriate, you may have the data corrected, completed, or deleted. In some instances permitted by law, we may refuse to provide you with a copy of the personal information or change the data, but we will give you reasons for our refusal. <br /><br />We also welcome your questions, comments and suggestions about our Privacy Policy. Please send your comments to <a href="https://www.falconstor.com/contact">our website administrator.</a> <br /><br />We may update this privacy policy from time to time. When we change the policy in a material way a notice will be posted on our website along with the updated privacy policy. <br /><br /><strong>Information Retention</strong></p>
+
+<p>FalconStor will not keep your personal data longer than we need to. How long this is depends on several factors including: why we collected it in the first place; how old it is; whether there is a legal/regulatory reason to keep it; and whether we need it to protect you or us. </p>
+
+<p>If you are an EU user, the personal data we collect from you may be transferred to, and stored at, a destination outside the EU. It may also be processed by staff operating outside the EU. Such staff maybe engaged in, among other things, the fulfilment of your order, the processing of your payment details and the provision of support services. By submitting your personal data, you agree to this transfer, storing, and/or processing. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with the appropriate EU regulations.</p>
+
+<p><strong>Linked Sites</strong> <br /><br />Our privacy policy only covers our website at <a href="http://FalconStor.com">http://FalconStor.com</a> and any subdomains. e.g., http://community.FalconStor.co... areas of our website might contain links to third party sites. We do not control the linked sites and we are not responsible for their privacy practices. We suggest that you check the privacy policies of these sites before providing any personal information to them. <br /><br /><strong>Trademark Notices </strong><br /><br />All registered and unregistered trademarks, names and logos used on the Site are used with the permission of FalconStor or the relevant third party owners.</p>
+<ul><li>Microsoft Exchange is a registered trademark of Microsoft Corporation.</li><li>Oracle is a registered trademark of Oracle Corporation.</li><li>Sybase is a registered trademark of Sybase Corporation.</li><li>Lotus Notes, DB2, and Informix are registered trademarks of IBM Corporation. Domino is a trademark of IBM Corporation.</li></ul><p><strong>Business Transactions</strong></p>
+
+<p>If FalconStor is involved in a merger, acquisition, asset sale, bankruptcy or reorganization, your personal information may be shared with the parties on the other side of the transaction, as well as retained by us. By providing us with your personal information, you consent to that transfer.</p>
+
+<p><strong>Communications/Opt-Out</strong></p>
+
+<p>We may use your personal information to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. If you wish to opt-out of receiving online communications from FalconStor, our partners, or our third-party providers, you can choose the unsubscribe or opt-out link contained in email correspondence we send to you, and you will no longer receive communications. Please allow a few days for us to process requests to unsubscribe.<br /><br /></p>
+<p><a href="/contact"></a></p>
+</div>
+
+
+			</div>
+			<div class="sidebar">
+				
+                                                                                                                        
+    
+<div class="component--sidebar-list sidenavigation">
+	<div class="sidebar_heading_row">Privacy &amp; Legal</div>
+	<div class="sidenavigationmenu">
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/terms-of-use">Terms of Use </a>
+			</div>  
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/privacy-policy">Privacy Policy </a>
+			</div>  
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/candidate-privacy-policy">Candidate Privacy Policy </a>
+			</div>  
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/end-user-license-agreement">End User License Agreement </a>
+			</div>  
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/falconstor-data-mastery-platform-end-user-license-agreement">FalconStor Data Mastery Platform End User License Agreement </a>
+			</div>  
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/open-source-licensing">Open Source Licensing </a>
+			</div>  
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/trademark-usage">Trademark Usage </a>
+			</div>  
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/google-translate-disclaimer">Google Translate Disclaimer </a>
+			</div>  
+					<div class="sidebar_row">
+				<a href="https://www.falconstor.com/legal/cookie-policy">Cookie Policy </a>
+			</div>  
+		
+	</div>
+	<div class="sidebar_end">
+	</div>
+</div>
+
+			</div>
+		</div>
+	</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<div class="device--desktop">
+
+	<div id="footer_wrapper_start"></div>
+
+
+	<div id="footer_wrapper" style="height: 230px;">
+
+		<div id="footer">
+
+			<div style="float: left; padding-top: 7px; width: 40%;">
+
+				<div style="font-family: KelsonSansRegular; font-size: 20pt; font-weight: normal; margin-bottom: 22px;">DISCOVER MORE</div>
+
+				<div style="float: left; line-height: 220%; width: 55%;">
+					
+					<a href="/products" style="font-size: 12pt;">Products</a><br />
+					
+					<a href="/customers" style="font-size: 12pt;">Customers</a><br />
+					<a href="/about" style="font-size: 12pt;">Company</a><br />
+					<a href="/partners" style="font-size: 12pt;">Partners</a><br />
+					<a href="/document-library" style="font-size: 12pt;">Resources</a><br />
+					<a href="/support" style="font-size: 12pt;">Support</a><br />
+				</div>
+				<div style="float: left; line-height: 220%; width: 45%;">
+					<a href="/investors" style="font-size: 12pt;">Investors</a><br />
+					<a href="/news" style="font-size: 12pt;">News</a><br />
+					<a href="/blog" style="font-size: 12pt;">Blog</a><br />
+					<a href="/careers" style="font-size: 12pt;">Careers</a><br />
+					
+					<a href="/contact" style="font-size: 12pt;">Contact</a><br />
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+
+			<div style="float: left; width: 26%;">&nbsp;</div>
+
+			<div style="float: left; padding-top: 7px; width: 34%;">
+
+				<div style="font-family: KelsonSansRegular; font-size: 20pt; font-weight: normal; margin-bottom: 35px;">LET'S CONNECT</div>
+
+				
+									<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+						<a href="https://twitter.com/FalconStor" target="_blank">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter-square" class="svg-inline--fa fa-twitter-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path></svg>
+						</a>
+					</div>
+
+									<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+						<a href="https://www.linkedin.com/company/falconstor-software" target="_blank">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+						</a>
+					</div>
+
+									<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+						<a href="https://www.youtube.com/user/FalconStor" target="_blank">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube-square" class="svg-inline--fa fa-youtube-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"></path></svg>
+						</a>
+					</div>
+
+									<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+						<a href="https://www.facebook.com/falconstorsoftwareinc/" target="_blank">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" class="svg-inline--fa fa-facebook-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg>
+						</a>
+					</div>
+
+				
+
+
+				<div style="clear: both; height: 32px;"></div>
+
+				<div style="background-color: #6E7880; margin-bottom: 10px; height: 1px; width: 100%;"></div>
+
+				<div style="float: left; margin: 5px 15px 0 0;"><a href="/"><img alt="FalconStor Software" src="/images/falconstor-logo.png" style="width: 170px; padding-top: 17px;" /></a></div>
+
+				<div style="float: left; font-size: 1.6em; margin-top: 6px;">
+	<div itemscope="" itemtype="http://schema.org/Organization">
+
+
+
+		<div style="display: none;"><a itemprop="url" href="https://falconstor.com/"><img itemprop="logo" alt="FalconStor" src="/images/falconstor-logo.png" /></a></div>
+				<a class="phone_symbol_link" href="tel:+1.631.777.5188"><span class="lnr lnr-phone-handset"></span></a>
+				<span itemprop="telephone">+1.631.777.5188</span>
+
+		&nbsp;
+	</div>
+	</div>
+
+				<div style="clear: both; height: 30px;"></div>
+			</div>
+
+			<div style="clear: both; height: 30px;"></div>
+
+			<div style="float: left; font-size: 10pt; width: 66%;">
+				&copy; 2020 FalconStor Software. All rights reserved.
+			</div>
+
+			<div style="float: left; font-size: 10pt; width: 34%;">
+
+
+
+		
+	<a href="/legal/terms-of-use">Privacy Policy &amp; Legal</a>
+
+			</div>
+
+			<div style="clear: both; height: 30px;"></div>
+		</div>
+	</div>
+
+
+	<!-- print footer -->
+	<div id="footerprint">
+	<!-- heading -->
+	<div style="font-family: KelsonSansRegular; font-size: 20pt; font-weight: normal; margin-bottom: 10px;">
+		CONTACT US AROUND THE GLOBE
+	</div>
+	<!-- float left -->
+	<div style="border-right: solid 1px #DADCDF; color: #5A5B5D; float: left; font-size: 11pt; margin-right: 1%; width: 31%;">
+		<strong>Corporate Headquarters</strong>
+		<br />
+		701 Brazos Street, Suite 400
+		<br />
+		Suite 1300
+		<br />
+		Austin, Texas 78701
+		<br />
+		Tel: +1.631.777.5188
+		<br />
+		salesinfo@falconstor.com
+	</div>
+	<!-- float left -->
+	<div style="border-right: solid 1px #DADCDF; color: #5A5B5D; float: left; font-size: 11pt; margin-left: 1%; margin-right: 1%; width: 31%;">
+		<strong>Europe Headquarters</strong>
+		<br />
+		Landsberger Str. 312
+		<br />
+		80687 Munich, Germany
+		<br />
+		Tel: +49 (0) 89.41615321.10
+		<br />
+		salesemea@falconstor.com
+	</div>
+	<!-- float left -->
+	<div style="float: left; color: #5A5B5D; font-size: 11pt; margin-left: 1%; width: 31%;">
+		<strong>Asia Headquarters</strong>
+		<br />
+		Room 1901, PICC Office Tower,
+		<br />
+		No. 2, Jian Guo Men Wai Street
+		<br />
+		Chaoyang District
+		<br />
+		Beijing, 100022
+		<br />
+		China
+		<br />
+		Tel: +86.10.6530.9505
+		<br />
+		salesasia@falconstor.com
+	</div>
+	<!-- clear both -->
+	<div style="clear: both; height: 10px;">
+		&nbsp;
+	</div>
+	<!-- small gray text -->
+	<div style="color: #5A5B5D; font-size: 7pt;">
+		Information in this document is provided &ldquo;AS IS&rdquo; without warranty of any kind, and is subject to change without notice by FalconStor, which assumes no responsibility for any errors or claims herein. Copyright &copy; 2020 FalconStor Software. All rights reserved. FalconStor Software and FalconStor are registered trademarks of FalconStor Software, Inc. in the United States and other countries. All other company and product names contained herein are or may be trademarks of the respective holder.
+	</div>
+	</div>
+	<!-- footer for the print version -->
+	<div id="footerprintpage">
+	<!-- logo (float left) -->
+	<div style="float: left; padding-top: 12px; width: 153px;">
+		<a href="/"><img alt="FalconStor Software" src="/images/falconstor-logo.png" style="width: 170px; padding-top: 17px;" /></a>
+	</div>
+	<!-- clear both -->
+	<div class="clear_both">
+		&nbsp;
+	</div>
+	</div>
+
+</div>
+
+<div class="device--mobile">
+
+	<div id="footerprimarywrapper">
+
+		<div id="footerprimary">
+			<div style="font-family: KelsonSansRegular; font-size: 20pt; font-weight: normal; margin-bottom: 22px;">DISCOVER MORE</div>
+
+			<div style="float: left; line-height: 220%; width: 55%;">
+				<div style="margin-bottom: 4px;"><a href="/why-falconstor" style="font-size: 12pt;">Why Falconstor</a></div>
+				<div style="margin-bottom: 4px;"><a href="/products" style="font-size: 12pt;">Products</a></div>
+				<div style="margin-bottom: 4px;"><a href="/solutions" style="font-size: 12pt;">Solutions</a></div>
+				<div style="margin-bottom: 4px;"><a href="/customers" style="font-size: 12pt;">Customers</a></div>
+				<div style="margin-bottom: 4px;"><a href="/about" style="font-size: 12pt;">Company</a></div>
+				<div style="margin-bottom: 0px;"><a href="/partners" style="font-size: 12pt;">Partners</a></div>
+			</div>
+			<div style="float: left; line-height: 220%; width: 45%;">
+				<div style="margin-bottom: 4px;"><a href="/investors" style="font-size: 12pt;">Investors</a></div>
+				<div style="margin-bottom: 4px;"><a href="/news" style="font-size: 12pt;">News</a></div>
+				<div style="margin-bottom: 4px;"><a href="/blog" style="font-size: 12pt;">Blog</a></div>
+				<div style="margin-bottom: 4px;"><a href="/careers" style="font-size: 12pt;">Careers</a></div>
+				<div style="margin-bottom: 4px;"><a href="/document-library" style="font-size: 12pt;">Resources</a></div>
+				<div style="margin-bottom: 4px;"><a href="/support" style="font-size: 12pt;">Support</a></div>
+				<div style="margin-bottom: 0px;"><a href="/contact" style="font-size: 12pt;">Contact</a></div>
+			</div>
+
+			<div style="clear: both; height: 40px;"></div>
+
+			<div style="font-family: KelsonSansRegular; font-size: 20pt; font-weight: normal; margin-bottom: 35px;">LET'S CONNECT</div>
+
+								<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+						<a href="https://twitter.com/FalconStor" target="_blank">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter-square" class="svg-inline--fa fa-twitter-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path></svg>
+						</a>
+					</div>
+
+									<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+						<a href="https://www.linkedin.com/company/falconstor-software" target="_blank">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+						</a>
+					</div>
+
+									<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+						<a href="https://www.youtube.com/user/FalconStor" target="_blank">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube-square" class="svg-inline--fa fa-youtube-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"></path></svg>
+						</a>
+					</div>
+
+									<div style="float: left; margin-right: 27px; padding-top: 0px; width: 32px;">
+						<a href="https://www.facebook.com/falconstorsoftwareinc/" target="_blank">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" class="svg-inline--fa fa-facebook-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg>
+						</a>
+					</div>
+
+				
+
+
+			<div style="clear: both; height: 32px;"></div>
+
+			<div style="background-color: #6E7880; margin-bottom: 20px; height: 1px; width: 100%;"></div>
+
+			<div style="margin: 4px 0 0 0;"><a href="/"><img alt="FalconStor Software" src="/images/falconstor-logo.png" style="width: 170px; padding-top: 17px; height: auto;"/></a></div>
+
+			<div style="font-size: 18pt; margin-top: 12px;">
+	<div itemscope="" itemtype="http://schema.org/Organization">
+
+
+
+		<div style="display: none;"><a itemprop="url" href="https://falconstor.com/"><img itemprop="logo" alt="FalconStor" src="/images/falconstor-logo.png" /></a></div>
+				<a class="phone_symbol_link" href="tel:+1.631.777.5188"><span class="lnr lnr-phone-handset"></span></a>
+				<span itemprop="telephone">+1.631.777.5188</span>
+
+		&nbsp;
+	</div>
+	</div>
+
+			<div style="line-height: 200%; padding-top: 16px;">
+
+
+
+	
+	<a href="/legal/terms-of-use">Privacy Policy &amp; Legal</a>
+	<br />
+
+				&copy; 2020 FalconStor Software. All rights reserved.
+			</div>
+		</div>
+	</div>
+
+</div>
+
+	
+<script type="application/ld+json">{"@context":"http://schema.org","@graph":[{"@type":"WebPage","author":{"@id":"https://www.falconstor.com/#identity"},"copyrightHolder":{"@id":"https://www.falconstor.com/#identity"},"copyrightYear":"2018-07-31T16:09:00-05:00","creator":{"@id":"https://www.falconstor.com/#creator"},"dateModified":"2019-03-15T11:49:19-05:00","datePublished":"2018-07-31T16:09:00-05:00","description":"FalconStor is a modern, comprehensive, and easy-to-use data management software platform for your most demanding storage and data use cases.","headline":"Privacy Policy","image":{"@type":"ImageObject","url":"https://www.falconstor.com/assets/images/_1200x630_crop_center-center_82_none/logo_color_fs.jpg?mtime=1554852031"},"inLanguage":"en-us","mainEntityOfPage":"https://www.falconstor.com/legal/privacy-policy","name":"Privacy Policy","publisher":{"@id":"https://www.falconstor.com/#creator"},"url":"https://www.falconstor.com/legal/privacy-policy"},{"@id":"https://www.falconstor.com/#identity","@type":"Corporation","address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Austin","addressRegion":"Texas","postalCode":"78701","streetAddress":"701 Brazos Street, Suite 400"},"contactPoint":[{"@type":"ContactPoint","contactType":"sales","telephone":"6317735859"},{"@type":"ContactPoint","contactType":"customer support","telephone":"6317773332"}],"description":"FalconStor is a data management software company based in Austin, Texas.","email":"salesinfo@falconstor.com","image":{"@type":"ImageObject","height":"79","url":"https://www.falconstor.com/assets/images/logo_color.jpg","width":"1102"},"logo":{"@type":"ImageObject","height":"43","url":"https://www.falconstor.com/assets/images/_600x60_fit_center-center_82_none/2654/logo_color.png?mtime=1554850366","width":"600"},"name":"FalconStor Software Inc.","sameAs":["https://twitter.com/FalconStor","https://en.wikipedia.org/wiki/FalconStor_Software","https://www.linkedin.com/company/falconstor-software/","https://www.youtube.com/user/FalconStor/","https://vimeo.com/falconstorsoftware"],"telephone":"6317775188","tickerSymbol":"FALC","url":"https://www.falconstor.com/"},{"@id":"https://www.falconstor.com/#creator","@type":"Corporation","address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Austin","addressRegion":"Texas","postalCode":"78701","streetAddress":"701 Brazos Street, Suite 400"},"contactPoint":[{"@type":"ContactPoint","contactType":"sales","telephone":"6317735859"},{"@type":"ContactPoint","contactType":"customer support","telephone":"6317773332"}],"description":"FalconStor is a data management software company based in Austin, Texas.","email":"salesinfo@falconstor.com","image":{"@type":"ImageObject","height":"79","url":"https://www.falconstor.com/assets/images/logo_color.jpg","width":"1102"},"logo":{"@type":"ImageObject","height":"43","url":"https://www.falconstor.com/assets/images/_600x60_fit_center-center_82_none/2654/logo_color.png?mtime=1554850366","width":"600"},"name":"FalconStor Software Inc.","telephone":"6317775188","tickerSymbol":"FALC","url":"https://www.falconstor.com/"},{"@type":"BreadcrumbList","description":"Breadcrumbs list","itemListElement":[{"@type":"ListItem","item":"https://www.falconstor.com/","name":"Home","position":1},{"@type":"ListItem","item":"https://www.falconstor.com/legal","name":"Legal","position":2},{"@type":"ListItem","item":"https://www.falconstor.com/legal/privacy-policy","name":"Privacy Policy","position":3}],"name":"Breadcrumbs"}]}</script></body>
+
+</html>

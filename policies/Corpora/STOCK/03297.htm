@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" ng-app="hawaiianApp">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"24f99e0f02","applicationID":"36906039,36090227,36090228","transactionName":"Y1VSNkJSWRUEAk1eX1offTRzHGQPEQRaWEJRc18MREFYCgkESxh5WlRVGg==","queueTime":1,"applicationTime":506,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"24f99e0f02",applicationID:"36906039"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+
+	<script src="/scriptlog/hascriptloggerv2.js"></script>
+
+	
+	<title>Privacy Policy | Hawaiian Airlines</title>
+	
+
+	<meta name="description" content="Please read this Privacy Policy carefully so that you understand what personally-identifiable information we collect through HawaiianAirlines.com.">
+	<meta name="keywords" content="hawaiian airlines privacy policy">
+	<meta name="google-site-verification" content="tfx6zxzMJzq9_Yu3IRgsQuizktXMD3PIao0EodS0QJ4">
+
+	<meta property="og:url" content="http://www.hawaiianairlines.com/legal/privacy-policy">
+	<meta property="og:title" content="Privacy Policy">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="http://www.hawaiianairlines.com">
+	<meta property="og:site_name" content="Hawaiian Airlines">
+	<meta property="og:see_also" content="www.hawaiianairlines.com">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="http://www.hawaiianairlines.com/legal/privacy-policy">
+	<meta name="twitter:title" content="Privacy Policy">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="http://www.hawaiianairlines.com">
+
+  <meta name="viewport" content="width=1024"/>
+
+
+
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+
+	<style>
+		.ng-cloak, [ng-cloak] {
+			display: none !important;
+		}
+	</style>
+
+	
+
+	
+	
+		<script>
+			(function () {
+					// Boomerang Loader Snippet version 10
+					if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) return;
+					window.BOOMR = window.BOOMR || {};
+					window.BOOMR.snippetExecuted = true;
+					var dom, doc, where, iframe = document.createElement("iframe"), win = window;
+
+					function boomerangSaveLoadTime(e) {
+							win.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+					}
+
+					if (win.addEventListener) {
+							win.addEventListener("load", boomerangSaveLoadTime, false);
+					} else if (win.attachEvent) {
+							win.attachEvent("onload", boomerangSaveLoadTime);
+					}
+
+					iframe.src = "javascript:void(0)";
+					iframe.title = "";
+					iframe.role = "presentation";
+					(iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+					where = document.getElementsByTagName("script")[0];
+					where.parentNode.insertBefore(iframe, where);
+
+					try {
+							doc = iframe.contentWindow.document;
+					} catch (e) {
+							dom = document.domain;
+							iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+							doc = iframe.contentWindow.document;
+					}
+
+					doc.open()._l = function() {
+							var js = this.createElement("script");
+							if (dom) {
+									this.domain = dom;
+							}
+							js.id = "boomr-if-as";
+							js.src = "//c.go-mpulse.net/boomerang/HD79Z-86RRK-D62SL-R5XLG-WLWAE";
+							BOOMR_lstart = new Date().getTime();
+							this.body.appendChild(js);
+					};
+					doc.write('<bo' + 'dy onload="document._l();">');
+					doc.close();
+			})();
+		</script>
+	
+        <link rel="stylesheet" href="//css.s-hawaiianairlines.com/Styles/css/dist/global.19.12.19.95198-rel.min.css" />
+
+	
+	<script>window.tlsVersion="tls1.2";window.onload=function(){var e=document.createElement("link");e.rel="stylesheet",e.href="//css.s-hawaiianairlines.com/Styles/css/dist/print-ha.19.12.19.95198-rel.min.css",e.media="print",document.getElementsByTagName("head")[0].appendChild(e)}</script>
+
+	
+	
+<meta name="VIcurrentDateTime" content="637149198634510622" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+
+
+	<!--CustomEvent-->
+	<script>
+		!function () { function t(t, e) { e = e || { bubbles: !1, cancelable: !1, detail: void 0 }; var n = document.createEvent("CustomEvent"); return n.initCustomEvent(t, e.bubbles, e.cancelable, e.detail), n } return "function" == typeof window.CustomEvent ? !1 : (t.prototype = window.Event.prototype, void (window.CustomEvent = t)) }();
+	</script>
+
+<!-- DTM Container Do Not Remove -->
+<script src="//assets.adobedtm.com/d26c540d89e68fd818f4a254d7430289252c91d1/satelliteLib-1d702d8992390d9926b4fa7be332f3ee86cd62f6.js"></script>
+<script>
+    !function(){if(/^\/deals-and-offers/gi.test(location.pathname)||/^\/special-offers/gi.test(location.pathname)){(/\/a\//.test(location.pathname)||/\/b\//.test(location.pathname))&&window.setTimeout(function(){var a=document.createElement("link");a.rel="canonical",a.href=location.href.replace("/a/","/").replace("/b/","/").replace(/-a$/gi,"").replace(/-b$/gi,"").replace(/-a\/$/gi,"").replace(/-b\/$/gi,""),document.head.appendChild(a)},50);var a=["/deals-and-offers","/deals-and-offers/bay-area-to-hawaii-flights-sale","/deals-and-offers/bay-area-to-hawaii-flights-sale-one-way","/deals-and-offers/beijing-to-hawaii-sale","/deals-and-offers/california-to-hawaii-flights-sale","/deals-and-offers/california-to-hawaii-OW-fares","/deals-and-offers/california-to-hawaii-RT-fares","/deals-and-offers/hawaii-to-international","/deals-and-offers/hawaii-to-japan-sale-fares","/deals-and-offers/las-vegas-to-hawaii-flights-sale","/deals-and-offers/los-angeles-to-hawaii-flights-sale","/deals-and-offers/los-angeles-to-hawaii-flights-sale-one-way","/deals-and-offers/neighbor-island-flights-sale","/deals-and-offers/new-york-to-hawaii-flights-sale","/deals-and-offers/phoenix-to-hawaii-flights-sale","/deals-and-offers/portland-to-hawaii-flights-sale","/deals-and-offers/san-diego-to-hawaii-flights-sale","/deals-and-offers/seasonal-flights-to-hawaii-sale","/deals-and-offers/seasonal-flights-to-mainland-sale","/deals-and-offers/seattle-to-hawaii-flights-sale","/special-offers"],e=["hawaii/","bay-area-to-honolulu-fares","bay-area-to-honolulu-fares","beijing-to-honolulu-routes","california-to-honolulu-fares","california-to-honolulu-fares","california-to-honolulu-fares","hawaii/","japan-to-honolulu-routes","las-vegas-to-honolulu-fares","los-angeles-to-honolulu-fares","los-angeles-to-honolulu-fares","oahu-routes","new-york-city-to-honolulu-fares","phoenix-to-honolulu-fares","portland-to-honolulu-fares","san-diego-to-honolulu-fares","hawaii/","hawaii/","seattle-to-honolulu-fares","hawaii/"],o=(location.pathname.replace(/\/$/,""),a.indexOf(location.pathname.replace(/\/$/,"")));if(o>=0){var l=document.createElement("link");l.rel="canonical",l.href="https://www.hawaiianairlines.com/deals-and-offers/flights/"+e[o],document.head.appendChild(l)}}}();
+</script>
+<style>
+.WW_LandingPage_HeaderForm { display: none; }
+.WW_LandingPage_Primary_Message.last { opacity: 0; }
+</style>
+
+
+  <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+  <script>!function(e){var a="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,a="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="HD79Z-86RRK-D62SL-R5XLG-WLWAE",function(){function n(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var i,o,r,_=document.createElement("iframe");if(e[t])e[t]("load",n,!1);else if(e.attachEvent)e.attachEvent("onload",n);_.src="javascript:void(0)",_.title="",_.role="presentation",(_.frameElement||_).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(_,r);try{o=_.contentWindow.document}catch(O){i=document.domain,_.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=_.contentWindow.document}o.open()._l=function(){var e=this.createElement("script");if(i)this.domain=i;e.id="boomr-if-as",e.src=a+"HD79Z-86RRK-D62SL-R5XLG-WLWAE",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a=""=="true"?1:0,t="",n="jc3avzqxakxuoxrcr23q-f-f76b17bf0-clientnsv4-s.akamaihd.net",i={"ak.v":25,"ak.cp":"448570","ak.ai":parseInt("160547",10),"ak.ol":"0","ak.cr":28,"ak.ipv":4,"ak.proto":"","ak.rid":"cb681f27","ak.r":33979,"ak.a2":a,"ak.m":"x","ak.n":"essl","ak.bpcip":"72.182.10.0","ak.cport":55937,"ak.gh":"96.7.75.46","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1579323063"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body class="en">
+	
+
+	
+
+	<div id="mainContentWrap" aria-hidden="{{ modalactive || false }}">
+		
+
+
+
+<!-- Layout: New Main -->
+
+
+<script>
+    var enableUSSite = 'True';
+    var enableAUSite = 'True';
+    var enableNZSite = 'True';
+	var languagePath = 'en';
+    var isLoggedIn = false;
+    var acctType = '';
+    var acctNo = null;
+    var acctIsBCUSCardHolder = false;
+	var isExpertBookingOptIn = false;
+	var haMilesEliteStatus = '';
+	var areaName = '';
+	var sitecoreContextId = '{13F11E9D-0591-4865-8581-F4D4934A07CD}';
+</script>
+    <div ha-global-alerts ha-reveal-on-load class="ha-global-alerts">
+    </div>
+	<div ha-global-header class="ha-global-header global-header">
+		<nav role="navigation">
+    <div class="containerPartialBleed">
+        <a href="" id="skipToContent" class="sr-only" ng-click="skipToContent()">Skip to Content</a>
+        <ul class="nav-utility-list">
+            <li class="nav-utility-li nav-utility-li--logo">
+                <a href="/" class="nav-logo text-hide">Hawaiian Airlines</a>
+            </li>
+                    <li class="nav-utility-li nav-utility--legal">
+                        <a href="https://hawaiianair.custhelp.com">Help Center</a>
+                    </li>
+                    <li class="nav-utility-li nav-utility--legal">
+                        <a href="/legal/list-of-all-fees">Optional Fees</a>
+                    </li>
+                    <li class="nav-utility-li nav-utility--legal">
+                        <a href="/contact-us">Contact Us</a>
+                    </li>
+            <li class="nav-utility-li nav-utility-li--search">
+                <a href="" class="search link" ng-click="toggleSearch()" ng-keydown="'$event.which === 13 ? toggleSearch()'">
+                    <i class="ha-icon fontIcon16-search"></i>
+                    <span class="label">Search</span>
+                </a>
+            </li>
+            
+            <li class="parent region nav-utility-li nav-utility-li--region" ng-class="{ 'is-open': regionSelectMenuIsOpen }" aria-label="select language">
+                <a href="" class="region link" ng-click="toggleRegion()" aria-haspopup="true" aria-expanded="{{!!regionSelectMenuIsOpen}}" aria-label="select language">
+                    <i class="icon-flag-26--usa"></i>
+                    <span aria-hidden="true" class="label">USD</span>
+                </a>
+                <ul class="flag-list" role="menu">
+                            <li class="flag-li" role="menuitem" ng-show="regionSelectMenuIsOpen">
+								<a class="region flag-link" href="" ng-click="navSelectCountry('en','')">
+									<span class="label">United States (USD)</span>
+									<i class="icon-flag-26--usa"></i>
+								</a>
+                            </li>
+                            <li class="flag-li" role="menuitem" ng-show="regionSelectMenuIsOpen">
+								<a class="region flag-link" href="" ng-click="navSelectCountry('ja-JP','')">
+									<span class="label" lang="ja">日本 (JPY)</span>
+									<i class="icon-flag-26--japan"></i>
+								</a>
+                            </li>
+                            <li class="flag-li" role="menuitem" ng-show="regionSelectMenuIsOpen">
+								<a class="region flag-link" href="" ng-click="navSelectCountry('ko-KR','')">
+									<span class="label" lang="ko">한국어 (KRW)</span>
+									<i class="icon-flag-26--southkorea"></i>
+								</a>
+                            </li>
+                            <li class="flag-li" role="menuitem" ng-show="regionSelectMenuIsOpen">
+								<a class="region flag-link" href="" ng-click="navSelectCountry('en-AU','')">
+									<span class="label">Australia (AUD)</span>
+									<i class="icon-flag-26--australia"></i>
+								</a>
+                            </li>
+                            <li class="flag-li" role="menuitem" ng-show="regionSelectMenuIsOpen">
+								<a class="region flag-link" href="" ng-click="navSelectCountry('en-NZ','')">
+									<span class="label">New Zealand (NZD)</span>
+									<i class="icon-flag-26--newzealand"></i>
+								</a>
+                            </li>
+                            <li class="flag-li" role="menuitem" ng-show="regionSelectMenuIsOpen">
+								<a class="region flag-link" href="" ng-click="navSelectCountry('zh-CN','')">
+									<span class="label" lang="zh-cn">中国 (CNY)</span>
+									<i class="icon-flag-26--china"></i>
+								</a>
+                            </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div id="searchModalTemplate" hidden>
+    <form role="dialog" ng-submit="submitSearch()" class="modal-search">
+        <section>
+            <i aria-hidden="true" class="search-icon ha-icon fontIcon16-search"></i>
+            <input type="text"
+                   aria-label="Type your question here"
+                   role="search"
+                   id="help-search"
+                   class="search search-textarea bodycopy-sans-1"
+                   ng-model="searchText"
+                   ng-change="search()"
+                   ng-keypress="'$event.which === 13 ? submitSearch()'"
+                   placeholder="Type your question here" />
+            <button type="submit" class="search btn-primary search-submit-btn disabled"><span class="sr-only">Disabled</span>Search</button>
+            <a href="" class="search search-modal-icon" ng-click="$modalCancel()">
+                <i aria-hidden="true" class="close ha-icon icon-close"></i>
+                <span class="sr-only">close</span>
+            </a>
+        </section>
+        <aside>
+            <h5>Frequently Asked Questions </h5>
+            <ul>
+                <li><a class="search" href="http://hawaiianair.custhelp.com/app/answers/detail/a_id/1890">What do I need to do to change or cancel my reservation?</a></li>
+                <li><a class="search" href="http://hawaiianair.custhelp.com/app/answers/detail/a_id/80">How much are baggage fees on my flight?</a></li>
+                <li><a class="search" href="http://hawaiianair.custhelp.com/app/answers/detail/a_id/957">How do I check in online?</a></li>
+            </ul>
+            <a class="search btn-secondary btn-sm" href="http://hawaiianair.custhelp.com/">Read more FAQs</a>
+        </aside>
+    </form>
+</div>
+
+		
+
+<nav ha-primary-nav class="ha-primary-nav">
+	<div class="nav-primary">
+		<div class="containerPartialBleed">
+			<ul class="nav-primary-list" role="menubar">
+				<li class="nav-li" role="menuitem" ng-class="primaryNavtrayIsOpen ? currentSection === 'book' ? 'is-active' : 'is-secondary' : ''">
+					<a href="" ng-click="toggleNavigation('book')" class="book ha-nav nav-li-inner tray-closed" aria-haspopup="true" aria-expanded="{{!!primaryNavtrayIsOpen && currentSection === 'book'}}" aria-label="Book">
+						<span class="ha-nav nav-li-inner-title">Book</span>
+					</a>
+					<div class="nav-pane book init">
+								<a href="/book/flights" ng-if="currentSection === 'book'">
+									<i class="ha-icon fontIcon40-flights"></i>
+									<span>Flights</span>
+								</a>
+								<a href="/destinations" ng-if="currentSection === 'book'">
+									<i class="ha-icon fontIcon40-routes"></i>
+									<span>Routes</span>
+								</a>
+								<a href="/book/hotels" ng-if="currentSection === 'book'">
+									<i class="ha-icon fontIcon40-hotel-tab"></i>
+									<span>Hotels</span>
+								</a>
+								<a href="/book/car-rentals" ng-if="currentSection === 'book'">
+									<i class="ha-icon fontIcon40-car-tab"></i>
+									<span>Transportation</span>
+								</a>
+								<a href="/book/vacation-packages" ng-if="currentSection === 'book'">
+									<i class="ha-icon fontIcon40-packages"></i>
+									<span>Bundle Deals</span>
+								</a>
+								<a href="/book/activities-and-cruises" ng-if="currentSection === 'book'">
+									<i class="ha-icon fontIcon40-cars"></i>
+									<span>Activities &amp; Cruises</span>
+								</a>
+					</div>
+				</li>
+				<li class="nav-li" role="menuitem" ng-class="primaryNavtrayIsOpen ? currentSection === 'manage' ? 'is-active' : 'is-secondary' : ''">
+					<a href="" ng-click="toggleNavigation('manage')" class="manage ha-nav nav-li-inner tray-closed" aria-haspopup="true" aria-expanded="{{!!primaryNavtrayIsOpen && currentSection === 'manage'}}" aria-label="Manage Flights">
+						<span class="ha-nav nav-li-inner-title">Manage Flights</span>
+					</a>
+					<div class="nav-pane manage init">
+								<a href="/manage/check-in" ng-if="currentSection === 'manage'">
+									<i class="ha-icon fontIcon40-checkIn"></i>
+									<span>Check-In</span>
+								</a>
+								<a href="/manage/flight-status-by-flight-number" ng-if="currentSection === 'manage'">
+									<i class="ha-icon fontIcon40-flightStatus"></i>
+									<span>Flight Status</span>
+								</a>
+								<a href="/my-account/my-trips/manage-trip-itinerary" ng-if="currentSection === 'manage'">
+									<i class="ha-icon fontIcon40-myTrips"></i>
+									<span>My Trips</span>
+								</a>
+								<a href="/manage/my-receipts" ng-if="currentSection === 'manage'">
+									<i class="ha-icon fontIcon40-receipts"></i>
+									<span>My Receipts</span>
+								</a>
+						<aside ng-if="currentSection === 'manage'">
+							<h4>
+								<style type="text/css">
+div.col-6.col-offset-6.deal span{text-shadow:1px 1px 4px rgba(0,0,0,0.75)}
+</style>
+
+<p>Wondering if your carry-on meets size and weight requirements?</p>
+
+							</h4>
+							<a class="link" href="http://hawaiianair.custhelp.com/app/answers/detail/a_id/2815">Click here for baggage fees and restrictions</a>
+						</aside>
+					</div>
+				</li>
+				<li class="nav-li" role="menuitem" ng-class="primaryNavtrayIsOpen ? currentSection === 'airline' ? 'is-active' : 'is-secondary' : ''">
+					<a href="" ng-click="toggleNavigation('airline')" class="airline ha-nav nav-li-inner tray-closed" aria-haspopup="true" aria-expanded="{{!!primaryNavtrayIsOpen && currentSection === 'airline'}}" aria-label="Our Airline">
+						<span class="ha-nav nav-li-inner-title">Our Airline</span>
+					</a>
+					<div class="nav-pane airline init">
+								<a href="/destinations" ng-if="currentSection === 'airline'">
+									<i class="ha-icon fontIcon40-flights"></i>
+									<span>Where We Fly</span>
+								</a>
+								<a href="/our-services" ng-if="currentSection === 'airline'">
+									<i class="ha-icon fontIcon40-ha-icon fontIcon-travelers"></i>
+									<span>Our Services</span>
+								</a>
+								<a href="/hawaiianmiles" ng-if="currentSection === 'airline'">
+									<i class="ha-icon fontIcon40-haMiles"></i>
+									<span>HawaiianMiles</span>
+								</a>
+								<a href="/our-services/products-and-programs" ng-if="currentSection === 'airline'">
+									<i class="ha-icon fontIcon40-products-programs"></i>
+									<span>Products &amp; Programs</span>
+								</a>
+								<a href="/about-us" ng-if="currentSection === 'airline'">
+									<i class="ha-icon fontIcon40-flower"></i>
+									<span>About Us</span>
+								</a>
+								<a href="https://newsroom.hawaiianairlines.com/" ng-if="currentSection === 'airline'">
+									<i class="ha-icon fontIcon40-news"></i>
+									<span>Newsroom</span>
+								</a>
+								<a href="/hawaiianmiles2/credit-card" ng-if="currentSection === 'airline'">
+									<i class="ha-icon fontIcon40-paymentMethods"></i>
+									<span>Credit Card</span>
+								</a>
+					</div>
+				</li>
+				<li class="nav-li" role="menuitem" ng-class="primaryNavtrayIsOpen ? currentSection === 'island' ? 'is-active' : 'is-secondary' : ''">
+					<a href="" ng-click="toggleNavigation('island')" class="island ha-nav nav-li-inner tray-closed" aria-haspopup="true" aria-expanded="{{!!primaryNavtrayIsOpen && currentSection === 'island'}}" aria-label="Island Guide">
+						<span class="ha-nav nav-li-inner-title">Island Guide</span>
+					</a>
+					<div class="nav-pane island init">
+								<a href="/island-guide" ng-if="currentSection === 'island'">
+									<i class="ha-icon fontIcon40-island-guide"></i>
+									<span>Island Guide</span>
+								</a>
+								<a href="/trip-planning-guide" ng-if="currentSection === 'island'">
+									<i class="ha-icon fontIcon40-islandGuide"></i>
+									<span>Trip Planning</span>
+								</a>
+								<a href="/hawaii-stories" ng-if="currentSection === 'island'">
+									<i class="ha-icon fontIcon40-stories"></i>
+									<span>Hawaii Stories</span>
+								</a>
+								<a href="/calendar-of-events" ng-if="currentSection === 'island'">
+									<i class="ha-icon fontIcon40-calendar"></i>
+									<span>Events</span>
+								</a>
+					</div>
+				</li>
+			</ul>
+			<ul class="nav-primary-right-list">
+				
+				
+				
+				
+				<li ha-primary-nav-account-menu>
+						<div class="nav-li--account-signed-out">
+							<a href="/hawaiianmiles" class="hawaiianMiles-logo text-hide">HawaiianMiles</a>
+							<ul class="button-group">
+								<li><a href="/my-account/login" class="btn-group-btn" title="Sign In">Sign In</a></li>
+								<li><a href="/my-account/join-hawaiianmiles" class="btn-group-btn" title="Join Now">Join Now</a></li>
+							</ul>
+						</div>
+				</li>
+			</ul>
+		</div>
+		<div class="nav-overflow">
+			<div></div>
+		</div>
+	</div>
+</nav>
+
+		
+		<div ha-primary-nav-alerts></div>
+	</div>
+
+<div id="SC_MilesText_Display" style="display: none;">mi</div>
+
+
+<section role="main" class="floral-bg-pattern">
+    <div class="ha-cms-one-column-sublayout">
+    
+<script type="text/javascript">
+    var ETCOResponseModel = null;
+	var enableTCR = false;
+</script>
+<div ha-sticky-booking-widget class="ng-cloak" multi-city="true" default-destination-image="//img.s-hawaiianairlines.com/static/images/brand/airplanes/airbus-a330/a330-plane-hero.jpg?version=3327&amp;sc_lang=en">
+</div>
+    <nav class="card-breadcrumb container card--padded">
+        <div class="row">
+            <div class="col-12">
+
+    <a class="card-breadcrumb--crumb" href="/legal">Legal</a>
+<span class="card-breadcrumb--crumb">Privacy Policy</span>
+
+            </div>
+        </div>
+    </nav>
+
+
+	<!-- Template: DetailPageBannerHeadline.cshtml -->
+    <div class="containerPartialBleed card">
+        <div ha-cms-detail-page-banner-headline class="ha-cms-detail-page-banner-headline container">
+            <div class="row">
+
+                <div class="col-12">
+                    <div ng-show="showmessageContentFlag == 'SUCCESS'" ha-alert type="success" id="alert-success" header="{{showmessageContent}}" description="Thank you! Your email has been sent."></div>
+                    <div ng-show="showmessageContentFlag == 'FAIL'" ha-alert type="error" id="alert-error" header="{{showmessageContent}}" description="Sorry, your email has failed to send. Please try again."></div>
+                </div>
+            </div>
+                            <div class="row row--headline">
+                    <div class="col-8 col-offset-2">
+                        <div class="headline">Privacy Policy</div>
+                    </div>
+                </div>
+
+
+        </div>
+    </div>
+<section>
+	<div ha-cms-body-copy-with-sidebar class="ha-cms-body-copy-with-sidebar two-column-sublayout containerPartialBleed container-spacer-2">
+	  <div class="container border-split card">
+	    <div class="row">
+	      <div class="col-3 split-1 first-column column default-split">
+	        
+
+
+	<!-- Template: SiblingNavigation.cshtml -->
+        <div class="ha-cms-sibling-nav-text">
+            <ul>
+                    <li class="nav-item ">
+                        <a href="/legal/bid-up-terms-and-conditions">Bid Up Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/booking-and-ticketing-policy">Hawaiian Airlines Booking and Ticketing Policy</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/customer-service-plan">Customer Service Plan</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/domestic-contract-of-carriage">Domestic Contract of Carriage</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/employee-assault-policy">Employee Assault Policy</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/fare-hold-terms-and-conditions">Fare-Hold Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/fare-rules-terms-and-conditions">Fare Rules Terms and Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/gift-cards-terms-and-conditions">Gift Cards Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/hawaiianmiles-terms-and-conditions">HawaiianMiles Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/international-contract-of-carriage">International Contract of Carriage</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/nitp-terms-and-conditions">Neighbor Island Travel Plan Terms & Conditions</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="/legal/privacy-policy">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/purchase-order-terms-and-conditions">Purchase Order Terms and Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/schedule-change-policy">Schedule Change Policy and Procedures</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/tarmac-delays">Contingency Plan for Lengthy Tarmac Delays</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/the-plumeria-lounge-terms-and-conditions">The Plumeria Lounge Pass Terms and Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/trademark-policy">Trademark and Keyword Usage Policy</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/trademarks">Trademarks</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/travel-credit-terms-and-conditions">Travel Credit Terms and Conditions</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="/legal/website-terms-of-use">Website Terms of Use</a>
+                    </li>
+            </ul>
+        </div>
+<!-- Template: TeaserWidget.cshtml -->
+<div class="ha-cms-teaser-sidebar">
+	<div class="row row--heading row--flush">
+		<div class="col-12">
+		</div>
+	</div>
+	<div class="row row--description row--flush">
+		<div class="col-12">
+		</div>
+	</div>
+	<div class="row row--link row--flush">
+		<div class="col-12">
+		</div>
+	</div>
+</div>
+<div class="container-spacer-3"></div>
+
+
+
+	      </div>
+	      <div class="col-9 second-column column">
+	        
+
+<!-- Template: RichTextContentBlock.cshtml -->
+<div ha-cms-rich-text-editor class="ha-cms-rich-text-editor">
+<br />
+<p>Last Revised: January 18, 2019</p>
+
+<p>Hawaiian Airlines respects the importance of protecting your personal information. Please read this Privacy Policy carefully so that you understand what personally-identifiable information we collect, use, and share when you interact with our websites, mobile applications, email, social media, and online services. </p>
+
+<h4>The Information We Collect</h4>
+<p><b>Personally-Identifiable Information.</b></p>
+
+<p>When you book with Hawaiian Airlines, or use HawaiianAirlines.com or our mobile application to make an online travel reservation, you may be asked by Hawaiian Airlines or an agent on behalf of Hawaiian Airlines to provide certain personally-identifiable information such as your name, billing address, email address, telephone numbers, payment card number, billing information, dietary requirements and health information relevant to your travel. We will also collect the names and email addresses of any companions who will be traveling on the reservation that you create. This information is used by Hawaiian Airlines and its vendors for purposes such as processing and confirming your reservation, issuing boarding passes and tickets, billing you for the services you purchase, notifying you of any flight changes and cancellations, and notifying you and your travel companions of opportunities to enroll in our HawaiianMiles program and of discounted air travel offers and other special offers that we think may be of interest. We also collect your date of birth and gender as part of the Transportation Security Administration&rsquo;s (TSA) Secure Flight program and we may also use that information for our operational purposes. By providing personally-identifiable information to Hawaiian Airlines you consent to the collection of information provided by you or on your behalf, and to the use and disclosure of that information in accordance with this Privacy Policy. </p>
+
+<p><b>HawaiianMiles Member Enrollment Information.</b></p>
+
+<p>When you enroll in our HawaiianMiles program, we collect certain personally-identifiable information such as your name, address, email address, and phone numbers. When you enroll, you will also have an opportunity to sign up for Hawaiian Airlines email updates about special discounted air fares, travel specials, Hawaiian Airlines MasterCard&reg; credit and Bankoh Hawaiian Airlines Visa&reg; check card programs, HawaiianMiles Partner programs, and other communications. The information you provide when you enroll is used for purposes such as establishing your HawaiianMiles account, ensuring that you receive appropriate mileage credit for travel purchases and purchases of qualifying products and services from participating Partners, communicating with you about your account status, and sending you any updates you request and notifying you of special offers and promotions we think may be of interest to you. Children may become members of HawaiianMiles but may not submit personally-identifiable information through this site. Any information regarding HawaiianMiles account members 13 years of age and under must be submitted by their parent or legal guardian.</p>
+
+<p>On occasion, we may provide contact information for our HawaiianMiles members to certain third party mailers and e-mailers we rely on to notify you of special offers and ways to earn travel awards through HawaiianMiles. We select these third parties carefully and require them to establish safeguards to protect the privacy of our customers and the confidentiality of the information we share. If you wish to unsubscribe your email address from the lists that we use to send promotional email offers to HawaiianMiles members, please visit our Unsubscribe page or click the &lsquo;Unsubscribe&rsquo; link at the bottom of each email. Members can also modify email preferences at any time and subscribe to or unsubscribe from any promotional email update services that we offer by logging into &lsquo;My Account&rsquo; and accessing our Email Update/Account Info page. Alternatively, you can also call us toll-free at 877-HA-MILES (426-4537).</p>
+
+<p><b>HawaiianMiles Passwords and Personal Identification Numbers (PINs).</b></p>
+
+<p>When you enroll in HawaiianMiles via the Internet, you will be asked to select a password. You may also be asked to record the answer to a secret security question that can be used to obtain a temporary password in the event that you forget your password in the future. You may also be asked to supply a PIN if you use our telephone Interactive Voice Response (IVR) system. Your password and PIN are intended to protect your account information from future unauthorized access. Hawaiian Airlines will not be responsible for any lost, stolen, or otherwise disclosed passwords or PINs. Additionally, Hawaiian Airlines will not replace or reinstate any flight credits or HawaiianMiles, partner miles, or program awards that are generated or redeemed through the unauthorized use of your PIN or password. Accordingly, you should guard your password and PIN carefully and not provide them to anyone. </p>
+
+<p><b>Travel Companion and Stored Payment Card Information.</b></p>
+
+<p>If you enroll in HawaiianMiles, you can choose to establish a personal profile that stores information about your travel companions and the payment cards that you use to book your travel arrangements. This is an optional service and is provided for your convenience. You are not required to store any information in your profile about your travel companions or payment cards to become a HawaiianMiles member or to use our website to make online reservations. However, if you choose to store this information in your profile, you generally will be able to complete the online reservation process more quickly. We use the information you store in your personal profile to pre-populate certain data fields in the online forms we use during the reservation process (so as to eliminate the need for you to retype the same information multiple times), to perform a variety of booking functions, and to bill you for the services that you purchase. When you store travel companion information in your profile, you will be asked to enter the first and last names of your travel companions, information about their age and frequent flyer program enrollment status and account numbers. To store payment card information in your profile, we ask for your payment card type, card number, expiration date, billing address(es) and a payment card &ldquo;nickname&rdquo; (e.g., &ldquo;My Platinum MasterCard&rdquo;) that you can use to quickly recognize your account. Payment card information is stored in an encrypted form. (See &ldquo;Security&rdquo; below for more details regarding our encryption practices.) You can modify, update or delete stored travel companion or payment card information in your profile at any time by logging into &lsquo;My Account&rsquo; and accessing the Update Travel Companions page and/or Update Payment Info page.</p>
+
+<p><b>Group Travel Information.</b></p>
+
+<p>If you use our website to inquire about the availability of special group fares for wedding parties, organizations, event attendees or other special interest groups, we will ask you to provide certain contact information, including your name, address, email address, and phone and fax numbers, as well as certain details about your organization, wedding or other planned event related to your group air travel needs. We may also ask you to describe any special requests or requirements that you or anyone in your group may have in connection with your group travel plans. We will use this information to evaluate your group air travel needs and to contact you with a fare quote and flight availability information. </p>
+
+<p><b>Travel Agent Registration Information.</b></p>
+
+<p>If you are a travel agent, you can use our website to register to receive email alerts and other notifications about special fares, commissions and other news. To register for these updates, we will request your ARC/CLIA number and your contact information, including your name, telephone and fax numbers, address, and email address. We will also request information about the nature of your agency, as well as the volume of sales that your agency has generated for Hawaiian Airlines. This information is used to send you the notifications you request and to help us design offers and incentives that are appropriate for you and your agency. </p>
+
+<p><b>Sweepstakes and Other Promotions.</b></p>
+
+<p>From time to time, we may offer sweepstakes or other promotions on our website. If you enter a sweepstakes or promotional contest, we'll ask you to provide information about yourself (such as your name, address, and email address). Among other things, we'll need this information to contact you if you win and announce the identities of the winners. We may also use this information for marketing purposes. We may share this information with co-sponsors, shipping or fulfillment companies or other third-party service providers who are responsible for some aspects of administering our promotions, such as conducting drawings and/or delivering prizes to winners. If you don't want us to collect the information requested in the contest or sweepstakes registration form, please do not enter the contest or sweepstakes. </p>
+
+<p><b>Email.</b></p>
+
+<p>Whether or not you enroll in HawaiianMiles, you may be invited to sign up to receive email updates regarding the availability of discounted fares and special offers from Hawaiian and our Partners. When you register for these email updates, we will collect certain information which may include your email address, zip/postal code and the name of the country where you reside. We may also ask you to select from a menu the types of offers that you wish to receive. We hope that you will find any email updates that you receive to be interesting and valuable. However, it is easy to unsubscribe from any email update service that you request. Each email update you receive will contain instructions on how to unsubscribe from future offers by using a reply email address or hyperlink to an email preferences page on our website. You may change your preferences at any time by visiting our Unsubscribe page. Members can also modify email preferences at any time and subscribe to or unsubscribe from any promotional email update services that we offer by logging in to &lsquo;My Account&rsquo; and accessing our Email Update/Account Info page. Alternatively, you can also call us toll-free at 877-HA-MILES (426-4537).</p>
+
+<p><b>Information We Collect Using Cookies.</b></p>
+
+<p>To help us tailor our website to the needs and interests of our visitors, we keep track of the pages visited by our users by placing a cookie, a very small text file, on our visitors&rsquo; hard drives. The cookie contains an ID number that allows us to track the pages you've visited within our website. We aggregate this data with data on the pages visited by other users to track overall visitor traffic patterns. We use this information to improve our site by making it more responsive to the needs of our users. When you access your HawaiianMiles account, we also use a session cookie to authenticate your login information. This cookie will remain on your hard drive until you close your browser window or terminate your user session so that you can enjoy the personalized features of our website without having to reenter your password. The &ldquo;help&rdquo; function on most web browsers contains information on how to set your browser to notify you before accepting a cookie or to disable cookies entirely. If you don't accept cookies, you may not be able to take full advantage of various personalized features on our site that are available to other visitors. </p>
+
+<p><b>Information Our Third Party Partners Collect Using Cookies and Other Tracking Technologies</b></p>
+
+<p>Hawaiian works with various third party services that use cookies and other tracking technologies to collect and analyze information about user activities on our website to help us understand the use and operation of our website, and to serve and personalize some of the advertisements, promotions and other marketing information that you see on the pages of our website and other Hawaiian advertisements. Our third party partners collect and analyze information about users&rsquo; activities on our site and on other websites.</p>
+
+<p>You may be able to opt out of receiving personalized advertisements from third party advertising companies who are members of the Network Advertising Initiative or who subscribe to the Digital Advertising Alliance&rsquo;s Self-Regulatory Principles for Online Behavioral Advertising by visiting their websites at <a href="http://www.networkadvertising.org/choices" target="_blank">networkadvertising.org/choices</a> and <a href="http://www.aboutads.info/choices" target="_blank">aboutads.info/choices</a></p>
+
+<p>We also use these technical tracking methods in e-mails that we send our guests to determine whether our guests have opened those e-mails and/or clicked on links in those e-mails. The information from use of these technical methods may be collected in a form that is personally identifiable. Certain personally-identifiable information is stored for web site visitors and email recipients in order to enhance customer experience on the site and through email, for customer service, to improve the administration of our website, and to provide our visitors with information tailored to their needs. To the extent we collect any personally-identifiable information via these technical methods, we will treat such information strictly in accordance with this Privacy Policy.</p>
+
+<p><b>Location Information</b></p>
+
+<p>When you utilize the Hawaiian Airlines mobile application, your device settings or the settings of the app may result in collecting information about your location from your device. Specifically, we may collect your geo-location if you allow us to do so. You may change your preferences regarding geo-location tracking by reviewing your settings in the Hawaiian Airlines app, or by changing your device settings according to manufacturer instructions. We may also collect information about your location through web beacons and other tracking technologies. We use this information and share it with our third party marketing partners (as described below) in order to deliver relevant content to you, including ads, based on your location. </p>
+
+<p><b>Browser Level Information.</b></p>
+
+<p>Our web servers automatically collect limited information about your computer configuration and browsing activity when you visit our site, including the type of browser software that you use, the operating system you're running, the resolution of your computer monitor, the speed of your Internet connection, the website that referred you to our site and/or the search terms you entered into a search engine to reach our site, and your IP address. (Your IP address is a numerical address that is used by computers connected to the Internet to identify your computer so that data - such as the web pages you want to view - can be transmitted to you.) We use IP address information for systems administration and troubleshooting purposes. Standing alone, your IP address is not personally identifiable. We may combine this with personally-identifiable information we obtain from you directly on the website, on any other of our other websites, or from third parties to enhance our customer service. We use this information to make our website as useful as we can for as many users as possible. </p>
+
+<h4>Disclosures of Information</h4>
+<p><b>HawaiianMiles Partners.</b></p>
+
+<p>As noted above, if you are a HawaiianMiles member, we may use a third party e-mailer to notify you of specials and opportunities offered by our Partners to earn miles and awards through the HawaiianMiles program. If you wish to remove your email address from the email lists used by Hawaiian Airlines to send special offers relating to the HawaiianMiles program and our Partners, please <a href="/my-account/email-subscriptions/unsubscribe-to-email">visit our Unsubscribe page</a> or click the &lsquo;Unsubscribe&rsquo; link at the bottom of each email. Members can also modify email preferences at any time and subscribe to or unsubscribe from any promotional email update services that we offer by <a href="/my-account/login">logging into &lsquo;My Account&rsquo;</a> and accessing our &lsquo;Email Update/Account Info&rsquo; page. Alternatively, you can also call us toll-free at 877-HA-MILES (426-4537).</p>
+
+<p><b>Third-Party Travel Service Providers.</b></p>
+
+<p>If you use the &ldquo;concierge&rdquo; services offered through our website to book or purchase travel, entertainment or dining services, event tickets, accommodations or other services provided by third parties, information about you, including contact and billing information, will be provided to the applicable third-party service providers to ensure the successful fulfillment of your transaction.</p>
+
+<p><b>Vendors, Contractors and Agents.</b></p>
+
+<p>Hawaiian Airlines routinely enters into contracts with various vendors, contractors and agents to help us operate our website, process and analyze information on our behalf, conduct other aspects of our business, improve the services that we provide to you, or to offer you convenience services designed to improve your air travel experience with our airline. Some of these vendors, contractors and agents may be given access to personally-identifiable information that we collect from our customers and website visitors to the extent that we deem such access to be necessary or useful for these companies to perform services for Hawaiian Airlines or our customers. </p>
+
+<p><b>Third Party Marketing Partners</b>. </p>
+
+<p>We may disclose your information to our third party marketing partners.</p>
+
+<p><b>Governmental and Law Enforcement Agencies.</b></p>
+
+<p>Under the TSA Secure Flight program, Hawaiian Airlines is directed to collect and disclose date of birth and gender to the TSA. Hawaiian Airlines may disclose any personally-identifiable information it collects (whether online or through offline sources) with or without notice to the affected individuals, if required to do so by law or court order, or if requested by a governmental or law enforcement authority in any country, or if such information is sought pursuant to a subpoena or other legal process. </p>
+
+<p><b>Disclosures of Anonymous Information.</b></p>
+
+<p>We may share anonymous, aggregated information about all of our customers and users with third parties. </p>
+
+<p><b>Other Disclosures of Personally Identifiable Information.</b></p>
+
+<p>We do not sell or rent customer information to any third parties. However, in certain circumstances, Hawaiian may disclose any personally-identifiable information that we collect to perform charge verifications, to report or collect debts owed, or to protect the rights, security or property of Hawaiian, our customers, or others. In the event that Hawaiian Airlines or substantially all of our assets are acquired by another company, the information that we collect from our customers and website visitors would be included among the transferred assets.</p>
+
+<p><b>Cross-Border Transfers of Personally-Identifiable Information.</b></p>
+
+<p>Hawaiian Airlines has widespread International operations. Accordingly, any or all of the disclosures of personally-identifiable information described in the Privacy Policy may involve the transfer of your information across national and international borders to individuals and organizations located outside of the country where your information was collected. For example, we may transfer your information to any Hawaiian Airlines' office worldwide, and to Hawaiian Airlines' vendors, contractors, agents and third-party travel providers overseas. </p>
+
+<p><b>Security</b></p>
+
+<p>The personally-identifiable information we gather on our website is stored within HawaiianAirlines.com-controlled databases (or databases operated on our behalf) on servers maintained in protected environments. Passwords and any payment card information you provide to us online are secured for transmission over the Internet using industry-standard transport layer security (TLS) encryption technology. Prior to being stored, passwords are encrypted using a one-way hash algorithm, and payment card numbers are encrypted using the symmetric encryption algorithm Advanced Encryption Standard (AES). Although these security measures are robust, no physical or electronic security system is impenetrable. We cannot guarantee the security of our servers or databases, nor can we guarantee that information you supply won't be intercepted while being transmitted to us over the Internet. </p>
+
+<p><b>Updating Personally-Identifiable Information</b></p>
+
+<p>Hawaiian Airlines endeavors to ensure that personally-identifiable information it holds is accurate and up-to-date. You may seek to update your personally-identifiable information held by Hawaiian Airlines by logging into &lsquo;My Account&rsquo; and accessing our &lsquo;Email Update/Account Info&rsquo; page. Alternatively, you can also call us toll-free at 877-HA-MILES (426-4537).</p>
+
+<p><b>Access to Personally-Identifiable Information</b></p>
+
+<p>To make a request to access any personally-identifiable information about you that Hawaiian Airlines holds, you should contact Hawaiian Airlines at PO Box 30008, Honolulu, HI 96820. Hawaiian Airlines may require you to verify your identity and to specify what information you require. Hawaiian Airlines reserves the right to charge a fee to cover the cost of verifying applications and locating, retrieving, reviewing and copying any material requested. There are certain circumstances in which Hawaiian Airlines will refuse a request for access to personally-identifiable information, including if the request would have an unreasonable impact on the privacy of others. If Hawaiian Airlines refuses your request for access to your personally-identifiable information, Hawaiian Airlines will provide reasons for the refusal. Hawaiian Airlines will also provide reasons for a refusal to correct your personal information. </p>
+
+<p><b>Links</b></p>
+
+<p>Our website contains links to other sites. Please be aware that we are not responsible for the content of those sites or for the privacy practices of their owners. We encourage you to read the privacy policies of each site that collects information from you. This Privacy Policy applies solely to information collected by Hawaiian Airlines on HawaiianAirlines.com</p>
+
+<p><b>Changes to This Policy</b></p>
+
+<p>We may make changes to this Policy from time to time. We will post any changes, and such changes will become effective when they are posted. Your continued use of our Services following the posting of any changes will mean you accept those changes.</p>
+
+
+<p>&nbsp;</p></div>
+
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="container-spacer-2"></div>
+</section>
+
+</div>
+
+</section>
+
+
+
+	<script>
+		var defaultCountryCode = 'USA';
+	</script>
+
+
+<footer role="contentinfo" ha-global-footer class="ha-global-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<a href="" class="back-to-top pull-right"><i class="ha-icon fontIcon20-circleUp"></i>Back to Top</a>
+			</div>
+		</div>
+	</div>
+	<div class="containerFullBleed footer-bar">
+
+
+		<div class="col flush" ng-cloak>
+		</div>
+
+		<div class="container slimGrid">
+			<div><!--{ECE851F2-D722-4EFF-9BD2-2239E9B71701}-->
+<style>
+	.cc-footer-banner {height:188px;width:100%;display: flex;flex-direction: row;align-items: center;position:relative;background-image:url('~/media/0F1A460F9FEC4C0BB4A5619A3E5FD46A.ashx');background-size:cover}
+	.cc-footer-banner-item {}
+	.cc-footer-banner-lto {background-color: #f84239;padding: 0 15px;margin: 0 0 10px;text-transform: uppercase;width:170px;}
+	.cc-footer-banner-img{width:30%;padding-right:50px}
+	.cc-footer-banner-img img{width:186px;display:block;float:right}
+	.cc-footer-banner-copy{width:50%}
+	.cc-footer-banner-copy *{color:#FFF}
+	.cc-footer-banner-copy .header-uppercase-4{margin-bottom:8px;font-size:2.125em !important}
+	.cc-footer-banner-copy p{margin-top:0 !important}
+	.cc-footer-banner-cta {width:20%}
+	.cc-footer-banner-cta a {width:84px}
+	.cc-footer-banner-cta-see-terms {color: #FFF !important;font-size: .875em;position: absolute;bottom: 10px;}
+	@media screen and (max-width: 768px) {
+		.cc-footer-banner-container {}
+		.cc-footer-banner {height:100% !important;min-height:525px;flex-direction: column;background-image:url('~/media/66B1F5E7F8F24572BD565CB5F1745498.ashx') !important}
+		.cc-footer-banner *{text-align:center}
+		.cc-footer-banner-item {width:100% !important}
+		.cc-footer-banner-lto {margin:25px auto 0 !important}
+		.cc-footer-banner-copy {order:1}
+		.cc-footer-banner-headline {font-size:8vw !important;width:50%;margin:auto;padding-top:15px}
+		.cc-footer-banner-img {padding:25px 0 !important;order:2}
+		.cc-footer-banner-img img{width:225px !important;float:none !important;margin:0 auto !important}
+		.cc-footer-banner-cta {order:3}
+		.cc-footer-banner-cta a {width:150px !important;margin:15px auto !important}
+		.cc-footer-tnc {}
+		.cc-footer-banner-cta-see-terms {position:relative;text-align:center;padding-top:20px}
+	}
+</style>
+<div class="row banner-container cc-footer-banner-container" style="padding:0;margin-bottom:30px">
+	<div class="cc-footer-banner">
+		<div class="cc-footer-banner-item cc-footer-banner-img"><img src="//img.s-hawaiianairlines.com/~/media/images/credit-cards/footer/premium_white_boh_mobile.png?v=1" alt="Premium_Ocean_BOH" /></div>
+		<div class="cc-footer-banner-item cc-footer-banner-copy">
+			<div class="cc-footer-banner-lto">Limited-Time Offer</div>
+			<div class="header-uppercase-4 cc-footer-banner-headline">Earn 60,000 Bonus Miles</div>
+			<small class="bodycopy-sans-5 cc-footer-tnc">Plus, a $0 intro annual fee</small>
+		</div>
+		<div class="cc-footer-banner-item cc-footer-banner-cta">
+			<a href="//www.barclaycardus.com/apply/Landing.action?campaignId=2653&cellNumber=13&referrerid=PTRBAFooterBan" class="btn-primary--onImageBg" target="_blank">Apply Now</a>
+			<div class="cc-footer-banner-cta-see-terms">See <a href="//www.barclaycardus.com/apply/action/tncContent?prodidreq=CCMMX75584" target="_blank" style="color:#FFF">Terms &amp; Conditions</a> for details.</div>
+		</div>
+	</div>
+</div></div>
+
+					<div class="row banner-container">
+						<div class="col-2 icon-nativeapp">
+							<img src="//img.s-hawaiianairlines.com/static/images/nativeapp/hanativeapp.png?version=2b7e&amp;sc_lang=en" />
+						</div>
+						<div class="col-6">
+							<h2 class="header-uppercase-5 color-headline-text header-first">
+								Get our new app –  we’ll text you a link
+							</h2>
+	<form name="formNativeappLinkSms" id="formNativeappLinkSms" class="contact-info current" novalidate ha-include-notify>
+		<div class="row form-group">
+			<div class="col-12" ha-form-nativeapp-link-sms form-name="formNativeappLinkSms" ng-init="isModal = false">
+				<div class="row" ng-if="!IsCountryDataReady">
+					<div class="col-12 nativeapp-form-loading-spinner">
+						<div ha-loading-spinner></div>
+					</div>
+				</div>
+				<div class="row" ng-if="IsCountryDataReady">
+					<div class="col-4">
+						<label class="ha-label">
+							<select disabled ng-model="recipient.CountryCode" required ha-errors name="CountryCode">
+								<option ng-repeat="code in countryCodeData" value="{{ code.Value }}">{{ code.Name }} {{ code.Value }}</option>
+							</select>
+						</label>
+					</div>
+					<div class="col-4">
+						<label class="ha-label">
+							<input type="text"
+								   ng-model="recipient.Number"
+								   ng-pattern="recipient.CountryCode !== 'USA' ? phoneRegexByCC(recipient.CountryCode) : null"
+								   required
+								   number-only
+								   name="PhoneNumber"
+								   ui-options="{clearOnBlur: false}"
+								   ha-errors="{mask: 'Phone number invalid'}"
+								   ui-mask="{{recipient.CountryCode === 'USA' ? '(999) 999-9999' : ''}}" />
+						</label>
+						<input type="hidden" name="PhoneCountryCode" ng-value="phoneCountryCodeByCC(recipient.CountryCode)" id="PhoneCountryCode" />
+						<input type="hidden" name="area" ng-value="'footer'" id="area" />
+					</div>
+					<div class="col-4">
+						<button type="submit" class="btn-primary" ng-click="formNativeappLinkSms.$valid && formNativeappLinkSmsSubmit()" ha-button-spinner show-spinner="isSubmitted">
+							Send
+						</button><br>
+					</div>
+				</div>
+				<div class="row">
+					<span class="col-8">* Standard SMS rates may apply.</span>
+					<span class="col-4 msgSent">
+						Sent!
+					</span>
+					<span class="col-4 msgFailed">
+						Failed!
+					</span>
+				</div>
+			</div>
+		</div>
+	</form>
+
+
+						</div>
+						<div class="col-4">
+							<div class="row appdownload-links">
+								<div class="col-12">
+									<a href="https://c00.adobe.com/v3/db95578d35f70d3f051c625d19a2cd88a509b8e46ea055a70ca1da7aee343ce4/start?a_dl=5c632e6782d2b64bb9d4b42e" border="0" target="_blank">
+										<img src="//img.s-hawaiianairlines.com/static/images/nativeapp/app-store-badge-135x40.png?version=922f&amp;sc_lang=en" />
+									</a>
+									<a href="https://c00.adobe.com/v3/db95578d35f70d3f051c625d19a2cd88a509b8e46ea055a70ca1da7aee343ce4/start?a_dl=5c632e9d82d2b64bb9d4b431" border="0" target="_blank">
+										<img src="//img.s-hawaiianairlines.com/static/images/nativeapp/google-play-badge-135x40.png?version=bd11&amp;sc_lang=en" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="row">
+					<div class="col-4">
+						<h4>Support</h4>
+						<ul>
+											<li><a href="/contact-us">Contact Us</a></li>
+											<li><a href="/legal">Legal</a></li>
+											<li><a href="http://hawaiianair.custhelp.com/">Help Center</a></li>
+											<li><a href="/legal/website-terms-of-use">Terms of Use</a></li>
+											<li><a href="/sitemap">Sitemap</a></li>
+											<li><a href="/legal/list-of-all-fees">All Fees</a></li>
+											<li><a href="/our-services/special-assistance/guests-with-disabilities">Guests with Disabilities</a></li>
+											<li><a href="https://newsroom.hawaiianairlines.com/community/team-kokua">Team Kokua</a></li>
+
+						</ul>
+						<i class="ha-logo"></i>
+					</div>
+					<div class="col-4">
+						<h4>About Us</h4>
+						<ul>
+											<li><a href="/legal/domestic-contract-of-carriage">Contract of Carriage</a></li>
+											<li><a href="/about-us/customer-service-plan">Customer Service Plan</a></li>
+											<li><a href="/careers">Careers</a></li>
+											<li><a href="/legal/tarmac-delays">Tarmac Delay Plan</a></li>
+											<li><a href="https://newsroom.hawaiianairlines.com/investor-relations">Investor Relations</a></li>
+											<li><a href="/legal/privacy-policy">Privacy</a></li>
+											<li><a href="https://www.hawaiianaircargo.com/">Cargo</a></li>
+											<li><a href="https://shophawaiianair.myshopify.com">Shop Our Store</a></li>
+											<li><a href="/deals-and-offers/flights/hawaii">Fare Deals</a></li>
+
+						</ul>
+					</div>
+
+					<div class="ng-cloak col-4">
+
+
+	<div class="signup-form">
+		<form action="/MyAccount/EmailOnly/EmailOnlyRegistration" name="EmailSubscribeFooterForm" id="EmailSubscribeFooterForm" autocomplete="off" method="post" novalidate>
+			<h4>Sign Up for Deals</h4>
+			<p>Get notifications for low fares &amp; special deals.</p>
+
+
+			<input type="hidden" name="selectedcountryCode" value="USA" />
+			<input type="hidden" name="isLowFareselected" value="true" />
+			<div class="card--form">
+				<label class="ha-label ha-form-lg form-group">
+					<span class="sr-only">Email Address</span>
+					<input type="email" name="emailAddress" placeholder="Email Address" ng-model="emailAddress" ng-pattern="$root.$regex.email" required ha-errors />
+				</label>
+
+				<div class="wrap">
+					<label class="ha-label ha-form-lg form-group">
+						<span class="sr-only">Zip/Postal code</span>
+						<input type="text" name="zipCode" placeholder="Zip/Postal code" ng-model="zipCode" maxlength="10" ng-pattern="$root.$regex.alphaNumeric" required ha-errors />
+					</label>
+					<button type="submit" class="btn-primary">Subscribe</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+
+					</div>
+				</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="logo-social-group" style="position: relative;">
+						<div class="ha-logo col-sm-12" tabindex="-1"></div>
+						<div class="social-links col-sm-12">
+							<div class="button-wrapper">
+										<a href="https://www.facebook.com/HawaiianAirlines" class="btn-social btn-fb" title="Visit us on Facebook">
+											<span class="sr-only">Visit us on Facebook</span>
+											<i class="ha-icon fontIcon16-facebook" aria-hidden="true"></i>
+										</a>
+										<a href="https://twitter.com/HawaiianAir" class="btn-social btn-twttr" title="Visit us on Twitter">
+											<span class="sr-only">Visit us on Twitter</span>
+											<i class="ha-icon fontIcon16-twitter" aria-hidden="true"></i>
+										</a>
+										<a href="https://www.instagram.com/hawaiianairlines" class="btn-social btn-fb" title="Visit us on Instagram">
+											<span class="sr-only">Visit us on Instagram</span>
+											<i class="ha-icon fontIcon16-instagram" aria-hidden="true"></i>
+										</a>
+										<a href="https://www.youtube.com/user/HawaiianAirlines" class="btn-social btn-yt" title="Visit us on YouTube">
+											<span class="sr-only">Visit us on YouTube</span>
+											<i class="ha-icon fontIcon24-youtube" aria-hidden="true"></i>
+										</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="ng-cloak row legal">
+				<div class="col-12">
+					<div class="col-12">
+						<div class="footnotes">
+							<ul>
+								<li id="footnote-{{ footnote.label }}" ng-repeat="footnote in $root.footnotes.static">
+									{{ footnote.label }} {{ footnote.text }}
+								</li>
+								<li id="footnote-{{ footnote.id }}" ng-repeat="footnote in $root.footnotes.numeric" ng-bind-html="::footnote.id +' '+ footnote.text"></li>
+							</ul>
+						</div>
+						<p class="copyright bodycopy-sans-6">
+							<h4>&#169; {{ Date | date:'yyyy' }} Hawaiian Airlines. All Rights Reserved [SC8.2.7]</h4>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+	</div>
+
+	<input name="__RequestVerificationToken" type="hidden" value="ggJgURWVLJ2KU652Qf1MjY0f_8enYmwIrWkpNDGavCrbZT1FJAR7zX3rYZpVQ_ICpsYjWw2" />
+	<script>
+		var tokens = '1GzJoIOQajynlItyYVgTj66revbPJRNiynfYwf2mEGTyK60N3QTv-hylVzlRruIQRuGW5Q2:fDdKDHjzAWnMX9tr_Typ8XPOD693__13POnGirP3N2OBYKqVrULH6jdlWzsprPq17KVppA2';
+		var ver = '19.12.19.5198';
+	</script>
+
+
+	<script src="//js.s-hawaiianairlines.com/bundles/1.6.9/vendor"></script>
+
+
+
+	
+
+
+<script>
+var $pageName = 'Privacy Policy';
+var $langCode = 'en-US';
+var $language = 'en';
+var $currency = 'USD';
+</script>
+
+
+<script>
+    var HA = window.HA || {};
+    HA.FLAGS = HA.FLAGS || {};
+    HA.FLAGS.EnableOrbitz = true;
+    HA.FLAGS.AGE_LIMIT_TO_DISPLAY_GUARDIAN_INFO = 13;
+    HA.FLAGS.NonIndividualMemberTypes = 'C,R,W,A';
+    HA.FLAGS.HotelLimitedAvailabilityLevel = 10;
+    HA.FLAGS.HotelShowSavingsThreshold = 20;
+   HA.FLAGS.HotelsPerPage = 10;
+    HA.FLAGS.HotelMaxImages = 27;
+    HA.FLAGS.HotelTrimLastImage = true;
+	HA.FLAGS.AncillariesTimeoutMs = 400000;
+    HA.FLAGS.CarRentalForOneWayTimeoutMs = 10000;
+    HA.FLAGS.HotelListTimeoutMs = 300000;
+    HA.FLAGS.HotelRepriceTimeoutMs = 200000000;
+    HA.FLAGS.GoogleMapApiKey = 'AIzaSyDhFgUSHBggq68VqQGtWJyhpFY2g-ouiV4';
+    HA.FLAGS.GoogleMapApiVersion = '3.17';
+    HA.FLAGS.MainCabinBasicEnabled = 'True';
+    HA.cdn = { isOldIE: (!!~document.documentElement.className.indexOf('lte-ie9')), js: '//js.s-hawaiianairlines.com', css: '//css.s-hawaiianairlines.com', img: '//img.s-hawaiianairlines.com', html: '//html.s-hawaiianairlines.com' };
+    HA.cdnDynamic = (!!~document.documentElement.className.indexOf('lte-ie9')) ? '' : '//js.s-hawaiianairlines.com';
+
+    HA.serverDate = '1/17/2020';
+    HA.version = '19.12.19.5198';
+
+    HA.CookiesRequireSsl = true;
+	HA.Accertify_Host_Url = 'www.cdn-net.com';
+    HA.Accertify_Sid = '459359bf87f69cea';
+</script>
+
+	
+<script>
+	HA.SCStrings = {"bookingwidget":{"dynamicroomstext":"Room {0}","adulttext":"Adults (18+)","invalidpromocodetext":"Promo code must be at most 12 alphanumeric characters.","arrivaldaterequired":"Return date is required.","flighttext":"Flights","pickupdaterequiredtext":"Pick-up date is required.","advanced search":"Promo Code - Advanced search","flightandcartext":"Flight \u0026 Car","returndate":"Return Date","morehotelsearchoptionslinkurl":"https://hawaiian.poweredbygps.com/g/pt/hawaiihotels?mdpcid=HAWAIIAN-US.TPS.BRAND.HTLWIDGET.HOTEL","carshelplinktext":"Help","childseattext":"Child {0} must sit in lap or seat","helplinktext":"Help","promocodewarningheadertext":"We\u0027re sorry, this promo code could not be found.","selectdate":"Select Date","childlapradiobutton":"In Lap","morecarsearchoptionsurl":"http://cars.cartrawler.com/hawaiianair/en-us/?clientid=731257#/searchcars","childrentext":"Children (0-17 years of age at time of travel)","carstext":"Cars","multi city":"Multi-City","enablehotelwidget":"1","specialpackagedealimage":"\u003cimage mediaid=\"{532A677B-E450-4077-BEE8-8421D0D70817}\" mediapath=\"/Images/Booking Widget/PackagesBooking/VacationsThumbnail2x\" src=\"~/media/532A677BE4504077BEE88421D0D70817.ashx\" /\u003e","cartrawlerresidencyidparam":"US","morehotelsearchoptionslinktext":"More Hotel Search Options","adults":"Adults","flightandhoteltext":"Flight \u0026 Hotel","checkoutdaterequiredtext":"Check Out date is required","checkindaterequiredtext":"Check In date is required","enablepackageswidget":"1","pickuplocationtext":"Pick-Up Location","hotelspecialslink":"/hawaiianmiles/specials/hotel-specials","seatingtext":"Seating:","bookhotelurl":"https://hawaiian.poweredbygps.com/go/hotel/search/Destination/","edit search":"Edit Search","compare fares by day and month":"\u0026nbsp;","airportinputresultsfoundmessage":"{0} results found. Use up and down arrow keys to navigate.","unavailabledatetext":"Sorry! There are no flights available for this date. Please choose alternate dates.","search for flights":"Search for Flights","one way":"One-Way","neatgroupurl":"http://hawaiianair.neatgroup.com/hawaiianair/CPGateway","departtimetext":"Depart Time","anytime":"Anytime","returntext":"Return","originplaceholderstickywidget":"City, Airport or Island","packageshelplinktext":"Help","hotelandcartext":"Hotel \u0026 Car","viewavailableseats":"View Seats","pleaseselectatleastoneadult":"Please select at least one adult","milesdollarstext":"Miles/Dollars","vacationpackageshelpreferencetext":"Vacation packages may also be purchased by phone. Please call 1-800-323-9882 for assistance.\u003cbr /\u003e\nFor vacation package changes, cancellations, or other inquiries regarding a vacation package, please call\n1-800-725-2185","sameaspickup":"Same As Pick-Up","enablepricecalendar":"1","checkoutdateisrequired":"Check-out date is required","checkintext":"Check-In","neatgroupddparam":"HAWAIIANAIR","totext":"To","internationalchildonlytext":"\u003cstrong\u003eChild traveling alone?\u003c/strong\u003e\u003cbr /\u003e\n\u003cp\u003eChildren under the age of 12 must be accompanied by a paying adult.\u003c/p\u003e\n\u003cp\u003ePlease review our \u003ca href=\"~/link.aspx?_id=738CFFD3DE144C868ACBA70AE83F6BEB\u0026amp;_z=z\" target=\"_blank\"\u003eUnaccompanied Minor Policy\u003c/a\u003e before you proceed with this booking.\u003c/p\u003e","searchpackagesurl":"https://hawaiian.poweredbygps.com/go/package/search/","domesticchildonlytext":"\u003cstrong\u003eChild traveling alone?\u003c/strong\u003e\u003cbr /\u003e\n\u003cp\u003eChildren under the age of 12 traveling without an accompanying adult will be subject to fees.\u003c/p\u003e\n\u003cp\u003ePlease review our \u003ca href=\"~/link.aspx?_id=738CFFD3DE144C868ACBA70AE83F6BEB\u0026amp;_z=z\" target=\"_blank\"\u003eUnaccompanied Minor Policy\u003c/a\u003e before you proceed with this booking.\u003c/p\u003e","childagetext":"Child {0} Age","duplicatelegtext":"Sorry! You’ve selected identical flight segments. Please start over and select a different flight.","infants":"Infants (Less than 2 years of age at time of travel)","packagesheadingtext":"Bundle Deals","noon":"Noon","children":"Children (2-11 years of age at time of travel)","dropoffdaterequiredtext":"Drop-off date is required.","firstclasstext":"First Class","searchcarrentalsurl":"https://cars.cartrawler.com/hawaiianair/en-us/book","originrequired":"Invalid From city. Please enter or select another city","airportinputpintitle":"Select to view airports","returntimetext":"Return Time","moresearchoptionslinktext":"More Vacation Package Options","childageplaceholder":"Age","flightnumberdisclaimer":[{"disclaimerlinkedtext":"This flight is subject to government approval","flightnumber":"847","disclaimerpopuptext":"\u003cdiv\u003e\nThis flight is subject to government approval\n\u003c/div\u003e"},{"disclaimerlinkedtext":"This flight is subject to government approval","flightnumber":"848","disclaimerpopuptext":"\u003cdiv\u003e\nThis flight is subject to government approval\n\u003c/div\u003e"},{"disclaimerlinkedtext":"This flight is subject to government approval","flightnumber":"863","disclaimerpopuptext":"\u003cdiv\u003e\nThis flight is subject to government approval\n\u003c/div\u003e"},{"disclaimerlinkedtext":"This flight is subject to government approval","flightnumber":"864","disclaimerpopuptext":"\u003cdiv\u003e\nThis flight is subject to government approval\n\u003c/div\u003e"}],"promocodenotfoundtext":"Promo code not found.","bookapackagebuttontext":"Book A Package","adultstext":"Adults (18+)","dropofftimetext":"Drop-Off Time","childinformationmodal":"\u003ch2\u003e\u003cstrong\u003eTraveling With a child under 2?\u003c/strong\u003e\u003c/h2\u003e\n\u003cul id=\"infantBulletPoints\"\u003e\n    \u003cli\u003e\n    \u003cp\u003e\n    \u003cstrong\u003eLap child:\u0026nbsp;\u003c/strong\u003eIf a child under the age of 2 will be seated on your lap, you must contact our Reservations department \u003cspan style=\"text-decoration: underline;\"\u003eafter booking \u003c/span\u003eyour reservation to add the child to your reservation.\u003c/p\u003e\n    \u003c/li\u003e\n    \u003cli\u003e\n    \u003cp\u003e\n    \u003cstrong\u003ePurchasing a seat:\u0026nbsp;\u003c/strong\u003e\u003cspan style=\"background-color: #ffffff;\"\u003eIf a child under the age of 2 will occupy a seat, you must contact our Reservations department \u003cspan style=\"text-decoration: underline;\"\u003eto book your entire\u003c/span\u003e reservation for all passengers traveling.\u003c/span\u003e\u003cbr /\u003e\n    \u003ca href=\"https://www.hawaiianairlines.com/contact-us\" target=\"_blank\"\u003e\u003cbr /\u003e\n    \u003cstrong class=\"color-mauve\"\u003eHawaiian Airlines Reservations\u003c/strong\u003e\u003c/a\u003e (1-800-367-5320)\u003c/p\u003e\n    \u003c/li\u003e\n\u003c/ul\u003e","viewdetailslinktext":"View Details","destinationplaceholder":"City, Airport or Island","multiislandvacationlink":"http://pts.get2hawaii.com/ots/Index.do?agID=4","dollarsmilestext":"Dollars/Miles","hotelspecialslinktext":"View HawaiianMiles Hotel Specials","childseatradiobutton":"In Seat","searchcarrentalsbuttontext":"Search Car Rentals","onewaytext":"One-Way","airports in hawaii":"Airports in Hawaii","invalidpackagepassengercount":"Please choose a minimum of 1 passenger and a maximum of 6 passengers.","departuredaterequired":"Departure date is required.","enablerefundablefares":"1","packagestext":"Bundle Deals","carsheadingtext":"Transportation","invalidorigindestination":"Sorry! The Origin/Destination combination you have requested is not valid. Please try again.","departdatetext":"Departure Date","dropoffdatetext":"Drop-Off Date","dollarstext":"Dollars","departhinttext":"MM/DD/YYYY","addanotherflight":"Add Another Flight","checkouttext":"Check-Out","invalidmonthlyfarestext":"Please fill out all required fields in order to view the monthly fares.","returnhinttext":"MM/DD/YYYY","airportinputpindestinationtitle":"Select to view destination airports","invalidpassengercount":"Please choose a minimum of 1 passenger and a maximum of 7 passengers.","carspecialslinktext":"View HawaiianMiles Car Rental Specials","carspecialslink":"/hawaiianmiles/specials/car-rental-specials","pickuptimetext":"Pick-Up Time","view daily fare chart":"View Daily Fare Chart","origintext":"Origin","viewdealstext":"View Deals","vacationdealslink":"https://hawaiian.poweredbygps.com/g/pt/hawaiianairlinesvacations?MDPCID=HAWAIIAN-US.TPS.BRAND.HAWAIIANAIRLINESVACATIONS_SPECIALDEALSBLOCK_CONTROLTESTA.PACKAGE","destinationplaceholderstickywidget":"City, Airport or Island","flighthotelandcartext":"Flight, Hotel \u0026 Car","invalidsearchrequest":"Sorry! There\u0027s something wrong with your search request. Please check the Origin/Destination and your travel dates and try again.","cruisesactivitiesheadingtext":"Cruises \u0026 Activities","hotelsheadingtext":"Hotels","refundablefaresonlytext":"Refundable Fares Only","to":"To","businessclasstext":"Business Class","validatingpromotion":"Validating Your Promotion","coachtext":"Coach","flight":"Flight","search flights":"Search Flights","hawaiian airlines cities in north america":"Airports in North America","checkinsateisrequired":"Check-in date is required","childtravellingaloneinfo":"\u003cp\u003e\u003cstrong\u003eIs Your Child Traveling Alone? \u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eContact \u003ca href=\"~/link.aspx?_id=27942FFA41594C6DB8C7992A668EDBBA\u0026amp;_z=z\"\u003eHawaiian Airlines Reservations\u003c/a\u003e to notify us that your child is under the age of 12 and traveling without an accompanying adult. \u003cbr /\u003e\n\u003cbr /\u003e\nFor more information and a list of additional fees, please visit \u003ca href=\"~/link.aspx?_id=738CFFD3DE144C868ACBA70AE83F6BEB\u0026amp;_z=z\"\u003eChildren Traveling Alone\u003c/a\u003e.\u003c/p\u003e","moresearchoptionslink":"https://hawaiian.poweredbygps.com/g/pt/hawaiianairlinesvacations?mdpcid=HAWAIIAN-US.TPS.BRAND.PKGWIDGET.PACKAGE","packageshelplink":"http://hawaiianair.custhelp.com/app/answers/detail/a_id/1364","cartrawlercurrencycodeparam":"USD","search flights and hotels":"Search Flights \u0026 Hotels","from":"From","promocodewarninginstructiontext":"Please validate that you have entered your promo code correctly and try again.","continuebuttontext":"Continue","flightstatusdepartingtext":"Departing","advanced search header":"Where would you like to go?","passengers":"Passengers","paxerrorheader":" We\u0027re sorry, your traveler information seems to be invalid.","hotelneatgroupddparam":"HAWAIIANAIR","roomstext":"Rooms","returndatetext":"Return Date","promocodetext":"Promo Code (optional)","passengercountrequired":"Passenger count is required","specialpackagedealtext":"Special Packages deals available","hotelstext":"Hotels","hotelshelplink":"http://hawaiianair.custhelp.com/app/answers/detail/a_id/1364","flight schedule":"Flight Schedule","airportinputpinorigintitle":"Select to view origin airports","bookhotelbuttontext":"View Deals","morecarsearchoptionstext":"More Car Search Options","pleasecorrecttheerrorsbelow":"Please correct the errors below","pricechartlinktext":"Price Chart","departtext":"Depart","destinationrequired":"Invalid To city. Please enter or select another city","enableseatmappreview":"1","showrecentsearches":"Show Recent Searches","evening":"Evening","pickupdatetext":"Pick-Up Date","carclasstext":"Car Class","dealsimageurl":"/~/media/532A677BE4504077BEE88421D0D70817.ashx","morning":"Morning","destinationtext":"Destination","hawaiian airlines city":"Hawaiian Airlines City","showfareastext":"Show Fare as","carshelplink":"http://hawaiianair.custhelp.com/app/answers/detail/a_id/1992","roundtrip":"Roundtrip","fromtext":"From","lapchilderrortext":"Each lap child must travel with a person 12+ years old","recent searches":"Recent Searches","milestext":"Miles","enablecarwidget":"1","nomatchesfound":"No Matches","see monthly view fares":"Price Calendar","departdate":"Depart Date","hawaiian airlines cities in asia and south pacific":"Airports in Asia and South Pacific","hiderecentsearches":"Hide Recent Searches","originplaceholder":"City, Airport or Island","multiislandvacationlinktext":"Multi-Island Vacation Packages","get help with this":"Get help with this","displaychilddropdown":"1","advancedsearchheaderbg":"\u003cimage mediaid=\"{6B6D14EF-5C4D-4C89-BC47-6AFF3233E9FA}\" mediapath=\"/Images/Lifestyles/Ocean creatures/spinner-dolphins-resized\" src=\"~/media/6B6D14EF5C4D4C89BC476AFF3233E9FA.ashx\" /\u003e","enablepricechart":"1","enablerecentsearches":"1"},"lowfare":{"roundtriptext":"Roundtrip Price:","maytext":"May","nighttext":"Night","novembertext":"November","februarytext":"February","headertext":"Flexible with your travel dates?","pricesbeingdisplayedtext":"Prices are being displayed in","selectedlegendtext":"Selected","calendartext":"Calendar","totext":"to","marchtext":"March","defaultdisplay":"calendar","julytext":"July","noresultstext":"We\u0027re sorry, there are no flights available that match your selections.","roundtripdatelabel":"Roundtrip:","currencynametext":"Dollars","enablepricechart":"1","nightstext":"Nights","januarytext":"January","apriltext":"April","septembertext":"September","pricecharttext":"Chart","loadmoredatestext":"Load More Dates","subheadertext":"Search for our lowest available fares based on departure date and trip duration","enablepricecalendar":"1","triplengthtext":"Trip length:","unavailabletext":"Flights are not available for this departure date and trip length.","octobertext":"October","decembertext":"December","updatepricestext":"Update Prices","departtext":"Depart","milestext":"Miles","lowestlegendtext":"Lowest","loadpreviousdatestext":"Load Previous Dates","selectederrortext":"You have chosen a date that is unavailable.  Please select another date.","junetext":"June","pricetypelabel":"Show prices as","augusttext":"August","onewaydatelabel":"One-Way:","onewaytext":"One-Way Price:","returntext":"Return"},"sessionexpiration":{"sessionseconds":"120","buttoncontinue":"Continue","sessionnearexpire":"To protect your privacy and security, your session will expire in","buttonbooking":"Start Over","startnewsessionmyaccounttext":"You may log in again by selecting Log In Again.","startnewsessionbookingtext":"You may start your booking again by selecting Start Over.","bookingsessionexpired":"Your session has expired. You have been automatically signed out to protect your privacy.","extendsessionmessage":"Select Continue to extend your session.","buttonstartover":"Log In Again","myaccountsessionexpired":"Your session has expired. You have been automatically signed out to protect your privacy."},"accessibility":{"externallinkmessage":"Opens external link to page that may not meet accessibility guidelines","externallinkregex":"hawaiianairlines.co","subdomainexcludes":"newsroom","cssselector":"a[href]"},"cities_version":{"versionnumber":"5.0.6"}};
+	HA.SCSwitches = {"itinerary:enablegroupbookingseats":true,"bookingwidget:enabledealsandoffersgetreq":true,"inflightoptionsinfo:enablesellingtooltippopup":true,"global:enableemailsubscriptiononfooter":true,"lowfare:enablepricecalendar":true,"omniture:disableoldomniture":true,"global:enablesessiontimeoutbookingpath":true,"bookingwidget:enablecarswidget":true,"global:enablenativeappmodaloncheckinpage":true,"appbanners:enableapplebanner":true,"bookingwidget:enablemilesdollaroption":true,"bookingwidget:enablerefundablefares":true,"global:enablenativeappbanneronfooter":true,"global:enablesessiontimeout":true,"appbanners:enableandroidbanner":true,"global:enablenativeappmodalonconfirmationpage":true,"appbanners:enablenativeappbannerinupcomingtripsdashboard":true,"omniture:enabledtm":true,"bookingwidget:displaychilddropdown":true,"lowfare:enablepricechart":true,"payment:enabletripinsurance":true,"bookingwidget:enablepackageswidget":true,"appbanners:enableflightstatusnativeappupsellbanner":true,"bookingwidget:enablehotelwidget":true,"inflightoptionsinfo:enableverticalseatmap":true,"global:enablevic":true};
+</script>
+
+
+		<script>
+			var returnUrlQs = '?ReturnUrl=%2fmy-account';
+		</script>
+
+	
+	
+    <script src="//js.s-hawaiianairlines.com/bundles/19.12.19.5198/app"></script>
+
+
+
+	<script src="//js.s-hawaiianairlines.com/Scripts/i18n/angular-locale_en.js"></script>
+
+
+	<!-- DTM -->
+<script>
+var digitalData = $.extend(digitalData,{
+  "page": {
+    "pageInfo": {
+      "name": "ha:us:legal:privacy-policy"
+    },
+    "category": {},
+    "affiliateInfo": {
+      "affiliateId": ""
+    },
+    "search": {},
+    "area": ""
+  },
+  "env": {
+    "server": "902531-CDS21",
+    "currencyCode": "USD",
+    "languageName": "en",
+    "cookieDomainPeriods": "3"
+  },
+  "haMemberInfo": {
+    "hmMemberStatus": "Non-Member",
+    "corporateId": null,
+    "milesId": null,
+    "isBCUSCardHolder": false
+  },
+  "accountInfo": {
+    "account": "hausPRODTEMP,haglobalPRODTEMP",
+    "accountType": null
+  },
+  "products": [],
+  "nitp": {},
+  "booking": {
+    "bookingChange": {},
+    "milesInfo": {},
+    "extraComfortSeat": {},
+    "preferredSeat": {},
+    "paymentInfo": {},
+    "fareHold": {},
+    "flightInfo": {},
+    "grandTotal": 0.0,
+    "ancillaries": {
+      "hotel": {},
+      "rentalCar": {},
+      "leiGreeting": {},
+      "shuttleService": {},
+      "vacationPackage": {},
+      "tripInsurance": {}
+    },
+    "fareBasisCode": "RHM2ELIL"
+  },
+  "premierClub": {},
+  "shareMiles": {},
+  "milesMaximizer": {},
+  "giftCardInfo": {},
+  "loyaltyInfo": {},
+  "eventData": {}
+});
+</script>
+<script>_satellite.pageBottom();</script><div id="orderConfirmPageMboxDiv" style="visibility:hidden;display:none;"></div>
+
+<!-- DTM -->
+<script>
+window.digitalDataLoaded = $.Deferred().resolve().promise();
+</script>
+
+
+	<script>
+		$(window).on('load', function () {
+			var s = document.createElement("script");
+			s.type = "text/javascript";
+			s.src = '//js.s-hawaiianairlines.com/bundles/1.2/metrics';
+			var x = document.getElementsByTagName('script')[0];
+			x.parentNode.insertBefore(s, x);
+		});
+	</script>
+
+
+	
+
+	<span class="screen-reader-only" aria-live="polite" role="status" ng-bind="$root.ariaLiveMessage"></span>
+
+	
+	<link rel="stylesheet" type="text/css" href="//fast.fonts.net/t/1.css?apiType=css&projectid=bc1fa060-63f7-44d4-9424-7679fb3ebf34">
+
+</body>
+</html>

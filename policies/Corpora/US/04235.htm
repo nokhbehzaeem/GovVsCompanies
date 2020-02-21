@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"5a5c245fda",applicationID:"243411066"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://www.ornl.gov/ornl/contact-us/Security--Privacy-Notice" />
+<link rel="shortlink" href="https://www.ornl.gov/node/7256" />
+<link rel="revision" href="https://www.ornl.gov/ornl/contact-us/Security--Privacy-Notice" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_config.icon_color = "#007833";</script>
+
+    <title>Security &amp; Privacy Notice | ORNL</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_6rK5CxNrDAms7vzJ7NAL95NBPPOKSq1ea1i_d6Nggzk.css?q3kdqr" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_5w_9O4BXVtDPGG-UqFBPw1ZiAJtyYJsynbflE0Gylpk.css?q3kdqr" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" />
+
+    <script src="/sites/default/files/js/js_o4COAaVsif_E13o_nj30Y6bGt6usPPvoK_YTFsVPEJg.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/ornl/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/ornl/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/ornl/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/themes/ornl/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/themes/ornl/images/favicons/safari-pinned-tab.svg" color="#0c7a40">
+    <link rel="shortcut icon" href="/themes/ornl/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#0c7a40">
+    <meta name="msapplication-config" content="/themes/ornl/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="page-node-type-page">
+
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="pure-g">
+
+    <header class="header-container" role="banner">
+        
+        <div class="pure-u-1-1">
+
+              <div class="pure-u-1-1">
+    <div class="container header">
+              <a class="site-logo" href="/" title="Oak Ridge National Laboratory" rel="home">
+      <img src="/themes/ornl/logo.svg" alt="Oak Ridge National Laboratory" />
+    </a>
+      
+<div class="main-nav-menu"  id="block-ornl-main-menu">
+    
+        
+            
+              <ul class="megamenu-list" >
+
+                  <li class="megamenu-top-item hover-intent" >
+
+            <a href="/content/solving-big-problems" data-drupal-link-system-path="node/7193">About Us</a>
+
+                          <span class="arrow-up"></span>
+                            <ul class="megamenu-group-container submenu">
+
+        <div class="megamenu-dropdown-container">
+
+                        
+                              <div class="megamenu-dropdown-row pure-u-1 pure-g">
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <a href="/content/solving-big-problems" data-drupal-link-system-path="node/7193">ABOUT</a>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/content/ornl-brochure-solving-big-problems" data-drupal-link-system-path="node/7196">Brochure</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/ornl-fact-sheets" data-drupal-link-system-path="node/7195">Fact Sheets</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/seventy-five-years-great-science" data-drupal-link-system-path="node/7198">History</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/about-us/honors-and-awards" data-drupal-link-system-path="node/55504">Honors and Awards</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/organization" data-drupal-link-system-path="node/7315">Org Charts</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>ORGANIZATION</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/content/leadership-team" data-drupal-link-system-path="node/7197">Leadership Team</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/organization" data-drupal-link-system-path="node/7315">Organization</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>CAREERS</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="https://jobs.ornl.gov/">Job Openings</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="https://jobs.ornl.gov/content/Working-Here/?locale=en_US">Working at ORNL</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/diversity" data-drupal-link-system-path="node/13779">Diversity</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="https://orise.orau.gov/ornl">Students and Recent Graduates</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/careers/distinguished-fellowships" data-drupal-link-system-path="node/71841">Fellowships</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                              </div>
+                              
+            
+                              <div class="megamenu-dropdown-row pure-u-1 pure-g">
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <a href="/content/come-see-us" data-drupal-link-system-path="node/7194">VISIT ORNL</a>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="https://map.ornl.org/#!UMAP_2015061042440">Interactive Map</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/getting-ornl" data-drupal-link-system-path="node/7238">Getting to ORNL</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/getting-around-ornl-campus" data-drupal-link-system-path="node/7237">Getting Around ORNL</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/airport-information" data-drupal-link-system-path="node/7214">Airport Information</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/regional-information" data-drupal-link-system-path="node/7215">Regional Information</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/come-see-us#before" data-drupal-link-system-path="node/7194">Before You Arrive</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>RESEARCH</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/content/hubs-centers-and-institutes" data-drupal-link-system-path="node/7257">Hubs, Centers, and Institutes</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/education-programs" data-drupal-link-system-path="node/397">ORNL Programs</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/science-and-discovery" data-drupal-link-system-path="node/7284">Science Areas</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/research-library" data-drupal-link-system-path="node/7251">Research Library</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <a href="/content/community-outreach" data-drupal-link-system-path="node/7200">SOCIAL RESPONSIBILITY</a>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/content/corporate-giving" data-drupal-link-system-path="node/7201">Corporate Giving</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/community-outreach#community-outreach" data-drupal-link-system-path="node/7200"> Community Outreach</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/community-outreach#employee-engagement" data-drupal-link-system-path="node/7200"> Employee Engagement</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                              </div>
+                              
+            
+        </div>
+
+    
+    </ul>
+  
+            
+          </li>
+                  <li class="megamenu-top-item hover-intent" >
+
+            <a href="/content/user-facilities" data-drupal-link-system-path="node/7268">User Facilities</a>
+
+                          <span class="arrow-up"></span>
+                            <ul class="megamenu-group-container submenu">
+
+        <div class="megamenu-dropdown-container">
+
+                        
+                              <div class="megamenu-dropdown-row pure-u-1 pure-g">
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span> ___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/facility/btric" data-drupal-link-system-path="node/55653">Building Technologies Research and Integration Center</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/facility/cftf" data-drupal-link-system-path="node/14080">Carbon Fiber Technology Facility</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="https://www.olcf.ornl.gov/">Oak Ridge Leadership Computing Facility</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="http://neutrons.ornl.gov/sns">Spallation Neutron Source</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="http://neutrons.ornl.gov/hfir">High Flux Isotope Reactor</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/facility/mdf" data-drupal-link-system-path="node/14053">Manufacturing Demonstration Facility</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/facility/cnms" data-drupal-link-system-path="node/13788">Center for Nanophase Materials Sciences</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/facility/csmb" data-drupal-link-system-path="node/13792">Center for Structural Molecular Biology</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/facility/ntrc" data-drupal-link-system-path="node/14074">National Transportation Research Center</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                              </div>
+                              
+            
+        </div>
+
+    
+    </ul>
+  
+            
+          </li>
+                  <li class="megamenu-top-item hover-intent" >
+
+            <a href="/content/science-and-discovery" data-drupal-link-system-path="node/7284">Science and Discovery</a>
+
+                          <span class="arrow-up"></span>
+                            <ul class="megamenu-group-container submenu">
+
+        <div class="megamenu-dropdown-container">
+
+                        
+                              <div class="megamenu-dropdown-row pure-u-1 pure-g">
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/science-area/advanced-materials" data-drupal-link-system-path="node/53340">Advanced Materials</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/directorate/eesd" data-drupal-link-system-path="node/53801">Clean Energy</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/science-area/national-security" data-drupal-link-system-path="node/13915">National Security</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="https://neutrons.ornl.gov">Neutron Science</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/directorate/nsed" data-drupal-link-system-path="node/13777">Nuclear Science</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/directorate/ccsd" data-drupal-link-system-path="node/13775">Supercomputing</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="https://ai-roadmap.ornl.gov/">Artificial Intelligence Initiative</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/exascale" data-drupal-link-system-path="node/13781">Exascale Computing Project</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/us-iter" data-drupal-link-system-path="node/7282">US ITER Project</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/hubs-centers-and-institutes" data-drupal-link-system-path="node/7257">Hubs, Centers, and Institutes</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/organization" data-drupal-link-system-path="node/7315">Scientific Divisions</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                              </div>
+                              
+            
+        </div>
+
+    
+    </ul>
+  
+            
+          </li>
+                  <li class="megamenu-top-item hover-intent" >
+
+            <a href="/ornl/news/News-Resources" data-drupal-link-system-path="node/53343">News</a>
+
+            
+          </li>
+                  <li class="megamenu-top-item hover-intent" >
+
+            <a href="/our-people/find-people" data-drupal-link-system-path="our-people/find-people">Our People</a>
+
+                          <span class="arrow-up"></span>
+                            <ul class="megamenu-group-container submenu">
+
+        <div class="megamenu-dropdown-container">
+
+                        
+                              <div class="megamenu-dropdown-row pure-u-1 pure-g">
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/project/contact-us" data-drupal-link-system-path="node/13783">Contact Us</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/media-contacts" data-drupal-link-system-path="node/7208">Media Contacts</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/our-people/find-people" data-drupal-link-system-path="our-people/find-people">Staff Directory</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/content/directorate-contacts" data-drupal-link-system-path="node/7210">Directorate Contacts</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/division-contacts" data-drupal-link-system-path="node/7211">Division Contacts</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                                            
+            
+              
+              <li class="megamenu-item pure-u-1-3" >
+                <div class="megamenu-group">
+                  <span>___</span>
+                                                    <ul class="megamenu-list">
+                  <li class="megamenu-item" >
+            <a href="/our-people/corporate-fellows" data-drupal-link-system-path="node/60200">Corporate Fellows</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/user-facility-contacts" data-drupal-link-system-path="node/7279">User Facility Contacts</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/content/experts-list" data-drupal-link-system-path="node/7209">Experts List</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/connect-anywhere" data-drupal-link-system-path="node/7240">Internal Users</a>
+                      </li>
+                  <li class="megamenu-item" >
+            <a href="/retirees" data-drupal-link-system-path="node/74206">Retirees</a>
+                      </li>
+            
+    </ul>
+  
+                                  </div>
+              </li>
+
+                              </div>
+                              
+            
+        </div>
+
+    
+    </ul>
+  
+            
+          </li>
+                  <li class="megamenu-top-item hover-intent" >
+
+            <a href="https://jobs.ornl.gov">Careers</a>
+
+            
+          </li>
+        
+    
+    </ul>
+  
+
+
+    </div>
+<div class="mobile-menu-container"  id="block-mainnavigationmobile">
+  
+    
+      
+              <a class="menu-mobile-trigger"><i aria-label="Toggle mobile menu" class="fas fa-bars"></i></a>
+      <ul class="pure-menu-list menu-mobile noselect" >
+        <div class="mobile-menu-close"><i aria-label="Close mobile menu" class="fas fa-times"></i></div>
+              <li class="pure-menu-item has-submenu" >
+        <a href="/content/solving-big-problems" data-drupal-link-system-path="node/7193">About Us</a>
+                  <i aria-label="About Us" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item has-submenu" >
+        <a href="/content/solving-big-problems" data-drupal-link-system-path="node/7193">ABOUT</a>
+                  <i aria-label="ABOUT" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="/content/ornl-brochure-solving-big-problems" data-drupal-link-system-path="node/7196">Brochure</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/ornl-fact-sheets" data-drupal-link-system-path="node/7195">Fact Sheets</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/seventy-five-years-great-science" data-drupal-link-system-path="node/7198">History</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/about-us/honors-and-awards" data-drupal-link-system-path="node/55504">Honors and Awards</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/organization" data-drupal-link-system-path="node/7315">Org Charts</a>
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item has-submenu" >
+        <span>ORGANIZATION</span>
+                  <i aria-label="ORGANIZATION" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="/content/leadership-team" data-drupal-link-system-path="node/7197">Leadership Team</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/organization" data-drupal-link-system-path="node/7315">Organization</a>
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item has-submenu" >
+        <span>CAREERS</span>
+                  <i aria-label="CAREERS" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="https://jobs.ornl.gov/">Job Openings</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="https://jobs.ornl.gov/content/Working-Here/?locale=en_US">Working at ORNL</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/diversity" data-drupal-link-system-path="node/13779">Diversity</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="https://orise.orau.gov/ornl">Students and Recent Graduates</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/careers/distinguished-fellowships" data-drupal-link-system-path="node/71841">Fellowships</a>
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item has-submenu" >
+        <a href="/content/come-see-us" data-drupal-link-system-path="node/7194">VISIT ORNL</a>
+                  <i aria-label="VISIT ORNL" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="https://map.ornl.org/#!UMAP_2015061042440">Interactive Map</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/getting-ornl" data-drupal-link-system-path="node/7238">Getting to ORNL</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/getting-around-ornl-campus" data-drupal-link-system-path="node/7237">Getting Around ORNL</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/airport-information" data-drupal-link-system-path="node/7214">Airport Information</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/regional-information" data-drupal-link-system-path="node/7215">Regional Information</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/come-see-us#before" data-drupal-link-system-path="node/7194">Before You Arrive</a>
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item has-submenu" >
+        <span>RESEARCH</span>
+                  <i aria-label="RESEARCH" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="/content/hubs-centers-and-institutes" data-drupal-link-system-path="node/7257">Hubs, Centers, and Institutes</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/education-programs" data-drupal-link-system-path="node/397">ORNL Programs</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/science-and-discovery" data-drupal-link-system-path="node/7284">Science Areas</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/research-library" data-drupal-link-system-path="node/7251">Research Library</a>
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item has-submenu" >
+        <a href="/content/community-outreach" data-drupal-link-system-path="node/7200">SOCIAL RESPONSIBILITY</a>
+                  <i aria-label="SOCIAL RESPONSIBILITY" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="/content/corporate-giving" data-drupal-link-system-path="node/7201">Corporate Giving</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/community-outreach#community-outreach" data-drupal-link-system-path="node/7200">Community Outreach</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/community-outreach#employee-engagement" data-drupal-link-system-path="node/7200">Employee Engagement</a>
+              </li>
+        </ul>
+  
+
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item has-submenu" >
+        <a href="/content/user-facilities" data-drupal-link-system-path="node/7268">User Facilities</a>
+                  <i aria-label="User Facilities" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="/facility/btric" data-drupal-link-system-path="node/55653">Building Technologies Research and Integration Center</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/facility/cftf" data-drupal-link-system-path="node/14080">Carbon Fiber Technology Facility</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="https://www.olcf.ornl.gov/">Oak Ridge Leadership Computing Facility</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="http://neutrons.ornl.gov/sns">Spallation Neutron Source</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="http://neutrons.ornl.gov/hfir">High Flux Isotope Reactor</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/facility/mdf" data-drupal-link-system-path="node/14053">Manufacturing Demonstration Facility</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/facility/cnms" data-drupal-link-system-path="node/13788">Center for Nanophase Materials Sciences</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/facility/csmb" data-drupal-link-system-path="node/13792">Center for Structural Molecular Biology</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/facility/ntrc" data-drupal-link-system-path="node/14074">National Transportation Research Center</a>
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item has-submenu" >
+        <a href="/content/science-and-discovery" data-drupal-link-system-path="node/7284">Science and Discovery</a>
+                  <i aria-label="Science and Discovery" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="/science-area/advanced-materials" data-drupal-link-system-path="node/53340">Advanced Materials</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/directorate/eesd" data-drupal-link-system-path="node/53801">Clean Energy</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/science-area/national-security" data-drupal-link-system-path="node/13915">National Security</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="https://neutrons.ornl.gov">Neutron Science</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/directorate/nsed" data-drupal-link-system-path="node/13777">Nuclear Science</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/directorate/ccsd" data-drupal-link-system-path="node/13775">Supercomputing</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="https://ai-roadmap.ornl.gov/">Artificial Intelligence Initiative</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/exascale" data-drupal-link-system-path="node/13781">Exascale Computing Project</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/hubs-centers-and-institutes" data-drupal-link-system-path="node/7257">Hubs, Centers, and Institutes</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/us-iter" data-drupal-link-system-path="node/7282">US ITER Project</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/organization" data-drupal-link-system-path="node/7315">Scientific Divisions</a>
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/ornl/news/News-Resources" data-drupal-link-system-path="node/53343">News</a>
+              </li>
+          <li class="pure-menu-item has-submenu" >
+        <a href="/our-people/find-people" data-drupal-link-system-path="our-people/find-people">Our People</a>
+                  <i aria-label="Our People" class="fas fa-caret-down"></i>
+                        <ul class="pure-menu-list submenu">
+              <li class="pure-menu-item " >
+        <a href="/contact-us">Contact Us</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/media-contacts" data-drupal-link-system-path="node/7208">Media Contacts</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/our-people/find-people" data-drupal-link-system-path="our-people/find-people">Staff Directory</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/directorate-contacts" data-drupal-link-system-path="node/7210">Directorate Contacts</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/division-contacts" data-drupal-link-system-path="node/7211">Division Contacts</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/our-people/corporate-fellows" data-drupal-link-system-path="node/60200">Corporate Fellows</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/user-facility-contacts" data-drupal-link-system-path="node/7279">User Facility Contacts</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/content/experts-list" data-drupal-link-system-path="node/7209">Experts List</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/connect-anywhere" data-drupal-link-system-path="node/7240">Internal Users</a>
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/retirees" data-drupal-link-system-path="node/74206">Retirees</a>
+              </li>
+        </ul>
+  
+
+              </li>
+          <li class="pure-menu-item " >
+        <a href="/careers" data-drupal-link-system-path="node/53344">Careers</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+  
+    
+      
+
+
+<div class="search-icon">
+    <i aria-labelledby="st-search-input2" class="fas fa-search"></i>
+</div>
+
+<div class="site-search-input-block">
+    <div id="swifttype-search" class="swifttype-search">
+        <form id="search-form">
+            <input aria-label="Search ORNL site" id="st-search-input2" type="text" placeholder="search">
+        </form>
+    </div>
+</div>
+  
+    </div>
+  </div>
+
+
+            
+            
+
+
+        </div>
+
+    </header>
+
+    <main class="pure-g pure-u-1 main-container" role="main">
+
+        
+
+          <div class="pure-u-1-1">
+    <div class="container status-messages-container">
+        
+<div data-drupal-messages-fallback class="hidden"></div>
+
+    </div>
+  </div>
+
+
+        <div class="pure-g container">
+                            <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-3 main-content" id="main-content">
+
+                    
+                      <div class="content-section" >
+    <div class="page-title container"  id="block-ornl-page-title">
+    
+        
+            
+  <h1 class="page-title"><span property="schema:name">Security &amp; Privacy Notice</span>
+</h1>
+
+
+    </div>
+
+
+  <div class="pure-u-1"  id="block-ornl-content">
+    
+        
+          
+
+
+<article role="article" about="/ornl/contact-us/Security--Privacy-Notice" typeof="schema:WebPage" class="node node--type-page node--view-mode-full">
+
+    
+          <span property="schema:name" content="Security &amp; Privacy Notice" class="hidden"></span>
+
+
+    
+            
+        <div class="image-caption"></div>
+    
+    <div class="node__content">
+        
+
+    <div class="pure-g field-wrapper field-body">
+        <div class="field-container"  property="schema:text">
+
+                                                <div class="pure-u-1-1 field-element"  property="schema:text"><p>This web site is part of a Federal computer system used to accomplish Federal functions. The Department of Energy monitors this web site for security purposes to ensure it remains available to all users and to protect information in the system. By accessing this web site, you are expressly consenting to these monitoring activities.</p>
+
+<p>Unauthorized attempts to defeat or circumvent security features, to use the system for other than intended purposes, to deny service to authorized users, to access, obtain, alter, damage, or destroy information, or otherwise to interfere with the system or its operation is prohibited. Evidence of such acts may be disclosed to law enforcement authorities and result in criminal prosecution under the Computer Fraud and Abuse Act of 1986 and the National Information Infrastructure Protection Act of 1996 (Pub. L. 104-294), (18 U.S.C. 1030), or other applicable criminal laws.</p>
+
+<h2>Disclaimer of liability</h2>
+
+<p>Documents available from the web server were prepared as an account of work sponsored by an agency of the U.S. Government. Neither the U.S. Government nor any agency thereof, or any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Further, Oak Ridge National Laboratory is not responsible for the contents of any off-site pages referenced.</p>
+
+<h2>Disclaimer of endorsement</h2>
+
+<p>Reference to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the U.S. Government or any agency thereof. The views and opinions of document authors do not necessarily state or reflect those of the U.S. Government or any agency thereof.</p>
+
+<h2>Copyright status</h2>
+
+<p>Documents provided from the web server were sponsored by the U.S. Government under contract DE-AC05-00OR22725 with UT-Battelle, LLC, which manages the Oak Ridge National Laboratory. Accordingly, the U.S. Government retains a nonexclusive, royalty-free license to publish or reproduce these documents, or to allow others to do so, for U.S. Government purposes. Unless otherwise noted, they have been placed in the public domain, although we request the following credit line be used when documents or figures are used elsewhere:  “Courtesy of Oak Ridge National Laboratory, U.S. Dept. of Energy.</p>
+
+<h2>Unauthorized access</h2>
+
+<p>Oak Ridge National Laboratory web users are authorized to access only the documents listed on its menus. Users who attempt to gain unauthorized access to other data are subject to criminal and civil penalties under federal laws (including but not limited to PL 83-703 and 99-474).</p>
+
+<h2>Privacy notice</h2>
+
+<p>We collect no personal information about you without your knowledge when you visit this site, although you may choose to provide this information to us in specific instances. However, we do collect and store certain information automatically:</p>
+
+<ul><li>The Internet Protocol (IP) address of the domain from which you access the Internet (e.g., 123.456.789.012), whether yours individually or provided as a proxy by your Internet Service Provider (ISP)</li>
+	<li>The date and time you access our site</li>
+	<li>The pages you visit (recorded by the text and graphics files that compose that page)</li>
+	<li>The Internet address of the web site from which you linked directly to our site.</li>
+</ul><p>We use the summary statistics to help us make our site more useful to visitors, such as assessing what information is of most and least interest to visitors, and for other purposes such as determining the site's technical design specifications and identifying system performance or problem areas. This information is NOT shared with anyone beyond the support staff for this web site, except when required by law enforcement investigation, and is used only as a source of anonymous statistical information.</p></div>
+                                
+        </div>
+    </div>
+
+
+    </div>
+
+    
+</article>
+
+      </div>
+
+
+  </div>
+
+                </div>
+                <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3">
+                      <div class="side-bar-content">
+    
+
+  <div class="pure-u-1"  id="block-entityviewcontent-2">
+    
+        
+          
+
+
+<section role="article" about="/ornl/contact-us/Security--Privacy-Notice" typeof="schema:WebPage" class="pure-g side-bar-wrapper node node--type-page node--view-mode-side-bar-content">
+    
+</section>
+
+      </div>
+
+
+  </div>
+
+                </div>
+                    </div>
+
+            <div class="pure-g bottom-section-content" >
+        
+
+  <div class="pure-u-1"  id="block-entityviewcontent-3">
+    
+        
+          
+<article role="article" about="/ornl/contact-us/Security--Privacy-Notice" typeof="schema:WebPage" class="node node--type-page node--view-mode-bottom-section-content">
+
+    
+    
+
+
+</article>
+
+      </div>
+
+
+    </div>
+
+
+        
+
+            <div class="left-off-canvas" >
+        
+
+<div class="pure-u-1"  id="block-add-to-any-block">
+    <div class="add-to-any-wrapper">
+                    <span class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.ornl.gov/ornl/contact-us/Security--Privacy-Notice" data-a2a-title="Add to Any Block"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_linkedin"></a><a class="a2a_button_outlook_com"></a></span>
+            </div>
+</div>
+
+
+    </div>
+
+
+    </main>
+
+
+    <footer class="pure-u-1-1 footer-container" role="contentinfo">
+
+          <div class="pure-u-1-1 footer-top-banner" >
+    <div class="container">
+        
+
+  <div class="pure-u-1"  id="block-footertopbanner">
+    
+        
+          
+
+    <div class="pure-g field-wrapper field-body">
+        <div class="field-container" >
+
+                                                <div class="pure-u-1-1 field-element" ><div>Oak Ridge National Laboratory is managed by UT-Battelle LLC for the US Department of Energy</div>
+</div>
+                                
+        </div>
+    </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+          <div class="pure-u-1-1 footer-first" >
+    <div class="container">
+        <nav class="pure-u-1-1" role="navigation" aria-labelledby="block-footerfirstrow-menu" id="block-footerfirstrow">
+            
+  <h2 class="visually-hidden" id="block-footerfirstrow-menu">Footer First Row</h2>
+  
+
+        
+                            <ul class="footer-menu-root" >
+        
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/user-facilities" data-drupal-link-system-path="node/7268">USER FACILITIES</a>
+                                                                        <ul class="footer-menu-heading-root">
+        
+            
+                <li class="footer-menu-item" >
+                    <a href="/facility/btric" data-drupal-link-system-path="node/55653">Building Technologies Research and Integration Center</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/facility/cftf" data-drupal-link-system-path="node/14080">Carbon Fiber Technology Facility</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/facility/cnms" data-drupal-link-system-path="node/13788">Center for Nanophase Material Sciences</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/facility/csmb" data-drupal-link-system-path="node/13792">Center for Structural Molecular Biology</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="http://neutrons.ornl.gov/hfir">High Flux Isotope Reactor</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/facility/mdf" data-drupal-link-system-path="node/14053">Manufacturing Demonstration Facility</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/facility/ntrc" data-drupal-link-system-path="node/14074">National Transportation Research Center</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="https://www.olcf.ornl.gov/">Oak Ridge Leadership Computing Facility</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="http://neutrons.ornl.gov/sns">Spallation Neutron Source</a>
+                                    </li>
+            
+            </ul>
+    
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/science-and-discovery" data-drupal-link-system-path="node/7284">SCIENCE &amp; DISCOVERY</a>
+                                                                        <ul class="footer-menu-heading-root">
+        
+            
+                <li class="footer-menu-item" >
+                    <a href="/science-area/advanced-materials" data-drupal-link-system-path="node/53340">Advanced Materials</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/directorate/eesd" data-drupal-link-system-path="node/53801">Clean Energy</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/exascale" data-drupal-link-system-path="node/13781">Exascale Computing Project</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/hubs-centers-and-institutes" data-drupal-link-system-path="node/7257">Hubs, Centers, and Institutes</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/science-area/national-security" data-drupal-link-system-path="node/13915">National Security</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="https://neutrons.ornl.gov/">Neutron Science</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/directorate/nsed" data-drupal-link-system-path="node/13777">Nuclear Science</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/directorate/ccsd" data-drupal-link-system-path="node/13775">Supercomputing</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/us-iter" data-drupal-link-system-path="node/7282">US ITER</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/organization" data-drupal-link-system-path="node/7315">Scientific Divisions</a>
+                                    </li>
+            
+            </ul>
+    
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/solving-big-problems" data-drupal-link-system-path="node/7193">ABOUT US</a>
+                                                                        <ul class="footer-menu-heading-root">
+        
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/ornl-brochure-solving-big-problems" data-drupal-link-system-path="node/7196">Brochure</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/ornl-fact-sheets" data-drupal-link-system-path="node/7195">Fact Sheets</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/leadership-team" data-drupal-link-system-path="node/7197">Leadership Team</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/diversity" data-drupal-link-system-path="node/13779">Diversity</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/seventy-five-years-great-science" data-drupal-link-system-path="node/7198">History</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/laboratory-directed-research-development" data-drupal-link-system-path="node/7253">Lab-Directed R&amp;D</a>
+                                    </li>
+            
+                <li class="footer-menu-item" >
+                    <a href="/content/environmental-policy" data-drupal-link-system-path="node/7199">Environmental Policy</a>
+                                    </li>
+            
+            </ul>
+    
+                                    </li>
+            
+            </ul>
+    
+
+<div class="pure-u-1">
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+
+          <div class="pure-u-1-1 footer-second" >
+    <div class="container">
+        <nav class="pure-u-1-1" role="navigation" aria-labelledby="block-footersecondrow-menu" id="block-footersecondrow">
+            
+  <h2 class="visually-hidden" id="block-footersecondrow-menu">Footer Second Row</h2>
+  
+
+        
+                
+                            <ul class="footer-menu-root" >
+            
+                
+                    <li class="footer-menu-item" >
+                        <span>FOR THE PUBLIC</span>
+                                                                    
+                            <ul class="footer-menu-heading-root">
+            
+                
+                    <li class="footer-menu-item" >
+                        <a href="/ornl/news/News-Resources" data-drupal-link-system-path="node/53343">News</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/community-outreach" data-drupal-link-system-path="node/7200">Community Outreach</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/education-programs" data-drupal-link-system-path="node/397">Educational Programs</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/corporate-giving" data-drupal-link-system-path="node/7201">Corporate Giving</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/seventy-five-years-great-science" data-drupal-link-system-path="node/7198">History</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="https://jobs.ornl.gov/">Careers</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/come-see-us" data-drupal-link-system-path="node/7194">Visit ORNL</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/project/contact-us" data-drupal-link-system-path="node/13783">Contact Us</a>
+                                            </li>
+                
+            </ul>
+            
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <span>FOR RESEARCHERS</span>
+                                                                    
+                            <ul class="footer-menu-heading-root">
+            
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/user-facilities" data-drupal-link-system-path="node/7268">User Facilities</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/research-library" data-drupal-link-system-path="node/7251">Research Library</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/science-and-discovery" data-drupal-link-system-path="node/7284">Science and Discovery</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/laboratory-directed-research-development" data-drupal-link-system-path="node/7253">Lab-Directed R&amp;D</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="https://jobs.ornl.gov/">Careers</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/come-see-us" data-drupal-link-system-path="node/7194">Visit ORNL</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/project/contact-us" data-drupal-link-system-path="node/13783">Contact Us</a>
+                                            </li>
+                
+            </ul>
+            
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <span>FOR ACADEMIA</span>
+                                                                    
+                            <ul class="footer-menu-heading-root">
+            
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/education-programs" data-drupal-link-system-path="node/397">Educational Programs</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/science-and-discovery" data-drupal-link-system-path="node/7284">Science and Discovery</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/research-library" data-drupal-link-system-path="node/7251">Research Library</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/user-facilities" data-drupal-link-system-path="node/7268">User Facilities</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="https://jobs.ornl.gov/">Careers</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/ornl/news/News-Resources" data-drupal-link-system-path="node/53343">News</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/come-see-us" data-drupal-link-system-path="node/7194">Visit ORNL</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/project/contact-us" data-drupal-link-system-path="node/13783">Contact Us</a>
+                                            </li>
+                
+            </ul>
+            
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <span>FOR INDUSTRY</span>
+                                                                    
+                            <ul class="footer-menu-heading-root">
+            
+                
+                    <li class="footer-menu-item" >
+                        <a href="/partnerships" data-drupal-link-system-path="node/56502">Work with ORNL</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/economic-development" data-drupal-link-system-path="node/56571">Economic Development</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="https://web.ornl.gov/adm/contracts/">Procurement</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="https://smallbusiness.ornl.gov/">Small Business Programs</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="https://jobs.ornl.gov/">Careers</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/content/come-see-us" data-drupal-link-system-path="node/7194">Visit ORNL</a>
+                                            </li>
+                
+                    <li class="footer-menu-item" >
+                        <a href="/project/contact-us" data-drupal-link-system-path="node/13783">Contact Us</a>
+                                            </li>
+                
+            </ul>
+            
+                                            </li>
+                
+            </ul>
+            
+
+<div class="pure-u-1">
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+
+          <div class="pure-u-1-1 footer-bottom-banner" >
+    <div class="container">
+        <div class="pure-g footer-banner-wrapper">
+            
+
+<div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-4"  id="block-ornl-footer">
+    
+        
+            
+              <ul class="pure-menu-list" >
+                      <li class="pure-menu-item" >
+          <a href="/contact-us">Contact Us</a>
+        </li>
+      
+        </ul>
+  
+
+
+    </div>
+
+
+
+<div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-4"  id="block-footerbannersocialmedia">
+    <div class="newsdesk-sidebar-section-wrapper">
+        
+                
+                    <div class="newsdesk-social-icon-container">
+                                    <div class="newsdesk-social-icon">
+                        <a href="https://www.facebook.com/Oak.Ridge.National.Laboratory/">
+                            <i title="Facebook" class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                                    <div class="newsdesk-social-icon">
+                        <a href="https://twitter.com/ORNL">
+                            <i title="Twitter" class="fab fa-twitter-square"></i>
+                        </a>
+                    </div>
+                
+                                    <div class="newsdesk-social-icon">
+                        <a href="https://www.linkedin.com/company/oak-ridge-national-laboratory">
+                            <i title="LinkedIn" class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                
+                                    <div class="newsdesk-social-icon">
+                        <a href="https://www.instagram.com/oakridgelab">
+                            <i title="Instagram" class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                
+                                    <div class="newsdesk-social-icon">
+                        <a href="https://www.youtube.com/channel/UCmXb5EVu1Zmi02Lcv1LAf4w">
+                            <i title="Youtube" class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                
+                                    <div class="newsdesk-social-icon">
+                        <a href="https://www.flickr.com/photos/oakridgelab">
+                            <i title="Flickr" class="fab fa-flickr"></i>
+                        </a>
+                    </div>
+                
+                
+            </div>
+            </div>
+</div>
+
+
+
+<div class="pure-u-1 pure-u-sm-1 pure-u-md-1-2"  id="block-footerbannericons">
+    
+        
+            
+<div class="pure-g field-wrapper">
+    <div class="field-container footer-banner-icons pure-g" >
+                    <div class="pure-u-1 pure-u-sm-1-2 field-element" >  <article aria-label="footer-logos-UTB.png">
+    
+                <a href="https://ut-battelle.org/">
+            
+
+  <div class="pure-g field-wrapper">
+    <div class="field-container" >
+
+                        <div class="pure-u-1-1 field-element" >  <img src="/sites/default/files/2019-01/footer-logos-UTB_0.png" width="154" height="42" alt="UT-Battelle Icon" typeof="foaf:Image" />
+
+</div>
+                
+    </div>
+  </div>
+
+
+        </a>
+      </article>
+
+</div>
+                    <div class="pure-u-1 pure-u-sm-1-2 field-element" >  <article aria-label="footer-logo-DOE-OOS.png">
+    
+                <a href="https://www.energy.gov/science/">
+            
+
+  <div class="pure-g field-wrapper">
+    <div class="field-container" >
+
+                        <div class="pure-u-1-1 field-element" >  <img src="/sites/default/files/2019-01/footer-logo-DOE-OOS_0.png" width="252" height="44" alt="DOE Icon" typeof="foaf:Image" />
+
+</div>
+                
+    </div>
+  </div>
+
+
+        </a>
+      </article>
+
+</div>
+            </div>
+</div>
+
+
+    </div>
+
+
+        </div>
+    </div>
+  </div>
+
+
+          <div class="pure-u-1-1">
+    <div class="container">
+        <nav class="pure-u-1-1" role="navigation" aria-labelledby="block-sitelinks-menu" id="block-sitelinks">
+            
+  <h2 class="visually-hidden" id="block-sitelinks-menu">Site Links</h2>
+  
+
+        
+  
+                <ul class="pure-menu-list inline-menu site-links-menu" >
+                    <li class="pure-menu-item" >
+          <a href="/content/frequently-asked-questions" data-drupal-link-system-path="node/7254">FAQs</a>
+                  </li>
+              <li class="pure-menu-item" >
+          <a href="/content/our-people" data-drupal-link-system-path="node/7285">People</a>
+                  </li>
+              <li class="pure-menu-item" >
+          <a href="/content/user-facilities" data-drupal-link-system-path="node/7268">User Facilities</a>
+                  </li>
+              <li class="pure-menu-item" >
+          <a href="/connect-anywhere" data-drupal-link-system-path="node/7240">Internal Users</a>
+                  </li>
+              <li class="pure-menu-item" >
+          <a href="/ornl/contact-us/Security--Privacy-Notice" data-drupal-link-system-path="node/7256" class="is-active">Privacy</a>
+                  </li>
+              <li class="pure-menu-item" >
+          <a href="/content/accessibility" data-drupal-link-system-path="node/7255">Accessibility/508</a>
+                  </li>
+              <li class="pure-menu-item" >
+          <a href="/content/notice-nondiscrimination-and-accessibility-requirements" data-drupal-link-system-path="node/7310">Nondiscrimination/1557</a>
+                  </li>
+              <li class="pure-menu-item" >
+          <a href="/index/site-index" data-drupal-link-system-path="index/site-index">Index</a>
+                  </li>
+              <li class="pure-menu-item" >
+          <a href="/project/contact-us" data-drupal-link-system-path="node/13783">Contact Us</a>
+                  </li>
+            </ul>
+  
+
+
+
+  </nav>
+
+    </div>
+  </div>
+
+
+    </footer>
+
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/7256","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","user":{"uid":0,"permissionsHash":"d8ab9706c8e8e07ae48c78a60a29fca8605f2607163f95f2aa5abe6d5e11bc0e"}}</script>
+<script src="/sites/default/files/js/js_9oKMxtKV5sur8duKVjHi-7Tx5MY2n2l8B81XLbY6mnI.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_WFMD2maQNht4gNJxv5QHlB81WbTkhMbGbLYiQ5BVsRY.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="/sites/default/files/js/js_kq5YYUxfFHuK3c4Tw0Kd0NPTc5TdTG54jQqSTbg8nmE.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="/sites/default/files/js/js_TczlsvqMeTCbEu9lnXNU8RtXgv7RtmEN87Bi4xs1iik.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5a5c245fda","applicationID":"243411066","transactionName":"Z1xaMkFRXRZXARUPWF4WeQVHWVwLGSYTE0dRVWQIXFRWOXUNDxJFX1VUA0FsfQpSBzcPUkd6VwhHQlwJWgcTSwlGUF0R","queueTime":0,"applicationTime":283,"atts":"SxtZRAlLThg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

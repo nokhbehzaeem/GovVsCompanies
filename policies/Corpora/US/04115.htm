@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+ <a href="#content" class="skip">Skip to content</a>
+<head>
+<!-- inserted 3/28/19 a.chickinsky SR-5364392 -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PCWTN36');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=8, IE=9, IE=10, IE=edge" />
+<base href="https://www.dni.gov/index.php/privacy-policy" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="information, website, privacy, system, pages, odni, register, vol, site, federal, security, cookies, purposes, websites, law, national, identify, act, access, provide" />
+	<meta name="description" content="The Office of the Director of National Intelligence website (DNI. GOV or ODNI. GOV ) is provided as a public service by the ODNI on behalf of the Director of National Intelligence. This website does n" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Privacy Policy</title>
+	<link href="/templates/odni-content-page-template/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/media/k2/assets/css/k2.fonts.css?v2.7.1" rel="stylesheet" type="text/css" />
+	<link href="/components/com_k2/css/k2.css?v2.7.1" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/bootstrap.min.css?9f24807ae78bf9e561b27a1826aab0a4" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/bootstrap-responsive.min.css?9f24807ae78bf9e561b27a1826aab0a4" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/bootstrap-extended.css?9f24807ae78bf9e561b27a1826aab0a4" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/chosen.css?9f24807ae78bf9e561b27a1826aab0a4" rel="stylesheet" type="text/css" />
+	<link href="/media/com_finder/css/finder.css?9f24807ae78bf9e561b27a1826aab0a4" rel="stylesheet" type="text/css" />
+	<script src="/media/jui/js/jquery.min.js?9f24807ae78bf9e561b27a1826aab0a4" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?9f24807ae78bf9e561b27a1826aab0a4" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?9f24807ae78bf9e561b27a1826aab0a4" type="text/javascript"></script>
+	<script src="/media/k2/assets/js/k2.frontend.js?v2.7.1&amp;sitepath=/" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js?9f24807ae78bf9e561b27a1826aab0a4" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?9f24807ae78bf9e561b27a1826aab0a4" type="text/javascript"></script>
+	<script src="/templates/odni-content-page-template/js/template.js" type="text/javascript"></script>
+	<script src="/media/jui/js/chosen.jquery.min.js?9f24807ae78bf9e561b27a1826aab0a4" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.autocomplete.min.js?9f24807ae78bf9e561b27a1826aab0a4" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	jQuery(function ($) {
+		initChosen();
+		$("body").on("subform-row-add", initChosen);
+
+		function initChosen(event, container)
+		{
+			container = container || document;
+			$(container).find(".advancedSelect").chosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Type or select some options","placeholder_text_single":"Select an option","no_results_text":"No results match"});
+		}
+	});
+	jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
+jQuery(document).ready(function() {
+	var value, searchword = jQuery('#mod-finder-searchword164');
+
+		// Get the current value.
+		value = searchword.val();
+
+		// If the current value equals the default value, clear it.
+		searchword.on('focus', function ()
+		{
+			var el = jQuery(this);
+
+			if (el.val() === 'Search ...')
+			{
+				el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		searchword.on('blur', function ()
+		{
+			var el = jQuery(this);
+
+			if (!el.val())
+			{
+				el.val(value);
+			}
+		});
+
+		jQuery('#mod-finder-searchform164').on('submit', function (e)
+		{
+			e.stopPropagation();
+			var advanced = jQuery('#mod-finder-advanced164');
+
+			// Disable select boxes with no value selected.
+			if (advanced.length)
+			{
+				advanced.find('select').each(function (index, el)
+				{
+					var el = jQuery(el);
+
+					if (!el.val())
+					{
+						el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});
+	var suggest = jQuery('#mod-finder-searchword164').autocomplete({
+		serviceUrl: '/index.php/component/finder/?task=suggestions.suggest&amp;format=json&amp;tmpl=component',
+		paramName: 'q',
+		minChars: 1,
+		maxHeight: 400,
+		width: 300,
+		zIndex: 9999,
+		deferRequestBy: 500
+	});});
+	</script>
+
+<link href="/templates/odni-content-page-template/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="/templates/odni-content-page-template/css/template.css" rel="stylesheet" type="text/css" />
+
+
+<!--[if lt IE 9]>
+<script src="/media/jui/js/html5.js"></script>
+<![endif]-->
+<!--[if lte IE 7]>
+<link href="/templates/odni-content-page-template/css/template_IEold.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 8]>
+<link href="/templates/odni-content-page-template/css/template_IE8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 9]>
+<link href="/templates/odni-content-page-template/css/template_IE9.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<noscript>Your browser does not support JavaScript!</noscript>
+  
+<script id="_fed_an_ua_tag" language="javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DNI&pua=ua-33523145-2"></script>
+  
+
+  <script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+  <script>!function(e){var a="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,a="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="Q4EGJ-2D9AT-3BJFL-A5BV3-CZBUZ",function(){function n(a){e.BOOMR_onload=a&&a.timeStamp||(new Date).getTime()}if(!e.BOOMR||!e.BOOMR.version&&!e.BOOMR.snippetExecuted){e.BOOMR=e.BOOMR||{},e.BOOMR.snippetExecuted=!0;var i,o,r,_=document.createElement("iframe");if(e[t])e[t]("load",n,!1);else if(e.attachEvent)e.attachEvent("onload",n);_.src="javascript:void(0)",_.title="",_.role="presentation",(_.frameElement||_).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(_,r);try{o=_.contentWindow.document}catch(O){i=document.domain,_.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=_.contentWindow.document}o.open()._l=function(){var e=this.createElement("script");if(i)this.domain=i;e.id="boomr-if-as",e.src=a+"Q4EGJ-2D9AT-3BJFL-A5BV3-CZBUZ",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(e)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var a=""=="true"?1:0,t="",n="jc3avztiobmgsxrcllhq-f-573266c04-clientnsv4-s.akamaihd.net",i={"ak.v":25,"ak.cp":"196955","ak.ai":parseInt("490539",10),"ak.ol":"0","ak.cr":15,"ak.ipv":4,"ak.proto":"","ak.rid":"43ab9b16","ak.r":33599,"ak.a2":a,"ak.m":"dscna","ak.n":"essl","ak.bpcip":"72.182.10.0","ak.cport":62733,"ak.gh":"23.54.164.204","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1579309775"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(a){var t="http.initiator";if(a&&(!a[t]||"spa_hard"===a[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var e=BOOMR.subscribe;e("before_beacon",o.av,null,null),e("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body id="itemid-136">
+<!-- inserted 3/28/19 a.chickinsky SR-5364392 -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCWTN36"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+  
+  
+	<!-- Alert Modal -->
+
+
+			<div class=" alertBox" id="alertBox">
+							</div>
+
+
+	<!-- End Alert Modal -->
+
+  <!-- Link Redirect Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 id="myModalLabel">You are leaving our Website</h4>
+      </div>
+      <div class="modal-body">
+        <p> You have selected to open <span id="selected-link"></span> </p>
+        <p>If you would like to not see this alert again, please click the "Do not show me this again" check box below</p>      </div>
+      <div class="modal-footer">
+        <input type="checkbox" id="hideModalCheckbox" name="hideModalCheckbox" class="pull-left"> 
+        <label for="hideModalCheckbox" class="pull-left">&nbsp;Do not show me this again
+        </label>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="myModal-continue">Continue</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  
+  <!-- End Link Redirect Modal -->
+<!-- Top Bar -->
+		<section class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-2">
+									<button class="pull-right showBttn" id="showBttn" name="showSearchButton" value="OK" type="button"></button>
+
+
+								<div class="pull-right">
+									<div class="hiddenSearch " id="showSearch">
+										
+<form id="mod-finder-searchform164" action="/index.php/search" method="get" class="form-search">
+	<div class="finder moduleHide">
+		<label for="mod-finder-searchword164" class="element-invisible finder moduleHide">Search DNI.gov:    </label><input type="text" name="q" id="mod-finder-searchword164" class="search-query input-medium" size="20" value="" placeholder="Search ..."/><button class="btn btn-primary hasTooltip  moduleHide finder moduleHide" type="submit" title="Go"><span class="icon-search icon-white"></span>Search</button>
+							</div>
+</form>
+
+									</div>
+								</div>
+
+				
+												<button id="connectBttn" class="pull-right connectBttn">connect with ODNI</button>
+								<!-- Add Social Menu Items Here -->
+								<div class=" pull-right blurbContainer">
+									
+
+<div class="custom"  >
+	</div>
+<ul class="nav menu socialBlurbShow socialBlurb pull-right" id="socialBlurb">
+<li class="item-347"><a href="https://service.govdelivery.com/accounts/USODNI/subscriber/new" title="Subscribe" class="tooltipLink" onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,'); return false;"><img src="/files/ODNI/images/White-Icon-Mail-Icon.png" alt="Subscribe" /></a></li><li class="item-348"><a href="/index.php/newsroom?format=feed&amp;type=rss" title="RSS" class=" tooltipLink"><img src="/files/ODNI/images/White-Icon-rss-l.png" alt="RSS" /></a></li><li class="item-350"><a href="https://www.twitter.com/odnigov" title="ODNI Twitter" class="tooltipLink"><img src="/files/ODNI/images/White-Icon-SM1.png" alt="ODNI Twitter" /></a></li><li class="item-351"><a href="http://www.facebook.com/dni.gov" title="ODNI Facebook" class="tooltipLink"><img src="/files/ODNI/images/White-Icon-SMFB.png" alt="ODNI Facebook" /></a></li><li class="item-349"><a href="http://www.icontherecord.tumblr.com/" title="ODNI Tumblr" class="tooltipLink"><img src="/files/ODNI/images/White-Icon-TBLR.png" alt="ODNI Tumblr" /></a></li><li class="item-353"><a href="http://www.youtube.com/odnigov" title="ODNI YouTube" class="tooltipLink"><img src="/files/ODNI/images/White-Icon-YT.png" alt="ODNI YouTube" /></a></li><li class="item-524"><a href="/index.php/more" title="View other Social Media Links" class=" ">contact us</a></li></ul>
+
+						  	</div>
+								</div>
+			</div>
+		</section>
+
+
+<!-- Logo -->
+
+
+			<div class="container">
+				<nav class="navbar navbar-default" role="navigation">
+								 
+
+<div class="custom"  >
+	<p><a href="/index.php" class="navbar-brand odniPageLogo odniTopLogoStyle pull-left">Office<span> of the</span> <br />Director<span> of &nbsp;</span>National Intelligence</a></p></div>
+
+				
+<!-- Navigation -->
+
+								<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+					<img class="hamBgr" alt="Mobile Dropdown Menu" src="/templates/odni-content-page-template/images/hamburgerIcon.png" > 
+                  	</button>
+				</div>
+			<div class="navigation collapse navbar-collapse pull-right-custom centerNav" id="bs-example">
+
+						<ul class="nav menunav navbar-nav pull-right-custom centerNav">
+<li class="item-101 default"><a href="/index.php" >Home</a></li><li class="item-107 deeper parent"><a href="/index.php/who-we-are" >Who We Are</a><ul class="nav-child unstyled small"><li class="item-528 parent"><a href="/index.php/who-we-are/organizations" >Organization</a></li><li class="item-174"><a href="/index.php/who-we-are/mission-vision" >Mission, Vision &amp; Values</a></li><li class="item-175"><a href="/index.php/who-we-are/history" >History</a></li><li class="item-463"><a href="/index.php/ctiic-home" class="center-links-topnav">CTIIC</a></li><li class="item-461"><a href="/index.php/ncpc-home" class="center-links-topnav">NCPC</a></li><li class="item-462"><a href="/index.php/ncsc-home" class="center-links-topnav">NCSC</a></li><li class="item-460"><a href="/index.php/nctc-home" class="center-links-topnav">NCTC</a></li><li class="item-531"><span class="nav-header  hidden">Related Links</span>
+</li><li class="item-532"><span class="nav-header  hidden">Related Content</span>
+</li><li class="item-177 parent"><a href="/index.php/who-we-are/leadership" class="bottom-border">Leadership</a></li><li class="item-838"><a href="/index.php/odni-operating-status" >Operating Status</a></li></ul></li><li class="item-190 deeper parent"><a href="/index.php/what-we-do" >What We Do</a><ul class="nav-child unstyled small"><li class="item-191"><a href="/index.php/what-we-do/what-is-intelligence" >What is Intelligence?</a></li><li class="item-194"><a href="/index.php/what-we-do/members-of-the-ic" >Members of the IC</a></li><li class="item-189"><a href="/index.php/what-we-do/ic-budget" >IC Budget</a></li><li class="item-196"><a href="/index.php/what-we-do/ic-policies-reports" >IC Policies &amp; Reports</a></li><li class="item-840"><a href="/index.php/foia" >FOIA Reading Room</a></li></ul></li><li class="item-108 deeper parent"><a href="/index.php/how-we-work" >How We Work</a><ul class="nav-child unstyled small"><li class="item-192"><a href="/index.php/how-we-work/ethics" >Ethics</a></li><li class="item-193"><a href="/index.php/how-we-work/transparency" >Transparency</a></li><li class="item-841"><a href="/index.php/how-we-work/diversity" >Diversity</a></li><li class="item-842"><a href="/index.php/how-we-work/objectivity" >Objectivity</a></li><li class="item-843"><a href="/index.php/how-we-work/accountability" >Accountability</a></li><li class="item-844"><a href="/index.php/how-we-work/collaboration" >Collaboration</a></li></ul></li><li class="item-205 deeper parent"><a href="/index.php/careers" >Careers</a><ul class="nav-child unstyled small"><li class="item-355 parent"><a href="/index.php/careers/joint-duty" >Joint Duty</a></li><li class="item-206 parent"><a href="/index.php/careers/career-opportunities" >Career Opportunities</a></li><li class="item-367 parent"><a href="/index.php/careers/special-programs" >Special Programs</a></li><li class="item-495"><a href="/index.php/careers/student-opportunities" >Student Opportunities</a></li><li class="item-520"><a href="/index.php/careers/careers-features" >Careers Features</a></li><li class="item-642"><span class="nav-header  hidden">Related Links</span>
+</li><li class="item-643"><span class="nav-header  hidden">Related Content</span>
+</li></ul></li><li class="item-395 deeper parent"><a href="/index.php/newsroom" >Newsroom</a><ul class="nav-child unstyled small"><li class="item-396"><a href="/index.php/newsroom/recent-news" >Recent News</a></li><li class="item-374 parent"><a href="/index.php/newsroom/reports-publications" >Reports &amp; Publications</a></li><li class="item-397 parent"><a href="/index.php/newsroom/press-releases" >Press Releases</a></li><li class="item-398 parent"><a href="/index.php/newsroom/speeches-interviews" >Speeches &amp; Interviews</a></li><li class="item-399 parent"><a href="/index.php/newsroom/congressional-testimonies" >Congressional Testimonies</a></li><li class="item-401 parent"><a href="/index.php/newsroom/news-articles" class="bottom-border">News Articles</a></li><li class="item-402"><a href="/index.php/ctiic-newsroom" >CTIIC Newsroom</a></li><li class="item-404"><a href="/index.php/ncsc-newsroom" >NCSC Newsroom</a></li><li class="item-403"><a href="/index.php/ncpc-newsroom" >NCPC Newsroom</a></li><li class="item-405"><a href="/index.php/nctc-newsroom" class="bottom-border">NCTC Newsroom</a></li><li class="item-677"><a href="/index.php/newsroom/photos" >Photos</a></li><li class="item-839"><a href="/index.php/newsroom/seals-graphics" >Seals &amp; Graphics</a></li></ul></li><li class="item-763 deeper parent"><a href="/index.php/features" >Features</a><ul class="nav-child unstyled small"><li class="item-1047"><a href="/index.php/features/national-strategy-for-counterterrorism" >National Strategy for Counterterrorism</a></li><li class="item-1090"><a href="/index.php/newsroom/reports-publications/item/1940-the-aim-initiative-a-strategy-for-augmenting-intelligence-using-machines" >The AIM Initiative</a></li><li class="item-1051"><a href="https://www.intelligence.gov/tet-declassified" >Declassified Tet Offensive Documents</a></li><li class="item-1091"><a href="/files/documents/FOIA/APR-SEP_2018_SAR_FINAL.pdf?utm_source=Feature%20Navigation%20Menu&amp;utm_medium=DNI.gov%20Website" >ICIG Semiannual Report Apr-Sept 2018</a></li><li class="item-1050"><a href="/index.php/cyber-threat-framework" >Cyber Threat Framework</a></li><li class="item-1052"><a href="https://www.dni.gov/ICIG-Whistleblower/?utm_source=Feature%20Link&amp;utm_medium=Home%20Page" >Introducing IC Whistleblowing</a></li><li class="item-779"><a href="/index.php/features" >See More Features</a></li></ul></li></ul>
+
+
+				</div>
+				
+			</nav>
+
+		</div>
+
+
+		<section class="container-fluid  contentBanner ">
+			<div class="container bannerContent">
+				<!-- Breadcrumbs -->
+								<div class="breadcrumbs">
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li class="active">
+			<span class="divider icon-location"></span>
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/index.php" class="pathway"><span itemprop="name">ODNI Home</span></a>
+				
+								<meta itemprop="position" content="1">
+			</li>
+		</ul>
+
+				</div>
+				
+
+
+				<div class="row titleBlock ">
+					<div class="col-md-12">
+						<!-- Get Article Title -->
+                      
+																									<!---article Title --->
+                          <h2 class="text-uppercase articleTitle">Privacy Policy</h2>
+													
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="content" class="container articleContent">
+				<div class="row ">
+
+					
+					<div class="col-md-6 col-md-push-3 mainContent">
+						<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+								
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-97" aria-label="User tools"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-97">
+											<li class="print-icon"> <a href="/index.php/privacy-policy?tmpl=component&amp;print=1" title="Print article < Privacy Policy >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Print	</a> </li>
+																			</ul>
+			</div>
+		
+	</div>
+			
+		
+	
+	
+		
+									<div itemprop="articleBody">
+		<div><span style="font-size: 18pt;"><strong><a href="#website">Website Privacy Policy</a></strong></span></div>
+<ul style="list-style-type: square;">
+<li><a href="#browsing">Browsing ODNI Websites</a></li>
+<li><a href="#cookies">Use of Cookies</a></li>
+<li><a href="#personalinfo">Your Personal Information</a></li>
+<li><a href="#security">Website Security</a></li>
+<li><a href="#links">Links to Other Sites</a></li>
+<li><a href="#privacydocs">Privacy Documents</a></li>
+<li><a href="#srn">System of Records Notices</a></li>
+</ul>
+<div><span style="font-size: 18pt;"><strong><a href="#social">Social Media Privacy Policy</a></strong></span></div>
+<ul style="list-style-type: square;">
+<li><span><a href="#thirdpartysites">Privacy on Third Party Websites</a></span></li>
+<li><span><a href="#odnism">Visits to ODNI Official Social Media Sites</a></span></li>
+<li><span><a href="#infoyouprovide">Information that Your Provide to ODNI</a></span></li>
+<li><span><a href="#howinfoisused">How Your Information is Used</a></span></li>
+<li><span><a href="#feedback">Moderating Your Feedback</a></span></li>
+<li><span><a href="#webanalytic">Our Use of Analytic Tools</a></span></li>
+<li><span><a href="#commericalusesm">Commerical Use of Information your Send to Us</a></span></li>
+<li><span><a href="#sitesecuritysm">Site Security</a></span></li>
+<li><span><a href="#copyright">Copyright</a></span></li>
+<li><span><a href="#endorsement">Disclaimer of Endorsement</a></span></li>
+<li><span><a href="#liability">Disclaimer of Liability</a></span></li>
+<li><span><a href="#comply508">508 Compliance</a></span></li>
+<li><span><a href="#limitations">Other Limitations</a></span></li>
+<li><span><a href="#media">Media Inquiries</a></span></li>
+<li><a href="#officialodnism">Official Presences Third Party Websites</a></li>
+</ul>
+<hr />
+<p><strong><span style="font-size: 18pt;">Website Privacy Policy<a id="website" name="website"></a></span></strong></p>
+<p>The Office of the Director of National Intelligence website (DNI.GOV or ODNI.GOV ) is provided as a public service by the ODNI on behalf of the Director of National Intelligence. This website does not collect personal information about you unless you choose to provide such information.</p>
+<h3>Browsing ODNI Websites<a id="browsing" name="browsing"></a></h3>
+<p>The content of this website may be browsed anonymously. For statistical purposes, this website automatically logs certain information about your visit, <br />such as:</p>
+<ul style="list-style-type: square;">
+<li>The Internet Domain and Internet Protocol (IP) address from which you access our website.</li>
+<li>The type of web browser and operating system of the computer used to access our site.</li>
+<li>The date and time you visit the site.</li>
+<li>The pages you visit on our site.</li>
+<li>If you linked to our websites from another website, the address of that website.</li>
+<li>If you linked to our websites from a search website, the address of the website and the search term you used.</li>
+</ul>
+<p><br />This information does not identify you personally. The information gathered helps us to assess the content most interesting to visitors, determine technical design specifications, and identify system performance issues.</p>
+<h3>Use of Cookies<a id="cookies" name="cookies"></a></h3>
+<p>This website does not use persistent cookies. It does, however, use non-persistent or "session" cookies to make it easier for you to use the features on our web pages. Session cookies last only as long as your web browser remains open and are deleted from our servers as soon as you leave our website. The ODNI does not collect or maintain any information from your session cookies.</p>
+<h3>Your Personal Information<a id="personalinfo" name="personalinfo"></a></h3>
+<p>Any personal information you provide in the context of an inquiry or request for information will be used only to respond to your inquiry or request. We will not share your personal information with another government agency unless you have expressly requested we do so, or as otherwise required by law. In addition, the ODNI will not create individual profiles from your information or provide your information to any private organization for commercial purposes.</p>
+<p>If you engage in a specialized business process through another ODNI-sponsored website (e.g., to submit a resume; to provide online comments, etc.) you will be informed of additional privacy procedures at the point of entry for that process.</p>
+<h3>Website Security<a id="security" name="security"></a></h3>
+<p>For site security purposes, and to ensure that this service remains available to all users, this government computer system monitors network traffic to identify unauthorized attempts to upload or change information, to defeat or circumvent a security feature, to interfere with system access or availability, or to cause damage or utilize this system for other than its intended purposes. <strong>Anyone using this system expressly consents to such monitoring and is advised that if such monitoring reveals evidence of possible abuse or criminal activity, such evidence may be provided to appropriate law enforcement officials.</strong></p>
+<p>Unauthorized attempts to upload or change information, to defeat or circumvent a security feature, to interfere with system access or availability, or to cause damage or utilize this system for other than its intended purposes, are strictly prohibited and may be punishable by law, including but not limited to the Computer Fraud and Abuse Act (18 U.S.C. 1030) and the National Information Infrastructure Protection Act of 1996.</p>
+<p>Except for authorized law enforcement investigations, no attempts are made to identify individual users or their usage habits.<br /><br /></p>
+<h3>Links to Other Sites<a id="links" name="links"></a></h3>
+<p>ODNI websites may contain information with links or pointers to information created and maintained by other U.S. government agencies and, in some instances, to state, local, tribal or private organizations. These links are provided as a service to you as a user. The ODNI neither controls nor guarantees the accuracy, relevance, timeliness, or completeness of information contained on another website. Once you link to another site, you will be notified that you are leaving the official ODNI website and will be subject to the privacy and security policies of the&nbsp; website to which you are linking.</p>
+<h3>Privacy Documents<a id="privacydocs" name="privacydocs"></a></h3>
+<ul style="list-style-type: square;">
+<li><a href="/files/documents/FR_Vol75_No181_57163_to_57167.pdf" target="_blank" title="Federal Register, Vol. 75, No. 181 (9/20/2010), pages 57163-57167">Federal Register, Vol. 75, No. 181 (9/20/2010), pages 57163-57167</a></li>
+<li><a href="/files/documents/Privacy%20Act%20Regulations.pdf" target="_blank" title="Privacy Act Regulations">Privacy Act Regulations</a></li>
+<li><a href="/files/documents/ODNI%20ISE%20Privacy%20Guidelines.pdf" target="_blank" title="Implementation of ISE Privacy Guidelines for Sharing Protected Information">Implementation of ISE Privacy Guidelines for Sharing Protected Information</a></li>
+</ul>
+<h3>Systems of Records Notices<a id="srn" name="srn"></a></h3>
+<ul style="list-style-type: square;">
+<li><a href="/files/documents/FR_Vol72_No248_73887_to_73898.pdf" target="_blank" title="Federal Register, Vol. 72, No. 248 (12/28/2007), pages 73887-73898">Federal Register, Vol. 72, No. 248 (12/28/2007), pages 73887-73898</a></li>
+<li><a href="/files/documents/FR_Vol72_No248_73899_to_73904.pdf" target="_blank" title="Federal Register, Vol. 72, No. 248 (12/28/2007), pages 73899-73904">Federal Register, Vol. 72, No. 248 (12/28/2007), pages 73899-73904</a></li>
+<li><a href="/files/documents/FR_Vol75_No63_16853_to_16868.pdf" target="_blank" title="Federal Register, Vol. 75, No. 63 (4/2/2010), pages 16853-16868">Federal Register, Vol. 75, No. 63 (4/2/2010), pages 16853-16868</a></li>
+<li><a href="/files/documents/FR_Vol%2076_No%20138_Notice_20110719.pdf" target="_blank" title="Federal Register, Vol. 76, No. 138 (7/19/2011), pages 42737-42750">Federal Register, Vol. 76, No. 138 (7/19/2011), pages 42737-42750</a></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-size: 18pt;"><strong>Social Media Privacy Policy<a id="social" name="social"></a></strong></span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span style="font-size: 14pt;"> The president’s <a href="http://www.whitehouse.gov/sites/default/files/omb/assets/memoranda_2010/m10-06.pdf">Transparency and Open Government Memorandum of January 21, 2009</a> and the resulting <a href="http://www.whitehouse.gov/omb/assets/memoranda_2010/m10-06.pdf">OMB Open Government Directive of December 8, 2009</a> direct Federal departments and agencies to harness new technologies to engage the public, focusing on the values of transparency, participation and collaboration.</span><br /><br />The <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>, released by the White House on May 23, 2012, requires that federal agencies adopt an “information driven,” customer-centric approach to electronic communications – one that allows the American public to “shape, share and consume information, whenever and however they want it.”<br /><br />More recently, the <span style="text-decoration: underline;"><span style="color: #00b0f0;">Privacy Best Practice for Social Media,</span></span> released by the CIO Council in July 2013, noted that social media have an important role to play in the Federal Government’s communications strategy and explained that the Federal Government can use social media to share information as well as to enable Federal agencies to learn about issues being discussed by different audiences.<br /><br />The Office of the Director of National Intelligence (ODNI) maintains an active presence on third-party social media sites and networks, and uses a growing number of new media tools from third party providers (e.g. Facebook, Twitter and Tumblr) to augment or expand the reach of our official communications at <a href="http://www.DNI.gov">www.DNI.gov</a> and to increase public understanding of the ODNI and the Intelligence Community. Third-party providers – not the ODNI – design and operate these social media sites and applications.&nbsp; ODNI is only one of many users.<br /><br />The ODNI’s policy regarding its use of third party websites and social media tools is outlined below.</p>
+<h3 class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;"><span lang="EN-GB">Privacy on Third Party Websites<a id="thirdpartsites" name="thirdpartysites"></a> <br /></span></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Activity on third-party web sites is governed by the security and privacy policies of the third party sites. By using a third-party social media website, you may be providing that third-party with personally identifiable information (PII). You are encouraged to review the privacy policy of the third-party provider prior to registering or using the site to fully understand how your PII may be collected or used by the third-party provider. You are also encouraged to familiarize yourself and adjust the privacy settings on your account on any third-party site to match your preferences.</p>
+<h3 class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Visits to ODNI Official Social Media Sites<a id="odnism" name="odnism"></a><span lang="EN-GB"><br /></span></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span lang="EN-GB">When you visit ODNI pages hosted by third-party provider websites and applications, your activity is governed by the security and privacy policies of those third party providers. ODNI will not seek or obtain PII about you or your visit from the third-party provider site or application. Nor will&nbsp; ODNI </span>collect, maintain or disseminate PII from users of third-party social media sites who “follow,” “friend,” “like” or take other similar actions with respect to content on official ODNI pages hosted by those sites.</p>
+<h3 class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Information that You Provide to the ODNI<a id="infoyouprovide" name="infoyouprovide"></a></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">You do not need provide ODNI with any personal information or create a user account to access information on our social media accounts.&nbsp; However some types of interactions (for example platform-specific interactions on social media or responses to our requests for your feedback) may necessitate either the creation of a user account or the voluntary submission of information that would allow us to properly credit you for your feedback and to potentially follow up with you regarding your question, comment or request. <br /><br />Any personal information you provide in the context of an official inquiry or request for information will be used only to respond to your inquiry or request. We will not share your personal information with another government agency unless you have expressly requested we do so, or as otherwise required by law as described in the Site Security notice below.<br /><br />Whenever third party platforms or social media services provide visitors the capability&nbsp; to engage anonymously, we retain this option for visitors to our official presences on those sites.&nbsp;&nbsp; However, if your feedback or communication with us contains your name, we will not redact that information from any posting of your communication.&nbsp; If your feedback or communication contains Social Security Numbers, home or business addresses, email addresses, or phone numbers, ODNI will either not post your communication at all, remove the information prior to publication, or remove the information from the communication when detected.</p>
+<h3>How Your Information Is Used<a id="howinfoisused" name="howinfoisused"></a></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">You are encouraged to share your feedback, ideas, and concerns with ODNI via our official social media pages or applications, hosted by third-party providers. Note that information, you voluntarily submit to or publish on an ODNI page on a third-party provider site may be treated as public information.&nbsp;</p>
+<p>We may, for example, publish compilations of messages or feedback collected through our official websites or official social media pages and provide them to national leaders, members of the press, or other individuals outside of the Federal Government. We may also use this same information for analytic research projects, such as<a href="http://www.nicglobaltrends.tumblr.com"> nicglobaltrends.tumblr.com</a>, transparency programs like <a href="http://www.icontherecord.tumblr.com" class="odni_offsite_link">icontherecord.tumblr.com</a> or in support of special initiatives such as the DNI’s <a href="http://www.dni.gov/index.php/intelligence-community/review-group">Review Group on Intelligence and Communication Technologies</a>.<br /><br />ODNI websites and official social media presences comply with the records management and disposition policies adopted by the ODNI. Content publicly posted as a result of ODNI’s use of social media is considered a Federal record and is maintained accordingly. Feedback or communications that ODNI receives but does not post&nbsp; to its official websites or social media presences are not considered Federal records and are not retained.</p>
+<h3><span>Moderating Your Feedback<a id="feedback" name="feedback"></a></span></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;"><span lang="EN-GB">If you choose to engage with the ODNI through a third-party provider social media website or application, ODNI reserves the right to moderate, remove or reject (not post) feedback that contains:</span></p>
+<ul style="list-style-type: square;">
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;"><span lang="EN-GB">Social Security Numbers, home or business addresses, e-mail addresses, phone numbers, or other personally identifiable information</span></li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;"><span>Vulgar or abusive language</span></li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Personal attacks of any kind</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Offensive terms that target specific group</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Spam or feedback that are clearly “off topic”</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Commercial promotions</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Solicitation of funds</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Political activity</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Reports of criminal or suspicious activity – if you have information for law enforcement, please contact your local policy agency</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Unsolicited proposals or other business ideas or inquiries</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Classified or proprietary information, or information protected by other statutory or regulatory regimes (e.g., intellectual property; copyrighted materials; licensed materials; privacy protected information; etc.)</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Any claims, demands, informal or formal complaints, or any other form of legal and/or administrative notices or processes</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;">Duplicative posts</li>
+<li class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;"><span lang="EN-GB">Embedded links to external websites or applications.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p>The ODNI does not discriminate against any views, but reserves the right to remove or reject (not post) feedback that does not adhere to these standards.<br /><br />In addition, the views expressed by members of the public in postings on official pages maintained by the ODNI on third-party social media websites and applications do not reflect the official views of the ODNI or the U.S. government nor does ODNI guarantee the accuracy of information contained in posted communications.<br style="mso-special-character: line-break;" /><br />Due to the volume and uncertain content of feedback and queries received from the general public through its official sites and social media activities, ODNI cannot guarantee an individual response to all queries or that every comment received will be published.</p>
+<h3>How Your Information Is Used Our Use of Web Analytic Tools<a id="webanalytic" name="webanalytic"></a></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">The ODNI uses a third-party analytics provider (currently Google Analytics) to analyze data from cookies. The third-party analytics provider does not receive PII through these cookies and is prohibited from combining, matching or cross-referencing DNI.gov information with any other information. We have also limited the provider’s ability to see your full IP address (a process known as “IP masking”). Please review Google Analytics’ <a href="http://www.google.com/intl/en/analytics/privacyoverview.html" target="_blank">privacy policy</a> for additional information.<br /><br />ODNI websites use multi-session cookies to differentiate between new and returning users. These cookies also gather aggregated statistical data and measurements on website usage that ODNI uses to improve website functionality. These cookies do not collect PII about you and are not persistent (i.e., ODNI does not use these cookies to track your use of the Internet.&nbsp; If you do not wish to have these cookies placed on your computer, you can adjust your Web browser’s settings. Instructions for disabling or opting out of cookies in the most popular browsers can be found at <a href="http://www.usa.gov/optout_instructions.shtml">usa.gov</a>.<br /><br />We may use data that your site visit automatically generates for statistical analyses to assess, for example, what information is of interest to users, what technical design elements users prefer, and how users rate system performance. This allows us to make general improvements to our sites as well as to offer tailored content to DNI email subscribers (e.g., a follow-up message to subscribers interested in a specific topic based on information they have provided or automatically generated data).<br /><br />In some instances, third party platforms, such as Facebook, Tumblr or Twitter, offer their own embedded analytics that provide users with aggregate information that ODNI uses in the same limited manner described above. These services generally do not provide, nor do we seek, IP related information.&nbsp; Rather these analytic tools commonly available to all users of a given platform allow ODNI to assess engagement with specific content and to evaluate engagement trends over time.</p>
+<h3 class="MsoNormal"><Commercial Use of Information You Submit to Us<a id="commercialusesm" name="commericalusesm"></a></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">The ODNI will not sell, rent, exchange or otherwise disclose your information to any organization for commercial purposes.</p>
+<h3 class="MsoNormal">Site Security<a id="sitesecuritysm" name="sitesecuritysm"></a></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">ODNI takes reasonable precautions to protect ODNI sites and information automatically collected by the ODNI or voluntarily submitted to an official ODNI page on a third-party site.&nbsp; Access to official ODNI accounts on third-party sites is limited to the individuals who administer those accounts, and all official ODNI accounts are clearly labeled.<br /><br />Except for authorized law enforcement investigations, no attempts are made to identify individual users or their usage habits.&nbsp; We may share information with other federal agencies in response to lawful law enforcement requests or&nbsp; perceived security threats arising on ODNI’s official presences on sites hosted by third-party providers.</p>
+<h3 class="MsoNormal">Copyright<a id="copyright" name="copyright"></a></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">ODNI cannot authorize the use of any third party copyrighted materials, including material from third-party social media websites and applications, on ODNI websites.&nbsp; Users must obtain all necessary authorizations prior to posting any material on ODNI websites.&nbsp; Users who provide feedback via a blog, e-mail or messaging system are responsible for ensuring that they are authorized to provide all of the text and information conveyed to ODNI with the feedback.&nbsp; Users are cautioned that if they fail to obtain the appropriate authorizations, they may be liable for copyright infringement. <br /><br />ODNI-created material in the public domain, including ODNI’s official presences on social media sites, may be copied, distributed, and reproduced without obtaining ODNI permission.&nbsp; When such information is copied, distributed or reproduced, it is appropriate to cite ODNI or the relevant ODNI component or office as the source of the information.<br /><br />For ODNI-supplied information that is copyrighted, permission to copy, distribute, or reproduce the material must be obtained from the copyright owner.&nbsp; ODNI is not responsible for the user’s misuse of third party copyrighted material.</p>
+<h3>Disclaimer of Endorsement<a id="endorsement" name="endorsement"></a></h3>
+<p class="Body1" style="margin-bottom: .0001pt; line-height: normal;">An official ODNI presence on a third-party social media website or application may include information with links or pointers to information created and maintained by other U.S. government agencies and, in some instances, by state, local, tribal, or private entities. These links are provided as a service to you as a user and should not be viewed as an endorsement by the ODNI of any content, products, or services. Acceptance of “likes,” “follows,” “reblogs or other similar social requests does not indicate ODNI’s endorsement of those individuals or views.</p>
+<h3>Disclaimer of Liability<a id="liability" name="liability"></a></h3>
+<p style="margin: 0in; margin-bottom: .0001pt; line-height: normal;"><span lang="EN-GB">Neither the U.S. Government nor the ODNI endorses, guarantees or controls the feedback or opinions of visitors to our official pages hosted by third-party providers, and expressly disclaims all liability for any loss, damage, or other injury resulting from reliance on the accuracy, relevance, timeliness or completeness of such information. Further, the ODNI’s use of third-party social media sites does not, and is not intended to, constitute an endorsement, recommendation, or favoring of the providers of the site, the information or products presented on the site, or information, products, or services that may be reached through links to another website.</span></p>
+<h3>508 Compliance<a id="comply508" name="comply508"></a></h3>
+<p style="margin: 0in; margin-bottom: .0001pt; line-height: normal;">The ODNI cannot guarantee compliance of Section 508 of the Rehabilitation Act (Accessibility Requirements) by providers of third-party social media websites or applications.</p>
+<h3>Other Limitations<a id="limitations" name="limitations"></a></h3>
+<p class="MsoListParagraph" style="margin: 0in; margin-bottom: .0001pt; mso-add-space: auto; line-height: normal; mso-layout-grid-align: none; text-autospace: none;">Any communication made by a public user to the ODNI via a third-party blog, e-mail or messaging system will not be considered an official notice to the ODNI, or to any official or employee of ODNI, for any purpose.</p>
+<h3>Media Inquiries<a id="media" name="media"></a></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; background: white;"><span lang="EN-GB" style="color: black;">All media inquiries should be submitted to the ODNI Public Affairs Office through</span> normal channels.</p>
+<h3 class="MsoNormal">Official ODNI Activities on Third Party Websites<a id="officialodnism" name="officialodnism"></a></h3>
+<p class="MsoNormal">Below is the current list of official ODNI pages on third party websites that are governed by the preceding policy, along with a link to the host website’s privacy policy.</p>
+<table border="0" style="width: 100%;" summary="ODNI Official Social Media Accounts &amp; Third Party Privacy Policies" cellspacing="10" cellpadding="10" align="left">
+<tbody>
+<tr>
+<td style="background-color: #ffffff;" valign="middle" width="30%"><strong><span style="font-family: helvetica;">Facebook</span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.facebook.com/dni.gov">www.facebook.com/dni.gov</a></span></td>
+<td><span style="font-family: helvetica;"><a href="https://www.facebook.com/policy.php" class="odni_offsite_link">Privacy Policy</a></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.facebook.com/informationsharingenvironment">www.facebook.com/informationsharingenvironment</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.facebook.com/odni.nic">www.facebook.com/odni.nic</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;">Twitter&nbsp;&nbsp;&nbsp;</span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.twitter.com/odnigov">www.twitter.com/odnigov</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><span style="font-family: helvetica;"><a href="https://twitter.com/privacy?lang=en" class="odni_offsite_link">Privacy Policy</a></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.twitter.com/icontherecord">www.twitter.com/icontherecord</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.twitter.com/ODNI_NIC">www.twitter.com/ODNI_NIC</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.twitter.com/IARPAnews">www.twitter.com/IARPAnews</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.twitter.com/NCSCgov">www.twitter.com/NCSCgov</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.twitter.com/shareandprotect">www.twitter.com/shareandprotect</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;">Tumblr</span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.icontherecord.tumblr.com">www.icontherecord.tumblr.com</a></span></td>
+<td><span style="font-family: helvetica;"><a href="https://www.tumblr.com/policy/en/privacy" class="odni_offsite_link">Privacy Policy</a></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.odnigov.tumblr.com" class="odni_offsite_link">www.odnigov.tumblr.com</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"><a href="http://www.NICglobaltrends.tumblr.com">www.NICglobaltrends.tumblr.com</a></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;">&nbsp;Flickr</span></strong></td>
+<td><span style="font-family: helvetica;">&nbsp;<a href="http://www.flickr.com/odnigov">www.flickr.com/odnigov</a>&nbsp;</span></td>
+<td><span style="font-family: helvetica;">&nbsp;<a href="https://policies.yahoo.com/us/en/yahoo/privacy/products/flickr/" class="odni_offsite_link">Privacy Policy</a></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;">&nbsp;Scribd</span></strong></td>
+<td><span style="font-family: helvetica;">&nbsp; <a href="http://www.scribd.com/odnigov">www.scribd.com/odnigov</a>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+<td><span style="font-family: helvetica;">&nbsp;<a href="http://support.scribd.com/entries/25580-Privacy-policy" class="odni_offsite_link">Privacy Policy</a></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;"></span></strong></td>
+<td><span style="font-family: helvetica;"></span></td>
+<td><span style="font-family: helvetica;"></span></td>
+</tr>
+<tr>
+<td style="background-color: #ffffff;" valign="middle"><strong><span style="font-family: helvetica;">&nbsp;YouTube&nbsp;</span></strong></td>
+<td><span style="font-family: helvetica;">&nbsp;<a href="http://www.youtube.com/odnigov">www.youtube.com/odnigov</a>&nbsp;</span></td>
+<td><span style="font-family: helvetica;">&nbsp;<a href="https://www.youtube.com/static?template=privacy_guidelines" class="odni_offsite_link">Privacy Policy</a></span></td>
+</tr>
+</tbody>
+</table> 	</div>
+
+	
+							</div>
+
+					</div>
+					
+					
+					
+
+
+
+						<!-- Side Bar Menus -->
+													<div class="col-md-3 col-md-pull-6 left-sidebar-menu">
+								<ul class="nav menu">
+<li class="item-1024"><a href="/index.php/contact-the-odni" >Contact the ODNI</a></li><li class="item-134"><a href="/index.php/who-we-are/organizations/icig/icig-hotline" >ICIG Hotline</a></li><li class="item-135"><a href="/index.php/no-fear-act" >No FEAR Act</a></li><li class="item-136 current active"><a href="/index.php/privacy-policy" >Privacy Policy</a></li><li class="item-137"><a href="/index.php/customer-service" >Customer Service</a></li><li class="item-138"><a href="/index.php/foia" >FOIA</a></li></ul>
+
+							</div>
+						
+				
+				</div>
+				<div class="blockEnd"></div>
+			</section>
+
+
+<!-- Row 1 -->
+		<section class="container-fluid content-row-1 ">
+					</section>
+
+<!-- Row 2 -->
+		<section class="container-fluid content-row-2 ">
+					</section>
+
+		<!-- Footer -->
+
+				<footer class="container-fluid odni-footer">
+		      <div class="container">
+		        <div class="blockTitle"> </div>
+		        <div class="row">
+		          <div class="col-md-4 col-sm-12 col-xs-12">
+										            
+
+<div class="custom"  >
+	<p class="titleBlock"><a href="/index.php" class="navbar-brand odniPageLogo odniTopLogoStyle pull-left">Office<span> of the</span> <br />Director<span> of &nbsp;</span>National Intelligence</a></p>
+<p>&nbsp;</p></div>
+
+										          </div>
+
+		          <div class="col-md-2 col-sm-12">
+		            									
+
+<div class="custom"  >
+	<h3>ODNI Centers</h3></div>
+<ul class="nav menu">
+<li class="item-129"><a href="/index.php/ctiic-home" class=" ">Cyber Threat Intelligence Integration Center</a></li><li class="item-130"><a href="/index.php/ncpc-home" >National Counterproliferation Center</a></li><li class="item-131"><a href="/index.php/ncsc-home" >National Counterintelligence and Security Center</a></li><li class="item-132"><a href="/index.php/nctc-home" >National Counterterrorism Center</a></li></ul>
+
+										          </div>
+
+		           <div class="col-md-2 col-sm-12">
+		            									
+
+<div class="custom"  >
+	<h3>ODNI Offices</h3></div>
+<ul class="nav menu">
+<li class="item-357"><a href="/index.php/who-we-are/organizations/eeod/eeod-who-we-are" >Equal Employment Opportunity &amp; Diversity</a></li><li class="item-358"><a href="/index.php/who-we-are/organizations/enterprise-capacity/chco/chco-who-we-are" >IC Chief Human Capital Officer</a></li><li class="item-359"><a href="/index.php/who-we-are/organizations/icig/icig-who-we-are" >IC Inspector General</a></li><li class="item-360"><a href="/index.php/who-we-are/organizations/clpt/clpt-who-we-are" >Office of Civil Liberties, Privacy, and Transparency</a></li><li class="item-1103"><a href="/index.php/who-we-are/organizations/ogc/ogc-who-we-are" >Office of General Counsel</a></li><li class="item-459"><a href="/index.php/who-we-are/organizations" >More Offices</a></li></ul>
+
+										          </div>
+
+		          <div class="col-md-2 col-sm-12">
+																	
+
+<div class="custom"  >
+	<h3>Information</h3></div>
+<ul class="nav menu">
+<li class="item-1024"><a href="/index.php/contact-the-odni" >Contact the ODNI</a></li><li class="item-134"><a href="/index.php/who-we-are/organizations/icig/icig-hotline" >ICIG Hotline</a></li><li class="item-135"><a href="/index.php/no-fear-act" >No FEAR Act</a></li><li class="item-136 current active"><a href="/index.php/privacy-policy" >Privacy Policy</a></li><li class="item-137"><a href="/index.php/customer-service" >Customer Service</a></li><li class="item-138"><a href="/index.php/foia" >FOIA</a></li></ul>
+
+										          </div>
+
+		          <div class="col-md-2 col-sm-12">
+																	
+
+<div class="custom"  >
+	<h3>Useful Links</h3></div>
+<ul class="nav menu">
+<li class="item-139"><a href="/index.php/for-kids" >For Kids</a></li><li class="item-140"><a href="http://www.ready.gov" >Ready.gov</a></li><li class="item-141"><a href="http://www.whitehouse.gov/open" >Open.gov</a></li><li class="item-142"><a href="https://www.cdc.gov/flu/" target="_blank">Flu.gov</a></li><li class="item-143"><a href="/index.php/plain-language-act" >Plain Language Act</a></li><li class="item-144"><a href="/index.php/furlough-resources" >Furlough Resources</a></li><li class="item-145"><a href="/index.php/odni-operating-status" >ODNI Operating Status</a></li><li class="item-853"><a href="https://get.adobe.com/reader/" target="_blank">Adobe Acrobat Reader</a></li></ul>
+
+										          </div>
+
+		        </div>
+		        <div class="row">
+		          <div class="col-md-offset-6 col-md-6 col-sm-10">
+																	<ul class="nav menu smFooter pull-right">
+<li class="item-347"><a href="https://service.govdelivery.com/accounts/USODNI/subscriber/new" title="Subscribe" class="tooltipLink" onclick="window.open(this.href, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,'); return false;"><img src="/files/ODNI/images/White-Icon-Mail-Icon.png" alt="Subscribe" /></a></li><li class="item-348"><a href="/index.php/newsroom?format=feed&amp;type=rss" title="RSS" class=" tooltipLink"><img src="/files/ODNI/images/White-Icon-rss-l.png" alt="RSS" /></a></li><li class="item-350"><a href="https://www.twitter.com/odnigov" title="ODNI Twitter" class="tooltipLink"><img src="/files/ODNI/images/White-Icon-SM1.png" alt="ODNI Twitter" /></a></li><li class="item-351"><a href="http://www.facebook.com/dni.gov" title="ODNI Facebook" class="tooltipLink"><img src="/files/ODNI/images/White-Icon-SMFB.png" alt="ODNI Facebook" /></a></li><li class="item-349"><a href="http://www.icontherecord.tumblr.com/" title="ODNI Tumblr" class="tooltipLink"><img src="/files/ODNI/images/White-Icon-TBLR.png" alt="ODNI Tumblr" /></a></li><li class="item-353"><a href="http://www.youtube.com/odnigov" title="ODNI YouTube" class="tooltipLink"><img src="/files/ODNI/images/White-Icon-YT.png" alt="ODNI YouTube" /></a></li><li class="item-524"><a href="/index.php/more" title="View other Social Media Links" class=" ">contact us</a></li></ul>
+
+										          </div>
+		        </div>
+		      </div>
+		    </footer>
+		  <!--End Footer-->
+
+		
+
+<script src="/templates/odni-content-page-template/js/bootstrap.min.js"></script>
+<noscript>Your browser does not support JavaScript!</noscript>
+<script src="/templates/odni-content-page-template/js/script.js"></script>
+<noscript>Your browser does not support JavaScript!</noscript>
+<script src="/templates/odni-content-page-template/js/jquery-cookie.js"></script>
+<noscript>Your browser does not support JavaScript!</noscript>
+<script src="/templates/odni-content-page-template/js/page-redirect.js"></script>
+<noscript>Your browser does not support JavaScript!</noscript>
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-24149679-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

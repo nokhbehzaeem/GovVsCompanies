@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head><script>dataLayer = [{"entityBundle":"page","entityLabel":"Legal and Privacy Information","pageType":"node","Author":"","Countries":"","Date":"","Course-Event Type":"","Experts":"","Issue Areas":"","Article-Publication Type":"","Role":"","News Type":""}];</script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M6334V');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"99a24a9f07",applicationID:"56250060"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","/sites/default/files/google_analytics/analytics.js?q44a0a","ga");ga("create", "UA-4602272-7", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["www.usip.org"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<meta name="title" content="Legal and Privacy Information | United States Institute of Peace" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:site_name" content="United States Institute of Peace" />
+<meta name="twitter:description" content="Privacy Policy
+
+Submitting information is strictly voluntary. By doing so, you are giving USIP your permission to use the information for the intended purpose. If you do not want to give USIP permission to use your information, simply do not provide it. However, not providing certain information may result in USIP&#039;s inability to provide you with the information or services you desire. 
+
+We never collect information for commercial marketing purposes.
+
+Information collected and stored aut..." />
+<meta property="fb:app_id" content="140586622674265" />
+<meta name="twitter:title" content="Legal and Privacy Information" />
+<meta name="description" content="Privacy Policy
+
+Submitting information is strictly voluntary. By doing so, you are giving USIP your permission to use the information for the intended purpose. If you do not want to give USIP permission to use your information, simply do not provide it. However, not providing certain information may result in USIP&#039;s inability to provide you with the information or services you desire. 
+
+We never collect information for commercial marketing purposes.
+
+Information collected and stored aut..." />
+<meta name="twitter:site" content="@USIP" />
+<meta property="og:url" content="https://www.usip.org/legal/privacy" />
+<meta property="og:title" content="Legal and Privacy Information" />
+<meta property="og:description" content="Privacy Policy
+
+Submitting information is strictly voluntary. By doing so, you are giving USIP your permission to use the information for the intended purpose. If you do not want to give USIP permission to use your information, simply do not provide it. However, not providing certain information may result in USIP&#039;s inability to provide you with the information or services you desire. 
+
+We never collect information for commercial marketing purposes.
+
+Information collected and stored aut..." />
+<meta name="twitter:url" content="https://www.usip.org/legal/privacy" />
+<meta property="og:updated_time" content="2019-03-08T10:57:19-0500" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>var addthis_config = {"data_ga_property":"UA-4602272-7","data_ga_social":true};</script>
+<script>var pfHeaderImgUrl = '';var pfHeaderTagline = '';var pfdisableClickToDel = 0;var pfHideImages = 0;var pfImageDisplayStyle = 'right';var pfDisablePDF = 0;var pfDisableEmail = 0;var pfDisablePrint = 0;var pfCustomCSS = 'https://www.usip.org/themes/custom/usip/assets/css/printerfriendly.css';var pfBtVersion='1';(function(){var js, pf;pf = document.createElement('script');pf.type = 'text/javascript';if ('https:' === document.location.protocol){js='https://pf-cdn.printfriendly.com/ssl/main.js'}else{js='http://cdn.printfriendly.com/printfriendly.js'}pf.src=js;document.getElementsByTagName('head')[0].appendChild(pf)})();</script>
+<script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.usip.org/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.usip.org/?site_keywords={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }</script>
+<link rel="shortcut icon" href="/themes/custom/usip/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="/legal/privacy" />
+<link rel="shortlink" href="/node/92046" />
+<link rel="revision" href="/legal/privacy" />
+
+    <title>Legal and Privacy Information | United States Institute of Peace</title>
+
+    <script src="https://use.typekit.net/qug5aex.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <link rel="stylesheet" href="/sites/default/files/css/css_a3UcUbmxXTxMTrUqBaRqfA8Vs01bxJoCsPHp-vgZhpw.css?q44a0a" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_EAW5QkqXuc13CFi7msjVsxrVaqttcohA9BkPr0AB5O8.css?q44a0a" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+      <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "United States Institute of Peace",
+  "url" : "https://www.usip.org/",
+  "sameAs" : [ 
+  		  "https://www.facebook.com/usinstituteofpeace", 		  "https://twitter.com/USIP", 		  "https://www.instagram.com/usipeace/", 		  "https://www.linkedin.com/company/united-states-institute-of-peace", 		  "https://www.youtube.com/user/usinstituteofpeace"	  ] 
+}
+</script>
+  
+
+
+
+  </head>
+  <body class="path-node page-node-type-page"><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6334V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Begin Inspectlet Embed Code -->
+    <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 1670173852]);
+    (function() {
+    function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+    setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+    })();
+    </script>
+    <!-- End Inspectlet Embed Code -->
+
+        <a href="#main-content" tabindex="1" class="skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+                <div class="views-element-container"><div class="js-view-dom-id-2e1b64920dad2ed5b5df89f671cc40bd8622c4d688b9d1d4cd7ee0fb4e6da853">
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+
+<header id="header" class="site__header">
+  <div class="wrapper">
+    <div class="container">
+      <a id="open-secondary" href="#" aria-label="Menu" aria-controls="secondary-nav">
+        <i class="f"></i>
+        <i class="m"></i>
+        <i class="l"></i>
+        <span>Menu</span>
+      </a>
+
+      <h1 id="brand"><a href="/">United States Institute of Peace</a></h1>
+
+      
+<nav class="site__nav">
+                <ul class="nav group">
+              <li>
+        <a href="/experts" data-drupal-link-system-path="node/30">Experts</a>
+                  <i class="slash">/</i>
+                      </li>
+          <li>
+        <a href="/regions-countries" data-drupal-link-system-path="node/42526">Regions</a>
+                  <i class="slash">/</i>
+                      </li>
+          <li>
+        <a href="/issue-areas" data-drupal-link-system-path="node/42531">Issue Areas</a>
+                  <i class="slash">/</i>
+                      </li>
+          <li>
+        <a href="/education-training" data-drupal-link-system-path="node/33">Education &amp; Training</a>
+                  <i class="slash">/</i>
+                      </li>
+          <li>
+        <a href="/events" data-drupal-link-system-path="node/34">Events</a>
+                      </li>
+        </ul>
+  
+</nav>
+
+
+
+      <a id="open-search" href="#" aria-label="Search" aria-controls="site-search">
+        <span>Search</span><i class="icon -search"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+  <nav id="secondary-nav" class="site__secondary-nav">
+      <header class="secondary-nav__header">
+          <div class="container">
+              <a id="close-secondary" href="#" aria-label="Menu" aria-controls="secondary-nav">
+                  <i class="f"></i>
+                  <i class="m"></i>
+                  <i class="l"></i>
+                  <span>Close</span>
+              </a>
+                <h1 class="brand"><a href="/">United States Institute of Peace</a></h1>
+          </div>
+      </header>
+        <div class="container group">
+  <div class="secondary-nav__main">
+                  <div class="btn-stack">
+        <a data-key="none" href="/experts" class="btn -mobile -link">Experts</a>
+  <a data-key="none" href="/regions-countries" class="btn -mobile -link">Regions</a>
+  <a data-key="none" href="/issue-areas" class="btn -mobile -link">Issue Areas</a>
+  <a data-key="none" href="/education-training" class="btn -mobile -link">Education &amp; Training</a>
+  <a data-key="none" href="/events" class="btn -mobile -link">Events</a>
+
+                      <a data-key="about" href="/about" class="btn -link">
+          About
+                      <i class="arrow -right"></i>
+                  </a>
+                        <a data-key="publications" href="/publications" class="btn -link">
+          Publications
+                  </a>
+                        <a data-key="projects" href="/projects" class="btn -link">
+          Projects
+                  </a>
+                        <a data-key="grants_fellowships" href="/grants-fellowships" class="btn -link">
+          Grants &amp; Fellowships
+                      <i class="arrow -right"></i>
+                  </a>
+                        <a data-key="visit" href="/visit-us" class="btn -link">
+          Visit
+                  </a>
+                        <a data-key="connect" href="/connect" class="btn -link">
+          Connect
+                      <i class="arrow -right"></i>
+                  </a>
+                        <a data-key="press" href="/press" class="btn -link">
+          Press
+                  </a>
+                        <a data-key="blog" href="/blog" class="btn -link">
+          Blog
+                  </a>
+                    </div>
+      
+  </div>
+  <aside class="secondary-nav__secondary">
+  </aside>
+  <div class="secondary-nav__placeholder">
+    <i class="icon -logo-usip-circle-grey-large"></i>
+    <div class="-vertical-center">
+      <h2>We provide analysis, education, and resources to those working for peace around the world.</h2>
+      <a href="/about" class="btn">More About USIP</a>
+    </div>
+  </div>
+</div>
+
+
+  </nav>
+
+  
+<aside id="site-search" class="site__search">
+  <header class="site-search__header">
+    <div class="container">
+      <h1 class="brand"><a href="/">United States Institute of Peace</a></h1>
+      <a id="close-search" href="#" aria-label="Menu" aria-controls="secondary-nav">
+        <span>Close</span>
+        <i class="f"></i>
+        <i class="m"></i>
+        <i class="l"></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="site-search__container">
+    <div class="container">
+      <div class="site-search__placeholder">
+        <p>Search for experts, projects, publications, courses, and more.</p>
+      </div>
+
+      <div class="site-search__form">
+        
+
+<div class="views-exposed-form" data-drupal-selector="views-exposed-form-search-content-search" id="block-exposedformsearch-contentsearch">
+  
+    
+      <form action="https://www.usip.org/legal/privacy" method="get" id="views-exposed-form-search-content-search" accept-charset="UTF-8">
+  
+<div class="js-form-item form-item js-form-type-textfield form-item-site-keywords js-form-item-site-keywords">
+      <label for="edit-site-keywords">Search USIP.org</label>
+        <input data-drupal-selector="edit-site-keywords" type="text" id="edit-site-keywords" name="site_keywords" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+
+<div class="js-form-item form-item js-form-type-select form-item-site-type js-form-item-site-type">
+      <label for="edit-site-type">Type of Content</label>
+        <select data-drupal-selector="edit-site-type" multiple="multiple" name="site_type[]" id="edit-site-type" size="8" class="form-select"><option value="blog_post">Blog Post</option><option value="center">Center</option><option value="course">Course</option><option value="event">Event</option><option value="external_news">External News</option><option value="fellowship">Fellowship</option><option value="forum">Discussion topic</option><option value="gc_academy_landing">GC - Academy Landing</option><option value="gc_course">GC - Course Promo</option><option value="gc_event">GC - Event</option><option value="glossary_term">Glossary Term</option><option value="grant">Grant</option><option value="inprol_publication">INPROL Publication</option><option value="landing_page">Landing Page</option><option value="news">News</option><option value="online_course">Online Course</option><option value="page">Page</option><option value="person">Person</option><option value="program">Projects</option><option value="publication">Publication</option><option value="resource_document">Library Resource</option><option value="site_notification">Site Notification</option></select>
+        </div>
+
+<div class="js-form-item form-item js-form-type-select form-item-site-countries js-form-item-site-countries">
+      <label for="edit-site-countries">Countries</label>
+        <select data-drupal-selector="edit-site-countries" multiple="multiple" name="site_countries[]" id="edit-site-countries" size="9" class="form-select"><option value="38">Africa</option><option value="96">-Algeria</option><option value="106">-Angola</option><option value="176">-Benin</option><option value="196">-Botswana</option><option value="206">-Brunei</option><option value="216">-Burkina Faso</option><option value="221">-Burundi</option><option value="231">-Cameroon</option><option value="241">-Cape Verde</option><option value="246">-Central African Republic</option><option value="251">-Chad</option><option value="266">-Comoros</option><option value="276">-Côte d&#039;Ivoire</option><option value="301">-Democratic Republic of the Congo</option><option value="311">-Djibouti</option><option value="331">-Egypt</option><option value="341">-Equatorial Guinea</option><option value="346">-Eritrea</option><option value="356">-Ethiopia</option><option value="376">-Gabon</option><option value="381">-Gambia</option><option value="396">-Ghana</option><option value="421">-Guinea</option><option value="426">-Guinea-Bissau</option><option value="521">-Kenya</option><option value="561">-Lesotho</option><option value="566">-Liberia</option><option value="571">-Libya</option><option value="596">-Madagascar</option><option value="601">-Malawi</option><option value="616">-Mali</option><option value="631">-Mauritania</option><option value="636">-Mauritius</option><option value="671">-Morocco</option><option value="676">-Mozambique</option><option value="686">-Namibia</option><option value="716">-Niger</option><option value="721">-Nigeria</option><option value="801">-Rwanda</option><option value="831">-Sao Tome and Principe</option><option value="841">-Senegal</option><option value="851">-Seychelles</option><option value="856">-Sierra Leone</option><option value="881">-Somalia</option><option value="886">-South Africa</option><option value="896">-South Sudan</option><option value="911">-Sudan</option><option value="921">-Swaziland</option><option value="951">-Tanzania</option><option value="961">-The Gambia</option><option value="966">-The Republic of the Congo</option><option value="976">-Togo</option><option value="991">-Tunisia</option><option value="1011">-Uganda</option><option value="1061">-Western Sahara</option><option value="1071">-Zambia</option><option value="1076">-Zimbabwe</option><option value="36">Americas</option><option value="111">-Antigua &amp; Barbuda</option><option value="116">-Argentina</option><option value="141">-Bahamas</option><option value="156">-Barbados</option><option value="171">-Belize</option><option value="186">-Bolivia</option><option value="201">-Brazil</option><option value="236">-Canada</option><option value="256">-Chile</option><option value="42">-Colombia</option><option value="271">-Costa Rica</option><option value="286">-Cuba</option><option value="316">-Dominica</option><option value="321">-Dominican Republic</option><option value="326">-Ecuador</option><option value="336">-El Salvador</option><option value="411">-Grenada</option><option value="416">-Guatemala</option><option value="431">-Guyana</option><option value="436">-Haiti</option><option value="446">-Honduras</option><option value="496">-Jamaica</option><option value="641">-Mexico</option><option value="711">-Nicaragua</option><option value="751">-Panama</option><option value="761">-Paraguay</option><option value="766">-Peru</option><option value="806">-Saint Kitts &amp; Nevis</option><option value="811">-Saint Lucia</option><option value="816">-Saint Vincent &amp; the Grenadines</option><option value="986">-Trinidad &amp; Tobago</option><option value="1031">-United States</option><option value="1036">-Uruguay</option><option value="1051">-Venezuela</option><option value="40">Asia</option><option value="86">-Afghanistan</option><option value="126">-Australia</option><option value="151">-Bangladesh</option><option value="181">-Bhutan</option><option value="681">-Burma</option><option value="226">-Cambodia</option><option value="261">-China</option><option value="361">-Fiji</option><option value="461">-India</option><option value="466">-Indonesia</option><option value="501">-Japan</option><option value="511">-Kashmir</option><option value="516">-Kazakhstan</option><option value="526">-Kiribati</option><option value="541">-Kyrgyzstan</option><option value="546">-Laos</option><option value="606">-Malaysia</option><option value="611">-Maldives</option><option value="626">-Marshall Islands</option><option value="646">-Micronesia</option><option value="661">-Mongolia</option><option value="691">-Nauru</option><option value="696">-Nepal</option><option value="706">-New Zealand</option><option value="726">-North Korea</option><option value="741">-Pakistan</option><option value="746">-Palau</option><option value="756">-Papua New Guinea</option><option value="771">-Philippines</option><option value="821">-Samoa</option><option value="861">-Singapore</option><option value="876">-Solomon Islands</option><option value="891">-South Korea</option><option value="906">-Sri Lanka</option><option value="916">-Suriname</option><option value="941">-Taiwan</option><option value="946">-Tajikistan</option><option value="956">-Thailand</option><option value="971">-Timor Leste</option><option value="981">-Tonga</option><option value="1001">-Turkmenistan</option><option value="1006">-Tuvalu</option><option value="1041">-Uzbekistan</option><option value="1046">-Vanuatu</option><option value="1056">-Vietnam</option><option value="37">Europe</option><option value="91">-Albania</option><option value="101">-Andorra</option><option value="121">-Armenia</option><option value="131">-Austria</option><option value="136">-Azerbaijan</option><option value="161">-Belarus</option><option value="166">-Belgium</option><option value="191">-Bosnia-Herzegovina</option><option value="211">-Bulgaria</option><option value="281">-Croatia</option><option value="291">-Cyprus</option><option value="296">-Czech Republic</option><option value="306">-Denmark</option><option value="351">-Estonia</option><option value="366">-Finland</option><option value="371">-France</option><option value="386">-Georgia</option><option value="391">-Germany</option><option value="401">-Greece</option><option value="406">-Greenland</option><option value="441">-Holy See (Vatican City)</option><option value="451">-Hungary</option><option value="456">-Iceland</option><option value="481">-Ireland</option><option value="491">-Italy</option><option value="531">-Kosovo</option><option value="551">-Latvia</option><option value="576">-Liechtenstein</option><option value="581">-Lithuania</option><option value="586">-Luxembourg</option><option value="591">-Macedonia</option><option value="621">-Malta</option><option value="651">-Moldova</option><option value="656">-Monaco</option><option value="666">-Montenegro</option><option value="701">-Netherlands</option><option value="731">-Norway</option><option value="776">-Poland</option><option value="781">-Portugal</option><option value="791">-Romania</option><option value="796">-Russia</option><option value="826">-San Marino</option><option value="846">-Serbia</option><option value="866">-Slovakia</option><option value="871">-Slovenia</option><option value="901">-Spain</option><option value="926">-Sweden</option><option value="931">-Switzerland</option><option value="996">-Turkey</option><option value="1016">-Ukraine</option><option value="1026">-United Kingdom</option><option value="39">Middle East</option><option value="146">-Bahrain</option><option value="471">-Iran</option><option value="476">-Iraq</option><option value="486">-Israel and the Palestinian Territories</option><option value="506">-Jordan</option><option value="536">-Kuwait</option><option value="556">-Lebanon</option><option value="736">-Oman</option><option value="786">-Qatar</option><option value="836">-Saudi Arabia</option><option value="936">-Syria</option><option value="1021">-United Arab Emirates</option><option value="1066">-Yemen</option></select>
+        </div>
+
+<div class="js-form-item form-item js-form-type-select form-item-site-issue-areas js-form-item-site-issue-areas">
+      <label for="edit-site-issue-areas">Issue Areas</label>
+        <select data-drupal-selector="edit-site-issue-areas" multiple="multiple" name="site_issue_areas[]" id="edit-site-issue-areas" size="9" class="form-select"><option value="63">Civilian-Military Relations</option><option value="43">Conflict Analysis &amp; Prevention</option><option value="60">Democracy &amp; Governance</option><option value="52">Economics &amp; Environment</option><option value="53">Education &amp; Training</option><option value="54">Electoral Violence</option><option value="55">Fragility &amp; Resilience</option><option value="56">Gender</option><option value="64">Global Policy</option><option value="61">Human Rights</option><option value="58">Justice, Security &amp; Rule of Law</option><option value="47">Mediation, Negotiation &amp; Dialogue</option><option value="50">Nonviolent Action</option><option value="51">Peace Processes</option><option value="49">Reconciliation</option><option value="65">Religion</option><option value="69">Violent Extremism</option><option value="70">Youth</option></select>
+        </div>
+<fieldset data-drupal-selector="edit-sort-order" id="edit-sort-order--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper">
+      <legend>
+    <span class="fieldset-legend">Sort</span>
+  </legend>
+  <div class="fieldset-wrapper">
+            <div id="edit-sort-order">
+<div class="js-form-item form-item js-form-type-radio form-item-sort-order js-form-item-sort-order">
+        <input data-drupal-selector="edit-sort-order-relevance" type="radio" id="edit-sort-order-relevance" name="sort_order" value="relevance" checked="checked" class="form-radio" />
+
+        <label for="edit-sort-order-relevance" class="option">Relevance</label>
+      </div>
+
+<div class="js-form-item form-item js-form-type-radio form-item-sort-order js-form-item-sort-order">
+        <input data-drupal-selector="edit-sort-order-date" type="radio" id="edit-sort-order-date" name="sort_order" value="date" class="form-radio" />
+
+        <label for="edit-sort-order-date" class="option">Date</label>
+      </div>
+</div>
+
+          </div>
+</fieldset>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-search-content" type="submit" id="edit-submit-search-content" value="Apply" class="button js-form-submit form-submit" />
+</div>
+
+
+</form>
+
+  </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="site-search__main section">
+    <section class="container row -exact">
+      <div class="span9">
+        <div class="views-element-container"><div class="js-view-dom-id-7276816f7ccb0e59bb1877336879e9295dc5648708b90f719211c0e85b94c59a">
+  
+  
+  
+
+  
+  
+  
+
+  
+  <h2>There are no contents that meet the filtering criteria.</h2>
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+      </div>
+    </section>
+  </section>
+</aside>
+
+
+
+  <aside class="container">
+      
+
+
+  </aside>
+
+
+<a id="main-content" name="main-content" tabindex="-1" class="element-invisible"></a>
+
+
+  
+
+  
+
+<main class="site__main -wrapper print-only">
+
+  <header class="page__header -page">
+    <section class="container row -exact">
+
+      <h1>Legal and Privacy Information</h1>
+
+            
+                                <div class="btn-row -page-actions">
+    <div class="addthis_toolbox"><div class="custom_images"><a href="#" class="btn -iconed -share addthis_button_more"><i class="icon -share"></i> Share This</a></div></div>
+  <a href="#" class="btn -iconed -large printfriendly l"><i class="icon -print"></i> Print the Page</a>
+</div>
+                
+    </section>
+  </header>
+
+      <div class="top-flex">
+      
+    </div>
+  
+      <section class="container row -exact">
+      <div class="span9">
+        
+
+      
+  <section class="intro-wysiwyg">
+    
+
+      <p>USIP takes the safeguarding of your personal information seriously. We do not require you to provide any personal information to access and browse our website or to use most of our online services. </p>
+  
+
+  </section>
+
+
+      
+  <section class="wysiwyg ">
+          
+
+      <h2>Privacy Policy</h2>
+
+<p>Submitting information is strictly voluntary. By doing so, you are giving USIP your permission to use the information for the intended purpose. If you do not want to give USIP permission to use your information, simply do not provide it. However, not providing certain information may result in USIP's inability to provide you with the information or services you desire.&nbsp;</p>
+
+<p>We never collect information for commercial marketing purposes.</p>
+
+<h3>Information collected and stored automatically</h3>
+
+<p>We collect and temporarily store certain technical information about your visit for use in site management and security purposes. This information includes:</p>
+
+<ol>
+	<li>The Internet domain from which you access our website (for example, "xcompany.com" if you use a private Internet access account, or "yourschool.edu" if you connect from an educational institution);</li>
+	<li>The IP address (a unique number for each computer connected to the Internet) from which you access our website;</li>
+	<li>The type of browser (e.g., Chrome, Internet Explorer) used to access our site;</li>
+	<li>The operating system (Windows, Unix) used to access our site;</li>
+	<li>The date and time you access our site;</li>
+	<li>The URLs of the pages you visit;</li>
+	<li>If you visited this site from another website or search engine, the URL of the forwarding site.</li>
+</ol>
+
+<p>This information is only used to help us make our site more useful for you. With this data we learn about the number of visitors to different sections of our site, find out what information is the most viewed, the types of technology our visitors use, and to help us make our website more useful to visitors.</p>
+
+<h3>Personal information volunteered by visitors</h3>
+
+<p>If you choose to provide us with personal information by sending us an e-mail, or by filling out a form with your personal information and submitting it through our website to register for an event, obtain a publication, or join a mailing list, we use that information only to fulfill your request or respond to your inquiry.</p>
+
+<p><i>We do not collect personal information about our visitors unless you choose to provide this information.</i></p>
+
+<p>Some of our pages may ask visitors who request specific information to fill out a registration form. Information collected through questionnaires, feedback forms, or other means, enables us to determine visitors' interests, with the goal of providing better service to our visitors. If you complete an online survey, USIP collects and stores responses anonymously. You are not required to complete any survey to use any feature of USIP's website.</p>
+
+<p>Please keep in mind that email isn't necessarily secure. You should never send sensitive or personal information like account numbers or Social Security numbers in an email.</p>
+
+<h3>Information from children</h3>
+
+<p>In general, this website is not intended for use by persons under 13 years of age unless they have a parent or guardians' permission. We do not knowingly solicit or collect personal information from or about children, other than that detailed in the previous sections that is automatically collected on every visitor unless you choose to provide information to us. We provide many on-line tools and services in support of our mission. A child under 13 years old may inadvertently provide personal information to one of these services. If this should happen, the information about the child will be deleted immediately upon discovery.</p>
+
+<h3>Cookies</h3>
+
+<p>A cookie is a small file that a website transfers to your computer to allow it to remember specific information about your session while you are connected. Your computer will only share the information in the cookie with the website that provided it, and no other website can request it. There are two types of cookies, session and persistent. Session cookies last only as long as your Web browser is open. Once you close your browser, the cookie disappears. Persistent cookies store information on your computer for longer periods of time.</p>
+
+<p>USIP.org may use session cookies for technical purposes such as to enable better navigation through the site, or to allow you to customize your preferences for interacting with the site. At this time, USIP.org <strong>uses one</strong> persistent cookie to provide for a better user experience during the transition from our old website to our new website. This cookie is set to expire after six months. This cookie stores no personal information. If you wish to delete this cookie, please <a href="http://kb.wisc.edu/helpdesk/page.php?id=3235">follow these directions</a>.</p>
+<!--
+If using persistent cookies, specific notice goes here, as follows:
+This site uses persistent cookies to do XYZ function. Elaborate further on
+use of persistent cookie for this site.
+-->
+
+<p>At no time is your private information, whether stored in cookies or elsewhere, shared with third parties who have no right to that information. If you do not wish to have session or persistent cookies stored on your machine, you can turn them off in your browser. However, this may affect the functioning of some sections of our site.</p>
+
+<h3>Links to other websites</h3>
+
+<p>USIP links to many websites created and maintained by other public and/or private organizations or individuals, including links on social media websites. We provide links to these sites as a service to our users. The presence of a link is not an endorsement of the site or its contents by USIP. These links are provided purely for reference purposes.</p>
+
+<p>When users follow a link to an outside website, they are leaving USIP and are subject to the privacy and security policies of the owners/sponsors of the outside website(s). USIP is not responsible for the information collection practices of non-USIP sites.&nbsp;</p>
+
+<h2>Intellectual property/copyright statement</h2>
+
+<p>USIP regularly publishes an array of comprehensive analysis and policy recommendations on current international affairs issues in the form of books, reports, and other materials for printing on physical material and as files for electronic distribution. The views expressed in them are those of the editors and authors alone. They do not necessarily reflect views of the United States Institute of Peace.</p>
+
+<p>Materials on our site are copywritten by their various owners unless otherwise noted. Please contact the source of the material for full copyright information.</p>
+
+<p><em>Materials credited to USIP:</em> ©Copyright 2019&nbsp;by the Endowment of the United States Institute of Peace. All rights reserved.</p>
+
+<p>To request permission to use USIP-owned materials, please visit the <a href="https://bookstore.usip.org/pages/permission">permission instructions page</a>. For other materials, please contact its source for full copyright information.</p>
+
+<h2>Image copyright statement</h2>
+
+<p>Images credited to their various sources retain the copyright of their owner. Please contact the source of the image for full copyright information.</p>
+
+<p>USIP-owned photos are available for download from our photo galleries. We do, however, require that you credit USIP by including the following information with your photo: (Photo Courtesy: USIP). We also ask that you link back to our website, <a class="article" href="http://www.usip.org/">www.usip.org</a>, if possible.&nbsp;</p>
+
+<p><em>Images credited to NY Times</em>: All rights reserved by New York Times Syndication Sales Corp. This material may not be copied, published, broadcast&nbsp;or redistributed in any manner. Images used under license.&nbsp;</p>
+
+<h2>Website technology accessibility statement</h2>
+
+<p>We continually strive to ensure the pages on this website are accessible to individuals using assistive technologies. If you have any difficulty viewing any page with assistive technology, please contact the <a href="mailto:webmaster@usip.org?subject=%5BUSIP-ORG-E-MAIL%5D%20Accessibility%20Issue&amp;body=Please%20describe%20your%20issue%20below%20in%20as%20much%20detail%20as%20possible%3A">webmaster</a> for this site.</p>
+
+<p>Documents on USIP.org are presented in many formats. These formats are generally accessible to users using screen reading software. Some files on this website may be posted as Adobe Acrobat Portable Document Format (PDF) files. Adobe provides their <a href="http://www.adobe.com/products/acrobat/alternate.html" title="Adobe download page containing all Adobe Acrobat products and versions including accessibility plug-ins">Acrobat Reader</a> software as a free download.</p>
+
+<h2>Website contact</h2>
+
+<p>If you need assistance with this privacy policy, statement, or website, please contact the webmaster for this site via <a href="mailto:webmaster@usip.org?subject=%5BUSIP-ORG-E-MAIL%5D%20Legal%2FPrivacy%20Question">e-mail</a> or by writing:</p>
+
+<p>Webmaster<br />
+United States Institute of Peace<br />
+2301 Constitution Avenue, NW<br />
+Washington, D.C. 20037</p>
+
+<p>If you need information about permission to republish, please <a href="https://bookstore.usip.org/pages/permission">follow these directions</a>.</p>
+
+  
+
+      </section>
+
+
+  
+
+      </div>
+      <aside class="site__sidebar span3 l">
+                      </aside>
+    </section>
+  
+      
+  
+</main>
+
+
+
+
+
+<footer class="site__footer">
+  <section class="container row-flush">
+    <div class="span7 f">
+      <div class="inner">
+        <h1 class="footer__logo"><a href="/">United Status Instute of Peace</a></h1>
+        <p class="address">2301 Constitution Avenue NW, Washington, DC 20037<br>Tel: +1.202.457.1700</p>
+      </div>
+    </div>
+    <nav class="span6">
+      <div class="inner">
+        
+  <ul>
+      <li>
+      <a href="/experts" data-drupal-link-system-path="node/30">Experts</a>
+    </li>
+      <li>
+      <a href="/regions-countries" data-drupal-link-system-path="node/42526">Regions</a>
+    </li>
+      <li>
+      <a href="/issue-areas" data-drupal-link-system-path="node/42531">Issue Areas</a>
+    </li>
+      <li>
+      <a href="/education-training" data-drupal-link-system-path="node/33">Education &amp; Training</a>
+    </li>
+      <li>
+      <a href="/events" data-drupal-link-system-path="node/34">Events</a>
+    </li>
+    </ul>
+
+      </div>
+    </nav>
+    <nav class="span11 l">
+      <div class="inner">
+        
+  <p class="inline-nav meta">
+          <a href="/about" data-drupal-link-system-path="node/95531">About</a>
+          <a href="/publications" data-drupal-link-system-path="node/32">Publications</a>
+          <a href="/projects" data-drupal-link-system-path="node/31">Projects</a>
+          <a href="/grants-fellowships" data-drupal-link-system-path="node/42501">Grants &amp; Fellowships</a>
+          <a href="/visit-us" data-drupal-link-system-path="node/92061">Visit</a>
+          <a href="/connect" data-drupal-link-system-path="node/42536">Connect</a>
+          <a href="/press" data-drupal-link-system-path="node/42516">Press</a>
+          <a href="/blog" data-drupal-link-system-path="node/42521">Blog</a>
+      </p>
+
+        
+<nav class="footer__social">
+  <ul>
+          <li class="facebook">
+        <a href="https://www.facebook.com/usinstituteofpeace" title="usinstituteofpeace">Facebook</a>
+      </li>
+          <li class="twitter">
+        <a href="https://twitter.com/USIP" title="@USIP">Twitter</a>
+      </li>
+          <li class="instagram">
+        <a href="https://www.instagram.com/usipeace/" title="@usipeace">Instagram</a>
+      </li>
+          <li class="linkedin">
+        <a href="https://www.linkedin.com/company/united-states-institute-of-peace" title="United States Institute of Peace">LinkedIn</a>
+      </li>
+          <li class="youtube">
+        <a href="https://www.youtube.com/user/usinstituteofpeace" title="usinstituteofpeace">Youtube</a>
+      </li>
+      </ul>
+</nav>
+
+      </div>
+    </nav>
+  </section>
+  <footer class="footer__end">
+    <p class="meta">The United States Institute of Peace <span class="--right"><a href="/legal/privacy">Legal and Privacy Information</a> | <a href="/freedom-information-act-foia">FOIA Inquiries</a></span></p>
+  </footer>
+</footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/92046","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"calendar\/calendar.theme,core\/html5shiv,google_analytics\/google_analytics,paragraphs\/drupal.paragraphs.unpublished,system\/base,usip\/base,usip_addthis\/addthis,views\/views.ajax,views\/views.module","theme":"usip","theme_token":null},"ajaxTrustedUrl":{"https:\/\/www.usip.org\/legal\/privacy":true},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["www.usip.org"]},"twig_mods":{"secondaryMenu":{"facebook":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Facebook","url":"https:\/\/www.facebook.com\/usinstituteofpeace","below":[],"original_link":{},"key_name":"facebook"},"twitter":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Twitter","url":"https:\/\/twitter.com\/USIP","below":[],"original_link":{},"key_name":"twitter"},"instagram":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Instagram","url":"https:\/\/www.instagram.com\/usipeace\/","below":[],"original_link":{},"key_name":"instagram"},"linkedin":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"LinkedIn","url":"https:\/\/www.linkedin.com\/company\/united-states-institute-of-peace","below":[],"original_link":{},"key_name":"linkedin"},"youtube":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Youtube","url":"https:\/\/www.youtube.com\/user\/usinstituteofpeace","below":[],"original_link":{},"key_name":"youtube"},"about":{"is_expanded":true,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"About","url":"\/about","below":[{"is_expanded":false,"is_collapsed":true,"in_active_trail":false,"attributes":"","title":"Leadership","url":"\/about\/leadership","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Staff","url":"\/about\/staff","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Centers","url":"\/about\/centers","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Strategic Plan","url":"\/about\/strategic-plan","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":true,"in_active_trail":false,"attributes":"","title":"The Origins of USIP","url":"\/about\/origins-usip","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Our Building and Location","url":"\/about\/our-building-and-location","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"International Advisory Council","url":"\/about\/international-advisory-council","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":true,"in_active_trail":false,"attributes":"","title":"Careers","url":"\/about\/careers","below":[],"original_link":{}}],"original_link":{},"key_name":"about"},"publications":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Publications","url":"\/publications","below":[],"original_link":{},"key_name":"publications"},"projects":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Projects","url":"\/projects","below":[],"original_link":{},"key_name":"projects"},"grants_fellowships":{"is_expanded":true,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Grants \u0026 Fellowships","url":"\/grants-fellowships","below":[{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Fellowships","url":"\/grants-fellowships\/fellowships","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":true,"in_active_trail":false,"attributes":"","title":"Grants","url":"\/grants-fellowships\/grants","below":[],"original_link":{}}],"original_link":{},"key_name":"grants_fellowships"},"visit":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Visit","url":"\/visit-us","below":[],"original_link":{},"key_name":"visit"},"connect":{"is_expanded":true,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Connect","url":"\/connect","below":[{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Stay Informed","url":"\/newsletter-signup","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"How You Can Get Involved","url":"\/connect\/how-you-can-get-involved","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Group Visit Request","url":"\/group-visit-request","below":[],"original_link":{}},{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Contact Us","url":"\/contact","below":[],"original_link":{}}],"original_link":{},"key_name":"connect"},"press":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Press","url":"\/press","below":[],"original_link":{},"key_name":"press"},"blog":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Blog","url":"\/blog","below":[],"original_link":{},"key_name":"blog"},"experts":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Experts","url":"\/experts","below":[],"original_link":{},"key_name":"experts"},"regions":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Regions","url":"\/regions-countries","below":[],"original_link":{},"key_name":"regions"},"issue_areas":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Issue Areas","url":"\/issue-areas","below":[],"original_link":{},"key_name":"issue_areas"},"education_training":{"is_expanded":false,"is_collapsed":true,"in_active_trail":false,"attributes":"","title":"Education \u0026 Training","url":"\/education-training","below":[],"original_link":{},"key_name":"education_training"},"events":{"is_expanded":false,"is_collapsed":false,"in_active_trail":false,"attributes":"","title":"Events","url":"\/events","below":[],"original_link":{},"key_name":"events"}}},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:7276816f7ccb0e59bb1877336879e9295dc5648708b90f719211c0e85b94c59a":{"view_name":"search_content","view_display_id":"search","view_args":"","view_path":"\/legal\/privacy","view_base_path":null,"view_dom_id":"7276816f7ccb0e59bb1877336879e9295dc5648708b90f719211c0e85b94c59a","pager_element":0}}},"user":{"uid":0,"permissionsHash":"1cdbd5271f08dbff9085df3382edb67f0f0d832f6a8658e703076476286fda93"}}</script>
+<script src="/sites/default/files/js/js_BGqT2JWk2BRMT85og-9TSUFfvbpB_uivfcsF7Lnclqc.js"></script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54369ec16794c891"></script>
+<script src="/sites/default/files/js/js_66dmsQTCnSSm1vokATOre9DpkW52vmtn8SrhegnYXHE.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"99a24a9f07","applicationID":"56250060","transactionName":"Y1MEYhZQVkAEUxdYC1oZJ1UQWFddSkACVgFrVQdVDFQ=","queueTime":0,"applicationTime":23,"atts":"TxQHFF5KRU4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

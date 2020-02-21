@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="crystalHead"><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><meta name="description" content="We understand the importance of protecting your home and auto, which are among the most valuable properties you own." /><meta name="keywords" content="Personal Insurance, Homeowners Insurance, Fire Insurance,  Automobile Insurance,Boatowners Insurance, Umbrella Insurance" /><meta name="format-detection" content="telephone=no" /><title>
+	Privacy Statement  | Donegal Insurance Group
+</title><link href="Content/Styles/bootstrap.min.css" media="screen" type="text/css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900&display=swap" type="text/css" rel="stylesheet" /><link href="Content/Styles/fontawesome-all.min.css" type="text/css" rel="stylesheet" /><link href="Content/Styles/portal.css" media="screen" type="text/css" rel="stylesheet" /><link href="Content/Styles/jquery-ui.css" media="all" type="text/css" rel="stylesheet" /><link href="Content/Styles/portal.bootstrap.css" media="all" type="text/css" rel="stylesheet" /><link href="Content/Styles/custom-calender.css" media="all" type="text/css" rel="stylesheet" /><link href="Content/Styles/xcontrols.css" type="text/css" rel="stylesheet" /><link href="Content/Styles/portal.widget.css" media="screen" type="text/css" rel="stylesheet" /><link href="Content/Styles/jquery.datetimepicker.css" media="screen" type="text/css" rel="stylesheet" /><script language="javascript" src="Content/Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/jquery.validate.min.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/popper.min.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/bootstrap.min.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/moment.min.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/jquery.mask.min.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/Portal/portal.core.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/Portal/portal.tree.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/XControls/xcontrols.responsive.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/jquery.datetimepicker.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/DGIC/dgic.jquery.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/DGIC/dgic.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(function() {
+	//Adding role for ADA Web assessment
+	//Adding role on menu item
+    $('.nav.navbar-nav').attr('role', 'list');
+    $('.dropdown-menu.multi-level').attr('role', 'list');
+    $('.nav-item').attr('role', 'listitem');
+
+    //On Footer 
+    $('#footer_top_lg_left_mobile_app').attr('role', 'list');
+    $('#footer_top_lg_left_mobile_app a').attr('role', 'listitem');
+
+    $('#footer_top_lg_left_social').attr('role', 'list');
+    $('#footer_top_lg_left_social a').attr('role', 'listitem');
+
+    $('#footer_top_xs_sm_left').attr('role', 'list');
+    $('#footer_top_xs_sm_left a').attr('role', 'listitem');
+	
+	$('#products_row').attr('role','list');
+	$('#products_row_col1').attr('role','listitem');
+	$('#products_row_col2').attr('role','listitem');
+	$('#products_row_col3').attr('role','listitem');
+	
+	$('#footer_nav_lg').attr('role','list');
+	$('#footer_nav_lg a').attr('role','listitem');
+
+
+	$('#footer_nav_xs').attr('role','list');
+	$('#footer_nav_xs a').attr('role','listitem');
+	
+	//Navbar Accessible using keyboard
+	$('a.dropdown-toggle').each(function (index) {
+		var $parent=$(this).parent('div.nav-item');		
+        var sib = $(this).next('.dropdown-menu.multi-level');
+		
+		$(this).attr('onkeydown', 'keypressOnSubmenu(event,this);');      
+		$(this).attr('onfocus', 'menushow(this);');
+		
+		if ($parent.length > 0 && !$parent.hasClass('d-md-none')) {
+            $parent.attr('data-check', 'Y');
+			 $(this).attr('data-toggle', 'dropdown');
+			 $(this).attr('role', 'button');
+			$(this).attr('aria-haspopup', 'true');
+			$(this).attr('aria-expanded', 'false');
+			$(this).removeAttr('onfocus');
+			$(this).attr('onclick', 'navigate(this);');
+			$(this).attr('onkeydown', 'keypress(event,this);');
+        }
+        if (sib.length > 0) {
+            $(this).next('.dropdown-menu.multi-level').attr('aria-labelledby', this.id);
+        }
+    });
+	//Sidebar Accessible using keyboard
+	$('.sidebar-menu .nav div.nav-item').each(function (index) {
+		var a=$(this).find('a.dropdown-toggle');		
+        
+		
+		if (a.length > 0) {
+			$(a).attr('onfocus', 'sidemenushow(this);');
+			$(a[0]).attr('onfocus', 'sidemenushow(this, false);');
+			$(a[0]).attr('data-check', 'Y');
+			 $(a[0]).attr('data-toggle', 'dropdown');
+			 $(a).attr('role', 'button');
+			$(a[0]).attr('aria-haspopup', 'true');
+			$(a[0]).attr('aria-expanded', 'false');
+			$(a[0]).attr('onclick', 'navigate(this);');
+			$(a[0]).attr('onkeydown', 'keypress(event,this);');
+        }
+    });
+});
+function keypressOnSubmenu(e, cntr){
+	//hide all submenu on Esc key
+	if (e.keyCode === 27) {
+		$('div.nav-item').find('div').removeClass('show');
+	}
+		
+	return false;
+}
+var cntrlIsPressed = false;
+function keypress(e, cntr){
+	cntrlIsPressed = true;
+	if (e.keyCode === 13) {
+		navigate(cntr);
+		cntrlIsPressed= false;
+	}
+		
+		return false;
+}
+function navigate(cntr){
+	if(!cntrlIsPressed )
+		window.location.href=cntr.href;
+	cntrlIsPressed= false;
+}
+function menushow(cntr)
+{		var attr = $(cntr).parent().attr('data-check');
+	if (typeof attr !== typeof undefined && attr !== false) {
+		var nav=$(cntr).parent().prev('div.nav-item');
+		$(nav).find('div').removeClass('show');
+	}
+
+		if (!$(cntr).next().hasClass('show')) {
+            $(cntr).parents('.dropdown-menu').first().find('.show').removeClass('show');
+        }
+        var $subMenu = $(cntr).next('.dropdown-menu');
+        $subMenu.toggleClass('show');
+
+
+        $(cntr).parents('div.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+            $('.dropdown-submenu .show').removeClass('show');
+        });
+
+
+        return false;
+}
+function sidemenushow(cntr, isShow) {
+    var attr = $(cntr).parent().parent().prev().find('a:first').attr('data-check');
+    if (typeof attr !== typeof undefined && attr !== false) {
+        var nav = $(cntr).parent().parent().prev('div.nav-item');
+        $(nav).find('div').removeClass('show');
+    }
+	if(isShow !== false){
+    if (!$(cntr).next().hasClass('show')) {
+        $(cntr).parents('.dropdown-menu').first().find('.show').removeClass('show');
+    }
+    var $subMenu = $(cntr).next('.dropdown-menu');
+    $subMenu.toggleClass('show');
+
+
+    $(cntr).parents('div.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+        $('.dropdown-submenu .show').removeClass('show');
+    });
+
+	}
+    return false;
+}
+</script>
+<style type="text/css">
+.sidebar-menu .dropdown-menu,
+.sidebar-menu .dropdown-submenu + .dropdown-menu {
+	position: absolute !important;
+        left: 100% !important;
+        top: auto !important;
+	transform: none !important;
+}
+
+</style>
+</head>
+<body>
+    <div class="crystal-wrapper">
+        <form method="post" action="./privacy-statement" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDZzsrkdDtOkUEmtSh4XMpotyyTK3ItsUlTj05kWdx-OJcQuVKVLy_SHMNYZXKBhyg2&amp;t=637103166297649313" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$Portal.setAppReleaseItems({});//]]>
+</script>
+
+<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakI6CFL34EBAl8wewCf8WYHC76CKwlYk1DvX9YIVeRdKixiA1JSfIT7HdTT_NmpIRPRbd83YFr1NM5bfj-562Svo1&amp;t=637103166297649313" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+<div id="masterViewInjector" class="ui-xcontrols ui-xcontrols-xinjector">
+	<div ><div id="inner-container" name="inner-container" class="ui-xcontrols ui-xcontrols-xregion main-container ">
+		<a id="pageTop" name="pageTop"></a><div id="container_header" name="container_header" class="ui-xcontrols ui-xcontrols-xregion container header ">
+			<div id="body_header_row" name="body_header_row" class="ui-xcontrols ui-xcontrols-xregion row ">
+				<div id="body_header_logo" name="body_header_logo" class="ui-xcontrols ui-xcontrols-xregion col-sm-12 col-md-3 ">
+					<div id="logo" name="logo" class="ui-xcontrols ui-xcontrols-xregion portal-logo  portal-logo-donegal">
+						<a href="home" id="logoLink" name="logoLink" class="donegal">Donegal Insurance Group</a>
+					</div><div id="body_header_login_xs" name="body_header_login_xs" class="ui-xcontrols ui-xcontrols-xregion dropdown login-nav-xs d-md-none ">
+						<a href="agentlogin" id="aMobileLogin" name="aMobileLogin" class="btn btn-default font-weight-bold">Login&nbsp;<span class="fas fa-lock" aria-hidden="true"></span></a>
+					</div>
+				</div><div id="body_header_utility" name="body_header_utility" class="ui-xcontrols ui-xcontrols-xregion col-md-9 d-none d-md-block ">
+					<div id="utility-nav" name="utility-nav" class="ui-xcontrols ui-xcontrols-xregion portal-header-utility ">
+						<div id="body_header_welcome" name="body_header_welcome" class="ui-xcontrols ui-xcontrols-xregion welcome-message ">
+							<span id="lblWelcomeMessage">&nbsp;</span>
+						</div><div id="body_header_utility_login" name="body_header_utility_login" class="ui-xcontrols ui-xcontrols-xregion">
+							<div id="body_header_utility_login_dropdown" name="body_header_utility_login_dropdown" class="ui-xcontrols ui-xcontrols-xregion">
+								<!--<a class="btn btn-default dropdown-toggle text-shadow" href="#" data-hover="dropdown" id="loginDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+     <span>Login</span>
+     <img src="Content/Images/icon_lock.png" alt="lock icon" />
+</a>
+<div class="dropdown-menu" aria-labelledby="loginDropdown">
+     <a class="dropdown-item" href="customerlogin">Customer</a>
+     <a class="dropdown-item" href="agentlogin">Agent</a>
+</div>-->
+<div><a href="customerlogin">Login</a></div>
+
+							</div>
+						</div><div id="body_header_utility_corp_links" name="body_header_utility_corp_links" class="ui-xcontrols ui-xcontrols-xregion">
+							<nav><ul class="header-quick-links"><li id="header-link-home" class="header-quick-link-item"><a href="/home">Home</a></li><li id="header-link-about-us" class="header-quick-link-item"><a href="/about-us">About Us</a></li><li id="header-link-careers" class="header-quick-link-item"><a href="/careers">Careers</a></li><li id="header-link-contact-us" class="header-quick-link-item"><a href="/contact-us">Contact Us</a></li></ul></nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><div id="main-menu" name="main-menu" class="ui-xcontrols ui-xcontrols-xregion container ">
+			<nav class="navbar navbar-expand-lg navbar-inverse main-menu main donegal"><div class="navbar-header"><button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mainPortalMenu" aria-controls="mainPortalMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="sr-only">Toggle navigation</span><span class="fas fa-bars"></span></button></div><div id="mainPortalMenu" class="collapse navbar-collapse"><div class="nav navbar-nav tree"><div class="nav-item dropdown"><a id="our-products" class="dropdown-toggle" href="/our-products">Products</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="op-personal-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/personal-insurance">Personal Insurance</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="pi-automobile-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/personal-insurance/automobile-insurance">Automobile Insurance</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="pi-automobile-insurance-account-credit-plan" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/personal-insurance/insurance-account-credit-plan">Account Credit Plan</a></div><a id="pi-homeowners-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/personal-insurance/homeowners-insurance">Homeowners Insurance</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="pi-homeowners-insurance-account-credit-plan" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/personal-insurance/insurance-account-credit-plan">Account Credit Plan</a></div><a id="pi-umbrella-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/personal-insurance/umbrella-insurance">Personal Excess Liability (Umbrella) Insurance</a><a id="pi-dwelling-fire-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/personal-insurance/dwelling-fire-insurance">Dwelling Fire Insurance</a><a id="pi-boatowners-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/personal-insurance/boatowners-insurance">Boatowners Insurance</a></div><a id="op-commercial-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance">Commercial Insurance</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="ci-businessowners-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/businessowners-insurance">Businessowners Insurance</a><a id="ci-bop-select-businessowners-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/bop-select-businessowners-insurance">"BOP Select" Businessowners Insurance</a><a id="ci-tradesmans-advantage-contractors-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/tradesmans-advantage-contractors-insurance">Tradesman's Advantage Contractors' Insurance</a><a id="ci-commercial-package-policy" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/commercial-package-policy">Commercial Package Policy</a><a id="ci-commercial-automobile-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/commercial-automobile-insurance">Commercial Automobile Insurance</a><a id="ci-commercial-excess-liability-umbrella-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/commercial-excess-liability-umbrella-insurance">Commercial Excess Liability (Umbrella) Insurance</a><a id="ci-commercial-garage-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/commercial-garage-insurance">Commercial Garage Insurance</a><a id="ci-workers-compensation-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/workers-compensation-insurance">Workers' Compensation Insurance</a><a id="ci-employment-practices-liability" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/employment-practices-liability">Employment Practices Liability</a><a id="ci-liquor-liability-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/liquor-liability-insurance">Liquor Liability Insurance</a><a id="ci-contractor-s-errors-and-omissions" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/contractor-s-errors-and-omissions">Contractor’s Errors & Omissions</a><a id="ci-commercial-loss-control-services" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/commercial-loss-control-services">Commercial Loss Control Services</a><a id="ci-commercial-group-insurance-programs" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/commercial-group-insurance-programs">Commercial Group Programs</a><a id="ci-commercial-premium-audit-services" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/commercial-premium-audit-services">Commercial Premium Audit Services</a><a id="ci-on-demand-loss-control-training" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/commercial-insurance/on-demand-loss-control-training">On Demand Loss Control Training</a></div><a id="op-farm-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/our-products/farm-insurance/farmowners-insurance">Farm Insurance</a><a id="op-title-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="http://www.conestogatitle.com" target="_blank" rel="noopener">Title Insurance</a></div></div><div class="nav-item dropdown"><a id="customer-services" class="dropdown-toggle" href="/customer-services">Customer Services</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="cs-my-account" class="nav-item dropdown-submenu dropdown-toggle" href="/customer-services/my-account">My Account</a><a id="cs-payment-options" class="nav-item dropdown-submenu dropdown-toggle" href="/customer-services/payment-options">Payment Options</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="cs-payment-options-eft" class="nav-item dropdown-submenu dropdown-toggle" href="/customer-services/payment-options">Electronic Funds Transfer</a><a id="cs-payment-options-rcc" class="nav-item dropdown-submenu dropdown-toggle" href="/customer-services/payment-options">Recurring Credit Card</a></div><a id="cs-claims-survey" class="nav-item dropdown-submenu dropdown-toggle" href="/customer-services/claims-survey">Donegal Claims Survey</a><a id="cs-autoquestionnaire" class="nav-item dropdown-submenu dropdown-toggle" href="/autoquestionnaire">Auto Questionnaire</a><a id="cs-learning-center" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center">Learning Center</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="lc-insurance-buying-tips" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-buying-tips">Insurance Buying Tips</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="lc-what-to-look-for-in-an-insurance-carrier" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-buying-tips/what-to-look-for-in-an-insurance-carrier">What to Look for in an </br>Insurance Carrier</a><a id="lc-what-to-look-for-in-an-insurance-agent" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-buying-tips/what-to-look-for-in-an-insurance-agent">What to Look for in an </br>Insurance Agent</a><a id="lc-ways-to-save-money-when-buying-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-buying-tips/ways-to-save-money-when-buying-insurance">Ways to Save Money </br>When Buying Insurance</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="lc-ways-to-save-money-when-buying-homeowners-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-buying-tips/ways-to-save-money-when-buying-insurance/ways-to-save-money-when-buying-homeowners-insurance">Homeowners Insurance</a><a id="lc-ways-to-save-money-when-buying-automobile-insurance" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-buying-tips/ways-to-save-money-when-buying-insurance/ways-to-save-money-when-buying-automobile-insurance">Automobile Insurance</a></div></div><a id="lc-fire-prevention-and-safety-information" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/fire-prevention-and-safety-information">Fire Prevention & Safety</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="lc-common-causes-of-fires-and-ways-to-prevent-them" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/fire-prevention-and-safety-information/common-causes-of-fires-and-ways-to-prevent-them">Common Causes of Fires & </br>Preventative Measures</a><a id="lc-home-fire-safety-measures" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/fire-prevention-and-safety-information/home-fire-safety-measures">Home Fire Safety Measures</a><a id="lc-safety-features-to-look-for-in-a-home" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/fire-prevention-and-safety-information/safety-features-to-look-for-in-a-home">Safety Features to </br>Look For in a Home</a><a id="lc-household-inventory-form" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/fire-prevention-and-safety-information/household-inventory-form">Household Inventory Form</a></div><a id="lc-what-to-do-in-the-event-of-a-loss" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/what-to-do-in-the-event-of-a-loss">What to Do in the Event of a Loss</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="lc-what-to-do-if-you-re-involved-in-an-auto-accident" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/what-to-do-in-the-event-of-a-loss/what-to-do-if-you-re-involved-in-an-auto-accident">Auto Accident</a><a id="lc-what-to-do-in-the-event-of-a-property-loss" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/what-to-do-in-the-event-of-a-loss/what-to-do-in-the-event-of-a-property-loss">Homeowners or Commercial </br>Property Loss</a><a id="lc-what-to-do-in-the-event-of-a-workers-compensation-claim" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/what-to-do-in-the-event-of-a-loss/what-to-do-in-the-event-of-a-workers-compensation-claim">Workers' Compensation Claim</a><a id="lc-what-to-do-in-the-event-of-a-general-liability-claim" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/what-to-do-in-the-event-of-a-loss/what-to-do-in-the-event-of-a-general-liability-claim">General Liability Claim</a></div><a id="lc-insurance-fraud-what-is-it" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-fraud-what-is-it">Insurance Fraud - What is it?</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="lc-who-are-the-victims-of-insurance-fraud" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-fraud-what-is-it/who-are-the-victims-of-insurance-fraud">The Victims of Insurance Fraud</a><a id="lc-what-is-the-donegal-insurance-group-doing-to-combat-fraud" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-fraud-what-is-it/what-is-the-donegal-insurance-group-doing-to-combat-fraud">How Donegal is Combatting Fraud</a><a id="lc-how-can-i-help-stop-insurance-fraud" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/insurance-fraud-what-is-it/how-can-i-help-stop-insurance-fraud">How You Can Help Stop Insurance Fraud</a></div><a id="lc-helpful-links" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/helpful-links">Helpful Links</a><a id="lc-faqs" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/faqs">FAQs</a><a id="lc-glossary" class="nav-item dropdown-submenu dropdown-toggle" href="/learning-center/glossary">Glossary of Insurance Terms</a></div></div></div><div class="nav-item"><a id="make-a-payment" class="dropdown-toggle" href="/search-payment">Make a Payment</a></div><div class="nav-item dropdown"><a id="report-a-claim" class="dropdown-toggle" href="/customer-services/claim-services">Report a Claim</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="cs-24-hour-claim-reporting-by-telephone" class="nav-item dropdown-submenu dropdown-toggle" href="/customer-services/claim-services/24-hour-claim-reporting-by-telephone">24-Hour Claim </br>Reporting Service</a><a id="cs-policyholder-online-claim-reporting" class="nav-item dropdown-submenu dropdown-toggle" href="/customer-services/claim-services/policyholder-online-claim-reporting">Policyholder Online </br>Claim Reporting</a><a id="cs-auto-glass-claims" class="nav-item dropdown-submenu dropdown-toggle" href="/customer-services/claim-services/auto-glass-claims">Auto Glass Claims</a><a id="cs-contact-us" class="nav-item dropdown-submenu dropdown-toggle" href="/contact-us">For Claim Information, </br>Contact Your Claim </br>Representative</a></div></div><div class="nav-item dropdown"><a id="agency-services" class="dropdown-toggle" href="/agentlogin">Agency Services</a><div class="dropdown-menu multi-level dropdown-menu-dynamic hideTree"><a id="as-agency-services-home-logo" class="nav-item dropdown-submenu dropdown-toggle logo agency-services-logo" href="/agentlogin">Agency Services Login</a><a id="as-writepro-logo" class="nav-item dropdown-submenu dropdown-toggle logo writepro-logo" href="/launch-app?app=WP&amp;service=wp">WritePro</a><a id="as-writebiz-logo" class="nav-item dropdown-submenu dropdown-toggle logo writebiz-logo" href="/launch-app?app=WB&amp;service=wb">WriteBiz</a><a id="as-writefarm-logo" class="nav-item dropdown-submenu dropdown-toggle logo writefarm-logo" href="/launch-app?app=WF&amp;service=wf">WriteFarm</a><a id="as-how-to-become-a-donegal-insurance-group-agency" class="nav-item dropdown-submenu dropdown-toggle" href="/agency-services/how-to-become-a-donegal-insurance-group-agency">Become a Donegal </br>Insurance Group Agency</a></div></div><div class="nav-item d-md-none"><a id="mobile-link-about-us" class="dropdown-toggle" href="/about-us">About Us</a></div><div class="nav-item d-md-none"><a id="mobile-link-careers" class="dropdown-toggle" href="/careers">Careers</a></div><div class="nav-item d-md-none"><a id="mobile-link-contact-us" class="dropdown-toggle" href="/contact-us">Contact Us</a></div><div class="nav-item"><a id="investors" class="dropdown-toggle" href="http://investors.donegalgroup.com" target="_blank" rel="noopener">Investors</a></div></div></div></nav>
+		</div><div id="global_alert_messages" name="global_alert_messages" class="ui-xcontrols ui-xcontrols-xregion container app-release-container ">
+			<div id="global_alert_carousel" name="global_alert_carousel" data-ride="carousel" class="ui-xcontrols ui-xcontrols-xregion carousel slide d-none">
+				<div id="global_alert_active_message" name="global_alert_active_message" class="ui-xcontrols ui-xcontrols-xregion carousel-inner d-none">
+
+				</div><a href="#global_alert_carousel" id="aPrevGblAlert" name="aPrevGblAlert" role="button" data-slide="prev" class="carousel-control-prev"><i class="fas fa-chevron-left" aria-hidden="true" title="Previous message"></i><span class="sr-only">Previous</span></a><a href="#global_alert_carousel" id="aNextGblAlert" name="aNextGblAlert" role="button" data-slide="next" class="carousel-control-next"><i class="fas fa-chevron-right" aria-hidden="true" title="Next message"></i><span class="sr-only">Next</span></a>
+			</div>
+		</div><div id="inner_container_contents" name="inner_container_contents" class="ui-xcontrols ui-xcontrols-xregion container ">
+			<div id="vsContact" class="portal-validation-summary col-12" caption="" style="display:none;">
+
+			</div><div id="contents_header_row" name="contents_header_row" class="ui-xcontrols ui-xcontrols-xregion row ">
+				<div id="contents_header_heading" name="contents_header_heading" class="col-12" class="ui-xcontrols ui-xcontrols-xregion col-md-7 ">
+					<h1 id="hhTitle" class="heading">Privacy Statement</h1>
+				</div><div id="contents_header_shadow_panel" name="contents_header_shadow_panel" class="ui-xcontrols ui-xcontrols-xregion shadow-panel ">
+					<img src="content/images/shadow_image_panel.png" id="shadow-image-panel" caption="" class="img-flex" alt="Content header shadow panel" />
+				</div>
+			</div><div  class=" content-full-width ">
+				
+                <div id="injector" class="ui-xcontrols ui-xcontrols-xinjector">
+					<div ><div id="body_main_row" name="body_main_row" class="ui-xcontrols ui-xcontrols-xregion row content ">
+						<div id="body_main_left" name="body_main_left" class="ui-xcontrols ui-xcontrols-xregion col-sm-6 ">
+							<span id="lblMainLeftContent"><p>
+	<strong>Because we value you as a customer of the Donegal Insurance Group and we take your personal privacy seriously, we have established the following privacy and confidentiality policy:</strong></p>
+<ul>
+	<li>
+		We do not sell customer information.</li>
+	<li>
+		We do not provide customer information to persons or organizations outside the Donegal Insurance Group who are doing business on our behalf for their own marketing purposes.</li>
+	<li>
+		We require any person or organization providing products or services to customers on our behalf to protect the confidentiality of Donegal customer information.</li>
+	<li>
+		Within the Donegal Insurance Group, we emphasize the importance of protecting your personal information and that customer information is to be handled in strict confidence.</li>
+</ul>
+<p>
+	<strong>What kind of personal information do we have and how do we obtain it?</strong></p>
+<p>
+	We collect and use information we believe is necessary to administer our business, to advise you about our products and services, and to provide you with customer service. We may collect and maintain several types of customer information needed for these purposes. The following are examples of the types of information we may collect and how this information is obtained:</p>
+<ul>
+	<li>
+		From you (on applications for our insurance and banking products or on other forms, through telephone or in-person interviews, or through your dealings with your Donegal agent), such as your address, telephone number, social security number, bank or credit card account numbers, and employment information.</li>
+	<li>
+		From your transactions with us, such as your payment history, underwriting and claims documents or certain online transactions.</li>
+	<li>
+		From non-Donegal companies, such as your driving record and claim history.</li>
+	<li>
+		From consumer reporting agencies, such as your credit history.</li>
+</ul>
+<p>
+	<strong>How is this information used?</strong></p>
+<p>
+	We use customer information to determine your eligibility for insurance, underwrite your policies, process your claims, ensure proper billing, service your accounts, and offer you other Donegal insurance or financial products that we believe may suit your needs.</p>
+<p>
+	<strong>With whom is this information shared?</strong></p>
+<p>
+	We do not share information about you except as permitted by law. We do not give or sell our customers&rsquo; nonpublic personal information to other unaffiliated companies for their marketing purposes.</p>
+<p>
+	We share information about our transactions (such as payment of premium) and experiences with you (such as an auto accident) within the Donegal Insurance Group and with Donegal agents to better serve you and to assist in meeting your current product and service needs. We may also disclose customer information about you to persons or organizations inside or outside the Donegal Insurance Group as permitted or required by law. We may share information about you with the following types of third parties without your consent:</p>
+</span>
+						</div><div id="body_main_right" name="body_main_right" class="ui-xcontrols ui-xcontrols-xregion col-sm-6 ">
+							<span id="lblMainRightContent"><ul>
+	<li>
+		Our affiliated insurance and financial services companies;</li>
+	<li>
+		Your independent agent or broker;</li>
+	<li>
+		Parties who perform a business, professional or insurance function for our company, including our reinsurance companies;</li>
+	<li>
+		Independent claims adjusters, appraisers, investigators, medical professionals, and attorneys who need the information to investigate, defend or settle a claim involving you;</li>
+	<li>
+		Other insurance companies, agents or consumer reporting agencies as necessary in connection with any application, policy or claim involving you;</li>
+	<li>
+		Insurance support organizations that are established to collect information for the purposes of detecting and preventing insurance crimes or fraudulent claims;</li>
+	<li>
+		Companies that perform marketing services for us or with whom we have joint marketing agreements. These agreements allow us to provide a broader selection of insurance and financial products to you.</li>
+	<li>
+		Medical care institutions or medical professionals to verify coverage or conduct an audit of services;</li>
+	<li>
+		Insurance regulatory agencies in connection with the regulation of our business;</li>
+	<li>
+		Law enforcement or other governmental authorities to protect our legal interests or in cases of suspected fraud or illegal activities</li>
+	<li>
+		Persons or organizations that conduct scientific research, including actuarial or underwriting studies, provided that no individual may be identified in the studies;</li>
+	<li>
+		Another party, if ordered by a summons, court order, search warrant or subpoena.</li>
+</ul>
+<p>
+	<strong>How do we safeguard the confidentiality of information about you?</strong></p>
+<p>
+	Information relating to our customers has always been considered confidential within the Donegal Insurance Group. Our employees understand that customer information is to be handled in strict confidence and that they are held responsible for the internal security of confidential information.</p>
+<p>
+	We maintain physical, electronic, and organizational safeguards to protect customer information. We continually review our policies and practices and test the strength of our security in order to help us ensure the confidentiality of customer information.</p>
+<p>
+	Communications with our web site that contain confidential information require that a &ldquo;secure session&rdquo; first be established. Such communication between the Donegal Insurance Group and its customers is encoded using Secure Socket Layer (SSL) technology.</p>
+<p>
+	<strong>About the Donegal Insurance Group</strong></p>
+<p>
+	The Donegal Insurance Group includes insurance company affiliates offering personal and commercial lines of property and casualty insurance to businesses and individuals in various Mid-Atlantic, Midwestern, New England and Southern states. Our property and casualty insurance affiliates include:</p>
+<ul>
+	<li>
+		Donegal Mutual Insurance Company</li>
+	<li>
+		Atlantic States Insurance Company</li>
+	<li>
+		Michigan Insurance Company</li>
+	<li>
+		Peninsula Insurance Company</li>
+	<li>
+		Peninsula Indemnity Company</li>
+	<li>
+		Southern Insurance Company of Virginia</li>
+	<li>	
+		Southern Mutual Insurance Company</li>	
+	<li>
+		Mountain States Commercial Insurance Company</li>
+	<li>
+		Mountain States Indemnity Company</li>		
+</ul>
+<p>
+	This privacy notice is provided jointly on behalf of the companies identified above.</p>
+<p>
+	Financial services are offered through our banking affiliate, Union Community Bank.</p>
+<p>
+	If you have any questions or comments about our privacy policy, please submit them to:</p>
+<p>
+	Donegal Insurance Group<br />
+	1195 River Road, Box 302<br />
+	Marietta, PA 17547</p>
+</span>
+						</div>
+					</div></div>
+				</div>
+            <input name="__DIRTY" type="hidden" id="__DIRTY" value="false" /><input name="__OS" type="hidden" id="__OS" value="false" /><input name="__FORCESAVE" type="hidden" id="__FORCESAVE" value="false" /><input name="__ERRORS" type="hidden" id="__ERRORS" value="false" /><input name="__CRU" type="hidden" id="__CRU" value="/privacy-statement" /><input name="__FORMTRACK" type="hidden" id="__FORMTRACK" /><input name="__FORCEFORMTRACK" type="hidden" id="__FORCEFORMTRACK" /><input name="__UPDATENAV" type="hidden" id="__UPDATENAV" value="true" /><input name="__DEFAULTBUTTON" type="hidden" id="__DEFAULTBUTTON" />
+			</div>
+		</div>
+	</div><div id="footer" name="footer" class="ui-xcontrols ui-xcontrols-xregion container ">
+		<div id="footer_xs_sm_md" name="footer_xs_sm_md" class="ui-xcontrols ui-xcontrols-xregion d-lg-none ">
+			<div id="footer_top_xs_sm" name="footer_top_xs_sm" class="ui-xcontrols ui-xcontrols-xregion container ">
+				<div id="footer_top_xs_sm_social_row" name="footer_top_xs_sm_social_row" class="ui-xcontrols ui-xcontrols-xregion row footer-social-row ">
+					<div id="footer_top_xs_sm_left" name="footer_top_xs_sm_left" class="ui-xcontrols ui-xcontrols-xregion footer-social-row-col ">
+						<a href="https://www.facebook.com/DonegalGroup" id="lnkSocialFacebook" name="lnkSocialFacebook" target="_blank" rel="noopener"><img src="Content/images/smedia_facebook_sm.png" alt="Facebook"/></a><a href="https://www.linkedin.com/company/donegal-insurance-group" id="lnkSocialLinkedIn" name="lnkSocialLinkedIn" target="_blank" rel="noopener"><img src="Content/images/smedia_linkedin_sm.png" alt="LinkedIn"/></a><a href="https://www.instagram.com/donegalinsurancegroup" id="lnkSocialInstagram" name="lnkSocialInstagram" target="_blank" rel="noopener"><img src="Content/images/smedia_instagram_sm.png" alt="LinkedIn"/></a><a href="https://twitter.com/Donegal_Ins" id="lnkSocialTwitter" name="lnkSocialTwitter" target="_blank" rel="noopener"><img src="Content/images/smedia_twitter_sm.png" alt="LinkedIn"/></a><a href="https://donegalgroup-blog.com" id="lnkSocialWordpress" name="lnkSocialWordpress" target="_blank" rel="noopener"><img src="Content/images/smedia_wordpress_sm.png" alt="Wordpress"/></a>
+					</div><div id="footer_top_xs_sm_right" name="footer_top_xs_sm_right" class="ui-xcontrols ui-xcontrols-xregion footer-social-row-col ">
+						<div id="footer_top_xs_sm_am_best" name="footer_top_xs_sm_am_best" class="ui-xcontrols ui-xcontrols-xregion link-am-best-center ">
+							<a href="about-us/am-best-rating" id="lnkAmBest" name="lnkAmBest"><img src="Content/images/logo_am_best.jpg" alt="AM Best - an excellent financial strength" class="img-fluid" /></a>
+						</div>
+					</div>
+				</div>
+			</div><hr class="footer-divider"/><div id="footer_bottom_xs_sm" name="footer_bottom_xs_sm" class="ui-xcontrols ui-xcontrols-xregion container ">
+				<div id="footer_bottom_xs_sm_nav_row" name="footer_bottom_xs_sm_nav_row" class="ui-xcontrols ui-xcontrols-xregion row top-footer ">
+					<div id="footer_nav_xs" class="footer-nav">
+	<a href="privacy-statement">Privacy Statement</a>
+	<a href="terms-of-use">Terms of Use</a>
+	<a href="browser-compatibility" class="d-none d-md-block">Browser Compatibility</a>
+	<a href="learning-center/faqs">FAQs</a>
+</div><div id="footer_bottom_xs_sm_copy" name="footer_bottom_xs_sm_copy" class="ui-xcontrols ui-xcontrols-xregion">
+						<p class="text-dark">
+	&copy;&nbsp;<span class="year">2018</span> Donegal Insurance Group, All Rights Reserved.
+</p>
+					</div>
+				</div>
+			</div>
+		</div><div id="footer_lg" name="footer_lg" class="ui-xcontrols ui-xcontrols-xregion d-none d-lg-block ">
+			<div id="footer_top_lg" name="footer_top_lg" class="ui-xcontrols ui-xcontrols-xregion container ">
+				<div id="footer_top_lg_mobile_social_row" name="footer_top_lg_mobile_social_row" class="ui-xcontrols ui-xcontrols-xregion row top-footer ">
+					<div id="footer_top_lg_left" name="footer_top_lg_left" class="ui-xcontrols ui-xcontrols-xregion col-lg-3 ">
+						<div id="footer_top_lg_left_social" name="footer_top_lg_left_social" class="ui-xcontrols ui-xcontrols-xregion mobile-app ">
+							<a href="https://www.facebook.com/DonegalGroup" id="lnkLgSocialFacebook" name="lnkLgSocialFacebook" target="_blank" style="padding-left: 13px;" rel="noopener"><img src="Content/images/smedia_facebook_sm.png" alt="Facebook"/></a><a href="https://www.linkedin.com/company/donegal-insurance-group" id="lnkLgSocialLinkedIn" name="lnkLgSocialLinkedIn" target="_blank" style="padding-left: 1em;" rel="noopener"><img src="Content/images/smedia_linkedin_sm.png" alt="LinkedIn"/></a><a href="https://www.instagram.com/donegalinsurancegroup" id="lnkLgSocialInstagram" name="lnkLgSocialInstagram" target="_blank" style="padding-left: 1em;" rel="noopener"><img src="Content/images/smedia_instagram_sm.png" alt="LinkedIn"/></a><a href="https://twitter.com/Donegal_Ins" id="lnkLgSocialTwitter" name="lnkLgSocialTwitter" target="_blank" style="padding-left: 1em;" rel="noopener"><img src="Content/images/smedia_twitter_sm.png" alt="LinkedIn"/></a><a href="https://donegalgroup-blog.com" id="lnkLgSocialWordpress" name="lnkLgSocialWordpress" style="padding-left: 1em;" target="_blank" rel="noopener"><img src="Content/images/smedia_wordpress_sm.png" alt="Wordpress"/></a>
+						</div>
+					</div><div id="footer_top_lg_center" name="footer_top_lg_center" class="ui-xcontrols ui-xcontrols-xregion col-lg-7 footer-p-r-sm ">
+						<div id="footer_nav_lg" class="footer-nav">
+	<a href="privacy-statement">Privacy Statement</a>
+	<a href="terms-of-use">Terms of Use</a>
+	<a href="browser-compatibility" class="d-none d-md-block">Browser Compatibility</a>
+	<a href="learning-center/faqs" class="d-none d-md-block">FAQs</a>
+	<a href="site-map" class="d-none d-md-block">Site Map</a>
+</div><p>
+	&copy;&nbsp;<span class="year">2018</span> Donegal Insurance Group, All Rights Reserved.
+</p>
+					</div><div id="footer_top_lg_right" name="footer_top_lg_right" class="ui-xcontrols ui-xcontrols-xregion col-lg-2 footer-p-r-sm ">
+						<div id="footer_top_lg_am_best" name="footer_top_lg_am_best" class="ui-xcontrols ui-xcontrols-xregion link-am-best-center ">
+							<a href="about-us/am-best-rating" id="lnkMdAmBest" name="lnkMdAmBest"><img src="Content/images/logo_am_best.jpg" alt="AM Best - an excellent financial strength" class="img-fluid" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div></div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("vsContact"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var vsContact = document.all ? document.all["vsContact"] : document.getElementById("vsContact");
+vsContact.headertext = "Please correct the error(s) highlighted below and resubmit.";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(function() { if ($Portal) { $Portal.setBaseUrl('https://www.donegalgroup.com/'); } });
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+    </div>
+    
+    <script language="javascript" src="Content/Scripts/jquery-ui.min.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/DGIC/dgic.ajax.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/DGIC/dgic.app.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/DGIC/dgic.display.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/DGIC/dgic.page.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/Portal/portal.ajax.js" type="text/javascript"></script>
+<script language="javascript" src="Content/Scripts/Portal/portal.validation.js" type="text/javascript"></script>
+
+</body>
+</html>

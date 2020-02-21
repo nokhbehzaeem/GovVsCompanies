@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+    <title>Privacy Policy | Enterprise Products</title>
+    	<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/images/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+	<link rel="manifest" href="/images/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="/enterprise_library/css" type="text/css">
+	<!--[if lte IE 8]>
+		<link media="screen" rel="stylesheet" type="text/css" href="/css/ie8_only.css" />
+	<![endif]-->
+	<script>var UA = 'Wget/1.18 (darwin15.5.0)';BROWSER = 'Unknown';BROWSER_VERSION = parseFloat('?');USER_OS = 'Unknown';IS_MOBILE = false;IS_TABLET = false;</script>	<script src="/enterprise_library/js"></script>
+		<!--[if lt IE 9]><script type="text/javascript" src="/js/html5-shiv.js"></script><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/js/respond.js"></script><![endif]-->
+	<script>
+		
+(function () {
+var Language = 'en';
+$(document).ready( function() { 
+	$('body').attr('data-language', Language);
+});
+})();	
+		var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-17113590-5']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+	</script>
+</head>
+<body id="privacy_policy"><div id="eprod_main_wrapper">
+	<div id="floating_body_corner"></div>
+	<header>
+		
+		<div class="container">
+						<div class="row">
+				<div id="header-floater"></div>
+				<div id="floating-hdr-background"></div>
+				<div id="static_header">
+					<div id="static_header-content">
+						<div id="eprod_logo">
+							<a href="/">
+								<picture>
+									<img src="/images/logo_eprod-partners-blue.png" alt="Enterprise Products Partners L.P." class="img-responsive" title="Home Page">
+								</picture>
+							</a>
+						</div>
+						<div id="right_header">
+							<div id="search_menu">
+								<div id="search_menu_content">
+	<div id="searchbox_right-notch">&nbsp;</div>
+	<div id="eprod_searchbox">
+		<form id="enterprise-products-searchblock">
+		    <input type="hidden" value="c98d5dade81a95d2d14d1f5147a14d991802b31b75592ac4" name="searchbox-token" id="searchbox-token">
+		    <input name="query" placeholder="Search" type="text" id="epd_searchbox" value="">
+		</form>
+	</div>
+	<div id="search_menubox">
+		<menu id="searchmenu_nav">
+			<li id="searchmenu_k1">
+				<a href="/k1-tax-information">
+					<span>K-1 Tax Info</span>
+				</a>
+			</li>
+			<li id="searchmenu_contactus">
+				<a href="/contact-us">
+					<span>Contact Us</span>
+				</a>
+			</li>
+		</menu>
+		<div class="clearLeft"></div>
+	</div>
+	<div class="clearRight"></div>
+</div>
+							</div>
+							<div id="stock_data">
+								<div id="stock_data_content">
+	<div id="epd_stock_feed">
+		<ul class="stock_feed_menu">
+			<li id="stock_feed_nyse">
+				<div class="nyse-logo"><img src="/images/stock_feed/icon_epdNYSE.png" class="img img-responsive"></div>
+			</li>
+						<li id="stock_feed_lastprice">
+				<p class="feed_title">Price</p>
+				<p class="feed_value">$28.81</p>
+			</li>
+						<li id="stock_feed_changeprice">
+				<p class="feed_title">Change</p>
+				<p class="feed_value"><span class="red">-0.21&nbsp;<span class="percent">(-0.7%)</span></span></p>
+			</li>
+						<li id="stock_feed_yield">
+								<p class="feed_title">Yield</p>
+				<p class="feed_value"><span class="green">6.18%</span></p>
+				<input type="hidden" value="1.78" id="investors_epd-annual-dividend">
+			</li>
+						<li id="stock_feed_chartgif">
+				<p class="feed_title">Chart</p>
+				<p class="feed_value"><input type="button" value="&nbsp;" title="NYSE:EPD &mdash; 30 Day" class="btn_chart" id="btn_stock_chart"></p>
+			</li>
+						<li id="stock_feed-end"><div class="shape"></div></li>
+		</ul>
+		<div class="clearLeft"></div>
+	</div>
+</div>
+
+<script>
+	var EPD_Live =new function() {
+
+		var _self =new Object();
+
+		/**
+		 * Publish the latest stock data
+		 *@param object s
+		 *@access private
+		 *@return void
+		 */
+		_self.refreshStockData = function(s) {
+			var changeColor = s.ChangeColor;
+			var removeColor = (changeColor == 'red') ? 'green' : 'red';
+			var blurColor = (changeColor == 'red') ? '#FF0000' : '#85FF00';
+			function blurValue(e,color) {
+				var step = 1;
+				var dir = 'up';
+				function blurStep() {
+					
+					setTimeout(function() {
+						$(e).css('text-shadow','0px 0px ' + step + 'px ' + color);
+						if(step == 3 && dir == 'up') { dir = 'dn'; }
+						step = (dir == 'up') ? step + 1 : step - 1;
+						if(step < 1) { 
+							$(e).css('text-shadow', 'none'); 
+							return false; 
+						} else {
+							blurStep();
+						}
+					}, 150);
+				}
+				blurStep();
+			}
+			function updateTopBar() {
+				$('#stock_feed_lastprice .feed_value').html(s.Trade);
+				blurValue($('#stock_feed_lastprice .feed_value'), '#FFFFFF');
+				if(!$('#stock_feed_changeprice .feed_value').hasClass(changeColor)) {
+					$('#stock_feed_changeprice .feed_value').addClass(changeColor).removeClass(removeColor);
+				}
+				$('#stock_feed_changeprice .feed_value').html(s.Change + '<span class="percent"> (' + s.ChangePercent + ')</span>');
+				blurValue($('#stock_feed_changeprice .feed_value'), blurColor);
+				$('#stock_feed_yield .feed_value').html(s.yield);
+				blurValue($('#stock_feed_yield .feed_value'), '#85ff00');
+			}
+			function updateOverview() { 
+				$('#epd_overview-lastupdate').html(s.Date);
+				blurValue($('#epd_overview-lastupdate'), '#9c8037');
+				$('#epd_overview-price span').html(s.Trade);
+				blurValue($('#epd_overview-price span'), '#FFFFFF');
+				if(!$('#epd_overview-change span').hasClass(changeColor)) {
+					$('#epd_overview-change span').addClass(changeColor).removeClass(removeColor);
+				}
+				$('#epd_overview-change span').html(s.Change);
+				blurValue($('#epd_overview-change span'), blurColor);
+				if(!$('#epd_overview-perc-change span').hasClass(changeColor)) {
+					$('#epd_overview-perc-change span').addClass(changeColor).removeClass(removeColor);
+				}
+				$('#epd_overview-perc-change span').html(s.ChangePercent);
+				blurValue($('#epd_overview-perc-change span'), blurColor);
+				$('#epd_overview-prev-close span').html(s.PreviousClose);
+				$('#epd_overview-open span').html(s.Open);
+				$('#epd_overview-volume span').html(s.Volume);
+				$('#epd_overview-52wk').html('<span class="white">' + s.FiftyTwoWeekRange + '</span>');
+				$('#epd_overview-dividend span').html(s.dividend + ' (' + s.distributionYield + ')');
+				$('#epd_overview-cap span').html(s.MarketCap);
+
+			}
+			updateTopBar();
+			if(document.getElementById('epd_stock_overview') ||
+					document.getElementById('epd_stock_overview-wrapper_mobile')) {
+				updateOverview();
+			}
+		}
+
+		/**
+		 * Fetch the latest stock data
+		 *@access private
+		 *@return void
+		 */
+		_self.fetchStockData = function() {
+			var nocache = Math.floor((Math.random() * 99999) + 1000);
+			$.ajax({
+                url: "/request?nocache=" + nocache,
+                data: {
+                    request_name: 'stock_ticker', 
+                    token: 'd6d2391bad7a9fa93fac188e4e48b446399ca8f6adf22246',
+                    annual_dividend: '1.78'
+                },
+                type: "POST",
+                cache: false
+            }).done(function( response ) {
+            	if(!response) {
+            		console.log("Fatal error processing stock data refresh.");
+            		return false;
+            	}
+            	try {
+            		var r = JSON.parse(response);
+	            	if(r.errors !== null  && parseInt(r.errors, 10) >= 1) {
+	            		console.log("Error processing stock data refresh with error: " + response.msg);
+	            		return false;
+	            	}
+	            	_self.refreshStockData(r);
+	            } catch(e) {
+	            	console.log("Fatal error parsing stock data with error: " + e);
+	            	return false;
+	            }
+            }).fail(function(jqXHR, status) {
+                console.log("Fatal error processing request with response: " + status);
+            });
+		};
+
+		/**
+		 * Enable Live Stock Data
+		 *@access private
+		 *@return void
+		 */
+		_self.enableLiveUpdates = function() {
+			function fetchNewData() { //update every 3 mins
+				_self.fetchStockData();
+				setTimeout(function() { fetchNewData(); }, 1000*60*3);
+			}
+			setTimeout(function() { fetchNewData(); }, 1000*60*3);
+		};
+
+		/**
+		 * EPD Stock Chart
+		 *@return void
+		 *@protected
+		 */
+		_self.epdStockChart = function() {
+			if(!document.getElementById('btn_stock_chart')) {
+				return false;
+			}
+			var chart = '<img style="width: 300px; height: 202px;" src="data:image/png;base64,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EzY6mHcRVfANG94uU0VCSHYoWBEGkRRSw7Fjt8nB0RMntjP2EELcoWDZgK5d7xa3315KDt1BmkgI8QwFyyaMHh2vxESxhEQSChYhRBkoWIQQZaBgEUKUgYJFCFEGChYhRBkoWIQQZaBgEUKUgQZ+hORzVJrF2ifBcsduU3arPIW46tOfq379vpCfXqvdYEpICFEGChYhRBkCSgkJISScMMIihCgDBYsQogwULEKIMighWM8995z2zDPPOPvaHnjgAeec/tb2N998Ux6HR3N/hQoV0E0nj7GeN23atLD03f36668armHfvn3y7/3www/OayhatKizHTRq1Ehu161b13nM8uXL5X48D2YjQVupUqXCcu25UaNGDe3jjz92XgemgurUqZPcLl68uPP6L1y4EPFr9Yevv/5a/t8uXbrkvP7ExERtxYoVzu3atWu7bOP/Yr7u06dPK/m67Y7tBQsiM2vWLOeMGxCjq1evOmfw2LRpk0hPT5cfDv3LLjp37iyef/55oR8jdaply5YiKSkJs3pomZmZ8pzPPvtMw/RD8oAQAnEqUaKE46effjJahEhISBAffvih/NOYQRfXCyBImAb80KFDonLlyvI6cdyoUaPk/u7du8vXgfYXXnhBtG/fPmJfCAjSgQMHXGZB2bt3r3j88cfFI488on3wwQfyOlNSUjT8L1QD73vNmjUd//2v65yRv/32m2jWrJlchzjt2bPH+R4MHz5c69Onj3zdw4YN0/r27WvsIcHE1oIFkWnTpo3o2bOn88upR1uOtLQ05wfl9ttvN9aE+Oabb0Tjxo0hVo4CBQrIY+688065T49eHKmpqS5fslDzyiuviIsXL2o333yz0SLE7t27HW3btpXX0bBhQ9kGPvnkE1GvXj2BffoXPtt1njx5Er/wch3CdfjwYbkebgYNGqThWqpXr+4imPqXV8THxwtdyBC9yihDj7gc06dPN45Qh40bN0KAtcKFCxstWRFXmTJlxA033OCAOOF11qpVy/kevPrqq46RI0eG9fOVL9F/EWyPLliZPXr0yDbNddOmTZ3tetSUqaeDLsfMnDkzs3z58npglelsxzl42VOnTg142mxv0AVLXoP+gXf5e6dOncosUqSIs12PtFyOqVOnjrxO/ddetmGab3M/zi1ZsqTL84UbTE3+0UcfyWvQRTiza9euch3Tl48ZM0au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" alt="EPD Stock Chart">';
+			$('#btn_stock_chart').popover({
+				container: 'body',
+				html: true,
+				content: chart,
+				trigger: "click",
+				placement: "bottom"
+			}).on('click', function() {
+				if($(this).hasClass('open')) {
+					$(this).removeClass('open');
+				} else {
+					$(this).addClass('open');
+				}
+			});
+		};
+
+		/**
+		 * Init Object
+		 */
+		this.init = function() {
+			_self.enableLiveUpdates();
+			_self.epdStockChart();
+		};
+
+		/**
+		 * Force an update
+		 *@access public
+		 */
+		this.forceRefresh = function() {
+			_self.fetchStockData();
+		};
+
+	};
+	$(document).ready(function(){ EPD_Live.init(); });
+</script>							</div>
+							<div class="clearRight"></div>
+						</div>
+						<div class="clearBoth"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="eprod_default_wrapper" class="container-fluid">
+		<div>
+			<main class="default_wrapper">
+				<div id="sml-scrn-header" class="std">
+	<button id="btn_left_navigation-sml-scrn">
+		<div id="hambg-menu-btn-1" class="hambg-button_line">&nbsp;</div>
+	    <div id="hambg-menu-btn-2" class="hambg-button_line">&nbsp;</div>
+	    <div id="hambg-menu-btn-3" class="hambg-button_line">&nbsp;</div>
+	</button>
+</div>
+<section id="left_navigation" class="std">
+	<div>
+		<div id="leftnav-theme" class="container">
+			<div class="epd_menu_content">
+								<menu class="epd_menu" id="epd_mainnav">
+					<li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[]"><a href="https://www.enterpriseproducts.com/"><span class="title">Home</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"}]"><a href="https://www.enterpriseproducts.com/about-us"><span class="title">About Us</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"}]"><a href="https://www.enterpriseproducts.com/about-us/business-profile"><span class="title">Business Profile</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"}]"><a href="https://www.enterpriseproducts.com/about-us/corporate-governance"><span class="title">Corporate Governance</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"},{\"Title\":\"Corporate Governance\",\"Url\":\"\/about-us\/corporate-governance\"}]"><a href="https://www.enterpriseproducts.com/about-us/corporate-governance/board-of-directors"><span class="title">Board of Directors</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"},{\"Title\":\"Corporate Governance\",\"Url\":\"\/about-us\/corporate-governance\"}]"><a href="https://www.enterpriseproducts.com/about-us/corporate-governance/board-committees"><span class="title">Board Committees</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"},{\"Title\":\"Corporate Governance\",\"Url\":\"\/about-us\/corporate-governance\"}]"><a href="https://www.enterpriseproducts.com/about-us/corporate-governance/partnership-agreement"><span class="title">Partnership Agreement</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"},{\"Title\":\"Corporate Governance\",\"Url\":\"\/about-us\/corporate-governance\"}]"><a href="https://www.enterpriseproducts.com/about-us/corporate-governance/code-of-conduct-related-policies"><span class="title">Code of Conduct &amp; Related Policies</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"},{\"Title\":\"Corporate Governance\",\"Url\":\"\/about-us\/corporate-governance\"}]"><a href="https://www.enterpriseproducts.com/about-us/corporate-governance/california-transparency-in-supply-chain-act-disclosure"><span class="title">California Transparency in Supply Chain Act Disclosure</span></a></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"}]"><a href="https://www.enterpriseproducts.com/about-us/management"><span class="title">Management</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"}]"><a href="https://www.enterpriseproducts.com/about-us/growth-strategy"><span class="title">Growth Strategy</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"}]"><a href="https://www.enterpriseproducts.com/about-us/competitive-strengths"><span class="title">Competitive Strengths</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"}]"><a href="https://www.enterpriseproducts.com/about-us/history"><span class="title">History</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"About Us\",\"Url\":\"\/about-us\"}]"><a href="https://www.enterpriseproducts.com/about-us/system-map"><span class="title">System Map</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"}]"><a href="https://www.enterpriseproducts.com/investors"><span class="title">Investors</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/overview"><span class="title">Overview</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/financial-profile"><span class="title">Financial Profile</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"},{\"Title\":\"Financial Profile\",\"Url\":\"\/investors\/financial-profile\"}]"><a href="https://www.enterpriseproducts.com/investors/financial-profile/fundamentals-snapshot"><span class="title">Financial Snapshot</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"},{\"Title\":\"Financial Profile\",\"Url\":\"\/investors\/financial-profile\"}]"><a href="https://www.enterpriseproducts.com/investors/financial-profile/financial-reports"><span class="title">Financial Reports</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"},{\"Title\":\"Financial Profile\",\"Url\":\"\/investors\/financial-profile\"}]"><a href="https://www.enterpriseproducts.com/investors/financial-profile/analyst-coverage"><span class="title">Analyst Coverage</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"},{\"Title\":\"Financial Profile\",\"Url\":\"\/investors\/financial-profile\"}]"><a href="https://www.enterpriseproducts.com/investors/financial-profile/earnings-estimates"><span class="title">Earnings Estimates</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/unit-price-information"><span class="title">Unit Price Information</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"},{\"Title\":\"Unit Price Information\",\"Url\":\"\/investors\/unit-price-information\"}]"><a href="https://www.enterpriseproducts.com/investors/unit-price-information/unit-quote-chart"><span class="title">Unit Quote &amp; Chart</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"},{\"Title\":\"Unit Price Information\",\"Url\":\"\/investors\/unit-price-information\"}]"><a href="https://www.enterpriseproducts.com/investors/unit-price-information/unit-price-history"><span class="title">Unit Price History</span></a></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/sec-filings"><span class="title">SEC Filings</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/officer-certificates"><span class="title">Officer Certificates</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/presentations"><span class="title">Presentations</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/non-gaap-financial-measures"><span class="title">Non-GAAP Financial Measures</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"},{\"Title\":\"Non-GAAP Financial Measures\",\"Url\":\"\/investors\/non-gaap-financial-measures\"}]"><a href="https://www.enterpriseproducts.com/investors/non-gaap-financial-measures/non-gaap-reconciliations"><span class="title">Non-GAAP Reconciliations</span></a></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/distribution-payments"><span class="title">Distribution Payments</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/distribution-reinvestment-plan"><span class="title">Distribution Reinvestment Plan</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/drip-price-summary"><span class="title">Drip Price Summary</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/calendar-events"><span class="title">Calendar of Events</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/news-releases"><span class="title">News Releases</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="https://www.enterpriseproducts.com/investors/e-mail-notifications"><span class="title">Email Notifications</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="http://www.enterpriseproducts.com/investors/request-information"><span class="title">Request Information</span></a></li><li class="eprod_menuli" data-external="yes" data-external-type="ThirdParty" data-external-title="Third-Party Website Warning" data-external-msg="<p class='information'>The clicked link will open a new window to a Website not managed by Enterprise Products.</p>" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Investors\",\"Url\":\"\/investors\"}]"><a href="http://www.mlpassociation.org/mlp-101/"><span class="title">Master Limited Partnership Information</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"}]"><a href="https://www.enterpriseproducts.com/operations"><span class="title">Operations</span></a><ul class="submenu"><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"}]"><a href="https://www.enterpriseproducts.com/operations/ngl-pipelines-services"><span class="title">NGL Pipelines &amp; Services</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"NGL Pipelines &amp; Services\",\"Url\":\"\/operations\/ngl-pipelines-services\"}]"><a href="https://www.enterpriseproducts.com/operations/ngl-pipelines-services/natural-gas-processing-plants-related-ngl-marketing"><span class="title">Natural Gas Processing Plants &amp; Related NGL Marketing</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"NGL Pipelines &amp; Services\",\"Url\":\"\/operations\/ngl-pipelines-services\"}]"><a href="https://www.enterpriseproducts.com/operations/ngl-pipelines-services/ngl-fractionation"><span class="title">NGL Fractionation</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"NGL Pipelines &amp; Services\",\"Url\":\"\/operations\/ngl-pipelines-services\"}]"><a href="https://www.enterpriseproducts.com/operations/ngl-pipelines-services/ngl-export-import-facilities"><span class="title">NGL Export/Import Facilities</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"NGL Pipelines &amp; Services\",\"Url\":\"\/operations\/ngl-pipelines-services\"}]"><a href="https://www.enterpriseproducts.com/operations/ngl-pipelines-services/ngl-pipelines"><span class="title">NGL Pipelines</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"NGL Pipelines &amp; Services\",\"Url\":\"\/operations\/ngl-pipelines-services\"}]"><a href="https://www.enterpriseproducts.com/operations/ngl-pipelines-services/ngl-storage"><span class="title">NGL Storage</span></a></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"}]"><a href="https://www.enterpriseproducts.com/operations/crude-oil-pipelines-services"><span class="title">Crude Oil Pipelines &amp; Services</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"}]"><a href="https://www.enterpriseproducts.com/operations/natural-gas-pipelines-services"><span class="title">Natural Gas Pipelines &amp; Services</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"Natural Gas Pipelines &amp; Services\",\"Url\":\"\/operations\/natural-gas-pipelines-services\"}]"><a href="https://www.enterpriseproducts.com/operations/natural-gas-pipelines-and-services"><span class="title">Natural Gas Marketing</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"}]"><a href="https://www.enterpriseproducts.com/operations/petrochemical-refined-products-services"><span class="title">Petrochemical &amp; Refined Products Services</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"Petrochemical &amp; Refined Products Services\",\"Url\":\"\/operations\/petrochemical-refined-products-services\"}]"><a href="https://www.enterpriseproducts.com/operations/petrochemical-refined-products-services/butane-isomerization"><span class="title">Butane Isomerization</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"Petrochemical &amp; Refined Products Services\",\"Url\":\"\/operations\/petrochemical-refined-products-services\"}]"><a href="https://www.enterpriseproducts.com/operations/petrochemical-refined-products-services/marine-transportation"><span class="title">Enterprise Marine Services</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"Petrochemical &amp; Refined Products Services\",\"Url\":\"\/operations\/petrochemical-refined-products-services\"}]"><a href="https://www.enterpriseproducts.com/operations/petrochemical-refined-products-services/octane-enhancement"><span class="title">Octane Enhancement</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"Petrochemical &amp; Refined Products Services\",\"Url\":\"\/operations\/petrochemical-refined-products-services\"}]"><a href="https://www.enterpriseproducts.com/operations/petrochemical-refined-products-services/propylene-fractionation-services"><span class="title">Propylene Services</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Operations\",\"Url\":\"\/operations\"},{\"Title\":\"Petrochemical &amp; Refined Products Services\",\"Url\":\"\/operations\/petrochemical-refined-products-services\"}]"><a href="https://www.enterpriseproducts.com/operations/petrochemical-refined-products-services/refined-products-pipelines"><span class="title">Refined Products Services</span></a></li></ul></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"}]"><a href="https://www.enterpriseproducts.com/safety-environment"><span class="title">Safety, Environmental &amp; Social Responsibility</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/safety"><span class="title">Safety</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/public-awareness"><span class="title">Public Awareness/Pipeline Safety</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/in-case-of-emergency"><span class="title">In Case of Emergency</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/call-before-you-dig"><span class="title">Call 811 Before You Dig</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/if-you-live-or-work-near-enterprise-pipeline"><span class="title">If You Live or Work Near an Enterprise Pipeline</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/how-to-recognize-a-leak"><span class="title">How to Recognize a Leak</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/excavation-safety"><span class="title">Excavation Safety</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/public-awareness/pipeline-viewer"><span class="title">Pipeline Viewer Tool</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/keeping-our-pipelines-safe"><span class="title">Keeping Our Pipelines Safe</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"},{\"Title\":\"Keeping Our Pipelines Safe\",\"Url\":\"\/safety-environment\/keeping-our-pipelines-safe\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/keeping-our-pipelines-safe/building-pipelines"><span class="title">Building Pipelines</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"},{\"Title\":\"Keeping Our Pipelines Safe\",\"Url\":\"\/safety-environment\/keeping-our-pipelines-safe\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/keeping-our-pipelines-safe/operating-pipelines"><span class="title">Operating Pipelines</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"},{\"Title\":\"Keeping Our Pipelines Safe\",\"Url\":\"\/safety-environment\/keeping-our-pipelines-safe\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/keeping-our-pipelines-safe/responding-to-emergencies"><span class="title">Responding to Emergencies</span></a></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/public-awareness/stakeholder-education"><span class="title">Stakeholder Education</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/public-awareness/collab-sponsorship"><span class="title">Collaborative Sponsorships</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/public-awareness/interesting-facts"><span class="title">Interesting Facts</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/public-awareness/emergency-responder-education"><span class="title">Emergency Responder Education</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/safety-environment-brochures"><span class="title">Pipeline Safety Brochures</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/additional-resources"><span class="title">Additional Resources</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Public Awareness\/Pipeline Safety\",\"Url\":\"\/safety-environment\/public-awareness\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/contact-public-awareness"><span class="title">Contact Public Awareness</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/conciencia-publica?lang=sp"><span class="title">En Espa&ntilde;ol</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/conciencia-publica?lang=sp"><span class="title">Conciencia P&uacute;blica / Seguridad en las L&iacute;neas de Tuber&iacute;as</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/en-caso-de-una-emergencia"><span class="title">En Caso de Una Emergencia</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/llame-antes-de-cavar"><span class="title">Llame al 811 Antes de Excavar</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/localizacion-de-tuberias"><span class="title">Localizaci&oacute;n de Tuber&iacute;as</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/como-reconocer-una-fuga"><span class="title">Como Reconocer Una Fuga</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/seguridad-de-excavacion"><span class="title">Seguridad de Excavacion</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/mapa-de-tuberias-locales"><span class="title">Mapa de Tuber&iacute;as Locales</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/seguridad-en-la-linea-de-tuberia/integridad-de-la-linea-de-tuberias"><span class="title">Integridad de la L&iacute;nea de Tuber&iacute;as</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"},{\"Title\":\"Integridad de la L&iacute;nea de Tuber&iacute;as\",\"Url\":\"\/seguridad-en-la-linea-de-tuberia\/integridad-de-la-linea-de-tuberias\"}]"><a href="https://www.enterpriseproducts.com/seguridad-en-la-linea-de-tuberia/integridad-de-la-linea-de-tuberias/lineas-de-tuberias-de-liquidos-peligrosos"><span class="title">L&iacute;neas de Tuber&iacute;as de L&iacute;quidos</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"},{\"Title\":\"Integridad de la L&iacute;nea de Tuber&iacute;as\",\"Url\":\"\/seguridad-en-la-linea-de-tuberia\/integridad-de-la-linea-de-tuberias\"}]"><a href="https://www.enterpriseproducts.com/seguridad-en-la-linea-de-tuberia/integridad-de-la-linea-de-tuberias/lineas-de-tuberias-de-gas"><span class="title">L&iacute;neas de Tuber&iacute;as de Gas</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/manteniendo-nuestras-lineas-de-tuberias-seguras"><span class="title">Mantendiendo Nuestras L&iacute;neas de Tuber&iacute;as Seguras</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"},{\"Title\":\"Mantendiendo Nuestras L&iacute;neas de Tuber&iacute;as Seguras\",\"Url\":\"\/safety-environment\/en-espanol\/manteniendo-nuestras-lineas-de-tuberias-seguras\"}]"><a href="https://www.enterpriseproducts.com/seguridad-en-la-linea-de-tuberia/manteniendo-nuestras-lineas-de-tuberias-seguras/construyendo-lineas-de-tuberias"><span class="title">Construyendo L&iacute;neas de Tuber&iacute;as</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"},{\"Title\":\"Mantendiendo Nuestras L&iacute;neas de Tuber&iacute;as Seguras\",\"Url\":\"\/safety-environment\/en-espanol\/manteniendo-nuestras-lineas-de-tuberias-seguras\"}]"><a href="https://www.enterpriseproducts.com/seguridad-en-la-linea-de-tuberia/manteniendo-nuestras-lineas-de-tuberias-seguras/operando-lineas-de-tuberias"><span class="title">Operando L&iacute;neas de Tuber&iacute;as</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"},{\"Title\":\"Mantendiendo Nuestras L&iacute;neas de Tuber&iacute;as Seguras\",\"Url\":\"\/safety-environment\/en-espanol\/manteniendo-nuestras-lineas-de-tuberias-seguras\"}]"><a href="https://www.enterpriseproducts.com/seguridad-en-la-linea-de-tuberia/manteniendo-nuestras-lineas-de-tuberias-seguras/respondiendo-a-emergencias"><span class="title">Respondiendo a Emergencias</span></a></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/educacion-para-las-partes-interesadas"><span class="title">Educaci&oacute;n Para Las Partes Intersadas</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/patrocinios-colaborativos"><span class="title">Patrocinios Colaborativos</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/hechos-interesantes"><span class="title">Hechos Interestantes</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/educacion-para-el-respondedor-de-emergencias"><span class="title">Educaci&oacute;n Para el Respondedor de Emergencias</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/folleto-del-conocimiento-de-la-tuberia"><span class="title">Folleto Del Conocimiento de la Tuber&iacute;a</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/recursos-adicionales"><span class="title">Recursos Adicionales</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"},{\"Title\":\"Conciencia P&uacute;blica \/ Seguridad en las L&iacute;neas de Tuber&iacute;as\",\"Url\":\"\/safety-environment\/en-espanol\/conciencia-publica?lang=sp\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/en-espanol/contacte-public-awareness"><span class="title">Contacte Public Awareness</span></a></li></ul></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/environmental-stewardship"><span class="title">Environmental Stewardship</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/stakeholder-engagement-community"><span class="title">Stakeholder Engagement / Community</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/our-people"><span class="title">Our People</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/safety-environment/fundamentals"><span class="title">Fundamentals</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="pdf" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/documents?download=2018_sustainability_overview_20190523023001&formname=footer_quick_downloads&type=PDF"><span class="title">2018 Sustainability Overview</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="pdf" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Safety, Environmental &amp; Social Responsibility\",\"Url\":\"\/safety-environment\"}]"><a href="https://www.enterpriseproducts.com/documents?download=inline_pdf_20190523035158&type=PDF&formname=area"><span class="title">2018 GRI and SASB Index</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"}]"><a href="https://www.enterpriseproducts.com/customers"><span class="title">Customers</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/crude-oil-price-bulletin"><span class="title">Crude Oil Price Bulletin</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/enterprise-transportation"><span class="title">Enterprise Transportation</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Enterprise Transportation\",\"Url\":\"\/customers\/enterprise-transportation\"}]"><a href="https://www.enterpriseproducts.com/customers/enterprise-transportation/crude-oil-terminal-locations"><span class="title">Crude Oil Terminal Locations</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Enterprise Transportation\",\"Url\":\"\/customers\/enterprise-transportation\"}]"><a href="https://www.enterpriseproducts.com/customers/enterprise-transportation/lpg-terminal-locations"><span class="title">LPG Terminal Locations</span></a></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/lpg-terminaling-rate-sheets"><span class="title">LPG Terminaling Rate Sheets</span></a></li><li class="eprod_menuli" data-external="yes" data-external-type="ExternalEPD" data-external-title="Leaving EnterpriseProducts.com" data-external-msg="<p class='information'>The clicked link will open a new window to a different Website.</p>" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="http://marine.enterpriseproducts.com/Asset"><span class="title">Enterprise Marine Services Fleet</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/refined-products-terminaling-marketing"><span class="title">Refined Products Terminaling &amp; Marketing</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/refined-products-terminaling-marketing/customer-package"><span class="title">Customer Package</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/refined-products-terminaling-marketing/about-aberdeen"><span class="title">About Aberdeen</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/refined-products-terminaling-marketing/about-boligee"><span class="title">About Boligee</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/refined-products-terminaling-marketing/truck-terminal-rate-sheets"><span class="title">Truck Terminal Rate Sheets</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/tariff-information"><span class="title">Tariff Information</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Tariff Information\",\"Url\":\"\/customers\/tariff-information\"}]"><a href="https://www.enterpriseproducts.com/customers/tariff-information/tariff-documents"><span class="title">Tariff Documents</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Tariff Information\",\"Url\":\"\/customers\/tariff-information\"}]"><a href="https://www.enterpriseproducts.com/customers/tariff-information/tariff-subscription"><span class="title">Tariff Subscriptions</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/wholesale-propane"><span class="title">Wholesale Propane</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Wholesale Propane\",\"Url\":\"\/customers\/wholesale-propane\"}]"><a href="https://www.enterpriseproducts.com/customers/wholesale-propane/customer-package"><span class="title">Customer Package</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Wholesale Propane\",\"Url\":\"\/customers\/wholesale-propane\"}]"><a href="https://www.enterpriseproducts.com/customers/wholesale-propane/terminals"><span class="title">Terminals</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Wholesale Propane\",\"Url\":\"\/customers\/wholesale-propane\"}]"><a href="https://www.enterpriseproducts.com/customers/wholesale-propane/map"><span class="title">Map</span></a></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Wholesale Propane\",\"Url\":\"\/customers\/wholesale-propane\"}]"><a href="https://www.enterpriseproducts.com/customers/wholesale-propane/wholesale-propane-contacts"><span class="title">Wholesale Propane Contacts</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"},{\"Title\":\"Wholesale Propane\",\"Url\":\"\/customers\/wholesale-propane\"},{\"Title\":\"Wholesale Propane Contacts\",\"Url\":\"\/customers\/wholesale-propane\/wholesale-propane-contacts\"}]"><a href="https://www.enterpriseproducts.com/customers/wholesale-propane/wholesale-propane-contacts/contact-us"><span class="title">Contact Us</span></a></li></ul></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/nymex-rulebook-chapter-201-rule-201104-fee"><span class="title">NYMEX Rulebook Chapter 201 Rule 201104 Fee</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://www.enterpriseproducts.com/customers/wti-crude-quality-echo"><span class="title">West Texas Intermediate &amp; Light Crude Quality at ECHO</span></a></li><li class="eprod_menuli" data-external="yes" data-external-type="Estream" data-external-title="Leaving EnterpriseProducts.com" data-external-msg="<p class='information'>The clicked link will open Estream in a new window.</p>" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="https://estream.eprod.com/login"><span class="title">Estream</span></a></li><li class="eprod_menuli" data-external="yes" data-external-type="ExternalEPD" data-external-title="Leaving EnterpriseProducts.com" data-external-msg="<p class='information'>The clicked link will open a new window to a different Website.</p>" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="http://www.gflow.com/"><span class="title">gFlow</span></a></li><li class="eprod_menuli" data-external="yes" data-external-type="ExternalEPD" data-external-title="Leaving EnterpriseProducts.com" data-external-msg="<p class='information'>The clicked link will open a new window to a different Website.</p>" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Customers\",\"Url\":\"\/customers\"}]"><a href="http://trv.epplp.com/"><span class="title">Truck Rack Monitor</span></a></li></ul></li><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"}]"><a href="https://www.enterpriseproducts.com/careers"><span class="title">Careers &amp;<br>Employee Relations</span></a><ul class="submenu"><li class="parent eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings"><span class="title">Job Postings</span></a><ul class="submenu"><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings/accounting-and-finance"><span class="title">Accounting and Finance</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings/commercial"><span class="title">Commercial</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings/ehst"><span class="title">EHS&amp;T</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings/engineering"><span class="title">Engineering</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings/field-operations"><span class="title">Field Operations</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings/information-technology"><span class="title">Information Technology</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings/marine-services"><span class="title">Marine Services</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/job-postings/transportation"><span class="title">Transportation</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"},{\"Title\":\"Job Postings\",\"Url\":\"\/careers\/job-postings\"}]"><a href="https://www.enterpriseproducts.com/careers/view-all"><span class="title">View All</span></a></li></ul></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"}]"><a href="https://www.enterpriseproducts.com/careers/benefits"><span class="title">Benefits</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"}]"><a href="https://www.enterpriseproducts.com/careers/diversity"><span class="title">Diversity</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"}]"><a href="https://www.enterpriseproducts.com/careers/accessibility"><span class="title">Accessibility</span></a></li><li class="eprod_menuli" data-external="no" data-external-type="" data-linktype="standard" data-crumbs="[{\"Title\":\"Home\",\"Url\":\"\/\"},{\"Title\":\"Careers &amp; Employee Relations\",\"Url\":\"\/careers\"}]"><a href="https://www.enterpriseproducts.com/careers/military"><span class="title">Military</span></a></li></ul></li>				</menu>
+			</div>
+			<div id="leftnav-bottomblock"></div>
+		</div>
+	</div>
+	</section>
+<div id="epd_mainnav_box"></div>
+<script>
+    $(document).ready(function() {
+        var Curr = document.location.href;
+        if(Curr.substring(Curr.length-1,Curr.length) == '/') {
+            Curr = Curr.substring(0,Curr.length-1);
+        }
+        $("#epd_mainnav a[href='" + Curr + "']").parent().addClass("active");
+    });
+</script>				<section id="main_content" class="floatRight">
+					<div id="a1-template">
+						<div id="main_content_header" class="breadcrumbs">
+														<div id="main_content_header_rt_block" class="breadcrumbs"></div>
+							<h1 class="breadcrumbs">Privacy Policy</h1>
+							<menu id="breadcrumbs_menu"><li><a href="/">Home</a></li><li class="active"><a href="#" onclick="return false;">Privacy Policy</a></li></menu>						</div>
+						<div id="main_content_area">
+	
+		<div id="a1-hdr-img">
+			
+			
+		</div>
+		<button id="tmpl_scroll-to-section-nav">
+			<i class="fas fa-angle-down"></i>
+			<span class="text">Section Menu</span>
+		</button>
+		<div id="a1-hdr-txt">
+			
+			
+		</div>
+		<div id="a1-hdr-3">
+			
+			
+		</div>
+		<div id="a1-main">
+			
+			<div class="wrap">
+<p><strong>VERSION EFFECTIVE DATE: April 18, 2018</strong></p>
+<p>This document sets forth the Online Privacy Policy (the &ldquo;Privacy Policy&rdquo;) of Enterprise Products Partners L.P., its subsidiaries and certain of its affiliates (jointly referred to as "Enterprise Products") for this web site (this "Site"). If you have objections to the Privacy Policy, you should not access or use this Site.</p>
+<p><strong>CHANGES IN PRIVACY POLICY</strong></p>
+<p>All "personal information" ("personal information" is defined as any information that identifies, contacts or locates, or can be used to identify, contact, or locate, the person to whom such information pertains) that we collect and maintain will be subject to the version of the Privacy Policy in effect at the time of such collection. Enterprise Products reserves the right to change the Privacy Policy from time to time at its sole option and in its sole discretion. You should revisit this Site periodically to make sure you are aware of the most recent Privacy Policy in effect because it will be binding on you. If, as the result of such changes, you want to alter the ways in which Enterprise Products is allowed to use your personal information, you can do so by contacting Enterprise Products, in writing, at the address below. You will be deemed to have been made aware of, and will be subject to, the changes to the Privacy Policy by your use of this Site after the effective date of the changes. However, if Enterprise Products sells assets (or the assets of a division or subsidiary) to another entity, or Enterprise Products (or a division or subsidiary) is acquired by, or merged with, another entity, Enterprise Products may provide to such entity customer information that is related to that part of our business that was sold to or merged with the other entity without your consent.</p>
+<p><strong>ENTITIES COLLECTING PERSONAL INFORMATION</strong></p>
+<p>Personal information on this Site is collected by Enterprise Products. Enterprise Products&rsquo; address is 1100 Louisiana, Houston, TX 77002, and its telephone number is (713) 381-6500. This Site contains links to other websites at which personal information may be collected. In such instances, unless expressly provided to the contrary, the collection and use of your personal information will be governed by the privacy policy applicable to that other website. Please note that Enterprise Products is not responsible for the content or privacy practices of any websites other than this Site, including any websites to which this Site may link. You should review the privacy policy of such other websites before using such other websites.</p>
+<p><strong>COLLECTION OF PERSONAL INFORMATION</strong></p>
+<p>As a visitor to this Site, you can engage in many activities without providing any personal information to this Site. In connection with other activities, such as submitting a resume to Enterprise Products through the Site, Enterprise Products may ask you to provide certain information about yourself by filling out and submitting an online form. It is completely optional for you to engage in these activities. If you elect to engage in these activities, however, Enterprise Products may ask that you provide us personal information, such as your first and last name, mailing address (including ZIP code), e-mail address, employer, job title and department, telephone and facsimile numbers, and other personal information. Depending upon the activity, some of the information that we ask you to provide is identified as mandatory and some as voluntary. If you do not provide the mandatory data with respect to a particular activity, you will not be able to engage in that activity. When you submit personal information to Enterprise Products through this Site, you understand and agree that this information may be transferred across state boundaries and may be stored and processed in any of the states in which Enterprise Products maintains offices, including, without limitation, the United States.</p>
+<p><strong>HOW YOUR PERSONAL INFORMATION IS USED</strong></p>
+<p>Enterprise Products collects your information in order to record and support your participation in the activities you select, which may include contacting you via email or other means. If you subscribe to a service, the information is used to register your rights, if any, to technical support or other benefits that may be made available to registered users. Enterprise Products may collect information about the use of the Site, such as the types of services used and how many users we receive daily. This information is collected in aggregate form, without identifying any user individually. Enterprise Products may use this aggregate, non-identifying statistical data for statistical analysis, marketing, or similar promotional purposes.</p>
+<p><strong>YOUR CHOICES WITH RESPECT TO PERSONAL INFORMATION</strong></p>
+<p>Enterprise Products recognizes and appreciates the importance of responsible use of information collected on this Site. Without your consent, Enterprise Products will not communicate any information to you regarding products, services, and special offers available from Enterprise Products, although we may find it necessary to communicate with you regarding your use of the services on this Site. Except in the particular circumstances described in this Privacy Policy, Enterprise Products will also not provide your name to other companies or organizations without your consent.</p>
+<p>However, Enterprise Products may provide your personal information if necessary, in Enterprise Products' good faith judgment, to comply with laws or regulations of a governmental or regulatory body or in response to a valid subpoena, warrant, or order or to protect the rights of Enterprise Products or others.</p>
+<p><strong>PROTECTION OF YOUR PERSONAL INFORMATION</strong></p>
+<p>The personal information that you provide in connection with registering yourself as a user of Enterprise Products services is classified as Registration Information. Your Registration Information resides on a secured, password protected server that only selected Enterprise Products personnel and contractors have access to. Enterprise Products will treat registration information as it treats other personal information.</p>
+<p><strong>USE OF COOKIES</strong></p>
+<p>Enterprise Products does not currently use "cookies" to track your visit, although it may, at its sole option and in its sole discretion, do so in the future. A cookie is a small amount of data that is transferred to your browser by a Web server and can only be read by the server that gave it to you.</p>
+<p>While Enterprise Products does not currently use cookies to track your visit to this Site, our Web servers do automatically log the IP/Internet address of your computer, but Enterprise Products does not generally use this information to identify you personally.</p>
+<p><strong>PRIVACY-RELATED INQUIRIES AND COMPLAINTS</strong></p>
+<p>Enterprise Products takes its users' privacy concerns seriously. If you believe that Enterprise Products has not complied with the Privacy Policy in effect at this time with respect to your personal information or you have other related inquiries or concerns, you may write to the Enterprise Products at the address indicated above.</p>
+<p>In your letter, please describe in as much detail as possible the nature of your inquiry or the ways in which you believe that the Privacy Policy has not been complied with. We will investigate your inquiry or complaint promptly.</p>
+<p>* The information contained in this web site is subject to change without notice.</p>
+<p>&nbsp;</p>
+</div>
+		</div>
+		<div id="a1-sub">
+			
+			
+		</div>
+		<div id="a1-2col-lt" class="floatLeft">
+			
+			
+		</div>
+		<div id="a1-2col-rt" class="floatRight">
+			
+			
+		</div>
+		<div class="clearBoth"></div>
+		<div id="a1-sub2">
+			
+			
+		</div>
+		
+<div id="epco_bottom-section-nav">
+	<h5 class="epco_bottom-section-title">Section Menu</h5>
+	<menu id="nav_eprod-section-navigation" style="display:none;"></menu>
+</div>
+<script>
+(function() {
+
+	var SectionNav = new function() {
+
+		var Self = {}, Markup = "", Exit = false, Listener = {}, Parents = 0;
+
+		Self.PlaceInCols = function(Menu) {
+			$("#nav_eprod-section-navigation").html(Menu);
+			var x = 0, c = 0, r = 0, Markup = '<div class="container"><div class="row"><ul class="col-md-4">';
+			$("#nav_eprod-section-navigation > li").each(function() {
+                if ($('body[data-language="en"]').length && $(this).filter('.spanishmenu').length){
+                    return true;
+                } 
+                if ($('body[data-language="sp"]').length && $(this).filter('.englishmenu').length){
+                    return true;
+                } 
+				if(r == 2) {
+					r = 0;
+					c++;
+					Markup += '</ul>';
+					if(c == 4) {
+						c = 0;
+						Markup += '</div><div class="row">';
+					}
+					Markup += '<ul class="col-md-4">';
+				}
+				Markup += '<li class="section-menu-parent">' + $(this).html() + '</li>';
+				x++;
+				r++;
+			});
+			Parents = x;
+			Markup += '<ul></div></div>';
+			return Markup;
+		};
+
+		Self.SelectTopParent = function() {
+
+			function getTopSelector(Selector) {
+				if($(Selector).parent().attr("id") == "epd_mainnav") {
+					return $(Selector);
+				} else {
+					return getTopSelector($(Selector).parent());
+				}
+			}
+
+			return getTopSelector($("#epd_mainnav li.active"));
+
+		};
+
+		Self.setMarkup = function() {
+			if(typeof $("#epd_mainnav li.active") === "undefined" || $("#epd_mainnav li.active").length < 1) {
+				Exit = true;
+				return false;
+			}
+			var Parent = Self.SelectTopParent();
+			var ParentLink = $(">a", Parent);
+			Markup = '<h5 class="eprod_section-nav-top-level"><a href="' + $(ParentLink).attr("href") + '"><span class="text">' + $(ParentLink).text() + '</h5>';
+			if($(">ul.submenu", Parent).length > 0) { 
+				Markup += Self.PlaceInCols($(">ul.submenu", Parent).html());
+				$("#nav_eprod-section-navigation").css("display","block");
+			} else { 
+				$("#epco_bottom-section-nav").remove();
+				Exit = true;
+			}
+		};
+
+		Self.AddDropDownButtons = function() {
+
+			function AddButton(Elem) {
+				$(">a", Elem).prepend('<span class="btn_epco-section-nav-expand-child"><i class="fas fa-angle-down"></i></span>').addClass("has-submenu");
+			}
+
+			function AddLink(Elem) {
+				var Link = {
+					Title: $(">a", Elem).text(),
+					Url: $(">a", Elem).attr("href")
+				}; 
+				$(">ul.submenu", Elem).prepend('<li class="section-nav-section-link"><a href="' + Link.Url + '">' + Link.Title + '</a></li>');
+			}
+
+			$("#nav_eprod-section-navigation li.section-menu-parent, #nav_eprod-section-navigation li.parent").each(function() {
+				if($(">ul.submenu", this).length >= 1) {
+					AddLink(this); 
+					AddButton(this);
+				} 
+			});
+		};
+
+		Self.publishMenu = function() {
+			Markup += '<div class="clearLeft">&nbsp;</div>';
+			$("#nav_eprod-section-navigation").html(Markup);
+			Self.AddDropDownButtons();
+			Listener.DropDownButton();
+			Listener.ScrollButton();
+			$("#epco_bottom-section-nav").stop(true,false).fadeIn(300);
+		};
+
+		Listener.ScrollButton = function() {
+			if(!document.getElementById('tmpl_scroll-to-section-nav')) {
+				return false;
+			}
+			if(parseInt($('#nav_eprod-section-navigation').first().offset().top,10) > parseInt($(window).height(),10)) {
+				$('#tmpl_scroll-to-section-nav').fadeIn(300);
+			}
+			$("#tmpl_scroll-to-section-nav").off("click").on("click", function(e) {
+				e.preventDefault();
+				$('html, body').animate({
+				    scrollTop: ($('#nav_eprod-section-navigation').first().offset().top)
+				},500);
+			});
+		};
+
+		Listener.DropDownButton = function() {
+			$("#nav_eprod-section-navigation a.has-submenu").off("click").on("click", function(e) {
+				e.preventDefault();
+
+				function Toggle(SubMenu, Ev) { 
+					if($(SubMenu).hasClass("child-open")) { 
+						$(">span.btn_epco-section-nav-expand-child > i", Ev).addClass("fa-angle-down").removeClass("fa-angle-up");
+						$(SubMenu).removeClass("child-open").stop(true,false).slideUp(100);
+					} else {
+						$(">span.btn_epco-section-nav-expand-child > i", Ev).addClass("fa-angle-up").removeClass("fa-angle-down");
+						$(SubMenu).addClass("child-open").stop(true,false).slideDown(300);
+					}
+				}
+
+				var Parent = $(this).parent();
+				Toggle($(">ul.submenu", Parent), this);
+
+				return false;
+			});
+		};
+
+		//Init navigation
+		this.init = function() {
+			Self.setMarkup();
+			if(Exit !== true) {
+				Self.publishMenu();
+			}
+		};
+
+	};
+
+	$(document).ready(function() {
+		SectionNav.init();
+	});
+
+})();
+</script>
+ 
+						</div>
+						<div id="main_content_area_ftr"></div>
+						<div id="main_content_area_notch"></div>
+					</div>
+				</section>
+				<div class="clearBoth"></div>
+			</main>
+						<div id="footer-spacer"></div>
+    		<div id="footer_wrap" class="footer">
+				<footer id="footer-bottom-drawer">
+	<div id="media_center_wrapper" class="bottom_drawer_content">
+		<div class="bottom_drawer_tabs_menu"><menu class="bottom_drawer_tabs gold_angled_tabmenu"><li class="bottom_drawer_tab_li" id="drwr_li_news_webcasts"><p>News &amp; Webcasts</p></li><li class="bottom_drawer_tab_li" id="drwr_li_royalty_relations"><p>Royalty Relations</p></li><li class="bottom_drawer_tab_li" id="drwr_li_videos"><p>Videos</p></li><li class="bottom_drawer_tab_li" id="drwr_li_k1taxinfo"><p>K-1 Tax Info</p></li></menu></div><div class="bottom_drawer_tabs_content_bg_notch"></div><div class="bottom_drawer_tabs_content_bg"></div><div class="bottom_drawer_tabs_content"><div class="bottom_drawer_tab_content" id="drwr_cntnr_news_webcasts"><input type="button" value="&nbsp;" class="btn_media_ctr_arrow_lt hide" id="nav_mediacenter_arrow_lt"><input type="hidden" value="5" id="news_n_wbs_cnt"><div id="bottom_drawer-news-webcasts-overflow-wrap"><div id="bottom_drawer-news-webcasts-overflow"><a id="lnk_all-news-articles" href="/investors/news-releases">All News Articles</a><ul id="bottom_drawer-news-ul" style="width:1800px;"><li class="bottom_drawer-wrapper" id="media-center_webcast"><div class="bottom_drawer-content-bg-notch"></div><div class="bottom_drawer-content-bg"></div><div class="bottom_drawer-content-holder"><div class="bottom_drawer-corp-news-article"><p class="news_article-pubDate"> &gt; 01/30/20</p><h4 class="news_article-title" onclick="Enterprise_Library.playWebcast('Q4 2019 Enterprise Products Partners L.P. Earnings Conference Call','https://edge.media-server.com/mmc/p/sx5em2cb');">Q4 2019 Enterprise Products Partners L.P. Earnings Conference Call</h4><p class="webcast-button"><button class="btn_webcast-player" onclick="Enterprise_Library.playWebcast('Q4 2019 Enterprise Products Partners L.P. Earnings Conference Call','https://edge.media-server.com/mmc/p/sx5em2cb');">Play Webcast</button></p></div></div></li>		
+		<li class="bottom_drawer-wrapper" id="news_article_39486">
+			<div class="bottom_drawer-content-bg-notch"></div>
+			<div class="bottom_drawer-content-bg"></div>
+			<div class="bottom_drawer-content-holder">
+				<div class="bottom_drawer-corp-news-article">
+					<p class="news_article-pubDate"> &gt; 01/13/20 </p>
+					<h4 class="news_article-title" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-declares-quarterly-distribution-increase-17';">Enterprise Declares Quarterly Distribution Increase</h4>
+					<p class="news_article-truncated"> Enterprise Products Partners L.P. (NYSE: EPD) (“Enterprise”) announced today that the board of directors of its genera...
+						&nbsp;<button class="btn_news_article-readmore" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-declares-quarterly-distribution-increase-17';">Read More&rarr;</button>
+					</p>
+				</div>
+			</div>
+		</li>
+				
+		<li class="bottom_drawer-wrapper" id="news_article_39481">
+			<div class="bottom_drawer-content-bg-notch"></div>
+			<div class="bottom_drawer-content-bg"></div>
+			<div class="bottom_drawer-content-holder">
+				<div class="bottom_drawer-corp-news-article">
+					<p class="news_article-pubDate"> &gt; 01/13/20 </p>
+					<h4 class="news_article-title" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-begins-service-isobutane-dehydrogenation-plant';">Enterprise Begins Service at Isobutane Dehydrogenation Plant</h4>
+					<p class="news_article-truncated"> Enterprise Products Partners L.P. (NYSE:EPD) today announced that its isobutane dehydrogenation (“iBDH”) plant in the ...
+						&nbsp;<button class="btn_news_article-readmore" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-begins-service-isobutane-dehydrogenation-plant';">Read More&rarr;</button>
+					</p>
+				</div>
+			</div>
+		</li>
+				
+		<li class="bottom_drawer-wrapper" id="news_article_39471">
+			<div class="bottom_drawer-content-bg-notch"></div>
+			<div class="bottom_drawer-content-bg"></div>
+			<div class="bottom_drawer-content-holder">
+				<div class="bottom_drawer-corp-news-article">
+					<p class="news_article-pubDate"> &gt; 01/08/20 </p>
+					<h4 class="news_article-title" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-and-navigator-load-first-vessel-new-ethylene-export';">Enterprise and Navigator Load First Vessel at New Ethylene Export Terminal</h4>
+					<p class="news_article-truncated"> Enterprise Products Partners L.P. (NYSE: EPD) and Navigator Holdings Ltd. (NYSE: NVGS) today announced that the first carg...
+						&nbsp;<button class="btn_news_article-readmore" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-and-navigator-load-first-vessel-new-ethylene-export';">Read More&rarr;</button>
+					</p>
+				</div>
+			</div>
+		</li>
+				
+		<li class="bottom_drawer-wrapper" id="news_article_39461">
+			<div class="bottom_drawer-content-bg-notch"></div>
+			<div class="bottom_drawer-content-bg"></div>
+			<div class="bottom_drawer-content-holder">
+				<div class="bottom_drawer-corp-news-article">
+					<p class="news_article-pubDate"> &gt; 01/06/20 </p>
+					<h4 class="news_article-title" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-prices-30-billion-aggregate-principal-amount-senior';">Enterprise Prices $3.0 Billion Aggregate Principal Amount of Senior Notes</h4>
+					<p class="news_article-truncated"> Enterprise Products Partners L.P. (NYSE:EPD) (“Enterprise”) today announced that its operating subsidiary, Enterprise ...
+						&nbsp;<button class="btn_news_article-readmore" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-prices-30-billion-aggregate-principal-amount-senior';">Read More&rarr;</button>
+					</p>
+				</div>
+			</div>
+		</li>
+				
+		<li class="bottom_drawer-wrapper" id="news_article_39361">
+			<div class="bottom_drawer-content-bg-notch"></div>
+			<div class="bottom_drawer-content-bg"></div>
+			<div class="bottom_drawer-content-holder">
+				<div class="bottom_drawer-corp-news-article">
+					<p class="news_article-pubDate"> &gt; 12/18/19 </p>
+					<h4 class="news_article-title" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-teague-receive-industry-recognition-enterprise';">Enterprise, Teague Receive Industry Recognition; Enterprise Receives Top Governance and ESG Honors</h4>
+					<p class="news_article-truncated"> Enterprise Products Partners L.P. (NYSE:EPD) was recently recognized among the most hon...
+						&nbsp;<button class="btn_news_article-readmore" onclick="window.location='https://www.enterpriseproducts.com/investors/news-releases?article=%2Fnews-releases%2Fnews-release-details%2Fenterprise-teague-receive-industry-recognition-enterprise';">Read More&rarr;</button>
+					</p>
+				</div>
+			</div>
+		</li>
+		</ul><div class="clearLeft"></div></div></div><input type="button" value="&nbsp;" class="btn_media_ctr_arrow_rt" id="nav_mediacenter_arrow_rt"></div><div class="bottom_drawer_tab_content" id="drwr_cntnr_royalty_relations"><input type="button" value="&nbsp;" class="btn_media_ctr_arrow_lt hide" id="nav_royalties_arrow_lt">
+  <div id="bottom_drawer-royalties-overflow-wrap">
+    <div id="bottom_drawer-royalties-overflow">
+      <ul id="bottom_drawer-royalties-ul">
+        <li class="bottom_drawer-wrapper">
+          <div class="bottom_drawer-content-bg-notch"></div>
+          <div class="bottom_drawer-content-bg"></div>
+          <div class="bottom_drawer-content-holder">
+            <div class="bottom_drawer-corp-news-article">
+              <h4 class="royalty-title">Royalty CONTACT INFORMATION</h4>
+              <p class="royalty-article">Information necessary to contact the <br> Royalty Relations department.</p>
+              <p class="royalty-article"><a href="/royalty-relations/contact-information" class="btn-royalty">click here for more info >>
+              </a>
+              </p>
+            </div> 
+          </div> 
+        </li>
+        <li class="bottom_drawer-wrapper">
+          <div class="bottom_drawer-content-bg-notch"></div>
+          <div class="bottom_drawer-content-bg"></div>
+          <div class="bottom_drawer-content-holder">
+            <div class="bottom_drawer-corp-news-article">
+              <h4 class="royalty-title">CHANGES TO YOUR ACCOUNT</h4>
+              <p class="royalty-article">If you have a change of address, name change, <br> etc. that may affect your account.</p>
+              <p class="royalty-article"><a href="/royalty-relations/changes-your-account" class="btn-royalty">click here for more info >>
+              </a>
+              </p>
+            </div> 
+          </div>
+        </li>
+        <li class="bottom_drawer-wrapper">
+          <div class="bottom_drawer-content-bg-notch"></div>
+          <div class="bottom_drawer-content-bg"></div>
+          <div class="bottom_drawer-content-holder">
+            <div class="bottom_drawer-corp-news-article">
+              <h4 class="royalty-title">ROYALTY PAYMENTS</h4>
+              <p class="royalty-article">Learn more about how Enterprise Products handles <br>payment schedules and suspended payments.</p>
+              <p class="royalty-article"><a href="/royalty-relations/royalty-payments" class="btn-royalty"> click here for more info >> </a>
+              </p>
+            </div> 
+          </div> 
+        </li>
+        <li class="bottom_drawer-wrapper">
+          <div class="bottom_drawer-content-bg-notch"></div>
+          <div class="bottom_drawer-content-bg"></div>
+          <div class="bottom_drawer-content-holder">
+            <div class="bottom_drawer-corp-news-article">
+              <h4 class="royalty-title">IMPORTANT FORMS</h4>
+              <p class="royalty-article">There are a multitude of forms to help process <br> the many requests you may have.</p>
+              <p class="royalty-article"><a href="/royalty-relations/important-forms" class="btn-royalty">click here for more info >></a>
+               </p>
+            </div> 
+          </div> 
+        </li>
+        <li class="bottom_drawer-wrapper">
+          <div class="bottom_drawer-content-bg-notch"></div>
+          <div class="bottom_drawer-content-bg"></div>
+          <div class="bottom_drawer-content-holder">
+            <div class="bottom_drawer-corp-news-article">
+              <h4 class="royalty-title">ACCOUNT ACCESS AT OILDEX</h4>
+              <p class="royalty-article">As a service to our customers, Enterprises <br>allows Royalty Owners to have online access ...</p>
+              <p class="royalty-article"><a href="/royalty-relations/account-access-oildex" class="btn-royalty">click here for more info >>
+              </a>
+              </p>
+            </div> 
+          </div> 
+        </li>
+        <li class="bottom_drawer-wrapper">
+          <div class="bottom_drawer-content-bg-notch"></div>
+          <div class="bottom_drawer-content-bg"></div>
+          <div class="bottom_drawer-content-holder">
+            <div class="bottom_drawer-corp-news-article">
+              <h4 class="royalty-title">FREQUENTLY ASKED QUESTIONS</h4>
+              <p class="royalty-article">View Frequently asked questions that may help <br> answer questions you have.</p>
+              <p class="royalty-article"><a href="/royalty-relations/frequently-asked-questions-and-answers" class="btn-royalty">click here for more info >>
+              </a>
+              </p>
+            </div> 
+          </div> 
+        </li>
+      </ul> 
+    </div> 
+  </div> 
+  <input type="button" value="&nbsp;" class="btn_media_ctr_arrow_rt" id="nav_royalties_arrow_rt"></div><div class="bottom_drawer_tab_content" id="drwr_cntnr_videos"><div id="media_center_video"><div class="media_center-content-holder"><div class="bottom_drawer-content-bg-notch"></div><div class="bottom_drawer-content-bg"></div><div class="corporate_video_content"><div class="drawer_video_content" id="media_center_launch-video_1"><img class="btn_video_player" src="/images/videos/enterprise_products_video.png">&nbsp;&nbsp;<span class="news_article-title">Company Video</span></div></div></div><script>$(document).ready(function() { Enterprise_Library.initializeVideo('Company Video','epco_corp_image','1');});</script><div class="media_center-content-holder"><div class="bottom_drawer-content-bg-notch"></div><div class="bottom_drawer-content-bg"></div><div class="corporate_video_content"><div class="drawer_video_content" id="media_center_launch-video_2"><img class="btn_video_player" src="/images/videos/employee_perspective.png">&nbsp;&nbsp;<span class="news_article-title">Employee Perspectives</span></div></div></div><script>$(document).ready(function() { Enterprise_Library.initializeVideo('Employee Perspectives','epco_recruiting','2');});</script></div></div><div class="bottom_drawer_tab_content" id="drwr_cntnr_k1taxinfo"></div></div>	</div>
+</footer>
+<div id="pipeline_info_tab" style="right: 66px; margin-top: -20px;" onclick="window.location='/pipeline-safety/in-case-of-emergency';">
+    <div id="pipeline_info_content">
+        <h4>Pipeline Emergency</h4>
+        <h3 class="phone">888-883-6308</h3>
+    </div>
+</div>
+				<div id="static-footer_content"><div id="static-footer_content_pos">
+					<footer id="footer-corp-contact">
+						 <div id="left-footer-corp-contact">
+		                    <div id="left-footer-corp-contact">
+	<div id="corporate_information_content">
+		<div id="ftr_corpinfo-hq">
+			<h4 class="footer_gold_header">Headquarters</h4>
+			<p class="footer_section_txt">1100 Louisiana Street, 10th Floor<br>Houston, TX 77002-5227</p>
+		</div>
+		<div id="ftr_smlscreen-phone-mail" style="display:block;">
+			<h4 class="footer_gold_header" id="ftr_smlscreen-contact">Contact</h4>
+			<h4 class="footer_gold_header xxs-screen-only" id="ftr_smlscreen-co_n_contact">Company &amp; Contact</h4>
+			<ul class="list_footer-links">
+				<li class="xxs-screen-only">
+					<button type="button" class="btn_footer-link" id="popover_headquarters">
+						Headquarters
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_footer-link" id="popover_mailing-address">
+						Mailing Address
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_footer-link" id="popover_phones">
+						Phone Numbers
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div id="ftr_corpinfo-address" style="display:none;">
+			<h4 class="footer_gold_header">Mailing Address</h4>
+			<p class="footer_section_txt">P.O. Box 4324<br>Houston, TX 77210-4324</p>
+		</div>
+		<div id="ftr_corpinfo-phones" style="display:none;">
+			<h4 class="footer_gold_header">Phones</h4>
+			<table><tbody><tr>
+				<td class="gold_rowlabel">Main:</td>
+				<td class="bold_footerfield">713-381-6500</td>
+			</tr><tr>
+				<td class="gold_rowlabel">Investors:</td>
+				<td class="bold_footerfield">866-230-0745</td>
+			</tr></tbody></table>
+		</div>
+		<div class="clearLeft"></div>
+	</div>
+</div>
+
+<script>
+$(document).ready(function() { 
+	var phones = '<div class="popover-content-wrap"><table><tbody><tr><td class="gold_rowlabel">Main:</td><td class="bold_footerfield">713-381-6500</td></tr><tr><td class="gold_rowlabel">Investors:</td><td class="bold_footerfield">866-230-0745</td></tr></tbody></table></div>';
+	var address = '<div class="popover-content-wrap"><p class="footer_section_txt">P.O. Box 4324<br>Houston, TX 77210-4324</p></div>';
+	var hq = '<div class="popover-content-wrap"><p class="footer_section_txt">1100 Louisiana Street<br>Houston, TX 77002-5227</p></div>';
+	$('#popover_phones').popover({
+		container: 'body',
+		title: 'Phones',
+		html: true,
+		content: phones,
+		trigger: 'click',
+		placement: "top"
+	});
+	$('#popover_mailing-address').popover({
+		container: 'body',
+		title: 'Mailing Address',
+		html: true,
+		content: address,
+		trigger: 'click',
+		placement: "top"
+	});
+	$('#popover_headquarters').popover({
+		container: 'body',
+		title: 'Headquarters',
+		html: true,
+		content: hq,
+		trigger: 'click',
+		placement: "top"
+	});
+	$('body').popover({
+        selector: '[rel=popover]',
+        trigger: "click"
+    }).on("show.bs.popover", function(e){
+        // hide all other popovers
+        $("[rel=popover]").not(e.target).popover("destroy");
+        $(".popover").remove();                    
+    });
+});
+</script>		                </div>
+		                <div id="footer-quick-downloads">
+		                    
+<div id="corporate_quick_downloads">
+	<h4 class="footer_gold_header">Quick Downloads</h4>
+		<div class="footer_downloads_section">
+		<table id="quick_downloads_tbl"><tbody><tr><td class="link"><a class="btn_quick_download" href="/documents?download=2q_2019_investor_fact_sheet_20190904080538&amp;formname=footer_quick_downloads&amp;type=PDF" target="_blank">2Q 2019 Investor Fact Sheet</a></td><td class="link"><a class="btn_quick_download" href="/documents?download=2017_annual_10_k_20180228101129&amp;formname=footer_quick_downloads&amp;type=PDF" target="_blank">2018 Annual 10-K</a></td></tr><tr><td class="link"><a class="btn_quick_download" href="/documents?download=2q_2019_selected_financial_data_20191108072112&amp;formname=footer_quick_downloads&amp;type=PDF" target="_blank">3Q 2019 Selected Financial Data</a></td><td class="link"><a class="btn_quick_download" href="/documents?download=2019_letter_to_investors_20190506083124&amp;formname=footer_quick_downloads&amp;type=PDF" target="_blank">2018 Letter to Investors</a></td></tr><tr><td class="link"><a class="btn_quick_download" href="/documents?download=2q_2019_10_q_20191108072133&amp;formname=footer_quick_downloads&amp;type=PDF" target="_blank">3Q 2019 10-Q</a></td><td class="link"><a class="btn_quick_download" href="/documents?download=2018_sustainability_overview_20190711061657&amp;formname=footer_quick_downloads&amp;type=PDF" target="_blank">2018 Sustainability Overview</a></td></tr></tbody></table>	</div>
+</div>		                </div>
+		                <div id="footer-menu-811">
+		                    <div id="call_before_dig_content">
+	<div id="ftr_811-logo" style="display: none;">
+		<table><tr><td>
+			<img class="imglink" style="height:45px; width:45px;" src="/images/call_before_dig/logo_811.png" onclick="window.open('http://call811.com/default.aspx');">
+			</td><td>
+			<div><input type="button" value="Call Before You Dig" class="btn_quick_download" onclick="window.location='/pipeline-safety/call-before-you-dig';">
+            </div><div><input type="button" value="Encroachment Guidelines" class="btn_quick_download" onclick="Enterprise_Library.openDialogBox('Encroachment Guidelines','/documents?download=encroachment-guidelines&amp;formname=quick-download&amp;item=5&amp;type=PDF','pdf','90%',false,'90%');">
+            </div><hr /><div><input type="button" value="Llama Antes De Excavar" class="btn_quick_download" onclick="window.location='/seguridad-en-la-linea-de-tuberia/llame-antes-de-cavar';">
+            </div><div><input type="button" value="Directrices de Invasiones" class="btn_quick_download" onclick="Enterprise_Library.openDialogBox('Directrices de Invasiones','/documents?download=encroachment-guidelines-spanish&amp;formname=quick-download&amp;item=5&amp;type=PDF','pdf','90%',false,'90%');">
+            </div>
+		</td></tr></table>
+	</div>
+	<div id="ftr_sml-scrn-811-logo" style="display: block; visibility: visible;">
+		<img style="height:45px; width:45px; margin-right:15px;cursor: pointer;" src="/images/call_before_dig/logo_811.png" onclick="window.open('http://call811.com/default.aspx');" class="floatLeft">
+		<ul class="list_footer-links floatLeft">
+				<li>
+					<button type="button" class="btn_footer-link" id="popover_811">
+						811 Information
+					</button>
+				</li>
+				<li>
+					<button type="button" class="btn_footer-link" id="ftr_pipeline-safety">
+						Pipeline Safety
+					</button>
+				</li>
+				<li>
+					<button onclick="window.open('/documents?download=encroachment-guidelines&amp;formname=quick-download&amp;item=5&amp;type=PDF');return false;" type="button" class="btn_footer-link" id="ftr_encroach-guidelines">
+						Encroachment Guidelines
+					</button>
+				</li>
+				<li>
+					<button onclick="window.open('/documents?download=encroachment-guidelines-spanish&amp;formname=quick-download&amp;item=5&amp;type=PDF');return false;" type="button" class="btn_footer-link" id="ftr_encroach-guidelines-sp"> <!--Guidlenes de invasi&oacute;n-->
+						Directrices de Invasiones
+					</button>
+				</li>
+		</ul>
+		<div class="clearLeft"></div>
+	</div>
+</div>
+<script>
+$(document).ready(function() { 
+	var links = '<div id="popover_811-links"><div><input type="button" value="&gt; Call Before You Dig" class="btn_quick_download" onclick="window.location=\'/pipeline-safety/call-before-you-dig\';"> </div><div><input type="button" value="&gt; Llama Antes De Excavar" class="btn_quick_download" onclick="window.open(\'/seguridad-en-la-linea-de-tuberia/llame-antes-de-cavar\');"> </div></div>';
+	$('#popover_811').popover({
+		container: 'body',
+		title: '811 - Call Before You Dig',
+		html: true,
+		content: links,
+		trigger: 'click',
+		placement: "top"
+	}).on('click', function(e) { e.preventDefault(); });
+	$('#ftr_pipeline-safety').off('click').on('click', function(e) {
+		e.preventDefault();
+		window.location="/safety-environment";
+	});
+});
+</script>		                </div>
+		                <div class="clearLeft"></div>
+		                <div id="footer-social-media">
+		                    <div id="social_media_content">
+		                    	<div id="ftr_social_media">
+		                    		<img class="smedia first_media imglink" src="/images/social_media/icon_fb.png" onclick="window.open('https://www.facebook.com/enterpriseproducts'); return false;">
+		                    		<img class="smedia imglink" src="/images/social_media/icon_tweet.png" onclick="window.open('https://twitter.com/EPROD_Careers'); return false;">
+		                    		<img class="smedia imglink" src="/images/social_media/icon_ln.png" onclick="window.open('https://www.linkedin.com/company/enterprise-products'); return false;">
+		                    		<img class="smedia imglink" src="/images/social_media/icon_rss.png" onclick="window.open('/investors/rss-subscription-links'); return false;">
+		                    	</div>
+		                    </div>
+		                </div>
+					</footer>
+					<footer id="footer-copyright">
+						<div id="footer_copyright">
+							<div id="copyright_content">
+								<menu id="copyright_menu"><li id="copyright_menu-forwardlooking"><a href="/forward-looking-statement">Forward Looking Statement</a></li><li id="copyright_menu-privacypolicy"><a href="/privacy-policy">Privacy Policy</a></li><li id="copyright_menu-termsconditions"><a href="/terms-and-conditions">Terms and Conditions</a></li></menu><p id="copyright_text">Copyright &copy; 2015 - 2020 Enterprise Products Partners L.P.&nbsp;&nbsp;All rights reserved.</p>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+			<div id="static_footer-height"></div>
+					</div>
+	</div>
+</div></body>
+</html>

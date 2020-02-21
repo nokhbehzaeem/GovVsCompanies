@@ -1,0 +1,2154 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"0f596de631",applicationID:"12782621"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Popular Privacy Policy - What does Popular, Inc. do with your personal information?">
+    <meta name="author" content="">
+    <meta name="keywords" content="popular privacy policy, type of personal information does Popular collect, how Popular share my personal information">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <meta property="og:image" content="https://www.popular.com/assets/images/popular-bppr-meta.gif" />
+    
+    <meta property="og:description" content="Popular Privacy Policy - What does Popular, Inc. do with your personal information?" />
+    <title>Popular - Private Policy</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.popular.com/assets/uploads/favicon.ico">
+    <link rel="preload" href="https://www.popular.com/assets/fonts/popular-icons.woff" as="font">
+    <base href="https://www.popular.com/en/">
+    
+    
+    
+    <link rel="stylesheet" href="https://www.popular.com/assets/css/all-css-v2.min.css?v=6.7">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--[if IE 7]><link rel="stylesheet" href="https://www.popular.com/assets/css/popularcustom-ie7.css"><![endif]-->
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- VWO -->
+    <script src="https://www.popular.com/assets/js/vwo.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://www.popular.com/assets/js/html5shiv.js"></script>
+            <script src="https://www.popular.com/assets/js/respond.min.js"></script>
+        <![endif]-->
+    <script src="https://www.popular.com/assets/js/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    
+        
+    
+    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVX4MV');</script>
+<!-- End Google Tag Manager -->
+
+
+</head>
+
+
+<body class="none ">
+
+<section  title="Skip" aria-label="Skip Navigation Links">
+    <a id="skip" class="btn btn-link h-contrast" href="javascript://" tabindex="0">Skip Navigation Links</a>
+</section>
+
+<!-- Google Tag Manager -->
+<noscript aria-hidden="true"><iframe title="Google Tag" name="Google Tag" src="//www.googletagmanager.com/ns.html?id=GTM-WVX4MV"
+hidden style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- wrapper -->
+    <div id="wrapper" class="wrapper">
+  
+    <div id="main-nav" class="pr-nav" role="navigation">
+    <!-- row -->
+    <div class="row main-nav-top animated">
+        <div class="container">
+            <div id="nav-top-toolbar" class="col-md-12 popular-blue">
+                <a href="https://www.popular.com/en/" title="Inicio" style="display:inline-block !Important;">Home</a>
+            </div>
+            <div class="col-md-12">
+                <ul id="nav-top-menu" class="pull-left animated">
+                    <li class="l-1-li li-personal dropdown active">
+                        <a class="l-1-a active animated" title="Personal banking" href="https://www.popular.com/en/"  aria-expanded="true">
+                            Personal</a>
+                        <ul class="animated fadeIn ul-nav-top-menu">
+                            <li class="l-2-li"><a href="javascript://" class="l-2-a animated" title="Accounts" aria-expanded="false" aria-controls="m1"><span
+                                        class="arrow pull-right"></span>Accounts</a>
+                                <div id="m1" class="m-menu more-h animated">
+                                    <div class="col-md-8">
+                                        <ul class="back visible-xs">
+                                            <li><a class="btn-back" href="javascript://"><span class="arrow left" title="Back to Main menu"></span>
+                                                    Main menu</a></li>
+                                        </ul>
+                                        <h2>How can we help you?</h2>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li><a href="accounts/" aria-label="Learn more about our accounts" class="m-a"><strong>Accounts</strong></a></li>
+                                                 <li><a href="services/ath-cards/" aria-label="Learn more about our debit cards"
+                                                        class="m-a"><strong>Debit Cards</strong></a></li>
+                                                <li><a href="accounts/account-services/" aria-label="Learn more about our account services"
+                                                        class="m-a">Account <strong>Services</strong></a></li>
+                                               
+                                                <li><a href="services/routing-number/" aria-label="Learn what is our routing number"><strong>Routing
+                                                            Number</strong></a></li>
+                                                <li><a href="services/contracts-notifications/" title="Contracts and Notifications"><strong>Contracts and Notifications</strong></a></li>
+                                                <li><a href="security/" target="_blank"
+                                                        title="Learn how to prevent identity theft" class="m-a">How to
+                                                        <strong>prevent identity theft</strong>?</a></li>
+                                                 
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+
+                                                <li><a href="easy-deposit/" aria-label="Learn more about how to deposit in ATMS"
+                                                        class="m-a"><strong>Easy Deposit</strong></a></li>
+                                                <li><a href="easy-pay/" aria-label="Learn more about how to pay bills in ATMS"
+                                                        class="m-a"><strong>Easy Pay</strong> (Pay in ATM’s)</a></li>
+                                                <li><a href="mi-banco/mobile/retiromovil/" aria-label="Learn more about how to pay bills in ATMS"
+                                                        class="m-a"><strong>Retiro Móvil</strong></a></li>
+                                                <li><a href="services/telebanco/" title="Learn how we can help you by phone" class="m-a"><strong>TeleBanco<sup>®</sup>
+                                                            or TelePago<sup>®</sup></strong> <br>(By phone)</a></li>
+                                                <li><a href="services/direct-deposit/" title="Learn how you can receive your paycheck, pention, etc. in your bank account"
+                                                        class="m-a"><strong>Direct Deposit</strong></a></li>
+                                                 <li><a href="services/direct-payment/" title="Learn how to Pay your loan automaticallye"
+                                                        class="m-a"><strong>Direct Payment</strong> <br>(Pay your loan
+                                                        automatically)</a></li>
+                                                <li><a href="services/ath-movil/" aria-label="Learn more about how to send money to a person"
+                                                        class="m-a"><strong>ATH Móvil</strong> (Send money)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <h2>Tools</h2>
+                                        <ul>
+                                            <li><a href="mi-banco/" aria-label="Learn how to do more with online banking"><strong>Mi
+                                                        Banco Online</strong></a></li>
+                                            <li><a href="mi-banco/mobile/" title="Learn more about our mobile banking"><strong>Mi
+                                                        Banco Mobile</strong></a></li>
+                                            
+                                            
+                                        </ul>
+                                        <!--  -->
+                                        <div class="mega-drop-highlight-container auto-height">
+                                            <h2 class="margin-bottom no-pad">My Online Bank 24/7</h2>
+                                            <ul class="checked">
+                                                <li><strong>Access</strong> your <strong>accounts</strong></li>
+                                                <li><strong>Deposit</strong> and <strong>withdraw</strong></li>
+                                                <li><strong>Pay</strong> your <strong>bills</strong></li>
+                                                <li><strong>Transfer funds from your accounts</strong></li>
+                                            </ul>
+                                            <a href="https://www.bancopopular.com/cibp-web/actions/enrollment?lang=en" class="btn btn-link" title="Enroll today">Enroll
+                                                today</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="l-2-li"><a href="javascript://" class="l-2-a animated" title="Cards & Loans" aria-expanded="false" aria-controls="m2"><span
+                                        class="arrow pull-right"></span>Credit Cards & Loans</a>
+                                <div id="m2" class="m-menu animated more-h">
+
+                                    <div class="col-md-4">
+                                        <ul class="back visible-xs">
+                                            <li><a class="btn-back" href="javascript://"><span class="arrow left" title="Back to Main menu"></span>
+                                                    Main menu</a></li>
+                                        </ul>
+                                        <h2>How can we help you?</h2>
+                                        <ul>
+                                            <li><a href="cards/" aria-label="Learn more about our credit cards"
+                                                        class="m-a"><strong>Credit Cards</strong></a></li>
+                                            <li><a href="lines-of-credit/" aria-label="Learn more about our lines of credit"
+                                                    class="m-a"><strong>Lines</strong> of <strong>Credit</strong></a></li>
+                                           
+                                            <li><a href="mortgages/" aria-label="Learn more about our mortgage loans" class="m-a"><strong>Mortgage</strong> Loans</a></li>
+                                            <li><a href="loans/personal-loans/" aria-label="Learn more about our personal loans"
+                                                    class="m-a"><strong>Personal Loans</strong></a></li>
+                                            <li><a href="auto/" aria-label="Learn more about our auto loans" class="m-a"><strong>Auto</strong> Loans</a></li>
+                                            <li><a href="auto/lease/" aria-label="Learn more about leasing" class="m-a"><strong>Auto Lease</strong></a></li>
+                                            <li><a href="loans/equipment-leasing/" aria-label="Learn more about Equipment Leasing"><strong>Equipment Lease</strong></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        <h2>Tools</h2>
+                                        <ul>
+                                            <li><a href="loans/payment-calculator/" aria-label="Calculate your loan payment" class="m-a"><strong>Calculate</strong>
+                                                    your <strong>payment</strong></a></li>
+                                                     <li><a href="cards/all-cards/" title="Compare our credit cards"><strong>Compare credit cards</strong></a></li>
+                                            <li><a href="loans/personal-loans/compare-personal-loans/" aria-label="Compare our personal loans" class="m-a"><strong>Compare personal loans</strong></a></li>
+                                                   
+                                                    <li><a href="mi-banco/online/" title="Learn more about our online banking"><strong>Mi
+                                                        Banco Online</strong></a></li>
+                                                    <li><a href="mi-banco/mobile/" title="Learn more about our mobile banking"><strong>Mi
+                                                        Banco Mobile</strong></a></li>
+                                                    
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!--  -->
+                                        <div class="mega-drop-highlight-container">
+                                            <h2 class="margin-bottom no-pad pad-bottom">Apply for a personal loan to
+                                                consolidate your debt</h2>
+                                            <ul class="bullets">
+                                                <li>From $2,000 up to $75,000</li>
+                                                <li>12 to 84 months’ terms</li>
+                                            </ul>
+                                            <a href="loans/personal-loans/unsecured/" class="btn btn-link" title="Learn how to Apply for a personal loan to
+                                                consolidate your debt">Learn more</a>
+                                        </div>
+
+                                        <!--  -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="l-2-li li-seguros"><a href="javascript://" class="l-2-a animated" title="Insurance & Investments" aria-expanded="false" aria-controls="m3"><span
+                                        class="arrow pull-right"></span>Insurance & Investments</a>
+                                <div id="m3" class="m-menu animated">
+                                    <div class="col-md-4">
+                                        <ul class="back visible-xs">
+                                            <li><a class="btn-back" href="javascript://"><span class="arrow left" title="Back to Main menu"></span>
+                                                    Main menu</a></li>
+                                        </ul>
+                                        
+                                        <h2>Need insurance?</h2>
+                                        <ul>
+                                            <li><a href="insurance/property/" title="Learn about property insurance" class="m-a"><strong>Property</strong></a></li>
+                                            <li><a href="insurance/auto-boat/" title="Learn about auto or boat insurance" class="m-a"><strong>Auto</strong>
+                                                    and <strong>Boat</strong></a></li>
+                                            <li><a href="insurance/health/" title="Learn about our health insurance" class="m-a"><strong>Health</strong></a></li>
+                                            <li><a href="insurance/life/" title="Learn about life insurance" class="m-a"><strong>Life</strong></a></li>
+                                            <li><a href="insurance/travel/" title="Learn about travel insurance" class="m-a"><strong>Travel</strong></a></li>
+                                            <li><a href="insurance/programs-for-customers/" title="Learn what we can offer our clients" class="m-a">Exclusive for
+                                                    <strong>our clients</strong></a></li>
+
+                                        </ul>
+                                        <a href="insurance/" title="Learn more about insurance" class="btn btn-default margin-top">More
+                                            about <strong>insurance</strong></a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                    <h2>Plan for the future</h2>
+                                        <ul>
+                                            <li><a href="http://popularone.com/services/investments/" aria-label="Learn more about Investments"
+                                                    class="m-a"><strong>Investments</strong></a></li>
+                                            <li><a href="http://popularone.com/services/investments/products-and-services/"
+                                                    aria-label="Learn more about our Investment Accounts" class="m-a"><strong>Investment
+                                                        Accounts</strong></a></li>
+                                            <li><a href="http://popularone.com/services/investments/products-and-services/popular-family-of-funds/"
+                                                    aria-label="Learn more about our Family of Funds" class="m-a"><strong>Popular Family
+                                                        of Funds</strong></a></li>
+                                            <li><a href="http://popularone.com/services/investments/institutional-services/"
+                                                    aria-label="Learn more about our Institutional Services" class="m-a"><strong>Institutional
+                                                        Services</strong></a></li>
+                                            <li><a href="ira/" aria-label="Learn more about our IRA accounts" class="m-a"><strong>IRA Accounts</strong></a></li>
+                                            <li><a href="ira/educational-contribution-account/" aria-label="Learn more about our educational contribution account"
+                                                    class="m-a"><strong>Educational Contribution</strong> Account</a></li>
+                                            <li><a href="keogh-plan/" aria-label="Learn more about our Keogh Plan" class="m-a"><strong>Keogh
+                                                        Plans</strong></a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mega-drop-highlight-container auto-height" style="padding-top:0px;margin-bottom:5px">
+                                            <h2>Quote an Insurance</h2>
+                                            <p><a href="http://labs2.popular.com/emailform/insurance.php" target="_blank"
+                                                    style="text-decoration:underline !important;padding:0px !important;border-bottom:0px !important"
+                                                    aria-label="Contact one of our representatives">Contact</a> one of
+                                                our representatives.</p>
+                                        </div>
+                                        <div class="mega-drop-highlight-container auto-height">
+                                        <h2>Claims</h2><p>Call <strong>787.706.4111</strong> (dial 1 for Customer Service) or visit our offices, Monday through Friday from 8:00 a.m. to 5:30 p.m.</p>
+                                            
+                                        </div>
+
+                                        <!--  -->
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="l-2-li li-more-services"><a href="javascript://" class="l-2-a animated" title="Services" aria-expanded="false" aria-controls="m4"><span
+                                        class="arrow pull-right"></span>Services</a>
+                                <div id="m4" class="m-menu more-h auto-size animated">
+                                    <div class="col-md-4">
+                                        <ul class="back visible-xs">
+                                            <li><a class="btn-back" href="javascript://"><span class="arrow left" title="Back to Main menu"></span>
+                                                    Main menu</a></li>
+                                        </ul>
+                                       <h2>Targeted Segments</h2>
+                                        <ul>
+                                            <li><a href="services/premium-banking-services/" aria-label="Learn more about premium banking service"
+                                                    class="m-a"><strong>Premium Banking Services</strong></a></li>
+                                            <li><a href="services/financial-planning/" aria-label="Learn more about tips for your retirement"
+                                                    class="m-a"><strong>Tips for your retirement</strong></a></li>
+                                            <li><a href="banking101/" title="Learn about banking"><strong>Banking 101</strong></a></li>
+                                            <li><a href="business/corporate/act-20-and-22/" aria-label="Learn more about financial and tax incentive"
+                                                    class="m-a"><strong>Act 20 and 22</strong></a></li>
+                                            <li><a href="services/international-banking/" aria-label="Learn more about our international banking"><strong>International
+                                                        Banking</strong></a></li>
+                                            <li><a href="https://popularone.com" title="Private Banking"><strong>Popular One</strong></a></li>
+                                            <li><a href="finanzas-en-tus-manos/" aria-label="Finanzas en Tus Manos" title="Finanzas en Tus Manos"><strong>Finanzas en Tus Manos</strong></a></li>            
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h2>More Services</h2>
+                                        <ul>
+                                            
+                                            <li><a href="https://www.premia.com/?lang=en" aria-label="Learn more about our loyalty program"
+                                                    class="m-a"><strong>PREMIA<sup>®</sup></strong></a></li>
+                                            <li><a href="http://www.clasificadospopular.com/en" aria-label="Learn more about premium banking service"
+                                                    class="m-a"><strong>Popular Classifieds</strong></a></li>
+                                            <li><a href="auto/daily-rental/" aria-label="Learn more about Auto & Truck Rental"><strong>Renta Diaria</strong> (Auto & Truck Rental)</a></li>
+                                            <li><a href="services/branches/" aria-label="Learn more about branch services"><strong>Branch Services</strong></a></li>
+                                            <li><a href="services/atm/" aria-label="Learn more about services in atms"><strong>Services in ATMs</strong></a></li>
+                                            <li><a href="mortgages/services/" aria-label="Learn more about mortgage servicing"><strong>Mortgage Servicing</strong></a></li>
+                                            <li><a href="services/foreign-exchange/" aria-label="Learn more about foreign exchange currency"><strong>Foreign
+                                                        Exchange</strong></a></li>
+                                            <li><a href="services/international-banking/international/" aria-label="Learn more about our international services"><strong>International
+                                                        Services</strong></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        <div class="mega-drop-highlight-container auto-height">
+                                            <h2 class="margin-bottom no-pad">My Online Bank 24/7</h2>
+                                            <ul class="checked">
+                                                <li><strong>Access</strong> your <strong>accounts</strong></li>
+                                                <li><strong>Deposit</strong> and <strong>withdraw</strong></li>
+                                                <li><strong>Pay</strong> your <strong>bills</strong></li>
+                                                <li><strong>Transfer funds from your accounts</strong></li>
+                                            </ul>
+                                            <a href="https://www.bancopopular.com/cibp-web/actions/enrollment?lang=en" class="btn btn-link" title="Enroll today">Enroll
+                                                today</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="l-1-li li-business">
+                        <a class="l-1-a animated" href="business/" title="For your business">Business</a>
+                    </li>
+                   <!--  <li class="l-1-li li-premium">
+                       <a class="l-1-a animated" href="services/premium-banking-services/" title="Premium Banking Services">Premium Banking</a>
+                   </li> -->
+                    <li class="l-1-li li-popone">
+                        <a class="l-1-a animated" href="https://popularone.com" title="Popular One">Popular One</a>
+                    </li>
+                    <li class="l-1-li li-about">
+                        <a href="about-popular/" class="l-1-a animated" title="About us">About us</a>
+                    </li>
+                </ul>
+                 <ul id="nav-reg-lang" class="pull-right animated">
+    <li><a href="https://blog.popular.com//en/" title="Popular Blog" class="m-a">Blog</a></li>
+    <li><a href="https://locator.popular.com/?lang=en" title="Branches & ATMs" class="m-a">Branches & ATMs</a></li>
+    <li><a href="https://www.popular.com/privacidad/" class="m-a" title="Español">Español</a></li>
+
+    <li class="no-border dropdown cur-region-dropdown"><em>Other Regions</em><a id="cur-region" href="javascript://" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="Puerto Rico"><img src="/assets/uploads/circle-flag-pr.gif" alt="Puerto Rico Flag" class="flag" />Puerto Rico <span class="caret hidden-xs"></span></a>
+        <ul class="no-margin dropdown-menu">
+            <li><a href="https://www.popularbank.com/" title="United States region" data-region="us" class="m-a popular-us-site-link">United States</a></li>
+            <li><a href="https://www.popular.vi/" title="Virgin Islands region" data-region="vi" class="m-a popular-vi-site-link">Virgin Islands</a></li>
+            
+        </ul>
+    </li>
+</ul>
+<div id="login-overlay" class="animated"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row-->
+     <!-- row -->
+<div class="row main-nav-brand">
+    <div class="container">
+        <div class="col-md-12">
+            <a title="Menu" id="btn-nav-toggle" class="c-hamburger c-hamburger--htx">
+                <span>toggle menu</span>
+            </a>
+            <div id="login-container" class="en pr">
+
+                <a id="btn-login" href="javascript://" class="btn btn-primary pull-right animated dropdown-toggle"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    title="Sign In to your account"><span class="icon-pop-ion-lock"></span> Sign In<span
+                        class="arrow"></span></a>
+                <ul id="login-dropdown" class="dropdown-menu animated" aria-labelledby="btn-login" aria-hidden="true">
+
+                    <li class="no-border" style="padding-left: 10px">
+                        <a id="btn-login-mibanco" class="btn btn-primary" style="padding-right:20px"
+                            href="https://www.bancopopular.com/cibp-web/actions/login?lang=en"><span
+                                class="icon-pop-ion-lock icon-white pull-left"></span><strong>Sign In</strong> to Mi
+                            Banco </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="no-border" style="margin: 10px 10px 2px 0px !important;">
+                        <strong style="padding-left:15px !important;display:block">Other</strong>
+                        <ul class="ul-default">
+                            <li> <a href="https://www.bancopopular.com/cibp-web/actions/login?lang=en" title="Sign In to Mi Banco Comercial">Mi Banco
+                                    Comercial</a>
+                            </li>
+                            <li> <a href="https://webcmpr.bancopopular.com/K1/?_"
+                                    title="Sign In to Web Cash Manager">Web Cash Manager</a>
+                            </li>
+                            <li> <a href="https://eremotecapture.com/MultiFactorAuthenticationWebClient/Default.aspx"
+                                    title="Sign In to Remote Deposit">Remote Deposit</a>
+                            </li>
+                            <li> <a href="https://multipago.bancopopular.com/"
+                                    title="Sign In to MultiPago">MultiPago</a>
+                            </li>
+                            <li> <a href="https://www.yourplanaccess.com/banco/" title="Sign In to Trust Online">Trust
+                                    Online</a>
+                            </li>
+                            <li> <a href="https://clientpoint.fisglobal.com/tdcb/main/UserLogon?bankNumber=6N"
+                                    title="Sign In to your Portfolio Online">Portfolio Online</a>
+                            </li>
+                            <li> <a href="https://www.securitiesinterlinksta.com/banco/SvltApplicationMain?arch=n&entity=banco"
+                                    title="Sign In to Popular Shareholders">Popular Shareholders</a>
+                            </li>
+                            <li> <a href="https://perweb.bppr.com/perweb/signon.html" title="Sign In to PER Web">PER
+                                    Web</a>
+                            </li>
+                            <li><a href="https://deposittrace.bancopopular.com/cc32?_ga=1.47061408.605259270.1414678756"
+                                    title="Sign In to Popular Deposit Trace">Popular Deposit Trace</a>
+                            </li>
+                            <li><a href="https://ezstmt.evertecinc.com/bpprecommercial/Login.aspx"
+                                    title="Sign In to e-Commercial Statement">e-Commercial Statement</a>
+                            </li>
+                            <li><a href="https://www.accesopr.com/"
+                                    title="Sign In to Acceso Directo (Payroll Card)">Acceso Directo (Payroll Card)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider" style="border-bottom: none !important;clear:both;margin-top:10px"></li>
+                    <li class="no-border">
+                        <span style="font-size:15px; padding: 10px 10px 0px 5px;display:block"><strong>Not
+                                enrolled?</strong></span>
+                        <a href="https://www.bancopopular.com/cibp-web/actions/enrollment?lang=en" title="Inscríbete en Mi Banco">
+                            <span class="text-underline">Sign up in Mi Banco</span>
+                            <span class="text-popular-blue"> and start accessing your accounts today.</span></a>
+
+                    </li>
+                    <li><a class="maintain-focus" data-focus="btn-login" title="Back to top" href="#"></a></li>
+                </ul>
+
+                <style>
+                    #main-nav ul li a.underline-link {
+                        text-decoration: underline !important;
+                        color: #2278c9 !important;
+                        padding: 0px 15px !important;
+                    }
+
+                    #main-nav ul.ul-default {
+                        margin: 5px 5px 20px 30px !important;
+                    }
+
+                    #main-nav ul.ul-default li {
+                        border: none !important;
+                        list-style-image: url(/assets/uploads/bullet.png) !important;
+                    }
+
+                    #main-nav ul.ul-default li a {
+                        padding: 10px !important;
+                    }
+
+                    #login-dropdown .btn-primary {
+                        color: #fff !important;
+                        margin-bottom: 10px;
+                        text-align: left !important;
+                        display: inline-block;
+                    }
+
+                    #login-dropdown .btn-primary:hover,
+                    #login-dropdown .btn-primary:focus {
+                        color: #fff !important;
+                        text-shadow: none !important;
+                        border-bottom: 3px solid #00205c !important;
+                    }
+
+                    #login-dropdown .btn-primary .icon-pop-ion-lock:before,
+                    #login-dropdown .btn-primary:hover,
+                    .icon-white:before,
+                    #login-dropdown .btn-primary .icon-pop-ion-lock:before:hover {
+                        color: #fff !important;
+                    }
+                </style>
+            </div>
+            
+            <a href="javascript://" id="btn-mag" class="btn-mag-pos2" title="Search our site"
+                >
+                <picture>
+                    <source srcset="assets/images/icon-g-search.svg" type="image/svg+xml" />
+                    <img alt="Search" src="assets/images/icon-g-search.png" class="pull-right animated"
+                        style="margin:4px 10px 0 0" />
+                </picture>
+            </a>
+            
+            <a href="https://www.popular.com/en/" title="Popular">
+                <div id="brand" class="pull-left">
+                    <span class="sr-only">Popular</span>
+                    
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /.row-->
+</div>
+
+
+<div id="menu-overlay" class="pr-overlay"></div>
+ <!-- row -->
+<div id="search-module" class="row animated" role="search">
+    <div class="container">
+        <div class="col-md-2 col-sm-1"></div>
+        <div class="col-md-8 col-sm-10">
+            <a id="btn-close-search" href="javascript://" title="Close search module">
+                <picture>
+                    <source srcset="assets/images/x-close.svg" type="image/svg+xml" />
+                    <img src="assets/images/x-close.gif" style="width:30px;height:auto" class="pull-right" alt="Close search module">
+                </picture>
+            </a>
+            <h2>How can we help you?</h2>
+            
+            <form id="searchform" name="searchform" class="form-inline" onSubmit="event.preventDefault();submitGlobalSearch();">
+    <div class="form-group">
+        <input id="search-input" name="search" title="Enter you search criteria" type="search" class="form-control st-default-search-input" aria-describedby="searchFieldDesc">
+        <p id="searchFieldDesc" class="field-desc">Search across our multiple sites</p>
+        <button id="btn-go" type="submit" class="btn btn-primary" title="Search what you are looking for" style="padding: 10px">Search</button>
+    </div>
+</form>
+
+<script>
+    function submitGlobalSearch(){
+       
+        if($('#search-input').val()!=''){
+            document.location.href = 'https://www.popular.com/en/results/#stq='+ $('#search-input').val();
+            if(document.location.href.indexOf('https://www.popular.com/en/results/')>-1){
+                location.reload();
+            }
+            
+        }else{
+            document.getElementById("search-input").focus();
+        }
+    }
+    
+</script>
+            <div class="search-popular-searches">
+                <div class="col-md-7 divider">
+                    <h3>Most popular searches</h3>
+                    <ul>
+                        <li><a href="https://resourcecenter.popular.com/en/help/services/branches-and-service-hours/branch-and-atm-service-hours-and-addresses/">Branch and ATM’s service hours</a></li>
+                        <li><a href="services/routing-number/">Bank Routing Number</a></li>
+                        <li><a href="https://resourcecenter.popular.com/en/help/mobile-banking/mi-banco-alerts/">My Mobile Bank – Text messages</a></li>
+                        <li><a href="https://resourcecenter.popular.com/en/help/online-banking/e-statements/">How to Look for Statements</a></li>
+                        <li><a href="https://resourcecenter.popular.com/en/help/online-banking/transfers/">Transfers</a></li>
+                        <li><a href="https://resourcecenter.popular.com/en/help/premia/redeem-your-premia-points/">Redeem your PREMIA<sup>®</sup> Points</a></li>
+                    </ul>
+                    <a href="https://resourcecenter.popular.com/ayuda" class="btn btn-default margin-top">More in our Help Center</a>
+                </div>
+                <div class="col-md-5">
+                    <h3>Download the free Mi Banco Mobile app today.</h3>
+                    
+                    <a href="https://itunes.apple.com/us/app/mi-banco-mobile/id508421942?ls=1&amp;mt=8" title="Click to download the App for your iPhone" class="btn-download-ios margin-top external-link">
+    <picture>
+        <source srcset="assets/uploads/btn-download-in-appstore-2018.svg" type="image/svg+xml">
+        <img src="assets/uploads/btn-download-in-appstore-2018.gif" alt="Download the App for your iPhone">
+    </picture>
+</a>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.popular.android.mibanco" title="Click to download the App for your Android" class="btn-download-android margin-top external-link">
+    <picture>
+        <source srcset="assets/uploads/btn-get-it-google-play-2018.svg" type="image/svg+xml">
+        <img src="assets/uploads/btn-get-it-google-play-2018.gif" alt="Download the App for your Android">
+    </picture>
+</a>
+                </div>
+               
+                
+            </div>
+            
+        </div>
+        <div class="col-md-2 col-sm-1"><a class="maintain-focus" data-focus="btn-close-search" title="Back to close" href="#"></a></div>
+
+    </div>
+</div>
+
+
+            
+            
+<!-- /.row-->
+    
+
+        <!--MAIN BODY CONTENT-->
+        <!--\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/-->
+        <!--/.spacer div for small screen devices-->
+        <div role="main" aria-label="Main content"><a name="main_content" id="main_content" tabindex="-1"></a>
+        
+<!--title-->
+<div id="sec-title-1" class="text-center row temp-title well well-no-border well-no-margin  ">
+    <div class="container">
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-10">
+            <div >
+                <h1 class="">Our Privacy Policy </h1>
+
+            </div>
+        </div>
+        <div class="col-md-1">&nbsp;</div>
+        <div class="col-md-12">&nbsp;</div>
+    </div>
+</div>
+<!--/ .title-->
+
+
+
+<div class="">
+    <div  class="row-full  row well   well-no-margin ">
+        
+        <div class="container container-boxed ">
+            <div class="col-md-12 "> <!-- nested layout -->
+<div style="margin: 20px auto; padding: 15px;">
+    <div class="">
+<div id="body1">
+    <h2>WHAT DOES POPULAR, INC. DO WITH YOUR PERSONAL INFORMATION?</h2>
+    <br>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td class="tdFactsTitle">
+                    <h2>Why?</h2>
+                </td>
+                <td>
+                    <p>Financial companies choose how they share your personal information. Federal law gives consumers
+                        the right to limit some, but not all the information that can be shared. Federal law also
+                        requires us to tell you how we collect, share, and protect your personal information. Please
+                    read this notice carefully to understand what we do.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td class="tdFactsTitle">
+                    <h2>What?</h2>
+                </td>
+                <td>
+                    <p>The types of personal information we collect and share depend on the product or service you have
+                    with us. This information can include:</p>
+                    <ul>
+                        <li>Social Security Number and Income</li>
+                        <li>Account Balance and Transaction History</li>
+                        <li>Payment History and Credit History</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td class="tdFactsTitle">
+                    <h2>How?</h2>
+                </td>
+                <td>All financial companies need to share customers’ personal information to run their everyday
+                    business. In the section below, we list the reasons financial companies can share their customers’
+                    personal information; the reasons Popular, Inc. chooses to share; and whether you can limit this
+                sharing.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th class="tdColTitle">Reasons we can share your personal information</th>
+                <th class="tdColTitleC">Does Popular, Inc.
+                    <br> share?
+                </th>
+                <th class="tdColTitleC">Can you limit this
+                    <br> sharing?
+                </th>
+            </tr>
+            <tr>
+                <td><strong>For our everyday business purposes -</strong> such as to process your transactions,
+                    maintain your account(s), respond to court orders and legal investigations, or report to credit
+                bureaus</td>
+                <td class="tdCenteredTxt">Yes</td>
+                <td class="tdCenteredTxt">No</td>
+            </tr>
+            <tr>
+                <td><strong>For our marketing purposes -</strong> to offer our products and services to you</td>
+                <td class="tdCenteredTxt">Yes</td>
+                <td class="tdCenteredTxt">No</td>
+            </tr>
+            <tr>
+                <td><strong>For joint marketing with other financial companies</strong></td>
+                <td class="tdCenteredTxt">Yes</td>
+                <td class="tdCenteredTxt">No</td>
+            </tr>
+            <tr>
+                <td><strong>For our affiliates’ everyday business purposes -</strong> information about your
+                transactions and experiences</td>
+                <td class="tdCenteredTxt">Yes</td>
+                <td class="tdCenteredTxt">No</td>
+            </tr>
+            <tr>
+                <td><strong>For our affiliates’ everyday business purposes -</strong> information about your
+                creditworthiness</td>
+                <td class="tdCenteredTxt">Yes</td>
+                <td class="tdCenteredTxt">Yes</td>
+            </tr>
+            <tr>
+                <td><strong>For our affiliates to market to you</strong></td>
+                <td class="tdCenteredTxt">Yes</td>
+                <td class="tdCenteredTxt">Yes</td>
+            </tr>
+            <tr>
+                <td><strong>For non affiliates to market to you</strong></td>
+                <td class="tdCenteredTxt">No</td>
+                <td class="tdCenteredTxt"><strong>We Don't share</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td class="tdFactsTitle">
+                    <h2>To limit
+                        <br> our sharing</h2>
+                    </td>
+                    <td>
+                        <p>• Mail the form below.
+                            <br>
+                            <strong>Please note:</strong>
+                            <br> If you are a new customer, we can begin sharing your information 45 days from the date we send this notice. When you are no longer our customer, we continue to share your information as described in this notice. 
+                            <br> However, you can contact us at any time to limit our sharing.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="tdFactsTitle">
+                            <h2>Questions?</h2>
+                        </td>
+                        <td>
+                            <p>Call (787) 724-3659 (Mobiles & Metro Area - PR) or toll-free 1-888-724-3659 (Non Metro Area - PR, U.S., and USVI) or go to www.popular.com/en/privacy</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered" table="">
+                <tbody>
+                    <tr>
+                        <th class="tdGrayBkgd" colspan="2">
+                            Who we are
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><strong>Who is providing this notice?</strong></td>
+                        <td>Popular, Inc. and its affiliates (see definition below).</td>
+                    </tr>
+                    <tr>
+                        <th class="tdGrayBkgd" colspan="2">
+                            What we do
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><strong>How does Popular, Inc. protect my personal information?</strong></td>
+                        <td>To protect your personal information from unauthorized access and use, we use security measures that comply with federal law. These measures include computer safeguards, secured files and buildings.
+                            <br>Also, we limit access only to those employees who need it in order to provide products and services, or to comply with local and federal regulations.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>How does Popular, Inc. collect my personal information?</strong></td>
+                            <td>
+                                <p>We collect your personal information, for example when you:
+                                    <br> • open an account or apply for a loan
+                                    <br> • apply for financing or purchase securities from us
+                                    <br> • apply for insurance</p>
+                                    <p>&nbsp;</p>
+                                    <p>We also collect your personal information from others, such as credit bureaus, affiliates, or other companies.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Why can’t I limit all sharing?</strong></td>
+                                <td>Federal law gives you the right to limit only:
+                                    <br> • sharing for affiliates’ everyday business purposes - information about your creditworthiness
+                                    <br> • affiliates from using your information to market to you
+                                    <br> • sharing for non affiliates to market to you
+                                    <br> State laws and individual companies may give you additional rights to limit sharing. See below for more on your rights under state law.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>What happens when I limit sharing for an account I hold jointly with someone else?</strong></td>
+                                <td>Your choice(s) will apply to everyone on your account - unless you tell us otherwise.</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="tdColTitle">Definitions</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Affiliates</strong></td>
+                                <td>Affiliates Companies related by common ownership or control. They can be financial and non financial companies.
+                                    <br> • Our affiliates include companies with Popular, Inc., financial companies such as Banco Popular, Popular Auto, Popular Securities, Popular Insurance, eloan, Inc., Popular Risk Services, Popular Insurance Agency USA, and Banco Popular North America, operating under the assumed name of Popular Bank.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Non affiliated</strong></td>
+                                    <td>Companies not related by common ownership or control. They can be financial and non financial companies.
+                                        <br> • Popular, Inc. does not share with non affiliates. As a result, they cannot market to you.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Joint marketing</strong></td>
+                                        <td>A formal agreement between non affiliated financial companies that together market financial products or services to you.
+                                            <br> • Our joint marketing partners include: Direct marketing, telemarketing, and insurance companies.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="tdColTitle">Other important information</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>State laws</strong></td>
+                                        <td>
+                                            You may have other privacy protections under applicable state laws. To the extent these state laws apply, we will comply with them when we share information about you.<br>
+                                            California Residents - Your state law requires financial institutions to obtain your consent prior to sharing information about you with non affiliated parties. We will limit sharing among our companies to the extent required by California Law.<br>
+                                            Vermont Residents - We do not share information we collect about you with non affiliated third parties, except as permitted by Vermont law, such as to process your transactions or maintain your account with your consent. In addition, we will not share information about your creditworthiness with our affiliates, except with your authorization, but we may share information about our transactions or experience with you with our affiliates without your consent.<br>
+                                            Nevada Residents - Pursuant to Nevada law, if you prefer not to receive marketing calls from us, you may be placed on our internal Do Not Call list by calling 1-844-294-2576.<br>
+                                            You may also contact the Bureau of Consumer Protection, Office of the Nevada Attorney General, 100 N. Carson, Carson City, Nevada 89701; phone number 702-486-3132; <a href="http://ag.nv.gov" class="external-link">http://ag.nv.gov</a>.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="body2">
+                                <p>
+                                    <br>
+                                    <br> To download the Privacy Policy Opt-Out Form,
+                                    <a href="/assets/pdf/bppr_insert_en.pdf">click here.</a>
+                                </p>
+                            </div>
+
+                            <style>
+                            @media(min-width:769px) {
+                                .tdFactsTitle {
+                                    min-width: 260px
+                                }
+                            }
+                        </style>
+</div>
+</div>
+<!-- /nested layout --> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+        
+        <style type='text/css'>
+.embeddedServiceHelpButton .helpButton .uiButton {
+  background-color: #005290;
+  font-family: "Arial", sans-serif;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+  outline: 1px solid #005290;
+}
+
+/*Color of Cerrar chat button from question ¿Quieres cerrar el chat?*/
+.dialogButton.dialog-button-0.uiButton.embeddedServiceSidebarButton {
+  background: #00205c;
+}
+
+/*Color of Cerrar chat button from Chat cerrado.*/
+.endChatButton.closeChatButton.uiButton--default.uiButton.embeddedServiceSidebarButton {
+  background: #00205c;
+}
+
+/*Color of Regresar button from question ¿Quieres cerrar el chat?*/
+.dialogButton.dialog-button-1.uiButton--inverse.uiButton.embeddedServiceSidebarButton {
+  color: #000;
+  background: #eeeeee;
+}
+
+/*Eliminate message ¡Gracias por comunicarse con nosotros! from Chat Header*/
+.embeddedServiceLiveAgentStateChatHeader:not(.alert) .message {
+  display: none;
+}
+
+/*Eliminate Cerrar chat button from Chat Header*/
+.embeddedServiceLiveAgentStateChatHeaderOption {
+  display: none;
+}
+
+/*Hide from Name and Time from whole bot*/
+.embeddedServiceLiveAgentStateChatItem .nameAndTimeContent {
+  display: none;
+}
+
+/*Hide bot name from messages */
+.embeddedServiceLiveAgentStateChatItem.agent .agentName {
+  visibility: hidden;
+}
+
+/*Hide time of bot messages */
+.embeddedServiceLiveAgentStateChatItem.agent .timeContent {
+  visibility: hidden;
+}
+
+/*Hide Dot between bot Name and Time */
+.embeddedServiceLiveAgentStateChatItem.agent .nameAndTimeDotDivider {
+  visibility: hidden;
+}
+
+/*Height of the Chat Header (Blue space up top) */
+.embeddedServiceLiveAgentStateChatHeader .content {
+  height: 75px;
+}
+
+/*Hide Cancelar Chat Button when Bot is loading*/
+.waitingStateButtonContainer {
+  visibility: hidden;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton {
+  background-color: #005290;
+  font-family: "Arial", sans-serif;
+}
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+  outline: 1px solid #005290;
+}
+button.helpButtonEnabled {
+  display: none !important;
+}
+.embeddedServiceSidebar.layout-docked .dockableContainer {
+  right: 0px;
+}
+.embeddedServiceSidebarHeader,
+.shortHeaderContent,
+.embeddedServiceSidebarMinimizedDefaultUI,
+.chasitor[c-chatMessage_chatMessage]{
+  background-color: #2278c9 !important;
+  border: 0px;
+}
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items {
+  border: 0px;
+  width: 100%;
+}
+.rich-menu,
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu {
+  padding: 20px 0px 20px 0px;
+  width: 100%;
+}
+.headerTextContent {
+  text-shadow: none;
+}
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li {
+  border: none !important;
+  /* width: 48%; */
+  display: inline-block;
+  /* margin-left: 5px; */
+}
+.rich-menu-item {
+  margin: 5px 0px 5px 0px !important;
+}
+.embeddedServiceLiveAgentStateChatItem .chatContent li button,
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:first-child,
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:last-child,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:first-child button.rich-menu-itemOptionIsClicked,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:first-child button.rich-menu-itemOptionIsClicked:hover,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:first-child button.rich-menu-itemOptionIsClicked:focus {
+  border-radius: 40px !important;
+}
+.embeddedServiceLiveAgentStateChatRichItem,
+.embeddedServiceLiveAgentStateChatItem .chatContent li button {
+  border: 2px solid #2278c9;
+  background-color: #eaf1f8;
+  color: #00205c !important;
+  margin: 5px;
+}
+.embeddedServiceLiveAgentStateChatItem .chatContent li button:hover,
+.embeddedServiceLiveAgentStateChatItem .chatContent li button:focus {
+  border: 2px solid #00205c;
+  background-color: #ffffff !important;
+  color: #00205c !important;
+  opacity: 1;
+  text-decoration: none;
+}
+.embeddedServiceLiveAgentStateChatItem .chatContent li button {
+  width: 100%;
+}
+h2.headerText {
+  padding-top: 7px;
+}
+.dockableContainer {
+  width: 300px !important;
+}
+.sidebarHeader .content,
+.headerButton .headerChevron {
+  display: none;
+}
+.minimizedContainer .content {
+  display: block;
+}
+.embeddedServiceSidebarHeader .headerButton:hover,
+.headerButton:hover,
+.headerButton:hover::before,
+.headerText:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.dialogButton,
+.dialogButton span,
+.endChatButton,
+.endChatButton span,
+.embeddedServiceLiveAgentStateChatInputFooter .chasitorText {
+  font-family: "Open Sans", "Arial", sans-serif !important;
+  font-size: 16px;
+}
+.dialogButton,
+.dialogButton:focus,
+.endChatButton,
+.endChatButton:focus {
+  text-decoration: none !important;
+  border-radius: 16px;
+}
+.dialogButton.dialog-button-0.uiButton.embeddedServiceSidebarButton,
+.endChatButton.closeChatButton.uiButton--default.uiButton.embeddedServiceSidebarButton {
+  background: #2278c9;
+}
+.embeddedServiceSidebarButton.uiButton--inverse .label {
+  color: #2278c9 !important;
+}
+.dialogButton.dialog-button-1.uiButton--inverse.uiButton.embeddedServiceSidebarButton {
+  background: #fff;
+  border: 1px solid #2278c9;
+}
+.embeddedServiceSidebarHeader .headerItem.minimizeButton {
+  position: absolute;
+  right: 40px;
+  width: 25px;
+  height: 25px;
+  top: 8px;
+  background-image: url(assets/images/icon-chevron-white.svg) !important;
+  background-repeat: no-repeat !important;
+  background-size: 60% 60% !important;
+  background-position: center center;
+}
+.embeddedServiceSidebarHeader .headerItem.minimizeButton:focus:before,
+.embeddedServiceSidebarHeader .headerItem.minimizeButton:hover:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.embeddedServiceSidebarHeader .headerItem..minimizeButton span.minimize {
+  display: none;
+}
+.sidebarHeader.minimizedContainer .minimizedText {
+  margin-top: 6px;
+}
+.embeddedServiceLiveAgentStateChatInputFooter .chasitorControls .uiInput {
+  text-align: left;
+}
+.embeddedServiceLiveAgentStateChatInputFooter .chasitorText {
+  width: 100%;
+  /* border-radius: 40px; */
+  color: #363636;
+}
+.embeddedServiceSidebarHeader .shortHeader {
+  overflow: visible;
+}
+.embeddedServiceSidebarMinimizedDefaultUI.sidebarHeader {
+  text-decoration: none;
+}
+.embeddedServiceSidebarMinimizedDefaultUI {
+  min-width: auto !important;
+  width: auto !important;
+}
+.embeddedServiceLiveAgentStateChatUnreadMessageBanner {
+  padding: 10px 20px 10px 20px;
+  width: auto;
+  height: auto;
+  top: -80px;
+}
+.rich-menu-itemOptionIsClicked,
+.rich-menu-itemOptionIsClicked.embeddedServiceLiveAgentStateChatRichItem,
+.rich-menu-itemOptionIsClicked.embeddedServiceLiveAgentStateChatItem .chatContent li button,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:first-child button.rich-menu-itemOptionIsClicked,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:last-child button.rich-menu-itemOptionIsClicked {
+  opacity: 0.4;
+}
+.chatMessage {
+  font-size: 15px !important;
+}
+.rich-menu-items li {
+  width: 48% !important;
+  display: inline-block !important;
+  padding: 2px !important;
+  float: left;
+}
+.nameAndTimeContent {
+  clear: both;
+}
+.embeddedServiceLiveAgentStateChatItem .chatContent li,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:hover,
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:first-child,
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:first-child:hover,
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:last-child {
+  border-radius: 0px !important;
+}
+.embeddedServiceLiveAgentStateChatItem .chatContent li button,
+.embeddedServiceLiveAgentStateChatItem .chatContent li button:hover,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:first-child button.rich-menu-itemOptionIsClicked,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:first-child button.rich-menu-itemOptionIsClicked:hover,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:last-child button,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:last-child button:hover,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:first-child button.rich-menu-itemOptionIsClicked:hover,
+.embeddedServiceLiveAgentStateChatItem .chatContent li:first-child button.rich-menu-itemOptionIsClicked:focus{
+  border-radius: 10px !important;
+  min-height: 70px !important;
+  margin: 0 !important;
+}
+.embeddedServiceSidebarHeader .headerItem:focus:after {
+  content: "" !important;
+  border: 0px !important;
+}
+
+/* GLOBAL HELP BUBBLE STYLES */
+#sp-toolbar {
+  bottom: 160px;
+}
+#btn-help-bubble {
+  z-index: 8888;
+  background-color: transparent !important;
+  background-image: url(assets/images/icon-help-bubble.svg);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  border: none;
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  opacity: 1;
+ /*  -webkit-transition: all 0.4s ease;
+ -moz-transition: all 0.4s ease;
+ -o-transition: all 0.4s ease;
+ -ms-transition: all 0.4s ease;
+ transition: all 0.4s ease; */
+}
+#btn-help-bubble:hover,
+#btn-help-bubble:focus,
+#btn-help-bubble:active{
+  /* background-image: url(assets/images/icon-help-bubble-dark-blue.svg); */
+  background-size: 50px 50px;
+}
+#btn-help-bubble.disable {
+  opacity: 0;
+  right: -80px;
+  bottom: -80px;
+}
+#help-bar {
+  z-index: 1003;
+  position: fixed;
+  bottom: -50px;
+  right: 20px;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 40px;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+#help-bar.active {
+  bottom: 0px !important;
+  height: 80%;
+}
+#help-bar .help-bar-header {
+  padding: 15px;
+  background: #2278c9;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+#help-bar .help-bar-header h2 {
+  font-size: 1.8rem !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+#help-bar .help-bar-header button {
+  background-color: transparent;
+  width: auto;
+  border: none;
+  color: #fff;
+  margin: -5px -5px 0 0;
+}
+#help-bar .help-bar-body {
+  padding: 15px 15px 30px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  max-height: 100%;
+  flex-grow: 1;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100% - 24px);
+  pointer-events: all;
+}
+#help-bar .btn {
+  padding: 1rem 2rem 1rem 2rem;
+}
+.icon-send-white,
+.icon-send-white:hover,
+.icon-send-white:active,
+.icon-send-white:focus {
+  padding-left: 3.5rem !important;
+  background-image: url(assets/images/icon-send-white.svg) !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 18px !important;
+  background-position: 10px 50% !important;
+}
+.icon-chevron-white {
+  background-image: url(assets/images/icon-chevron-white.svg) !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 18px !important;
+}
+.icon-back-chevron-white {
+  background-image: url(assets/images/icon-back-chevron-white.svg) !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 18px !important;
+}
+.btn-icon {
+  /* padding: 10px 10px 10px 10px !important; */
+  border-radius: 80px !important;
+  background-position: center center !important;
+  height: 100%;
+}
+#btn-back-help-bar {
+  box-shadow: none;
+  width: 25px !important;
+  height: 25px !important;
+  padding: 5px !important;
+  margin-right: 10px !important;
+  background-position: center center !important;
+  margin-left: -40px !important;
+  opacity: 0;
+}
+#btn-back-help-bar.active {
+  opacity: 1;
+  margin-left: 0px !important;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+#btn-close-help-bar {
+  margin-top: -10px !important;
+  margin-right: -10px !important;
+}
+.help-bar-sections a {
+  font-size: 1.8rem;
+  display: block;
+  padding: 20px 30px 20px 50px !important;
+  text-decoration: none !important;
+}
+.help-bar-sections li {
+}
+.help-bar-sections li:last-child {
+  border-bottom: none;
+}
+.icon-chat,
+.icon-chat:hover,
+.icon-chat:focus {
+  text-align: left;
+  background-repeat: no-repeat !important;
+  background-size: auto 30px !important;
+  background-position: 15px 50% !important;
+}
+.icon-chat-bot,
+.icon-chat-bot:hover,
+.icon-chat-bot:focus {
+  background-image: url(assets/images/icon-keyboard.svg) !important;
+}
+.icon-chat-help,
+.icon-chat-help:hover,
+.icon-chat-help:focus {
+  background-image: url(assets/images/icon-web.svg) !important;
+}
+.icon-chat-support,
+.icon-chat-support:hover,
+.icon-chat-support:focus {
+  background-image: url(assets/images/icon-headset.svg) !important;
+}
+.icon-chat-contact,
+.icon-chat-contact:hover,
+.icon-chat-contact:focus {
+  background-image: url(assets/images/icon-phone.svg) !important;
+}
+#btn-chat-menu-items {
+  position: absolute;
+  display: block;
+  top: 6px;
+  right: 75px;
+  width: 35px;
+  height: 25px;
+}
+#btn-chat-menu-items #chat-menu-items {
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  background-image: url(assets/images/icon-three-dots.svg) !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 12px !important;
+  background-position: 50% 50% !important;
+}
+#btn-chat-menu-items #chat-menu-items:focus:before,
+#btn-chat-menu-items #chat-menu-items:hover:before {
+  content: " ";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.2;
+  border-radius: 4px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+#btn-chat-menu-items .dropdown-menu {
+  left: auto;
+  right: -3px;
+  top: 34px;
+  width: 190px !important;
+}
+#btn-chat-menu-items .dropdown-menu > li > a {
+  white-space: pre-wrap;
+}
+@media (min-width: 480px) {
+  .embeddedServiceSidebar.layout-docked .dockableContainer {
+    right: 20px;
+  }
+  #help-bar,
+  .dockableContainer {
+    width: 340px !important;
+    max-height: 500px !important;
+  }
+}
+@media (max-width: 479px) {
+  #help-bar,
+  .dockableContainer {
+    width: 100% !important;
+  }
+  .embeddedServiceSidebar.layout-docked .dockableContainer {
+    height: 100% !important;
+  }
+  .embeddedServiceSidebarMinimizedDefaultUI.sidebarHeader {
+    bottom: 0;
+    height: auto;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    text-decoration: none !important;
+  }
+  .embeddedServiceLiveAgentStateChatInputFooter.dynamicResizeTextOneRow{
+      padding-bottom:10px;
+      height: 80px;
+      min-height: 80px;
+  }
+  
+  #help-bar.active {
+    right: 0px !important;
+    height: 100% !important;
+  }
+}
+
+</style>
+<!-- Bubble -->
+<button id="btn-help-bubble" title="Show other help tools"><span class="sr-only">Show help tools</span></button>
+<!-- Bubble content -->
+<div id="help-bar">
+    <div class="help-bar-header"><button id="btn-back-help-bar" aria-hidden="true" class="btn icon-back-chevron-white pull-left"><span class="sr-only">Back to tools main menu</span></button><button id="btn-close-help-bar" class="btn pull-right" title="Close help tools"><span class="glyphicon glyphicon-remove"></span><span class="sr-only">Close help tools</span></button><h2>Help tools</h2></div>
+    <div class="help-bar-body">
+        <!-- Bubble main content -->
+        <div id="help-bar-home" class="animated">
+            <ul class="no-bullets help-bar-sections">
+                
+                <li><a id="lnk-start-agent-conversation" href="javascript://" class="btn btn-default icon-chat icon-chat-support">Ask a <strong>representative</strong></a></li>
+                <li><a href="https://resourcecenter.popular.com/en/help" class="btn btn-default icon-chat icon-chat-help" onclick="javascript:dataLayer.push({'event':'burbuja','action':{'name':'Click Opciones','option':'Visita nuestro centro de ayuda'}});">Visit our <strong>help center</strong></a></li>
+                <li><a href="contact-us/" class="btn btn-default icon-chat icon-chat-contact" onclick="javascript:dataLayer.push({'event':'burbuja','action':{'name':'Click Opciones','option':'Contactanos'}});">Contact us</a></li>
+                
+            </ul>
+            
+            <a class="maintain-focus" data-focus="btn-close-help-bar" title="Back to tool header" href="#"></a>
+        </div>
+        <!-- Bubble chat content -->
+        <div id="help-bar-chat" class="animated">
+            <!-- Show liveagent_online if chat is online -->
+            
+            
+            <div id="liveagent_online">
+
+                <h3 id="chatTitle">Welcome to Popular's chat</h3>
+                <p>
+                    Please enter your full name and email:
+                </p>
+                <div class="form-group">
+                    <input type='text' name='chat.name' title="Your name" class="form-control" id='prechat_field' placeholder="Full name" required="yes" />
+                </div>
+
+                <div class="form-group">
+                    <input type='email' name='chat.email' title="Your email" class="form-control" placeholder="Email" required="yes" />
+                </div>
+                <a href="javascript://" class="btn btn-primary" id="lnk-chat">Start chat</a>
+                <div><em class="text-sm">*Please make sure your browser is not blocking <strong>popup windows</strong>.</em></div>
+                <hr>
+                <p class="text-sm">With this service, we offer you assistance on information about your products and banking services. For information about balances, making payments and/or transfers, you should log in to your Mi Banco Online account or call TeleBanco Popular®
+                    at 787.724.3650</p>
+                <a href="https://apps.popular.com/chat/Terminos_de_Uso-Chat_Popular_V1.pdf?_ga=1.78227540.1565512700.1477501540" target="_blank" class="margin-bottom">Terms of use & Security  </a>
+                <br><a href="https://www.popular.com/en/privacy/" target="_blank" class="margin-top">Privacy Policy</a>
+            </div>
+            
+        
+            <!-- /. Show liveagent_online if chat is online -->
+            <!-- Show liveagent_offline if chat is offline -->
+            
+            
+            <div id="liveagent_offline" style="display:none">
+                <div class="alert alert-info">The chat is currently <strong>unavailable</strong>. Please try again later.</div>
+                <h2>Can't wait?</h2> Call TeleBanco Popular®:
+                <br>
+                <div>
+                    <h2>(787) 724-3650<br><span class="text-sm">(Puerto Rico)</span></h2>
+                    <div class="content-divider"></div>
+                    <h2>1-888-724-3650 <br><span class="text-sm">(United States / Virgen Islands)</span></h2>
+                </div>
+                 <a class="maintain-focus" data-focus="btn-back-help-bar" title="Regresar al encabezado" href="#"></a>
+            </div>
+            
+            
+            <!-- /.Show liveagent_offline if chat is offline -->
+        
+    </div>
+    </div>
+</div>
+<script>
+    var chatBotActive = false;
+    var helpToolActive = false;
+    var setItemsActions = false;
+    var initChatBotWelcome = false;
+    var userLastQuestion = '';
+    var agentAnswer = false;
+    // Preload bubble hover image
+    var preload = new Array();
+    preload[0] = "assets/images/icon-help-bubble-dark-blue.svg";
+    var loadedimages = new Array();
+    for(var i=0; i<preload.length; i++) {
+        loadedimages[i] = new Image();
+        loadedimages[i].src = preload[i];
+    }
+
+    function showHelpTools(){
+        helpToolActive = true;
+        $('#help-bar').addClass('active');
+        $('#btn-help-bubble').addClass('disable');
+        $('#help-bar').attr('aria-hidden', false);
+        // GA
+        dataLayer.push({'event':'burbuja','action':{'name':'Click Burbuja'}});
+        // Focus on first item
+        setTimeout(function(){
+            $('#lnk-start-bot-conversation').focus();
+        },500);
+    }
+    function closeHelpTools(){
+        helpToolActive = false;
+        $('#help-bar').removeClass('active');
+        $('#btn-help-bubble').removeClass('disable');
+        $('#help-bar').attr('aria-hidden', true);
+        // Reset chat info visibility 
+        hideChatInfo();
+        // GA
+        dataLayer.push({'event':'burbuja','action':{'name':'Cerrar Burbuja'}});
+        // Focus on main content
+        setTimeout(function(){
+            $('#main_content').focus();
+        },500);
+        
+    }
+    function showChatInfo(){
+        $('#btn-back-help-bar').addClass('active');
+        $('#btn-back-help-bar').attr('aria-hidden', false);
+        $('#help-bar-home').removeClass('fadeInRight').addClass('fadeOutRight');
+        $('#help-bar-chat').attr('aria-hidden', false);
+        setTimeout(function () {
+            $('#help-bar-home').hide();
+            $('#help-bar-home').attr('aria-hidden', true);
+        }, 200);    
+        
+        //*
+        $('#help-bar-chat').show();
+        $('#help-bar-chat').css('opacity', 0);
+        setTimeout(function () {
+            $('#help-bar-chat').removeClass('fadeOutLeft').addClass('fadeInLeft');
+            $('#prechat_field').focus();
+        }, 250);
+        //*/
+       
+       // GA
+       dataLayer.push({'event':'burbuja','action':{'name':'Click Opciones','option':'Preguntale a un agente real'}});
+        
+    }
+    function hideChatInfo(){
+        $('#btn-back-help-bar').removeClass('active');
+        $('#btn-back-help-bar').attr('aria-hidden', true);
+        
+        
+        $('#help-bar-chat').removeClass('fadeInLeft').addClass('fadeOutLeft');
+        setTimeout(function () {
+            $('#help-bar-chat').hide();
+            $('#help-bar-chat').attr('aria-hidden', true);
+            $('#help-bar-home').removeClass('fadeOutRight');
+            $('#help-bar-home').show();
+            $('#help-bar-home').css('opacity', 0);
+        }, 200);
+        
+        //*
+        
+        setTimeout(function () {
+            $('#help-bar-home').addClass('fadeInRight');
+            $('#help-bar-home').attr('aria-hidden', false);
+            $('#lnk-start-bot-conversation').focus();
+        }, 250);
+        //*/
+        
+    }
+    
+    function checkChatBotExists(){
+        var element = $('.shortHeaderContent');
+        // Check if element exists in DOM
+        if(element.length>0){
+             //$('#overall-overlay').removeClass('show');
+             //$('#chat-preloader').remove();
+            // Disable header chevron
+            $('.headerText button.headerButton').attr('disabled', true);
+            if(chatBotActive===false){
+                chatBotActive=true;
+                
+                // Hide help button
+                $('#btn-help-bubble').addClass('disable');
+                
+                // Add Submenu to Chatbot ...
+                $('.shortHeaderContent').prepend('<div id="btn-chat-menu-items" class="dropdown"><a href="javascript://" class="dropdown-toggle" id="chat-menu-items" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Enlaces adicionales</span></a> <ul class="dropdown-menu no-bullets" id="menu1" aria-labelledby="chat-menu-items"> <li><a href="https://resourcecenter.popular.com/ayuda" target="_blank">Visita nuestro <strong>centro de ayuda</strong></a></li><li><a href="https://www.popular.com/contactanos/">Contáctanos</a></li> </ul></div>');
+                
+                // ADA Fix to chatbot elements
+                $('textarea.chasitorText').attr('name', 'Escriba su mensaje aqui');
+               
+               
+                
+                
+            }
+            // If confirm close bot button exists attach
+            // trigger to close bot window
+            if($('button.dialogButton.dialog-button-0.uiButton').length>0){
+                // Bind to the "Cerrar chat" button
+                $('button.dialogButton.dialog-button-0').bind("click", function(){
+    	            $('button.closeButton.headerItem').trigger('click');
+    	            dataLayer.push({'event':'chatBot','action':{'name':'Click en cerrar bot'}});
+                });
+            }
+            // If confirm close bot button exists attach
+            // dataLayer to the "Regresar" button
+            if($('button.dialogButton.dialog-button-1.uiButton').length>0){
+                $('button.dialogButton.dialog-button-1').bind("click", function(){
+    	            dataLayer.push({'event':'chatBot','action':{'name':'Click en opciones cerrar','seleccion': 'NO'}});
+
+                });
+            }
+            // Bind GA actions
+            if($('.rich-menu-items li button.rich-menu-item').length>0){
+                   if(setItemsActions==false){
+                        $('.rich-menu-items li button.rich-menu-item').bind('click', function(){
+                            dataLayer.push({ 'event' : 'chatBot' , 'action' : {'name':'Respuesta Brindada Click', 'seleccion' : $(this).html()}});
+                            //console.log($(this).html());
+                            setItemsActions = false;
+                        });
+                        setItemsActions = true;
+                   }
+            }
+            // Check for welcome message
+            if($('.chatMessage.agent').length>0){
+                if(initChatBotWelcome==false){
+                    if($('.chatMessage').html().indexOf('Hola')>-1){
+                        // Call welcome ga action
+                        dataLayer.push({'event':'chatBot','action':{'name':'Mensaje Bienvenida'}});
+                        initChatBotWelcome=true;
+                    }
+                    
+                }
+            }
+            // Disable clicked rich-menu-itemOptionIsClicked
+            if($('.rich-menu-itemOptionIsClicked').attr('disabled', false)){
+                $('.rich-menu-itemOptionIsClicked').attr('disabled', true);
+            }
+            
+        }else{
+            chatBotActive=false;
+            if(helpToolActive===false){
+                $('#btn-help-bubble').removeClass('disable');
+            }
+        }
+        // Fix some ADA issues with forms/inputs/etc
+        if($('#fileUploadForm').length>0 && !$('#fileUploadForm').attr('hidden')){
+	       $('#fileUploadForm').attr('hidden', true);
+	       $('#fileUploadForm').append('<button type="submit" disabled>Submit</button>');
+         }
+         if($('#esw_storage_iframe').length>0 && !$('#esw_storage_iframe').attr('hidden')){
+	       $('#esw_storage_iframe').attr('role', 'form');
+	       $('#esw_storage_iframe').attr('title', 'Funciones para el Popular bot');
+         }
+       
+         if($('#kx-proxy-smsgrzqyd').length>0){
+	       $('#esw_storage_iframe').attr('title', 'CDN de imagenes');
+         }
+         if($('textarea.chasitorText').length>0){
+            $('textarea.chasitorText').removeAttr('aria-describedby');
+            $('textarea.chasitorText').removeAttr('role');
+         }
+         
+        
+    }
+    
+    
+    $(function(){
+        $('#help-bar-chat').hide();
+        $('#btn-help-bubble').click(function(){
+            showHelpTools();
+        });
+        $('#btn-close-help-bar').click(function(){
+            closeHelpTools();
+        });
+        $('#lnk-start-agent-conversation').click(function(){
+            showChatInfo();
+        });
+        $('#btn-back-help-bar').click(function(){
+            hideChatInfo();
+        });
+        setTimeout(function(){ 
+	        $('#lnk-start-bot-conversation').unbind();
+	        $('#lnk-start-bot-conversation').click(function(e){
+	            e.preventDefault();
+	            // Trigger open chat bot
+	            $('.helpButtonEnabled').trigger('click');
+	            // Set preloader
+	             //$('#overall-overlay').addClass('show');
+	             // Build loader
+	             //$('body').prepend('<div id="chat-preloader" style="position: fixed; top: 50%; left: 50%;z-index: 9999;margin-top: -160px;margin-left: -160px;" class="preloader preloader-bg-dark"></div>');
+	            closeHelpTools();
+	            // GA
+	            dataLayer.push({'event':'chatBot','action':{'name':'Click Opciones','option':'Preguntale a nuestro bot'}});
+	            
+            });
+	        
+	    }, 1000);
+	    // Check to see if ChatBot window is open
+	    setInterval(function(){ checkChatBotExists(); }, 1000);
+	   
+    });
+    
+</script>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+        
+		embedded_svc.settings.defaultText = 'Bot'; //(Defaults to Chat with an Expert)
+        embedded_svc.settings.defaultMinimizedText = 'Bot'; //(Defaults to Chat with an Expert)
+        
+        embedded_svc.settings.widgetWidth = "340px" //RESIZE AS NEEDED
+        embedded_svc.settings.widgetHeight = "89%" //RESIZE AS NEEDED
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+		
+        
+      
+		// Prod
+		///*
+		embedded_svc.init(
+			'https://bancopopular.my.salesforce.com',
+            'https://bancopopular.secure.force.com',
+            gslbBaseURL,
+            '00D1N000002KxQQ',
+            'Popular_Chatbot',
+            {
+                baseLiveAgentContentURL: 'https://c.la4-c4-ph2.salesforceliveagent.com/content',
+                deploymentId: '5723m000000TbqG',
+                buttonId: '5733m000000TdUU',
+                baseLiveAgentURL: 'https://d.la4-c4-ph2.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3F0000008OUzUAM_16ddf1e825f',
+                isOfflineSupportEnabled: true
+            }
+		);
+		//*/
+	};
+	
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		
+		s.setAttribute('src', 'https://bancopopular.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+	// Replace chat button action
+	$(function(){
+	    setTimeout(function(){ 
+	        $('#bot-sidebar').unbind();
+	        $('#bot-sidebar').click(function(e){
+	            e.preventDefault();
+	            $('.helpButtonEnabled').trigger('click');
+	        });
+	    }, 1000);
+	    
+	});
+</script>
+        <!--END MAIN BODY CONTENT-->
+        <!--/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\-->
+       
+            <footer>
+    <div class="row first">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="col-md-6">
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="pull-right">
+                        <ul class="social-pane pull-right">
+                            <li class="hidden-xs pull-left" style="padding: 0px 20px 0px 0px !important;margin-top: 6px !important;">Follow us:</li>
+
+                            <li>
+                                <a href="https://www.facebook.com/popular" class="icon-fb external-link" data-category="MobileFooter" data-label="SocialIcons" data-action="GoToFacebook" title="Follow us on facebook" target="_blank"><span class="sr-only">facebook</span></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/popular" class="icon-tw external-link" data-category="MobileFooter" data-label="SocialIcons" data-action="GoToTwitter" title="Follow us on twitter" target="_blank"><span class="sr-only">twitter</span></a>
+                            </li>
+                             <li>
+                                <a href="http://www.youtube.com/popularinc" class="icon-yt external-link" data-category="MobileFooter" data-label="SocialIcons" data-action="GoToYouTube" title="Follow us on YouTube"><span class="sr-only">youtube</span></a>
+                            </li>
+                            <li>
+                                <a href="https://blog.popular.com/" class="icon-blog" data-category="MobileFooter" data-label="SocialIcons" data-action="GoToBlog" title="Visit our blog" target="_blank"><span class="sr-only">our blog</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/popular.pr/" class="icon-instagram external-link" data-category="MobileFooter" data-label="SocialIcons" data-action="GoToInstagram" title="Follow us on instagram" target="_blank"><span class="sr-only">instagram</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/idpopular/" class="icon-pinterest external-link" data-label="SocialIcons" data-action="GoToPinterest" title="Follow us on Pinterest" target="_blank"><span class="sr-only">Pinterest</span></a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="col-md-3 first">
+                    <ul>
+                        <li>
+                            <a href="contact-us/" title="Contact us">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li>
+                            <a href="https://resourcecenter.popular.com/en/help" title="Visit our Help Center">Help Center</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href="https://www.popular.com/privacidad/" class="m-a" title="Español">Español</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-3 last visible-xs"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="col-md-3 first">
+                    <ul>
+                        <li><a href='terms/' title="View our Terms and Conditions of Use">Terms and Conditions of Use</a></li>
+                        <li><a href='accessibility-policy/' title="View our Accessibility Policy">Accessibility Policy</a></li>
+                        <li><a href='privacy/' title="View our Privacy Policy">Privacy Policy</a></li>
+                        <li><a href='diversity-policy/' title="View our Diversity Policy">Diversity Policy</a></li>
+                        <li><a href='weblinking-practices/' title="View our Weblinking Practices">Weblinking Practices</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href='go-to-assist/' title="Go to Assist">Go to Assist</a></li>
+                        <li><a href='fdic-insurance-notice/' title="View our FDIC Insurance Notice">FDIC Insurance Notice</a></li>
+                        <li><a href='unclaimed-funds/' title="Visit Unclaimed Funds">Unclaimed Funds</a></li>
+                        <li><a href='unclaimed-funds-international-banking/' title="Unclaimed Funds, International Banking Center">Unclaimed Funds, International Banking Center</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li><a href='security/' title="Visit our Security section">Security</a></li>
+                        <li><a href='https://zap.popularinc.com' target="_blank" title="ZAPortal for Employeess">ZAPortal for Employees</a>
+                        <li><a href='https://zap.popularinc.com/zaplogon/rsa_step1.jsp' target="_blank" title="ZAPortal Popular Retirees">ZAPortal Popular Retirees</a></li>
+                        <li><a href='https://jobs.popular.com/?locale=en_US' target="_blank" title="View jobs at Popular">Jobs</a></li>
+                        <li><a href='about-popular/awards/' title="Awards and Recognitions">Awards and Recognitions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 last">
+                    <div class="partner-logo pull-right fdic-logo">
+                        <!-- <img src='assets/images/fdic-member.png' width="41" height="26" alt="FDIC"> -->
+                    </div>
+                    <div class="partner-logo pull-right ehl-logo">
+                        <img src='assets/images/eq-lender.png' width="38" height="39" alt="Equal Housing Lender">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row last">
+
+        <div class="col-md-12">
+            <div class="container">
+                <h3 class="text-white">Routing numbers:</h3>
+                <div>
+                    <p><strong>Deposit accounts:</strong> Puerto Rico ( 021502011 ) / Virgin Islands ( 021606674 ) / Tortola ( 021502011 )</p>
+                </div>
+                
+                <h3 class="text-white">Protect yourself against fraud:</h3>
+                <div>
+                    <p>Never share confidential information about your accounts, such as: username, password or Social Security number through emails, on social media or on external websites. <strong>Popular won’t ask you to disclose your confidential information</strong>.</p>
+                </div>
+                
+                <h3 class="text-white">Contact us:</h3>
+                <div>
+                    <p class="text-white">TeleBanco Popular<sup>®</sup>: 787.724.3650</p>
+                    <p class="text-white">Hearing Impaired (TDD): 787.753.9677</p>
+                    <p class="text-white">209 Ave. Ponce de León San Juan, PR 00918</p>
+                </div>
+               
+                <div class="pad-top">
+                Banco Popular of Puerto Rico is Member of the FDIC. <br>
+                    &copy; 2020 Popular, Inc.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+        
+        <!-- Modal Choose Region -->
+<div class="modal fade" id="modalChooseRegion" tabindex="-1" role="dialog" aria-labelledby="modalRegionTitle">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="btn-close-modalChooseRegion" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body pad-bottom">
+
+                <div class="text-center pad-all">
+                    <div class="text-center" style="padding-bottom:30px">
+                        <div class="bppr-reg" style="width:30px !important;height:30px !important;margin:auto">
+                            <picture>
+                                <source srcset="assets/images/bppr.svg" type="image/svg+xml" />
+                                <img src="assets/images/bppr.gif" alt="BPPR symbol">
+                            </picture>
+                        </div>
+                        <style>
+                            .bppr-reg, .bppr-reg picture, .bppr-reg img{
+                                -webkit-border-radius:5px !important;
+                                -mos-border-radius:5px !important;
+                                -ms-border-radius:5px !important;
+                                border-radius:5px !important;
+                                position:relative;
+                            }
+                            .bppr-reg:after{
+                                content: "®";
+                                font-size:8px !important;
+                                color:#cf0831;
+                                position:absolute;
+                                bottom:-1px;
+                                right:-9px;
+                            }
+                            @media(min-width:640px){
+                                #modalChooseRegion .modal-body{
+                                    padding:30px 90px 40px 90px !important;
+                                }
+                            }
+                        </style>
+                    </div>
+                    <p id="modalRegionTitle">Escoge tu región para obtener información sobre productos y servicios.</p><div style="width:35px;margin:auto;height:3px;background:#2278C9"></div>
+                    <p style="margin-top:20px">Choose your region for information about products and services.</p>
+                    
+                   
+                    <ul class="row">
+                        <li class="col-sm-4"><a href="https://www.popular.com/" data-region="pr" rel="pr" title="Puerto Rico" class="btn btn-link lnk-region">Puerto Rico</a></li>
+                        <li class="col-sm-4"><a href="https://www.popularbank.com/" data-region="us" rel="us" title="United States" class="btn btn-link lnk-region">United States</a></li>
+                        <li class="col-sm-4"><a href="https://www.popular.vi/" data-region="vi" rel="vi" title="Virgin Islands" class="btn btn-link lnk-region">Virgin Islands</a></li>
+                    </ul>
+                    <a class="maintain-focus" data-focus="btn-close-modalChooseRegion" title="Back to close" href="#"></a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<!-- End Modal Choose Region --> 
+
+    </div>
+    <!-- /wrapper -->
+    <section aria-label="Hidden message windows">
+    <!-- Modal Site Bump -->
+<div class="modal fade" id="modalSiteBump" tabindex="-1" role="dialog" aria-labelledby="modalSiteBumpTitle">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="btn-close-modalSiteBump" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body pad-bottom">
+
+                <div  class="pad-all">
+                    
+                    <p style="margin-bottom:20px"><strong id="modalSiteBumpTitle">You are currently in Banco Popular of Puerto Rico's website (popular.com)</strong>.<br><br>
+                    By clicking “Continue” you acknowledge the following:<br><br>
+                    You will be leaving popular.com and entering a third-party website (linked website).
+                    The third-party website’s privacy policy and security practices may differ from BPPR.<br><br>
+                    BPPR is not responsible for the accuracy or content of information contained in this linked website and no guarantee is given that the information provided in this linked website is correct, complete, and up-to-date.<br><br>
+                    BPPR expressly disclaims all liability for, damages of any kind arising of, use reference to, or reliance on any information contained within the linked website.<br><br>
+                    This link does not constitute an endorsement by us of the third-party and its products and services.
+                    </p>
+                    
+                </div>
+            </div>
+           <div class="modal-footer">
+                <button id="btn-ext-site-continue" type="button" class="btn btn-default animated" aria-hidden="true">Continue</button>
+                <a class="maintain-focus" data-focus="btn-close-modalSiteBump" title="Back to close" href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal Site Bump -->  
+    <!-- Modal Site Bump -->
+<div class="modal fade" id="modalSiteBumpChubb" tabindex="-1" role="dialog" aria-labelledby="modalSiteBumpChubbTitle">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: none;">
+                <button id="btn-close-modalSiteBumpChubb" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body pad-bottom" style="padding-bottom: 0 !important;">
+
+                <div  class="pad-all" style="padding-bottom: 0;">
+                    
+                <p style="margin-bottom:20px"><strong id="modalSiteBumpChubbTitle">You are currently in the insurance section of Popular, Inc.’s website (popular.com).  By clicking “Continue” you acknowledge the following:</strong>.</p>
+                <ul>
+                    <li>You are leaving popular.com and entering a website owned and operated by Chubb Group (“Chubb”). The privacy policy and security practices of Chubb’s website may differ from those adopted by Popular.</li>
+                    <li>Insurance products and services are offered by Popular Insurance LLC (“Popular Insurance”), a subsidiary of Popular, Inc. (“Popular”) and an affiliate of Banco Popular de Puerto Rico (“BPPR”).</li>
+                    <li>Popular Insurance is a General Agency and Authorized Representative duly authorized by the Puerto Rico Insurance Commissioner’s Office to offer and sell life, variable life, variable annuities, disability, property and casualty, and title insurance and health related employee benefit services in Puerto Rico.</li>
+                    <li>Insurance products are not deposits, are not insured by the FDIC or other Federal Government Agencies, and are not guaranteed by BPPR or any of its affiliates, including Popular.</li>
+                    <li>Popular and BPPR do not offer, underwrite issue or sell insurance products.</li>
+                    <li>If you acquire a travel insurance policy, the policy will be underwritten and issued by Chubb Insurance Company of Puerto Rico, a subsidiary of Chubb.</li>
+                    <li>Chubb is not affiliated to Popular, Inc., Popular Insurance or BPPR.</li>
+                    <li>Popular, Popular Insurance and/or BPPR are not responsible for the accuracy or content of the information contained in Chubb’s website and no guarantee is given that the information provided in such  linked website is correct, complete, and up-to-date.</li>
+                    <li>Popular, BPPR and Popular Insurance expressly disclaim all liability for damages of any kind, reference to, or reliance upon any information contained in the linked website.</li>
+                </ul>
+                    
+                </div>
+            </div>
+           <div class="modal-footer">
+                <button id="btn-ext-site-chubb-continue" type="button" class="btn btn-default animated" aria-hidden="true">Continue</button>
+                <a class="maintain-focus" data-focus="btn-close-modalSiteBumpChubb" title="Back to close" href="#"></a>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- End Modal Site Bump -->
+    <!-- Modal Site Bump -->
+<div class="modal fade modal-bump" id="modalUSSiteBump" tabindex="-1" role="dialog" aria-labelledby="modalUSSiteBumpTitle">
+    <div class="modal-dialog">
+        <div class="modal-content" style="max-width:450px">
+            <div class="modal-header">
+                <button id="btn-close-modalUSSiteBump" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body pad-bottom">
+
+                <div  class="pad-all">
+                    
+                    <p style="margin-bottom:20px">Hello,</p>
+                    <p><strong id="modalUSSiteBumpTitle">You are now leaving Banco Popular de Puerto Rico’s web page and being redirected to Popular Bank.</strong></p>
+                    <p style="margin-top:20px">Please click “Continue” to proceed.</p>
+                </div>
+            </div>
+           <div class="modal-footer">
+                <button id="btn-us-site-continue" type="button" class="btn btn-default animated" aria-hidden="true">Continue</button>
+                <a class="maintain-focus" data-focus="btn-close-modalUSSiteBump" title="Close" href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal Site Bump --> 
+
+    <!-- Modal Site Bump -->
+<div class="modal fade modal-bump" id="modalVISiteBump" tabindex="-1" role="dialog" aria-labelledby="modalVISiteBumpTitle">
+    <div class="modal-dialog">
+        <div class="modal-content" style="max-width:450px">
+            <div class="modal-header">
+                <button id="btn-close-modalVISiteBump" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body pad-bottom">
+
+                <div  class="pad-all">
+                    
+                    <p style="margin-bottom:20px">Hello,</p>
+                    <p><strong id="modalVISiteBumpTitle">You are now leaving the Puerto Rico region of Banco Popular de Puerto Rico’s web page and being redirected to the Virgin Islands’ region.</strong></p>
+                    <p style="margin-top:20px">Please click “Continue” to proceed.</p>
+                </div>
+            </div>
+           <div class="modal-footer">
+                <button id="btn-vi-site-continue" type="button" class="btn btn-default animated" aria-hidden="true">Continue</button>
+                <a class="maintain-focus" data-focus="btn-close-modalVISiteBump" title="Close" href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal Site Bump --> 
+
+    <div id="overlay-alert"></div>
+<div id="alert-dmp" class="row alert alert-info alert-float-bottom animated hide" aria-hidden="true">
+    <button id="btn-dmp-close" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+    <div class="container">
+         <div class="col-md-9">
+        <p>We use cookies to better understand how our websites and services are used to provide you with tailored advertising. To do this, we collect information on your online activities, such as searches you do on our website and pages you visit. This information may be used to deliver advertising, on and off our website, that meet specific interests you may have. Read more and make your cookies and advertisement choices <a href="terms/#cookies" class="dmp_lnk">here</a>. By continuing to use this website, you are giving us your consent to collect your information.</p>
+        </div> 
+        <div class="col-md-3"><a href="javascript://" id="btn-dmp-continue" class="btn btn-primary" title="Continue to site">Ok</a></div>
+    </div>
+</div>
+    
+    
+    
+    
+    
+     
+    </section>
+    <div id="overall-overlay" class="animated"></div>
+<div aria-hidden="true" id="modal-video" class="modal-video hide animated">
+  <div class="video-container"></div>
+  <div class="pad-all">
+    <a href="javascript://" onClick="closeVideo()" aria-label="Close window" class="btn btn-default"
+      >Close</a
+    >
+  </div>
+</div>
+
+     
+    
+
+
+<script>var context_key = 'pren';var SITE = context_key.substr(0,2);var LANG = context_key.substr(2, context_key.length);var HOME = 'false';</script>
+<script src="https://www.popular.com/assets/js/all-js-v2.min.js?v=4.43" type="text/javascript"></script>
+     
+    
+    <script></script>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ie8 Alert -->
+<section class="ie-alert" title="Tu navegador necesita ser actualizado" aria-label="Notificacion Internet Explorer" aria-hidden="true">
+    <div class="container">
+        <img src="/assets/uploads/ie-alert-icon.gif" alt="Internet Explorer Alert">
+        <hr>
+        <p class="pad-all text-lg">Para ver el contenido de esta página, necesitas actualizar a la última versión de <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> o utilizar otro navegador como: <strong>Chrome</strong>, <strong>Safari</strong> o <strong>Firefox</strong>.</p>
+        <hr>
+        <p class="pad-all text-lg">To view the following page you should update your <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> with the latest version. You may also use other browsers, such as:  <strong>Chrome</strong>, <strong>Safari</strong> or <strong>Firefox</strong>.</p>
+    </div>
+</section>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0f596de631","applicationID":"12782621","transactionName":"MwEGMUdUV0oDVURbXQpLMRdcGlBXBlNIHEIMFA==","queueTime":0,"applicationTime":118,"atts":"H0YFRw9OREQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,910 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA">
+<head><title>
+	CMS Energy Corporation - Privacy Statement
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":896,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport" /><meta content="16BC5D5971F97AE357748E1252BF4F14" name="msvalidate.01" /><meta content="default-src https: http: &#39;unsafe-inline&#39;; script-src &#39;unsafe-eval&#39; *.newrelic.com *.bugherd.com *.cmsenergy.com cmsenergy.com *.q4cdn.com *.q4web.com *.amazonaws.com *.sharethis.com *.highcharts.com *.google-analytics.com *.googletagmanager.com *.jsdelivr.net bam.nr-data.net *.qualtrics.com &#39;unsafe-inline&#39; data: *.q4app.com" http-equiv="Content-Security-Policy" /><script type='text/javascript'>window.mobileRedirect = { mobileEnabled: 0, deepLinkUrl: '/m'}</script>
+    <script type="text/javascript" src="/js/mobileRedirect.js">
+    </script>
+    
+    <link type="text/css" rel="stylesheet" media="screen" href="//s2.q4cdn.com/027997281/files/js/jquery.fancybox.css" />
+<link type="image/x-icon" rel="icon" media="" href="//s2.q4cdn.com/027997281/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s2.q4cdn.com/027997281/files/favicon.ico" />
+<link rel="stylesheet" media="all" href="//s2.q4cdn.com/027997281/files/css/default.css" />
+<link rel="stylesheet" media="print" href="//s2.q4cdn.com/027997281/files/css/print.css" />
+<!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s2.q4cdn.com/027997281/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.cmsenergy.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/027997281/files/css/global.css?v=42519" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/027997281/files/css/client.css?v=42083" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s2.q4cdn.com/027997281/files/css/print.css" /><script type="text/javascript" src="//s2.q4cdn.com/027997281/files/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/027997281/files/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/027997281/files/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/027997281/files/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/027997281/files/js/doctracking.js"></script>
+<script type="text/javascript" src="//q4implementation.s3.amazonaws.com/widgets/latest/q4.email-validation.min.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/027997281/files/js/jquery-cycle2.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="//s2.q4cdn.com/027997281/files/js/respond.min.js"></script>
+<script type="text/javascript" src="https://www.cmsenergy.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-56726059-1'}];
+
+$.each(trackingCodes, function (i, data) {
+    if (data.qualifier == "Q4") {
+        ga('create', data.trackingCode, 'auto'); // Q4 tracker
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+    } else {
+        ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+        ga(data.qualifier + '.set', 'anonymizeIp', true);
+        ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+    }
+});</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="Sectionhome PageDefault PagePrivacyStatement LayoutThreeColumnLayout Languageen-CA">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PagePrivacyStatement SectionPrivacyStatement ParentSection_home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.27.0.2'; }
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="LayoutDefault LayoutThreeColumn">
+	<div class="LayoutDefaultInner">
+                <div class="Wrapper">
+		<div class="HeaderContainer">
+			<div class="PaneNavigation"><span class='NavigationPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="HtmlTextContainer MobileLogo">
+    
+    <div class="ContentContainer">
+        <a href="/"><img alt="" src="//s2.q4cdn.com/027997281/files/design/ClientLogo.png" /></a>
+    </div>
+</div></span><span class='NavigationPaneDiv4'><div id="_ctrl0_ctl15_divModuleContainer" class="BlankModuleContainer NavTrigger">
+    
+    <div>
+    <div class="icon-bar"></div>
+    <div class="icon-bar"></div>
+    <div class="icon-bar"></div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.NavTrigger').click(function(){
+            if ($(this).hasClass('active')){
+                $(this).removeClass('active');
+            } else {
+                $(this).addClass('active');
+            }
+            $('.RespNav').toggleClass('active');  
+        });
+
+        $('.RespNav .level1 > li.has-children > a').append('<span class="drop-icon"></span>');
+        $('.RespNav .level1 > li.has-children > a span').on('click',function(e){
+            e.preventDefault(); 
+            $(this).parent().toggleClass('active').next().slideToggle().parent().toggleClass('active');
+        });
+
+
+    });
+</script>
+</div></span><span class='NavigationPaneDiv5'><nav class="RespNav"><ul class="level1">
+	<li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/default.aspx">About CMS Energy</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/about-cms-energy/guiding-priniciples/default.aspx">Guiding Principles</a></li><li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/leadership/board-of-directors/default.aspx">Leadership</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/about-cms-energy/leadership/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="https://www.cmsenergy.com/about-cms-energy/leadership/officers/default.aspx">Officers</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/consumers-energy/default.aspx">Consumers Energy</a><ul class="level3">
+			<li><a href="https://www.consumersenergy.com/company/what-we-do/electric-generation" target="_blank">Electric Business</a></li><li><a href="https://www.consumersenergy.com/company/what-we-do/natural-gas-operations" target="_blank">Natural Gas Business</a></li>
+		</ul></li><li><a href="https://www.cms-enterprises.com/home/default.aspx">CMS Enterprises</a></li><li><a href="https://www.cmsenergy.com/about-cms-energy/enerbank-usa/default.aspx">EnerBank USA<sup>®</sup></a></li>
+	</ul></li><li class="has-children"><a href="http://www.cmsenergy.com/investor-relations/corporate-overview/default.aspx">Investor Relations</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/investor-relations/corporate-overview/default.aspx">Corporate Overview</a></li><li><a href="https://www.cmsenergy.com/investor-relations/events-and-presentations/default.aspx">Events & Presentations</a></li><li><a href="https://www.cmsenergy.com/investor-relations/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.cmsenergy.com/investor-relations/glossary/default.aspx">Glossary</a></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/financial-information/cms-annual-reports/default.aspx">Financial Information</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/financial-information/cms-annual-reports/default.aspx">Annual Reports</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/proxy-materials/default.aspx">Proxy Materials</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/quarterly-earnings/default.aspx">Quarterly Earnings</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/Supplemental/default.aspx">Supplemental</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/sec-filings/default.aspx">Regulatory Filings</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/sec-filings/default.aspx">CMS Energy SEC Filings</a></li><li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/Consumers-Energy-SEC-Filings/default.aspx"><span class="break">Consumers Energy<br/>SEC Filings</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/mpsc-filings/default.aspx">Rate Case Summaries</a></li><li><a href="https://new.consumersenergy.com/2014-securitization" target="_blank"><span class="break">Consumers 2014 <br/>Securitization Funding LLC</span></a></li>
+		</ul></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=CMS&amp;Exchange=NYSE" target="_blank">Interactive Analyst Center</a></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/stock-information/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/stock-information/analyst-coverage/default.aspx">Analyst Coverage</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/investor-resources/contact-ir-and-email-contacts/default.aspx">Investor Resources</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/contact-ir-and-email-contacts/default.aspx"><span class="break">Contact IR <br/>& Email Contacts</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/information-request/default.aspx"><span class="break">Information<br/> Request</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/receive-email-alerts/default.aspx"><span class="break">Receive <br/>Email Alerts</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/online-investor-kit/default.aspx"><span class="break">Online <br/>Investor Kit</span></a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/shareowner-services/default.aspx">Shareowner Services</a><ul class="level2">
+		<li><a href="//s2.q4cdn.com/027997281/files/doc_downloads/Prospectus.pdf" target="_blank">Stock Plan Prospectus</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/tax-information/default.aspx">Tax Information</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/manage-your-account-online/default.aspx">Manage Your Account Online</a></li><li><a href="http://www.shareowneronline.com/" target="_blank">Equiniti Trust Company</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/Shareowner-Contact-Information/default.aspx">Shareowner Contact Information</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/Direct-Stock-Purchase-Plan/default.aspx">Direct Stock Purchase Plan</a></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/corporate-governance/our-view-on-governance/default.aspx">Corporate Governance</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/corporate-governance/our-view-on-governance/default.aspx">Our View on Governance</a></li><li class="has-children"><a href="https://www.cmsenergy.com/corporate-governance/directors/default.aspx">Directors</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/corporate-governance/directors/directors-details/default.aspx">Directors Details</a></li>
+		</ul></li><li><a href="https://www.cmsenergy.com/corporate-governance/officers/default.aspx">Officers</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/governance-documents/default.aspx">Governance Documents</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/contact-the-board/default.aspx">Contact the Board</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/compliance-and-ethics/default.aspx">Compliance & Ethics</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/Political-Engagement/default.aspx" target="_blank">Political Engagement</a></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/newsroom/default.aspx">Newsroom</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/newsroom/media-contacts/default.aspx">Media Contacts</a></li><li><a href="https://www.cmsenergy.com/investor-relations/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.cmsenergy.com/newsroom/latest-presentation/default.aspx">Latest Presentation</a></li><li class="has-children"><a href="/about-cms-energy/leadership/board-of-directors/default.aspx">Leadership</a><ul class="level3">
+			<li><a href="/about-cms-energy/leadership/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="/about-cms-energy/leadership/officers/default.aspx">Officers</a></li>
+		</ul></li>
+	</ul></li><li><a href="https://www.cmsenergy.com/environment/default.aspx">Environment</a></li><li><a href="https://www.cmsenergy.com/corporate-responsibility/default.aspx">Corporate Responsibility</a></li><li><a href="https://www.cmsenergy.com/careers/default.aspx">Careers</a></li>
+</ul></nav>
+</span><span class='NavigationPaneDiv6'><div id="_ctrl0_ctl21_divModuleContainer" class="ModuleContainer ModuleSearch MobileSearch">
+	<h1 id="_ctrl0_ctl21_lblTitle"><span id="_ctrl0_ctl21_lblModuleTitle" class="ModuleTitle">Mobile Search</span></h1>
+    <div class="ModuleContainerInnerTop">
+        <div class="ModuleContainerInner">
+	        <span id="_ctrl0_ctl21_lblSearchText" class="SearchText"></span><input name="_ctrl0$ctl21$txtSearchInput" type="text" id="_ctrl0_ctl21_txtSearchInput" class="SearchInput" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl21$btnSearch&#39;, &#39;&#39;); " />
+            <input type="submit" name="_ctrl0$ctl21$btnSearch" value="Search" id="_ctrl0_ctl21_btnSearch" class="ModuleButton SearchButton" />
+            
+        </div>
+    </div>
+</div>
+</span></div>
+			<div class="PaneHeader"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="BlankModuleContainer">
+    
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PHRSZG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+{'gtm.start': new Date().getTime(),event:'gtm.js'}
+
+);var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PHRSZG');</script>
+<!-- End Google Tag Manager -->
+</div></span><span class='HeaderPaneDiv7'><div id="_ctrl0_ctl24_divModuleContainer" class="Logo"><a href="https://www.cmsenergy.com/home/default.aspx" id="_ctrl0_ctl24_hrefLink"><img src="//s2.q4cdn.com/027997281/files/design/ClientLogo.png" id="_ctrl0_ctl24_img1" border="0" alt="Homepage" /></a><br /></div>
+</span><span class='HeaderPaneDiv8'><div id="_ctrl0_ctl27_divModuleContainer" class="ModuleContainer ModuleSearch">
+	
+    <div class="ModuleContainerInnerTop">
+        <div class="ModuleContainerInner">
+	        <span id="_ctrl0_ctl27_lblSearchText" class="SearchText"></span><input name="_ctrl0$ctl27$txtSearchInput" type="text" id="_ctrl0_ctl27_txtSearchInput" class="SearchInput" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl27$btnSearch&#39;, &#39;&#39;); " />
+            <input type="submit" name="_ctrl0$ctl27$btnSearch" value="Search" id="_ctrl0_ctl27_btnSearch" class="ModuleButton SearchButton" />
+            
+        </div>
+    </div>
+</div>
+</span><span class='HeaderPaneDiv9'><div id="_ctrl0_ctl30_divModuleContainer" class="StockQuoteHeader">
+	<h1 id="_ctrl0_ctl30_lblTitle">
+		<span id="_ctrl0_ctl30_lblModuleTitle" class="ModuleTitle">CMS Energy Stock Price</span></h1>
+	<span id="_ctrl0_ctl30_lblDescription1" class="StockDescription1"></span>
+	<span id="_ctrl0_ctl30_lblDescription2" class="StockDescription2"></span>
+        <a href="https://www.cmsenergy.com/investor-relations/stock-information/default.aspx" id="_ctrl0_ctl30_hrefPrice" class="StockPrice">65.65</a>
+	<span id="_ctrl0_ctl30_lblChange" class="StockChange StockPriceUp"><span class='StockIndicator StockIndicatorUp'>+</span>0.27</span>
+	<span id="_ctrl0_ctl30_lblPChange" class="StockPChange StockPriceUp"><span class='StockIndicator'>+</span>0.41%</span>
+	<span id="_ctrl0_ctl30_lblVolumeText" class="StockVolumeText">Volume: </span>
+	<span id="_ctrl0_ctl30_lblVolume" class="StockVolume">2,604,990</span>
+	<span id="_ctrl0_ctl30_lblDescription3" class="StockDescription3"></span>
+	<span id="_ctrl0_ctl30_lblStockDate" class="StockDate">01.17.20 04:04 ET</span>
+</div></span><span class='HeaderPaneDiv10'><nav class="MainNav"><ul class="level1">
+	<li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/default.aspx">About CMS Energy</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/about-cms-energy/guiding-priniciples/default.aspx">Guiding Principles</a></li><li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/leadership/board-of-directors/default.aspx">Leadership</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/about-cms-energy/leadership/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="https://www.cmsenergy.com/about-cms-energy/leadership/officers/default.aspx">Officers</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/consumers-energy/default.aspx">Consumers Energy</a><ul class="level3">
+			<li><a href="https://www.consumersenergy.com/company/what-we-do/electric-generation" target="_blank">Electric Business</a></li><li><a href="https://www.consumersenergy.com/company/what-we-do/natural-gas-operations" target="_blank">Natural Gas Business</a></li>
+		</ul></li><li><a href="https://www.cms-enterprises.com/home/default.aspx">CMS Enterprises</a></li><li><a href="https://www.cmsenergy.com/about-cms-energy/enerbank-usa/default.aspx">EnerBank USA<sup>®</sup></a></li>
+	</ul></li><li class="has-children"><a href="http://www.cmsenergy.com/investor-relations/corporate-overview/default.aspx">Investor Relations</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/investor-relations/corporate-overview/default.aspx">Corporate Overview</a></li><li><a href="https://www.cmsenergy.com/investor-relations/events-and-presentations/default.aspx">Events & Presentations</a></li><li><a href="https://www.cmsenergy.com/investor-relations/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.cmsenergy.com/investor-relations/glossary/default.aspx">Glossary</a></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/financial-information/cms-annual-reports/default.aspx">Financial Information</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/financial-information/cms-annual-reports/default.aspx">Annual Reports</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/proxy-materials/default.aspx">Proxy Materials</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/quarterly-earnings/default.aspx">Quarterly Earnings</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/Supplemental/default.aspx">Supplemental</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/sec-filings/default.aspx">Regulatory Filings</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/sec-filings/default.aspx">CMS Energy SEC Filings</a></li><li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/Consumers-Energy-SEC-Filings/default.aspx"><span class="break">Consumers Energy<br/>SEC Filings</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/mpsc-filings/default.aspx">Rate Case Summaries</a></li><li><a href="https://new.consumersenergy.com/2014-securitization" target="_blank"><span class="break">Consumers 2014 <br/>Securitization Funding LLC</span></a></li>
+		</ul></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=CMS&amp;Exchange=NYSE" target="_blank">Interactive Analyst Center</a></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/stock-information/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/stock-information/analyst-coverage/default.aspx">Analyst Coverage</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/investor-resources/contact-ir-and-email-contacts/default.aspx">Investor Resources</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/contact-ir-and-email-contacts/default.aspx"><span class="break">Contact IR <br/>& Email Contacts</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/information-request/default.aspx"><span class="break">Information<br/> Request</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/receive-email-alerts/default.aspx"><span class="break">Receive <br/>Email Alerts</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/online-investor-kit/default.aspx"><span class="break">Online <br/>Investor Kit</span></a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/shareowner-services/default.aspx">Shareowner Services</a><ul class="level2">
+		<li><a href="//s2.q4cdn.com/027997281/files/doc_downloads/Prospectus.pdf" target="_blank">Stock Plan Prospectus</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/tax-information/default.aspx">Tax Information</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/manage-your-account-online/default.aspx">Manage Your Account Online</a></li><li><a href="http://www.shareowneronline.com/" target="_blank">Equiniti Trust Company</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/Shareowner-Contact-Information/default.aspx">Shareowner Contact Information</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/Direct-Stock-Purchase-Plan/default.aspx">Direct Stock Purchase Plan</a></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/corporate-governance/our-view-on-governance/default.aspx">Corporate Governance</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/corporate-governance/our-view-on-governance/default.aspx">Our View on Governance</a></li><li class="has-children"><a href="https://www.cmsenergy.com/corporate-governance/directors/default.aspx">Directors</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/corporate-governance/directors/directors-details/default.aspx">Directors Details</a></li>
+		</ul></li><li><a href="https://www.cmsenergy.com/corporate-governance/officers/default.aspx">Officers</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/governance-documents/default.aspx">Governance Documents</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/contact-the-board/default.aspx">Contact the Board</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/compliance-and-ethics/default.aspx">Compliance & Ethics</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/Political-Engagement/default.aspx" target="_blank">Political Engagement</a></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/newsroom/default.aspx">Newsroom</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/newsroom/media-contacts/default.aspx">Media Contacts</a></li><li><a href="https://www.cmsenergy.com/investor-relations/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.cmsenergy.com/newsroom/latest-presentation/default.aspx">Latest Presentation</a></li><li class="has-children"><a href="/about-cms-energy/leadership/board-of-directors/default.aspx">Leadership</a><ul class="level3">
+			<li><a href="/about-cms-energy/leadership/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="/about-cms-energy/leadership/officers/default.aspx">Officers</a></li>
+		</ul></li>
+	</ul></li><li><a href="https://www.cmsenergy.com/environment/default.aspx">Environment</a></li><li><a href="https://www.cmsenergy.com/corporate-responsibility/default.aspx">Corporate Responsibility</a></li><li><a href="https://www.cmsenergy.com/careers/default.aspx">Careers</a></li>
+</ul></nav>
+</span><span class='HeaderPaneDiv30'><div id="_ctrl0_ctl66_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript">
+
+var replace = {
+    'http://d1lge852tjjqow.cloudfront.net/CIK-0000811156/166db641-c890-4970-9d1e-b09b265d424e.pdf' : '/files/doc_financials/sec/2015/CMS-Energy-2015-Proxy-Statement_v001_y96c6x.pdf',
+
+//'http://d1lge852tjjqow.cloudfront.net/CIK-0000811156/810c93ec-038b-4744-977f-bc6c8d18da30.pdf' : '/files/doc_financials/sec/2016/20160314-CMS-Proxy-FINAL-with-links-and-Proxy-Card-(2).pdf'
+
+
+};
+
+var remove = [
+    'http://d1lge852tjjqow.cloudfront.net/CIK-0000811156/fe22267d-fef0-4c28-950b-92263c73fb78.rtf'
+];
+
+// for the filing list page
+$(document).ajaxComplete(function() {
+    $.each(replace, function(src, repl) {
+        $('a[href*="'+src+'"]').attr('href', repl);
+    });
+
+    $.each(remove, function (i, src) {
+        $('a[href*="' + src + '"]').parent().hide();
+    });
+});
+
+// for the filing details page
+$(document).ready(function() {
+    $.each(replace, function(src, repl) {
+        $('a[href*="'+src+'"]').attr('href', repl);
+    });
+
+    $.each(remove, function (i, src) {
+        $('a[href*="' + src + '"]').parent().hide();
+    });
+});
+</script>
+
+</div></span><span class='HeaderPaneDiv32'><div id="_ctrl0_ctl72_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript">
+     if (location.href == 'http://www.cmsenergy.com/investor-relations/') {
+          window.location = "http://www.cmsenergy.com/investor-relations/corporate-overview/default.aspx";
+     }
+</script>
+</div></span></span></div>
+			<div class="PaneHeader2"><span class='HeaderPane2Div11'><div id="_ctrl0_ctl36_divModuleContainer" class="HeaderImageContainer clearfix">
+    <div class="HeaderImage">
+        <img src='//s2.q4cdn.com/027997281/files/design/header_privacy-statement_en.jpg' alt='privacy-statement'>
+    </div>
+</div></span><span class='HeaderPane2Div1'><div id="_ctrl0_ctl81_divModuleContainer" class="HtmlTextContainer Banner left-content blue">
+    
+    <div class="ContentContainer">
+        <!--<a href="#" class="hyperlink"></a>-->
+<div class="ContentContainerInner">
+<div class="arrow">&nbsp;</div>
+<h1>KEEPING THE LIGHTS ON.</h1>
+<p>
+We’ve invested nearly $400 million over the last five years to upgrade our electric distribution system.
+<!--<span class="more">+</span>-->
+</p>
+</div>
+    </div>
+</div></span></div>
+		</div>
+		<div class="PaneContentInner">
+			<div class="PaneRight"><span class='RightPaneDiv'><span class='RightPaneDiv14'><div id="_ctrl0_ctl45_divModuleContainer" class="StockQuoteGlobal clearfix">
+	<h1 id="_ctrl0_ctl45_lblTitle">
+		<span id="_ctrl0_ctl45_lblModuleTitle" class="ModuleTitle">CMS Energy Stock Price</span></h1>
+	<span id="_ctrl0_ctl45_lblDescription1" class="StockDescription1"></span>
+	<span id="_ctrl0_ctl45_lblDescription2" class="StockDescription2"></span>
+	<span id="_ctrl0_ctl45_lblStockDate" class="StockDate"><i class='day'>17</i><i class='month'>Jan</i><i class='year'>2020</i> 04:04 ET</span>
+       <span class="Price-Change">
+        <a href="https://www.cmsenergy.com/investor-relations/stock-information/default.aspx" id="_ctrl0_ctl45_hrefPrice" class="StockPrice">65.65</a>
+	<span id="_ctrl0_ctl45_lblChange" class="StockChange StockPriceUp"><span class='StockIndicator StockIndicatorUp'>+</span>0.27</span>
+       </span>
+	<span id="_ctrl0_ctl45_lblPChange" class="StockPChange StockPriceUp"><span class='StockIndicator'>+</span>0.41%</span>
+	<span id="_ctrl0_ctl45_lblVolumeText" class="StockVolumeText">Volume: </span>
+	<span id="_ctrl0_ctl45_lblVolume" class="StockVolume">2,604,990</span>
+	<span id="_ctrl0_ctl45_lblDescription3" class="StockDescription3"></span>
+</div></span><span class='RightPaneDiv3'><div id="_ctrl0_ctl87_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl87_divModuleContainer" class="QuickLinks">
+	<h1 id="_ctrl0_ctl87_lblTitle"><span id="_ctrl0_ctl87_lblModuleTitle" class="ModuleTitle">Related Links</span></h1>
+	<ul id="_ctrl0_ctl87_qlList">
+		
+				
+				<li class="QuickLinkRow"><a target="_self" href="https://www.cmsenergy.com/security-statement/default.aspx">Security Statement</a>
+				
+			
+				
+				<li class="QuickLinkRowAlt"><a target="" href="/English/Home/terms-of-use">Terms of Use</a>
+				
+			
+				
+				<li class="QuickLinkRow"><a target="_self" href="https://www.cmsenergy.com/contact-us/default.aspx">Contact Us</a>
+				
+			
+	</ul>
+</div>
+</span></span></div>
+			<div class="PaneBreadcrumb"><span class='BreadcrumbPaneDiv12'><div id="_ctrl0_ctl39_divModuleContainer" class="Breadcrumb"><a href="https://www.cmsenergy.com/home/default.aspx" id="_ctrl0_ctl39_hrefHome" class="BreadcrumbHomeLink">Home</a><span class='BreadcrumbSeparator'>></span>Privacy Statement
+
+<div class="ClearFix"></div>
+</div>
+</span></div>
+			<div class="PaneContent"><span class='ContentPaneDiv'><span class='ContentPaneDiv13'><nav class="SecNav"><ul class="level1">
+	<li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/default.aspx">About CMS Energy</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/about-cms-energy/guiding-priniciples/default.aspx">Guiding Principles</a></li><li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/leadership/board-of-directors/default.aspx">Leadership</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/about-cms-energy/leadership/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="https://www.cmsenergy.com/about-cms-energy/leadership/officers/default.aspx">Officers</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/about-cms-energy/consumers-energy/default.aspx">Consumers Energy</a><ul class="level3">
+			<li><a href="https://www.consumersenergy.com/company/what-we-do/electric-generation" target="_blank">Electric Business</a></li><li><a href="https://www.consumersenergy.com/company/what-we-do/natural-gas-operations" target="_blank">Natural Gas Business</a></li>
+		</ul></li><li><a href="https://www.cms-enterprises.com/home/default.aspx">CMS Enterprises</a></li><li><a href="https://www.cmsenergy.com/about-cms-energy/enerbank-usa/default.aspx">EnerBank USA<sup>®</sup></a></li>
+	</ul></li><li class="has-children"><a href="http://www.cmsenergy.com/investor-relations/corporate-overview/default.aspx">Investor Relations</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/investor-relations/corporate-overview/default.aspx">Corporate Overview</a></li><li><a href="https://www.cmsenergy.com/investor-relations/events-and-presentations/default.aspx">Events & Presentations</a></li><li><a href="https://www.cmsenergy.com/investor-relations/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.cmsenergy.com/investor-relations/glossary/default.aspx">Glossary</a></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/financial-information/cms-annual-reports/default.aspx">Financial Information</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/financial-information/cms-annual-reports/default.aspx">Annual Reports</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/proxy-materials/default.aspx">Proxy Materials</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/quarterly-earnings/default.aspx">Quarterly Earnings</a></li><li><a href="https://www.cmsenergy.com/investor-relations/financial-information/Supplemental/default.aspx">Supplemental</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/sec-filings/default.aspx">Regulatory Filings</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/sec-filings/default.aspx">CMS Energy SEC Filings</a></li><li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/Consumers-Energy-SEC-Filings/default.aspx"><span class="break">Consumers Energy<br/>SEC Filings</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/regulatory-filings/mpsc-filings/default.aspx">Rate Case Summaries</a></li><li><a href="https://new.consumersenergy.com/2014-securitization" target="_blank"><span class="break">Consumers 2014 <br/>Securitization Funding LLC</span></a></li>
+		</ul></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=CMS&amp;Exchange=NYSE" target="_blank">Interactive Analyst Center</a></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/stock-information/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/stock-information/analyst-coverage/default.aspx">Analyst Coverage</a></li>
+		</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/investor-relations/investor-resources/contact-ir-and-email-contacts/default.aspx">Investor Resources</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/contact-ir-and-email-contacts/default.aspx"><span class="break">Contact IR <br/>& Email Contacts</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/information-request/default.aspx"><span class="break">Information<br/> Request</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/receive-email-alerts/default.aspx"><span class="break">Receive <br/>Email Alerts</span></a></li><li><a href="https://www.cmsenergy.com/investor-relations/investor-resources/online-investor-kit/default.aspx"><span class="break">Online <br/>Investor Kit</span></a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/shareowner-services/default.aspx">Shareowner Services</a><ul class="level2">
+		<li><a href="//s2.q4cdn.com/027997281/files/doc_downloads/Prospectus.pdf" target="_blank">Stock Plan Prospectus</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/tax-information/default.aspx">Tax Information</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/manage-your-account-online/default.aspx">Manage Your Account Online</a></li><li><a href="http://www.shareowneronline.com/" target="_blank">Equiniti Trust Company</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/Shareowner-Contact-Information/default.aspx">Shareowner Contact Information</a></li><li><a href="https://www.cmsenergy.com/shareowner-services/Direct-Stock-Purchase-Plan/default.aspx">Direct Stock Purchase Plan</a></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/corporate-governance/our-view-on-governance/default.aspx">Corporate Governance</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/corporate-governance/our-view-on-governance/default.aspx">Our View on Governance</a></li><li class="has-children"><a href="https://www.cmsenergy.com/corporate-governance/directors/default.aspx">Directors</a><ul class="level3">
+			<li><a href="https://www.cmsenergy.com/corporate-governance/directors/directors-details/default.aspx">Directors Details</a></li>
+		</ul></li><li><a href="https://www.cmsenergy.com/corporate-governance/officers/default.aspx">Officers</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/governance-documents/default.aspx">Governance Documents</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/contact-the-board/default.aspx">Contact the Board</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/compliance-and-ethics/default.aspx">Compliance & Ethics</a></li><li><a href="https://www.cmsenergy.com/corporate-governance/Political-Engagement/default.aspx" target="_blank">Political Engagement</a></li>
+	</ul></li><li class="has-children"><a href="https://www.cmsenergy.com/newsroom/default.aspx">Newsroom</a><ul class="level2">
+		<li><a href="https://www.cmsenergy.com/newsroom/media-contacts/default.aspx">Media Contacts</a></li><li><a href="https://www.cmsenergy.com/investor-relations/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.cmsenergy.com/newsroom/latest-presentation/default.aspx">Latest Presentation</a></li><li class="has-children"><a href="/about-cms-energy/leadership/board-of-directors/default.aspx">Leadership</a><ul class="level3">
+			<li><a href="/about-cms-energy/leadership/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="/about-cms-energy/leadership/officers/default.aspx">Officers</a></li>
+		</ul></li>
+	</ul></li><li><a href="https://www.cmsenergy.com/environment/default.aspx">Environment</a></li><li><a href="https://www.cmsenergy.com/corporate-responsibility/default.aspx">Corporate Responsibility</a></li><li><a href="https://www.cmsenergy.com/careers/default.aspx">Careers</a></li>
+</ul></nav>
+</span><span class='ContentPaneDiv29'><div id="_ctrl0_ctl63_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript">
+$(function(){
+    $('.MainNav .level2 > li > a:contains("Interactive Analyst Center"), .analystCenter a').addClass('disclaimerLink'); 
+
+
+    $('.disclaimerLink').on('click', function(e) {
+        e.preventDefault();
+
+        $('#Disclaimer').find('#proceed').attr('href', $(this).attr('href'));
+        
+        $.fancybox({
+            href : '#Disclaimer',
+            maxWidth    : 960,
+            maxHeight   : 600,
+            padding     : 25
+        });
+    });
+
+    $('#back').click(function(event){
+        event.preventDefault();
+        $.fancybox.close();
+    });
+});
+</script>
+</div></span><span class='ContentPaneDiv31'><div id="_ctrl0_ctl69_divModuleContainer" class="HtmlTextContainer DisclaimerPopup">
+    
+    <div class="ContentContainer">
+        <div id="Disclaimer">
+
+<p><strong>Disclaimer</strong></p>
+<p>Please note that you are now entering a website directly or indirectly maintained by a third party (the "External Site") and that you do so at your own risk.</p>
+<p>CMS Energy, Corp. (“CMS”) has no control over the External Site, any data or other content contained therein or any additional linked websites. The link to the External Site is provided for convenience purposes only. By clicking “Accept” you acknowledge and agree that neither CMS nor third party provider Virtua Research, Inc. (“Virtua) is responsible, or accepts or assumes any responsibility or liability whatsoever for, the content, the data or the technical operation of the Linked Site. Further, by entering the External Site, you also acknowledge and agree that you completely and irrevocably waive any and all rights and claims against CMS and Virtua and further acknowledge and agree that in no event shall CMS or Virtua, its officers, employees, directors and agents be liable for any (i) indirect, consequential, incidental, special, compensatory or punitive damages, (ii) damages for loss of income, loss of business profits, business interruption, loss of data or business information, loss of or damage to property, (iii) claims of third parties, or (iv) other pecuniary loss, arising out of or related to the Legal Notice, this disclaimer or the External Site</p>
+<p>By entering the External Site, you further acknowledge and agree that the disclaimer of warranties and limitations of liability set out in this disclaimer shall apply regardless of the causes, circumstances or form of action giving rise to the loss, damage, claim or liability, even if such loss, damage, claim or liability is based upon breach of contract (including, without limitation, a claim of fundamental breach or breach of a fundamental term), tort (including, without limitation, negligence), strict liability or any other legal or equitable theory, and even if CMS and Virtua are advised of the possibility of the loss, damage, claim or liability. The waiver and release specifically includes, without limitation, any and all rights and claims pertaining to the processing of personal data, including but not limited to any rights under any applicable data protection statute(s). If in any jurisdiction, any part of this disclaimer is held to be unenforceable by a court of competent jurisdiction, such part of this disclaimer shall be restricted or eliminated to the minimum extent and the remaining disclaimer shall otherwise remain in full force and effect.</p>
+<p>Please note the information presented is deemed representative at the time of its original release. Changes in historical information may occur due to adjustments in accounting and reporting standards &amp; procedures.</p>
+<p><strong>Non-GAAP Information</strong></p>
+
+
+<p>In addition to disclosing results determined in accordance with GAAP, CMS may also disclose certain non-GAAP and pro forma non-GAAP results of operations, including net income, earnings per share, and operating income that make certain adjustments or exclude certain charges and gains that are outlined in the schedules included in this website. CMS provides historical financial results on both a GAAP and non-GAAP basis. Management views adjusted earnings as a key measure of the company’s present operating financial performance and uses adjusted earnings for external communications with analysts and investors. Internally, the company uses adjusted earnings to measure and assess performance. Adjustments could include items such as discontinued operations, asset sales, impairments, restructuring costs, regulatory items from prior years, or other items. Because the company is not able to estimate the impact of specific line items, which have the potential to significantly impact, favorably or unfavorably, the company’s reported earnings in future periods, the company is not providing reported earnings guidance nor is it providing a reconciliation for the comparable future period earnings. </p>
+
+<p>CMS and Virtua also take no responsibility for third party pricing data provided for informational purposes and certain ratio results formulated from the provided third party pricing data. The non-GAAP information is not prepared in accordance with GAAP and may not be comparable to non-GAAP information used by other companies. The non-GAAP information should be considered supplemental information to assist in fully understanding our business results, rather than as a substitute for the reported earnings.</p>
+
+<pcms and="" virtua="" also="" take="" no="" responsibility="" for="" third="" party="" pricing="" data="" provided="" informational="" purposes="" certain="" ratio="" results="" formulated="" from="" the="" data.="" non-gaap="" information="" is="" not="" prepared="" in="" accordance="" with="" gaap="" may="" be="" comparable="" to="" used="" by="" other="" companies.="" should="" considered="" supplemental="" assist="" fully="" understanding="" our="" business="" results,="" rather="" than="" as="" a="" substitute="" reported="" earnings.<="" p="">
+
+<p>A reconciliation of each of these non-GAAP measures to the most directly comparable GAAP measure is included as a separate link and also posted on the CMS website at <a href="http://www.cmsenergy.com">www.cmsenergy.com</a>.</p>
+
+<span class="disclaimerButtons">
+<a target="_blank" id="proceed" href="#">Accept</a>&nbsp;|&nbsp;<a target="_blank" id="back" href="#">Decline</a>
+</span>
+</pcms></div>
+    </div>
+</div></span><span class='ContentPaneDiv2'><div id="_ctrl0_ctl84_divModuleContainer" class="HtmlTextContainer BlueModuleTitle">
+    <h1 id="_ctrl0_ctl84_lblTitle">
+        <span id="_ctrl0_ctl84_lblModuleTitle" class="ModuleTitle">Privacy Statement</span>
+    </h1>
+    <div class="ContentContainer">
+        <p>Privacy is a high priority at CMS Energy. This statement has been designed to help you understand what information we gather from our online guests and what we do with it. Our <a href="/English/security-statement/default.aspx">Security Statement</a>&nbsp;explains the steps we take to protect sensitive information.</p>
+<p>Contents of Privacy Statement:</p>
+    </div>
+</div></span><span class='ContentPaneDiv4'><div id="_ctrl0_ctl90_divModuleContainer" class="FaqContainer">
+
+<div class="FaqQuestionList">
+	
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question152" id="_ctrl0_ctl90_rtrHeader_ctl00_hrefGoToQuestion" class="FaqQuestionLink">What information does CMS Energy gather about me and how is it used?</a><br />
+		
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question151" id="_ctrl0_ctl90_rtrHeader_ctl01_hrefGoToQuestion" class="FaqQuestionLink">How do I change, delete or opt-out of a service?</a><br />
+		
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question148" id="_ctrl0_ctl90_rtrHeader_ctl02_hrefGoToQuestion" class="FaqQuestionLink">Guest&#39;s role in maintaining privacy</a><br />
+		
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question149" id="_ctrl0_ctl90_rtrHeader_ctl03_hrefGoToQuestion" class="FaqQuestionLink">Children&#39;s Guidelines</a><br />
+		
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question147" id="_ctrl0_ctl90_rtrHeader_ctl04_hrefGoToQuestion" class="FaqQuestionLink">What are “cookies” and does CMS Energy use them?</a><br />
+		
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question154" id="_ctrl0_ctl90_rtrHeader_ctl05_hrefGoToQuestion" class="FaqQuestionLink">What is CMS Energy&#39;s policy regarding email?</a><br />
+		
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question153" id="_ctrl0_ctl90_rtrHeader_ctl06_hrefGoToQuestion" class="FaqQuestionLink">Does CMS Energy link to other web sites?</a><br />
+		
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question150" id="_ctrl0_ctl90_rtrHeader_ctl07_hrefGoToQuestion" class="FaqQuestionLink">Changes to the Privacy Statement</a><br />
+		
+			<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question155" id="_ctrl0_ctl90_rtrHeader_ctl08_hrefGoToQuestion" class="FaqQuestionLink">For more information</a><br />
+		
+</div>
+<div class="FaqDetailList">
+	
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl00_hrefQuestion" class="FaqAnswerLink" name="Question152"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl00_lblQuestion">What information does CMS Energy gather about me and how is it used?</span></h3>
+			<div class="FaqAnswer"><p>CMS Energy gathers general information from all guests who visit our web site, and requests specific information from others. Whenever information is requested, the guest may decide not to provide it. The information you provide will not be shared with any third party outside of CMS Energy, unless i)&nbsp; the provision of such information is required in order to fulfill your request or ii)&nbsp; the third party is acting under contract to act on our behalf.&nbsp; (See our policy regarding email.)</p>
+<p>When you come to our web site, we gather statistical information such as your Internet Provider and pages visited within our web site. This is used to help us continually improve our web site and compile broad demographic information.</p>
+<p>In a few areas of our web site we request specific information from our guests. Basically, we only ask for information we need, when we need it. In most cases you can decline to provide the information. In these cases, if you decide not to provide the information, or provide incorrect information, you will not be able to take full advantage of the services offered. Sensitive information is handled in a secure manner (See <a href="/security-statement/default.aspx">Security Statement</a>&nbsp;for more details).</p></div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl00_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl01_hrefQuestion" class="FaqAnswerLink" name="Question151"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl01_lblQuestion">How do I change, delete or opt-out of a service?</span></h3>
+			<div class="FaqAnswer"><p>To change or delete information previously provided, or opt-out of a service you previously enrolled in, do one of the following:</p>
+<ul>
+    <li>Go to the specific service where you provided the information, or signed up for the service, and follow the&nbsp;instructions provided.&nbsp;&nbsp;</li>
+    <li>Send an email describing your request to the address listed with the service.</li>
+    <li>Call the phone number listed with the service for assistance. </li>
+</ul></div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl01_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl02_hrefQuestion" class="FaqAnswerLink" name="Question148"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl02_lblQuestion">Guest's role in maintaining privacy</span></h3>
+			<div class="FaqAnswer"><p>As noted in our Security Statement, CMS Energy has taken measures to protect sensitive information that is shared with us. Guests also play an important role in maintaining privacy. Learn how to check the security level of your browser before sending sensitive information. If your browser is not secure, don't send it. When selecting a password choose one that's easy for you to remember, but difficult for others to guess. The CMS Energy Security Statement identifies how to check browser security and offers password tips.</p></div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl02_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl03_hrefQuestion" class="FaqAnswerLink" name="Question149"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl03_lblQuestion">Children's Guidelines</span></h3>
+			<div class="FaqAnswer"><p>CMS Energy does not knowingly solicit data from children nor do we knowingly market to children.</p></div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl03_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl04_hrefQuestion" class="FaqAnswerLink" name="Question147"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl04_lblQuestion">What are “cookies” and does CMS Energy use them?</span></h3>
+			<div class="FaqAnswer"><p>A cookie is a piece of information that a web server may place on a guest's computer hard drive when the guest visits their web site. Typically the cookie information is accessed by the web server whenever the guest visits their web site. This lets the server know that this guest has been to the web site before. The specific contents of a cookie are determined by the web owner. Guests may set their browsers to notify them before accepting or rejecting a cookie. If you have set your browser to reject cookies you may still use our web site.</p>
+<p>CMS Energy does use cookies, however, in non-intrusive ways. We do not store any personally identifiable information in your cookie and we do not use cookies in any manner that would infringe on the anonymity of persons accessing our web site.&nbsp; CMS Energy only uses cookies to enhance and optimize our guest’s experience while visiting our web site. CMS Energy does not use cookies to retrieve any information from our guest’s computer.</p></div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl04_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl05_hrefQuestion" class="FaqAnswerLink" name="Question154"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl05_lblQuestion">What is CMS Energy's policy regarding email?</span></h3>
+			<div class="FaqAnswer"><p>If you are using online transactional services, such as our online job application feature, you may receive emails from us (or a third party acting on our behalf) related to your online transactions.&nbsp; You may receive emails from us (or a third party acting on our behalf) containing information we think you may find helpful or interesting (<span class="HeaderPane2Div10">“</span>Informational emails<span class="HeaderPane2Div10">”</span>).&nbsp; If required by law, you will be given the option to <span class="HeaderPane2Div10">“</span>opt out of<span class="HeaderPane2Div10">”</span> receiving future Informational emails.</p>
+<p>We do not ask for personal or account information in an email unless you have contacted us first and we need to clarify your request.&nbsp; Be sure any links embedded in the email are actually taking you to a CMS Energy web site.&nbsp; If you have any doubt an email is really from us, go to our web site directly by typing consumersenergy.com into your browser window and navigating to the desired page.</p></div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl05_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl06_hrefQuestion" class="FaqAnswerLink" name="Question153"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl06_lblQuestion">Does CMS Energy link to other web sites?</span></h3>
+			<div class="FaqAnswer">The CMS Energy web site links to other web sites. Please be aware that we are not responsible for the privacy and security practices of other web sites. We encourage our guests to be aware when they leave our web site and to read the privacy and security statements of each and every web site. This privacy statement applies solely to information collected by the CMS Energy web site.</div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl06_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl07_hrefQuestion" class="FaqAnswerLink" name="Question150"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl07_lblQuestion">Changes to the Privacy Statement</span></h3>
+			<div class="FaqAnswer"><p>If we decide to change our Privacy Statement, we will post those changes so our guests are always aware of what information we collect, how we use it and under what circumstances, if any, we disclose it.</p></div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl07_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+			<a id="_ctrl0_ctl90_rtrQuestion_ctl08_hrefQuestion" class="FaqAnswerLink" name="Question155"></a>
+			<h3><span id="_ctrl0_ctl90_rtrQuestion_ctl08_lblQuestion">For more information</span></h3>
+			<div class="FaqAnswer"><p>If you have any questions about this Privacy Statement, the practices of this web site, or your dealings with this web site, you can:</p>
+<ul style="list-style-type: disc;">
+    <li>Send email to: <a href="mailto:protection@cmsenergy.com">protection@cmsenergy.com</a></li>
+    <li>Or, if you prefer, send mail to the following postal address:<br />
+    Information Protection<br />
+    CMS Energy<br />
+    One Energy Plaza<br />
+    Jackson, MI 49201</li>
+</ul></div>
+			<p class="FAQ-BackToTop"><a href="https://www.cmsenergy.com/privacy-statement/default.aspx#top" id="_ctrl0_ctl90_rtrQuestion_ctl08_hrefBackToTop" class="BackToTopLink">top of page</a></p>
+		
+</div>
+</div></span><span class='ContentPaneDiv5'><div id="_ctrl0_ctl93_divModuleContainer" class="HtmlTextContainer">
+    
+    <div class="ContentContainer">
+        <p>Check back to the CMS Energy homepage often to see what other services we have to offer. For help using this system, please&nbsp;contact us <a href="mailto:info@cmsenergy.com">info@cmsenergy.com</a>&nbsp;or call Customer Service at 1-800-477-5050.</p>
+<p>Revised December 2014</p>
+    </div>
+</div></span></span></div>
+			<div class="PaneLeft"><span class='LeftPaneDiv'></span></div>
+		</div>
+                </div>
+		<div class="FooterContainer">
+			<div class="PaneFooter"><span class='FooterPaneDiv'><span class='FooterPaneDiv20'><div id="_ctrl0_ctl48_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl48_divModuleContainer" class="FooterLinks main">
+	<h1 id="_ctrl0_ctl48_lblTitle"><span id="_ctrl0_ctl48_lblModuleTitle" class="ModuleTitle">Footer Links</span></h1>
+	<ul id="_ctrl0_ctl48_qlList" class="FooterLinks main">
+		
+				
+				<li class="QuickLinkRow"><a target="_self" href="https://www.cmsenergy.com/site-map/default.aspx">Site Map</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRowAlt"><a target="_self" href="https://www.cmsenergy.com/privacy-statement/default.aspx">Privacy</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRow"><a target="_self" href="https://www.cmsenergy.com/contact-us/default.aspx">Contact Us</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRowAlt"><a target="_self" href="https://www.cmsenergy.com/security-statement/default.aspx">Security</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRow"><a target="_blank" href="http://www.consumersenergy.com/" target="_self">Consumers Energy</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRowAlt"><a target="" href="/English/Home/terms-of-use">Terms of Use</a>
+				
+			
+	</ul>
+</div>
+</span><span class='FooterPaneDiv21'><div id="_ctrl0_ctl51_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl51_divModuleContainer" class="FooterLinks destinations">
+	<h1 id="_ctrl0_ctl51_lblTitle"><span id="_ctrl0_ctl51_lblModuleTitle" class="ModuleTitle">Top Destinations</span></h1>
+	<ul id="_ctrl0_ctl51_qlList" class="FooterLinks destinations">
+		
+				
+				<li class="QuickLinkRow"><a target="_self" href="https://www.cmsenergy.com/investor-relations/corporate-overview/default.aspx">Investor Relations</a>
+				
+			
+				
+				<li class="QuickLinkRowAlt"><a target="_self" href="https://www.cmsenergy.com/investor-relations/news-releases/default.aspx">News Releases</a>
+				
+			
+				
+				<li class="QuickLinkRow"><a target="_self" href="https://www.cmsenergy.com/careers/default.aspx">Careers</a>
+				
+			
+				
+				<li class="QuickLinkRowAlt"><a target="_self" href="https://www.cmsenergy.com/investor-relations/events-and-presentations/default.aspx">Latest Presentation</a>
+				
+			
+				
+				<li class="QuickLinkRow"><a target="_self" href="https://www.cmsenergy.com/about-cms-energy/leadership/board-of-directors/default.aspx">Leadership</a>
+				
+			
+	</ul>
+</div>
+</span><span class='FooterPaneDiv22'>
+<div class="EditSubscriberContainer MailingListSignupContainer">
+
+
+<div id="_ctrl0_ctl54_divModuleContainer" class="MailingListForm footerAlerts">
+<h1 id="_ctrl0_ctl54_lblTitle"><span id="_ctrl0_ctl54_lblModuleTitle" class="ModuleTitle">Subscribe to <br>our alerts</span><span id="_ctrl0_ctl54_lblHelpPage"></span></h1>
+	<table cellpadding="0" cellspacing="0" border="0" class="MailingListTable">
+	    <tr><td colspan="2" class="IntroTextColumn"><span id="_ctrl0_ctl54_lblIntroText" class="IntroText"></span></td></tr>
+
+
+
+		<tr id="rowEmailAddress">
+			<td width="40%" class="MailingListCol1"><span id="_ctrl0_ctl54_lblEmailAddressText">Email Address</span></td>
+			<td width="60%" class="MailingListCol2">
+				<input name="_ctrl0$ctl54$txtEmail" type="text" id="_ctrl0_ctl54_txtEmail" />
+				<span id="_ctrl0_ctl54_lblRequiredEmailAddress" class="RequiredField">*</span>
+			    
+			    
+	<input type="submit" name="_ctrl0$ctl54$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctrl0$ctl54$btnSubmit&quot;, &quot;&quot;, true, &quot;41b95991-4298-4aba-9843-8e277ca69a9b&quot;, &quot;&quot;, false, false))" id="_ctrl0_ctl54_btnSubmit" class="Button ActionButton" />
+		    </td>
+		</tr>
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</table>
+	<table id="_ctrl0_ctl54_tableMailingLists" cellpadding="0" cellspacing="0" border="0" width="100%" class="MailingListListTable">
+	<tr id="_ctrl0_ctl54_rowMailingListLabel">
+		<td colspan="2">
+			    <span id="_ctrl0_ctl54_lblMailingListsText" class="MailingListsHeading">Mailing Lists</span>
+			    <span id="_ctrl0_ctl54_lblRequiredMailingLists" class="RequiredField">*</span>
+			</td>
+	</tr>
+	<tr id="_ctrl0_ctl54_rowMailingLists">
+		<td colspan="2">
+			    <span id="_ctrl0_ctl54_chkLists"><input id="_ctrl0_ctl54_chkLists_0" type="checkbox" name="_ctrl0$ctl54$chkLists$0" value="31" /><label for="_ctrl0_ctl54_chkLists_0">Press Release</label><br /><input id="_ctrl0_ctl54_chkLists_1" type="checkbox" name="_ctrl0$ctl54$chkLists$1" value="33" /><label for="_ctrl0_ctl54_chkLists_1">SEC Filing</label><br /><input id="_ctrl0_ctl54_chkLists_2" type="checkbox" name="_ctrl0$ctl54$chkLists$2" value="34" /><label for="_ctrl0_ctl54_chkLists_2">Presentation</label><br /><input id="_ctrl0_ctl54_chkLists_3" type="checkbox" name="_ctrl0$ctl54$chkLists$3" value="35" /><label for="_ctrl0_ctl54_chkLists_3">Event</label><br /><input id="_ctrl0_ctl54_chkLists_4" type="checkbox" name="_ctrl0$ctl54$chkLists$4" value="42" /><label for="_ctrl0_ctl54_chkLists_4">End of Day Stock Quote</label></span>
+				
+				
+
+
+
+			</td>
+	</tr>
+</table>
+
+	<br class="NoBr">
+	
+	<br class="NoBr" />
+
+</div>
+<div id="_ctrl0_ctl54_divEditSubscriberConfirmation" class="EditSubscriberConfirmation" style="DISPLAY:none;"></div>
+</div>
+<div id="_ctrl0_ctl54_div1" class="EditSubscriberConfirmation"></div></span><span class='FooterPaneDiv23'><div id="_ctrl0_ctl57_divModuleContainer" class="HtmlTextContainer Copyright">
+    
+    <div class="ContentContainer">
+        <span>© <span class="footerYear"></span> CMS Energy</span>
+    </div>
+</div></span><span class='FooterPaneDiv24'><div id="_ctrl0_ctl60_divModuleContainer" class="BlankModuleContainer BackToTop">
+    
+    <div class="top">
+   <img src="//s2.q4cdn.com/027997281/files/design/backTOtop.png">
+</div>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+     $('.top').on('click', function(){
+       $('html, body').animate({scrollTop : 0},800);
+       return false;
+     });
+   });
+</script>
+
+</div></span><span class='FooterPaneDiv35'><div id="_ctrl0_ctl75_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <!-- <script src="//s2.q4cdn.com/027997281/files/js/jquery-cycle2-min.js"></script> -->
+<script>
+var sliders = [{
+    class: 'Corp',
+    rotate: true
+}, {
+    class: 'IR',
+    rotate: true
+}];
+
+$(function() {
+    $.each(sliders, function(i, slider) {
+        var timer = slider.rotate ? 8000 : 0;
+        if(!slider.rotate)
+           $('.' + slider.class + '.Slider .slide-item').not(':first').remove();
+        
+        $('.' + slider.class + '.Slider .SliderInner').cycle({
+            fx: 'fade',
+            prev: '.prev',
+            next: '.next',
+            slides: '.slide-item',
+            cleartype: false,
+            timeout: timer
+        });
+    });
+});
+</script>
+
+        </div>
+    </div>
+</div></span></span></div>
+			<div class="PaneFooter2"><span class='FooterPane2Div2'><div id="_ctrl0_ctl09_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript">
+var year = new Date().getFullYear();
+$('span.footerYear').text(year);
+
+
+$('.MainNav .level1 > li.has-children').hover(
+    function() {
+        $(this).addClass('js--hover').find('>ul').show();
+    },
+    function() {
+        $(this).removeClass('js--hover').find('>ul').hide();
+    }
+);
+
+
+// search placeholder
+function lang_focus(name, element) {
+    $(element).val(name);
+    $(element).focus(function() {
+        if (element.value == name) element.value = '';
+    });
+    $(element).blur(function() {
+        if (!element.value.length) element.value = name;
+    });
+}
+
+$(document).ready(function() {
+$('.QuickLinks.link-to-new a').attr('target', "_blank");
+    $('table.MailingListListTable table tr:first-child td input').prop('checked', true);
+
+    // fancybox
+    $("a.fancybox").fancybox();
+
+    $('a.fancyboxiframe').fancybox({
+        type: 'iframe',
+        'height': 428,
+        'width': 712,
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
+
+
+
+
+
+    $('.SecNav .level2 > .has-children > a').removeAttr("href");
+
+    $(".Breadcrumb:contains('®')").html(function(_, html) {
+        return html.replace(/(®)/g, '<sup>$1</sup>')
+    });
+
+    // search
+    $('.PaneHeader .ModuleSearch, .PaneNavigation .MobileSearch').find('input[type="text"]').filter(function() {
+        var name = "Search";
+        lang_focus(name, this);
+    });
+
+    $('.PaneHeader .ModuleSearch input[type="text"]').on('keypress', function(e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            window.location = '/Search-Results/default.aspx?SearchTerm=' + encodeURI($(this).val());
+        }
+    });
+
+
+    // mobile search
+    $('.MobileSearch h1').on('click', function() {
+        var $this = $(this);
+        if ($this.hasClass('active')) {
+            $this.removeClass('active');
+            $this.parent().removeClass('open');
+            $this.next().stop(true, true).fadeOut(200);
+            $this.parent().stop(true, true).animate({
+                width: "10px"
+            }, 500);
+        } else {
+            $this.addClass('active');
+            $this.parent().addClass('open');
+            $this.parent().stop(true, true).animate({
+                width: "140px"
+            }, 300);
+            $this.next().delay(200).stop(true, true).fadeIn(200);
+        }
+    });
+
+
+    // move modules
+    /* $(window).bind('load', function(){
+         if ($(window).width() < 767) {
+             $('.InvestorTools, .Contacts').prependTo('.PaneLeft');
+         } else if ($(window).width() > 768) {
+             $('.InvestorTools, .Contacts').appendTo('.PaneRight');
+         }
+         $(window).resize(function() {
+             if ($(window).width() < 767) {
+                 $('.InvestorTools, .Contacts').prependTo('.PaneLeft');
+             } else if ($(window).width() > 768) {
+                 $('.InvestorTools, .Contacts').appendTo('.PaneRight');
+             }
+         });
+     });*/
+
+
+    // banners
+    $('.Banner').appendTo($('.HeaderImage'));
+    $(window).bind('load', function() {
+        $('.Banner').height($('.HeaderImageContainer').height());
+    });
+    $(window).resize(function() {
+        $('.Banner').height($('.HeaderImageContainer').height());
+    });
+    $('.hyperlink').prependTo($('.HeaderImage'));
+    $('.HeaderImage img').addClass('img');
+    $('.HeaderImage .img, .Banner').appendTo('.hyperlink');
+
+
+    $(document).ready(function() {
+        $(".accountabilityReport").click().fancybox({
+            fitToView: false,
+            width: '90%',
+            height: '90%',
+            autoSize: false,
+            closeClick: false,
+            openEffect: 'none',
+            closeEffect: 'none',
+            iframe: {
+                scrolling: 'auto',
+                preload: true
+            }
+        });
+    });
+});
+/*
+var replaced = [
+{
+    url: 'http://d1lge852tjjqow.cloudfront.net/CIK-0000811156/bb77e77b-d33f-453c-943d-2f7e09dde80f.rtf?noexit=true', 
+    file: '/files/sec/May-15-8-K.rtf'
+},
+{
+    url: 'http://d1lge852tjjqow.cloudfront.net/CIK-0000811156/bb77e77b-d33f-453c-943d-2f7e09dde80f.rtf', 
+    file: '/files/sec/May-15-8-K.rtf'
+},
+];
+
+// for the filing list page
+$(document).ajaxComplete(function() {
+    $.each(replaced, function(src, data) {
+        $('a[href*="'+data.url+'"]').attr('href', data.file);
+    });
+});
+
+// for the filing details page
+$(document).ready(function() {
+    $.each(replaced, function(src, data) {
+        $('a[href*="'+data.url+'"]').attr('href', data.file);
+    });
+});
+*/
+</script>
+</div></span></div>
+			<div class="PaneQ4Footer"><span class='Q4FooterDiv38'><div id="_ctrl0_ctl78_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        <h2 id="_ctrl0_ctl78_lblTitle"><span id="_ctrl0_ctl78_lblModuleTitle" class="ModuleTitle">Cookie Consent</span></h2>
+        <div class="ModuleInnerContainer">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+    "palette": {
+        "popup": {
+            "background": "#edeff5",
+            "text": "#838391"
+        },
+        "button": {
+            "background": "#4b81e8"
+        }
+    },
+    "content": {
+        "message": 'CMS Energy uses cookies on our website as described in our  <a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question147" target="_blank">Privacy Policy</a>. By continuing to use the site, you agree to the use of cookies.',
+        "dismiss": "OK",
+        // "link": "Privacy Policy"
+        // "href": "https://www.cmsenergy.com/privacy-statement/default.aspx#Question147"
+    },
+    // "elements": {
+    //     "messagelink": '<span id="cookieconsent:desc" class="cc-message">Cookies help us deliver our services. You can check &nbsp;<a href="https://www.cmsenergy.com/privacy-statement/default.aspx#Question147" target="_blank">here</a>&nbsp; our privacy policy.</span>'
+    // },
+    // "content": {
+    //     "link": 'LINK',
+    //     // "target": '_blank',
+    //     "dismiss": "Ok",
+
+    // }
+});
+</script>
+        </div>
+    </div>
+</div></span></div>
+		</div>
+	</div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"bdee752115",applicationID:"216609727"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+		<title>Privacy Policy | Kelso</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="shortcut icon" href="/sites/all/themes/kelso/favicon.ico" type="image/x-icon" />
+
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/files/css/css_933388b3c59a75a473cb2f32e69a187a.css" />
+<script type="text/javascript" src="/sites/default/files/js/js_93c85f0393cbbefc993696e13528fcba.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "lightbox2": { "rtl": "0", "file_path": "/(\\w\\w/)sites/default/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": 1, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 0, "disable_resize": 0, "disable_zoom": 0, "force_show_nav": 0, "show_caption": 0, "loop_items": 0, "node_link_text": "View Image Details", "node_link_target": 0, "image_count": "Image !current of !total", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 }, "shadowbox": { "animate": 1, "animateFade": 1, "animSequence": "wh", "auto_enable_all_images": 0, "auto_gallery": 0, "autoplayMovies": true, "continuous": 0, "counterLimit": "10", "counterType": "default", "displayCounter": 1, "displayNav": 1, "enableKeys": 1, "fadeDuration": "0.35", "handleOversize": "resize", "handleUnsupported": "link", "initialHeight": 160, "initialWidth": 320, "language": "en", "modal": false, "overlayColor": "#000", "overlayOpacity": "0.85", "players": null, "resizeDuration": "0.35", "showMovieControls": 1, "slideshowDelay": "0", "viewportPadding": 20, "useSizzle": 0 } });
+//--><!]]>
+</script>
+
+		<script type="text/javascript">
+			//<![CDATA[
+			$(function(){
+				initCufon();
+				initAutoFillFields();
+			});
+			//]]>
+		</script>
+
+		<!--[if lte IE 7]>
+			<style type="text/css" media="all">@import "/sites/all/themes/kelso/css/style_ie7.css";</style>
+		<![endif]-->
+	</head>
+
+	<body>
+
+    <!-- site wrapper -->
+    <div id="site_wrapper">
+
+      <!-- site container -->
+      <div id="site_container">
+
+				<!-- site header -->
+				<div id="site_header">
+  <div class="sh_add_padding">
+    <div class="sh_left">
+      <ul id="sh_contact_mobile">
+        <li id="contact_phone"><a href="/contact-us">1.903.583.9200</a></li>
+        <li id="contact_email"><a href="mailto:info@kelsotech.com">info@kelsotech.com</a></li>
+      </ul>
+      <div id="sh_logo">
+        <a href="/"><img src="/sites/all/themes/kelso/graphics/site_logo.png" alt="" /></a>
+      </div>
+      <div id="mobile_header_cta">
+        <div id="block-block-2" class="block block-block">
+
+  <div class="content">
+    <p><img alt="" src="/sites/default/files/logo_made_in_usa_2014.png" style="width: 83px; height: 66px;" /></p>
+  </div>
+</div>
+      </div>
+      <div id="mobile_menu_icon">
+        <img src="/sites/all/themes/kelso/graphics/img_mobile_menu.png"></img>
+      </div>
+      <div id="mobile_search" class="site_search_block">
+        <div id="block-search-0" class="block block-search">
+  <h2>Search</h2>
+
+  <div class="content">
+    <form action="/privacy-policy"  accept-charset="UTF-8" method="post" id="search-block-form">
+<div><div class="container-inline">
+  <div class="form-item" id="edit-search-block-form-1-wrapper">
+ <label for="edit-search-block-form-1">Search this site: </label>
+ <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-bpruSmC5AVdtpI67knboQvOtlFSywwUeJgRclvp8Bws" value="form-bpruSmC5AVdtpI67knboQvOtlFSywwUeJgRclvp8Bws"  />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+
+</div></form>
+  </div>
+</div>
+        <div class="clear-break"></div>
+      </div>
+    </div>
+    <div class="sh_right">
+      <ul id="sh_contact">
+        <li id="contact_phone"><a href="/contact-us">1.903.583.9200</a></li>
+        <li id="contact_email"><a href="mailto:info@kelsotech.com">info@kelsotech.com</a></li>
+      </ul>
+      <div id="header_cta">
+        <div id="block-block-2" class="block block-block">
+
+  <div class="content">
+    <p><img alt="" src="/sites/default/files/logo_made_in_usa_2014.png" style="width: 83px; height: 66px;" /></p>
+  </div>
+</div>
+      </div>
+      <div id="sh_search" class="site_search_block">
+        <div id="block-search-0" class="block block-search">
+  <h2>Search</h2>
+
+  <div class="content">
+    <form action="/privacy-policy"  accept-charset="UTF-8" method="post" id="search-block-form">
+<div><div class="container-inline">
+  <div class="form-item" id="edit-search-block-form-1-wrapper">
+ <label for="edit-search-block-form-1">Search this site: </label>
+ <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-bpruSmC5AVdtpI67knboQvOtlFSywwUeJgRclvp8Bws" value="form-bpruSmC5AVdtpI67knboQvOtlFSywwUeJgRclvp8Bws"  />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+
+</div></form>
+  </div>
+</div>
+        <div class="clear-break"></div>
+      </div>
+    </div>
+  </div>
+</div>
+				<!-- / site header -->
+
+				<!-- primary navigation -->
+				<div id="pri_nav_cont">
+					<ul class="level0 " id="pri_nav"><li id="liHome" class="leaf first"><a href="/" class="Home"><span>Home</span></a></li>
+<li id="liCompany" class="expanded"><a href="/company" class="Company"><span>Company</span></a><ul class="level1 "><li id="liDirectorsandOfficers" class="leaf first"><a href="/directors-and-officers" class="DirectorsandOfficers"><span>Directors and Officers</span></a></li>
+<li id="liKeyManagement" class="leaf"><a href="/key-management" class="KeyManagement"><span>Key Management</span></a></li>
+<li id="liLocations" class="leaf last"><a href="/company-locations" class="Locations"><span>Locations</span></a></li>
+</ul></li>
+<li id="liProducts" class="expanded"><a href="/products" class="Products"><span>Products</span></a><ul class="level1 "><li id="liRAIL" class="expanded first"><a href="/railway-equipment" class="RAIL"><span>RAIL</span></a><ul class="level2 "><li id="liBottomOutletValve" class="collapsed first"><a href="/product/bottom-outlet-valve" class="BottomOutletValve"><span>Bottom Outlet Valve</span></a></li>
+<li id="liPressureReliefValve" class="expanded"><a href="/product/pressure-relief-valves" class="PressureReliefValve"><span>Pressure Relief Valve</span></a><ul class="level3 "><li id="liPRVInstallationMaintenance" class="leaf first"><a href="/prv-installation-maintenance" class="PRVInstallationMaintenance"><span>PRV Installation & Maintenance</span></a></li>
+<li id="liPRVSpecificationSheets" class="leaf"><a href="/prv-specification-sheets" class="PRVSpecificationSheets"><span>PRV Specification Sheets</span></a></li>
+<li id="liPRVReferenceDocuments" class="leaf last"><a href="/prv-reference-documents" class="PRVReferenceDocuments"><span>PRV Reference Documents</span></a></li>
+</ul></li>
+<li id="liVacuumReliefValve" class="leaf"><a href="/product/vacuum-relief-valve" class="VacuumReliefValve"><span>Vacuum Relief Valve</span></a></li>
+<li id="liValveReplacementGuide" class="leaf"><a href="/valve-replacement-guide" class="ValveReplacementGuide"><span>Valve Replacement Guide</span></a></li>
+<li id="liOne-boltManway" class="expanded"><a href="/product/one-bolt-manway" class="One-boltManway"><span>One-bolt Manway</span></a><ul class="level3 "><li id="liManwaySpecificationSheets" class="leaf first"><a href="/manway-specification-sheets" class="ManwaySpecificationSheets"><span>Manway Specification Sheets</span></a></li>
+<li id="liManwayReferenceDocuments" class="leaf"><a href="/manway-reference-documents" class="ManwayReferenceDocuments"><span>Manway Reference Documents</span></a></li>
+<li id="liUniversalManwayAdapter" class="leaf last"><a href="/product/universal-manway-load-plate-adapter" class="UniversalManwayAdapter"><span>Universal Manway Adapter</span></a></li>
+</ul></li>
+<li id="liPressureCars" class="collapsed"><a href="/pressure-cars" class="PressureCars"><span>Pressure Cars</span></a></li>
+<li id="liPressureDifferentialParts" class="leaf"><a href="/pressure-differential-parts" class="PressureDifferentialParts"><span>Pressure Differential Parts</span></a></li>
+<li id="liWheelCleaningSystem" class="leaf"><a href="/wheel-cleaning-system" class="WheelCleaningSystem"><span>Wheel Cleaning System</span></a></li>
+<li id="liRailCarKits" class="leaf"><a href="/rail-tank-car-kits" class="RailCarKits"><span>Rail Car Kits</span></a></li>
+<li id="liRailwayIndustryLinks" class="leaf last"><a href="/railway-industry-links" class="RailwayIndustryLinks"><span>Railway Industry Links</span></a></li>
+</ul></li>
+<li id="liTRUCKING" class="leaf"><a href="/product/trucking-tank-trailers" class="TRUCKING"><span>TRUCKING</span></a></li>
+<li id="liEDUCTIONTUBE" class="expanded"><a href="/product/kelso-eduction-tube" class="EDUCTIONTUBE"><span>EDUCTION TUBE</span></a><ul class="level2 "><li id="liEductionTubeOrderForm" class="leaf first last"><a href="/eduction-tube-order-form" class="EductionTubeOrderForm"><span>Eduction Tube Order Form</span></a></li>
+</ul></li>
+<li id="liEMERGENCYRESPONSEKIT" class="expanded"><a href="/product/emergency-response-kit" class="EMERGENCYRESPONSEKIT"><span>EMERGENCY RESPONSE KIT</span></a><ul class="level2 "><li id="liERKUserManual" class="leaf first"><a href="/kelso-erk-user-manual-2020-01" class="ERKUserManual"><span>ERK User Manual</span></a></li>
+<li id="liERKOrderForm" class="leaf last"><a href="/emergency-response-kit-order-form" class="ERKOrderForm"><span>ERK Order Form</span></a></li>
+</ul></li>
+<li id="liFUELINGVALVES" class="leaf"><a href="/product/fueling-valves" class="FUELINGVALVES"><span>FUELING VALVES</span></a></li>
+<li id="liKIQXSUSPENSION" class="leaf"><a href="/product/kiq-x-suspension" class="KIQXSUSPENSION"><span>KIQ X SUSPENSION</span></a></li>
+<li id="liServiceBulletins" class="leaf"><a href="/service-bulletins" class="ServiceBulletins"><span>Service Bulletins</span></a></li>
+<li id="liInstallationManualUpdates" class="leaf last"><a href="/sign-installation-manual-updates" class="InstallationManualUpdates"><span>Installation Manual Updates</span></a></li>
+</ul></li>
+<li id="liInvestors" class="expanded"><a href="/investors-fact-sheet" class="Investors"><span>Investors</span></a><ul class="level1 "><li id="liFinancialStatements" class="collapsed first"><a href="/financial-statements" class="FinancialStatements"><span>Financial Statements</span></a></li>
+<li id="liCorporatePresentation" class="leaf"><a href="/corporate-presentation" class="CorporatePresentation"><span>Corporate Presentation</span></a></li>
+<li id="liCorporateInformation" class="leaf"><a href="/corporate-information" class="CorporateInformation"><span>Corporate Information</span></a></li>
+<li id="liCorporateGovernance" class="leaf"><a href="/corporate-governance" class="CorporateGovernance"><span>Corporate Governance</span></a></li>
+<li id="liShareholders" class="leaf"><a href="/shareholders" class="Shareholders"><span>Shareholders</span></a></li>
+<li id="liNews" class="leaf last"><a href="/news-0" class="News"><span>News</span></a></li>
+</ul></li>
+<li id="liContactUs" class="collapsed last"><a href="/contact-us" class="ContactUs"><span>Contact Us</span></a></li>
+</ul>				</div>
+				<!-- / primary navigation -->
+
+				<!-- site content [home] -->
+				<div id="site_content_page">
+					<div class="scp_add_padding">
+
+						<div class="scp_left">
+							
+						</div>
+
+						<div class="scp_right">
+															<h1>Privacy Policy</h1>
+																																																	<div class="messages error">
+ <ul>
+  <li>strict warning: Non-static method view::load() should not be called statically in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/views.module on line 1118.</li>
+  <li>strict warning: Declaration of views_handler_field::query() should be compatible with views_handler::query($group_by = false) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/handlers/views_handler_field.inc on line 0.</li>
+  <li>strict warning: Declaration of content_handler_field::element_type() should be compatible with views_handler_field::element_type($none_supported = false, $default_empty = false, $inline = false) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/cck/includes/views/handlers/content_handler_field.inc on line 0.</li>
+  <li>strict warning: Declaration of views_handler_sort::options_validate() should be compatible with views_handler::options_validate($form, &amp;$form_state) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/handlers/views_handler_sort.inc on line 0.</li>
+  <li>strict warning: Declaration of views_handler_sort::options_submit() should be compatible with views_handler::options_submit($form, &amp;$form_state) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/handlers/views_handler_sort.inc on line 0.</li>
+  <li>strict warning: Declaration of views_handler_sort::query() should be compatible with views_handler::query($group_by = false) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/handlers/views_handler_sort.inc on line 0.</li>
+  <li>strict warning: Declaration of views_handler_filter::options_validate() should be compatible with views_handler::options_validate($form, &amp;$form_state) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/handlers/views_handler_filter.inc on line 0.</li>
+  <li>strict warning: Declaration of views_handler_filter::query() should be compatible with views_handler::query($group_by = false) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/handlers/views_handler_filter.inc on line 0.</li>
+  <li>strict warning: Declaration of views_plugin_query::options_submit() should be compatible with views_plugin::options_submit($form, &amp;$form_state) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/plugins/views_plugin_query.inc on line 0.</li>
+  <li>strict warning: Declaration of views_plugin_style_default::options() should be compatible with views_object::options() in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/plugins/views_plugin_style_default.inc on line 0.</li>
+  <li>strict warning: Declaration of views_plugin_row::options_validate() should be compatible with views_plugin::options_validate(&amp;$form, &amp;$form_state) in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/plugins/views_plugin_row.inc on line 0.</li>
+  <li>warning: Creating default object from empty value in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/date/date/date.module on line 661.</li>
+  <li>strict warning: Non-static method view::load() should not be called statically in /home/kelsotech/www/kelsotech/wwwroot/sites/all/modules/views/views.module on line 1118.</li>
+ </ul>
+</div>
+														<div id="inner_cont">
+								<div id="node-141" class="node">
+
+  <div class="content clear-block">
+    <p>We recognize that you may be concerned about our use and disclosure of your personal information. Your privacy is very important to us, and the following will inform you of the information that we may collect from you, and how it is used. By using our Web site, you are accepting the practices described in this policy.</p>
+<h2>
+	1. What information are you collecting?</h2>
+<p>We collect personal information that can be used to identify you individually, such as your name, mailing address, phone number, email address, credit card number, and financial information.</p>
+<p>We also collect non-personal information, such as a domain name and IP Address. The domain name and IP address reveal nothing personal about you other than the IP address from which you have accessed our site. We also collect information about the type of Internet browser you are using, operating system, as well as which of our Web pages you have accessed.</p>
+<h2>
+	2. How and when do you collect this information?</h2>
+<p>We collect personal information from you when you provide it to us. For example, if you purchase a product sold through our online store, we may collect your name, mailing address, telephone number, credit card number, and email address. If you create an account, we may collect your name, mailing address, email address, and other information that we request in the registration process</p>
+<p>If you communicate with us regarding our Web site or our services, we will collect any information that you provide to us in any such communication.</p>
+<h2>
+	3. How is my information used?</h2>
+<p>We use personal information primarily for our own internal purposes, such as providing, maintaining, evaluating, and improving our services and Web site, fulfilling requests for information, producing and shipping the products that you order, and providing customer support.</p>
+<p>We use non-personal information for internal purposes, such as maintaining, evaluating, and improving our services and Web site.</p>
+<h2>
+	4. Security</h2>
+<p>The security of your personal information is important to us. When you enter sensitive information such as a credit card number on our registration or order forms, we encrypt that information using secure socket layer technology (SSL).</p>
+<p>We follow generally accepted industry standards to protect the Personal Information submitted to us, both during transmission and once we receive it. However, no method of transmission over the Internet, or method of electronic storage, is 100% secure. Therefore, while we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+<h2>
+	5. Do you use cookies?</h2>
+<p>Yes. A cookie is a small piece of data that is sent to your Internet browser from a Web server and stored on your computer&#39;s hard drive. Cookies are often used to provide you with a customized experience. At no time is any personal information stored within one of our cookies. Accepting cookies through your browser is a personal choice. You can still enjoy our Web site if you choose not to accept cookies.</p>
+<h2>
+	6. Will you disclose the information you collect to outside third parties?</h2>
+<p>We will not sell or otherwise provide the information we collect to outside third parties for the purpose of direct or indirect mass email marketing.</p>
+<p>We will disclose personal information and/or an IP address, when required by law or in the good-faith belief that such action is necessary to:</p>
+<ul>
+<li>
+		Cooperate with the investigations of purported unlawful activities and conform to the edicts of the law or comply with legal process served on our company,</li>
+<li>
+		Protect and defend the rights or property of our Web site and related properties</li>
+<li>
+		Identify persons who may be violating the law, the rights of third parties, or otherwise misusing the our Web site or its related properties</li>
+</ul>
+<h2>
+	7. Does this Privacy Policy apply when I access third party Web sites?</h2>
+<p>You may be able to access third-party Web sites directly from our Web site. This Privacy Policy does not apply when you access such Web sites. We cannot control how third parties may use personal information you disclose to them, so you should carefully review the privacy policy of any third-party Web site you visit before using it or disclosing your personal information to its provider.</p>
+<h2>
+	8. What safeguards are in place?</h2>
+<p>We are obligated to protect your personal information by making reasonable security arrangements against such risks as unauthorized access, use, collection, disclosure or disposal. Security measures have been integrated into the design, implementation and day-to-day operating practices as part of our commitment to protect the personal information it holds.</p>
+<h2>
+	9. What else should I know about my privacy when online?</h2>
+<p>Please keep in mind that whenever you voluntarily disclose personal information online - for example through e-mail, discussion boards, or elsewhere - that information can be collected and used by others. In short, if you post personal information online that is accessible to the public, you may receive unsolicited messages from other parties in return.</p>
+<p>Ultimately, you are solely responsible for maintaining the secrecy of your personal information. Please be careful and responsible whenever you are online.</p>
+<p>Consent to this Agreement</p>
+<p>By using this Web site, you consent to the collection and use of information as specified above. If we make changes to our Privacy Policy, we will post those changes on this page. Please review this page frequently to remain up-to-date with the information we collect, how we use it, and under what circumstances we disclose it. You must review the new Privacy Policy carefully to make sure you understand our practices and procedures.</p>
+  </div>
+</div>
+							</div>
+						</div>
+						<br class="clear_both" />
+
+					</div>
+				</div>
+				<!-- / site content [home] -->
+
+				<!-- site footer -->
+				<div id="site_footer">
+  <div class="sf_add_padding">
+    <div class="sf_left">
+      <div class="mobile usflag-icon">
+        <img src="/sites/all/themes/kelso/graphics/mobile_footer_usa.png"/>
+      </div>
+      <ul class="level0 " id="footer_nav"><li id="liPrivacyPolicy" class="leaf active-trail first"><a href="/privacy-policy" class="PrivacyPolicy active">Privacy Policy</a></li>
+<li id="liSiteMap" class="leaf last"><a href="/sitemap" class="SiteMap">Site Map</a></li>
+</ul>      <br class="clearBoth">
+      <div class="footer_linkedin">
+        <a class="linkedin-icon" href="http://www.linkedin.com/groups/Kelso-Technologies-Inc-7486239?trk=my_groups-b-grp-v" target="_blank"></a>
+      </div>
+    </div>
+    <div class="sf_right">
+      <p id="copy">Copyright &copy;&nbsp;2020<a href="/">&nbsp;Kelso Technologies Inc.</a> All rights reserved.</p>
+      <p id="acro">Web design by <a href="http://www.acromediainc.com" rel="external">Acro Media Inc</a> </p>
+    </div>
+  </div>
+</div>
+				<!-- / site footer -->
+
+      </div>
+      <!-- site container -->
+
+    </div>
+    <!-- / site wrapper -->
+
+		<script type="text/javascript">Cufon.now();</script>
+		<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+      Shadowbox.path = "/sites/all/libraries/shadowbox/";
+      Shadowbox.init(Drupal.settings.shadowbox);
+    
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-311424-32"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bdee752115","applicationID":"216609727","transactionName":"ZQdaNkRVXhUCBxVaVlxNbRBfG1kIBwEZHUlaEg==","queueTime":0,"applicationTime":5,"atts":"SUBZQAxPTRs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+<!-- Copyright 1998-2011 Acro Media Inc. All rights reserved -->

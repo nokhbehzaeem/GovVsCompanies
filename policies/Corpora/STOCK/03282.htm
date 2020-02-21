@@ -1,0 +1,370 @@
+
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"1220c8aeea",applicationID:"55086351"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+
+
+
+<title>Privacy | Sigma Designs</title>
+
+
+        <link rel="icon" type="image/png" href="https://www.sigmadesigns.com/wp-content/uploads/sigma-logo-swoosh.png" />
+
+    
+
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<link rel="pingback" href="https://www.sigmadesigns.com/xmlrpc.php" />
+
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+
+      <script src="https://www.sigmadesigns.com/wp-content/themes/sigma/js/html5shiv.js"></script>
+
+      <script src="https://www.sigmadesigns.com/wp-content/themes/sigma/js/respond.min.js"></script>
+
+    <![endif]-->
+
+
+
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v5.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.sigmadesigns.com/privacy/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Privacy | Sigma Designs" />
+<meta property="og:description" content="Website Privacy Policy In this Website Privacy Policy (“Policy”), we, Sigma Designs, Inc. and our subsidiaries, provide information about how we collect, use and transfer personally identifiable data from you, a web site visitor, through www.sigmadesigns.com, www.z-wave.com and other web sites&hellip; Read more &#8250;" />
+<meta property="og:url" content="https://www.sigmadesigns.com/privacy/" />
+<meta property="og:site_name" content="Sigma Designs" />
+<meta property="DC.date.issued" content="2014-12-08T18:57:14-08:00" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//www.sigmadesigns.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sigma Designs &raquo; Feed" href="https://www.sigmadesigns.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sigma Designs &raquo; Comments Feed" href="https://www.sigmadesigns.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.sigmadesigns.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='bs_bootstrap-css'  href='https://www.sigmadesigns.com/wp-content/plugins/bootstrap-shortcodes/css/bootstrap.css?ver=4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bs_shortcodes-css'  href='https://www.sigmadesigns.com/wp-content/plugins/bootstrap-shortcodes/css/shortcodes.css?ver=4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-roboto-css'  href='//fonts.googleapis.com/css?family=Roboto%3A%2C300%2C400%2C700&#038;ver=4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://www.sigmadesigns.com/wp-content/themes/sigma/css/bootstrap.min.css?ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.sigmadesigns.com/wp-content/themes/sigma/css/font-awesome.min.css?ver=4.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css'  href='https://www.sigmadesigns.com/wp-content/themes/sigma/style.css?ver=3.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ms-main-css'  href='https://www.sigmadesigns.com/wp-content/plugins/masterslider/public/assets/css/masterslider.main.css?ver=2.16.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-css'  href='https://www.sigmadesigns.com/wp-content/plugins/ubermenu/pro/assets/css/ubermenu.min.css?ver=3.1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-font-awesome-css'  href='https://www.sigmadesigns.com/wp-content/plugins/ubermenu/assets/css/fontawesome/css/font-awesome.min.css?ver=4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='https://www.sigmadesigns.com/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.8.min.css?ver=1.6' type='text/css' media='screen' />
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/plugins/bootstrap-shortcodes/js/bootstrap.js?ver=4.8'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/plugins/bootstrap-shortcodes/js/init.js?ver=4.8'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/themes/sigma/js/modernizr.custom.js?ver=2.6.2'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/themes/sigma/js/bootstrap.js?ver=4.8'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/themes/sigma/js/main.js?ver=4.8'></script>
+<link rel='https://api.w.org/' href='https://www.sigmadesigns.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.sigmadesigns.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.sigmadesigns.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8" />
+<link rel='shortlink' href='https://www.sigmadesigns.com/?p=363' />
+<link rel="alternate" type="application/json+oembed" href="https://www.sigmadesigns.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sigmadesigns.com%2Fprivacy%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.sigmadesigns.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.sigmadesigns.com%2Fprivacy%2F&#038;format=xml" />
+<style>.msp-preset-btn-84{ background-color: #b97ebb;color: #fff; } .msp-preset-btn-84:hover{ background-color:#ca89cc;color: #fff; } .msp-preset-btn-84:active{ top:1px } .msp-preset-btn-85{ background-color: #b97ebb;color: #fff; } .msp-preset-btn-85:hover{ background-color:#ca89cc;color: #fff; } .msp-preset-btn-85:active{ top:1px } .msp-preset-btn-86{ color: #b97ebb;border:solid 1px #b97ebb; } .msp-preset-btn-86:hover{ border-color:#ca89cc;color:#ca89cc } .msp-preset-btn-86:active{ top:1px } .msp-preset-btn-87{ background-color: #b97ebb;color: #fff; } .msp-preset-btn-87:hover{ background-color:#ca89cc;color: #fff; } .msp-preset-btn-87:active{ top:1px } .msp-preset-btn-88{ background-color: #b97ebb;color: #fff;box-shadow:0 5px #9a699c; } .msp-preset-btn-88:hover{ background-color:#ca89cc;box-shadow:0 4px #9a699c;top:1px;color: #fff; } .msp-preset-btn-88:active{ box-shadow:0 2px #9a699c;top:3px; } .msp-preset-btn-89{ background-color: #5472D2;color: #fff; } .msp-preset-btn-89:hover{ background-color:#5d7fe9;color: #fff; } .msp-preset-btn-89:active{ top:1px } .msp-preset-btn-90{ background-color: #5472D2;color: #fff; } .msp-preset-btn-90:hover{ background-color:#5d7fe9;color: #fff; } .msp-preset-btn-90:active{ top:1px } .msp-preset-btn-91{ color: #5472D2;border:solid 1px #5472D2; } .msp-preset-btn-91:hover{ border-color:#5d7fe9;color:#5d7fe9 } .msp-preset-btn-91:active{ top:1px } .msp-preset-btn-92{ background-color: #5472D2;color: #fff; } .msp-preset-btn-92:hover{ background-color:#5d7fe9;color: #fff; } .msp-preset-btn-92:active{ top:1px } .msp-preset-btn-93{ background-color: #5472D2;color: #fff;box-shadow:0 5px #4c68be; } .msp-preset-btn-93:hover{ background-color:#5d7fe9;box-shadow:0 4px #4c68be;top:1px;color: #fff; } .msp-preset-btn-93:active{ box-shadow:0 2px #4c68be;top:3px; } .msp-preset-btn-94{ background-color: #00c1cf;color: #fff; } .msp-preset-btn-94:hover{ background-color:#01D4E4;color: #fff; } .msp-preset-btn-94:active{ top:1px } .msp-preset-btn-95{ background-color: #00c1cf;color: #fff; } .msp-preset-btn-95:hover{ background-color:#01D4E4;color: #fff; } .msp-preset-btn-95:active{ top:1px } .msp-preset-btn-96{ color: #00c1cf;border:solid 1px #00c1cf; } .msp-preset-btn-96:hover{ border-color:#01D4E4;color:#01D4E4 } .msp-preset-btn-96:active{ top:1px } .msp-preset-btn-97{ background-color: #00c1cf;color: #fff; } .msp-preset-btn-97:hover{ background-color:#01D4E4;color: #fff; } .msp-preset-btn-97:active{ top:1px } .msp-preset-btn-98{ background-color: #00c1cf;color: #fff;box-shadow:0 5px #00afbc; } .msp-preset-btn-98:hover{ background-color:#01D4E4;box-shadow:0 4px #00afbc;top:1px;color: #fff; } .msp-preset-btn-98:active{ box-shadow:0 2px #00afbc;top:3px; } .msp-preset-btn-99{ background-color: #4cadc9;color: #fff; } .msp-preset-btn-99:hover{ background-color:#63b2c9;color: #fff; } .msp-preset-btn-99:active{ top:1px } .msp-preset-btn-100{ background-color: #4cadc9;color: #fff; } .msp-preset-btn-100:hover{ background-color:#63b2c9;color: #fff; } .msp-preset-btn-100:active{ top:1px } .msp-preset-btn-101{ color: #4cadc9;border:solid 1px #4cadc9; } .msp-preset-btn-101:hover{ border-color:#63b2c9;color:#63b2c9 } .msp-preset-btn-101:active{ top:1px } .msp-preset-btn-102{ background-color: #4cadc9;color: #fff; } .msp-preset-btn-102:hover{ background-color:#63b2c9;color: #fff; } .msp-preset-btn-102:active{ top:1px } .msp-preset-btn-103{ background-color: #4cadc9;color: #fff;box-shadow:0 5px #1aa2c9; } .msp-preset-btn-103:hover{ background-color:#63b2c9;box-shadow:0 4px #1aa2c9;top:1px;color: #fff; } .msp-preset-btn-103:active{ box-shadow:0 2px #1aa2c9;top:3px; } .msp-preset-btn-104{ background-color: #cec2ab;color: #fff; } .msp-preset-btn-104:hover{ background-color:#cebd9d;color: #fff; } .msp-preset-btn-104:active{ top:1px } .msp-preset-btn-105{ background-color: #cec2ab;color: #fff; } .msp-preset-btn-105:hover{ background-color:#cebd9d;color: #fff; } .msp-preset-btn-105:active{ top:1px } .msp-preset-btn-106{ color: #cec2ab;border:solid 1px #cec2ab; } .msp-preset-btn-106:hover{ border-color:#cebd9d;color:#cebd9d } .msp-preset-btn-106:active{ top:1px } .msp-preset-btn-107{ background-color: #cec2ab;color: #fff; } .msp-preset-btn-107:hover{ background-color:#cebd9d;color: #fff; } .msp-preset-btn-107:active{ top:1px } .msp-preset-btn-108{ background-color: #cec2ab;color: #fff;box-shadow:0 5px #C2B7A2; } .msp-preset-btn-108:hover{ background-color:#cebd9d;box-shadow:0 4px #C2B7A2;top:1px;color: #fff; } .msp-preset-btn-108:active{ box-shadow:0 2px #C2B7A2;top:3px; } .msp-preset-btn-109{ background-color: #50485b;color: #fff; } .msp-preset-btn-109:hover{ background-color:#6a6176;color: #fff; } .msp-preset-btn-109:active{ top:1px } .msp-preset-btn-110{ background-color: #50485b;color: #fff; } .msp-preset-btn-110:hover{ background-color:#6a6176;color: #fff; } .msp-preset-btn-110:active{ top:1px } .msp-preset-btn-111{ color: #50485b;border:solid 1px #50485b; } .msp-preset-btn-111:hover{ border-color:#6a6176;color:#6a6176 } .msp-preset-btn-111:active{ top:1px } .msp-preset-btn-112{ background-color: #50485b;color: #fff; } .msp-preset-btn-112:hover{ background-color:#6a6176;color: #fff; } .msp-preset-btn-112:active{ top:1px } .msp-preset-btn-113{ background-color: #50485b;color: #fff;box-shadow:0 5px #412d5b; } .msp-preset-btn-113:hover{ background-color:#6a6176;box-shadow:0 4px #412d5b;top:1px;color: #fff; } .msp-preset-btn-113:active{ box-shadow:0 2px #412d5b;top:3px; } .msp-preset-btn-114{ background-color: #8d6dc4;color: #fff; } .msp-preset-btn-114:hover{ background-color:#977cc4;color: #fff; } .msp-preset-btn-114:active{ top:1px } .msp-preset-btn-115{ background-color: #8d6dc4;color: #fff; } .msp-preset-btn-115:hover{ background-color:#977cc4;color: #fff; } .msp-preset-btn-115:active{ top:1px } .msp-preset-btn-116{ color: #8d6dc4;border:solid 1px #8d6dc4; } .msp-preset-btn-116:hover{ border-color:#977cc4;color:#977cc4 } .msp-preset-btn-116:active{ top:1px } .msp-preset-btn-117{ background-color: #8d6dc4;color: #fff; } .msp-preset-btn-117:hover{ background-color:#977cc4;color: #fff; } .msp-preset-btn-117:active{ top:1px } .msp-preset-btn-118{ background-color: #8d6dc4;color: #fff;box-shadow:0 5px #7c51c4; } .msp-preset-btn-118:hover{ background-color:#977cc4;box-shadow:0 4px #7c51c4;top:1px;color: #fff; } .msp-preset-btn-118:active{ box-shadow:0 2px #7c51c4;top:3px; } .msp-preset-btn-119{ background-color: #75d69c;color: #fff; } .msp-preset-btn-119:hover{ background-color:#7de5a7;color: #fff; } .msp-preset-btn-119:active{ top:1px } .msp-preset-btn-120{ background-color: #75d69c;color: #fff; } .msp-preset-btn-120:hover{ background-color:#7de5a7;color: #fff; } .msp-preset-btn-120:active{ top:1px } .msp-preset-btn-121{ color: #75d69c;border:solid 1px #75d69c; } .msp-preset-btn-121:hover{ border-color:#7de5a7;color:#7de5a7 } .msp-preset-btn-121:active{ top:1px } .msp-preset-btn-122{ background-color: #75d69c;color: #fff; } .msp-preset-btn-122:hover{ background-color:#7de5a7;color: #fff; } .msp-preset-btn-122:active{ top:1px } .msp-preset-btn-123{ background-color: #75d69c;color: #fff;box-shadow:0 5px #41d67d; } .msp-preset-btn-123:hover{ background-color:#7de5a7;box-shadow:0 4px #41d67d;top:1px;color: #fff; } .msp-preset-btn-123:active{ box-shadow:0 2px #41d67d;top:3px; } .msp-preset-btn-124{ background-color: #222;color: #fff; } .msp-preset-btn-124:hover{ background-color:#333;color: #fff; } .msp-preset-btn-124:active{ top:1px } .msp-preset-btn-125{ background-color: #222;color: #fff; } .msp-preset-btn-125:hover{ background-color:#333;color: #fff; } .msp-preset-btn-125:active{ top:1px } .msp-preset-btn-126{ color: #222;border:solid 1px #222; } .msp-preset-btn-126:hover{ border-color:#333;color:#333 } .msp-preset-btn-126:active{ top:1px } .msp-preset-btn-127{ background-color: #222;color: #fff; } .msp-preset-btn-127:hover{ background-color:#333;color: #fff; } .msp-preset-btn-127:active{ top:1px } .msp-preset-btn-128{ background-color: #222;color: #fff;box-shadow:0 5px #000; } .msp-preset-btn-128:hover{ background-color:#333;box-shadow:0 4px #000;top:1px;color: #fff; } .msp-preset-btn-128:active{ box-shadow:0 2px #000;top:3px; } .msp-preset-btn-129{ background-color: #dedede;color: #666; } .msp-preset-btn-129:hover{ background-color:#d1d1d1;color: #666; } .msp-preset-btn-129:active{ top:1px } .msp-preset-btn-130{ background-color: #dedede;color: #666; } .msp-preset-btn-130:hover{ background-color:#d1d1d1;color: #666; } .msp-preset-btn-130:active{ top:1px } .msp-preset-btn-131{ color: #dedede;border:solid 1px #dedede; } .msp-preset-btn-131:hover{ border-color:#d1d1d1;color:#d1d1d1 } .msp-preset-btn-131:active{ top:1px } .msp-preset-btn-132{ background-color: #dedede;color: #666; } .msp-preset-btn-132:hover{ background-color:#d1d1d1;color: #666; } .msp-preset-btn-132:active{ top:1px } .msp-preset-btn-133{ background-color: #dedede;color: #666;box-shadow:0 5px #CACACA; } .msp-preset-btn-133:hover{ background-color:#d1d1d1;color: #666;box-shadow:0 4px #CACACA;top:1px } .msp-preset-btn-133:active{ box-shadow:0 2px #CACACA;top:3px; } .msp-preset-btn-134{ background-color: #f7be68;color: #fff; } .msp-preset-btn-134:hover{ background-color:#e9b362;color: #fff; } .msp-preset-btn-134:active{ top:1px } .msp-preset-btn-135{ background-color: #f7be68;color: #fff; } .msp-preset-btn-135:hover{ background-color:#e9b362;color: #fff; } .msp-preset-btn-135:active{ top:1px } .msp-preset-btn-136{ color: #f7be68;border:solid 1px #f7be68; } .msp-preset-btn-136:hover{ border-color:#e9b362;color:#e9b362 } .msp-preset-btn-136:active{ top:1px } .msp-preset-btn-137{ background-color: #f7be68;color: #fff; } .msp-preset-btn-137:hover{ background-color:#e9b362;color: #fff; } .msp-preset-btn-137:active{ top:1px } .msp-preset-btn-138{ background-color: #f7be68;color: #fff;box-shadow:0 5px #E7AF59; } .msp-preset-btn-138:hover{ background-color:#e9b362;box-shadow:0 4px #E7AF59;top:1px;color: #fff; } .msp-preset-btn-138:active{ box-shadow:0 2px #E7AF59;top:3px; } .msp-preset-btn-139{ background-color: #5aa1e3;color: #fff; } .msp-preset-btn-139:hover{ background-color:#5faaef;color: #fff; } .msp-preset-btn-139:active{ top:1px } .msp-preset-btn-140{ background-color: #5aa1e3;color: #fff; } .msp-preset-btn-140:hover{ background-color:#5faaef;color: #fff; } .msp-preset-btn-140:active{ top:1px } .msp-preset-btn-141{ color: #5aa1e3;border:solid 1px #5aa1e3; } .msp-preset-btn-141:hover{ border-color:#5faaef;color:#5faaef } .msp-preset-btn-141:active{ top:1px } .msp-preset-btn-142{ background-color: #5aa1e3;color: #fff; } .msp-preset-btn-142:hover{ background-color:#5faaef;color: #fff; } .msp-preset-btn-142:active{ top:1px } .msp-preset-btn-143{ background-color: #5aa1e3;color: #fff;box-shadow:0 5px #4c87bf; } .msp-preset-btn-143:hover{ background-color:#5faaef;box-shadow:0 4px #4c87bf;top:1px;color: #fff; } .msp-preset-btn-143:active{ box-shadow:0 2px #4c87bf;top:3px; } .msp-preset-btn-144{ background-color: #6dab3c;color: #fff; } .msp-preset-btn-144:hover{ background-color:#76b941;color: #fff; } .msp-preset-btn-144:active{ top:1px } .msp-preset-btn-145{ background-color: #6dab3c;color: #fff; } .msp-preset-btn-145:hover{ background-color:#76b941;color: #fff; } .msp-preset-btn-145:active{ top:1px } .msp-preset-btn-146{ color: #6dab3c;border:solid 1px #6dab3c; } .msp-preset-btn-146:hover{ border-color:#76b941;color:#76b941 } .msp-preset-btn-146:active{ top:1px } .msp-preset-btn-147{ background-color: #6dab3c;color: #fff; } .msp-preset-btn-147:hover{ background-color:#76b941;color: #fff; } .msp-preset-btn-147:active{ top:1px } .msp-preset-btn-148{ background-color: #6dab3c;color: #fff;box-shadow:0 5px #5e9334; } .msp-preset-btn-148:hover{ background-color:#76b941;box-shadow:0 4px #5e9334;top:1px;color: #fff; } .msp-preset-btn-148:active{ box-shadow:0 2px #5e9334;top:3px; } .msp-preset-btn-149{ background-color: #f4524d;color: #fff; } .msp-preset-btn-149:hover{ background-color:#e04b47;color: #fff; } .msp-preset-btn-149:active{ top:1px } .msp-preset-btn-150{ background-color: #f4524d;color: #fff; } .msp-preset-btn-150:hover{ background-color:#e04b47;color: #fff; } .msp-preset-btn-150:active{ top:1px } .msp-preset-btn-151{ color: #f4524d;border:solid 1px #f4524d; } .msp-preset-btn-151:hover{ border-color:#e04b47;color:#e04b47 } .msp-preset-btn-151:active{ top:1px } .msp-preset-btn-152{ background-color: #f4524d;color: #fff; } .msp-preset-btn-152:hover{ background-color:#e04b47;color: #fff; } .msp-preset-btn-152:active{ top:1px } .msp-preset-btn-153{ background-color: #f4524d;color: #fff;box-shadow:0 5px #cb4440; } .msp-preset-btn-153:hover{ background-color:#e04b47;box-shadow:0 4px #cb4440;top:1px;color: #fff; } .msp-preset-btn-153:active{ box-shadow:0 2px #cb4440;top:3px; } .msp-preset-btn-154{ background-color: #f79468;color: #fff; } .msp-preset-btn-154:hover{ background-color:#e78a61;color: #fff; } .msp-preset-btn-154:active{ top:1px } .msp-preset-btn-155{ background-color: #f79468;color: #fff; } .msp-preset-btn-155:hover{ background-color:#e78a61;color: #fff; } .msp-preset-btn-155:active{ top:1px } .msp-preset-btn-156{ color: #f79468;border:solid 1px #f79468; } .msp-preset-btn-156:hover{ border-color:#e78a61;color:#e78a61 } .msp-preset-btn-156:active{ top:1px } .msp-preset-btn-157{ background-color: #f79468;color: #fff; } .msp-preset-btn-157:hover{ background-color:#e78a61;color: #fff; } .msp-preset-btn-157:active{ top:1px } .msp-preset-btn-158{ background-color: #f79468;color: #fff;box-shadow:0 5px #da835c; } .msp-preset-btn-158:hover{ background-color:#e78a61;box-shadow:0 4px #da835c;top:1px;color: #fff; } .msp-preset-btn-158:active{ box-shadow:0 2px #da835c;top:3px; } .msp-preset-btn-159{ background: rgba(217,83,30,.75) url("/wp-content/uploads/home-iptv-arrow.png") 5px 2px no-repeat;color: #fff;padding: 0 20px 0 50px;font-size:1.4rem;line-height: 36px;font-weight: 400;min-height: 39px } .msp-preset-btn-159:hover{ background-color: rgba(217,83,30,1);color: #fff; } .msp-preset-btn-159:active{ background-color: rgba(217,83,30,1);color: #fff; } .msp-preset-btn-160{ background: rgba(219,169,53,.75) url("/wp-content/uploads/home-smarttv-arrow.png") 5px 2px no-repeat;color: #fff;padding: 0 20px 0 50px;font-size:1.4rem;line-height: 36px;font-weight: 400;min-height: 39px } .msp-preset-btn-160:hover{ background-color: rgba(219,169,53,1);color: #fff; } .msp-preset-btn-160:active{ background-color: rgba(219,169,53,1);color: #fff; } .msp-preset-btn-161{ background: rgba(218,215,17,.85) url("/wp-content/uploads/home-connectivity-arrow.png") 5px 2px no-repeat;;color: #666;padding: 0 20px 0 50px;font-size:1.4rem;line-height: 36px;font-weight: 400;min-height: 39px } .msp-preset-btn-161:hover{ background-color: rgba(218,215,17,1);color: #666; } .msp-preset-btn-161:active{ background-color: rgba(218,215,17,1);color: #666; } .msp-preset-btn-162{ background: rgba(133,90,118,.75) url("/wp-content/uploads/home-iot-arrow.png") 5px 2px no-repeat;;color: #fff;padding: 0 20px 0 50px;font-size:1.4rem;line-height: 36px;font-weight: 400;min-height: 39px } .msp-preset-btn-162:hover{ background-color: rgba(133,90,118,1);color: #fff; } .msp-preset-btn-162:active{ background-color: rgba(133,90,118,1);color: #fff; }.ms-parent-id-4 > .master-slider{ background: url( https://www.sigmadesigns.com/wp-content/uploads/living-room-standalone.jpg ) repeat top left; }
+.ms-parent-id-3 > .master-slider{ background: url( https://www.sigmadesigns.com/wp-content/uploads/living-room-standalone.jpg ) repeat top left; }</style>
+<script>var ms_grabbing_curosr='https://www.sigmadesigns.com/wp-content/plugins/masterslider/public/assets/css/common/grabbing.cur',ms_grab_curosr='https://www.sigmadesigns.com/wp-content/plugins/masterslider/public/assets/css/common/grab.cur';</script>
+<meta name="generator" content="MasterSlider 2.16.0 - Responsive Touch Image Slider" />
+<style id="ubermenu-custom-generated-css">
+/** UberMenu Responsive Styles (Breakpoint Setting) **/
+@media screen and (min-width: 768px){
+  .ubermenu{ display:block !important; } .ubermenu-responsive .ubermenu-item.ubermenu-hide-desktop{ display:none !important; } .ubermenu-responsive.ubermenu-retractors-responsive .ubermenu-retractor-mobile{ display:none; } .ubermenu-responsive-toggle{ display:none; }
+}
+@media screen and (max-width: 767px){
+   .ubermenu-responsive-toggle, .ubermenu-sticky-toggle-wrapper { display: block; }  .ubermenu-responsive{ width:100%; max-height:500px; visibility:visible; overflow:visible;  -webkit-transition:max-height 1s ease-in; transition:max-height .3s ease-in; }  .ubermenu-responsive.ubermenu-responsive-nocollapse, .ubermenu-repsonsive.ubermenu-no-transitions{ display:block; max-height:none; }  .ubermenu-responsive.ubermenu-responsive-collapse{ max-height:none; visibility:visible; overflow:visible; } .ubermenu-responsive.ubermenu-responsive-collapse{ max-height:0; overflow:hidden !important; visibility:hidden; } .ubermenu-responsive.ubermenu-in-transition, .ubermenu-responsive.ubermenu-in-transition .ubermenu-nav{ overflow:hidden !important; visibility:visible; } .ubermenu-responsive.ubermenu-responsive-collapse:not(.ubermenu-in-transition){ border-top-width:0; border-bottom-width:0; }  .ubermenu-responsive .ubermenu-item-level-0{ width:50%; } .ubermenu-responsive .ubermenu-item.ubermenu-item-level-0 > .ubermenu-target{ border:none; box-shadow:none; } .ubermenu-responsive .ubermenu-item.ubermenu-has-submenu-flyout{ position:static; } .ubermenu-responsive.ubermenu-sub-indicators .ubermenu-submenu-type-flyout .ubermenu-has-submenu-drop > .ubermenu-target:after{ content:"\f107"; }  .ubermenu-responsive .ubermenu-nav .ubermenu-item .ubermenu-submenu.ubermenu-submenu-drop{ width:100%; min-width:100%; max-width:100%; top:auto; left:0 !important; } .ubermenu-responsive .ubermenu-active > .ubermenu-submenu-type-mega{     max-height:none;     height:auto;/*prevent overflow scrolling since android is still finicky*/ } .ubermenu-responsive.ubermenu-transition-slide .ubermenu-item.ubermenu-in-transition > .ubermenu-submenu-drop{ max-height:1000px; /* because of slide transition */ } .ubermenu .ubermenu-submenu-type-flyout .ubermenu-submenu-type-mega{ min-height:0; } .ubermenu.ubermenu-responsive .ubermenu-column, .ubermenu.ubermenu-responsive .ubermenu-column-auto{ min-width:50%; } .ubermenu.ubermenu-responsive .ubermenu-autoclear > .ubermenu-column{ clear:none; } .ubermenu.ubermenu-responsive .ubermenu-column:nth-of-type(2n+1){ clear:both; } .ubermenu.ubermenu-responsive .ubermenu-submenu-retractor-top:not(.ubermenu-submenu-retractor-top-2) .ubermenu-column:nth-of-type(2n+1){ clear:none; } .ubermenu.ubermenu-responsive .ubermenu-submenu-retractor-top:not(.ubermenu-submenu-retractor-top-2) .ubermenu-column:nth-of-type(2n+2){ clear:both; }   .ubermenu.ubermenu-responsive .ubermenu-tabs, .ubermenu.ubermenu-responsive .ubermenu-tabs-group, .ubermenu.ubermenu-responsive .ubermenu-tab, .ubermenu.ubermenu-responsive .ubermenu-tab-content-panel{ /** TABS SHOULD BE 100%  ACCORDION */ width:100%; min-width:100%; max-width:100%; left:0; } .ubermenu.ubermenu-responsive .ubermenu-tabs, .ubermenu.ubermenu-responsive .ubermenu-tab-content-panel{ min-height:0 !important;/* Override Inline Style from JS */ } .ubermenu.ubermenu-responsive .ubermenu-tab-content-panel{ z-index:20; } .ubermenu-responsive .ubermenu-tab > .ubermenu-target{ border-width:0 0 1px 0; } .ubermenu-responsive.ubermenu-sub-indicators .ubermenu-tabs > .ubermenu-tabs-group > .ubermenu-tab.ubermenu-has-submenu-drop > .ubermenu-target:after{ content:"\f107"; }  .ubermenu-responsive .ubermenu-tabs > .ubermenu-tabs-group > .ubermenu-tab > .ubermenu-tab-content-panel{ position:relative; border-width:0 0 2px 0; } .ubermenu-responsive .ubermenu-tab-layout-bottom > .ubermenu-tabs-group{ position:relative; }   .ubermenu-reponsive .ubermenu-item-level-0 > .ubermenu-submenu-type-stack{ /* Top Level Stack Columns */ position:relative; }  .ubermenu-responsive .ubermenu-submenu-type-stack .ubermenu-column, .ubermenu-responsive .ubermenu-submenu-type-stack .ubermenu-column-auto{ /* Stack Columns */ width:100%; max-width:100%; }   .ubermenu-responsive .ubermenu-item-mini{ /* Mini items */ min-width:0; width:auto; float:left; clear:none !important; } .ubermenu-responsive .ubermenu-item.ubermenu-item-mini > a.ubermenu-target{ padding:20px; }   .ubermenu-responsive .ubermenu-item.ubermenu-hide-mobile{ /* Hiding items */ display:none !important; }  .ubermenu-responsive.ubermenu-hide-bkgs .ubermenu-submenu.ubermenu-submenu-bkg-img{ /** Hide Background Images in Submenu */ background-image:none; }  .ubermenu-responsive-toggle{ display:block; }
+}
+@media screen and (max-width: 480px){
+  .ubermenu.ubermenu-responsive .ubermenu-item-level-0{ width:100%; } .ubermenu.ubermenu-responsive .ubermenu-column, .ubermenu.ubermenu-responsive .ubermenu-column-auto{ min-width:100%; } .ubermenu.ubermenu-responsive .ubermenu-item-mini{ min-width:0; width:auto; }
+}
+
+
+/** UberMenu Custom Menu Styles (Customizer) **/
+/* main */
+.ubermenu-main .ubermenu-row { max-width:600px; margin-left:auto; margin-right:auto; }
+.ubermenu-main.ubermenu-transition-fade .ubermenu-item .ubermenu-submenu-drop { margin-top:0; }
+.ubermenu-main .ubermenu-item-level-0 > .ubermenu-target { font-size:16px; color:#666666; padding-left:13px; padding-right:13px; }
+.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop { background-color:#ffffff; }
+.ubermenu-main, .ubermenu-main .ubermenu-target, .ubermenu-main .ubermenu-nav .ubermenu-item-level-0 .ubermenu-target, .ubermenu-main div, .ubermenu-main p, .ubermenu-main input { font-family:'Roboto', sans-serif; font-weight:300; }
+/* sigma */
+.ubermenu-sigma.ubermenu-transition-fade .ubermenu-item .ubermenu-submenu-drop { margin-top:0; }
+/* leftmenu */
+.ubermenu-leftmenu.ubermenu-transition-fade .ubermenu-item .ubermenu-submenu-drop { margin-top:0; }
+.ubermenu-leftmenu .ubermenu-item-level-0 > .ubermenu-target { font-size:16px; color:#666666; padding-left:13px; padding-right:13px; }
+.ubermenu-leftmenu .ubermenu-submenu.ubermenu-submenu-drop { background-color:#ffffff; }
+.ubermenu-leftmenu, .ubermenu-leftmenu .ubermenu-target, .ubermenu-leftmenu .ubermenu-nav .ubermenu-item-level-0 .ubermenu-target, .ubermenu-leftmenu div, .ubermenu-leftmenu p, .ubermenu-leftmenu input { font-family:'Roboto', sans-serif; font-weight:300; }
+
+
+/** UberMenu Custom Menu Item Styles (Menu Item Settings) **/
+/* 12 */    .ubermenu .ubermenu-submenu.ubermenu-submenu-id-12 { width:620px; min-width:620px; }
+/* 11 */    .ubermenu .ubermenu-submenu.ubermenu-submenu-id-11 { padding:1em; }
+
+/* Status: Loaded from Transient */
+
+</style><!-- Google Fonts --><link href='//fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' type='text/css'><link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'><!-- Custom Typography --><style type="text/css">body{font-family:'Open Sans'; }h1,h2,h3,h4,h5,h6, .hp-highlight h3 {font-family:'Roboto'; }</style>
+<!-- Easy FancyBox 1.6 using FancyBox 1.3.8 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var fb_timeout = null;
+var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'showCloseButton' : true, 'width' : 560, 'height' : 340, 'padding' : 5, 'margin' : 20, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : true };
+var easy_fancybox_handler = function(){
+	/* IMG */
+	jQuery('a.fancybox, area.fancybox, li.fancybox a').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false, 'titleShow' : true, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+	/* YouTube */
+	jQuery('a[href*="youtu.be/"], area[href*="youtu.be/"], a[href*="youtube.com/watch"], area[href*="youtube.com/watch"]').not('.nolightbox').addClass('fancybox-youtube');
+	jQuery('a.fancybox-youtube, area.fancybox-youtube, li.fancybox-youtube a').fancybox( jQuery.extend({}, fb_opts, { 'type' : 'iframe', 'width' : 853, 'height' : 480, 'padding' : 5, 'titleShow' : false, 'titlePosition' : 'float', 'titleFromAlt' : true, 'onStart' : function(selectedArray, selectedIndex, selectedOpts) { selectedOpts.href = selectedArray[selectedIndex].href.replace(new RegExp('youtu.be', 'i'), 'www.youtube.com/embed').replace(new RegExp('watch\\?(.*)v=([a-z0-9\_\-]+)(&amp;|&|\\?)?(.*)', 'i'), 'embed/$2?$1$4'); var splitOn = selectedOpts.href.indexOf('?'); var urlParms = ( splitOn > -1 ) ? selectedOpts.href.substring(splitOn) : ""; selectedOpts.allowfullscreen = ( urlParms.indexOf('fs=0') > -1 ) ? false : true } }) );
+	/* iFrame */
+	jQuery('a.fancybox-iframe, area.fancybox-iframe, li.fancybox-iframe a').fancybox( jQuery.extend({}, fb_opts, { 'type' : 'iframe', 'width' : '70%', 'height' : '90%', 'titleShow' : false, 'titlePosition' : 'float', 'titleFromAlt' : true, 'allowfullscreen' : false }) );
+}
+var easy_fancybox_auto = function(){
+	/* Auto-click */
+	setTimeout(function(){jQuery('#fancybox-auto').trigger('click')},1000);
+}
+/* ]]> */
+</script>
+ 
+
+
+</head>
+
+
+
+<body class="page-template-default page page-id-363 wp-custom-logo _masterslider _msp_version_2.16.0">
+
+                 
+
+
+        
+      <header id="header">
+
+    
+<nav role="navigation">
+
+    <div class="navbar navbar-default navbar-fixed-top">
+
+        <div class="container">
+        
+			<div class="navbar-header">        
+        
+        
+           
+            <div id="logo"><a href="https://www.sigmadesigns.com/" title="Sigma Designs" rel="home">
+
+                <img src="https://www.sigmadesigns.com/wp-content/uploads/sigma-logo.png" alt="Sigma Designs" />
+
+            </a></div>
+
+            
+        </div>
+		   <div class="header-eyebrow hidden-xs">
+		   <ul id="menu-top-eyebrow" class="navbar-eyebrow"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://www.sigmadesigns.com/home/">Home</a></li>
+</ul>	           
+          </div>
+          
+                    
+          <div class="main-menu container">
+             <div class="header-right hidden-xs"><div id="search-3" class="widget_search">	<form method="get" class="form-inline" action="https://www.sigmadesigns.com/">
+		<div class="form-group">
+		    <input type="text" class="form-control search-query" name="s" id="search" placeholder="Search &hellip;">
+		  </div>
+		<button type="submit" class="btn btn-cta" name="submit" id="searchsubmit" value="Search">Search</button>
+	</form></div></div>
+			   <div class="ubermenu-responsive-toggle ubermenu-responsive-toggle-main ubermenu-skin-none ubermenu-loc-top-bar" data-ubermenu-target="ubermenu-main-2-top-bar"><i class="fa fa-bars"></i></div><div id="ubermenu-main-2-top-bar" class="ubermenu ubermenu-nojs ubermenu-main ubermenu-menu-2 ubermenu-loc-top-bar ubermenu-responsive ubermenu-responsive-767 ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-slide ubermenu-trigger-hover_intent ubermenu-skin-none ubermenu-bar-align-right ubermenu-items-align-right ubermenu-retractors-responsive"><ul id="ubermenu-nav-main-2-top-bar" class="ubermenu-nav"><li id="menu-item-13" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-13 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Corporate</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-13 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item" ><li id="menu-item-246" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-home ubermenu-item-246 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.sigmadesigns.com/"><span class="ubermenu-target-title ubermenu-target-text">Company Overview</span></a></li><li id="menu-item-190" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-190 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.sigmadesigns.com/leadership/"><span class="ubermenu-target-title ubermenu-target-text">Leadership</span></a></li><li id="menu-item-351" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-351 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1 ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.sigmadesigns.com/ir/"><span class="ubermenu-target-title ubermenu-target-text">Investor Relations</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-351 ubermenu-submenu-type-auto ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item" ><li id="menu-item-352" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-352 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.sigmadesigns.com/ir/board-directors/"><span class="ubermenu-target-title ubermenu-target-text">Board of Directors</span></a></li><li id="menu-item-353" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-353 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.sigmadesigns.com/ir/governance/"><span class="ubermenu-target-title ubermenu-target-text">Governance</span></a></li></ul></li><li id="menu-item-310" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-310 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.sigmadesigns.com/news-events/"><span class="ubermenu-target-title ubermenu-target-text">News &#038; Events</span></a></li><li id="menu-item-836" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-836 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.sigmadesigns.com/locations/"><span class="ubermenu-target-title ubermenu-target-text">Locations</span></a></li></ul></li></ul></div>          </div>
+        </div>
+     </div>           
+</nav>
+
+</header><!-- end of header -->
+
+
+
+<div id="wrapper" class="clearfix">
+	<div class="printOnly container"><img src="https://www.sigmadesigns.com/wp-content/themes/sigma/images/SigmaLogo-print.png" alt="Sigma Designs" /></div>
+
+    
+
+
+<div class="page-wrap clearfix main-page white">
+
+
+     <div class="page-banner">
+     	<div class="container">
+			<h1>Privacy</h1>
+                      <div class="bannerImg default"></div>
+		</div>
+     </div>
+     
+	<div class="container">
+	        	<div class="breadcrumbs">
+        <p id="breadcrumbs"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="https://www.sigmadesigns.com/" rel="v:url" property="v:title">Home</a> » <span class="breadcrumb_last">Privacy</span></span></span></p>        </div>
+         
+		<div class="row">
+        				<div class="leftMenu col-sm-3 column hidden-xs">
+			   <h2>Corporate</h2><ul class='leftNav'><li class="page_item page-item-221"><a href="https://www.sigmadesigns.com/">Company Overview</a></li>
+<li class="page_item page-item-171"><a href="https://www.sigmadesigns.com/leadership/">Leadership</a></li>
+<li class="page_item page-item-338 page_item_has_children"><a href="https://www.sigmadesigns.com/ir/">Investor Relations</a>
+<ul class='children'>
+	<li class="page_item page-item-340"><a href="https://www.sigmadesigns.com/ir/board-directors/">Board of Directors</a></li>
+	<li class="page_item page-item-328"><a href="https://www.sigmadesigns.com/ir/governance/">Governance</a></li>
+</ul>
+</li>
+<li class="page_item page-item-305"><a href="https://www.sigmadesigns.com/news-events/">News &#038; Events</a></li>
+<li class="page_item page-item-834"><a href="https://www.sigmadesigns.com/locations/">Locations</a></li>
+<li class="page_item page-item-359"><a href="https://www.sigmadesigns.com/terms/">Terms of Use</a></li>
+<li class="page_item page-item-361"><a href="https://www.sigmadesigns.com/copyright/">Copyright</a></li>
+<li class="page_item page-item-363 current_page_item"><a href="https://www.sigmadesigns.com/privacy/">Privacy</a></li>
+</ul>            
+                            <!-- Contact Widget sales 
+                <div class="contact-sales-widget">
+                                        </div>  Contact Widget  -->
+                
+                                      
+			</div> <!-- /leftMenu-->
+            
+                      
+           <div class="bodyColumn col-sm-9 column">
+           	<div class="row">
+                 <div class="page-content col-sm-12 column">    
+                   <h2 class="title">Website Privacy Policy</h2>
+<p>In this Website Privacy Policy (“Policy”), we, Sigma Designs, Inc. and our subsidiaries, provide information about how we collect, use and transfer personally identifiable data from you, a web site visitor, through <a href="http://www.sigmadesigns.com">www.sigmadesigns.com</a>, <a href="http://www.z-wave.com">www.z-wave.com</a> and other web sites that we operate and on which we post a direct link to this Policy (collectively the &#8220;Site&#8221;).</p>
+<p>This Policy covers only data collected through the Site and not any other data collection or processing, including, without limitation, data collection practices of other web pages to which we link or data that we or our subsidiaries collect offline or through web sites, products, or services that do not display a direct link to this Policy.</p>
+<h3>Cookies</h3>
+<p>We may use cookies, web beacons or similar technologies to collect the information described above. A cookie is a small text file that may be stored on the hard drive of your computer or device when you access the site. We may also use cookies to make visiting and using our website easier. Cookies can help us see which parts of our website are the most or least popular and provide us with direction to improve our customer’s online experience. We do not and will not use cookies to retrieve personal information about you from your computer, unless you have provided us permission to do so. You are free to decline cookies, but by doing so, you may not be able to use certain features on the site or take full advantage of all of our offerings.</p>
+<h3>Collection Purposes and Use of Data</h3>
+<p>We use the data we collect for the following general purpoeses (1) to administer, protect and improve our Site and our systems; (2) to better understand the preferences of our Site visitors; (3) to identify server problems; (4) to compile aggregated statistics about Site usage; and (5) to help personalize your experience of our Site.</p>
+<h3>Data Storage and Process</h3>
+<p>Sigma keeps data in California and Sigma also has servers, contractors and employees around in world in various locations, including, without limitation, other parts of the United States of America, Asia and the European Economic Area.</p>
+<h3>Children&#8217;s Privacy</h3>
+<p>The Site is intended for adults only. We do not intentionally or knowingly collect, personally-identifiable information from children under the age of 13 and we request that individuals under the age of 13 not submit any personal information on the Site.</p>
+<h3>Amendments and Modifications</h3>
+<p>Sigma reserves the right to change this Policy from time to time and in our sole discretion. We reserve the right to change, modify, add or remove portions of this Policy at any time, but will alert you that changes have been made by indicating on the Policy the date it was last updated. When you visit the Site, you are accepting the current version of this Policy as posted on the Site at that time. We recommend that users revisit this Policy on occasion to learn of any changes.</p>
+<h3>Contact Us</h3>
+<p>Please feel free to contact us with any questions, comments, complaints or suggestions you might have regarding the information practices described in this Policy. E-mail us at : <a href="mailto:webmaster@sigmadesigns.com">webmaster@sigmadesigns.com</a></p>
+<p>Or you may write to us at Sigma Designs, Inc., 47467 Fremont Blvd, Fremont, California 94538.</p>
+                 </div> <!-- /page-content-->
+              
+              						</div> 
+              <div class="lowerSection row">
+              		<div class="lowerContent col-sm-12 column">
+					                    
+                  </div>
+              </div>                    
+           </div> <!-- /bodyColumn-->  
+		</div>
+	</div><!-- END outer container -->    
+    </div><!-- END page-wrap -->
+	 
+
+</div><!-- end of wrapper-->
+
+
+
+
+
+
+
+
+
+<footer id="f">
+
+<div class="container">
+
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+
+          <div id="text-2" class="widget-wrapper widget_text">			<div class="textwidget"><p>© 2019 Sigma Designs, Inc. All rights reserved.<br />
+<a href="/privacy">Privacy</a>  |  <a href="/terms">Terms of Use</a>  |  <a href="/copyright">Trademarks</a><br />
+<a href="/ir/governance/#CTSCA">California Supply Chains Act</a></p>
+</div>
+		</div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6 text-right">
+
+          
+        </div>
+
+      
+
+      </div><!-- /row -->
+
+    </div><!-- /container -->
+
+</footer><!-- end #footer -->
+
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"767","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","v":"3.1.0.1","ajax_url":"https:\/\/www.sigmadesigns.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js?ver=3.1.0.1'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-includes/js/wp-embed.min.js?ver=4.8'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.8.min.js?ver=1.6'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/plugins/easy-fancybox/js/jquery.easing.min.js?ver=1.4.0'></script>
+<script type='text/javascript' src='https://www.sigmadesigns.com/wp-content/plugins/easy-fancybox/js/jquery.mousewheel.min.js?ver=3.1.13'></script>
+<script type="text/javascript">
+jQuery(document).on('ready post-load', function(){ jQuery('.nofancybox,a.pin-it-button,a[href*="pinterest.com/pin/create/button"]').addClass('nolightbox'); });
+jQuery(document).on('ready post-load',easy_fancybox_handler);
+jQuery(document).on('ready',easy_fancybox_auto);</script>
+
+<!-- analytics here -->
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10019984-1']);
+    _gaq.push(['_setDomainName', 'sigmadesigns.com'])
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+  </script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1220c8aeea","applicationID":"55086351","transactionName":"NVVSYEJYVkpWUEFdWgwfcVdEUFdXGENUU1A=","queueTime":0,"applicationTime":398,"atts":"GRJRFgpCRUQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

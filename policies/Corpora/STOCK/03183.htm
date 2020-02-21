@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>:::::Aceto - About Aceto::::::</title>
+
+<meta name="generator" content="WordPress" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<link rel="icon" href="wp-content/themes/aceto/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="wp-content/themes/aceto/css/coin-slider-styles.css" type="text/css" />
+    <link rel="stylesheet" href="wp-content/themes/aceto/css/topmenu_style.css" type="text/css" />
+    <link rel="stylesheet" href="wp-content/themes/aceto/css/colorbox.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/aceto/style.css" />
+    <!--[if IE]>
+		<script src="wp-content/themes/aceto/js/html5.js"></script>
+	<![endif]-->
+<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/aceto/css/ie.css"/>
+	<![endif]-->
+    <script type="text/javascript" src="wp-content/themes/aceto/js/add_bookmark.js"></script>
+    <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}DIV.clear {
+	clear: both;width: 0;height:0;margin:0;line-height:0;padding:0;zoom:1; min-height:1%}</style>
+	<script type="text/javascript" src="wp-content/themes/aceto/js/jquery.min.js"></script>
+	<script src="wp-content/themes/aceto/js/jquery-ui.min.js"></script>
+	<script src="wp-content/themes/aceto/js/ddsmoothmenu.js"></script>
+    <script src="wp-content/themes/aceto/js/aceto.js"></script>
+    <script src="wp-content/themes/aceto/js/scroll.js"></script>
+    <script src="wp-content/themes/aceto/js/jquery-1.3.1.js"></script>
+    <script src="wp-content/themes/aceto/js/ddaccordion.js"></script>
+    <script src="wp-content/themes/aceto/js/jquery.colorbox.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+
+		if (!$.browser.opera) {
+
+			// select element styling
+			$('select.select').each(function(){
+				var title = $(this).attr('title');
+				if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+				$(this)
+					.css({'z-index':99999,'opacity':0,'-khtml-appearance':'none'})
+					.after('<span class="select">' + title + '</span>')
+					.change(function(){
+						val = $('option:selected',this).text();
+						$(this).next().text(val);
+						})
+			});
+
+		};
+
+	});
+</script>
+	<script>
+		$(document).ready(function(){
+			//????ColorBox???????
+			$("a[rel='example1']").colorbox();
+			$("a[rel='example2']").colorbox({transition:"fade"});
+			$("a[rel='example3']").colorbox({transition:"none", width:"75%", height:"75%"});
+			$("a[rel='example4']").colorbox({slideshow:true});
+			$(".example5").colorbox();
+			$(".example6").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+			$(".example7").colorbox({width:"80%", height:"80%", iframe:true});
+			$(".example8").colorbox({width:"30%", inline:true, href:"#inline_example1"});
+			$(".example9").colorbox({
+				onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+				onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+				onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+				onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+				onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+			});
+
+			//?????????JavaScript???
+			$("#click").click(function(){
+				$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+				return false;
+			});
+		});
+	</script>
+    <script type="text/javascript">
+	ddaccordion.init({
+	headerclass: "submenuheader", //???CSS??
+	contentclass: "submenu", //??????CSS??
+	revealtype: "click", //??????onmouseover??????????“??”??“onmouseout”
+	mouseoverdelay: 200,
+	collapseprev: true, //???????????????????? true/false
+	defaultexpanded: [],
+	onemustopen: false, //?????????????????
+	animatedefault: false, //?????????
+	persiststate: true, //??????????????
+	toggleclass: ["", ""], //??CSS??????????????? ??? ["class1", "class2"]
+	togglehtml: ["suffix", "<img src='wp-content/themes/aceto/images/plus.png' class='statusicon' />", "<img src='wp-content/themes/aceto/images/minus.png' class='statusicon' />"], //???????????????? ???  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //?????????????? (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //???????????
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){
+		//do nothing
+	}
+})
+    $(function(){
+        var thisEle = $("#para").css("font-size"); //?????????????
+        var textFontSize = parseFloat(thisEle,10); //??????????????
+        var unit = thisEle.slice(-2);//??????????????
+        $("b").click(function(){
+            var cName = ($(this).attr("class"))
+            if(cName == "bigger"){
+                textFontSize+=2;
+            }else if(cName == "smaller"){
+                textFontSize-=2;
+            }
+            $("#para").css("font-size",textFontSize+unit)
+        })
+    })
+</script>
+</head>
+<body class="home blog cat-1-id" id="index">
+	 <!--<div id="chrome"></div>-->
+<header>
+      <section class="chrome">
+			<div class="container_12">
+				<div class="grid_12">
+				  <div class="top_head">
+                    <div class="logo"><a href="index.php"><img src="wp-content/themes/aceto/images/logo.gif" alt="logo" border="0"></a></div>
+                    <div class="imrcmain0 imgl" style=""><div class="imcm imde" id="imouter0"><ul id="imenus0">
+<li class="imatm"  style="width:155px"><a class="" href="#"><span class="imea imeam"><span></span></span>Quick Access</a>
+                    <div class="imsc"><div class="imsubc" style="top:-6px;right:1px;">
+                    <ul>
+                    <li class="quick"><a href="../overview.html">Overview</a></li>
+					<li class="quick"><a href="../segments.html">Business Segments</a></li>
+					<li class="quick"><a href="../catalog.php">Products Catalogue</a></li>
+					<!--<li class="quick"><a href="../IR/index.html">Investors</a></li>-->
+					<!--<li class="quick"><a href="../IR_Releases/index.html">News releases</a></li>-->
+					<li class="quick"><a href="../contact_general.php">Contact us</a></li>
+					<li class="quick"><a href="http://www.anti-clog1.com/" target="_blank">CDC Anti-clog#1</a></li>
+					<li class="quick"><a href="https://sds.aceto.com">SDS sheet link</a><li>
+					</ul></div></div>
+					</li>
+
+					<li class="imatm"  style="width:260px;"><a href="#"><span class="imea imeam"><span></span></span>Aceto Worldwide Subsidiaries</a>
+						<div class="imsc" style=" margin-right:1px"><div class="imsubc" style="width:550px;top:0px;right:0px"><ul>
+						<li><a href="../GmbH/gmbh_home.html">Aceto Fine Chem GmbH (Hamburg)</a></li>
+						<li><a href="../SAS/SAS_home.html">Aceto France S.A.S.</a></li>
+						<li><a href="../HI_GmbH/HI_GmbH_home.html">Aceto Health Ingredients GmbH (Hamburg)</a></li>
+						<li><a href="../netherlands/netherlands_home.html">Aceto B.V. (Netherlands)</a></li>
+						<li><a href="../hamburg/pharma_gmbh_home.html">Aceto Pharma GmbH (Hamburg)</a></li>
+						<li><a href="../india/india_home.html">Aceto Pharma (India) Private Ltd.</a></li>
+					    <li><a href="../shanghai/shanghai_home.html">Aceto (Shanghai) Ltd</a></li>
+					    <li><a href="../singapore/singapore_home.html">Aceto Pte Ltd (Singapore)</a></li>
+						<li><a href="../philippines/philippines_home.html">Acetopharma Philippines Inc</a></li>
+					    <li><a href="http://www.pharmawaldhof.de/" target="_blank">Pharma Waldhof GmbH (Dusseldorf)</a></li>
+					    <!--<li><a href="http://www.risingpharma.com/" target="_blank">Rising Pharmaceuticals Inc</a></li>-->
+						</ul></div></div>
+    </li>
+</ul><div class="imclear">&nbsp;</div></div></div>
+				  <!--<div id="header_sidebar"><div class="textwidget">@</div></div>
+						<div id="hidden_menu"><div id="smoothmenu_top" class="ddsmoothmenu"><ul id="hid" class="menu">
+                        </ul></div>--></div></div></div></div>
+  </section>
+                        <div class="container_12">
+                        <div class="grid_12 header_container"><!--#main_menu-->
+                        <div id="container">
+							<nav id="main_menu">
+							<div id="smoothmenu1" class="ddsmoothmenu">
+							<ul id="menu-main-menu" class="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="overview.html">About Aceto</a>
+                             <ul class="sub-menu">
+	<li class="menu-item2"><a href="overview.html">Company Overview</a></li>
+	<li class="menu-item2"><a href="segments.html">Business Segments <img src="wp-content/themes/aceto/images/arrow-bg.gif" /></a>
+    <ul>
+    <li class="menu-item2"><a href="health.html">Human Health</a></li>
+    <li class="menu-item2"><a href="chemicals.html">Performance Chemicals</a></li>
+    <li class="menu-item2"><a href="ingredients.html">Pharmaceutical Ingredients</a></li>
+    </ul>
+    </li>
+	<li class="menu-item2"><a href="policy.html">Quality Policy</a></li>
+	<li class="menu-item2"><a href="locations.html">Locations</a></li>
+	<!--<li class="menu-item2"><a href="court_supervised_sale.html">Court Supervised Sale</a></li>--></ul>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="catalog.php">Products </a>
+                            <ul class="sub-menu">
+	<li class="menu-item2"><a href="catalog.php">Product Catalog</a></li>
+	<li class="menu-item2"><a href="request_quote.php">Request A Quote</a></li>
+    </ul></li>
+    <!--<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="IR/index.html">Investors</a></li>-->
+    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="company_news.html">Media &amp; Events</a>
+    <ul class="sub-menu">
+    <li class="menu-item2"><a href="news.html">News</a></li>
+	<li class="menu-item2"><a href="company_news.html">Aceto in the News</a></li>
+	<li class="menu-item2"><a href="tradeshows.html">Tradeshows</a></li>
+    </ul></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contact_general.php">Contact us</a>
+    <ul class="sub-menu">
+	<li class="menu-item2"><a href="contact_general.php">General Inquiries</a></li>
+	<!--<li class="menu-item2"><a href="contact_financial.php">Financial Information</a></li>-->
+    <!--<li class="menu-item2"><a href="contact_generics.php">Finished Dosage Form Generics</a></li>-->
+    <li class="menu-item2"><a href="contact_nutritionals.php">Nutritionals</a></li>
+    <li class="menu-item2"><a href="contact_APIS.php">Active Pharmaceutical Ingredients (API’s)</a></li>
+    <li class="menu-item2"><a href="contact_intermediates.php">Pharmaceutical Intermediates</a></li>
+    <li class="menu-item2"><a href="contact_chemicals.php">Specialty Chemicals</a></li>
+    <li class="menu-item2"><a href="contact_agricultural.php">Agricultural Protection Products</a></li>
+    </ul></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="working.html">Careers</a>
+    <ul class="sub-menu">
+	<li class="menu-item2"><a href="working.html">Working at Aceto</a></li>
+	<li class="menu-item2"><a href="benefits.html">Benefits</a></li>
+    <li class="menu-item2"><a href="opportunities.html">Current Opportunities</a></li></ul></li>
+    </ul>								</div>
+							</nav>
+                            <!--#search-->
+							<form method="get" name="head_search" id="search_form" action="search_general.php">
+    <div id="searchback"><input type="text" onBlur="if(this.value =='') this.value='search'" onFocus="if (this.value == 'search') this.value=''"  value="search" name="keyword" class="required" id="s"/>
+    <input type="image" src="wp-content/themes/aceto/images/search_but.png" style="position:relative;top:4px;left:-20px;" /></div></form>
+				</div>
+		  </div>
+  </div>
+<div class="clear"></div></header>
+        <div class="border_top"></div>
+<section id="content_inside">
+        <div class="container_inside_area">
+<!--<div class="grid_12 beforefooter">
+        <div class="widget-2 box-inside_bg widget_text">
+			  <div class="textwidget"></div>
+               </div></div>--><div class="clear"></div></div></section>
+               <div class="clear"></div>
+               <section id="supcontent">
+               <div class="container_12">
+               <div class="grid_12">
+               <div class="widget-1 alpha tagline_bg"></div>
+               <div class="widget-2 omega tagline">
+               <div class="infiniteSlider" id="categories_box">
+
+			   <div class="location"><span class="location_1"><a href="index.php" class="home"><img src="wp-content/themes/aceto/images/home.png" /></a> &gt; Privacy Policy &gt; </span><span class="right_corner"><img src="wp-content/themes/aceto/images/right_corner.png" /></span></div>
+               <!--content start-->
+
+               <div class="wrapper">
+               <div class="glossymenu">
+<a class="menuitem" href="sitemap.html">Site Map</a>
+<a class="menuitem" href="#"><span class="current">Privacy Policy</span></a>
+<a class="menuitem" href="termofuse.html">Term of Use</a><!--<div class="submenu">
+	<ul>
+	<li><a href="http://www.cssdrive.com">CSS Gallery</a></li>
+	<li><a href="http://www.cssdrive.com/index.php/menudesigns/">Menu Gallery</a></li>
+	<li><a href="http://www.cssdrive.com/index.php/news/">Web Design News</a></li>
+	<li><a href="http://www.cssdrive.com/index.php/examples/">CSS Examples</a></li>
+	<li><a href="http://www.cssdrive.com/index.php/main/csscompressor/">CSS Compressor</a></li>
+	<li><a href="http://www.dynamicdrive.com/forums/forumdisplay.php?f=6">CSS Forums</a></li>
+	</ul>
+	<img src="http://i27.tinypic.com/sy7295.gif" style="margin: 10px 5px" /></div>-->
+</div>
+      <div class="content">
+                 <h3 class="title"><i>Privacy Policy</i><div id=mpic>
+		<ul>
+		<li class="one"><a href="javascript:scroll(330,330)"><b class="bigger">A+</b></a></li>
+		<li class="two"><a href="javascript:scroll(330,330)"><b class="smaller">A-</b></a></li>
+		<li class="three"><a id="addBookmarkContainer"></a></li>
+        <li class="four"><a href="javascript:window.print()" _fcksavedurl="javascript:window.print()">print</a></li>
+        <li class="five"><a class='example5' href="content.html" title="Send to a friend">mail</a></li>
+		</ul>
+	  </div></h3>
+                 <div class="text" id="para">
+      ACETO is committed to protecting your privacy. This site is for registerd users only, we need your information to provide services that you request, and this privacy policy explains data collection and use in those situations. This privacy policy only applies to <a href="http://www.aceto.com">http://www.aceto.com</a>; it does not apply to other online or offline ACETO sites, products or services. Please read the complete ACETO.COM privacy policy.
+      <span class="normal_title">Collection of your Personal Information</span>
+     We will ask you when we need information that personally identifies you (personal information) or allows us to contact you. Generally, this information is requested when you are registering before obtaining further information, ordering e-mail newsletters, or when purchasing and/or registering ACETO products and services. Necessary personal information and relevant corporate information is collected by ACETO.COM when needed to provide a service you requested.<br />
+     <br />ACETO.COM may also collect certain information about your computer hardware and software. This information may include: your IP address, browser type, operating system, domain name, access times and referring Web site addresses. This information is used for the operation of the service, to maintain quality of the service, and to provide general statistics regarding use of ACETO.COM.<br /><br />ACETO.COM may also collect information about which pages our customers visit within ACETO.COM. This site visitation data is never linked with personal information unless a user consents as described below.<span class="normal_title">Use of your Personal Information</span>
+     We use your  personal information for the following purposes:
+     <ol>
+       <li>To ensure our site is relevant to your needs.</li>
+       <li>To deliver products and services, that you request or  purchase.</li>
+       <li>To help us create and publish content most relevant to  you.</li>
+       <li>To alert you to service and information updates from ACETO, if you so request.</li>
+     </ol>
+     We may hire other companies to provide limited services on our behalf, including packaging, mailing and delivering purchases, answering customer questions about products or services, sending postal mail and processing event registration. We will only provide those companies the information they need to deliver the service, and they are prohibited from using that information for any other purpose.<br /><br />
+     ACETO may disclose your personal information if required to do so by law or in the good-faith belief that such action is necessary to: (a) conform to the edicts of the law or comply with legal process served on ACETO or the site; (b) protect and defend the rights or property of ACETO and its website, or (c) act in urgent circumstances to protect the personal safety of ACETO employees, users of ACETO products or services, or members of the public.<br />
+     <br />Your information may be stored and processed in Taiwan or any other country in which ACETO or its affiliates or agents maintain facilities, and by using this site, you consent to any such transfer of information outside of your country.<span class="normal_title">Control of your Personal Information</span>When you register, or otherwise give us personal information, ACETO.COM will not share that information with third parties without your permission, other than for the limited exceptions already listed. It will only be used for the purposes stated above.<br /><br />
+     ACETO.COM may send out periodic e-mails informing you of a product or service you requested, or confirming you requested a product or service. You will not be able to choose to unsubscribe to these mailings, as they are considered an essential part of the service you have chosen.<span class="normal_title">Security of your Personal Information </span>ACETO.COM is committed to protecting the security of your personal information. We use a variety of security technologies and procedures to help protect your personal information from unauthorized access, use or disclosure. For example, we store the personal information you provide in computer servers with limited access that are located in controlled facilities.<span class="normal_title">Use of Cookies</span>When someone visits the site, a cookie may be placed on the customer's machine (if the customer accepts cookies) or is read if the customer has visited the site previously. One use of cookies is to assist in the collection of the site visitation statistics described above.<br />
+     <br />
+     We also use cookies to collect information on which newsletter links are clicked by customers. This information is used to ensure we are sending information customers want to read. It is collected in aggregate form and never linked with your personal information.<span class="normal_title">Changes to this Policy</span> ACETO.COM will occasionally update this privacy policy. When we do, we will also revise the "last updated" date at the bottom of this page. For material changes to this policy, ACETO.COM will notify you by placing prominent notice on the Web site.<span class="normal_title">Data protection officer for the German companies</span>Aceto Holding GmbH<br>Aceto Pharma GmbH<br>Aceto FineChem GmbH<br>Aceto Health Ingredients GmbH<br><br>Dipl.-Inform. Tobias Mauß<br>Mauß Datenschutz GmbH<br>E-Mail: datenschutz@datenschutzbeauftragter-hamburg.de<br>Telefon: 040 / 999 99 52 - 0<br>Telefax: 040 / 999 99 52 - 99<br>Postanschrift: Neuer Wall 10, 20359<br>Hamburg
+</div>
+      </div>
+               <div class="clear"></div><a class="top"  id="gototop" href="javascript:void(0);" onclick="goTop();return false;"><img src="wp-content/themes/aceto/images/top.gif" alt="top" border="0" /></a>               </div>
+              <!--content end--> </div>
+</div></div></div></section>
+<div class="clear"></div>
+<footer><div id="end">
+			<div class="container_12">
+				<div class="bottom_content">&copy;  2019 Aceto Corporation. All Rights Reserved.</div>
+			  <ul id="foot" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home alpha"><a href="index.php">Home</a></li>
+			  <li class="separated"></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="sitemap.html">Sitemap</a></li>
+<li class="separated"></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="privacypolicy.html">Privacy Policy </a></li><li class="separated"></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="termofuse.html">Terms of Use</a></li></ul>
+		<div class="clear"></div>
+		</div>
+		</div>
+</footer>
+</body>
+</html>

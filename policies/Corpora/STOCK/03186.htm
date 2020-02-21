@@ -1,0 +1,857 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Cache-control" content="public">
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Perry Ellis International" />
+    <meta name="keywords" content="Perry Ellis International,Perry Ellis,PERY,PEI,Axist,Ben Hogan,Callaway,Cubavera,Farah,Grand Slam,Havanera,Jack Nicklaus,Jag,Jantzen,John Henry,Laundry,Nike Swim,Original Penguin,Peony,PGA Tour,Rafaella,Savane" />
+    <meta name="author" content="Perry Ellis International" />
+
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+
+
+    <link rel="shortcut icon" href="https://www.pery.com/Content/Images/Logos/favicon.ico" />
+
+    <title>Perry Ellis International | Privacy Statement</title>
+
+    <link href="/Content/Foundation.css" rel="stylesheet" />
+    <link href="/Content/Site.css" rel="stylesheet" />
+    <link href="/Content/Fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/Vendor/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge-only" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large-only" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium-only" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small-only" />
+    <meta class="foundation-mq-small" />
+    <style></style>
+    <meta class="foundation-mq-topbar" />
+
+
+</head>
+<body>
+    <!--<div class="scroll-indicator bounce hidden-for-small-down"><i class="fa fa-chevron-down"></i></div>-->
+    <div id="page">
+
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+        $('.nav').setup_navigation();
+    });
+    /*
+    $(function(){
+        $('.nav').setup_navigation();
+    });
+    */
+    var keyCodeMap = {
+        48: "0", 49: "1", 50: "2", 51: "3", 52: "4", 53: "5", 54: "6", 55: "7", 56: "8", 57: "9", 59: ";",
+        65: "a", 66: "b", 67: "c", 68: "d", 69: "e", 70: "f", 71: "g", 72: "h", 73: "i", 74: "j", 75: "k", 76: "l",
+        77: "m", 78: "n", 79: "o", 80: "p", 81: "q", 82: "r", 83: "s", 84: "t", 85: "u", 86: "v", 87: "w", 88: "x", 89: "y", 90: "z",
+        96: "0", 97: "1", 98: "2", 99: "3", 100: "4", 101: "5", 102: "6", 103: "7", 104: "8", 105: "9"
+    }
+
+    $.fn.setup_navigation = function (settings) {
+
+        settings = jQuery.extend({
+            menuHoverClass: 'show-menu',
+        }, settings);
+
+        // Add ARIA role to menubar and menu items
+        $(this).attr('role', 'menubar').find('li').attr('role', 'menuitem');
+
+        var top_level_links = $(this).find('> li > a');
+
+        // Added by Terrill: (removed temporarily: doesn't fix the JAWS problem after all)
+        // Add tabindex="0" to all top-level links
+        // Without at least one of these, JAWS doesn't read widget as a menu, despite all the other ARIA
+        //$(top_level_links).attr('tabindex','0');
+
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        $(top_level_links).next('ul')
+            .attr('data-test', 'true')
+            .attr({ 'aria-hidden': 'true', 'role': 'menu' })
+            .find('a')
+                .attr('tabIndex', -1);
+
+        // Adding aria-haspopup for appropriate items
+        $(top_level_links).each(function () {
+            if ($(this).next('ul').length > 0)
+                $(this).parent('li').attr('aria-haspopup', 'true');
+        });
+
+        $(top_level_links).hover(function () {
+            $(this).closest('ul')
+                .attr('aria-hidden', 'false')
+                .find('.' + settings.menuHoverClass)
+                    .attr('aria-hidden', 'true')
+                    .removeClass(settings.menuHoverClass)
+                    .find('a')
+                        .attr('tabIndex', -1);
+            $(this).next('ul')
+                .attr('aria-hidden', 'false')
+                .addClass(settings.menuHoverClass)
+                .find('a').attr('tabIndex', 0);
+        });
+        $(top_level_links).focus(function () {
+            $(this).closest('ul')
+                // Removed by Terrill
+                // The following was adding aria-hidden="false" to root ul since menu is never hidden
+                // and seemed to be causing flakiness in JAWS (needs more testing)
+                // .attr('aria-hidden', 'false')
+                .find('.' + settings.menuHoverClass)
+                    .attr('aria-hidden', 'true')
+                    .removeClass(settings.menuHoverClass)
+                    .find('a')
+                        .attr('tabIndex', -1);
+            $(this).next('ul')
+                .attr('aria-hidden', 'false')
+                .addClass(settings.menuHoverClass)
+                .find('a').attr('tabIndex', 0);
+        });
+
+        // Bind arrow keys for navigation
+        $(top_level_links).keydown(function (e) {
+            if (e.keyCode == 37) {
+                e.preventDefault();
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').find('> li').last().find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 38) {
+                e.preventDefault();
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li').find('ul')
+                        .attr('aria-hidden', 'false')
+                        .addClass(settings.menuHoverClass)
+                        .find('a').attr('tabIndex', 0)
+                            .last().focus();
+                }
+            } else if (e.keyCode == 39) {
+                e.preventDefault();
+                // This is the last item
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').find('> li').first().find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) {
+                e.preventDefault();
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li').find('ul')
+                        .attr('aria-hidden', 'false')
+                        .addClass(settings.menuHoverClass)
+                        .find('a').attr('tabIndex', 0)
+                            .first().focus();
+                }
+            } else if (e.keyCode == 13 || e.keyCode == 32) {
+                // If submenu is hidden, open it
+                e.preventDefault();
+                $(this).parent('li').find('ul[aria-hidden=true]')
+                        .attr('aria-hidden', 'false')
+                        .addClass(settings.menuHoverClass)
+                        .find('a').attr('tabIndex', 0)
+                            .first().focus();
+            } else if (e.keyCode == 27) {
+                e.preventDefault();
+                $('.' + settings.menuHoverClass)
+                    .attr('aria-hidden', 'true')
+                    .removeClass(settings.menuHoverClass)
+                    .find('a')
+                        .attr('tabIndex', -1);
+            } else {
+                $(this).parent('li').find('ul[aria-hidden=false] a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+
+
+        var links = $(top_level_links).parent('li').find('ul').find('a');
+        $(links).keydown(function (e) {
+            if (e.keyCode == 38) {
+                e.preventDefault();
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) {
+                e.preventDefault();
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 27 || e.keyCode == 37) {
+                e.preventDefault();
+                $(this)
+                    .parents('ul').first()
+                        .prev('a').focus()
+                        .parents('ul').first().find('.' + settings.menuHoverClass)
+                            .attr('aria-hidden', 'true')
+                            .removeClass(settings.menuHoverClass)
+                            .find('a')
+                                .attr('tabIndex', -1);
+            } else if (e.keyCode == 32) {
+                e.preventDefault();
+                window.location = $(this).attr('href');
+            } else {
+                var found = false;
+                $(this).parent('li').nextAll('li').find('a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        found = true;
+                        return false;
+                    }
+                });
+
+                if (!found) {
+                    $(this).parent('li').prevAll('li').find('a').each(function () {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            return false;
+                        }
+                    });
+                }
+            }
+        });
+
+
+        // Hide menu if click or focus occurs outside of navigation
+        $(this).find('a').last().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                $('.' + settings.menuHoverClass)
+                    .attr('aria-hidden', 'true')
+                    .removeClass(settings.menuHoverClass)
+                    .find('a')
+                        .attr('tabIndex', -1);
+            }
+        });
+        $(document).click(function () { $('.' + settings.menuHoverClass).attr('aria-hidden', 'true').removeClass(settings.menuHoverClass).find('a').attr('tabIndex', -1); });
+
+        $(this).click(function (e) {
+            e.stopPropagation();
+        });
+    }
+
+
+</script>
+
+
+<div class="contain-to-grid sticky desktop" aria-label="Main menu">
+    <nav class="top-bar header" data-topbar role="navigation" data-options="sticky_on: medium, large">
+
+        <ul class="title-area">
+            <li class="name">
+                <a tabindex="1" href="/Home/Index"><img class="logo" alt="Perry Ellis International Logo" src="/Content/Images/Logos/logo_black.png" /></a>
+            </li>
+	<li class="toggle-topbar menu-icon"><div class="nasdaq-ticker hidden-for-medium-up" style="display: inline-block; padding-left: 20px;top: -10px;position: relative !important; margin-right: 0;"><iframe name="ticker" allowtransparency="yes" frameborder="0" width="120" height="40" scrolling="no" src="http://investor.pery.com/includes/quote_include.cfm"></iframe></div><a style="display: inline-block;top: -7px;"><span></span></a></li>
+
+        </ul>
+
+        <section class="top-bar-section hide-for-small-only">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li><a tabindex="2" href="/Home/Index" style="font-size: 19px; width: 33px;"><i alt="home button" class="fa fa-home"><span class="remove">Home Button</span></i></a></li>
+                <li class="has-dropdown"><a tabindex="3" class="pei-dropdown" dropdown-target="OurCompany" href="/Company/Overview">OUR COMPANY</a></li>
+                <!--<li class="has-dropdown"><a class="pei-dropdown" dropdown-target="InvestorRelations" href="/Investor/Overview">INVESTOR RELATIONS</a></li> -->
+                <li class="has-dropdown"><a class="pei-dropdown" dropdown-target="Brands" href="/Brand/PerryEllis">OUR BRANDS</a></li>
+                <li><a style="margin-right: -14px;" class="no-dropdown" href="/Company/Press">PRESS</a></li>
+                <li><a style="margin-right: -14px;" class="no-dropdown" href="/Company/News">NEWS</a></li>
+                <li><a style="margin-right: -10px;" class="no-dropdown" href="/Careers/default.asp">CAREERS</a></li>
+                <!-- <li class="nasdaq-ticker" style="padding-left: 20px;"><iframe name="ticker" allowtransparency="yes" frameborder="0" width="185" height="43" scrolling="no" class="quote" src="https://pery.gcs-web.com/stock-quote/?auth_token=b128eb1b-11b5-49ef-8914-98f15aa0c15b"></iframe></li> -->
+            </ul>
+        </section>
+    </nav>
+
+    <div class="desktop-menu hidden-for-small-down">
+        <div id="OurCompany" class="mega-menu row text-center">
+            <div class="columns medium-12 large-12 no-padding">
+                <a tabindex="1" class="link title button" href="/Company/Overview">Company Overview</a>
+            </div>
+            <div class="columns medium-6 large-6 no-padding">
+                <a tabindex="2" class="link title button" href="/Company/Founder">Founder</a>
+                <a tabindex="4" class="link title button" href="/Company/History">Company History</a>
+            </div>
+            <div class="columns medium-6 large-6 no-padding">
+                <a tabindex="3" class="link title button" href="/Company/CorporateOfficers">Corporate Officers</a>
+                <a tabindex="5" class="link title button" href="/Company/SocialResponsibility">Social Responsibility</a>
+            </div>
+            <div class="columns medium-6 large-6 no-padding">
+                <a tabindex="6" class="link title button" href="/Company/EthicsAndConduct">Code of Ethics and Conduct</a>
+                <a tabindex="8" class="link title button" href="/Company/UKTaxPolicy">United Kingdom Tax Policy</a>
+            </div>
+            <div class="columns medium-6 large-6 no-padding">
+                <!-- <a tabindex="6" class="link title button" href="/Investor/BoardOfDirectors">Board of Directors</a> -->
+                <!-- <a tabindex="7" class="link title button" href="/Investor/CorporateGovernance">Corporate Governance</a> -->
+            </div>
+            <div class="columns medium-6 large-6 no-padding">
+
+            </div>
+            <div class="columns medium-6 large-6 no-padding">
+            <a tabindex="7" class="link title button" href="/Company/SocialCompliance">Social Compliance Code of Conduct</a>
+            </div>
+            <div class="columns medium-6 large-6 no-padding">
+                <a tabindex="9" class="link title button" href="/Shared/modern-slavery-act.pdf" target="_blank">United Kingdom Modern Slavery Statement</a>
+            </div>
+
+        </div>
+        <div id="InvestorRelations" class="mega-menu row text-center">
+            <div class="columns medium-6 large-3 no-padding">
+                <a tabindex="12" class="link title button" href="/Investor/Overview">Overview</a>
+                <a tabindex="13" class="link title button" href="/Investor/StockInformation">Stock Information</a>
+                <a tabindex="14" class="link title button" href="/Investor/StockLookup">Stock Lookup</a>
+                <a tabindex="15" class="link title button" href="/Investor/QuarterlyResults"><span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span>Quarterly Results<span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span></a>
+            </div>
+            <div class="columns medium-6 large-3 no-padding">
+                <a tabindex="16" class="link title button" href="/Investor/AnalystCoverage">Analyst Coverage</a>
+                <a tabindex="17" class="link title button" href="/Investor/Fundamentals">Fundamentals</a>
+                <a tabindex="18" class="link title button" href="/Investor/FinancialReports">Financial Report</a>
+                <a tabindex="19" class="link title button" href="/Investor/InvestmentCalculator">Investment Calculator</a>
+            </div>
+            <div class="columns medium-6 large-3 no-padding">
+                <a tabindex="20" class="link title button" href="/Investor/AnnualReports">Annual Reports</a>
+                <a tabindex="21" class="link title button" href="/Investor/KeyRatios">Key Ratios</a>
+                <a tabindex="22" class="link title button" href="/Investor/SECFilings">SEC Filings</a>
+                <a tabindex="23" class="link title button" href="/Investor/Presentations"><span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span>Presentations <span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span></a>
+            </div>
+            <div class="columns medium-6 large-3 no-padding">
+                <a tabindex="24" class="link title button" href="/Investor/EventsCalendar">Events Calendar</a>
+                <a tabindex="25" class="link title button" href="/Investor/EmailAlerts">E-mail Alerts</a>
+                <a tabindex="26" class="link title button" href="/Investor/InvestorKit">Investor Kit</a>
+                <a tabindex="27" class="link title button" href="/Investor/InvestorFAQ"><span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span>FAQs <span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span></a>
+            </div>
+        </div>
+        <div id="Brands" class="mega-menu row text-center">
+            <div class="row no-padding menu-row">
+                <div class="columns medium-12 large-12 no-padding">
+                    <a class="link title button" href="/Brand/PerryEllis">Perry Ellis</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/BenHogan">Ben Hogan</a>
+                </div>
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Callaway">Callaway</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Cubavera">Cubavera</a>
+                </div>
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Farah">Farah</a>
+                </div>
+            <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Gotcha">Gotcha</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/GrandSlam">Grand Slam</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Havanera">Havanera</a>
+                </div>
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/JackNicklaus">Jack Nicklaus</a>
+                </div>
+
+                <!-- <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Jag">Jag</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Jantzen">Jantzen</a>
+                </div> -->
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/JohnHenry">John Henry</a>
+                </div>
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Laundry">Laundry By Shelli Segal</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Manhattan">Manhattan</a>
+                </div>
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/NaturalIssue">Natural Issue</a>
+                </div>
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/NikeSwim">Nike Swim</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/OriginalPenguin">Original Penguin</a>
+                </div>
+
+                <!-- <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Peony">Peony</a>
+                </div> -->
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/PGATour">PGA Tour</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/ProPlayer">Pro Player</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Rafaella">Rafaella</a>
+                </div>
+
+                <div class="columns medium-4 large-4 no-padding">
+                    <a class="link title button" href="/Brand/Savane">Savane</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu hidden">
+        <dl class="accordion" data-accordion>
+            <dd class="accordion-navigation">
+                <a href="#panel1" class="title caret">Our Company</a>
+                <div id="panel1" class="content">
+                    <div id="OurCompany" class="mega-menu row text-center">
+                    <div class="columns medium-8 large-8 no-padding">
+                         <a class="link title button" href="/Company/Overview">Company Overview</a>
+   					</div>
+
+
+                        <div class="columns medium-6 large-6 no-padding">
+                            <a class="link title button" href="/Company/Founder">Founder</a>
+                            <a class="link title button" href="/Company/CorporateOfficers">Corporate Officers</a>
+                        </div>
+                        <div class="columns medium-6 large-6 no-padding">
+                            <a class="link title button" href="/Company/History">Company History</a>
+                            <a class="link title button" href="/Company/SocialResponsibility">Social Responsibility</a>
+                        </div>
+                        <div class="columns medium-6 large-6 no-padding">
+                            <!-- <a class="link title button" href="/Investor/BoardOfDirectors">Board of Directors</a> -->
+                            <a class="link title button" href="/Investor/CorporateGovernance">Corporate Governance</a>
+                        </div>
+                        <div class="columns medium-6 large-6 no-padding">
+                            <a class="link title button" href="/Company/EthicsAndConduct">Code of Ethics and Conduct</a>
+                        </div>
+                        <div class="columns medium-6 large-6 no-padding">
+                            <a class="link title button" href="/Company/SocialCompliance">Social Compliance Code of Conduct</a>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+            <dd class="accordion-navigation">
+                <a href="#panel2" class="title caret">Investor Relations</a>
+                <div id="panel2" class="content">
+                    <div id="InvestorRelations" class="mega-menu row text-center">
+                        <div class="columns medium-6 large-3 no-padding">
+                            <a class="link title button" href="/Investor/Overview">Overview</a>
+                            <a class="link title button" href="/Investor/StockInformation">Stock Information</a>
+                            <a class="link title button" href="/Investor/StockLookup">Stock Lookup</a>
+                            <a class="link title button" href="/Investor/QuarterlyResults"><span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span>Quarterly Results<span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span></a>
+                        </div>
+                        <div class="columns medium-6 large-3 no-padding">
+                            <a class="link title button" href="/Investor/AnalystCoverage">Analyst Coverage</a>
+                            <a class="link title button" href="/Investor/Fundamentals">Fundamentals</a>
+                            <a class="link title button" href="/Investor/FinancialReports">Financial Report</a>
+                            <a class="link title button" href="/Investor/InvestmentCalculator">Investment Calculator</a>
+                        </div>
+                        <div class="columns medium-6 large-3 no-padding">
+                            <a class="link title button" href="/Investor/AnnualReports">Annual Reports</a>
+                            <a class="link title button" href="/Investor/KeyRatios">Key Ratios</a>
+                            <a class="link title button" href="/Investor/SECFilings">SEC Filings</a>
+                            <a class="link title button" href="/Investor/Presentations"><span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span>Presentations <span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span></a>
+                        </div>
+                        <div class="columns medium-6 large-3 no-padding">
+                            <a class="link title button" href="/Investor/EventsCalendar">Events Calendar</a>
+                            <a class="link title button" href="/Investor/EmailAlerts">E-mail Alerts</a>
+                            <a class="link title button" href="/Investor/InvestorKit">Investor Kit</a>
+                            <a class="link title button" href="/Investor/InvestorFAQ"><span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span>FAQs <span class="hidden-for-medium-down hidden-for-xlarge-up" style="height: 8.5px; display: block;"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+            <dd class="accordion-navigation">
+                <a href="#panel3" class="title caret">Brands</a>
+                <div id="panel3" class="content">
+                    <div id="Brands" class="mega-menu row text-center">
+                        <div class="row no-padding menu-row">
+                            <div class="columns medium-8 large-8 no-padding">
+                                <a class="link title button" href="/Brand/PerryEllis">Perry Ellis</a>
+                            </div>
+
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/Axist">Axist</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/BenHogan">Ben Hogan</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/Callaway">Callaway</a>
+                            </div>
+
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/Cubavera">Cubavera</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/Farah">Farah</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/GrandSlam">Grand Slam</a>
+                            </div>
+
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/Havanera">Havanera</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/JackNicklaus">Jack Nicklaus</a>
+                            </div>
+
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/JohnHenry">John Henry</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/Laundry">Laundry By Shelli Segal</a>
+                            </div>
+
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/NikeSwim">Nike Swim</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/OriginalPenguin">Original Penguin</a>
+                            </div>
+
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/ProPlayer">Pro Player</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/Rafaella">Rafaella</a>
+                            </div>
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/Savane">Savane</a>
+                            </div>
+
+                            <div class="columns medium-4 large-4 no-padding">
+                                <a class="link title button" href="/Brand/PGATour">PGA Tour</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+            <a class="accordion link title" href="/Company/News">NEWS</a>
+            <a class="accordion link title" href="/Company/Press">PRESS COVERAGE</a>
+            <a class="accordion link title" href="/Careers/default.asp">CAREERS</a>
+        </dl>
+    </div>
+
+    <div id="blackdrop"></div>
+</div>
+
+        
+
+<style type="text/css">
+  blockquote  {border-left: 0px !important}
+</style>
+    <div class="hero-image small" style="background-image: url(/Content/Images/HeroBackgrounds/14.jpg);">
+        <div class="image-text hidden-for-small-only">
+            <h2 class="title light">Privacy Statement</h2>
+        </div>
+    </div>
+
+
+<div class="text-center background dark"><h2 class="title hidden-for-medium-up no-margin">Privacy Statement</h2></div>
+
+<div class="page-content">
+    <div class="panel">
+        <div class="row">
+            <div class="columns small-12 medium-12 large-12">
+                <div class="section">
+                    <h3 class="title main">Privacy Policy</h3>
+
+
+
+
+
+<p>This is the Privacy Policy ("<strong>policy</strong>") for the website hosted at pery.com ("<strong>site</strong>"). The site is ultimately operated by or on behalf of a wholly owned subsidiary and division of Perry Ellis International, Inc. ("<strong>we</strong>", "<strong>our</strong>" or "<strong>us</strong>"). We are committed to protecting and respecting your privacy.  This policy should be read in conjunction with our Cookies Policy available at <a href="http://pery.com/Company/CookiePolicy" title="Perry Ellis Int'l Cookie Policy" target="_self">pery.com/Company/CookiePolicy</a>.</p>
+<p>Please read the following carefully to understand our views and practices regarding your personal data and how we will treat it.</p>
+<p>By engaging with our site you acknowledge you have read and understood this policy.</p>
+<p>For the purposes of European Economic Area data protection law, (the "<strong>Data Protection Law</strong>"), the data controller is: Perry Ellis International, Inc. (PrivacyConcerns@pery.com).</p>
+<p>&nbsp;</p>
+<p><strong><u>WHAT INFORMATION DO WE COLLECT?</u></strong></p>
+<p>We will collect and process the following personal data from you:</p>
+<ul>
+  <li><strong>Information you give us</strong>
+<blockquote>
+      <p>This is information about you that you give us directly when you interact with us: This is information about you that you give us by filling in forms on our site or by corresponding with us by phone, e-mail or otherwise. It includes information you provide when you register to use our site, subscribe to our service, search for a product, place an order on our site, participate in discussion boards, sweepstakes, contests or other social media functions on or via our site, enter a competition, promotion or survey, submit a query, and when you report a problem with our site.</p>
+      <p>The information you give us may include your name, address, e-mail address and phone number, financial and credit card information, personal description and photograph, login and password details.</p>
+      <p>It may also include employment details if you send us a CV, resumé or other details of your employment history in connection with an advertised job vacancy or a general enquiry regarding employment opportunities with us.</p>
+    </blockquote>
+  </li>
+</ul>
+<ul>
+  <li><strong>Information we collect about you from your use of our site</strong>
+<blockquote>
+      <p>We will automatically collect information from you each time you visit our site. This includes:</p>
+      <ul>
+        <li><strong>Technical information:</strong> Technical information may include the Internet protocol (IP) address used to connect your computer to the Internet, your login information, browser type and version, time zone setting, browser plug-in types and versions, operating system and platform.</li>
+        <li><strong>Information about your visit:</strong> Information about your visit may include the full Uniform Resource Locators (URL), clickstream to, through and from our site (including date and time), products you viewed or searched for, page response times, download errors, length of visits to certain pages, page interaction information (such as scrolling, clicks, and mouse-overs), methods used to browse away from the page, and any phone number used to call our customer service number or social media handle used to connect with our customer service team.<br>
+          </li>
+        <li><strong>Location data:</strong> Location data can include information we collect through the site as to your real time location to provide location services where requested or agreed to by you in order to allow check-in, deliver content, advertising or other services that are dependent on knowing where you are. This information may also be collected in combination with an identifier associated with your device to enable us to recognise your mobile browser or device when you return to the site.</li>
+        <li><strong>Delivery of location:</strong> Delivery of location services will involve reference to one or more of the following: (a) the coordinates (latitude/longitude) of your location; (b) look-up of your country of location by reference to your IP address against public sources; and/or (c) your Identifier for Advertisers (IFA) code for your Apple device, or the Android ID for your Android device, or a similar device identifier. See our Cookies Policy for more information on the use of cookies and device identifiers on the site.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><strong>Information we receive from other sources</strong>
+    <blockquote>
+      <p>This is information we receive about you:</p>
+      <ul>
+        <li><strong>If you use any of the other websites or apps we operate or the other services we provide:</strong> In this case we will have informed you when we collected that data if we intend to share your data internally and combine it with data collected on this site.  We will also have told you for what purpose we will share and combine your data.</li>
+        <li><strong>From third parties we work closely with:</strong> We are working closely with third parties (including, for example, business partners, sub-contractors in technical, payment and delivery services, advertising networks, analytics providers, and search information providers). We will notify you when we receive information about you from them and the purposes for which we intend to use that information.</li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><u>HOW DO WE USE THIS INFORMATION?</u></strong></p>
+<p>We use information held about you in the following ways:</p>
+<ul>
+  <li><strong>Information you give to us:</strong>
+    <blockquote>
+      <p>We will use this information to:</p>
+      <ul>
+        <li>Take steps in order to enter into any contract or carry out our obligations arising from any contract entered into between you and us including<br />
+          <br />
+<ul>
+            <li>to enhance and personalize your shopping experience and to communicate with you for marketing and promotional purposes via targeted postal pieces, phone messages, or personalized emails;</li>
+            <li>administering your account with us;</li>
+            <li>verifying and carrying out financial transactions in relation to payments you make online;</li>
+            <li>notifying you about changes to our service.<br />
+              <br />
+            </li>
+          </ul>
+        </li>
+        <li> Provide you with information about goods or services we feel may interest you, if you have given your consent to receiving marketing material from us at the point we collected your information, where required by law or otherwise in our legitimate interests provided these interests do not override your right to object to such communications. See 'How do you unsubscribe from promotional updates and communications?'.</li>
+        <li>        Ensure in our legitimate interests that:<br />
+          <br />
+<ul>
+            <li>content from our site is presented in the most effective manner for you and for your computer; and</li>
+            <li>we provide you with the information, products and services that you request from us.</li>
+          </ul>
+        </li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><strong>Information we collect about you from your use of our site</strong>
+    <blockquote>
+      <p>We will use this information in our legitimate interests, where we have considered these are not overridden by your rights:</p>
+      <ul>
+        <li>To administer our site and for internal operations, including troubleshooting, data analysis, testing, research, statistical and survey purposes.</li>
+        <li>To keep our site safe and secure.</li>
+        <li>For measuring or understanding the effectiveness of advertising we serve to you and others, and to deliver relevant advertising to you.</li>
+        <li>To improve our site to ensure that content is presented in the most effective manner for you and for your computer.</li>
+        <li>To allow you to participate in interactive features of our service, when you choose to do so.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><strong>Information we receive from other sources</strong>
+<blockquote>
+      <p>We may combine this information with information you give to us and information we collect about you in our legitimate interests (where we have considered that these are not overridden by your rights). We will use this information and the combined information for the purposes set out above (depending on the types of information we receive).</p>
+    </blockquote>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><u>HOW DO YOU UNSUBSCRIBE FROM PROMOTIONAL UPDATES AND COMMUNICATIONS?</u></strong></p>
+<p>Where permitted in our legitimate interest or with your prior consent where required by law, we will use your personal information for marketing analysis and to provide you with promotional update communications by email about our products/services.</p>
+<p>You can object to marketing at any time by checking and updating your contact details within your account, or selecting the "unsubscribe" link at the end of all our marketing and promotional update communications to you, or by sending us an email to PrivacyConcerns@pery.com.</p>
+<p>We honor every request to unsubscribe from receipt of promotional emails within ten (10) days of receiving the request. As such, in compliance with the applicable legal obligations, we may provide to our advertising partners the email address of anyone who has submitted to us an unsubscribe request, provided such company agrees not to disclose or use such email address for any other purpose than honoring your request to not receive our promotional emails.</p>
+<p>&nbsp;</p>
+<p><strong><u>WHERE DO WE STORE YOUR INFORMATION?</u></strong></p>
+<p>The data that we collect from you may be transferred to, and stored at, a destination outside the European Economic Area ("<strong>EEA</strong>") that may not be subject to equivalent Data Protection Law.</p>
+<p>Where your information is transferred outside the EEA, we will take all steps reasonably necessary to ensure that your data is subject to appropriate safeguards, such as relying on a recognised legal adequacy mechanism, and that it is treated securely and in accordance with this privacy policy.</p>
+<p>We may transfer your personal data outside the EEA:</p>
+<ul>
+  <li>In order to store it.</li>
+  <li>In order to enable us to provide goods or services to you and fulfil our contract with you. This includes order fulfilment, processing of payment details, and the provision of support services.</li>
+  <li>Where we are legally required to do so.</li>
+  <li>In order to facilitate the operation of our group of businesses, where it is in our legitimate interests and we have concluded these are not overridden by your rights.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><u>HOW DO WE PROTECT YOUR INFORMATION?</u></strong></p>
+<p>All information you provide to us is stored on our secure servers. All information input by you and transmitted to our site when you place an order or provide information is protected by password and by an encryption using Transport Layer Security ("TLS"). TLS encrypts your order and information before it is transmitted to us to avoid the decoding of your information by anyone other than us.</p>
+<p>Where we have given you (or where you have chosen) a password which enables you to access certain parts of our site, you are responsible for keeping this password confidential. We ask you not to share a password with anyone.</p>
+<p>Unfortunately, the transmission of information via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our site. Any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access.</p>
+<p>Our site may, from time to time, contain links to external sites. We are not responsible for the privacy policies or the content of such sites.</p>
+<p>&nbsp;</p>
+<p><strong><u>DO WE DISCLOSE YOUR PERSONAL INFORMATION TO OTHERS?</u></strong></p>
+<p>We may give your information to:</p>
+<ul>
+  <li>Any member of our group, which means our subsidiaries, our ultimate holding company and its subsidiaries, who support our processing of personal data under this policy. If any of these parties are using your information for direct marketing purposes, we will only transfer the information to them for that purpose with your prior consent.</li>
+  <li>We also may share your personal information with selected third parties who provide services to us, including to process payments, provide customer support, provide electronic online investor information, monitor Website activity, serve Website content, help to maintain our customer database, prevent fraud, administer emails, surveys, or contests and administer and maintain employment application information.</li>
+</ul>
+<p> Our selected third parties may include:</p>
+<ul>
+  <li>Organisations who process your personal data on our behalf and in accordance with our instructions and the Data Protection Law. This includes in supporting the services we offer through the site, in particular those providing website and data hosting services, fulfilling your transactions and customer service inquiries, updating your customer information record in our database, deploying our promotional offers to you, fulfilling your request to unsubscribe from our email, providing fulfilment services, distributing any communications we send, supporting or updating marketing lists, facilitating feedback on our services and providing IT support services from time to time. These organisations (which may include third party suppliers, agents, sub-contractors and/or other companies in our group) will only use your information to the extent necessary to perform their support functions.</li>
+  <li>Analytics and search engine providers that assist us in the improvement and optimisation of our site and subject to our Cookies Policy (this will not identify you as an individual).</li>
+  <li>Business partners who jointly with us provide services to you and with whom we have entered into agreements in relation to the processing of your personal data, in particular to assist us in communicating, promoting and selling our products and services.</li>
+  <li>Credit reference agencies for the purpose of assessing your credit score where this is a condition of us entering into a contract with you.</li>
+  <li>In most cases, payment processing providers who provide secure payment processing services.</li>
+</ul>
+<p>We will disclose your personal information to third parties:</p>
+<ul>
+  <li>In the event that we sell or buy any business or assets, in which case we will disclose your personal data to the prospective seller or buyer of such business or assets subject to the terms of this privacy policy.</li>
+  <li>If we or substantially all of our assets are acquired by a third party, in which case personal data held by us about our customers will be one of the transferred assets.</li>
+  <li>If we are under a duty to disclose or share your personal data in order to comply with any legal obligation, or in order to enforce or apply our terms of supply terms and other agreements with you; or to protect the rights, property, or safety of us, our customers, or others.  This includes exchanging information with other companies and organisations for the purposes of fraud protection and credit risk reduction and to prevent cybercrime.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><u>HOW DO WE PROTECT A CHILD'S PRIVACY?</u></strong></p>
+<p>Protecting the safety of children when they use the Internet is important to us.</p>
+<p>The site is intended for use only by persons who are at least 16 years of age or any applicable statutory age of majority (whichever is higher).</p>
+<p>By using the site, you confirm to us that you meet this requirement. If you are under the age of 16 or any applicable statutory age of majority (whichever is higher), you confirm you have received permission from your parent or guardian before using this site or sending us personal information.</p>
+<p>In keeping with the Children's Online Privacy Protection Act, we will never knowingly request personal information from any person under the age of 13, without first seeking prior verifiable parental consent. If you are under the age of 13 your parent or guardian must consent on your behalf where we ask for consent in relation to the use of your information. If we become aware that a user of our website is under the age of 13 and has provided an online registration without prior verifiable parental consent, we will remove that child's information from our files.</p>
+<p>&nbsp;</p>
+<p><strong><u>DO WE USE "COOKIES"?</u></strong></p>
+<p>The description of how we use cookies and other similar technologies on our website is set out in our Cookies Policy available at <a href="http://pery.com/Company/CookiePolicy" title="Perry Ellis Int'l Cookie Policy" target="_self">http://pery.com/Company/CookiePolicy</a>. This policy should be read in conjunction with our Cookies Policy.</p>
+<p>&nbsp;</p>
+<p><strong><u>DO WE ALLOW USER GENERATED CONTENT?</u></strong></p>
+<p>We may, from time to time, make chat rooms, message boards, news groups, social media, and/or other public forums available to its users.  Any information that is disclosed in these areas becomes public information and you should exercise caution when using these and avoid posting any personal information.</p>
+<p>&nbsp;</p>
+<p><strong><u>HOW LONG DO WE KEEP YOUR INFORMATION?</u></strong></p>
+<p>We will retain personal data for as long as we need it to fulfill the purpose for which it was collected, which may be for as long as you have an account with us, in order to meet our contractual or other obligations to you, or as long as required to resolve any queries you raise with us. Where necessary we may keep a copy of your personal data securely for up to seven years after processing in order to identify any issues and resolve any legal proceedings.</p>
+<p>&nbsp;</p>
+<p><strong><u>WHAT ARE YOUR RIGHTS?</u></strong></p>
+<ul>
+  <li>You have the right under certain circumstances:<br />
+    <br />
+<ul>
+      <li>to be provided with a copy of your personal data held by us;</li>
+      <li>to request the rectification or erasure of your personal data held by us;</li>
+      <li>to request that we restrict the processing of your personal data (while we verify or investigate your concerns with this information, for example);</li>
+      <li>to object to the further processing of your personal data, including the right to object to marketing (as mentioned in 'Our promotional updates and communications' section;</li>
+      <li>to request that your provided personal data be moved to a third party.<br />
+        <br />
+      </li>
+    </ul>
+  </li>
+  <li>You may opt out at any time from allowing further access by us to your location data by un-installing the App. You may use the standard un-install processes as may be available for your mobile device<br />
+    <br />
+  </li>
+  <li>Your right to withdraw consent:<br />
+    <br />
+<ul>
+      <li>Where the processing of your personal information by us is based on consent, you have the right to withdraw that consent without detriment at any time by contacting us. You can also change your marketing preferences at any time as described in 'Our promotional updates and communications' section.;</li>
+      <li>You can also exercise the rights listed above at any time by contacting us at PrivacyConcerns@pery.com.</li>
+      <li>If your request or concern is not satisfactorily resolved by us, you may approach your local data protection authority, (see <a href="http://ec.europa.eu/justice/article-29/structure/data-protection-authorities/index_en.htm" title="Data Protection Authorities" target="_blank">http://ec.europa.eu/justice/article-29/structure/data-protection-authorities/index_en.htm</a>). The Information Commissioner is the supervisory authority in the UK and can provide further information about your rights and our obligations in relation to your personal data, as well as deal with any complaints that you have about our processing of your personal data.</li>
+</ul>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p> <u><strong>CAN WE CHANGE THIS PRIVACY POLICY?</strong></u><strong></strong></p>
+<p>Any changes we make to our privacy policy in future will be posted on this page and, in relation to substantive changes, will be notified to you by e-mail. This policy was last updated on May 22, 2018.</p>
+<p>&nbsp;</p>
+<p><strong><u>DO WE HAVE LINKS TO OTHER WEB SITES?</u></strong></p>
+<p>There may be links on our website to the web sites of others. When you click onto one of these links, you are leaving the our website and accessing another party's website. These other web sites are not under our control and may collect Personal Information from you. Our privacy policy does not address the information, privacy and security practices or policies of any other website. For more information, please read our <a href="http://pery.com/Company/TermsOfUse" title="General Terms and Conditions" target="_self">Perry Ellis Int'l General Terms and Conditions</a>.</p>
+<p>Please send any concerns regarding our privacy policy to PrivacyConcerns@pery.com.</p>
+<p>&nbsp;</p>
+<p><strong><u>YOUR CALIFORNIA PRIVACY RIGHTS</u></strong></p>
+<p>We collect various types of personal information about you both online and offline during the course of our customer relationship. Under California law, if you are a resident of California, you may make a written request to us about how we have shared your information with third parties for their direct marketing purposes. In response to your written request, we are allowed to provide you with a notice describing the cost-free means to opt-out of our sharing your information with third parties with whom we do not share the same brand name, if the third party will use it for their direct marketing purposes.</p>
+<p>If you would like to exercise your rights under California law, please send your written request to the email address or postal address below. Your written request must include your postal address so that we may provide you with our notice and third party direct marketing opt-out form. We will provide you with this form within thirty (30) days of receiving your written request.</p>
+<p>&nbsp;</p>
+<p><strong><u>CONTACT US</u></strong></p>
+<p>Questions, comments and requests regarding this privacy policy are welcomed and should be addressed to:<br>
+  <br>
+  Corporate Counsel, Transactions & Privacy<br>
+  3000 NW 107th Avenue<br>
+  Miami, Florida, 33172<br>
+  U.S.A.<br>
+  PrivacyConcerns@pery.com</p>
+<p>&nbsp;</p>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="footer panel">
+    <div class="row">
+        <div class="small-12 medium-8 large-8 columns left legal-links text-center">
+            <a class="small-6 medium-1 columns" href="/Company/ContactUs">CONTACT US</a>
+            <a class="small-6 medium-2 columns" href="/Company/TermsOfUse">TERMS OF USE</a>
+            <a class="small-6 medium-2 columns" href="/Company/PrivacyStatement">PRIVACY STATEMENT</a>
+            <a class="small-6 medium-2 columns" href="/US/Transparency">CA TRANSPARENCY ACT</a>
+            <a class="small-6 medium-3 columns" href="/US/Ada">ADA ACCESSIBILITY STATEMENT</a>
+	    <a target="_blank" class="small-6 medium-2 columns" href="/Shared/modern-slavery-act.pdf">MODERN SLAVERY ACT</a>
+        </div>
+
+        <div class="small-12 medium-4 large-2 columns middle icons ">
+            <a class="small-3 columns" href="https://www.facebook.com/PEICorp"><i alt="facebook" class="icon-bar fi-social-facebook has-tip tip-top" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" title="/PEICorp"><span class="remove">Facebook</span></i></a>
+            <a class="small-3 columns" href="https://twitter.com/peicorp"><i alt="twitter" class="icon-bar fi-social-twitter has-tip tip-top" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" title="&#64peicorp"><span class="remove">Twitter</span></i></a>
+            <a class="small-3 columns" href="http://instagram.com/peicorp"><i alt="instagram" class="icon-bar fi-social-instagram has-tip tip-top" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" title="&#64peicorp"><span class="remove">Instagram</span></i></a>
+            <a class="small-3 columns" href="https://www.linkedin.com/company/perry-ellis-international"><i alt="linkedin" class="icon-bar fi-social-linkedin has-tip tip-top" data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" title="/perry-ellis-international"><span class="remove">Linkedin</span></i></a>
+        </div>
+
+        <div class="small-12 medium-12 large-2 columns middle right brand-text">
+            <p style="font-size:10px;">&copy;2020 PEI LICENSING, INC., <br>ALL RIGHTS RESERVED</p>
+        </div>
+    </div>
+</div>
+   
+    </div>
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+    <script src="/Scripts/foundation/fastclick.js"></script>
+    <script src="/Scripts/foundation/foundation.js"></script>
+    <script src="/Scripts/foundation/foundation.abide.js"></script>
+    <script src="/Scripts/foundation/foundation.accordion.js"></script>
+    <script src="/Scripts/foundation/foundation.alert.js"></script>
+    <script src="/Scripts/foundation/foundation.clearing.js"></script>
+    <script src="/Scripts/foundation/foundation.dropdown.js"></script>
+    <script src="/Scripts/foundation/foundation.equalizer.js"></script>
+    <script src="/Scripts/foundation/foundation.interchange.js"></script>
+    <script src="/Scripts/foundation/foundation.joyride.js"></script>
+    <script src="/Scripts/foundation/foundation.magellan.js"></script>
+    <script src="/Scripts/foundation/foundation.offcanvas.js"></script>
+    <script src="/Scripts/foundation/foundation.orbit.js"></script>
+    <script src="/Scripts/foundation/foundation.reveal.js"></script>
+    <script src="/Scripts/foundation/foundation.slider.js"></script>
+    <script src="/Scripts/foundation/foundation.tab.js"></script>
+    <script src="/Scripts/foundation/foundation.tooltip.js"></script>
+    <script src="/Scripts/foundation/foundation.topbar.js"></script>
+    <script src="/Scripts/PEI/ga.js"></script>
+    <script src="/Scripts/PEI/Header.js"></script>
+    <script src="/Scripts/PEI/Slideshow.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+
+</body>
+</html>

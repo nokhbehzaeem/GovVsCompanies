@@ -1,0 +1,605 @@
+
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+
+				<html xml:lang='en' xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+
+				<head>
+
+				<meta http-equiv='Content-type'	content='text/html; charset=iso-8859-1'>
+
+				<meta name='keywords'			content="akorn, specialty, pharmaceutical, company, development, contract, manufacturing, marketing, branded, products, vaccine, biologics, generics, ocular anesthesia, opthalmics, hospital drugs, cogentin, nembutal, sodium diuril">
+
+				<meta name='description'		content="Akorn - Sterile Ophthalmics and Injectables">
+
+				<title>Akorn - Legal &amp; Privacy</title>
+
+				<link rel='shortcut icon' type='image/ico' href='/images/icon.ico'>
+
+				<link rel='stylesheet' type='text/css' href='/includes/print.css' media='print' charset='utf-8'>
+
+                <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' type='text/javascript' charset='utf-8'></script>				
+
+				<script src='js/jquery.cookie.js' type='text/javascript'></script>
+
+        <script src='js/placeholders.min.js'></script>
+
+				<script type="text/javascript" src="/js/obfuscate.js"></script>
+
+				<script type="text/javascript" charset="utf-8">
+
+
+
+				var switchSlide = false;
+
+        var switching = false;
+
+
+
+				function slideSwitch() {
+
+            if( ! switching )
+
+            {
+
+              switching = true;
+
+              var $active = $('#slideshow img.active');
+
+
+
+              if ( $active.length == 0 ) $active = $('#slideshow img:last');
+
+            
+
+              var $next =  ( $active.next().index() <= $('#slideshow img').length - 1 ? $active.next()
+
+                  : $('#slideshow img').eq(0) );
+
+
+
+              var index = $next.index();
+
+
+
+              $('.slider_nav a').removeClass('on');
+
+
+
+              $('.slider_nav a').eq(index).addClass('on');
+
+
+
+              $active.addClass('last-active');
+
+
+
+              $next.addClass('active')
+
+                  .animate({opacity: 1}, 1000, function(){
+
+                    switching = false;
+
+                  });
+
+              $active.removeClass('active last-active').animate({'opacity':'0'},1000);
+
+
+
+            clearTimeout(switchSlide);
+
+            switchSlide = setTimeout( "slideSwitch()", 5000 );
+
+          }
+
+				}
+
+
+
+				
+
+
+
+				$(function() {
+
+
+
+          if( $('#slideshow').length )
+
+          {
+
+            $('#slideshow img').eq(0).css({'opacity':'1'});
+
+
+
+				    switchSlide = setTimeout( "slideSwitch()", 5000 );
+
+
+
+				    $('.slider_nav a').click(function(e){
+
+              e.preventDefault();
+
+              if( ! $(e.target).hasClass('on') )
+
+              {
+
+
+
+                if( ! switching )
+
+                {
+
+                  switching = true;
+
+
+
+                  clearTimeout(switchSlide);
+
+
+
+                  switchSlide = setTimeout( "slideSwitch()", 10000 );
+
+
+
+                  var index = $('.slider_nav a').index(this);
+
+
+
+                  $('.slider_nav a').removeClass('on');
+
+
+
+                  $('.slider_nav a').eq(index).addClass('on');
+
+
+
+                  var $active = $('#slideshow img.active');
+
+
+
+                  var $next = $('#slideshow img').eq(index);
+
+
+
+                  $active.addClass('last-active');
+
+
+
+                  $next.addClass('active')
+
+                      .animate({opacity: 1}, 1000, function(){
+
+                      switching = false;
+
+                    });
+
+                  $active.removeClass('active last-active').animate({'opacity':'0'},1000);
+
+                }
+
+              
+
+              }
+
+					});
+
+
+
+        }
+
+      });
+
+
+
+				</script>
+
+				<script type="text/javascript">
+
+					
+
+					function resizeText(multiplier) {
+
+		                  $.cookie('multiplier', multiplier);
+
+		                  document.body.style.fontSize = "1.0em";
+
+		                  document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
+
+		                }
+
+					
+
+					$(document).ready(function(){
+
+						
+
+						if( $.cookie('multiplier') )
+
+						{
+
+							resizeText($.cookie('multiplier'));
+
+						}
+
+
+
+					});
+
+
+				</script>
+
+					<script type="text/javascript">
+
+            
+
+              var _gaq = _gaq || [];
+
+              _gaq.push(['_setAccount', 'UA-26744444-1']);
+
+              _gaq.push(['_trackPageview']);
+
+
+
+              (function() {
+
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+              })();
+
+
+
+					</script>
+
+					<!--  for new dropdown nav IE 6 only  -->
+
+					<!--[if IE 6]>
+
+				<script type="text/javascript" src="/includes/dropdown.js"></script>
+
+				<![endif]-->
+
+					<!--[if lte IE 6]>
+
+				<style type="text/css" media="screen">
+
+				form label {
+
+				background: #fff;
+
+				}
+
+				</style>
+
+				<![endif]-->
+
+				<link rel='stylesheet' type='text/css' href='/includes/master.css?v=20' media='screen' charset='utf-8'>
+
+<script language='javascript' src='includes/lib/functions.js'></script>
+<script language='javascript' src='includes/lib/validation.js'></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#237afc"
+    },
+    "button": {
+      "background": "#fff",
+      "text": "#237afc"
+    }
+  },
+  "content": {
+    "href": "/foot_legal.php"
+  }
+})});
+</script><script type="text/javascript">if (top != self && !top.location.href.match("unitdose")) {top.location.href = self.location.href;}</script></head>
+
+<body class='aboutuspage'>
+	
+	<div id='wrapper_identity'><div id='identity'><a href='contact.php'>Contact</a></div></div>
+<div id="wrapper_sub">
+
+  <div id="center_wrap">
+  	<h1 class="logo left"><a href="/"><img src="/images/logo.png" alt="Akorn Pharmaceuticals"></a></h1>
+    <div id="header_wrap">
+      <form method="get" action="search.php" id="searchform">
+	      <!--<label for="name1">Search</label>-->
+	      <input class="input_search" name="zoom_query" type="text" id="name1" placeholder="Search" />
+        <a href="#" onclick="document.getElementById('searchform').submit()">GO</a>
+      </form>
+      <div class="clearfix"></div>
+    </div>
+    <div class="center">
+    	
+    	<!--
+      <div class="nav">
+        <ul class="link_white_nav">
+          <li><a href="aboutus.php">ABOUT US</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">BUSINESS DEVELOPMENT</a></li>
+          <li><a href="#">CONTRACT MANUFACTURING</a></li>
+          <li><a href="#">INVESTOR RELATIONS</a></li>
+          <li><a href="#">ORDER ONLINE</a></li>
+          <li><a href="#" style="border-right: none;">CAREERS</a></li>
+        </ul>
+      </div>
+      -->
+      <div id="nav">
+        <ul class="link_white_nav">
+          <li><a href="about_history.php" title="About Us" id="menu-about">ABOUT US</a>
+            <ul class="about-drop">
+              <li><a href="/about_history.php">Corporate Profile</a></li>
+              <li><a href="/about_timeline.php">Timeline</a></li>
+              <li><a href="/about_locations.php">Operating Locations</a></li>
+              <li><a href="/about_compliance.php">Compliance</a></li>
+              <li><a href="/documents/Code-of-Ethics.pdf" target="_blank">Code of Ethics</a></li>
+              <li><a href="/about_quality.php">Quality Policy</a></li>
+            </ul>
+          </li>
+          <li><a href="/our_businesses.php" title="Our Businesses" id="menu-businesses">OUR BUSINESSES</a>
+            <ul class="businesses-drop">
+              <li><a href="/prod_list_all.php">Generics</a></li>
+              <li><a href="/brand_rx.php">Brand Rx</a></li>
+              <li><a href="/akorn_consumer_health.php">Akorn Consumer Health</a></li>
+              <li><a href="/prod_list_all.php?section=aah">Akorn Animal Health</a></li>
+              <li><a href="/akorn_india.php">Akorn India</a></li>
+            </ul>
+          </li>
+          <li><a href="prod_list_all.php" title="Products" id="menu-products">PRODUCTS</a>
+            <ul class="products-drop">
+              <li><a href="/prod_list_all.php">All Products</a></li>
+              <li><a href="/prod_catalogs.php">Download Catalogs</a></li>
+              <li><a href="/prod_return_goods_policy.php">Return Goods Policy</a></li>
+            </ul>
+          </li>
+          <li><a href="bus_about.php" title="Business Development" id="menu-business">BUSINESS DEVELOPMENT</a>
+            <ul class="business-drop">
+              <li><a href="/bus_about.php">Benefits of Partnering</a></li>
+            </ul>
+          </li>
+          <li><a href="http://investors.akorn.com/" title="Investor Relations" id="menu-investor">INVESTOR RELATIONS</a>
+            <ul class="investor-drop">
+              <li><a href="http://investors.akorn.com/stock-information">Stock Quote &amp; Chart</a></li>
+              <li><a href="http://investors.akorn.com/news-releases">Press Releases</a></li>
+              <li><a href="http://investors.akorn.com/events-and-presentations">Events &amp; Presentations</a></li>
+              <li><a href="http://investors.akorn.com/sec-filings">SEC Filings</a></li>
+              <li><a href="http://investors.akorn.com/annual-reports">Annual Reports</a></li>
+              <li><a href="http://investors.akorn.com/analyst-coverage">Analyst Coverage</a></li>
+              <li><a href="http://investors.akorn.com/corporate-governance">Corporate Governance</a></li>
+              <li><a href="http://investors.akorn.com/investor-faqs">Investor FAQs</a></li>
+              <li><a href="http://investors.akorn.com/contact-ir">IR Contacts</a></li>
+            </ul>
+          </li>
+          <li><a href="car_whoweare.php" title="Careers" id="menu-careers">CAREERS</a>
+            <ul class="careers-drop">
+              <li><a href="/car_whoweare.php">Who We Are</a></li>
+              <li><a href="/car_whywework.php">Why We Work Here</a></li>
+              <li><a href="/car_leaving.php" target="_blank">Career Opportunities</a></li>
+              <li><a href="/car_benefits.php">Benefits</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+    	      <img src="images/about_us.jpg" width="976" height="225" />
+       <div style="height:10px;">
+          </div> 
+      <div class="col1_sub left link_grey_nav">
+        <div class="sub_heading">
+            				<div id="content_sub_nav">
+                <p class="hr">CONTACT AKORN</p>
+                <a href="contact.php" class="nav_sub_v1">Contact</a>
+               <a href="foot_legal.php" class="nav_sub_v1">Legal &amp; Privacy</a>
+                <a href="foot_sitemap.php" class="nav_sub_v1">Site Map</a>
+				</div>
+        </div>
+      </div>
+      <div class="colfull left">
+            
+            <span class="blue_xlrg hr bold">Legal &amp; Privacy</span>
+            <br />
+
+            &copy; Akorn, Inc. Lake Forest, Illinois, USA.<br /><br />
+			This web site is intended for informational purposes only and not intended to replace discussion with a healthcare provider.
+			If you have any questions regarding the content of this site please contact Akorn.
+			<br /><br />
+			All labeling reflected on this website is for informational and promotional purposes only. It is not intended to be used by healthcare professionals or patients for the purpose of prescribing or administering these products. Questions regarding the current content of product labeling should be directed to Akorn's Customer Service department at 800.932.5676.
+			<p><strong>Your Consent</strong><br />
+			By using this site, you consent to the collection and use of this information by Akorn. If we decide to change our privacy policy, we will post those changes on this page so that you are aware of what information we collect, how we use it, and under what circumstances we disclose it.</p>
+<p><strong>Akorn Purchase Order Terms and Conditions</strong><br />
+Akorn Standard Terms and Conditions for all purchase orders are available at the following <a href="/documents/akorn_po_termsandconditions.pdf?v3" target="_blank">link</a>.  Please review when accepting Purchase Orders.</p>
+<p><strong>AKORN PRIVACY POLICY</strong></p>
+
+<p align="center"><strong><em>Last Revised: December 2019</em></strong><br />
+  This Privacy  Policy describes how AKORN, INC., and its related brands and affiliates (collectively,  &ldquo;Akorn,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) collects, uses, shares, and safeguards personal  information.&nbsp; This Privacy Policy also tells you  about your rights and choices with respect to your personal information, and  how you can reach us to get answers to your questions. &nbsp;You can  jump to particular topics by going to the headings below:</p>
+<p align="left"><strong><a href="#types">Types Of Information We Collect</a></strong><br />
+  <strong><a href="#use">Use  And Processing Of Information</a></strong><br />
+  <strong><a href="#sharing">Sharing  Of Information</a></strong><br />
+  <strong><a href="#choices">Your  Choices</a></strong><br />
+  <strong><a href="#protect">How  We Protect Personal Information</a></strong><br />
+  <strong><a href="#misc">Miscellaneous</a></strong><br />
+  <strong><a href="#contact">Contact Information</a></strong></p>
+<p><a name="types"></a><strong>Types Of Information We Collect</strong> <br />
+  The  following provides examples of the type of information that we collect from you  and how we use that information.&nbsp; </p>
+  <style>
+  table, th, td {
+  border: 1px solid black;
+	vertical-align:top !important;
+}
+ul {
+	margin-left: 15px;
+}
+td {
+	padding:5px;
+	vertical-align:top !important;
+}
+  </style>
+  <div style="display:block;vertical-align:text-top;">
+<table border="1" cellspacing="0" cellpadding="0" width="595">
+  <tr valign="top">
+    <td width="123" valign="top"><p>Context</p></td>
+    <td width="219" valign="top"><p>Types of    Data</p></td>
+    <td width="253" valign="top"><p>Primary    Purpose for Collection <br />
+      and Use of Data</p></td>
+  </tr>
+  <tr style="border: 1px solid black;">
+    <td width="123" valign="top"><p>Customer &nbsp;Information </p></td>
+    <td width="219" valign="top"><p>We collect the name, and contact information, of our customers    and end consumers with whom we may interact, directly or indirectly</p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in contacting our clients    and communicating with them concerning normal business administration.</p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Prospective Investor Information</p></td>
+    <td width="219" valign="top"><p>We collect the name, and contact information, of    prospective investors who submit that information to us through the website.</p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in contacting interested    prospective investors about potential investment opportunities.</p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Cookies and first party tracking</p></td>
+    <td width="219" valign="top"><p>We use cookies and clear GIFs. &ldquo;Cookies&rdquo; are small    pieces of information that a website sends to a computer&rsquo;s hard drive while a    web site is viewed. </p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in making our website    operate efficiently. </p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Cookies and Third Party Tracking</p></td>
+    <td width="219" valign="top">We participate in behavior-based    advertising, this means that a third party uses technology (<em>e.g., </em>a cookie) to collect information    about your use of our website so that they can provide advertising about    products and services tailored to your interests on our website, or on other    websites.&nbsp; </td>
+    <td width="253" valign="top">We have a legitimate interest in engaging    in behavior-based advertising and capturing website analytics.</td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Email Interconnectivity</p></td>
+    <td width="219" valign="top">If you receive email from us, we use    certain tools to capture data related to when you open our message, click on    any links or banners it contains and make purchases.</td>
+    <td width="253" valign="top">We have a legitimate interest in    understanding how you interact with our communications to you.
+    </td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Employment</p></td>
+    <td width="219" valign="top">If you apply for a job posting, or become    an employee, we collect information necessary to process your application or    to retain you as an employee.&nbsp; This may    include, among other things, your Social Security Number.&nbsp; Providing this information is required for    employment.</td>
+    <td width="253" valign="top">We use information about current employees    to perform our contract of employment, or the anticipation of a contract of    employment with you.&nbsp; In some contexts,    we are also required by law to collect information about our employees.&nbsp; We also have a legitimate interest in using    your information to have efficient staffing and work force operations. </td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Feedback/Support</p></td>
+    <td width="219" valign="top"><p>If you provide us feedback or contact us for support we    will collect your name and e-mail address, as well as any other content that    you send to us, in order to reply.</p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in receiving, and acting    upon, your feedback or issues.</p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Health Data</p></td>
+    <td width="219" valign="top"><p>We may collect health-related data from you or from    third parties related to the use of our products.</p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in collecting    health-related data and complying with applicable regulations related to the    receipt, use and disclosure of such data.</p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Mailing List</p></td>
+    <td width="219" valign="top"><p>When you sign up for one of our mailing lists we    collect your email address or postal address.&nbsp;&nbsp;&nbsp; </p></td>
+    <td width="253" valign="top"><p>We share    information about our products and services with individuals that consent to    receive such information. &nbsp;We also have a legitimate interest    in sharing information about our products or services.</p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Partner Promotion</p></td>
+    <td width="219" valign="top"><p>We collect information that you provide as part of a    co-branded promotion with another company.</p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in fulfilling our    promotions. </p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Surveys</p></td>
+    <td width="219" valign="top"><p>When you participate in a survey we collect information    that you provide through the survey.&nbsp;    If the survey is provided by a third party service provider, the third    party&rsquo;s privacy policy applies to the collection, use, and disclosure of your    information.</p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in understanding your    opinions, and collecting information relevant to our organization.</p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Sweepstakes or contests</p></td>
+    <td width="219" valign="top">When you participate in a sweepstakes or contest    we collect information about you which includes contact information to notify    you if you are selected.</td>
+    <td width="253" valign="top">We have a legitimate interest in operating    the sweepstakes.&nbsp; In some contexts we    are also required by law to collect information about those that enter into    our sweepstakes, and we have a legitimate interest in complying with those    laws.</td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Website interactions</p></td>
+    <td width="219" valign="top"><p>We use technology to monitor how you interact with our    website. This may include which links you click on, or information that you    type into our online forms.&nbsp; This may    also include information about your device or browser.</p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in understanding how you    interact with our website to better improve it, and to understand your    preferences and interests in order to select offerings that you might find    most useful.&nbsp; We also have a legitimate    interest in detecting and preventing fraud.</p></td>
+  </tr>
+  <tr>
+    <td width="123" valign="top"><p>Web logs</p></td>
+    <td width="219" valign="top"><p>We collect information, including your browser type,    operating system, Internet Protocol (IP) address (a number that is    automatically assigned to a computer when the Internet is used), domain name,    click-activity, referring website, and/or a date/time stamp for visitors.</p></td>
+    <td width="253" valign="top"><p>We have a legitimate interest in monitoring our    networks and the visitors to our websites.&nbsp;    Among other things, it helps us understand which of our services is    the most popular.</p></td>
+  </tr>
+</table>
+</div>
+<p>In addition  to the information that we collect from you directly, we may also receive  information about you from other sources, including third parties, business  partners, our affiliates, or publicly available sources.&nbsp; For example, if you submit a job application,  or become an employee, we may conduct a background check. <br /><br />
+  <a name="use" id="use"></a><strong>Use And  Processing Of Information</strong></p>
+<ul>
+  <li>In addition to the purposes and uses  described above, we use information in the following ways: </li>
+  <li>To identify you when you visit our websites  or our stores. </li>
+  <li>To provide products and services or to  process returns.</li>
+  <li>To improve our services and product  offerings.</li>
+  <li>To fulfill legal and regulatory obligations.</li>
+  <li>To conduct analytics.</li>
+  <li>To respond to inquiries related to support,  employment opportunities, or other requests.&nbsp; </li>
+  <li>To send marketing and promotional materials, including  information relating to our products, services, sales, or promotions. </li>
+  <li>For internal administrative purposes, as well as to  manage our relationships. </li>
+  <li>Although the sections above describe our primary  purpose in collecting your information, in many situations we have more than  one purpose.&nbsp; As a result, our collection  and processing of your information is based in different contexts upon your consent,  our need to perform a contract, our obligations under law, and/or our  legitimate interest in conducting our business. </li>
+</ul>
+<br />
+<p align="left"><a name="sharing" id="sharing"></a><strong>Sharing  Of Information.</strong><br /><br />
+  In addition to the specific situations discussed  elsewhere in this policy, we disclose information in the following situations:<br />
+  <ol><li><strong>Affiliates and Acquisitions</strong>. We may share information with our corporate affiliates  (<em>e.g</em>., parent company, sister  companies, subsidiaries, joint ventures, or other companies under common  control).&nbsp; If another company acquires,  or plans to acquire, our company, business, or our assets, we will also share  information with that company, including at the negotiation stage.&nbsp;</li><br />
+  <li><strong>Other Disclosures with Your Consent.</strong>&nbsp; We may ask if you  would like us to share your information with other unaffiliated third parties  who are not described elsewhere in this policy.</li><br />
+  <li><strong>Other Disclosures without Your Consent</strong>. We may disclose information in response to subpoenas,  warrants, or court orders, or in connection with any legal process, or to  comply with relevant laws.&nbsp; We may also  share your information in order to establish or exercise our rights, to defend  against a legal claim, to investigate, prevent, or take action regarding  possible illegal activities, suspected fraud, safety of person or property, or  a violation of our policies, to comply with state, federal, or international  reporting or disclosure requirements, or to comply with your request for the  shipment of products to or the provision of services by a third party  intermediary.</li><br />
+  <li><strong>Partner Support for Uses</strong>. We may offer contests, sweepstakes, or other promotions  with third party partners.&nbsp; If you decide  to enter a contest, sweepstakes, or promotion that is sponsored by a third  party partner the information that you provide will be shared with us and with  them.&nbsp; Their use of your information is  not governed by this privacy policy.</li> <br />
+  <li><strong>Service Providers</strong>. We may  share your information with service providers.&nbsp;  Among other things service providers may help us to administer our  website, conduct surveys, provide technical support, process payments, assist  with regulatory and other reporting obligations and disclosures outlined above,  data aggregation, and assist in the fulfillment of orders.</li><br />
+  <li><strong>Sharing with Affiliates and Non-Affiliates for Marketing  and Other Purposes.&nbsp; </strong>We may share your information with affiliates and  non-affiliates for marketing, regulatory and other purposes.&nbsp; Under certain circumstances, you may opt-out  of such sharing with non-affiliates with respect to certain data you have  provided to us.&nbsp;</li></ol><br /><br />
+  <a name="choices" id="choices"></a><strong>Your  Choices.</strong></p>
+<p>You may be entitled to certain choices  regarding your personal information. As applicable, please contact us by one of  the methods listed below under &ldquo;Contact Information&rdquo; and we will assist you  with your request as soon as possible. Please note that in order to exercise  these rights, we may have to verify your identity to make sure you are  exercising rights related to personal information belonging to you. Depending  on your request, we may request certain information from you in order to verify  your identity and residency using personal information already provided by you,  prior to granting any data subject access request, including a request for  access or deletion of data. You may also appoint an authorized agent by  contacting us at the email below and verifying your identity and residency.  Please note, if you elect to exercise one of your choices listed below, you  will not receive discriminatory treatment by us for exercising your privacy  rights that are conferred upon you by law. You can make the following choices  regarding your personal information:<br />
+  <ol><li><strong>Access To Your Personal Information</strong>. You may request access to your personal information by  contacting us at the address described below. If required by law, upon request,  we will grant you reasonable access to the personal information that we have  about you.&nbsp;&nbsp; Note that California  residents may be entitled to ask us for a notice describing what categories of  personal information (if any) we collect, use, sell or share with third parties  or affiliates for direct marketing.&nbsp; </li><br />
+<li><strong>Changes To Your Personal Information</strong>. We rely on you to update and correct your personal  information. You may contact us at the address described below in order to  request that your information by modified. Note that we may keep historical  information in our backup files as permitted by law.&nbsp;</li><br />
+  <li><strong>Deletion Of Your Personal Information</strong>. &nbsp;Typically we  retain your personal information for the period necessary to fulfill the  purposes outlined in this policy, unless a longer retention period is required  or permitted by law.&nbsp; You may, however,  request information about how long we keep a specific type of information, or  request that we delete your personal information by contacting us at the  address described below.&nbsp; If required by  law we will grant a request to delete information, but you should note that in  many situations we must keep your personal information to comply with our legal  obligations, resolve disputes, enforce our agreements, or for another one of  our business purposes.</li>&nbsp; <br />
+  <li><strong>Objection to Certain Processing.</strong>&nbsp; You may object to  our use or disclosure of your personal information by contacting us at the  address described below.&nbsp; </li><br />
+  <li><strong>Online Tracking.&nbsp; </strong>We do not currently recognize automated browser signals  regarding tracking mechanisms, which may include &quot;Do Not Track&quot;  instructions. </li><br />
+  <li><strong>Promotional Emails</strong>. You may choose to  provide us with your email address for the purpose of allowing us to send free  newsletters, surveys, offers, and other promotional materials to you, as well  as targeted offers from third parties.&nbsp;  You can stop receiving promotional emails by following the unsubscribe  instructions in e-mails that you receive.&nbsp;  If you decide not to receive promotional emails, we may still send you  service related communications.</li> <br />
+  <li><strong>Promotional Mailings.</strong>&nbsp; If at any time you do not want to receive  offers and/or circulars from us you can remove yourself from our mailing lists  by emailing us (our contact information is below) with &quot;NO SNAIL  MAIL&quot; in the subject line along with your name, address and zip code.  Please note that our mailings are prepared in advance of their being sent.  Although we will remove your name from our mailing list after receiving your  request, you may still receive mailings from us that had been initiated prior  to your name being removed.</li><br />
+  <li><strong>Revocation Of Consent</strong>.&nbsp; If you revoke your consent for the processing  of personal information then we may no longer be able to provide you services.  In some cases, we may limit or deny your request to revoke consent if the law  permits or requires us to do so, or if we are unable to adequately verify your  identity. You may revoke consent to processing (where such processing is based  upon consent) by contacting us at the address described below.</li></ol><br /><br />
+  <a name="protect" id="protect"></a><strong>How  We Protect Personal Information</strong><br /><br />
+  No method of transmission over the Internet, or method of  electronic storage, is fully secure. While we use reasonable efforts to protect  your personal information from unauthorized access, use, or disclosure, we  cannot guarantee the security of your personal information. In the event that  we are required by law to inform you of a breach to your personal information  we may notify you electronically, in writing, or by telephone, if permitted to  do so by law.<br />
+  Some of our  websites permit you to create an account.&nbsp;  When you do you will be prompted to create a password.&nbsp; You are responsible for maintaining the  confidentiality of your password, and you are responsible for any access to or  use of your account by someone else that has obtained your password, whether or  not such access or use has been authorized by you.&nbsp; You should notify us of any unauthorized use  of your password or account.<br /><br />
+  <a name="misc" id="misc"></a><strong>Miscellaneous</strong></p>
+<p align="left">The following additional information relates to our  privacy practices:</p>
+<ul>
+  <li><strong>Transmission Of Information To Other Countries</strong>. As a multi-national company we transmit information  between and among our affiliates.&nbsp; As a  result your information may be processed in a foreign country where privacy  laws may be less stringent than the laws in your country.&nbsp; Nonetheless, where possible we take steps to  treat personal information using the same privacy principles that apply  pursuant to the law of the country in which we first received your  information.&nbsp; By submitting your personal  information to us you agree to the transfer, storage and processing of your  information in a country other than your country of residence including, but  not necessarily limited to, the United States.&nbsp;  If you would like more information concerning our attempts to apply the  privacy principles applicable in one jurisdiction to data when it goes to  another jurisdiction you can contact us using the contact information below.</li>
+  <li><strong>Children.</strong>&nbsp; The sites are not meant for or targeted to  children and should not be used by children under the age of 13. &nbsp;If a parent or guardian is made aware that a  child under the age of 13 has provided us with personal information through any  point of contact, we ask to be contacted at the below email address, and we  will delete the information about the child referenced from our files. If we  have actual knowledge that personal information about a person under the age of  13 has been collected without appropriate parental consent, then we will take  the appropriate steps to delete such information.&nbsp; We do not sell the personal information of  minors less than 16 years of age without affirmative authorization.</li>
+  <li><strong>Third Party Applications/Websites</strong>.&nbsp; We have no  control over the privacy practices of websites or applications that we do not  own. </li>
+  <li><strong>Changes To This Privacy Policy.</strong>&nbsp; We may change our  privacy policy and practices over time.&nbsp;  To the extent that our policy changes in a material way, the policy that  was in place at the time that you submitted personal information to us will  generally govern that information unless we receive your consent to the new  privacy policy.&nbsp; We will note the  effective date of the latest version at the beginning of the Privacy Policy.<strong></strong></li>
+  <li><strong>Information  for California Residents.</strong>&nbsp; California  Civil Code Sections 1798.115(c), 1798.130(a)(5)(c), 1798.130(c), and 1798.140  indicate that organizations should disclose whether certain categories of  information are collected, &ldquo;sold&rdquo; or transferred for an organization&rsquo;s  &ldquo;business purpose&rdquo;(as those terms are defined under California law). &nbsp;You can find a list of the categories of  information that we collect and share <strong><a href="cal-info-disclosure.php">here</a></strong>. Please note that  because this list is comprehensive it may refer to types of information that we  share about people other than yourself. If you would like more information  concerning the categories of personal information (if any) we share with third  parties or affiliates for those parties to use for direct marketing please  submit a written request to us using the information in the &quot;Contact  Information&quot; section below.&nbsp; We do not discriminate against  California residents who exercise any of their rights described in this Privacy  Policy. <strong> </strong></li>
+</ul>
+<p><a name="contact" id="contact"></a><strong>Contact  Information</strong>.&nbsp; If you have any  questions, comments, or complaints concerning our privacy practices please  contact us at the appropriate address below.&nbsp;  We will attempt to respond to your requests and to provide you with  additional privacy-related information. <br /><br />
+  <a href="mailto:privacyak@akorn.com">privacyak@akorn.com</a><br />
+  Chief Ethics &amp; Compliance Officer<br />
+  Akorn, Inc.<br />
+  1925 West Field Court, Suite 300<br />
+  Lake Forest, IL 60045</p>
+<p>1-800-932-5676 </p>
+<p>If you are not satisfied with our response, and are in the European  Union, you may have a right to lodge a complaint with your local supervisory  authority.<strong> </strong></p>
+<p><strong>Effective Date: January 1, 2020</strong></p>
+<br clear="all" />
+</div>
+      <div class="clearfix"></div>
+                
+		</div>
+
+	</div>
+		
+		<div id="footer">
+	        <p class="link_blue_nav">Advancing The New Vision</p>
+	        <ul>
+	          <li><a href="/">Home</a></li>
+	          <li><a href="/contact.php">Contact Us</a></li>
+	          <li><a href="/foot_legal.php">Legal & Privacy</a></li>
+	          <li><a href="/foot_sitemap.php">Site Map</a></li>
+		  <li>&nbsp;</li>
+	          <!--
+	          <li>&copy; Akorn, Incorporated</li>
+	          <li>Lake Forest, Illinois, USA</li>
+	      	  -->
+	        </ul>
+	        <p>&copy; Copyright 2019 Akorn, Incorporated All Rights Reserved | 1925 W. Field Court, Suite 300, Lake Forest, Illinois 60045 | 800.932.5676</p>
+	     </div>
+
+	
+</div>
+</body>
+</html>

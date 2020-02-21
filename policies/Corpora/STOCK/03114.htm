@@ -1,0 +1,3027 @@
+
+
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=100" />
+<html prefix="">
+<head>
+
+
+	<meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"d61a0fdf44","applicationID":"40976951","transactionName":"MgNUbEoHWxADUEwNXgtJe257SWYKFlZbC0MAJVlWTBRaDw5WSkt4CwJTQA==","queueTime":0,"applicationTime":218,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUDV1RVCBAEVFhVAQgCVw==",licenseKey:"d61a0fdf44",applicationID:"40976951"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(20),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(21),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(21),a=t(20);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(18),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=f(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(13),u=t(11).generateTracePayload,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(16),w=t(15),v=window.XMLHttpRequest;s.features.xhr=!0,t(10),t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=u(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)}),d.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=f(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=u(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(20),s=t(21),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],15:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],16:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],17:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?a("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&a("timing",["fcp",Math.floor(t.startTime)])})}function o(t){if(t instanceof c&&!u){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:s.now()-e,u=!0,a("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var i,a=t("handle"),s=t("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){i=new PerformanceObserver(r);try{i.observe({entryTypes:["paint"]})}catch(f){}}if("addEventListener"in document){var u=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(t){document.addEventListener(t,o,!1)})}}},{}],18:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],19:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],20:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],21:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],22:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(20),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(20),u=t("ee"),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(14),t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(22)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	
+
+		<title>Privacy Policy | WisdomTree</title>
+		<meta name="description" content="WisdomTree is an ETF sponsor and index developer that uses a rules-based methodology to select and weight companies. Learn more about specialized ETFs here.">
+
+	        <meta name="author" content="WisdomTree Investments, Inc." />
+
+	
+	
+
+	
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+	<link href="/content/css/default.css" rel="stylesheet" type="text/css" />
+	<link href="/content/css/style.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript" src="/content/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/content/js/digitaldata_template.js"></script>
+
+	
+
+
+	
+
+	
+
+	
+	<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "WisdomTree",
+		"url": "https://www.wisdomtree.com",
+		"logo": "https://www.wisdomtree.com/img/wisdomtree-logo.png"
+		}
+	</script>
+
+
+	
+	<script src="https://use.typekit.net/ael7yim.js"></script>
+	<script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+
+	
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-MSBW4N');</script>
+	<!-- End Google Tag Manager -->
+	<!-- Global site tag (gtag.js) - Google AdWords: 1064531831 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1064531831"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'AW-1064531831');
+	</script>
+
+
+	
+
+
+
+<script type="text/javascript" src="https://cdn.merklesearch.com/merkle_track.js"></script>
+<script type="text/javascript">try { merklesearch.sendAdSid('wisdomtree'); } catch (e) { }</script>
+
+
+
+</head>
+
+<body 
+	  data-page-name="wisdomtree.com|privacy-policy" 
+	  data-page-url="https://www.wisdomtree.com/privacy-policy.aspx" 
+	  data-page-category="" 
+	  data-page-subcategories="" 
+	  data-page-type="us|brand" 
+	  data-account-status="logged out" 
+	  data-account-type="n/a">
+
+	
+	<!-- Google Tag Manager -->
+	<noscript>
+		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-MSBW4N" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager -->
+
+
+	
+
+
+
+
+
+
+
+<link href="/client/styles/redesignedHeaderFooter.css" rel="stylesheet" type="text/css" />
+
+
+
+<header class="header">
+	<div class="container">
+		<!-- Top header line - Logo and Secondary Navigation-->
+		<div class="row first-line">
+			<div class="col-xs-5 col-sm-3">
+				<!-- Logo here -->
+				<a href="/" class="logo">
+					<img src="https://www.wisdomtree.com:443/-/media/logo.svg?la=en&amp;hash=B1EC1EB186090CA1A5DDF43A05EF4148DD1C3A3B" alt="" />
+				</a>
+			</div>
+
+			<div class="col-xs-7 col-sm-9 visible-md visible-lg text-right">
+					<!-- Secondary Navigation For Desktop -->
+
+
+
+<nav class="secondary-nav">
+				<a href="https://www.wisdomtree.com:443/-/media/us-media-files/multimedia/videos/site-refresh.mp4" target="_blank" class=" secondary-nav-link">Take a Site Tour</a>
+				<a href="http://ir.wisdomtree.com/"  class=" secondary-nav-link">Investor Relations</a>
+			<div class="dropdown secondary-nav-link" >
+				<div data-target="#" data-toggle="dropdown" class="dropdown-toggle">
+					<span>About</span>
+					<b class="caret"></b>
+				</div>
+				<ul class="dropdown-menu">
+							<li>
+								<a href="https://www.wisdomtree.com/modern-alpha" class=" locale-link" >
+									<span>Who We Are</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.wisdomtree.com/about/press-room" class=" locale-link" >
+									<span>Press Room</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.wisdomtree.com/about/careers-at-wisdomtree" class=" locale-link" >
+									<span>Careers</span>
+								</a>
+							</li>
+				</ul>
+			</div>
+				<a href="https://www.wisdomtree.com/about/contact-us"  class=" secondary-nav-link">Contact</a>
+
+	
+	<div class="dropdown secondary-nav-link">
+		<div data-target="#" data-toggle="dropdown" class="dropdown-toggle locale-dropdown">
+			<span>USA</span>
+			<b class="caret"></b>
+		</div>
+		<ul class="dropdown-menu">
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.ca/en-CA">
+						<span>CAN</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/de-CH">
+						<span>CHE</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/de-DE">
+						<span>DEU</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/fi-FI">
+						<span>FIN</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/fr-FR">
+						<span>FRA</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/en-GB">
+						<span>GBR</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/en-IE">
+						<span>IRL</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/it-IT">
+						<span>ITA</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/fr-LU">
+						<span>LUX</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/nl-NL">
+						<span>NLD</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/nb-NO">
+						<span>NOR</span>
+					</a>
+				</li>
+				<li>
+					<a class="locale-link" href="https://www.wisdomtree.eu/sv-SE">
+						<span>SWE</span>
+					</a>
+				</li>
+		</ul>
+	</div>
+</nav>
+
+
+
+			</div>
+
+			<div class="col-xs-7 col-sm-9 visible-xs visible-sm text-right">
+				<!-- Navigation handlers for mobile -->
+				<div class="mobile-nav">
+						<div class="dropdown-trigger panel-trigger-btn auth-btn" role="button" data-target="#authMobilePanel" aria-expanded="false"></div>
+					<div class="dropdown-trigger panel-trigger-btn search-btn" role="button" data-target="#searchHeaderPanel" aria-expanded="false"></div>
+					<div class="dropdown-trigger panel-trigger-btn menu-btn" role="button" data-target="#mobileMenuPanel" aria-expanded="false"></div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Bottom header line - Primary Navigation -->
+		<div class="row visible-md visible-lg main-navigation">
+			<div class="col-xs-7 col-md-8">
+					<!-- Main Navigation For Desktop -->
+
+	<nav class="main-nav">
+
+		<div class="nav-item">
+
+				<a class="nav-link" role="button" data-target="#panelC5A65ABC23DA462FBC3FA702C75B8245">
+					WisdomTree ETFs
+				</a>
+				<div id="panelC5A65ABC23DA462FBC3FA702C75B8245" class="row nav-panel nav-panel-wide">
+					<div class="nav-panel-container">
+
+						<div class="nav-panel-content">
+		<div class="links-list-wrapper" role="tabpanel">
+				<ul class="links-list">
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/etfs" >
+										<span>All ETFs</span>
+									</a>
+								</li>
+								<li role="presentation" class="link-list-item active">
+									<a  href="https://www.wisdomtree.com/etfs/equity" data-target="#panelCD2513D424E0415581EC8A18816CAE04" role="tab" data-toggle="tab">
+										<span>Domestic Equity ETFs</span>
+									</a>
+								</li>
+								<li role="presentation" class="link-list-item ">
+									<a  href="https://www.wisdomtree.com/etfs/equity" data-target="#panelAA89D66B545443CCB024F7CA2552F69B" role="tab" data-toggle="tab">
+										<span>EM Equity ETFs</span>
+									</a>
+								</li>
+								<li role="presentation" class="link-list-item ">
+									<a  href="https://www.wisdomtree.com/etfs/equity" data-target="#panelFD5AC4AEE7EC4ABEA7E088E23CD72B3B" role="tab" data-toggle="tab">
+										<span>International Equity ETFs</span>
+									</a>
+								</li>
+								<li role="presentation" class="link-list-item ">
+									<a  href="https://www.wisdomtree.com/etfs/fixed-income" data-target="#panel28DA38707DEF455B9437D4CA06715186" role="tab" data-toggle="tab">
+										<span>Fixed Income ETFs	</span>
+									</a>
+								</li>
+								<li role="presentation" class="link-list-item ">
+									<a  href="https://www.wisdomtree.com/etfs/alternative" data-target="#panel060CD07B916A4A729C23A79762C79B41" role="tab" data-toggle="tab">
+										<span>Alternative ETFs</span>
+									</a>
+								</li>
+								<li role="presentation" class="link-list-item ">
+									<a  href="https://www.wisdomtree.com/etfs/asset-allocation" data-target="#panel121D9E599E564B4BBD841C2245DC3E52" role="tab" data-toggle="tab">
+										<span>Asset Allocation ETFs</span>
+									</a>
+								</li>
+								<li role="presentation" class="link-list-item ">
+									<a  href="https://www.wisdomtree.com/etfs/thematic" data-target="#panel4B2048A4653842518BE2E82E81A2152B" role="tab" data-toggle="tab">
+										<span>Thematic ETFs</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/index" >
+										<span>All Indexes</span>
+									</a>
+								</li>
+				</ul>
+
+		</div>
+						</div>
+									<div id="panelCD2513D424E0415581EC8A18816CAE04" class="products-lists active">
+			<div id="panel098EC7959AB74BD793CA95867DCCBC38" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Large Cap Core
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/eps">
+									<span class="product-code">EPS</span>
+									<span class="product-title">WisdomTree U.S. LargeCap Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ext">
+									<span class="product-code">EXT</span>
+									<span class="product-title">WisdomTree U.S. Total Market Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dgrw">
+									<span class="product-code">DGRW</span>
+									<span class="product-title">WisdomTree U.S. Quality Dividend Growth Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/usmf">
+									<span class="product-code">USMF</span>
+									<span class="product-title">WisdomTree U.S. Multifactor Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/qsy">
+									<span class="product-code">QSY</span>
+									<span class="product-title">WisdomTree U.S. Quality Shareholder Yield Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panel4DFB1EC0DD194BDFB81D6F48A2E4B923" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Mid &amp; Small Cap Core
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ezm">
+									<span class="product-code">EZM</span>
+									<span class="product-title">WisdomTree U.S. MidCap Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ees">
+									<span class="product-code">EES</span>
+									<span class="product-title">WisdomTree U.S. SmallCap Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dgrs">
+									<span class="product-code">DGRS</span>
+									<span class="product-title">WisdomTree U.S. SmallCap Quality Dividend Growth Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panel22FFF2A417464FC5A36CDFBC4FF8A028" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Large Cap Value
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dln">
+									<span class="product-code">DLN</span>
+									<span class="product-title">WisdomTree U.S. LargeCap Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dtd">
+									<span class="product-code">DTD</span>
+									<span class="product-title">WisdomTree U.S. Total Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dhs">
+									<span class="product-code">DHS</span>
+									<span class="product-title">WisdomTree U.S. High Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dtn">
+									<span class="product-code">DTN</span>
+									<span class="product-title">WisdomTree U.S. Dividend ex-Financials Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panel1CF72CC706F243B492E22722C6B5FBC8" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Mid &amp; Small Cap Value
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/don">
+									<span class="product-code">DON</span>
+									<span class="product-title">WisdomTree U.S. MidCap Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/des">
+									<span class="product-code">DES</span>
+									<span class="product-title">WisdomTree U.S. SmallCap Dividend Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+									</div>
+									<div id="panelAA89D66B545443CCB024F7CA2552F69B" class="products-lists ">
+			<div id="panelAA32E78999DA42058D9DAC083BFA7B66" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Emerging Markets
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dvem">
+									<span class="product-code">DVEM</span>
+									<span class="product-title">WisdomTree Emerging Markets Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dem">
+									<span class="product-code">DEM</span>
+									<span class="product-title">WisdomTree Emerging Markets High Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dgre">
+									<span class="product-code">DGRE</span>
+									<span class="product-title">WisdomTree Emerging Markets Quality Dividend Growth Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/emmf">
+									<span class="product-code">EMMF</span>
+									<span class="product-title">WisdomTree Emerging Markets Multifactor Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/emcg">
+									<span class="product-code">EMCG</span>
+									<span class="product-title">WisdomTree Emerging Markets Consumer Growth Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dgs">
+									<span class="product-code">DGS</span>
+									<span class="product-title">WisdomTree Emerging Markets SmallCap Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/xsoe">
+									<span class="product-code">XSOE</span>
+									<span class="product-title">WisdomTree Emerging Markets ex-State-Owned Enterprises Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelE518FFA8C3C44847AD3F72C972177FFB" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Regional/Single Country
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/cxse">
+									<span class="product-code">CXSE</span>
+									<span class="product-title">WisdomTree China ex-State-Owned Enterprises Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/wchn">
+									<span class="product-code">WCHN</span>
+									<span class="product-title">WisdomTree ICBCCS S&amp;P China 500 Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/gulf">
+									<span class="product-code">GULF</span>
+									<span class="product-title">WisdomTree Middle East Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/epi">
+									<span class="product-code">EPI</span>
+									<span class="product-title">WisdomTree India Earnings Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ixse">
+									<span class="product-code">IXSE</span>
+									<span class="product-title">WisdomTree India ex-State-Owned Enterprises Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+									</div>
+									<div id="panelFD5AC4AEE7EC4ABEA7E088E23CD72B3B" class="products-lists ">
+			<div id="panel2815638B366949EDA531C74CCE57BDBB" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							International
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dwm">
+									<span class="product-code">DWM</span>
+									<span class="product-title">WisdomTree International Equity Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dwmf">
+									<span class="product-code">DWMF</span>
+									<span class="product-title">WisdomTree International Multifactor Fund </span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ddwm">
+									<span class="product-code">DDWM</span>
+									<span class="product-title">WisdomTree Dynamic Currency Hedged International Equity Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dol">
+									<span class="product-code">DOL</span>
+									<span class="product-title">WisdomTree International LargeCap Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/doo">
+									<span class="product-code">DOO</span>
+									<span class="product-title">WisdomTree International Dividend ex-Financials Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dth">
+									<span class="product-code">DTH</span>
+									<span class="product-title">WisdomTree International High Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dhdg">
+									<span class="product-code">DHDG</span>
+									<span class="product-title">WisdomTree Dynamic Currency Hedged International Quality Dividend Growth Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ihdg">
+									<span class="product-code">IHDG</span>
+									<span class="product-title">WisdomTree International Hedged Quality Dividend Growth Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/iqdg">
+									<span class="product-code">IQDG</span>
+									<span class="product-title">WisdomTree International Quality Dividend Growth Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelFF55B69D70824D9F87CC78E908D7F20D" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							International Mid &amp; Small Cap
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dls">
+									<span class="product-code">DLS</span>
+									<span class="product-title">WisdomTree International SmallCap Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ddls">
+									<span class="product-code">DDLS</span>
+									<span class="product-title">WisdomTree Dynamic Currency Hedged International SmallCap Equity Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dim">
+									<span class="product-code">DIM</span>
+									<span class="product-title">WisdomTree International MidCap Dividend  Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelC206506AA83D4F39A9CE44BBD038F72F" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Global
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dnl">
+									<span class="product-code">DNL</span>
+									<span class="product-title">WisdomTree Global ex‐U.S. Quality Dividend Growth Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dew">
+									<span class="product-code">DEW</span>
+									<span class="product-title">WisdomTree Global High Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/drw">
+									<span class="product-code">DRW</span>
+									<span class="product-title">WisdomTree Global ex-U.S. Real Estate Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panel7CF0C492BC35401AB97226E448EE76C1" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Regional/Single Country
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dxj">
+									<span class="product-code">DXJ</span>
+									<span class="product-title">WisdomTree Japan Hedged Equity Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/jnmf">
+									<span class="product-code">JNMF</span>
+									<span class="product-title">WisdomTree Japan Multifactor Fund </span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/axjl">
+									<span class="product-code">AXJL</span>
+									<span class="product-title">WisdomTree Asia Pacific ex-Japan Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/hedj">
+									<span class="product-code">HEDJ</span>
+									<span class="product-title">WisdomTree Europe Hedged Equity Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/eudg">
+									<span class="product-code">EUDG</span>
+									<span class="product-title">WisdomTree Europe Quality Dividend Growth Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dxge">
+									<span class="product-code">DXGE</span>
+									<span class="product-title">WisdomTree Germany Hedged Equity Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/eumf">
+									<span class="product-code">EUMF</span>
+									<span class="product-title">WisdomTree Europe Multifactor Fund </span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panel3CAD7C2090D243A1BE19036E78121EF5" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Regional/Single Country Small Cap
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dfj">
+									<span class="product-code">DFJ</span>
+									<span class="product-title">WisdomTree Japan SmallCap Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dxjs">
+									<span class="product-code">DXJS</span>
+									<span class="product-title">WisdomTree Japan Hedged SmallCap Equity Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dfe">
+									<span class="product-code">DFE</span>
+									<span class="product-title">WisdomTree Europe SmallCap Dividend Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/eusc">
+									<span class="product-code">EUSC</span>
+									<span class="product-title">WisdomTree Europe Hedged SmallCap Equity Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+									</div>
+									<div id="panel28DA38707DEF455B9437D4CA06715186" class="products-lists ">
+			<div id="panelCB8825DD8E8D4C098D6298D4FDA23D0B" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Strategic Core
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/aggy">
+									<span class="product-code">AGGY</span>
+									<span class="product-title">WisdomTree Yield Enhanced U.S. Aggregate Bond Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/shag">
+									<span class="product-code">SHAG</span>
+									<span class="product-title">WisdomTree Yield Enhanced U.S. Short-Term Aggregate Bond Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/glby">
+									<span class="product-code">GLBY</span>
+									<span class="product-title">WisdomTree Yield Enhanced Global Aggregate Bond Fund </span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/mtgp">
+									<span class="product-code">MTGP</span>
+									<span class="product-title">WisdomTree Mortgage Plus Bond Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelE4B6F55FC3364FBDB6B3AA9A06D37626" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Short Term Government
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/usfr">
+									<span class="product-code">USFR</span>
+									<span class="product-title">WisdomTree Floating Rate Treasury Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelB3AC88692D9845A086FF52126807D65F" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Interest Rate Strategies
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/agzd">
+									<span class="product-code">AGZD</span>
+									<span class="product-title">WisdomTree Interest Rate Hedged U.S. Aggregate Bond Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/agnd">
+									<span class="product-code">AGND</span>
+									<span class="product-title">WisdomTree Negative Duration U.S. Aggregate Bond Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/hyzd">
+									<span class="product-code">HYZD</span>
+									<span class="product-title">WisdomTree Interest Rate Hedged High Yield Bond Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/hynd">
+									<span class="product-code">HYND</span>
+									<span class="product-title">WisdomTree Negative Duration High Yield Bond Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panel0F728DE87465414DA9D64600C0DA621C" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Credit
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/wfig">
+									<span class="product-code">WFIG</span>
+									<span class="product-title">WisdomTree U.S. Corporate Bond Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/sfig">
+									<span class="product-code">SFIG</span>
+									<span class="product-title">WisdomTree U.S. Short Term Corporate Bond Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/wfhy">
+									<span class="product-code">WFHY</span>
+									<span class="product-title">WisdomTree U.S. High Yield Corporate Bond Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/sfhy">
+									<span class="product-code">SFHY</span>
+									<span class="product-title">WisdomTree U.S. Short Term High Yield Corporate Bond Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelAD4B67B8EAB04A16B2F22B55CC0FF400" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Emerging Markets
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/eld">
+									<span class="product-code">ELD</span>
+									<span class="product-title">WisdomTree Emerging Markets Local Debt Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/emcb">
+									<span class="product-code">EMCB</span>
+									<span class="product-title">WisdomTree Emerging Markets Corporate Bond Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelF3512C3E0B1D4520BCA54B646F6281D8" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Currency Strategies
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/currency/cew">
+									<span class="product-code">CEW</span>
+									<span class="product-title">WisdomTree Emerging Currency Strategy Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/currency/usdu">
+									<span class="product-code">USDU</span>
+									<span class="product-title">WisdomTree Bloomberg U.S. Dollar Bullish Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/currency/cyb">
+									<span class="product-code">CYB</span>
+									<span class="product-title">WisdomTree Chinese Yuan Strategy Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+									</div>
+									<div id="panel060CD07B916A4A729C23A79762C79B41" class="products-lists ">
+			<div id="panel56AEC6DA775F4CD19445109CB8E0BBAF" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Long/Short
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/dyls">
+									<span class="product-code">DYLS</span>
+									<span class="product-title">WisdomTree Dynamic Long/Short U.S. Equity Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/dyb">
+									<span class="product-code">DYB</span>
+									<span class="product-title">WisdomTree Dynamic Bearish U.S. Equity Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelDB4F60DE63A042E9A96BB63251265194" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Managed Futures
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/wtmf">
+									<span class="product-code">WTMF</span>
+									<span class="product-title">WisdomTree Managed Futures Strategy Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panel5D0C99D0D9234C2BA1A55B34A258DC3F" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Option-Based
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/putw">
+									<span class="product-code">PUTW</span>
+									<span class="product-title">WisdomTree CBOE S&amp;P 500 PutWrite Strategy Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/rput">
+									<span class="product-code">RPUT</span>
+									<span class="product-title">WisdomTree CBOE Russell 2000 PutWrite Strategy Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+			<div id="panelDA8FD560D11D41819A4318AFF72D7BAF" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Commodity
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/gcc">
+									<span class="product-code">GCC</span>
+									<span class="product-title">WisdomTree Continuous Commodity Index Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+									</div>
+									<div id="panel121D9E599E564B4BBD841C2245DC3E52" class="products-lists ">
+			<div id="panelD6E3B3B3C12D456AAA29729C1067F9B4" class="links-list-wrapper products-list-wrapper">
+						<div class="links-list-title products-list-title">
+							Multi-Asset
+						</div>
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/asset-allocation/wbal">
+									<span class="product-code">WBAL</span>
+									<span class="product-title">WisdomTree Balanced Income Fund</span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/asset-allocation/ntsx">
+									<span class="product-code">NTSX</span>
+									<span class="product-title">WisdomTree 90/60 U.S. Balanced Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+									</div>
+									<div id="panel4B2048A4653842518BE2E82E81A2152B" class="products-lists ">
+			<div id="panelCD5617E491A74496980419764704186E" class="links-list-wrapper products-list-wrapper">
+					<ul class="links-list products-list">
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/thematic/wcld">
+									<span class="product-code">WCLD</span>
+									<span class="product-title">WisdomTree Cloud Computing Fund </span>
+								</a>
+							</li>
+							<li class="link-list-item products-list-item">
+								<a class="product-link" href="https://www.wisdomtree.com/etfs/thematic/plat">
+									<span class="product-code">PLAT</span>
+									<span class="product-title">WisdomTree Modern Tech Platforms Fund</span>
+								</a>
+							</li>
+					</ul>
+
+			</div>
+									</div>
+					</div>
+				</div>
+
+
+		</div>
+		<div class="nav-item">
+
+				<a class="nav-link" role="button" data-target="#panel0D58F1EF168045D4878DF4C85CE5BDDC">
+					STRATEGIES
+				</a>
+				<div id="panel0D58F1EF168045D4878DF4C85CE5BDDC" class="row nav-panel">
+					<div class="nav-panel-container">
+
+						<div class="nav-panel-content">
+		<div class="links-list-wrapper" role="tabpanel">
+				<ul class="links-list">
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/modern-alpha" >
+										<span>Modern Alpha</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/strategies/dividends" >
+										<span>Domestic Dividends</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/strategies/domestic-core" >
+										<span>Domestic Core Equity</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/strategies/usfr-aggy-barbell-strategy" >
+										<span>Barbell Approach</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/strategies/emerging-markets" >
+										<span>Emerging Markets</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/strategies/quality-dividend-growth" >
+										<span>Quality Dividend Growth</span>
+									</a>
+								</li>
+				</ul>
+
+		</div>
+						</div>
+					</div>
+				</div>
+
+
+		</div>
+		<div class="nav-item">
+
+				<a class="nav-link" role="button" data-target="#panel3885E457B6AD49C2A3DE1E575C71CFE5">
+					RESOURCE LIBRARY
+				</a>
+				<div id="panel3885E457B6AD49C2A3DE1E575C71CFE5" class="row nav-panel">
+					<div class="nav-panel-container">
+
+						<div class="nav-panel-content">
+		<div class="links-list-wrapper" role="tabpanel">
+				<ul class="links-list">
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/resource-library/wisdomtree-resources" >
+										<span>WisdomTree Resources</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/resource-library/prospectus-regulatory-reports" >
+										<span>Prospectus &amp; Regulatory</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/resource-library/fact-sheets-reports" >
+										<span>Fact Sheets &amp; Reports</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/resource-library/2019-estimated-capital-gains-distributions" >
+										<span>2019 Capital Gains Distributions</span>
+									</a>
+								</li>
+				</ul>
+
+		</div>
+						</div>
+					</div>
+				</div>
+
+
+		</div>
+		<div class="nav-item">
+
+				<a href="https://www.wisdomtree.com/advisor-solutions" class="nav-link" role="button">
+					ADVISOR SOLUTIONS
+				</a>
+
+
+		</div>
+		<div class="nav-item">
+
+				<a class="nav-link" role="button" data-target="#panelDA841415887D466B91C589C0FD18131B">
+					BLOG
+				</a>
+				<div id="panelDA841415887D466B91C589C0FD18131B" class="row nav-panel">
+					<div class="nav-panel-container">
+
+						<div class="nav-panel-content">
+		<div class="links-list-wrapper" role="tabpanel">
+				<ul class="links-list">
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/blog" >
+										<span>All Blogs</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="/blog/category/etf-education" >
+										<span>ETF Education</span>
+									</a>
+								</li>
+								<li class="link-list-item">
+									<a  href="https://www.wisdomtree.com/blog-contributors" >
+										<span>Contributors</span>
+									</a>
+								</li>
+				</ul>
+
+		</div>
+						</div>
+					</div>
+				</div>
+
+
+		</div>
+	</nav>
+
+
+			</div>
+
+			<div class="col-xs-5 col-md-4 text-right">
+				<!-- Auth Panel For Desktop -->
+				<div class="auth-panel-desktop">
+						<div class="dropdown-trigger panel-trigger-btn sign-in-btn" role="button" data-target="#signInHeaderPanel">
+							Sign In
+						</div>
+						<div class="dropdown-trigger panel-trigger-btn register-btn" role="button" data-target="#registerHeaderPanel">
+							Register
+						</div>
+
+					<div class="dropdown-trigger panel-trigger-btn search-btn" role="button" data-target="#searchHeaderPanel" aria-expanded="false"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="headerPanels">
+			<div id="authMobilePanel" class="hidden-md hidden-lg dropdown-panel collapsible-header-form">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12" style="margin-bottom: 20px;">
+							<div class="dropdown-trigger button register-btn" role="button" data-target="#registerHeaderPanel" style="width: 100%;">
+								Register
+							</div>
+						</div>
+
+						<div class="col-xs-12">
+							<div class="dropdown-trigger button -secondary sign-in-btn" role="button" data-target="#signInHeaderPanel" style="width: 100%;">
+								Sign In
+							</div>
+						</div>
+					</div>
+					<div class="close-btn dropdown-trigger" role="button" data-target="#authMobilePanel"></div>
+				</div>
+			</div>
+			<div id="signInHeaderPanel" class="dropdown-panel collapsible-header-form">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-6 col-md-offset-3 sign-in-form-wrapper">
+
+							<div class="form-title">
+								Sign In 
+							</div>
+
+							<div class="form-promo-box hidden-xs hidden-sm">
+								
+							</div>
+
+									
+										
+
+
+<div style ='' class='sign-in-form ' ><form action="/privacy-policy.aspx" method="post">		<input type="hidden" name="scController" value="Auth">
+		<input type="hidden" name="scAction" value="Login">
+		<input type="hidden" name="currentItemId" value="{5A297287-FCFB-409B-AA7C-506694F60586}">
+		<input type="hidden" name="requestAnchor" value="">
+		<div class="field-validation-error server-error">
+			
+		</div>
+		<div class="form-group">
+			<span class="field-validation-valid" data-valmsg-for="LoginEmail" data-valmsg-replace="true"></span>
+			<input class="form-control" data-val="true" data-val-email="Please enter a valid email address." data-val-email-param="LoginEmail" data-val-required="Please complete this field." data-val-required-param="LoginEmail" name="LoginEmail" placeholder="Email" type="text" value="" />
+		</div>
+		<div class="form-group">
+			<span class="field-validation-valid" data-valmsg-for="LoginPassword" data-valmsg-replace="true"></span>
+			<input class="form-control" data-val="true" data-val-required="Please complete this field." data-val-required-param="LoginPassword" name="LoginPassword" placeholder="Password" type="password" />
+		</div>
+		<div class="checkbox" style="margin: 30px 0 26px;">
+			<label>
+				<input checked="checked" data-val="true" data-val-required="The LoginRememberMe field is required." name="LoginRememberMe" type="checkbox" value="true" /><input name="LoginRememberMe" type="hidden" value="false" />
+				Keep me logged in.
+			</label>
+		</div>
+		<button class="button sign-in auth-btn" type="submit">SIGN IN</button>
+</form>	<div class="form-bottom">
+		<p><a href="https://www.wisdomtree.com/forgot-password">Forgot Password?</a></p>
+<hr>
+<p>Not Registered? <strong><a href="https://www.wisdomtree.com/registration/my-profile">Register for Access.</a></strong></p>
+	</div>
+</div>
+									
+
+						</div>
+					</div>
+					<div class="close-btn white dropdown-trigger" role="button" data-target="#signInHeaderPanel"></div>
+				</div>
+			</div>
+			<div id="registerHeaderPanel" class="dropdown-panel collapsible-header-form">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-xs-12 col-md-5">
+							<div class="form-title">
+								Register for access to exclusive content and industry insights.
+							</div>
+
+							<div class="form-promo-box hidden-xs hidden-sm">
+								<p><img alt="" src="https://www.wisdomtree.com:443/-/media/base-media-files/images-for-image-rendering/registration_image.png?h=186&amp;w=469&amp;hash=32272FB077FB2CFF29365D561F6C1293BD0FFC01" width="461" height="185"></p>
+<p>Individual investors who register can access dashboard, daily blog posts, latest videos, podcasts and stay current with industry insights. On top of that, Financial Professionals get additional access to the tools, technology, resources and support they need to take the business to the next level.</p>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 col-md-offset-1">
+									
+										
+
+
+<div class="registration-wrapper">
+	<script>
+        window.WtiCountryStates = {"AF":[],"AX":[],"AL":[],"DZ":[],"AS":[],"AD":[],"AO":[],"AI":[],"AQ":[],"AG":[],"AR":[],"AM":[],"AW":[],"AU":[],"AZ":[],"BS":[],"BH":[],"BD":[],"BB":[],"BY":[],"BZ":[],"BJ":[],"BM":[],"BT":[],"BO":[],"BA":[],"BW":[],"BV":[],"BR":[],"IO":[],"BN":[],"BF":[],"BI":[],"KH":[],"CM":[],"CA":[{"text":"Alberta","value":"AB"},{"text":"British Columbia","value":"BC"},{"text":"Manitoba","value":"MB"},{"text":"New Brunswick","value":"NB"},{"text":"Newfoundland and Labrador","value":"NL"},{"text":"Northwest Territories","value":"NT"},{"text":"Nova Scotia","value":"NS"},{"text":"Nunavut","value":"NU"},{"text":"Ontario","value":"ON"},{"text":"Prince Edward Island","value":"PE"},{"text":"Quebec","value":"QC"},{"text":"Saskatchewan","value":"SK"},{"text":"Yukon","value":"YT"},{"text":"Other","value":"Other"}],"CV":[],"KY":[],"CF":[],"TD":[],"CL":[],"CN":[],"CX":[],"CC":[],"CO":[],"KM":[],"CG":[],"CD":[],"CK":[],"CR":[],"CI":[],"CU":[],"DJ":[],"DM":[],"DO":[],"EC":[],"EG":[],"SV":[],"GQ":[],"ER":[],"ET":[],"FK":[],"FO":[],"FJ":[],"GF":[],"PF":[],"TF":[],"GA":[],"GM":[],"GE":[],"GH":[],"GI":[],"GL":[],"GD":[],"GP":[],"GU":[],"GT":[],"GG":[],"GN":[],"GW":[],"GY":[],"HT":[],"HM":[],"VA":[],"HN":[],"HK":[],"IN":[],"ID":[],"IR":[],"IQ":[],"IM":[],"IL":[],"JM":[],"JP":[],"JE":[],"JO":[],"KZ":[],"KE":[],"KI":[],"KW":[],"KG":[],"LA":[],"LB":[],"LS":[],"LR":[],"LY":[],"MO":[],"MG":[],"MW":[],"MY":[],"MV":[],"ML":[],"MH":[],"MQ":[],"MR":[],"MU":[],"YT":[],"MX":[],"FM":[],"MD":[],"MC":[],"MN":[],"ME":[],"MS":[],"MA":[],"MZ":[],"MM":[],"NA":[],"NR":[],"NP":[],"AN":[],"NC":[],"NZ":[],"NI":[],"NE":[],"NG":[],"NU":[],"NF":[],"KP":[],"MP":[],"OM":[],"PK":[],"PW":[],"PS":[],"PA":[],"PG":[],"PY":[],"PE":[],"PH":[],"PN":[],"PR":[],"QA":[],"RE":[],"RU":[],"RW":[],"BL":[],"SH":[],"KN":[],"LC":[],"MF":[],"PM":[],"VC":[],"WS":[],"SM":[],"ST":[],"SA":[],"SN":[],"RS":[],"SC":[],"SL":[],"SG":[],"SB":[],"SO":[],"ZA":[],"KR":[],"LK":[],"SD":[],"SR":[],"SJ":[],"SZ":[],"CH":[],"SY":[],"TW":[],"TJ":[],"TZ":[],"TH":[],"TL":[],"TG":[],"TK":[],"TO":[],"TT":[],"TN":[],"TR":[],"TM":[],"TC":[],"TV":[],"UG":[],"UA":[],"AE":[],"US":[{"text":"Alabama","value":"AL"},{"text":"Alaska","value":"AK"},{"text":"Arizona","value":"AZ"},{"text":"Arkansas","value":"AR"},{"text":"California","value":"CA"},{"text":"Colorado","value":"CO"},{"text":"Connecticut","value":"CT"},{"text":"Delaware","value":"DE"},{"text":"District of Columbia","value":"DC"},{"text":"Florida","value":"FL"},{"text":"Georgia","value":"GA"},{"text":"Hawaii","value":"HI"},{"text":"Idaho","value":"ID"},{"text":"Illinois","value":"IL"},{"text":"Indiana","value":"IN"},{"text":"Iowa","value":"IA"},{"text":"Kansas","value":"KS"},{"text":"Kentucky","value":"KY"},{"text":"Louisiana","value":"LA"},{"text":"Maine","value":"ME"},{"text":"Maryland","value":"MD"},{"text":"Massachusetts","value":"MA"},{"text":"Michigan","value":"MI"},{"text":"Minnesota","value":"MN"},{"text":"Mississippi","value":"MS"},{"text":"Missouri","value":"MO"},{"text":"Montana","value":"MT"},{"text":"Nebraska","value":"NE"},{"text":"Nevada","value":"NV"},{"text":"New Hampshire","value":"NH"},{"text":"New Jersey","value":"NJ"},{"text":"New Mexico","value":"NM"},{"text":"New York","value":"NY"},{"text":"North Carolina","value":"NC"},{"text":"North Dakota","value":"ND"},{"text":"Ohio","value":"OH"},{"text":"Oklahoma","value":"OK"},{"text":"Oregon","value":"OR"},{"text":"Pennsylvania","value":"PA"},{"text":"Rhode Island","value":"RI"},{"text":"South Carolina","value":"SC"},{"text":"South Dakota","value":"SD"},{"text":"Tennessee","value":"TN"},{"text":"Texas","value":"TX"},{"text":"Utah","value":"UT"},{"text":"Vermont","value":"VT"},{"text":"Virginia","value":"VA"},{"text":"Washington","value":"WA"},{"text":"West Virginia","value":"WV"},{"text":"Wisconsin","value":"WI"},{"text":"Wyoming","value":"WY"},{"text":"Other","value":"Other"}],"UM":[],"UY":[],"UZ":[],"VU":[],"VE":[],"VN":[],"VG":[],"VI":[],"WF":[],"EH":[],"YE":[],"ZM":[],"ZW":[]};
+        window.WtiCountryStates["NotSelectedStateText"] = "State";
+        window.WtiCountryStates["DefaultStateText"] = "Other";
+        window.WtiCountryStates["DefaultStateValue"] = "Other";
+	</script>
+
+<form action="/privacy-policy.aspx" method="post">		<input name="scController" type="hidden" value="Auth">
+		<input name="scAction" type="hidden" value="Register">
+		<input name="bannerAdID" type="hidden" value="" />
+		<div class="row">
+			
+			<div class="col-xs-12">
+				<div class="form-group radio-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterAccountType" data-valmsg-replace="true"></span>
+
+					<label class="radio-inline">
+						<input data-val="true" data-val-required="Please select an account type." data-val-required-param="RegisterAccountType" name="RegisterAccountType" type="radio" value="IndividualInvestor" />
+						Individual Investor
+					</label>
+
+					<label class="radio-inline">
+						<input name="RegisterAccountType" type="radio" value="FinancialProfessional" />
+						Financial Professional
+					</label>
+				</div>
+			</div>
+
+			
+			<div class="col-xs-12 col-sm-6">
+				<div class="form-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterEmail" data-valmsg-replace="true"></span>
+					<input class="form-control" data-val="true" data-val-email="Please enter a valid email address." data-val-email-param="RegisterEmail" data-val-required="Please complete this field." data-val-required-param="RegisterEmail" name="RegisterEmail" placeholder="Email" type="text" value="" />
+				</div>
+
+				<div class="form-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterCompanyName" data-valmsg-replace="true"></span>
+					<input class="form-control" data-val="true" data-val-required="Please complete this field." data-val-required-param="RegisterCompanyName" name="RegisterCompanyName" placeholder="Company Name" type="text" value="" />
+				</div>
+
+				<div class="form-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterFirstName" data-valmsg-replace="true"></span>
+					<input class="form-control" data-val="true" data-val-required="Please complete this field." data-val-required-param="RegisterFirstName" name="RegisterFirstName" placeholder="First Name" type="text" value="" />
+				</div>
+
+				<div class="form-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterLastName" data-valmsg-replace="true"></span>
+					<input class="form-control" data-val="true" data-val-required="Please complete this field." data-val-required-param="RegisterLastName" name="RegisterLastName" placeholder="Last Name" type="text" value="" />
+				</div>
+			</div>
+
+			
+			<div class="col-xs-12 col-sm-6">
+				<div class="form-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterPassword" data-valmsg-replace="true"></span>
+					<input class="form-control" data-val="true" data-val-minlength="Minimum 8 characters." data-val-minlength-min="8" data-val-required="Please complete this field." data-val-required-param="RegisterPassword" name="RegisterPassword" placeholder="Password" type="password" />
+				</div>
+
+				<div class="form-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterPasswordRepeat" data-valmsg-replace="true"></span>
+					<input class="form-control" data-val="true" data-val-equalto="Passwords don&#39;t match." data-val-equalto-other="RegisterPassword" data-val-required="Please complete this field." data-val-required-param="RegisterPasswordRepeat" name="RegisterPasswordRepeat" placeholder="Re-enter Password" type="password" />
+				</div>
+
+				<div class="form-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterCountry" data-valmsg-replace="true"></span>
+					<select class="form-control" data-val="true" data-val-required="Please complete this field." data-val-required-param="RegisterCountry" name="RegisterCountry"><option disabled="disabled" selected="selected">Country</option>
+<option value="AF">Afghanistan</option>
+<option value="AX">&#197;land Islands</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua and Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BA">Bosnia and Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BV">Bouvet Island</option>
+<option value="BR">Brazil</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="BN">Brunei Darussalam</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos (Keeling) Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CG">Congo</option>
+<option value="CD">Congo, The Democratic Republic of the</option>
+<option value="CK">Cook Islands</option>
+<option value="CR">Costa Rica</option>
+<option value="CI">C&#244;te d&#39;Ivoire</option>
+<option value="CU">Cuba</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands (Malvinas)</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="TF">French Southern Territories</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GG">Guernsey</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HM">Heard Island and McDonald Islands</option>
+<option value="VA">Holy See (Vatican City State)</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran, Islamic Republic of</option>
+<option value="IQ">Iraq</option>
+<option value="IM">Isle of Man</option>
+<option value="IL">Israel</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JE">Jersey</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos People&#39;s Democratic Republic</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libyan Arab Jamahiriya</option>
+<option value="MO">Macau</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="YT">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia, Federated States of</option>
+<option value="MD">Moldova</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="ME">Montenegro</option>
+<option value="MS">Montserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="AN">Netherlands Antilles</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="KP">Korea, Democratic People&#39;s Republic of</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="OM">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PS">Palestinian Territory, Occupied</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn Islands</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="RE">R&#233;union</option>
+<option value="RU">Russian Federation</option>
+<option value="RW">Rwanda</option>
+<option value="BL">Saint Barth&#233;lemy</option>
+<option value="SH">Saint Helena</option>
+<option value="KN">Saint Kitts and Nevis</option>
+<option value="LC">Saint Lucia</option>
+<option value="MF">Saint Martin</option>
+<option value="PM">Saint Pierre and Miquelon</option>
+<option value="VC">Saint Vincent and the Grenadines</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="ST">Sao Tome and Principe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="RS">Serbia</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="KR">Korea, Republic of</option>
+<option value="LK">Sri Lanka</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard and Jan Mayen</option>
+<option value="SZ">Swaziland</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syrian Arab Republic</option>
+<option value="TW">Taiwan, Province of China</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania, United Republic of</option>
+<option value="TH">Thailand</option>
+<option value="TL">Timor-Leste</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad and Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks and Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option selected="selected" value="US">United States</option>
+<option value="UM">United States Minor Outlying Islands</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Vietnam</option>
+<option value="VG">Virgin Islands, British</option>
+<option value="VI">Virgin Islands, U.S.</option>
+<option value="WF">Wallis and Futuna</option>
+<option value="EH">Western Sahara</option>
+<option value="YE">Yemen</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option>
+</select>
+				</div>
+
+				<div class="form-group">
+					<span class="field-validation-valid" data-valmsg-for="RegisterState" data-valmsg-replace="true"></span>
+					<select class="form-control" data-val="true" data-val-required="Please complete this field." data-val-required-param="RegisterState" name="RegisterState"><option disabled="disabled" selected="selected">State</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+<option value="Other">Other</option>
+</select>
+				</div>
+			</div>
+		</div>
+		<div class="privacy-warning">
+			By submitting below you certify that you have read and agree to our <span style="text-decoration: underline;"><a href="https://www.wisdomtree.com/privacy-policy">privacy policy</a></span>.
+		</div>
+
+
+
+
+<input name="currentItemId" type="hidden" value="{666BA32C-6D73-4A64-896E-ABDACD4CC6D3}">
+
+<input type="hidden" name="Analytics.CampaignID" />
+<input value="" type="hidden" name="Analytics.GaCampaignName" />
+<input value="" type="hidden" name="Analytics.GaSource" />
+<input value="" type="hidden" name="Analytics.GaContent" />
+<input value="" type="hidden" name="Analytics.GaMedium" />
+<input value="" type="hidden" name="Analytics.GaTerm" />		<button class="button" id="next-step" type="submit">Register</button>
+</form>
+	<div class="form-bottom">
+		<hr>
+<p>Already Registered? <strong><a href="https://www.wisdomtree.com/sign-in">Sign In.</a></strong></p>
+	</div>
+</div>
+									
+
+
+
+						</div>
+
+
+					</div>
+					<div class="close-btn white dropdown-trigger" role="button" data-target="#registerHeaderPanel"></div>
+				</div>
+			</div>
+
+		<div id="searchHeaderPanel" class="dropdown-panel collapsible-header-form">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+						<div class="form-title" style="font-size: 28px;margin-top: 32px;margin-bottom: 32px;">Search WisdomTree</div>
+
+						<div class="clearfix" style="border: 1px solid #5A6770;position:relative;">
+							<form id="headerSearchForm" method="get" action="/search">
+								<div class="col-xs-12 col-sm-4" style="background: #5A6770;height: 69px;line-height: 25px;color: white;text-transform: uppercase;font-weight: bold;padding: 22px;">Search All</div>
+								<input name="key" type="search" class="col-xs-12 col-sm-8" placeholder="What can we help you find?" style="line-height: 69px;border: 0;padding: 0 22px;background: #F4F4F4;font-size: 16px;" />
+								<button type="submit" style="position: absolute;height: 35px;width: 35px;right: 10px;bottom: 17px;background: transparent url('../client/images/search.svg') center center no-repeat;border: 0;background-size: 20px 20px;"></button>
+							</form>
+						</div>
+
+						<div class="search-autocomplete-results" style="margin: 25px 0;">
+							
+						</div>
+					</div>
+				</div>
+				<div class="close-btn dropdown-trigger" role="button" data-target="#searchHeaderPanel"></div>
+			</div>
+		</div>
+
+		<div id="mobileMenuPanel" class="hidden-md hidden-lg dropdown-panel collapsible-header-form">
+			
+
+
+
+
+
+<div class="mobile-navigation">
+
+
+	<div class="menu-list open links-list-wrapper" style="position: static;">
+			<ul class="list-unstyled links-list">
+					<li class="link-list-item">
+
+						<a href="https://www.wisdomtree.com/etfs" data-target="#menuC5A65ABC23DA462FBC3FA702C75B8245">WisdomTree ETFs</a>
+
+
+					</li>
+					<li class="link-list-item">
+
+						<a href="" data-target="#menu0D58F1EF168045D4878DF4C85CE5BDDC">STRATEGIES</a>
+
+									<div id="menu0D58F1EF168045D4878DF4C85CE5BDDC" class="collapsible-menu-list">
+											<ul class="list-unstyled links-list">
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/modern-alpha"  >Modern Alpha</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/strategies/dividends"  >Domestic Dividends</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/strategies/domestic-core"  >Domestic Core Equity</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/strategies/usfr-aggy-barbell-strategy"  >Barbell Approach</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/strategies/emerging-markets"  >Emerging Markets</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/strategies/quality-dividend-growth"  >Quality Dividend Growth</a>
+														</li>
+											</ul>
+									</div>
+
+					</li>
+					<li class="link-list-item">
+
+						<a href="https://www.wisdomtree.com/resource-library/wisdomtree-resources" data-target="#menu3885E457B6AD49C2A3DE1E575C71CFE5">RESOURCE LIBRARY</a>
+
+									<div id="menu3885E457B6AD49C2A3DE1E575C71CFE5" class="collapsible-menu-list">
+											<ul class="list-unstyled links-list">
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/resource-library/wisdomtree-resources"  >WisdomTree Resources</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/resource-library/prospectus-regulatory-reports"  >Prospectus &amp; Regulatory</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/resource-library/fact-sheets-reports"  >Fact Sheets &amp; Reports</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/resource-library/2019-estimated-capital-gains-distributions"  >2019 Capital Gains Distributions</a>
+														</li>
+											</ul>
+									</div>
+
+					</li>
+					<li class="link-list-item">
+
+						<a href="https://www.wisdomtree.com/advisor-solutions" data-target="">ADVISOR SOLUTIONS</a>
+
+
+					</li>
+					<li class="link-list-item">
+
+						<a href="https://www.wisdomtree.com/blog" data-target="#menuDA841415887D466B91C589C0FD18131B">BLOG</a>
+
+									<div id="menuDA841415887D466B91C589C0FD18131B" class="collapsible-menu-list">
+											<ul class="list-unstyled links-list">
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/blog"  >All Blogs</a>
+														</li>
+														<li class="link-list-item">
+															<a href="/blog/category/etf-education"  >ETF Education</a>
+														</li>
+														<li class="link-list-item">
+															<a href="https://www.wisdomtree.com/blog-contributors"  >Contributors</a>
+														</li>
+											</ul>
+									</div>
+
+					</li>
+			</ul>
+
+			<hr />
+			<ul class="list-unstyled links-list secondary-nav">
+						<li class="link-list-item">
+								<a href="https://www.wisdomtree.com:443/-/media/us-media-files/multimedia/videos/site-refresh.mp4" target="_blank" >Take a Site Tour</a>
+						</li>
+						<li class="link-list-item">
+								<a href="http://ir.wisdomtree.com/"  >Investor Relations</a>
+						</li>
+						<li class="link-list-item">
+								<a data-target="#menu91FDC553B63244358124DD5432059026" data-href="https://www.wisdomtree.com/about" href="#" >About</a>
+								<div id="menu91FDC553B63244358124DD5432059026" class="collapsible-menu-list">
+									<ul class="list-unstyled links-list">
+												<li class="link-list-item">
+													<a href="https://www.wisdomtree.com/modern-alpha"  >Who We Are</a>
+												</li>
+												<li class="link-list-item">
+													<a href="https://www.wisdomtree.com/about/press-room"  >Press Room</a>
+												</li>
+												<li class="link-list-item">
+													<a href="https://www.wisdomtree.com/about/careers-at-wisdomtree"  >Careers</a>
+												</li>
+									</ul>
+								</div>
+						</li>
+						<li class="link-list-item">
+								<a href="https://www.wisdomtree.com/about/contact-us"  >Contact</a>
+						</li>
+
+								<li class="link-list-item">
+									<a class="locale-dropdown" href="#" data-target="#menuCountrySelector">USA</a>
+
+									<div id="menuCountrySelector" class="menu-list links-list-wrapper">
+										<div class="back-link-wrapper">
+											<a href="#" class="back-link">Menu</a>
+										</div>
+
+										<ul class="list-unstyled secondary-menu links-list" style="margin-top: -20px;">
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.ca/en-CA">CAN</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/de-CH">CHE</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/de-DE">DEU</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/fi-FI">FIN</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/fr-FR">FRA</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/en-GB">GBR</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/en-IE">IRL</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/it-IT">ITA</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/fr-LU">LUX</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/nl-NL">NLD</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/nb-NO">NOR</a>
+												</li>
+												<li class="link-list-item">
+													<a class="locale-link" href="https://www.wisdomtree.eu/sv-SE">SWE</a>
+												</li>
+										</ul>
+									</div>
+								</li>
+
+
+			</ul>
+	</div>
+
+
+		
+				<div id="menuC5A65ABC23DA462FBC3FA702C75B8245" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuE190ACC46CCF4CD186441F5168212AFA" class="back-link">Menu</a>
+		</div>
+
+			<div class="sublist-title">WisdomTree ETFs</div>
+
+		<ul class="list-unstyled secondary-menu links-list">
+				<li class="link-list-item">
+							<a href="https://www.wisdomtree.com/etfs"  >All ETFs</a>
+				</li>
+				<li class="link-list-item">
+						<a data-target="#menuCD2513D424E0415581EC8A18816CAE04" href="#">Domestic Equity ETFs</a>
+				</li>
+				<li class="link-list-item">
+						<a data-target="#menuAA89D66B545443CCB024F7CA2552F69B" href="#">EM Equity ETFs</a>
+				</li>
+				<li class="link-list-item">
+						<a data-target="#menuFD5AC4AEE7EC4ABEA7E088E23CD72B3B" href="#">International Equity ETFs</a>
+				</li>
+				<li class="link-list-item">
+						<a data-target="#menu28DA38707DEF455B9437D4CA06715186" href="#">Fixed Income ETFs	</a>
+				</li>
+				<li class="link-list-item">
+						<a data-target="#menu060CD07B916A4A729C23A79762C79B41" href="#">Alternative ETFs</a>
+				</li>
+				<li class="link-list-item">
+						<a data-target="#menu121D9E599E564B4BBD841C2245DC3E52" href="#">Asset Allocation ETFs</a>
+				</li>
+				<li class="link-list-item">
+						<a data-target="#menu4B2048A4653842518BE2E82E81A2152B" href="#">Thematic ETFs</a>
+				</li>
+				<li class="link-list-item">
+							<a href="https://www.wisdomtree.com/index"  >All Indexes</a>
+				</li>
+		</ul>
+	</div>
+
+		
+				
+						<div id="menuCD2513D424E0415581EC8A18816CAE04" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuC5A65ABC23DA462FBC3FA702C75B8245" class="back-link">WisdomTree ETFs</a>
+		</div>
+
+				<a href="https://www.wisdomtree.com/etfs/equity"  class=" sublist-title">Domestic Equity ETFs</a>
+		<ul class="list-unstyled secondary-menu links-list">
+				<li class="link-list-item">
+					<a href="#" data-target="#menu098EC7959AB74BD793CA95867DCCBC38">Large Cap Core</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menu4DFB1EC0DD194BDFB81D6F48A2E4B923">Mid &amp; Small Cap Core</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menu22FFF2A417464FC5A36CDFBC4FF8A028">Large Cap Value</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menu1CF72CC706F243B492E22722C6B5FBC8">Mid &amp; Small Cap Value</a>
+				</li>
+		</ul>
+	</div>
+
+				
+					
+							<div id="menu098EC7959AB74BD793CA95867DCCBC38" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuCD2513D424E0415581EC8A18816CAE04" class="back-link">Domestic Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Large Cap Core</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/eps">
+								<span class="product-code">EPS</span>
+								<span class="product-title">WisdomTree U.S. LargeCap Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ext">
+								<span class="product-code">EXT</span>
+								<span class="product-title">WisdomTree U.S. Total Market Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dgrw">
+								<span class="product-code">DGRW</span>
+								<span class="product-title">WisdomTree U.S. Quality Dividend Growth Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/usmf">
+								<span class="product-code">USMF</span>
+								<span class="product-title">WisdomTree U.S. Multifactor Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/qsy">
+								<span class="product-code">QSY</span>
+								<span class="product-title">WisdomTree U.S. Quality Shareholder Yield Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menu4DFB1EC0DD194BDFB81D6F48A2E4B923" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuCD2513D424E0415581EC8A18816CAE04" class="back-link">Domestic Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Mid &amp; Small Cap Core</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ezm">
+								<span class="product-code">EZM</span>
+								<span class="product-title">WisdomTree U.S. MidCap Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ees">
+								<span class="product-code">EES</span>
+								<span class="product-title">WisdomTree U.S. SmallCap Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dgrs">
+								<span class="product-code">DGRS</span>
+								<span class="product-title">WisdomTree U.S. SmallCap Quality Dividend Growth Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menu22FFF2A417464FC5A36CDFBC4FF8A028" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuCD2513D424E0415581EC8A18816CAE04" class="back-link">Domestic Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Large Cap Value</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dln">
+								<span class="product-code">DLN</span>
+								<span class="product-title">WisdomTree U.S. LargeCap Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dtd">
+								<span class="product-code">DTD</span>
+								<span class="product-title">WisdomTree U.S. Total Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dhs">
+								<span class="product-code">DHS</span>
+								<span class="product-title">WisdomTree U.S. High Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dtn">
+								<span class="product-code">DTN</span>
+								<span class="product-title">WisdomTree U.S. Dividend ex-Financials Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menu1CF72CC706F243B492E22722C6B5FBC8" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuCD2513D424E0415581EC8A18816CAE04" class="back-link">Domestic Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Mid &amp; Small Cap Value</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/don">
+								<span class="product-code">DON</span>
+								<span class="product-title">WisdomTree U.S. MidCap Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/des">
+								<span class="product-code">DES</span>
+								<span class="product-title">WisdomTree U.S. SmallCap Dividend Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+				
+						<div id="menuAA89D66B545443CCB024F7CA2552F69B" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuC5A65ABC23DA462FBC3FA702C75B8245" class="back-link">WisdomTree ETFs</a>
+		</div>
+
+				<a href="https://www.wisdomtree.com/etfs/equity"  class=" sublist-title">EM Equity ETFs</a>
+		<ul class="list-unstyled secondary-menu links-list">
+				<li class="link-list-item">
+					<a href="#" data-target="#menuAA32E78999DA42058D9DAC083BFA7B66">Emerging Markets</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuE518FFA8C3C44847AD3F72C972177FFB">Regional/Single Country</a>
+				</li>
+		</ul>
+	</div>
+
+				
+					
+							<div id="menuAA32E78999DA42058D9DAC083BFA7B66" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuAA89D66B545443CCB024F7CA2552F69B" class="back-link">EM Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Emerging Markets</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dvem">
+								<span class="product-code">DVEM</span>
+								<span class="product-title">WisdomTree Emerging Markets Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dem">
+								<span class="product-code">DEM</span>
+								<span class="product-title">WisdomTree Emerging Markets High Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dgre">
+								<span class="product-code">DGRE</span>
+								<span class="product-title">WisdomTree Emerging Markets Quality Dividend Growth Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/emmf">
+								<span class="product-code">EMMF</span>
+								<span class="product-title">WisdomTree Emerging Markets Multifactor Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/emcg">
+								<span class="product-code">EMCG</span>
+								<span class="product-title">WisdomTree Emerging Markets Consumer Growth Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dgs">
+								<span class="product-code">DGS</span>
+								<span class="product-title">WisdomTree Emerging Markets SmallCap Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/xsoe">
+								<span class="product-code">XSOE</span>
+								<span class="product-title">WisdomTree Emerging Markets ex-State-Owned Enterprises Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuE518FFA8C3C44847AD3F72C972177FFB" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuAA89D66B545443CCB024F7CA2552F69B" class="back-link">EM Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Regional/Single Country</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/cxse">
+								<span class="product-code">CXSE</span>
+								<span class="product-title">WisdomTree China ex-State-Owned Enterprises Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/wchn">
+								<span class="product-code">WCHN</span>
+								<span class="product-title">WisdomTree ICBCCS S&amp;P China 500 Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/gulf">
+								<span class="product-code">GULF</span>
+								<span class="product-title">WisdomTree Middle East Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/epi">
+								<span class="product-code">EPI</span>
+								<span class="product-title">WisdomTree India Earnings Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ixse">
+								<span class="product-code">IXSE</span>
+								<span class="product-title">WisdomTree India ex-State-Owned Enterprises Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+				
+						<div id="menuFD5AC4AEE7EC4ABEA7E088E23CD72B3B" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuC5A65ABC23DA462FBC3FA702C75B8245" class="back-link">WisdomTree ETFs</a>
+		</div>
+
+				<a href="https://www.wisdomtree.com/etfs/equity"  class=" sublist-title">International Equity ETFs</a>
+		<ul class="list-unstyled secondary-menu links-list">
+				<li class="link-list-item">
+					<a href="#" data-target="#menu2815638B366949EDA531C74CCE57BDBB">International</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuFF55B69D70824D9F87CC78E908D7F20D">International Mid &amp; Small Cap</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuC206506AA83D4F39A9CE44BBD038F72F">Global</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menu7CF0C492BC35401AB97226E448EE76C1">Regional/Single Country</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menu3CAD7C2090D243A1BE19036E78121EF5">Regional/Single Country Small Cap</a>
+				</li>
+		</ul>
+	</div>
+
+				
+					
+							<div id="menu2815638B366949EDA531C74CCE57BDBB" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuFD5AC4AEE7EC4ABEA7E088E23CD72B3B" class="back-link">International Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">International</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dwm">
+								<span class="product-code">DWM</span>
+								<span class="product-title">WisdomTree International Equity Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dwmf">
+								<span class="product-code">DWMF</span>
+								<span class="product-title">WisdomTree International Multifactor Fund </span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ddwm">
+								<span class="product-code">DDWM</span>
+								<span class="product-title">WisdomTree Dynamic Currency Hedged International Equity Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dol">
+								<span class="product-code">DOL</span>
+								<span class="product-title">WisdomTree International LargeCap Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/doo">
+								<span class="product-code">DOO</span>
+								<span class="product-title">WisdomTree International Dividend ex-Financials Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dth">
+								<span class="product-code">DTH</span>
+								<span class="product-title">WisdomTree International High Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dhdg">
+								<span class="product-code">DHDG</span>
+								<span class="product-title">WisdomTree Dynamic Currency Hedged International Quality Dividend Growth Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ihdg">
+								<span class="product-code">IHDG</span>
+								<span class="product-title">WisdomTree International Hedged Quality Dividend Growth Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/iqdg">
+								<span class="product-code">IQDG</span>
+								<span class="product-title">WisdomTree International Quality Dividend Growth Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuFF55B69D70824D9F87CC78E908D7F20D" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuFD5AC4AEE7EC4ABEA7E088E23CD72B3B" class="back-link">International Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">International Mid &amp; Small Cap</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dls">
+								<span class="product-code">DLS</span>
+								<span class="product-title">WisdomTree International SmallCap Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/ddls">
+								<span class="product-code">DDLS</span>
+								<span class="product-title">WisdomTree Dynamic Currency Hedged International SmallCap Equity Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dim">
+								<span class="product-code">DIM</span>
+								<span class="product-title">WisdomTree International MidCap Dividend  Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuC206506AA83D4F39A9CE44BBD038F72F" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuFD5AC4AEE7EC4ABEA7E088E23CD72B3B" class="back-link">International Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Global</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dnl">
+								<span class="product-code">DNL</span>
+								<span class="product-title">WisdomTree Global ex‐U.S. Quality Dividend Growth Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dew">
+								<span class="product-code">DEW</span>
+								<span class="product-title">WisdomTree Global High Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/drw">
+								<span class="product-code">DRW</span>
+								<span class="product-title">WisdomTree Global ex-U.S. Real Estate Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menu7CF0C492BC35401AB97226E448EE76C1" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuFD5AC4AEE7EC4ABEA7E088E23CD72B3B" class="back-link">International Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Regional/Single Country</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dxj">
+								<span class="product-code">DXJ</span>
+								<span class="product-title">WisdomTree Japan Hedged Equity Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/jnmf">
+								<span class="product-code">JNMF</span>
+								<span class="product-title">WisdomTree Japan Multifactor Fund </span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/axjl">
+								<span class="product-code">AXJL</span>
+								<span class="product-title">WisdomTree Asia Pacific ex-Japan Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/hedj">
+								<span class="product-code">HEDJ</span>
+								<span class="product-title">WisdomTree Europe Hedged Equity Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/eudg">
+								<span class="product-code">EUDG</span>
+								<span class="product-title">WisdomTree Europe Quality Dividend Growth Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dxge">
+								<span class="product-code">DXGE</span>
+								<span class="product-title">WisdomTree Germany Hedged Equity Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/eumf">
+								<span class="product-code">EUMF</span>
+								<span class="product-title">WisdomTree Europe Multifactor Fund </span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menu3CAD7C2090D243A1BE19036E78121EF5" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuFD5AC4AEE7EC4ABEA7E088E23CD72B3B" class="back-link">International Equity ETFs</a>
+		</div>
+
+			<div class="sublist-title">Regional/Single Country Small Cap</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dfj">
+								<span class="product-code">DFJ</span>
+								<span class="product-title">WisdomTree Japan SmallCap Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dxjs">
+								<span class="product-code">DXJS</span>
+								<span class="product-title">WisdomTree Japan Hedged SmallCap Equity Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/dfe">
+								<span class="product-code">DFE</span>
+								<span class="product-title">WisdomTree Europe SmallCap Dividend Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/equity/eusc">
+								<span class="product-code">EUSC</span>
+								<span class="product-title">WisdomTree Europe Hedged SmallCap Equity Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+				
+						<div id="menu28DA38707DEF455B9437D4CA06715186" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuC5A65ABC23DA462FBC3FA702C75B8245" class="back-link">WisdomTree ETFs</a>
+		</div>
+
+				<a href="https://www.wisdomtree.com/etfs/fixed-income"  class=" sublist-title">Fixed Income ETFs	</a>
+		<ul class="list-unstyled secondary-menu links-list">
+				<li class="link-list-item">
+					<a href="#" data-target="#menuCB8825DD8E8D4C098D6298D4FDA23D0B">Strategic Core</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuE4B6F55FC3364FBDB6B3AA9A06D37626">Short Term Government</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuB3AC88692D9845A086FF52126807D65F">Interest Rate Strategies</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menu0F728DE87465414DA9D64600C0DA621C">Credit</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuAD4B67B8EAB04A16B2F22B55CC0FF400">Emerging Markets</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuF3512C3E0B1D4520BCA54B646F6281D8">Currency Strategies</a>
+				</li>
+		</ul>
+	</div>
+
+				
+					
+							<div id="menuCB8825DD8E8D4C098D6298D4FDA23D0B" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu28DA38707DEF455B9437D4CA06715186" class="back-link">Fixed Income ETFs	</a>
+		</div>
+
+			<div class="sublist-title">Strategic Core</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/aggy">
+								<span class="product-code">AGGY</span>
+								<span class="product-title">WisdomTree Yield Enhanced U.S. Aggregate Bond Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/shag">
+								<span class="product-code">SHAG</span>
+								<span class="product-title">WisdomTree Yield Enhanced U.S. Short-Term Aggregate Bond Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/glby">
+								<span class="product-code">GLBY</span>
+								<span class="product-title">WisdomTree Yield Enhanced Global Aggregate Bond Fund </span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/mtgp">
+								<span class="product-code">MTGP</span>
+								<span class="product-title">WisdomTree Mortgage Plus Bond Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuE4B6F55FC3364FBDB6B3AA9A06D37626" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu28DA38707DEF455B9437D4CA06715186" class="back-link">Fixed Income ETFs	</a>
+		</div>
+
+			<div class="sublist-title">Short Term Government</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/usfr">
+								<span class="product-code">USFR</span>
+								<span class="product-title">WisdomTree Floating Rate Treasury Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuB3AC88692D9845A086FF52126807D65F" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu28DA38707DEF455B9437D4CA06715186" class="back-link">Fixed Income ETFs	</a>
+		</div>
+
+			<div class="sublist-title">Interest Rate Strategies</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/agzd">
+								<span class="product-code">AGZD</span>
+								<span class="product-title">WisdomTree Interest Rate Hedged U.S. Aggregate Bond Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/agnd">
+								<span class="product-code">AGND</span>
+								<span class="product-title">WisdomTree Negative Duration U.S. Aggregate Bond Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/hyzd">
+								<span class="product-code">HYZD</span>
+								<span class="product-title">WisdomTree Interest Rate Hedged High Yield Bond Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/hynd">
+								<span class="product-code">HYND</span>
+								<span class="product-title">WisdomTree Negative Duration High Yield Bond Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menu0F728DE87465414DA9D64600C0DA621C" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu28DA38707DEF455B9437D4CA06715186" class="back-link">Fixed Income ETFs	</a>
+		</div>
+
+			<div class="sublist-title">Credit</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/wfig">
+								<span class="product-code">WFIG</span>
+								<span class="product-title">WisdomTree U.S. Corporate Bond Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/sfig">
+								<span class="product-code">SFIG</span>
+								<span class="product-title">WisdomTree U.S. Short Term Corporate Bond Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/wfhy">
+								<span class="product-code">WFHY</span>
+								<span class="product-title">WisdomTree U.S. High Yield Corporate Bond Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/sfhy">
+								<span class="product-code">SFHY</span>
+								<span class="product-title">WisdomTree U.S. Short Term High Yield Corporate Bond Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuAD4B67B8EAB04A16B2F22B55CC0FF400" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu28DA38707DEF455B9437D4CA06715186" class="back-link">Fixed Income ETFs	</a>
+		</div>
+
+			<div class="sublist-title">Emerging Markets</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/eld">
+								<span class="product-code">ELD</span>
+								<span class="product-title">WisdomTree Emerging Markets Local Debt Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/fixed-income/emcb">
+								<span class="product-code">EMCB</span>
+								<span class="product-title">WisdomTree Emerging Markets Corporate Bond Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuF3512C3E0B1D4520BCA54B646F6281D8" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu28DA38707DEF455B9437D4CA06715186" class="back-link">Fixed Income ETFs	</a>
+		</div>
+
+			<div class="sublist-title">Currency Strategies</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/currency/cew">
+								<span class="product-code">CEW</span>
+								<span class="product-title">WisdomTree Emerging Currency Strategy Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/currency/usdu">
+								<span class="product-code">USDU</span>
+								<span class="product-title">WisdomTree Bloomberg U.S. Dollar Bullish Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/currency/cyb">
+								<span class="product-code">CYB</span>
+								<span class="product-title">WisdomTree Chinese Yuan Strategy Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+				
+						<div id="menu060CD07B916A4A729C23A79762C79B41" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuC5A65ABC23DA462FBC3FA702C75B8245" class="back-link">WisdomTree ETFs</a>
+		</div>
+
+				<a href="https://www.wisdomtree.com/etfs/alternative"  class=" sublist-title">Alternative ETFs</a>
+		<ul class="list-unstyled secondary-menu links-list">
+				<li class="link-list-item">
+					<a href="#" data-target="#menu56AEC6DA775F4CD19445109CB8E0BBAF">Long/Short</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuDB4F60DE63A042E9A96BB63251265194">Managed Futures</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menu5D0C99D0D9234C2BA1A55B34A258DC3F">Option-Based</a>
+				</li>
+				<li class="link-list-item">
+					<a href="#" data-target="#menuDA8FD560D11D41819A4318AFF72D7BAF">Commodity</a>
+				</li>
+		</ul>
+	</div>
+
+				
+					
+							<div id="menu56AEC6DA775F4CD19445109CB8E0BBAF" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu060CD07B916A4A729C23A79762C79B41" class="back-link">Alternative ETFs</a>
+		</div>
+
+			<div class="sublist-title">Long/Short</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/dyls">
+								<span class="product-code">DYLS</span>
+								<span class="product-title">WisdomTree Dynamic Long/Short U.S. Equity Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/dyb">
+								<span class="product-code">DYB</span>
+								<span class="product-title">WisdomTree Dynamic Bearish U.S. Equity Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuDB4F60DE63A042E9A96BB63251265194" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu060CD07B916A4A729C23A79762C79B41" class="back-link">Alternative ETFs</a>
+		</div>
+
+			<div class="sublist-title">Managed Futures</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/wtmf">
+								<span class="product-code">WTMF</span>
+								<span class="product-title">WisdomTree Managed Futures Strategy Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menu5D0C99D0D9234C2BA1A55B34A258DC3F" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu060CD07B916A4A729C23A79762C79B41" class="back-link">Alternative ETFs</a>
+		</div>
+
+			<div class="sublist-title">Option-Based</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/putw">
+								<span class="product-code">PUTW</span>
+								<span class="product-title">WisdomTree CBOE S&amp;P 500 PutWrite Strategy Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/rput">
+								<span class="product-code">RPUT</span>
+								<span class="product-title">WisdomTree CBOE Russell 2000 PutWrite Strategy Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+					
+							<div id="menuDA8FD560D11D41819A4318AFF72D7BAF" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu060CD07B916A4A729C23A79762C79B41" class="back-link">Alternative ETFs</a>
+		</div>
+
+			<div class="sublist-title">Commodity</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/alternative/gcc">
+								<span class="product-code">GCC</span>
+								<span class="product-title">WisdomTree Continuous Commodity Index Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+				
+						<div id="menu121D9E599E564B4BBD841C2245DC3E52" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuC5A65ABC23DA462FBC3FA702C75B8245" class="back-link">WisdomTree ETFs</a>
+		</div>
+
+				<a href="https://www.wisdomtree.com/etfs/asset-allocation"  class=" sublist-title">Asset Allocation ETFs</a>
+		<ul class="list-unstyled secondary-menu links-list">
+				<li class="link-list-item">
+					<a href="#" data-target="#menuD6E3B3B3C12D456AAA29729C1067F9B4">Multi-Asset</a>
+				</li>
+		</ul>
+	</div>
+
+				
+					
+							<div id="menuD6E3B3B3C12D456AAA29729C1067F9B4" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu121D9E599E564B4BBD841C2245DC3E52" class="back-link">Asset Allocation ETFs</a>
+		</div>
+
+			<div class="sublist-title">Multi-Asset</div>
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/asset-allocation/wbal">
+								<span class="product-code">WBAL</span>
+								<span class="product-title">WisdomTree Balanced Income Fund</span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/asset-allocation/ntsx">
+								<span class="product-code">NTSX</span>
+								<span class="product-title">WisdomTree 90/60 U.S. Balanced Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+				
+						<div id="menu4B2048A4653842518BE2E82E81A2152B" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menuC5A65ABC23DA462FBC3FA702C75B8245" class="back-link">WisdomTree ETFs</a>
+		</div>
+
+				<a href="https://www.wisdomtree.com/etfs/thematic"  class=" sublist-title">Thematic ETFs</a>
+		<ul class="list-unstyled secondary-menu links-list">
+				<li class="link-list-item">
+					<a href="#" data-target="#menuCD5617E491A74496980419764704186E"></a>
+				</li>
+		</ul>
+	</div>
+
+				
+					
+							<div id="menuCD5617E491A74496980419764704186E" class="menu-list links-list-wrapper">
+		<div class="back-link-wrapper">
+			<a href="#" data-target="#menu4B2048A4653842518BE2E82E81A2152B" class="back-link">Thematic ETFs</a>
+		</div>
+
+						<ul class="list-unstyled secondary-menu links-list">
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/thematic/wcld">
+								<span class="product-code">WCLD</span>
+								<span class="product-title">WisdomTree Cloud Computing Fund </span>
+							</a>
+						</li>
+						<li class="link-list-item">
+							<a class="product-link" href="https://www.wisdomtree.com/etfs/thematic/plat">
+								<span class="product-code">PLAT</span>
+								<span class="product-title">WisdomTree Modern Tech Platforms Fund</span>
+							</a>
+						</li>
+				</ul>
+
+	</div>
+
+					
+</div>
+
+
+
+
+
+		</div>
+	</div>
+</header>
+
+
+
+<div class="page-content-wrapper">
+	<div class="container mobile-container">
+		
+
+
+<ul class="breadcrumbs clearfix hidden-xs">
+		<li class="breadcrumb-item">
+				<a href="https://www.wisdomtree.com/">Home</a>
+		</li>
+		<li class="breadcrumb-item">
+				<a href="https://www.wisdomtree.com/privacy-policy">Privacy Policy</a>
+		</li>
+</ul>
+<div style ='margin-top: 10px;margin-bottom: 10px;' class='simple-html-rendering '  id='' ><h1>PRIVACY POLICY</h1></div>
+<div style ='' class='simple-html-rendering '  id='' ><p><strong><span style="font-size: 14px; font-family: Avenir;">ABOUT THIS SITE</span></strong></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">This site is owned by WisdomTree Investments, Inc. This Privacy Policy is designed to tell you about our practices regarding collection, use, and disclosure of information that you may provide via this site. Please be sure to read this entire Privacy Policy before using or submitting information to this site. This site is governed solely by applicable Federal and State laws and governmental regulations in the United States. Use of this site constitutes your consent to application of such laws and regulations and to our Privacy Policy.<br>
+<br>
+</span>
+</p>
+<p><span style="font-size: 14px; font-family: Avenir;"><strong>YOUR CONSENT</strong></span></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">By using this site, you agree with the terms of this Privacy Policy. Whenever you submit information via this site, you consent to the collection, use, and disclosure of that information in accordance with this Privacy Policy.<br>
+<br>
+</span>
+</p>
+<p><strong><span style="font-size: 14px; font-family: Avenir;">ABOUT CHILDREN</span></strong></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">This site is not intended for children under the age of 13. We will not knowingly collect information from site visitors in this age group. We encourage parents to talk to their children about their use of the Internet and the information they disclose to Web sites.<br>
+<br>
+</span>
+</p>
+<p><span style="font-size: 14px; font-family: Avenir;"><strong>ACTIVE INFORMATION COLLECTION</strong></span></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">Like many Web sites, this site actively collects information from its visitors both by asking you specific questions and by permitting you to communicate directly with us via e-mail, feedback forms, and/or chat rooms. Some of the information that you submit may be personally identifiable information (that is, information that can be uniquely identified with you, such as your full name, address, e-mail address, phone number, and so on).<br>
+Some areas of this site may require you to submit information in order for you to benefit from the specified features (such as newsletter subscriptions, tips/pointers, order processing, submitting a resume) or to participate in a particular activity (such as promotions). You will be informed at each information collection point what information is required and what information is optional.<br>
+<br>
+</span>
+</p>
+<p><span style="font-size: 14px; font-family: Avenir;"><strong>PASSIVE INFORMATION COLLECTION</strong></span></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">As you navigate through a Web site, certain information can be passively collected (that is, gathered without your actively providing the information) using various technologies and means, such as Internet Protocol addresses, cookies, Internet tags and navigational data collection.<br>
+This site uses Internet Protocol (IP) addresses. An IP Address is a number assigned to your computer by your Internet service provider so you can access the Internet and is generally considered to be non-personally identifiable information, because in most cases an IP address is dynamic (changing each time you connect to the Internet), rather than static (unique to a particular user's computer). We may use your IP address to diagnose problems with our server, report aggregate information, determine the fastest route for your computer to use in connecting to our site, and administer and improve the site.<br>
+<br>
+</span>
+</p>
+<p><strong><span style="font-size: 14px; font-family: Avenir;">ABOUT COOKIES</span></strong></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">A "cookie" is a bit of information that a Web site sends to your Web browser that helps the site remember information about you and your preferences.<br>
+"Session" cookies are temporary bits of information that are erased once you exit your Web browser window or otherwise turn your computer off. Session cookies are used to improve navigation on Web sites and to collect aggregate statistical information.This site uses session cookies.<br>
+"Persistent" cookies are more permanent bits of information that are placed on the hard drive of your computer and stay there unless you delete the cookie. Persistent cookies store information on your computer for a number of purposes, such as retrieving certain information you have previously provided (e.g., passwords), helping to determine what areas of the Web site visitors find most valuable, and customizing the Web site based on your preferences. This site uses persistent cookies.<br>
+When a new registration is recorded on the WisdomTree website, the information is sometimes recorded and stored by a third-party via a cookie. Although third parties manage the use of these technologies, the information is only used for the purpose of managing WisdomTree&rsquo;s marketing materials and its website. Third parties are contractually obligated to keep the information confidential and are prohibited from using it for any purpose not expressly permitted by WisdomTree.<br>
+<br>
+</span>
+</p>
+<p><span style="font-size: 14px; font-family: Avenir;"><strong>OPTING OUT</strong></span></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">You can opt out of from having us use the non-public, personally identifiable information that we collect on our website and use for the purpose of sending you marketing and advertising materials by either updating your Profile, contacting us at the below phone number or email, or by clicking on the "unsubscribe" link in our marketing emails.<br>
+<br>
+</span>
+</p>
+<p><span style="font-size: 14px; font-family: Avenir;"><strong>ABOUT INTERNET TAGS</strong></span></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">"Internet tags" (such as single-pixel GIFs, clear GIFs, invisible GIFs, and 1-by-1 GIFs) are smaller than cookies and tell the Web site server information such as the IP address and browser type related to the visitor's computer. Although we currently do not intend to do so, we may use Internet tags at this site.<br>
+<br>
+</span>
+</p>
+<p><span style="font-size: 14px; font-family: Avenir;"><strong>ABOUT LOG FILES</strong></span></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">"Navigational data" ("log files," "server logs," and "clickstream" data) are used for system management, to improve the content of the site, market research purposes, and to communicate information to visitors. This site uses navigational data.<br>
+<br>
+</span>
+</p>
+<p><span style="font-size: 14px; font-family: Avenir;"><strong>USE AND DISCLOSURE OF INFORMATION</strong></span></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">Except as otherwise stated, we may use your information to improve or modify the content of our site, to customize the site to users' preferences, to communicate information to you (if you have requested or consented to the delivery of such information), for our marketing and research purposes, and for the purposes specified in this Privacy Policy or otherwise permitted by law. We do not sell personably identifiable information.<br>
+If you provide personally identifiable information to this site, we may combine such information with other actively collected information unless we specify otherwise at the point of collection. We will take reasonable measures to prevent personally identifiable information from being combined with passively collected information.<br>
+We may disclose your personally identifiable information to WisdomTree Investments' affiliates worldwide that agree to treat such information in accordance with this Privacy Policy. In addition, we may disclose your personally identifiable information (i) to third parties, located in the United States and/or any other country, but only to agents or contractors we use to support our business (e.g., fulfillment services, technical support, delivery services, and financial institutions), in which case we will require such third parties to agree to treat such information in accordance with this Privacy Policy; (ii) in connection with the sale, assignment, or other transfer of the business of this site to which the information relates, in which case we will require any such buyer, assignee or transferee to agree to treat such information in accordance with this Privacy Policy; or (iii) where required by applicable laws, court orders, government regulations or order of a governmental authority with appropriate jurisdiction.<br>
+In addition, we may make full use of all information acquired through this site that is not in personally identifiable form.<br>
+<br>
+</span>
+</p>
+<p><span style="font-size: 14px; font-family: Avenir;"><strong>SECURITY</strong></span></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">We take reasonable steps to protect your personally identifiable information as you transmit your information from your computer to our site and to protect such information from loss, misuse, and unauthorized access, disclosure, alteration, or destruction. You should keep in mind that no Internet transmission is ever 100% secure or error-free. In particular, e-mail sent to or from this site may not be secure, and you should therefore take special care in deciding what information you send to us via e-mail. Moreover, where you use passwords, ID numbers, or other special access features on this site, it is your responsibility to safeguard them.<br>
+<br>
+</span>
+</p>
+<p><strong><span style="font-size: 14px; font-family: Avenir;">LINKS TO OTHER WEB SITES</span></strong></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">This site may contain links or references to other Web sites. Please be aware that we do not control other Web sites and that, in any case, this Privacy Policy does not apply to those Web sites. We encourage you to read the privacy policy of every Web site you visit. We are not responsible in any way for the content of such Web sites.<br>
+<br>
+</span>
+</p>
+<p><strong><span style="font-size: 14px; font-family: Avenir;">HOW TO CONTACT US</span></strong></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">If you have any questions, comments, or concerns about this Privacy Policy or the information practices of this site, please contact us as follows:<br>
+WisdomTree Investments, Inc.<br>
+245 Park Avenue<br>
+New York, NY 10167<br>
+(212) 801-2080 Main<br>
+(212) 697-1847 Fax<br>
+<a href="mailto:info@wisdomtree.com" class="text-link">info@wisdomtree.com</a><br>
+<br>
+</span>
+</p>
+<p><strong><span style="font-size: 14px; font-family: Avenir;">CHANGES TO THIS PRIVACY POLICY</span></strong></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">We may revise this Privacy Policy from time to time. Please check back periodically, and especially before you provide any personally identifiable information. This Privacy Policy was last updated and posted on this site in March 2012.</span></p>
+<p><span style="font-size: 14px; font-family: verdana;"></span></p>
+<br>
+<p><strong><span style="font-size: 14px; font-family: Avenir;">PRIVACY SHIELD POLICY</span></strong></p>
+<p>
+<span style="font-size: 14px; font-family: verdana;">To view our Privacy Shield Policy, please <a href="/privacy-shield-policy">click here</a>.<br>
+<br>
+</span>
+</p></div>
+	</div>
+	
+
+
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-top-row">
+				<div class="hidden-xs paperless-footer-block">
+					<img src="https://www.wisdomtree.com:443/-/media/base-media-files/paperless-icon.png?h=53&amp;w=53&amp;la=en&amp;hash=8F2DCAE2BCE8CABE02119B1FB8A2D8585F408E4F" hspace="15" class="paperless-icon" alt="paperless" width="53" height="53" />
+					<div class="paperless-text-block">
+						<span style="font-size: 14px; color: #8db23e;"><strong>GO PAPERLESS</strong></span>
+<p><span style="font-size: 14px;">Contact your broker to sign up for eDelivery of WisdomTree ETF documents.</span></p>
+					</div>
+				</div>
+
+			<div class="social-icons-block">
+<a title="rss-blog-feed" href="https://www.wisdomtree.com/rss/blog-feed" class="footer-social-link"><img src="https://www.wisdomtree.com:443/-/media/base-media-files/footer-(redesign)/footer-blog.png?h=213&amp;w=213&amp;la=en&amp;hash=84A7922A493553A5670125F067216AFD8FA46DB3&amp;hash=84A7922A493553A5670125F067216AFD8FA46DB3" class="footer-social-icon" alt="blogs" width="213" height="213" /></a><a title="linkedin" href="https://www.linkedin.com/company/wisdomtree-asset-management/" class="footer-social-link" target="_blank"><img src="https://www.wisdomtree.com:443/-/media/base-media-files/footer-(redesign)/footer-linkedin.png?h=213&amp;w=213&amp;la=en&amp;hash=0D231045606D8A62E7F041FAD656B1F610954E4C&amp;hash=0D231045606D8A62E7F041FAD656B1F610954E4C" class="footer-social-icon" alt="linkedin" width="213" height="213" /></a><a title="twitter" href="https://twitter.com/wisdomtreeetfs" class="footer-social-link" target="_blank"><img src="https://www.wisdomtree.com:443/-/media/base-media-files/footer-(redesign)/footer-twitter.png?h=213&amp;w=213&amp;la=en&amp;hash=3DA7992C2F20A7B3E202A0460D59C6D1A45D5EB8&amp;hash=3DA7992C2F20A7B3E202A0460D59C6D1A45D5EB8" class="footer-social-icon" alt="twitter" width="213" height="213" /></a><a title="youtube" href="https://www.youtube.com/channel/UCUqWCc74OV5GN7oggdsheVw" class="footer-social-link" target="_blank"><img src="https://www.wisdomtree.com:443/-/media/base-media-files/footer-(redesign)/footer-youtube.png?h=213&amp;w=213&amp;la=en&amp;hash=C62D70047E35C466407320070CD43B38D7D092E1&amp;hash=C62D70047E35C466407320070CD43B38D7D092E1" class="footer-social-icon" alt="youtube" width="213" height="213" /></a>			</div>
+		</div>
+		<div class="footer-inner-links-container">
+<a class="footer-inner-link" title="home" href="https://www.wisdomtree.com/">Home</a><a class="footer-inner-link" title="privacy-policy" href="https://www.wisdomtree.com/privacy-policy">Privacy Policy</a><a class="footer-inner-link" title="prospectus" href="https://www.wisdomtree.com/resource-library/prospectus-regulatory-reports">Prospectus</a><a class="footer-inner-link" title="proxy-information" href="https://www.wisdomtree.com/proxy-policy">Proxy Information</a><a class="footer-inner-link" title="site-map" href="https://www.wisdomtree.com/sitemap">Site Map</a><a class="footer-inner-link" title="terms-of-use" href="https://www.wisdomtree.com/terms">Terms of Use</a><a class="footer-inner-link" title="2019-capital-gains-distrubutions" href="https://www.wisdomtree.com/resource-library/2019-estimated-capital-gains-distributions">2019 Capital Gains Distributions</a>		</div>
+		<div class="footer-description">
+			<p><span>
+<strong>Investors should carefully consider the investment objectives, risks, charges and expenses of the Funds before investing. U.S. investors only: To obtain a prospectus containing this and other important information, please call 866.909.WISE (9473), or <a target="_blank" href="https://www.wisdomtree.com/resource-library/prospectus-regulatory-reports">click here</a> to view or download a prospectus online. Read the prospectus carefully before you invest. There are risks involved with investing, including the possible loss of principal. Past performance does not guarantee future results.</strong><br>
+<br>
+You cannot invest directly in an index. <br>
+<br>
+</span><span>Foreign investing involves currency, political and economic risk. Funds focusing on a single country, sector and/or funds that emphasize investments in smaller companies may experience greater price volatility. Investments in emerging markets, real estate, currency, fixed income and alternative investments include additional risks. Due to the investment strategy of certain Funds, they may make higher capital gain distributions than other ETFs. Please see prospectus for discussion of risks.</span></p>
+<p><span>WisdomTree Funds are distributed by Foreside Fund Services, LLC, in the U.S. only.</span><span><br>
+<br>
+</span></p>
+		</div>
+	</div>
+</footer>
+</div>
+<script type="text/javascript" src="/client/scripts/header.js"></script>
+
+
+		<div class="modal fade restricted-overlay" id="search-restrict-modal" tabindex="-1" role="dialog" aria-labelledby="restrictedTitle">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+						<div class="row">
+							<div class="col-xs-12">
+								<span style="font-size: 21px;"><strong>Restricted Content</strong></span>
+								<p style="padding: 20px 0px;">This content is intended for <strong>Financial Professionals only</strong>. Financial Professionals who register get exclusive access to WisdomTree Advisor Solutions.</p>
+
+									<a class="button-link login-btn button -secondary" login-href="/sign-in">LOGIN</a>
+									<a register-href="/registration/my-profile" class="register-btn button" style="padding-left: 20px;">Register</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	
+	
+
+
+
+<div class="modal fade restricted-overlay externalLinkModal" id="externalLinkModal" tabindex="-1" role="dialog" aria-labelledby="#externalLinkModalTitle">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+				<h4 class="modal-title" id="externalLinkModalTitle">You are now leaving the WisdomTree Website</h4>
+			</div>
+			<div class="modal-body">
+				 Hyperlinks on this website are provided as a convenience and we disclaim any responsibility for information, services or products found on the websites linked hereto.
+			</div>
+			<div class="modal-footer">
+				<div class="text-left">
+					<a href="#" class="continue-link secondary-link button">Click here to continue</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="/content/js/script.js"></script>
+	
+	<script type="text/javascript" src="/content/js/analytics.js"></script>
+
+	
+<meta name="VIcurrentDateTime" content="637149199496003606" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+
+<script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1211395172"></script>
+</body>
+</html>
+

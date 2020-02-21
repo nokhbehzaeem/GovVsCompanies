@@ -1,0 +1,390 @@
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a413ebf10d","applicationID":"88646928","transactionName":"MQMGbEQCDxBVUkZcXwhJKW51TDIKQFRRWkIDJQtWQhEOD1hUQBp5CAIBQA==","queueTime":0,"applicationTime":246,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a413ebf10d",applicationID:"88646928"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/Assets/bootstrap/bootstrap.min.css" />
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/Assets/slick/slick.css" />
+    <link rel="stylesheet" href="/Assets/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/Assets/site/css/main.min.css" />
+    <link rel="stylesheet" href="/Assets/fancybox/jquery.fancybox.css" />
+
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <title>Privacy Policy | CONMED</title>
+    
+<meta name="VIcurrentDateTime" content="637149198799847677" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N2TGLSG');</script>
+<!-- End Google Tag Manager -->
+    <style>
+      
+    </style>
+    <script type="text/javascript">
+      
+    </script>
+        <link rel="canonical" href="https://www.conmed.com/en/about-us/company/legal/privacy-policy">
+    <link rel="alternate" hreflang="en" href="https://www.conmed.com/en/about-us/company/legal/privacy-policy" />
+    <link rel="alternate" hreflang="fr" href="https://www.conmed.com/fr/about-us/company/legal/privacy-policy" />
+    <link rel="alternate" hreflang="de" href="https://www.conmed.com/de/about-us/company/legal/privacy-policy" />
+    <link rel="alternate" hreflang="it" href="https://www.conmed.com/it/about-us/company/legal/privacy-policy" />
+    <link rel="alternate" hreflang="es" href="https://www.conmed.com/es/about-us/company/legal/privacy-policy" />
+    <link rel="alternate" hreflang="ja" href="https://www.conmed.com/ja/about-us/company/legal/privacy-policy" />
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2TGLSG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="container" role="main">
+        
+
+<div class="cookie-policy-container">
+    <div class="row">
+        <div class="cookie-policy" url="/conmed/controller/CookieDisclaimer/SaveCookieDisclaimer">
+            <div class="banner-content">
+                <p>
+                    This site uses cookies to provide you a better user experience. You hereby consent to our cookies if you continue to use our website. More information on our&nbsp;<a href="/about-us/company/legal/cookies-policy" target="_self">Cookie Policy</a>,&nbsp;<a href="/about-us/company/legal/privacy-policy" target="_self">Privacy Policy</a>&nbsp;and&nbsp;<a href="/about-us/company/legal/terms-of-service" target="_self">Terms of Service</a>
+                </p>
+                <button class="cookie-policy-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                        <path d="M0 0h24v24H0z" fill="none" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<header class="row">
+    <!-- header top -->
+    <div class="header_top">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 no-padding-left">
+                <div class="header_top__logo">
+                    <a href="/en">
+                        <img width="255px" src="https://www.conmed.com:443/-/media/conmed/asset-images/conmed-logo_255px.ashx?db=liveweb&amp;la=en&amp;mw=255&amp;hash=AC2D477B6B347A611A309A429CD5F215B2B4E660" alt="logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 select-country" style="margin-top:15px; margin-bottom:15px">
+
+                    <div class="btn-group pull-right">
+                        <a class="btn dropdown-toggle select-country__btn" href="#" role="button" style="margin-bottom:0;" id="selectCountry" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg version="1.1" class="select-country__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+                            <path d="M24.9,5.1C22.2,2.4,18.7,1,15,1S7.8,2.4,5.1,5.1S1,11.3,1,15s1.4,7.2,4.1,9.9C7.8,27.6,11.3,29,15,29s7.2-1.4,9.9-4.1
+                            c2.7-2.7,4.1-6.2,4.1-9.9S27.6,7.8,24.9,5.1z M10.8,2.8C10.1,3.5,9.5,4.3,9,5.2C8.8,5.5,8.7,5.7,8.6,6H5.8C7.2,4.6,8.9,3.5,10.8,2.8
+                            z M4.8,7.2H8c-0.9,2.1-1.4,4.7-1.4,7.3H2.1C2.3,11.7,3.2,9.2,4.8,7.2z M4.8,22.8c-1.6-2.1-2.6-4.6-2.7-7.3h4.5
+                            c0,2.6,0.6,5.1,1.4,7.3H4.8z M5.8,24h2.8c0.1,0.3,0.3,0.6,0.4,0.8c0.6,1,1.2,1.8,1.9,2.4C8.9,26.5,7.2,25.4,5.8,24z M14.4,27.8
+                            c-1.7-0.2-3.3-1.5-4.5-3.6c0-0.1-0.1-0.2-0.1-0.2h4.6C14.4,24,14.4,27.8,14.4,27.8z M14.4,22.8H9.3c-0.9-2.1-1.4-4.6-1.5-7.3h6.7
+                            C14.4,15.6,14.4,22.8,14.4,22.8z M14.4,14.4H7.7c0-2.7,0.6-5.2,1.5-7.3h5.2C14.4,7.2,14.4,14.4,14.4,14.4z M14.4,6H9.8
+                            c0-0.1,0.1-0.2,0.1-0.2c1.3-2.1,2.8-3.4,4.5-3.6C14.4,2.2,14.4,6,14.4,6z M25.2,7.2c1.6,2.1,2.6,4.6,2.7,7.3h-4.5
+                            c0-2.6-0.6-5.1-1.4-7.3C22,7.2,25.2,7.2,25.2,7.2z M24.2,6h-2.8c-0.1-0.3-0.3-0.6-0.4-0.8c-0.6-1-1.2-1.8-1.9-2.4
+                            C21.1,3.5,22.8,4.6,24.2,6z M15.6,2.2c1.7,0.2,3.3,1.5,4.5,3.6c0,0.1,0.1,0.2,0.1,0.2h-4.6C15.6,6,15.6,2.2,15.6,2.2z M15.6,7.2h5.2
+                            c0.9,2.1,1.4,4.6,1.5,7.3h-6.7V7.2z M15.6,15.6h6.7c0,2.7-0.6,5.2-1.5,7.3h-5.2V15.6z M15.6,27.8V24h4.6c0,0.1-0.1,0.2-0.1,0.2
+                            C18.8,26.3,17.2,27.6,15.6,27.8z M19.2,27.2c0.7-0.7,1.3-1.4,1.9-2.4c0.1-0.3,0.3-0.5,0.4-0.8h2.8C22.8,25.4,21.1,26.5,19.2,27.2z
+                             M25.2,22.8H22c0.9-2.1,1.4-4.7,1.4-7.3h4.5C27.7,18.3,26.8,20.8,25.2,22.8z" />
+                        </svg>
+                            English <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="selectCountry">
+
+                                <li><a class="dropdown-item" href="/en/about-us/company/legal/privacy-policy">English : English</a></li>
+                                <li><a class="dropdown-item" href="/de/about-us/company/legal/privacy-policy">German : Deutsch</a></li>
+                                <li><a class="dropdown-item" href="/es/about-us/company/legal/privacy-policy">Spanish : espa&#241;ol</a></li>
+                                <li><a class="dropdown-item" href="/fr/about-us/company/legal/privacy-policy">French : fran&#231;ais</a></li>
+                                <li><a class="dropdown-item" href="/it/about-us/company/legal/privacy-policy">Italian : italiano</a></li>
+                                <li><a class="dropdown-item" href="/ja/about-us/company/legal/privacy-policy">Japanese : 日本語</a></li>
+
+                        </ul>
+                    </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="margin-top:15px; margin-bottom:15px">
+                <input type="hidden" id="searchResultsPageURL" value="/en/search-results" /> <!-- This should come from the model. -->
+                <input type="text" aria-label="Search"  id="header_top__search_text" class="header_top__search_text" />
+                <a href="#" onclick="IncludeSearchKeywords(event)" id="link_to_search_results"> <img class="header_top__search_btn" src="https://www.conmed.com:443/-/media/conmed/asset-images/searchfield-icon_lg.ashx?db=liveweb&amp;la=en&amp;mh=35&amp;hash=F5704D52A88C4886DE46B904F6BDADD3CB2537A1" alt="search"  /></a>
+            </div>
+        </div>
+    </div>
+    <!-- END - header top -->
+    <!-- Main Nav -->
+    <nav class="navbar navbar-default">
+        <div class="">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse no-padding" id="bs-example-navbar-collapse-1">
+                <ul id="main-nav" class="nav navbar-nav">
+                            <li class="dropdown">
+                                    <a href="/en/medical-specialties" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">MEDICAL SPECIALTIES</a>
+
+                                    <ul class="dropdown-menu sub-menu">
+                                            <li><a href="/en/medical-specialties/orthopedics">Orthopedics</a></li>
+                                            <li><a href="/en/medical-specialties/laparoscopic-robotic-and-open-surgery">Laparoscopic, Robotic, and Open Surgery</a></li>
+                                            <li><a href="/en/medical-specialties/gastroenterology-and-pulmonology">Gastroenterology and Pulmonary</a></li>
+                                            <li><a href="/en/medical-specialties/cardiology-and-critical-care">Cardiology and Critical Care</a></li>
+                                            <li><a href="/en/medical-specialties/buffalo-filter-smoke-management">Buffalo Filter Smoke Management</a></li>
+                                    </ul>
+                            </li>
+                            <li class="dropdown">
+                                    <a href="/en/products" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+
+                                    <ul class="dropdown-menu sub-menu">
+                                            <li><a href="/en/products/orthopedics">Orthopedics</a></li>
+                                            <li><a href="/en/products/laparoscopic-robotic-and-open-surgery">Laparoscopic, Robotic, and Open Surgery</a></li>
+                                            <li><a href="/en/products/gastroenterology-and-pulmonary">Gastroenterology and Pulmonary</a></li>
+                                            <li><a href="/en/products/cardiology-and-critical-care">Cardiology and Critical Care</a></li>
+                                            <li><a href="/en/products/buffalo-filter-smoke-management">Buffalo Filter Smoke Management</a></li>
+                                            <li><a href="/en/products/imaging-and-visualization">Imaging and Visualization</a></li>
+                                            <li><a href="/en/products/catalog-pdf-download">Catalog PDF Download</a></li>
+                                    </ul>
+                            </li>
+                            <li class="dropdown">
+                                    <a href="/en/events-education-training" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">EVENTS &amp; EDUCATION</a>
+
+                                    <ul class="dropdown-menu sub-menu">
+                                            <li><a href="/en/events-education-training/clinical-resources">Clinical Resources</a></li>
+                                            <li><a href="/en/events-education-training/conmed-events">CONMED Events</a></li>
+                                            <li><a href="/en/events-education-training/conmed-video-gallery">CONMED Video Gallery</a></li>
+                                            <li><a href="/en/events-education-training/about-conmed-education-and-training">About CONMED Education &amp; Training</a></li>
+                                    </ul>
+                            </li>
+                            <li class="dropdown">
+                                    <a href="/en/customer-service">CUSTOMER SERVICE</a>
+
+                            </li>
+                            <li class="dropdown">
+                                    <a href="/en/about-us">ABOUT US</a>
+
+                            </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- END Main Nav -->
+</header>
+
+<script type="text/javascript">
+    document.getElementById("header_top__search_text")
+        .addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode == 13) {
+                document.getElementById("link_to_search_results").click();
+            }
+        });
+    function IncludeSearchKeywords(event) {
+        // Stop the link from redirecting
+        event.preventDefault();
+        var element = document.getElementById("header_top__search_text");
+        if (element.value.trim() != '') {
+            var url = document.getElementById("searchResultsPageURL");
+            // Redirect instead with JavaScript
+            window.location.href = url.value + '?keyword=' + encodeURIComponent(element.value);
+        }
+    }
+</script>
+        <div class="content row light-background">
+            <div class="row content-fixedwidth dark-background container-padding">
+                <div class="breadcrumb">
+    <ul>
+              <li><a href="/en">Home</a><span> ></span></li>
+              <li><a href="/en/about-us">About Us</a></li>
+    </ul>
+</div>
+
+                <div class="content-title">
+                    <h1>Privacy Policy</h1>
+                    <p></p>
+                </div>
+                
+                <div class="content">
+                    
+
+<div>
+    <p style="margin-bottom: 10pt; text-align: center;"><strong><span style="color: black;">CONMED Corporation</span></strong></p>
+<p style="margin-bottom: 10pt; text-align: center;"><strong><span style="color: black;">Website Privacy Policy</span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">EFFECTIVE DATE: June 28th, 2018</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><a href="#The Information We Collect About You">The Information We Collect About You</a><br>
+<a href="#How We Use Your Information">How We Use Your Information</a><br>
+<a href="#How We Share Your Information">How We We Share Your Information</a><br>
+<a href="#International Transfers of Information">International Transfers of Information</a><br>
+<a href="#Our Use of Cookies and Other Tracking Mechanisms">Our Use of Cookies and Other Tracking Mechanisms</a><br>
+<a href="#Interest-Based Advertising">Interest-Based Advertising</a><br>
+<a href="#Third-Party Links">Third-Party Links</a><br>
+<a href="#Security of My Personal Information">Security of My Personal Information</a><br>
+<a href="#Right to Access to My Personal Information">Right to Access My Personal Information</a><br>
+<a href="#Marketing Choices">Marketing Choices</a><br>
+<a href="#Children">Children</a><br>
+<a href="#Contact Us">Contact Us</a><br>
+<a href="#Changes to this Policy">Changes to this Policy</a></p>
+<br>
+<p style="margin-bottom: 10pt; text-align: justify;">CONMED Corporation (&ldquo;CONMED&rdquo; &ldquo;us,&rdquo; or &ldquo;we&rdquo;) values your privacy.&nbsp; In this Privacy Policy (&ldquo;Policy&rdquo;), we describe how we as data controller collect, use, and disclose information that we obtain about visitors to our website <a href="http://www.conmed.com/"><span style="color: windowtext;">www.conmed.com</span></a> (the &ldquo;Site&rdquo;) and the services available through our Site (collectively, the &ldquo;Services&rdquo;).</p>
+<p style="margin-bottom: 10pt; text-align: justify;">By visiting the Site or using any of our Services, you agree that your information will be handled as described in this Policy. Your use of our Site, or Services, and any dispute over privacy, is subject to this Policy and our <a href="/en/about-us/company/legal/terms-of-service">Terms of Service</a>, which is incorporated by reference into this Policy and includes applicable limitations on damages and the resolution of disputes.</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="The Information We Collect About You">The Information We Collect About You</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">We may collect information about you directly from you and from third parties, as well as automatically through your use of our Site or Services.</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">Information We Collect Directly From You.</span></em></strong> You may browse our Site without registering.&nbsp; However, to access certain features and view or download certain content, you may be asked to provide your name, email, other contact information, country, and other demographic information.&nbsp;&nbsp; In addition, if you submit a &ldquo;Contact Us,&rdquo; &ldquo;Complaint&rdquo; or other form through the Site, we collect information about you and the reason you are submitting the form, including name, email, other contact information, facility, title, and other relevant information. We will indicate to you whenever it is mandatory to provide information; failure to provide mandatory information may mean that we are not able to fulfill your request or answer your complaint. We may also from time to time ask users to participate in surveys; participation is totally optional. </p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">Information We Collect Automatically.</span></em></strong> We automatically collect information about your use of our Site and Services through cookies, web beacons, and other technologies. We may combine this information with other information we collect about you. Please see the section &ldquo;Cookies and Other Tracking Mechanisms&rdquo; below and our <a href="/en/about-us/company/legal/cookies-policy">Cookies Policy</a><a>&nbsp;</a>for more information.&nbsp; For example, we may collect your domain name; your browser type and operating system type, name and version; web pages you view; links you click; your IP address (including location information); the length of time you visit our Site and use our Services; the content you download; and the referring URL, or the webpage that led you to our Site. Information we collect automatically may be linked with the information that we collect directly from you for the purposes described in this Privacy Policy. </p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="How We Use Your Information">How We Use Your Information</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">We use your information, including your personal information, for the following purposes:</p>
+<ul style="margin-top: 0in; list-style-type: disc;">
+    <li style="margin-bottom: 10pt; text-align: justify;">To respond to your requests and inquiries, to communicate with you about your use of our Site and Services,<strong><em> </em></strong>and for other customer service purposes.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;">To tailor the content and information that we may send or display to you, to offer location customization, and personalized help and instructions, and to otherwise personalize your experiences while using the Site or our Services.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;">For marketing and promotional purposes. For example, we may use your information, such as your email address, to send you news and newsletters, promotions, or to otherwise contact you about products or information we think may interest you; if required by applicable law, we will send you marketing and promotional communications only upon your request or with your consent.&nbsp; </li>
+    <li style="margin-bottom: 10pt; text-align: justify;">To determine the relative level of your use of the Site and Services. </li>
+    <li style="margin-bottom: 10pt; text-align: justify;">To better understand how users access and use our Site and Services, both on an aggregated and individualized basis, in order to improve our Site and Services and respond to user desires and preferences.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;">To administer surveys and questionnaires.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;">To comply with applicable legal or contract obligations, including responding to a subpoena or court order, producing evidence in court or another tribunal or conducting internal investigations.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;">To protect our own rights and interests, such as to resolve any disputes, enforce our Terms of Service, or protect our intellectual and other property.</li>
+</ul>
+<p style="margin: 0in 0in 10pt 0.25in; text-align: justify;">&nbsp;</p>
+<p style="margin-bottom: 10pt; text-align: justify;">When personal information that has been collected is to be used for a purpose not previously identified, we will identify the new purpose and obtain your consent before using the information for that purpose, unless the use is authorized or required by law.</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="How We Share Your Information">How We Share Your Information</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">We may share your information, including personal information, as follows:</p>
+<ul style="margin-top: 0in; list-style-type: disc;">
+    <li style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">Affiliates</span></em></strong>. We share information we collect from you with other CONMED group companies for the purposes described in this Privacy Policy; however, if we do so, their use and disclosure of your personally identifiable information will be subject to this Policy.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">Service Providers</span></em></strong>. We may disclose the information we collect from you to distributors of CONMED products, as well as to third party vendors, service providers, contractors or agents who perform functions on our behalf, for the purposes described in this Privacy Policy.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">Business Transfers</span></em></strong>. If we are acquired by or merge with another company, if any of our assets are acquired, or in the event of a merger or bankruptcy, your personal information could be one of the assets transferred. We also may disclose your information to a potential purchaser/acquirer or its advisors as part of their review of the acquisition or potential acquisition, as well as to facilitate the acquisition transaction and/or to ensure continuity in the services provided to you;</li>
+    <li style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">In Response to Legal Process</span></em></strong>. We also may disclose the information we collect from you in order to comply with the law, a judicial proceeding, subpoena, court order, or other legal process, to the extent permitted under applicable law.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">To Protect Us and Others</span></em></strong>. We also may disclose the information we collect from you where we believe it is necessary to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the safety of any person, violations of our Terms of Use or this Policy, or as evidence in litigation in which CONMED is involved.</li>
+    <li style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">Aggregate and De-Identified Information</span></em></strong>. We may share with third parties irrevocably anonymized information about users for marketing, advertising, research or similar purposes.</li>
+</ul>
+<p style="margin: 0in 0in 10pt 0.5in; text-align: justify;">&nbsp;</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="International Transfers of Information">International Transfers of Information</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">CONMED is headquartered in the United States, and has affiliates, subsidiaries and service providers in the United States and worldwide.&nbsp; As such, your information may be transferred to and processed in the United States and in other jurisdictions that do not have equivalent data protection as your home jurisdiction, and the governments, courts or law enforcement or regulatory agencies in those jurisdictions may be able to obtain disclosure of that personal information through the laws of the foreign jurisdiction. In accordance with local laws, we will take steps to ensure that wherever your personal information is stored, processed or transferred, it receives an adequate level of protection as required by applicable law, such as through the use of the EU standard contractual clauses approved by the European Commission, relevant national equivalents outside the EU, or other safeguards as permissible. &nbsp;</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Our Use of Cookies and Other Tracking Mechanisms">Our Use of Cookies and Other Tracking Mechanisms</a></span></strong><span style="color: red;"> </span></p>
+<p style="margin-bottom: 10pt; text-align: justify;">We and our third-party service providers use cookies and other tracking mechanisms to track information about your use of our Site and Services. We may combine this information with other personal information we collect from you. </p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">Cookies.</span></em></strong>&nbsp; Cookies are <span style="color: #222222;">small text files that are placed on your computer or mobile device by websites that you visit</span>. Some cookies allow us to make it easier for you to navigate our Site and Services, while others are used to enable a faster log-in process or to allow us to track your activities at our Site and Service. Most web browsers automatically accept cookies, but if you prefer, you can edit your browser options to block them in the future. The Help portion of the toolbar on most browsers will tell you how to control cookies through that browser. Visitors to our Site who disable cookies will be able to browse certain areas of the Site, but some features may not function. <del cite="mailto:Umhoefer,%20Carol%20A.%20F." datetime="2017-02-12T11:00">[</del>For more information about the types of cookies our Site uses, please review our <a href="/en/about-us/company/legal/cookies-policy">Cookies Policy</a><a>.</a></p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><em><span style="color: black;">Clear GIFs, pixel tags and other technologies</span></em></strong><strong><span style="color: black;">. </span></strong><span style="color: black;">Clear GIFs (a.k.a. tracker gifs, beacons, web bugs or pixel tags) are tiny graphics with a unique identifier, similar in function to cookies. In contrast to cookies, which are stored on your computer&rsquo;s hard drive, clear GIFs are embedded invisibly on web pages. We may use clear GIFs to, among other things, track the activities of Site visitors and users, help us manage content, and compile statistics about Site usage. We and our third-party service providers also use clear GIFs in HTML emails to our customers, to help us track email response rates, identify when our emails are viewed, and track whether our emails are forwarded.</span></p>
+<p style="margin-bottom: 10pt; text-align: justify;"><a><strong><em><span style="color: black;">Third Party Analytics</span></em></strong></a>. We use automated devices and applications, such as Sitecore analytics cookie, to evaluate usage of our Site. We also may use other analytic means to evaluate our Services. We use these tools to help us improve our Services, performance and user experiences. These entities may use cookies and other tracking technologies to perform their services. &nbsp;We do not share your personal information with these third parties.</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><em>Do Not Track</em></strong><strong>.<span style="color: red;"> </span></strong>Currently, our systems do not recognize browser &ldquo;do-not-track&rdquo; requests. You may, however, disable certain tracking as discussed in this section (e.g., by disabling cookies).</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Interest-Based Advertising">Interest-Based Advertising</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">We may work with third parties such as ad network operators, who assist us and others in displaying advertisements on third party websites and evaluating the success of our advertising campaigns. These third parties may display advertisements based on your visits to our Sites as well as other websites, in order to show you more relevant ads for products and services you might be interested. These third parties&rsquo; practices are governed by their own privacy policy, not this one. We may provide these third-party advertisers with information about your usage of our Sites, as well as other aggregate or non-personally identifiable information We do not share your personal information with these third parties.</p>
+<p style="margin-bottom: 10pt; text-align: justify;">You may get more information about targeted advertising, as well as opt-out of receiving targeted ads from many third-party ad networks through the following:</p>
+<p style="margin-bottom: 10pt; text-align: justify;">For U.S. Users:&nbsp; </p>
+<ul style="margin-top: 0in; list-style-type: disc;">
+    <li style="margin-bottom: 10pt; text-align: justify;"><a href="http://www.networkadvertising.org/optout_nonppii.asp"><span style="color: windowtext;">www.networkadvertising.org/optout_nonppii.asp</span></a>&nbsp; (Network Advertising Initiative) </li>
+    <li style="margin-bottom: 10pt; text-align: justify;"><a href="http://www.aboutads.info/choices"><span style="color: windowtext;">www.aboutads.info/choices</span></a> (Digital Advertising Alliance) </li>
+</ul>
+<p style="margin-bottom: 10pt; text-align: justify;">For users in the European Union:</p>
+<ul style="margin-top: 0in; list-style-type: disc;">
+    <li style="margin-bottom: 10pt; text-align: justify;"><a href="http://www.youronlinechoices.eu/"><span style="color: windowtext;">www.youronlinechoices.eu</span></a> (European Interactive Digital Advertising Alliance)</li>
+</ul>
+<p style="margin-bottom: 10pt; text-align: justify;">Please note that opting out of participating ad networks does not opt you out of being served advertising.&nbsp; You will continue to receive generic or &ldquo;contextual&rdquo; ads on our website. You may also continue to receive targeted ads on other websites, from companies that do not participate in the above programs.</p>
+<p style="margin-bottom: 10pt; text-align: justify;">&nbsp;</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Third-Party Links">Third-Party Links</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">Our Site and Services may contain links to third-party websites. Any access to and use of such linked websites is not governed by this Policy, but instead is governed by the privacy policies of those third-party websites. We are not responsible for the information practices of such third-party websites.</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Security of My Personal Information">Security of My Personal Information</a></span></strong><span style="color: red;"> </span></p>
+<p style="margin-bottom: 10pt; text-align: justify;">We have implemented reasonable safeguards to protect the information we collect, and we will take reasonable steps, through contractual or other reasonable means, to ensure that a comparable level of protection is implemented by our suppliers and agents. Please be aware, however, that no data security measures can guarantee 100% security.</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Right to Access to My Personal Information">Right to Access My Personal Information</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">You may access the personal information that you have submitted to us, and request that we update or correct information that is inaccurate or incomplete by. Please note that we may maintain a copy of any personal information that you have updated for a period of time as part of our backups and business records.</p>
+<p style="margin-bottom: 10pt; text-align: justify;">EU users have additional rights in respect of their personal information; for example, to access, block or erase their personal information, obtain a copy of their personal information, object to our use of it, or revoke consent to our processing.&nbsp; If these rights apply to you, and you would like to exercise them, please contact us using details set out below under &ldquo;<strong>Contact Us</strong>&rdquo;.&nbsp; </p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Marketing Choices">Marketing Choices</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">If required by applicable law, we will send you marketing and promotional communications only upon your request or with your consent. Otherwise, we may send periodic promotional or informational emails to you. You may opt-out of promotional communications by following the opt-out instructions contained in the e-mail. Please note that it may take up to 10 business days for us to process opt-out requests. If you opt-out of receiving promotional emails about recommendations or other information we think may interest you, we may still send you e-mails about your account or any Services you have requested or received from us.</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Children">Children</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">Our Services are not designed for minor persons (such as children under the age of majority). If we discover that a minor has provided us with personal information, we will delete such information from our systems.</p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Contact Us">Contact Us</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">If you have questions about the privacy aspects of our Services or would like to make a complaint, please contact us at <a href="mailto:customerservice@conmed.com"><span style="color: windowtext;">customerservice@conmed.com</span></a>.&nbsp; </p>
+<p style="margin-bottom: 10pt; text-align: justify;"><strong><span style="color: black;"><a name="Changes to this Policy">Changes to this Policy</a></span></strong></p>
+<p style="margin-bottom: 10pt; text-align: justify;">This Policy is current as of the Effective Date set forth above. We may change this Policy from time to time, so please be sure to check back periodically. We will post any changes to this Policy on our Site. If we make any changes to this Policy that materially affect our practices with regard to the personal information we have previously collected from you, we will endeavor to provide you with notice in advance of such change by highlighting the change on our Site.</p>
+</div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer row no-margin-top">
+            
+
+
+<div>
+
+    <div class="footer">
+        <ul class="footer__links">
+                    <li class="footer__items">
+                        <a class="footer__link" href="https://careers.conmed.com" target="_blank">Careers</a>
+                    </li>
+                    <li class="footer__items">
+                        <a class="footer__link" href="/en/about-us/investors/investor-relations">Investors</a>
+                    </li>
+                    <li class="footer__items">
+                        <a class="footer__link" href="/en/contact-us">Contact Us</a>
+                    </li>
+                    <li class="footer__items">
+                        <a class="footer__link" href="/en/about-us/company/legal">Legal and Privacy</a>
+                    </li>
+                    <li class="footer__items">
+                        <a class="footer__link" href="http://repconnect.linvatec.com/" target="_blank">Rep ConNECT</a>
+                    </li>
+        </ul>
+
+        <ul class="footer-social">
+                    <li class="footer-social__item">
+
+                        <a href="https://www.facebook.com/CONMEDcorp/" target="_blank" data-content-id="A890F8D0-4465-4204-A50A-784A4FCABC39" class="footer-social__link" data-goal-id="EC73446F-0479-4AB1-B09E-C77B31BEB8DB"><img src="/-/media/conmed/website-images/facebook_icon.ashx?h=39&amp;la=en&amp;w=40" class="footer-social__img" alt="Facebook Social Icon blue small" width="40" height="39" /> </a>
+                    </li>
+                    <li class="footer-social__item">
+
+                        <a href="https://www.linkedin.com/company/2263834" target="_blank" data-content-id="A890F8D0-4465-4204-A50A-784A4FCABC39" class="footer-social__link" data-goal-id="3FE91957-C53F-4833-9D1B-53D392C3F8E4"><img src="/-/media/conmed/navigation-images/linkedin.ashx?h=40&amp;la=en&amp;w=41" class="footer-social__img" alt="LinkedIn Logo navigation image" width="41" height="40" /> </a>
+                    </li>
+                    <li class="footer-social__item">
+
+                        <a href="https://www.youtube.com/user/ConMedLinvatecVideos" target="_blank" data-content-id="A890F8D0-4465-4204-A50A-784A4FCABC39" class="footer-social__link" data-goal-id="FBE9BF00-86C4-49AC-85E4-BE94BBB78C04"><img src="/-/media/conmed/navigation-images/youtube.ashx?h=40&amp;la=en&amp;w=40" class="footer-social__img" alt="Youtube icon navigation image" width="40" height="40" /> </a>
+                    </li>
+                    <li class="footer-social__item">
+
+                        <a href="https://www.instagram.com/conmedcorporation/?hl=en" target="_blank" data-content-id="A890F8D0-4465-4204-A50A-784A4FCABC39" class="footer-social__link" data-goal-id="FFB9BA18-D6B1-40DF-BFB8-304CEE452AD2"><img src="/-/media/conmed/navigation-images/social-instagram.ashx?h=40&amp;la=en&amp;w=40" class="footer-social__img" alt="Social Instagram icon navigation image" width="40" height="40" /> </a>
+                    </li>
+                    <li class="footer-social__item">
+
+                        <a href="/en" data-content-id="A890F8D0-4465-4204-A50A-784A4FCABC39" class="footer-social__link"><img src="/-/media/conmed/website-images/conmedwhitelogos/conmedwhitelogo40.ashx?h=40&amp;la=en&amp;w=32" class="footer-social__img" alt="CONMED White Logo" width="32" height="40" /> </a>
+                    </li>
+        </ul>
+
+        <p class="footer__copy">&#169; Copyright 2020 CONMED Corporation. All Rights Reserved.</p>
+    </div>
+</div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="/Assets/jquery/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="/Assets/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Assets/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/Assets/site/js/main.min.js"></script>
+    <script type="text/javascript" src="/Assets/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/Assets/mediaframework/mediaframework.js"></script>
+    <script type="text/javascript" src="/Assets/site/js/goal-trigger.js"></script>
+
+    
+    <script type="text/javascript">
+       
+    </script>
+
+<input id="MediaFramework_ItemId" name="MediaFramework_ItemId" type="hidden" value="A890F8D044654204A50A784A4FCABC39">
+</body>
+</html>

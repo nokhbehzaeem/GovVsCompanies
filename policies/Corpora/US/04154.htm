@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"792c6459f7",applicationID:"187897050"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-26851084-6", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="/sites/default/files/hotjar/hotjar.script.js?q46clz"></script>
+<meta name="geo.region" content="US-DC" />
+<meta name="geo.placename" content="U.S. Capitol Visitor Center" />
+<link rel="canonical" href="http://www.visitthecapitol.gov/privacy-statement" />
+<meta property="og:site_name" content="U.S. Capitol Visitor Center" />
+<meta property="og:type" content="Article" />
+<meta property="fb:app_id" content="111086765576676" />
+<meta property="og:url" content="http://www.visitthecapitol.gov/privacy-statement" />
+<meta property="og:title" content="Privacy Statement" />
+<meta property="og:image" content="http://www.visitthecapitol.gov//themes/custom/cvc/images/cvc-default-og-share.jpg" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon.png" type="image/png" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?q46clz" defer></script>
+
+    <title>Privacy Statement | U.S. Capitol Visitor Center</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_O7-xalulPojYWrTJ38vZkjtZ15dQDiBjISs0Di_fzYg.css" />
+<link rel="stylesheet" media="all" href="//fast.fonts.net/cssapi/623d155b-4dcb-4f7b-82ec-150bf6b7f796.css" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_jXud7uoBqF7HaZo0U-Y_nMId8Y9Z-6hZ_d22pmF5GXM.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_u01GRyRgez-mRsCwRC6d5vl3t06dDCsEp2hrkvluC2A.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    
+    <link rel="apple-touch-icon" href="http://www.visitthecapitol.gov/themes/custom/cvc/images/apple-touch/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="http://www.visitthecapitol.gov/themes/custom/cvc/images/apple-touch/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="http://www.visitthecapitol.gov/themes/custom/cvc/images/apple-touch/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="http://www.visitthecapitol.gov/themes/custom/cvc/images/apple-touch/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="http://www.visitthecapitol.gov/themes/custom/cvc/images/apple-touch/apple-touch-icon-180x180.png" /> 
+  </head>
+          
+      <body class="page-privacy-statement section-privacy-statement role--anonymous path-node page-node-type-page with-subnav sidebar-second one-sidebar">
+    <a id="top"></a>
+    <div id="skip">
+      <a href="#main-menu" class="visually-hidden focusable skip-link">
+        Skip to main navigation
+      </a>
+      <a href="#content" class="visually-hidden focusable skip-link">
+        Skip to main content
+      </a>
+    </div>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPVD7B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container">
+
+  <div id="fixed-header">
+    <header id="header">
+      <div class="container">
+                  <div id="header-region">
+              <div id="block-cvc-branding" class="block-system block-cvc-branding">
+  
+    
+        <a href="/" title="Home" rel="home" class="site-logo">
+      <img src="/themes/custom/cvc/logo.svg" alt="Home" />
+    </a>
+          <div class="site-slogan">Welcome to the U.S. Capitol</div>
+  </div>
+<div id="block-responsivemenumobileicon" class="responsive-menu-toggle-wrapper responsive-menu-toggle block-responsive-menu block-responsivemenumobileicon">
+  
+    
+      <a id="toggle-icon" class="toggle responsive-menu-toggle-icon" title="Menu" href="#off-canvas">
+  <span class="icon"></span><span class="label">Menu</span>
+</a>
+  </div>
+<div id="block-mobilesearchbutton" class="block-block-content block-mobilesearchbutton">
+  
+    
+      
+            <div class="basic__body primary-content"><p><a class="mobile-search-icon" href="#"><span class="icon-search">&nbsp;</span><span class="label">Search</span></a></p></div>
+      
+  </div>
+
+
+          </div>
+              </div>
+    </header><!-- /#header -->
+
+          <div id="main-menu-region">
+        <div class="container">
+              <div id="block-mainnavigation">
+  
+    
+      <nav id="main-menu">
+      
+<ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-none">
+  
+<li id="main-menu-link-content3458166b-dfda-4aea-99d8-476ebd47f5e5" class="sf-depth-1 menuparent"><a href="/plan-visit" class="sf-depth-1 menuparent">Plan A Visit</a><ul class="sf-multicolumn"><li class="sf-multicolumn-wrapper "><ol><li id="main-menu-link-contenta33b73b8-138e-4376-9016-86b61e947961" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/plan-visit/travel-guidelines" class="sf-depth-2 menuparent">Travel and Guidelines</a><ol><li id="main-menu-link-content80ff4dd7-6fc1-4db3-8ef8-279f4beb0789" class="sf-depth-3 sf-no-children"><a href="/plan-visit/getting-capitol" class="sf-depth-3">Getting to the Capitol</a></li><li id="main-menu-link-contenta18590d5-29c0-4746-b1ea-c7fc0af6e44f" class="sf-depth-3 sf-no-children"><a href="/plan-visit/visitor-hours-info" class="sf-depth-3">Visitor Hours &amp; Info</a></li><li id="main-menu-link-content635ede5c-d939-4f3b-8ce6-2ef15424ce9d" class="sf-depth-3 sf-no-children"><a href="/plan-visit/visitors-disabilities" class="sf-depth-3">Accessibility Services</a></li><li id="main-menu-link-content57a89cfa-6e6d-4085-9fe4-a7bbf0026d2a" class="sf-depth-3 sf-no-children"><a href="/plan-visit/capitol-etiquette" class="sf-depth-3">Capitol Etiquette</a></li><li id="main-menu-link-contentc9eb696d-5b6f-4e51-b5c2-b807935c6ed2" class="sf-depth-3 sf-no-children"><a href="/plan-visit/prohibited-items" class="sf-depth-3">Prohibited Items</a></li><li id="main-menu-link-content9c62cb76-dd4a-452d-8185-4e6a68224165" class="sf-depth-3 sf-no-children"><a href="/plan-visit/us-capitol-visitor-emergency-evacuation-information" class="sf-depth-3">Emergency Evacuation Information</a></li></ol></div></li><li id="main-menu-link-content2f92bb1c-8932-4208-b2b8-b9608bb4b4a0" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/plan-visit/what-to-do" class="sf-depth-2 menuparent">What To Do</a><ol><li id="main-menu-link-content31e9b1a6-ae08-4a02-b31b-de7efbc1462f" class="sf-depth-3 sf-no-children"><a href="/plan-visit/book-tour-capitol" class="sf-depth-3">Book a Tour</a></li><li id="main-menu-link-contentf49e76e2-d479-41c7-9a41-f631feab5a69" class="sf-depth-3 sf-no-children"><a href="/plan-visit/suggested-itineraries" class="sf-depth-3">Suggested Itineraries</a></li><li id="main-menu-link-contentcf54a222-06fc-4298-8dff-3648d930c5f2" class="sf-depth-3 sf-no-children"><a href="/plan-visit/special-tours-and-activities" class="sf-depth-3">Explore More of the Capitol</a></li><li id="main-menu-link-contentb34e260b-bf9b-4383-a963-39484342bfac" class="sf-depth-3 sf-no-children"><a href="/plan-visit/watching-congress-session" class="sf-depth-3">Watching Congress In Session</a></li><li id="main-menu-link-content3c744c48-921d-4822-8154-a3d734f7bd0f" class="sf-depth-3 sf-no-children"><a href="/plan-visit/capitol-cafe" class="sf-depth-3">Where to Eat</a></li><li id="main-menu-link-content9dc8d718-17cf-4a31-b705-c984137c6d2c" class="sf-depth-3 sf-no-children"><a href="/plan-visit/where-shop" class="sf-depth-3">Where to Shop</a></li></ol></div></li><li id="main-menu-link-contentd2e94688-b6a7-4006-b1d4-fe6a96280784" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/plan-visit/maps-tips" class="sf-depth-2 menuparent">Maps and Tips</a><ol><li id="main-menu-link-content265761f4-c703-4f29-89c0-e643206c0103" class="sf-depth-3 sf-no-children"><a href="/frequently-asked-questions" class="sf-depth-3">Frequently Asked Questions</a></li><li id="main-menu-link-contentf71be649-3281-417c-ae77-f105aa4bd26b" class="sf-depth-3 sf-no-children"><a href="/plan-visit/us-capitol-map" class="sf-depth-3">U.S. Capitol Map</a></li><li id="main-menu-link-content91a46a8a-f240-4c57-a36a-e07f64b17094" class="sf-depth-3 sf-no-children"><a href="/plan-visit/us-capitol-visitor-center-map" class="sf-depth-3">Capitol Visitor Center Indoor Map</a></li><li id="main-menu-link-content056996d4-ad6c-4447-8141-aa7650c6fff6" class="sf-depth-3 sf-no-children"><a href="/plan-visit/tips-visiting-capitol" class="sf-depth-3">Tips for Visiting the Capitol</a></li><li id="main-menu-link-contentf5ecff3e-5fe2-45e5-8263-e390fc4a5219" class="sf-depth-3 sf-no-children"><a href="/plan-visit/orientation-video" class="sf-depth-3">Orientation Video</a></li></ol></div></li><li id="main-menu-link-content895e1621-6081-43be-8113-c83ad87816d0" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/plan-visit/print-materials" class="sf-depth-2 menuparent">Print Materials</a><ol><li id="main-menu-link-content54828a67-b83b-4f06-a778-3d26f57ec6d6" class="sf-depth-3 sf-no-children"><a href="/brochures" class="sf-depth-3">Brochures</a></li><li id="main-menu-link-content42ba407c-b47e-40d4-bfb1-5f552fe9e654" class="sf-depth-3 sf-no-children"><a href="/international-translations" class="sf-depth-3">International Translations</a></li></ol></div></li></ol></li></ul></li><li id="main-menu-link-content676250a2-7ee6-40bb-a316-3aa32a8b0604" class="sf-depth-1 menuparent"><a href="/exhibitions" class="sf-depth-1 menuparent">Exhibitions</a><ul class="sf-multicolumn"><li class="sf-multicolumn-wrapper "><ol><li id="main-menu-link-content015b2b41-e4c5-4ba0-a1c1-c76f0b67a887" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/exhibitions/archives" class="sf-depth-2 menuparent">Temporary Exhibits</a><ol><li id="main-menu-link-contentbf4e940d-f5f4-4457-aad4-3beb24ae0a98" class="sf-depth-3 sf-no-children"><a href="/exhibitions/legislative-highlights" class="sf-depth-3">Legislative Highlights</a></li><li id="main-menu-link-contente629455a-3649-4f28-b527-e4313706b4ad" class="sf-depth-3 menuparent"><a href="/exhibitions/image-gallery" class="sf-depth-3 menuparent">View By Theme</a><ol><li id="main-menu-link-contentf171a244-0409-40ad-ad9f-603fb7f33448" class="sf-depth-4 sf-no-children"><a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-jurisdiction" class="sf-depth-4">Congress and the Judicial Branch: Jurisdiction</a></li><li id="main-menu-link-content79273351-df49-4652-8825-b69f2a215474" class="sf-depth-4 sf-no-children"><a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-composition" class="sf-depth-4">Congress and the Judicial Branch: Composition</a></li><li id="main-menu-link-content4cfbaad4-4250-4169-b7d3-16bb1506c57a" class="sf-depth-4 sf-no-children"><a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-negotiation" class="sf-depth-4">Congress and the Judicial Branch: Negotiation</a></li><li id="main-menu-link-content7b0551f6-b131-4ef2-8594-c785f9dd8055" class="sf-depth-4 sf-no-children"><a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-nominations-and-appointments" class="sf-depth-4">Congress and the Executive Branch: Nominations and Appointments</a></li><li id="main-menu-link-contentde09d19f-97e5-40ef-8d90-8b75ea5d5f69" class="sf-depth-4 sf-no-children"><a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-balancing-power" class="sf-depth-4">Congress and the Executive Branch: Balancing Power</a></li><li id="main-menu-link-content4b0e1ace-273d-4cfc-b5e2-386e79d4d656" class="sf-depth-4 sf-no-children"><a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-investigations" class="sf-depth-4">Congress and the Executive Branch: Investigations</a></li></ol></li></ol></div></li><li id="main-menu-link-contentcdd72334-e984-4c7a-9b81-71257c05d0c8" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/exhibitions/timeline" class="sf-depth-2 menuparent">Timeline of Congress and the Capitol</a><ol><li id="main-menu-link-content2a5af00b-f2ee-4092-80ef-b87d4c600e5a" class="sf-depth-3 sf-no-children"><a href="/exhibitions/timeline#t-prologue" class="sf-depth-3">Prologue</a></li><li id="main-menu-link-contentf3926eaf-07fe-4ee8-a95b-ad67371b4944" class="sf-depth-3 sf-no-children"><a href="/exhibitions/timeline#t-1789-1815" class="sf-depth-3">1789 - 1815</a></li><li id="main-menu-link-content825a22e1-d9c8-40fc-bcc1-0b9e0b8ba0ea" class="sf-depth-3 sf-no-children"><a href="/exhibitions/timeline#t-1815-1851" class="sf-depth-3">1815 - 1851</a></li><li id="main-menu-link-content65ab2ccb-0b9f-4723-94ae-54cdf7cb4d69" class="sf-depth-3 sf-no-children"><a href="/exhibitions/timeline#t-1851-1877" class="sf-depth-3">1851 - 1877</a></li><li id="main-menu-link-content756fe4aa-01d4-44ad-b961-7c2d71091f8a" class="sf-depth-3 sf-no-children"><a href="/exhibitions/timeline#t-1877-1913" class="sf-depth-3">1877 - 1913</a></li><li id="main-menu-link-contentfd15e351-078f-4f91-8d2a-4ee1d3e495cc" class="sf-depth-3 sf-no-children"><a href="/exhibitions/timeline#t-1913-1945" class="sf-depth-3">1913 - 1945</a></li><li id="main-menu-link-content5c90cb3c-51cd-4c33-8ea0-5fc4be80fb00" class="sf-depth-3 sf-no-children"><a href="/exhibitions/timeline#t-1945-present" class="sf-depth-3">1945 - Present</a></li><li id="main-menu-link-content5757a3a3-55f3-4058-b9e6-c347f393a871" class="sf-depth-3 sf-no-children"><a href="/exhibitions/timeline#t-epilogue" class="sf-depth-3">Epilogue</a></li></ol></div></li><li id="main-menu-link-content70f82257-d0e2-440d-b177-d54009759036" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/additional-resources" class="sf-depth-2 menuparent">Additional Resources</a><ol><li id="main-menu-link-content70502312-5b54-4b54-8593-1a45834b5d60" class="sf-depth-3 sf-no-children"><a href="/quiz/capitol-challenge" class="sf-depth-3">Take the Capitol Challenge</a></li><li id="main-menu-link-contentd2c31bea-8b2f-4dcf-a010-4135954037f7" class="sf-depth-3 sf-no-children"><a href="/exhibitions/capitol-story" class="sf-depth-3">The Capitol Story</a></li></ol></div></li></ol></li></ul></li><li id="main-menu-link-contentc685d065-ca68-488a-b9a2-7005503707b4" class="sf-depth-1 menuparent"><a href="/education" class="sf-depth-1 menuparent">Education</a><ul class="sf-multicolumn"><li class="sf-multicolumn-wrapper "><ol><li id="main-menu-link-content80c95d7b-1b49-451d-8af9-f4b11a2de146" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/education/students" class="sf-depth-2 menuparent">Students</a><ol><li id="main-menu-link-contentb08d399f-f227-4810-a4a0-e9e838d719ff" class="sf-depth-3 sf-no-children"><a href="/education/students/student-orientation-video" class="sf-depth-3">Student Orientation Video</a></li><li id="main-menu-link-contentc322ea4c-8516-4155-a11f-fe47b9556535" class="sf-depth-3 sf-no-children"><a href="/education/students/resources-and-activities" class="sf-depth-3">Resources &amp; Activities</a></li><li id="main-menu-link-content5670fef5-6e95-462f-b77b-af4c78f68d24" class="sf-depth-3 sf-no-children"><a href="/national-history-day" class="sf-depth-3">National History Day (NHD)</a></li></ol></div></li><li id="main-menu-link-contentd45cbab3-8e18-4824-99df-cfdef97e4a25" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/education/teachers" class="sf-depth-2 menuparent">Teachers</a><ol><li id="main-menu-link-content9ecd04e5-17da-43ae-b4dc-b3221eed3847" class="sf-depth-3 sf-no-children"><a href="/education/student-programs" class="sf-depth-3">Student Programs</a></li><li id="main-menu-link-content26e3c739-99b0-4b85-8453-b7f32210a65f" class="sf-depth-3 sf-no-children"><a href="/education/lesson-plans" class="sf-depth-3">Lesson Plans</a></li><li id="main-menu-link-content75c461d8-4052-487d-8587-8d1b50590b47" class="sf-depth-3 sf-no-children"><a href="/education/professional-enrichment" class="sf-depth-3">Professional Enrichment</a></li><li id="main-menu-link-contentb6468ddf-12d7-41e8-a8fe-a448661593b4" class="sf-depth-3 sf-no-children"><a href="/education/teachers/student-orientation-video" class="sf-depth-3">Student Orientation Video</a></li><li id="main-menu-link-content0c379904-f12c-4aed-9229-1d6300e2dfcc" class="sf-depth-3 sf-no-children"><a href="/education/teachers/resources-and-activities" class="sf-depth-3">Resources &amp; Activities</a></li></ol></div></li><li id="main-menu-link-content9eb4d35a-4167-402f-ab9d-8402ded02255" class="sf-depth-2 sf-multicolumn-column menuparent"><div class="sf-multicolumn-column"><a href="/education/families" class="sf-depth-2 menuparent">Families</a><ol><li id="main-menu-link-content56635e90-2537-442e-b9ea-fd453c810998" class="sf-depth-3 sf-no-children"><a href="/education/families/pocket-journal" class="sf-depth-3">Pocket Journal</a></li><li id="main-menu-link-contentdad26e03-8f0c-4dcc-8689-c337d3d58ec9" class="sf-depth-3 sf-no-children"><a href="/plan-visit/special-tours-and-activities" class="sf-depth-3">Special Programs and Encounters</a></li><li id="main-menu-link-content3935a4a4-577f-4cfe-aa95-90737152fecf" class="sf-depth-3 sf-no-children"><a href="/education/families/student-orientation-video" class="sf-depth-3">Student Orientation Video</a></li><li id="main-menu-link-content7d9762cb-3137-4e8d-8ae2-1dc20c71d2d8" class="sf-depth-3 sf-no-children"><a href="/education/families/resources-and-activities" class="sf-depth-3">Resources &amp; Activities</a></li></ol></div></li></ol></li></ul></li><li id="main-menu-link-content3ad54643-aed8-45d8-b7f6-3a9ae8b371fb" class="sf-depth-1 menuparent"><a href="/about-congress" class="sf-depth-1 menuparent">About Congress</a><ul class="sf-multicolumn"><li class="sf-multicolumn-wrapper "><ol><li id="main-menu-link-contentcf38cf78-61f9-40b4-987b-bd4154f831a3" class="sf-depth-2 sf-no-children"><a href="/about-congress/what-congress-does" class="sf-depth-2">What Congress Does</a></li><li id="main-menu-link-content16fbc8fd-0aed-4e3f-8e59-4b4688708d32" class="sf-depth-2 sf-no-children"><a href="/about-congress/two-bodies-one-branch" class="sf-depth-2">Two Bodies, One Branch</a></li><li id="main-menu-link-content35dd8216-eed3-4652-b486-6a948e889f04" class="sf-depth-2 sf-no-children"><a href="/about-congress/making-laws" class="sf-depth-2">Making Laws</a></li><li id="main-menu-link-content51703274-76eb-4c77-aafc-89261d28a33d" class="sf-depth-2 sf-no-children"><a href="/about-congress/us-house-representatives" class="sf-depth-2">The U.S. House of Representatives</a></li><li id="main-menu-link-contentc516af00-ef56-4d49-82ce-b027ea883b4a" class="sf-depth-2 sf-no-children"><a href="/about-congress/us-senate" class="sf-depth-2">The U.S. Senate</a></li></ol></li></ul></li><li id="main-menu-link-content70d960fa-e848-460d-8bac-25d800dc548e" class="sf-depth-1 menuparent"><a href="/about-capitol" class="sf-depth-1 menuparent">About The Capitol</a><ul class="sf-multicolumn"><li class="sf-multicolumn-wrapper "><ol><li id="main-menu-link-contentf69dc55f-327b-47ec-8900-05327cb232fb" class="sf-depth-2 sf-no-children"><a href="/about-capitol/evolution-capitol" class="sf-depth-2">Evolution of the Capitol</a></li><li id="main-menu-link-content6468c224-76d1-4684-83a9-668779bc2e20" class="sf-depth-2 sf-no-children"><a href="/about-capitol/about-capitol-visitor-center" class="sf-depth-2">About the Capitol Visitor Center</a></li><li id="main-menu-link-content7d7feaf8-dab8-4491-9758-0035993214f4" class="sf-depth-2 sf-no-children"><a href="http://www.aoc.gov/" class="sf-depth-2 sf-external">The Architect of the Capitol</a></li><li id="main-menu-link-contentd5f0aef9-2dde-44d4-9f27-df9732847edd" class="sf-depth-2 sf-no-children"><a href="/careers" title="Careers" class="sf-depth-2">Careers</a></li></ol></li></ul></li><li id="main-menu-link-content6f71aca9-fd7c-43c3-91df-5c49aff18a4a" class="sf-depth-1 sf-no-children"><a href="/event-calendar" class="sf-depth-1">Calendar</a></li><li id="main-menu-link-content47783c85-fab8-4c1b-a7af-38059de43b02" class="sf-depth-1 menuparent"><a href="/connect" class="sf-depth-1 menuparent">Connect</a><ul class="sf-multicolumn"><li class="sf-multicolumn-wrapper "><ol><li id="main-menu-link-content2fb4a1ed-4022-47a1-a7e2-4b394b5027e3" class="sf-depth-2 sf-no-children"><a href="/questions-comments" class="sf-depth-2">Questions &amp; Comments</a></li><li id="main-menu-link-content47080337-5e0d-45ad-8969-720c531aa860" class="sf-depth-2 sf-no-children"><a href="/connect/social-media" class="sf-depth-2">Social Media</a></li><li id="main-menu-link-content937bb028-ec9d-4c9c-9052-ccf6aada577b" class="sf-depth-2 sf-no-children"><a href="/volunteer" class="sf-depth-2">Volunteer</a></li><li id="main-menu-link-content7d29d979-a65b-47ab-83ae-23897fc9bf7f" class="sf-depth-2 sf-no-children"><a href="/visitor-survey" class="sf-depth-2">Visitor Survey</a></li><li id="main-menu-link-content9f9509de-1474-4390-b956-3093b5467f11" class="sf-depth-2 sf-no-children"><a href="https://si.az1.qualtrics.com/jfe/form/SV_bjfnQ80mfdiBPF3" class="sf-depth-2 sf-external">Website Survey</a></li><li id="main-menu-link-content23feef18-5e3e-4ff4-8ad6-e0abea2714ad" class="sf-depth-2 sf-no-children"><a href="/youtube-videos" class="sf-depth-2">YouTube Videos</a></li><li id="main-menu-link-contentb2dde9d4-2ab8-4fbf-bb03-2591ca5e7d56" class="sf-depth-2 sf-no-children"><a href="/apps" class="sf-depth-2">Apps</a></li></ol></li></ul></li><li id="main-menu-link-contentea4b50d9-515f-4a70-a4da-c3d5177bcd70" class="sf-depth-1 sf-no-children"><a href="/subscribe" title="Subscribe" class="sf-depth-1">Subscribe</a></li>
+</ul>
+
+    </nav>
+  </div>
+<div class="views-exposed-form search-block-form block-views block-exposedformsearchpage-1-2" data-drupal-selector="views-exposed-form-search-page-1" id="block-exposedformsearchpage-1-2">
+  
+    
+      <form action="/search" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-keywords js-form-item-keywords">
+      <label for="edit-keywords">Search</label>
+        <input data-drupal-selector="edit-keywords" type="text" id="edit-keywords" name="keywords" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search" value="Submit" class="button js-form-submit form-submit" />
+</div>
+
+
+</form>
+
+  </div>
+
+
+        </div>
+      </div><!-- /#navigation -->
+      </div>
+  
+      <div id="above-content">
+      <div class="container">
+          
+
+      </div>
+    </div>
+    
+
+  <div id="main">
+    <div class="container-wrapper">
+      
+      <div class="container content-title">
+                  <div id="content-top">  <div id="block-cvc-breadcrumbs" class="block-system block-cvc-breadcrumbs">
+  
+    
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  Privacy Statement
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+<div id="block-cvc-page-title--2" class="page-title block-core block-cvc-page-title--2">
+  
+    
+      
+  <h1><span property="schema:name">Privacy Statement</span>
+</h1>
+
+
+  </div>
+
+</div>
+              </div>
+      
+      <div class="container content-columns">
+      
+        <section id="content">
+
+          <div id="content-header">
+
+            
+
+                          <div id="highlighted">  <div data-drupal-messages-fallback class="hidden"></div>
+
+</div>
+            
+            
+
+            
+            
+            
+
+            
+            
+          </div><!-- /#content-header -->
+
+          <div id="content-area">
+              <div id="block-cvc-content" class="block-system block-cvc-content">
+  
+    
+      
+
+<article data-history-node-id="2631" role="article" typeof="schema:WebPage" class="node">
+
+      <header>
+      
+              <span property="schema:name" content="Privacy Statement" class="hidden"></span>
+
+
+      
+          </header>
+  
+  <div class="content">
+          <div>
+                <div class="paragraph paragraph--type--wysiwyg paragraph--view-mode--default">
+          
+            <div class="wysiwyg__body2"><p><strong>This notice provides the U.S. Capitol Visitor Center's policy regarding the nature, purpose, use and sharing of any information collected via this website. The information you provide on the CVC website will be used only for its intended purpose.</strong></p>
+
+<p>Information presented on this site is considered public information and may be distributed or copied unless otherwise specified. Use of appropriate byline/photo/image from this website should be credited to the "U.S. Capitol Visitor Center." </p>
+
+<p>For site management, the following usage information is collected for statistical purposes about your visit to <a href="visitthecapitol.gov">visitthecapitol.gov</a>: the name of the Internet domain from which you access <a href="visitthecapitol.gov">visitthecapitol.gov</a> and the date and time that you access the site. This government computer system uses software programs to create summary statistics, which are used for such purposes as assessing what information is of most and least interest, determining technical design specifications and identifying system performance or problem areas.  </p>
+
+<p>For site security purposes and to ensure that this service remains available to all users, this government computer system employs software programs to monitor network traffic to identify unauthorized attempts to upload or change information, or otherwise cause damage. Unauthorized attempts to upload information or change information on this service are strictly prohibited and subject to prosecution under the Computer Fraud and Abuse Act of 1986 and Title 18 U.S.C. Sec.1001 and 1030. Information also may be used for authorized law enforcement investigations.  </p>
+
+<p>Cookies may be used on <a href="visitthecapitol.gov">visitthecapitol.gov</a> to improve the user experience and for basic web metrics. For the purpose of enabling better website design and a better user experience, we employ Google Analytics (a web service by Google, Inc.) to track site traffic and provide aggregate reports of how the public interacts with <a href="visitthecapitol.gov">visitthecapitol.gov</a>. Users who do not wish to have their visit information collected by Google Analytics may opt-out by downloading a browser extension or by disabling cookies in their browser settings.  </p>
+
+<p>For some videos that are visible on <a href="visitthecapitol.gov">visitthecapitol.gov</a>, a session cookie may be set by third party providers when you click to play a video. This session cookie is used by some third party providers to help maintain the integrity of video statistics.  </p>
+
+<p>Except for authorized law enforcement investigations, no other attempts are made to identify individual users or their usage habits. Raw data logs are scheduled for regular destruction in accordance with applicable Federal laws and guidelines.  </p>
+
+<p>Please <a href="https://www.visitthecapitol.gov/questions-comments">contact us</a> if you have any questions about this statement.</p>
+</div>
+      
+      </div>
+
+          </div>
+  
+  </div><!-- /.content -->
+
+      <div class="links">
+      
+    </div><!-- /.links -->
+  
+</article><!-- /.node -->
+
+  </div>
+<div id="block-contentctas" class="content-ctas block-block-content block-contentctas">
+  
+    
+      
+            <div class="basic__body primary-content"><div data-embed-button="cards" data-entity-embed-display="entity_reference:views_field_formatter" data-entity-embed-display-settings="media_entity_embed_wysiwyg::block_1 Array" data-entity-type="media" data-entity-uuid="f1a329b9-272f-4f0e-a0ff-b3dde13b39ea" data-langcode="en" class="embedded-entity"><div class="views-element-container"><div class="entity-embed js-view-dom-id-5c6a817a8ad5f4b8585de33425d2cab10f702b29483c289486c76f858c819a32">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row">
+
+
+<div class="media media-cards">
+  
+                            
+      <a href="/plan-visit/us-capitol-map">
+                <span class="card-title">U.S. Capitol Map</span>
+        <span class="hover-wrapper">
+          <span class="card-image">
+                          
+              <img src="/sites/default/files/styles/card_square/public/images/maps/CVC_SystemMap_2018_Accessibility.jpg?h=710bb6dc&amp;itok=v4ZS3sdT" width="335" height="300" alt="U.S. Capitol Map" typeof="foaf:Image" /></span>
+          <span class="card-hovertext">Map of the Capitol campus</span>
+        </span>
+      </a>
+      </div>
+
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+</div>
+<div data-embed-button="cards" data-entity-embed-display="entity_reference:views_field_formatter" data-entity-embed-display-settings="media_entity_embed_wysiwyg::block_1 Array" data-entity-type="media" data-entity-uuid="e65ccb1f-669f-4437-a70e-42b49392ac09" data-langcode="en" class="embedded-entity"><div class="views-element-container"><div class="entity-embed js-view-dom-id-15388a64ee15b3714cd08db88f6d20aad63f265b3747753de6ecada01958f1e7">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row">
+
+
+<div class="media media-cards">
+  
+                            
+      <a href="/national-history-day">
+                <span class="card-title">National History Day (NHD)</span>
+        <span class="hover-wrapper">
+          <span class="card-image">
+                          
+              <img src="/sites/default/files/styles/card_square/public/nhd/NHDLogo-362x324.jpg?h=e16dbc57&amp;itok=GQvzM0M7" width="335" height="300" alt="National History Day" typeof="foaf:Image" /></span>
+          <span class="card-hovertext">This page is a starting point for primary sources for the 2020 NHD theme, “Breaking Barriers in History.”</span>
+        </span>
+      </a>
+      </div>
+
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+</div>
+</div>
+      
+  </div>
+
+
+          </div>
+
+        </section><!-- /#content -->
+
+        
+                  <aside id="sidebar-second" class="column sidebar second">
+              <nav role="navigation" aria-labelledby="block-mainnavigation-2-menu" id="block-mainnavigation-2" class="side-menu block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-mainnavigation-2-menu">Main navigation</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit" data-drupal-link-system-path="node/5">Plan A Visit</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/travel-guidelines" data-drupal-link-system-path="node/53">Travel and Guidelines</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/plan-visit/getting-capitol" data-drupal-link-system-path="node/4">Getting to the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/visitor-hours-info" data-drupal-link-system-path="node/39">Visitor Hours &amp; Info</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/visitors-disabilities" data-drupal-link-system-path="node/40">Accessibility Services</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/capitol-etiquette" data-drupal-link-system-path="node/41">Capitol Etiquette</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/prohibited-items" data-drupal-link-system-path="node/42">Prohibited Items</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/us-capitol-visitor-emergency-evacuation-information" data-drupal-link-system-path="node/45">Emergency Evacuation Information</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/what-to-do" data-drupal-link-system-path="node/54">What To Do</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/plan-visit/book-tour-capitol" data-drupal-link-system-path="node/36">Book a Tour</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/suggested-itineraries" data-drupal-link-system-path="node/49">Suggested Itineraries</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/special-tours-and-activities" data-drupal-link-system-path="node/43">Explore More of the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/watching-congress-session" data-drupal-link-system-path="node/48">Watching Congress In Session</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/capitol-cafe" data-drupal-link-system-path="node/47">Where to Eat</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/where-shop" data-drupal-link-system-path="node/46">Where to Shop</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/maps-tips" data-drupal-link-system-path="node/55">Maps and Tips</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/frequently-asked-questions" data-drupal-link-system-path="node/25">Frequently Asked Questions</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/us-capitol-map" data-drupal-link-system-path="node/50">U.S. Capitol Map</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/us-capitol-visitor-center-map" data-drupal-link-system-path="node/51">Capitol Visitor Center Indoor Map</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/tips-visiting-capitol" data-drupal-link-system-path="node/44">Tips for Visiting the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/orientation-video" data-drupal-link-system-path="node/52">Orientation Video</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/print-materials" data-drupal-link-system-path="node/35">Print Materials</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/brochures" data-drupal-link-system-path="node/33">Brochures</a>
+              </li>
+                <li class="menu-item">
+        <a href="/international-translations" data-drupal-link-system-path="node/34">International Translations</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions" data-drupal-link-system-path="node/163">Exhibitions</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions/archives" data-drupal-link-system-path="node/241">Temporary Exhibits</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/exhibitions/legislative-highlights" data-drupal-link-system-path="node/221">Legislative Highlights</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions/image-gallery" data-drupal-link-system-path="node/261">View By Theme</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-jurisdiction" data-drupal-link-system-path="node/2672">Congress and the Judicial Branch: Jurisdiction</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-composition" data-drupal-link-system-path="node/2676">Congress and the Judicial Branch: Composition</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-negotiation" data-drupal-link-system-path="node/2707">Congress and the Judicial Branch: Negotiation</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-nominations-and-appointments" data-drupal-link-system-path="node/2726">Congress and the Executive Branch: Nominations and Appointments</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-balancing-power" data-drupal-link-system-path="node/2743">Congress and the Executive Branch: Balancing Power</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-investigations" data-drupal-link-system-path="node/2759">Congress and the Executive Branch: Investigations</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions/timeline" data-drupal-link-system-path="node/105">Timeline of Congress and the Capitol</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/exhibitions/timeline#t-prologue" data-drupal-link-system-path="node/105">Prologue</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1789-1815" data-drupal-link-system-path="node/105">1789 - 1815</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1815-1851" data-drupal-link-system-path="node/105">1815 - 1851</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1851-1877" data-drupal-link-system-path="node/105">1851 - 1877</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1877-1913" data-drupal-link-system-path="node/105">1877 - 1913</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1913-1945" data-drupal-link-system-path="node/105">1913 - 1945</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1945-present" data-drupal-link-system-path="node/105">1945 - Present</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-epilogue" data-drupal-link-system-path="node/105">Epilogue</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/additional-resources" data-drupal-link-system-path="node/252">Additional Resources</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/quiz/capitol-challenge" data-drupal-link-system-path="node/164">Take the Capitol Challenge</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/exhibitions/capitol-story" data-drupal-link-system-path="node/189">The Capitol Story</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/education" data-drupal-link-system-path="node/76">Education</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/education/students" data-drupal-link-system-path="node/26">Students</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/education/students/student-orientation-video" data-drupal-link-system-path="node/56">Student Orientation Video</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/students/resources-and-activities" data-drupal-link-system-path="node/57">Resources &amp; Activities</a>
+              </li>
+                <li class="menu-item">
+        <a href="/national-history-day" data-drupal-link-system-path="node/2961">National History Day (NHD)</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/education/teachers" data-drupal-link-system-path="node/84">Teachers</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/education/student-programs" data-drupal-link-system-path="node/82">Student Programs</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/lesson-plans" data-drupal-link-system-path="node/83">Lesson Plans</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/professional-enrichment" data-drupal-link-system-path="node/74">Professional Enrichment</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/teachers/student-orientation-video" data-drupal-link-system-path="node/60">Student Orientation Video</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/teachers/resources-and-activities" data-drupal-link-system-path="node/58">Resources &amp; Activities</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/education/families" data-drupal-link-system-path="node/88">Families</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/education/families/pocket-journal" data-drupal-link-system-path="node/86">Pocket Journal</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/special-tours-and-activities" data-drupal-link-system-path="node/43">Special Programs and Encounters</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/families/student-orientation-video" data-drupal-link-system-path="node/87">Student Orientation Video</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/families/resources-and-activities" data-drupal-link-system-path="node/59">Resources &amp; Activities</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about-congress" data-drupal-link-system-path="node/66">About Congress</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about-congress/what-congress-does" data-drupal-link-system-path="node/61">What Congress Does</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-congress/two-bodies-one-branch" data-drupal-link-system-path="node/62">Two Bodies, One Branch</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-congress/making-laws" data-drupal-link-system-path="node/63">Making Laws</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-congress/us-house-representatives" data-drupal-link-system-path="node/64">The U.S. House of Representatives</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-congress/us-senate" data-drupal-link-system-path="node/65">The U.S. Senate</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about-capitol" data-drupal-link-system-path="node/67">About The Capitol</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about-capitol/evolution-capitol" data-drupal-link-system-path="node/68">Evolution of the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-capitol/about-capitol-visitor-center" data-drupal-link-system-path="node/10">About the Capitol Visitor Center</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.aoc.gov/">The Architect of the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/careers" title="Careers" data-drupal-link-system-path="node/3246">Careers</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/event-calendar" data-drupal-link-system-path="event-calendar">Calendar</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/connect" data-drupal-link-system-path="node/81">Connect</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/questions-comments" data-drupal-link-system-path="node/2466">Questions &amp; Comments</a>
+              </li>
+                <li class="menu-item">
+        <a href="/connect/social-media" data-drupal-link-system-path="node/75">Social Media</a>
+              </li>
+                <li class="menu-item">
+        <a href="/volunteer" data-drupal-link-system-path="node/79">Volunteer</a>
+              </li>
+                <li class="menu-item">
+        <a href="/visitor-survey" data-drupal-link-system-path="node/77">Visitor Survey</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://si.az1.qualtrics.com/jfe/form/SV_bjfnQ80mfdiBPF3">Website Survey</a>
+              </li>
+                <li class="menu-item">
+        <a href="/youtube-videos" data-drupal-link-system-path="node/2610">YouTube Videos</a>
+              </li>
+                <li class="menu-item">
+        <a href="/apps" data-drupal-link-system-path="node/80">Apps</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/subscribe" title="Subscribe" data-drupal-link-system-path="node/2615">Subscribe</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-sidectas" class="block-block-content block-sidectas">
+  
+    
+      
+            <div class="basic__body primary-content"><div data-embed-button="cards" data-entity-embed-display="entity_reference:views_field_formatter" data-entity-embed-display-settings="media_entity_embed_wysiwyg::block_1 Array" data-entity-type="media" data-entity-uuid="b113d228-08dc-44f2-9f52-6323124fdb2d" data-langcode="en" class="embedded-entity"><div class="views-element-container"><div class="entity-embed js-view-dom-id-e93a69c73d04c83fc71e5e710761f6223e0f220561ec07e92f0bc5b06df4c005">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row">
+
+
+<div class="media media-cards">
+  
+                            
+      <a href="/plan-visit/getting-capitol">
+                <span class="card-title">Getting To The Capitol</span>
+        <span class="hover-wrapper">
+          <span class="card-image">
+                          
+              <img src="/sites/default/files/styles/card_square/public/images/cards/getting-to-capitol.jpg?h=671cb0bf&amp;itok=zOyBs34O" width="335" height="300" alt="Getting To The Capitol" typeof="foaf:Image" /></span>
+          <span class="card-hovertext">Located at the center of Washington, D.C., the U.S. Capitol and other buildings on Capitol Hill are easily accessible via multiple public transportation centers.</span>
+        </span>
+      </a>
+      </div>
+
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+</div>
+<div data-embed-button="cards" data-entity-embed-display="entity_reference:views_field_formatter" data-entity-embed-display-settings="media_entity_embed_wysiwyg::block_1 Array" data-entity-type="media" data-entity-uuid="02fb22fa-aa2d-46cd-912c-9b1e283260fd" data-langcode="en" class="embedded-entity"><div class="views-element-container"><div class="entity-embed js-view-dom-id-3062ebddff42d36917cfc70a696f94be7d34d42d5472ce49b99273d16c22e173">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row">
+
+
+<div class="media media-cards">
+  
+                            
+      <a href="/plan-visit/prohibited-items">
+                <span class="card-title">Prohibited Items</span>
+        <span class="hover-wrapper">
+          <span class="card-image">
+                          
+              <img src="/sites/default/files/styles/card_square/public/images/cards/prohibited-items.jpg?h=3b5d1417&amp;itok=4VUGcJpX" width="335" height="300" alt="Prohibited Items" typeof="foaf:Image" /></span>
+          <span class="card-hovertext">In order to ensure the safety of visitors and staff and to preserve the collections, facilities and historic buildings and grounds, some items are prohibited at the U.S. Capitol.</span>
+        </span>
+      </a>
+      </div>
+
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+</div>
+</div>
+      
+  </div>
+
+
+          </aside><!-- /#sidebar-second -->
+              </div><!-- /.container -->
+    </div>
+  </div><!-- /#main -->
+
+  <!-- ______________________ FOOTER _______________________ -->
+
+      <footer id="footer">
+      <div class="container">
+          <nav role="navigation" aria-labelledby="block-cvc-main-menu-menu" id="block-cvc-main-menu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-cvc-main-menu-menu">Main navigation</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item menu-item--collapsed">
+        <a href="/plan-visit" data-drupal-link-system-path="node/5">Plan A Visit</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/exhibitions" data-drupal-link-system-path="node/163">Exhibitions</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/education" data-drupal-link-system-path="node/76">Education</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-congress" data-drupal-link-system-path="node/66">About Congress</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-capitol" data-drupal-link-system-path="node/67">About The Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/event-calendar" data-drupal-link-system-path="event-calendar">Calendar</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/connect" data-drupal-link-system-path="node/81">Connect</a>
+              </li>
+                <li class="menu-item">
+        <a href="/subscribe" title="Subscribe" data-drupal-link-system-path="node/2615">Subscribe</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-cvc-footer-menu" id="block-cvc-footer" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-cvc-footer-menu">Footer menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/press" data-drupal-link-system-path="node/89">For The Press</a>
+              </li>
+                <li class="menu-item">
+        <a href="/search-results">Search</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.aoc.gov/">Architect of the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="tel:2022268000">Phone: 202-226-8000</a>
+              </li>
+                <li class="menu-item">
+        <a href="/volunteer" data-drupal-link-system-path="node/79">Volunteer</a>
+              </li>
+                <li class="menu-item">
+        <a href="/brochures" data-drupal-link-system-path="node/33">Brochures</a>
+              </li>
+                <li class="menu-item">
+        <a href="/international-translations" data-drupal-link-system-path="node/34">International Translations</a>
+              </li>
+                <li class="menu-item">
+        <a href="/visitor-survey" data-drupal-link-system-path="node/77">Comments</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/special-tours-and-activities" data-drupal-link-system-path="node/43">Explore More of the Capitol</a>
+              </li>
+                <li class="menu-item menu-item--active-trail">
+        <a href="/privacy-statement" title="Privacy Statement" data-drupal-link-system-path="node/2631" class="is-active">Privacy</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+      </div>
+    </footer><!-- /#footer -->
+  
+</div><!-- /.layout-container -->
+
+  </div>
+
+    <div class="off-canvas-wrapper"><div id="off-canvas">
+              <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit" data-drupal-link-system-path="node/5">Plan A Visit</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/travel-guidelines" data-drupal-link-system-path="node/53">Travel and Guidelines</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/plan-visit/getting-capitol" data-drupal-link-system-path="node/4">Getting to the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/visitor-hours-info" data-drupal-link-system-path="node/39">Visitor Hours &amp; Info</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/visitors-disabilities" data-drupal-link-system-path="node/40">Accessibility Services</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/capitol-etiquette" data-drupal-link-system-path="node/41">Capitol Etiquette</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/prohibited-items" data-drupal-link-system-path="node/42">Prohibited Items</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/us-capitol-visitor-emergency-evacuation-information" data-drupal-link-system-path="node/45">Emergency Evacuation Information</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/what-to-do" data-drupal-link-system-path="node/54">What To Do</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/book-tour-capitol" data-drupal-link-system-path="node/36">Book a Tour</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://www.house.gov/representatives">Book a tour through the office of your Representative</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm">Book a tour through the offices of your Senators</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://tours.visitthecapitol.gov/" title="Book a Tour Yourself Online">Book a Tour Yourself Online</a>
+              </li>
+                <li class="menu-item">
+        <a href="/cancel-my-tour-reservation" title="How to Modify or Cancel Your Reservation" data-drupal-link-system-path="node/2612">How to Modify or Cancel Your Reservation</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/suggested-itineraries" data-drupal-link-system-path="node/49">Suggested Itineraries</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/special-tours-and-activities" data-drupal-link-system-path="node/43">Explore More of the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/watching-congress-session" data-drupal-link-system-path="node/48">Watching Congress In Session</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/capitol-cafe" data-drupal-link-system-path="node/47">Where to Eat</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/where-shop" data-drupal-link-system-path="node/46">Where to Shop</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/maps-tips" data-drupal-link-system-path="node/55">Maps and Tips</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/frequently-asked-questions" data-drupal-link-system-path="node/25">Frequently Asked Questions</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/us-capitol-map" data-drupal-link-system-path="node/50">U.S. Capitol Map</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/us-capitol-visitor-center-map" data-drupal-link-system-path="node/51">Capitol Visitor Center Indoor Map</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/tips-visiting-capitol" data-drupal-link-system-path="node/44">Tips for Visiting the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/orientation-video" data-drupal-link-system-path="node/52">Orientation Video</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/plan-visit/print-materials" data-drupal-link-system-path="node/35">Print Materials</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/brochures" data-drupal-link-system-path="node/33">Brochures</a>
+              </li>
+                <li class="menu-item">
+        <a href="/international-translations" data-drupal-link-system-path="node/34">International Translations</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions" data-drupal-link-system-path="node/163">Exhibitions</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions/archives" data-drupal-link-system-path="node/241">Temporary Exhibits</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/exhibitions/legislative-highlights" data-drupal-link-system-path="node/221">Legislative Highlights</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions/image-gallery" data-drupal-link-system-path="node/261">View By Theme</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-jurisdiction" data-drupal-link-system-path="node/2672">Congress and the Judicial Branch: Jurisdiction</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-composition" data-drupal-link-system-path="node/2676">Congress and the Judicial Branch: Composition</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-judicial-branch-negotiation" data-drupal-link-system-path="node/2707">Congress and the Judicial Branch: Negotiation</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-nominations-and-appointments" data-drupal-link-system-path="node/2726">Congress and the Executive Branch: Nominations and Appointments</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-balancing-power" data-drupal-link-system-path="node/2743">Congress and the Executive Branch: Balancing Power</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/congress-and-judicial-branch/congress-and-executive-branch-investigations" data-drupal-link-system-path="node/2759">Congress and the Executive Branch: Investigations</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions/timeline" data-drupal-link-system-path="node/105">Timeline of Congress and the Capitol</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/exhibitions/timeline#t-prologue" data-drupal-link-system-path="node/105">Prologue</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1789-1815" data-drupal-link-system-path="node/105">1789 - 1815</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1815-1851" data-drupal-link-system-path="node/105">1815 - 1851</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1851-1877" data-drupal-link-system-path="node/105">1851 - 1877</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1877-1913" data-drupal-link-system-path="node/105">1877 - 1913</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1913-1945" data-drupal-link-system-path="node/105">1913 - 1945</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-1945-present" data-drupal-link-system-path="node/105">1945 - Present</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/timeline#t-epilogue" data-drupal-link-system-path="node/105">Epilogue</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/additional-resources" data-drupal-link-system-path="node/252">Additional Resources</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/quiz/capitol-challenge" data-drupal-link-system-path="node/164">Take the Capitol Challenge</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/exhibitions/capitol-story" data-drupal-link-system-path="node/189">The Capitol Story</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/exhibitions/capitol-story/statue-of-freedom" data-drupal-link-system-path="node/172">Statue of Freedom</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/british-burn-capitol-august-24-1814" data-drupal-link-system-path="node/7">The British Burn the Capitol, August 24, 1814</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/capitol-story/capitol-dome" data-drupal-link-system-path="node/173">The Capitol Dome</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/capitol-story/frieze-american-history" data-drupal-link-system-path="node/187">The Frieze of American History</a>
+              </li>
+                <li class="menu-item">
+        <a href="/exhibitions/capitol-story/apotheosis-washington" data-drupal-link-system-path="node/188">The Apotheosis of Washington</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/education" data-drupal-link-system-path="node/76">Education</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/education/students" data-drupal-link-system-path="node/26">Students</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/education/students/student-orientation-video" data-drupal-link-system-path="node/56">Student Orientation Video</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/students/resources-and-activities" data-drupal-link-system-path="node/57">Resources &amp; Activities</a>
+              </li>
+                <li class="menu-item">
+        <a href="/national-history-day" data-drupal-link-system-path="node/2961">National History Day (NHD)</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/education/teachers" data-drupal-link-system-path="node/84">Teachers</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/education/student-programs" data-drupal-link-system-path="node/82">Student Programs</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/lesson-plans" data-drupal-link-system-path="node/83">Lesson Plans</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/professional-enrichment" data-drupal-link-system-path="node/74">Professional Enrichment</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/teachers/student-orientation-video" data-drupal-link-system-path="node/60">Student Orientation Video</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/teachers/resources-and-activities" data-drupal-link-system-path="node/58">Resources &amp; Activities</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/education/families" data-drupal-link-system-path="node/88">Families</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/education/families/pocket-journal" data-drupal-link-system-path="node/86">Pocket Journal</a>
+              </li>
+                <li class="menu-item">
+        <a href="/plan-visit/special-tours-and-activities" data-drupal-link-system-path="node/43">Special Programs and Encounters</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/families/student-orientation-video" data-drupal-link-system-path="node/87">Student Orientation Video</a>
+              </li>
+                <li class="menu-item">
+        <a href="/education/families/resources-and-activities" data-drupal-link-system-path="node/59">Resources &amp; Activities</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about-congress" data-drupal-link-system-path="node/66">About Congress</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about-congress/what-congress-does" data-drupal-link-system-path="node/61">What Congress Does</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-congress/two-bodies-one-branch" data-drupal-link-system-path="node/62">Two Bodies, One Branch</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-congress/making-laws" data-drupal-link-system-path="node/63">Making Laws</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-congress/us-house-representatives" data-drupal-link-system-path="node/64">The U.S. House of Representatives</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-congress/us-senate" data-drupal-link-system-path="node/65">The U.S. Senate</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about-capitol" data-drupal-link-system-path="node/67">About The Capitol</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about-capitol/evolution-capitol" data-drupal-link-system-path="node/68">Evolution of the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-capitol/about-capitol-visitor-center" data-drupal-link-system-path="node/10">About the Capitol Visitor Center</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.aoc.gov/">The Architect of the Capitol</a>
+              </li>
+                <li class="menu-item">
+        <a href="/careers" title="Careers" data-drupal-link-system-path="node/3246">Careers</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/event-calendar" data-drupal-link-system-path="event-calendar">Calendar</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/connect" data-drupal-link-system-path="node/81">Connect</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/questions-comments" data-drupal-link-system-path="node/2466">Questions &amp; Comments</a>
+              </li>
+                <li class="menu-item">
+        <a href="/connect/social-media" data-drupal-link-system-path="node/75">Social Media</a>
+              </li>
+                <li class="menu-item">
+        <a href="/volunteer" data-drupal-link-system-path="node/79">Volunteer</a>
+              </li>
+                <li class="menu-item">
+        <a href="/visitor-survey" data-drupal-link-system-path="node/77">Visitor Survey</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://si.az1.qualtrics.com/jfe/form/SV_bjfnQ80mfdiBPF3">Website Survey</a>
+              </li>
+                <li class="menu-item">
+        <a href="/youtube-videos" data-drupal-link-system-path="node/2610">YouTube Videos</a>
+              </li>
+                <li class="menu-item">
+        <a href="/apps" data-drupal-link-system-path="node/80">Apps</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/subscribe" title="Subscribe" data-drupal-link-system-path="node/2615">Subscribe</a>
+              </li>
+        </ul>
+  
+
+</div></div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2631","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"core\/html5shiv,core\/normalize,cvc\/global,extlink\/drupal.extlink,google_analytics\/google_analytics,paragraphs\/drupal.paragraphs.unpublished,responsive_menu\/responsive_menu.config,responsive_menu\/responsive_menu.hammerjs,responsive_menu\/responsive_menu.styling,superfish\/superfish,superfish\/superfish_hoverintent,superfish\/superfish_smallscreen,superfish\/superfish_supposition,superfish\/superfish_touchscreen,system\/base,views\/views.module,youtube_gallery\/global-styling","theme":"cvc","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"responsive_menu":{"position":"right","theme":"theme-black","pagedim":"pagedim","breakpoint":"(min-width: 960px)","extension_keyboard":true,"superfish":{"active":false,"delay":300,"speed":100,"speedOut":100}},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":true,"extNofollow":false,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"\\.pdf","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"","mailtoClass":"0","mailtoLabel":"(link sends email)"}},"superfish":{"superfish-main":{"id":"superfish-main","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast","autoArrows":false,"dropShadows":false},"plugins":{"touchscreen":{"behaviour":"0","mode":"useragent_predefined"},"smallscreen":{"mode":"window_width","title":"Main navigation"},"supposition":true}}},"user":{"uid":0,"permissionsHash":"75d6f74ecefe2e23ee83bfd6c5e6b80c7167ab02b5a469b6667d2eeeaaa5a104"}}</script>
+<script src="/sites/default/files/js/js_4-3ajXXnUo6-Yn1-DHCJ_xrWGh9TVfbyrHgZKE1Jmdk.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script src="/sites/default/files/js/js_UtEVWqYaykeFaxDLXmiYrsQV2E6JVjQ_CL1bafloe7o.js"></script>
+
+      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"792c6459f7","applicationID":"187897050","transactionName":"Yl0AZEJSC0IFBUcPV1sXI1NEWgpfSwBaA1RRZwVCX0YVbgEIRw9MTGcUWVVEOkEWA2wUXVtcB0I=","queueTime":0,"applicationTime":396,"atts":"ThoDEgpIGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

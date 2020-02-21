@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"7ef2daaa0c",applicationID:"240446151"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+		<title>MGC Diagnostics: Privacy Policy</title> 
+		
+		
+		
+		<meta name="robots" content="follow,index" />
+		<style type="text/css">
+		    @import url(//fonts.googleapis.com/css?family=Lato:300,400,700,900);
+		    @import url(//code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css);
+		    @import url(https://mgcdiagnostics.com/css/mgcd/jquery-ui-1.9.1.custom.min.css);
+		    @import url(https://mgcdiagnostics.com/scripts/prettyPhoto/css/prettyPhoto.css);
+			@import url(https://mgcdiagnostics.com/scripts/jquery.mmenu.all.css);
+			@import url(https://mgcdiagnostics.com/styles);
+
+			@import url(https://mgcdiagnostics.com/resp-styles) screen and (max-width : 750px);
+			@import url(https://mgcdiagnostics.com/phone-styles) screen and (max-width : 420px);
+		</style>
+		<link rel="stylesheet" type="text/css" href="/css/home-cta.css">
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+		<script src="https://mgcdiagnostics.com/scripts/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="https://mgcdiagnostics.com/scripts/jquery.mmenu.min.all.js"></script>
+<!base href="https://mgcdiagnostics.com/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="norton-safeweb-site-verification" content="ty28t4xtn8pf7qykk5mxujhwkirndthx5b2y5pa6ckts64rn5o-yf22lao2l-3n7b4kmw2eqixjv26q2aut2grehor29owcz27x9-s9uzynbb1heleqj0rmnicgtjcre" />
+	</head>
+	
+	<body class="interior about">
+	<div>
+				<nav id="nav-responsive"><ul id="">
+<li class="first"><a href="/"><span>Home</span></a></li>
+<li><a href="/products/"><span>Products</span></a></li>
+<li><a href="/workflow/"><span>Workflow</span></a></li>
+<li><a href="/support/"><span>Support</span></a></li>
+<li><a href="/clinical-research/"><span>Clinical Research</span></a></li>
+<li><a href="/events/"><span>Events and Education</span></a></li>
+<li class="parent-here"><a href="/about/"><span>About</span></a></li>
+<li class="last"><a href="/contact-us/"><span>Contact Us</span></a></li>
+</ul></nav>
+		<div id="header-container">
+			<div id="header">
+				<img src="https://mgcdiagnostics.com/images/graphics/menu.png" id="nav-toggle" />
+
+				<a href="https://mgcdiagnostics.com/"><img src="https://mgcdiagnostics.com/images/graphics/logo.png" id="logo" alt="MGC Diagnostics &reg" /></a>
+				<p id="tagline">Our identity is an everyday reminder of our purpose.</p>
+				<div id="nav-main-container">
+    			    <ul id="nav-main">
+<li class="first" id="nav-main-home"><a href="/"><span>Home</span></a></li>
+<li id="nav-main-products"><a href="/products/"><span>Products</span></a></li>
+<li id="nav-main-workflow"><a href="/workflow/"><span>Workflow</span></a></li>
+<li id="nav-main-support"><a href="/support/"><span>Support</span></a></li>
+<li id="nav-main-clinical-research"><a href="/clinical-research/"><span>Clinical Research</span></a></li>
+<li id="nav-main-events"><a href="/events/"><span>Events and Education</span></a></li>
+<li class="parent-here" id="nav-main-about"><a href="/about/"><span>About</span></a></li>
+<li class="last" id="nav-main-contact-us"><a href="/contact-us/"><span>Contact Us</span></a></li>
+</ul>
+					<br class="clr" />
+				</div>
+			</div>
+		</div>
+
+		<div id="content-container">
+		    <div id="hero"><img id="mbl-hero" src="https://mgcdiagnostics.com/images/graphics/hero-int.jpg"/></div>
+			<div id="content">
+  
+     
+     <!-- .header -->
+
+<div id="interior-wrapper">
+
+<div id="left-col">
+	<h1>About</h1>
+	<ul id="nav-sub">
+<li class="first"><a href="/about/scientific-advisors/">The Scientific Advisors</a></li>
+<li><a href="/about/officers-senior-management/">Officers and Senior Management</a></li>
+<li><a href="/about/code-of-ethics/">Code of Ethics and Business Conduct</a></li>
+<li><a href="/about/social-responsibility---conflict-minerals/">Social Responsibility - Conflict Minerals</a></li>
+<li><a href="/about/careers/">Careers</a></li>
+<li class="last"><a href="/about/terms-and-conditions/">General Terms and Conditions of Purchase</a></li>
+</ul>
+	<p>
+		<a href="https://mgcdiagnostics.com/images/products/MGCD_Code_of_Ethics_and_Business_Conduct_Policy_2016_website.pdf"><img src="https://mgcdiagnostics.com/images/graphics/arrow-download.png" /> Download our Code of Ethics pdf</a>
+	</p>
+</div>
+
+
+<div id="interior-content-container">
+	<ul id="crumbs"><li><a href="https://mgcdiagnostics.com">Home</a></li><li><a href="https://mgcdiagnostics.com/about/">About</a></li><li class="last">Privacy Policy</li></ul>
+	<div id="interior-content" class="privacy-policy">
+		<h1>Privacy Policy</h1>
+		<div><p>
+	MGC Diagnostics Corporation (&ldquo;MGC Diagnostics&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;) values our relationship with you and the other users of our web site (the &ldquo;Site&rdquo;) and the services, information and products offered on it (the &rdquo; MGC Diagnostics Services&rdquo;). We recognize that you may be concerned about our collection, use, and disclosure of your personally identifiable information (&ldquo;Personal Information&rdquo;) that we may collect when you use the Site and the MGC Diagnostics Services. Accordingly, we have implemented this Privacy Statement to inform you of the information that we collect from you, how we collect this information, and what we do with it after we collect it.</p>
+<h2>
+	The Type of Information We Collect</h2>
+<p>
+	<strong>Personal Information</strong><br />
+	We collect Personal Information from you. As explained above, Personal Information is information that can be used to identify you individually, such as your name, business name, mailing address, phone number, and e-mail address.</p>
+<p>
+	<strong>Non-Personal Information</strong><br />
+	We also collect Non-Personal Information from you. This information (Non-Personal Information) cannot be easily used to personally identify you, such as your browser type, the URL of the previous web site you visited, your ISP, operating system, and your IP Address.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	How and When We Collect This Information</h2>
+<p>
+	<strong>Providing Information to Us</strong><br />
+	We collect Personal Information from you when you provide it to us. For example, If you sign up to receive a newsletter, we will collect your email address.</p>
+<p>
+	<strong>Communications With Us</strong><br />
+	If you communicate with us regarding our Services, we will collect any information that you provide to us in any such communication.</p>
+<p>
+	<strong>Analytic and Reporting Technologies</strong><br />
+	Like the operators of most web sites, we use analytic and reporting technologies to record Non-Personal Information such as Internet domain and host names, Internet protocol (IP) addresses, browser software and operating system types, click-stream patterns, and the dates and times that the Site and the MGC Diagnostics Services are accessed.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	How We Use The Information We Gather</h2>
+<p>
+	<strong>Personal Information</strong><br />
+	We use Personal Information primarily for our own internal purposes, such as providing, maintaining, evaluating, and improving our sales, services and our Site.</p>
+<p>
+	<strong>Non-Personal Information</strong><br />
+	We use Non-Personal Information to track your Use of the Site and for other internal purposes, particularly providing, maintaining, evaluating, and improving our Site.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	Does MGC Diagnostics Protect My Personal Information?</h2>
+<p>
+	Whenever we obtain your Personal Information, we use commercially reasonable efforts to protect it from unauthorized access or disclosure. However, we are not insurers of the security of your Personal Information. Accordingly, we assume no liability for any disclosure of data due to errors in transmission, unauthorized third party access or other acts of third parties, or acts or omissions beyond our reasonable control.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	Confidentiality and Transmissions over the Internet</h2>
+<p>
+	The security and confidentiality of your personal information is important to us. We follow generally accepted industry standards to protect the personal information submitted to us, both during transmission and once we receive it. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, while we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. Accordingly, we do not assume any liability for any damage you may experience or costs you may incur as a result of any transmissions over the Internet or other publicly accessible networks, such as, but not limited to, transmissions involving the exchange of e-mail and credit card numbers with us (including those which may contain your personal information). While we will take commercially reasonable efforts to safeguard the privacy of the information you provide us and treat such information in accordance with this Privacy Statement, in no event will the information you provide to us be deemed to be confidential, create any fiduciary obligations to you on our part, or result in any liability to you on our part in the event that such information is inadvertently released by us or accessed by third parties without our consent.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	When Do We Disclose Your Information to Third Parties</h2>
+<p>
+	Generally speaking, we do not disclose your information to third parties. In some instances, however, we reserve the right to do so because it is necessary to the operation and continued growth of our business or to protect the rights of others. You understand and agree that we are not required to provide you with advance notice and do not require your consent to make such disclosure. These instances are discussed below:</p>
+<p>
+	<strong>Disclosure to Successors</strong><br />
+	We may disclose your Personal Information to any successor-in-interest of ours, such as, but not limited to, a company that acquires us.</p>
+<p>
+	<strong>Disclosure to Unaffiliated Third Parties</strong><br />
+	We may disclose your Personal Information to prevent an emergency, to protect or enforce our rights, to protect or enforce the rights of a third party, or as required or permitted by law (including, without limitation, to comply with a subpoena or court order).</p>
+<p>
+	<strong>Disclosure to Third-Party Service Providers</strong><br />
+	We may contract with various third parties who help us provide and maintain the Site. For example, we may use a third-party to process payments made to us, and may subcontract out manufacturing, fulfillment, or other operations. We will use commercially reasonable efforts to prevent such third parties from disclosing your Personal Information, except for the purpose of providing the services in question. However, we cannot guarantee and are not liable for the conduct of such third parties.</p>
+<p>
+	<strong>Disclosure of Non-Personal Information</strong><br />
+	We will disclose Non-Personal Information, usually in aggregate form, to potential strategic partners, advertisers, investors, customers, and others. You may not &ldquo;opt out&rdquo; of the sharing of this information. However, it cannot be easily used to identify you personally.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	What About Cookies?</h2>
+<p>
+	A cookie is a message that is sent to your computer from a web server and stored on your computer&rsquo;s hard drive. Most web sites use cookies. We currently use cookies.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	Links to Other Sites</h2>
+<p>
+	This Web site contains links to other sites that are not owned or controlled by MGC Diagnostics. Please be aware that we, MGC Diagnostics Corporation, are not responsible for the privacy practices of such other sites. We encourage you to be aware when you leave our site and to read the privacy statements of each and every Web site that collects personally identifiable information.</p>
+<p>
+	This privacy statement applies only to information collected by this Web site.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	What About Children&rsquo;s Privacy?</h2>
+<p>
+	Our Services are not intended for users younger than eighteen years of age. Accordingly, we will not knowingly collect or use any Personal Information from children that we know to be under the age of eighteen. In addition, we will delete any information in our database that we know originates from a child under the age of eighteen.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	Changes Made to this Privacy Statement</h2>
+<p>
+	MGC Diagnostics reserves and shall have the right, at its sole discretion, to modify, add or remove any terms or conditions of Privacy Statement without notice or liability to you. Any changes to Privacy Statement shall be effective immediately following the posting of such changes on this Site. The most recent version of this Privacy Statement may always be found at this URL. You agree to review this Privacy Statement from time to time and agree that any subsequent Use by you of this Site following changes to this Privacy Statement shall constitute your acceptance of all such changes. This Privacy Policy was last modified on August 21, 2012.</p>
+<p>
+	&nbsp;</p>
+<h2>
+	Contact</h2>
+<p>
+	If you have any questions or concerns about our Site availability, security or this Privacy Statement, please feel free to contact us at <a href="mailto:information@mgcdiagnostics.com?subject=Contact%20from%20mgcdiagnostics.com%20%3E%20Privacy%20Statement">information@mgcdiagnostics.com</a>.</p>
+</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+</div>
+
+
+
+<div class="clr"><!-- --></div>
+
+<div id="mbl-menu-col">
+	<h1>About</h1>
+	<ul id="nav-sub">
+<li class="first"><a href="/about/scientific-advisors/">The Scientific Advisors</a></li>
+<li><a href="/about/officers-senior-management/">Officers and Senior Management</a></li>
+<li><a href="/about/code-of-ethics/">Code of Ethics and Business Conduct</a></li>
+<li><a href="/about/social-responsibility---conflict-minerals/">Social Responsibility - Conflict Minerals</a></li>
+<li><a href="/about/careers/">Careers</a></li>
+<li class="last"><a href="/about/terms-and-conditions/">General Terms and Conditions of Purchase</a></li>
+</ul>
+</div>
+
+
+
+<div class="clr"><!-- --></div>
+</div>
+
+<!-- .footer -->
+			</div>
+		</div>
+
+		<div id="footer-container">
+			<div id="footer">
+			    <ul id="nav-foot">
+<li class="first"><a href="/">Home</a></li>
+<li><a href="/products/">Products</a></li>
+<li><a href="/workflow/">Workflow</a></li>
+<li><a href="/support/">Support</a></li>
+<li><a href="/clinical-research/">Clinical Research</a></li>
+<li><a href="/events/">Events and Education</a></li>
+<li class="parent-here"><a href="/about/">About</a></li>
+<li class="last"><a href="/contact-us/">Contact Us</a></li>
+</ul>
+				<div id="contact-info">
+    				<div class="col" style="width: 250px">
+    				    <p><strong>Quick Links</strong><br />
+    				    <a href="http://get.teamviewer.com/mgcdx"><span style="color: #ffc82e; font-weight: bold">&gt;</a></span> 			<a style="color: #CCC1B9" href="http://get.teamviewer.com/mgcdx">TeamViewer Remote Support</a><br />
+    				    <a href="https://mgcdiagnostics.webex.com/"><span style="color: #ffc82e; font-weight: bold">&gt;</a></span> 			<a style="color: #CCC1B9" href="https://mgcdiagnostics.webex.com/">WebEx Remote Support</a><br />
+				    <a href="http://psweb.mgcdiagnostics.com/partnersite/"><span style="color: #ffc82e; font-weight: bold">&gt;</a></span> 	<a style="color: #CCC1B9" href="http://psweb.mgcdiagnostics.com/partnersite/">Business Partner Log In</a></p>
+    				</div>
+    				<div class="col">
+    				    <p><b>MGC Diagnostics Corporation</b> through its subsidiaries Medical Graphics Corporation and Medisoft SA</p>
+    				</div>
+    				<div class="col">
+    				    <p>350 Oak Grove Pkwy<br/>
+    				    Saint Paul, MN 55127</p>
+    					<p><a href="http://goo.gl/maps/0lEZD" rel="win">Map Us</a></p>
+    				</div>
+    				<div class="col">
+    				    <p>General Inquiries<br/>
+    					T+1 651.484.4874<br/>
+    				    F+1 651.379.8227</p>
+    				</div>
+				    <br class="clr" />
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="closer-container">
+			<div id="closer">
+				&copy; 2012-2020 MGC Diagnostics Corporation. All Rights Reserved.
+				<span><a href="https://mgcdiagnostics.com/about/privacy-policy">Privacy Policy</a> | <a href="https://mgcdiagnostics.com/about/terms-of-use">Terms of Use</a></span><br/>
+				MGC Diagnostics and its affiliates are equal opportunity/affirmative action employers committed to cultural diversity in the workplace and complies with Executive Orders 11246 and 13496 and hereby provides notice of its compliance with FAR 52-222-26, 29 CFR Part 471, Appendix A to Subpart A, 41 C.F.R. 60-1.4, 41 C.F.R. 60-250.5, and 41 C.F.R. 60-741.5.
+			</div>
+		</div>
+</div>
+		
+		<script type="text/javascript">
+		    $(document).ready(function(){
+		        $('#sec-filings a').attr('target','_blank');
+		        $('a[rel="win"]').attr('target','_blank');
+		        $('a[rel="pdf"]').attr('target','_blank');
+
+				$("#nav-responsive").mmenu({
+					offCanvas    : {
+						position    : "top",
+						zposition    : "front"
+						}
+				});
+				$('#nav-toggle').click(function(){$('#nav-responsive').trigger('open.mm');});
+
+		    });
+		</script>
+
+	<!--Equal heights script-->
+<script>
+        equalheight = function(container){
+
+var currentTallest = 0,
+     currentRowStart = 0,
+     rowDivs = new Array(),
+     $el,
+     topPosition = 0;
+ $(container).each(function() {
+
+   $el = $(this);
+   $($el).height('auto')
+   topPostion = $el.position().top;
+
+   if (currentRowStart != topPostion) {
+     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {rowDivs[currentDiv].height(currentTallest);}
+     rowDivs.length = 0; // empty the array
+     currentRowStart = topPostion;
+     currentTallest = $el.height();
+     rowDivs.push($el);
+   } else {
+     rowDivs.push($el);
+     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+  }
+   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {rowDivs[currentDiv].height(currentTallest);}
+ });
+}
+
+$(window).load(function() {
+  equalheight('.homeCTA > a > div');
+});
+
+
+$(window).resize(function(){
+  equalheight('.homeCTA > a > div');
+});
+$(window).load(function() {
+  equalheight('.homeCTA > a > div span');
+});
+
+
+$(window).resize(function(){
+  equalheight('.homeCTA > a > div span');
+});
+
+</script>
+	<!--End Equal heights script-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38689378-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7ef2daaa0c","applicationID":"240446151","transactionName":"bldTYxdUCkNSAhFdXFcdckIWQQtdHAwEXV0WW19DAEcNX0E=","queueTime":0,"applicationTime":333,"atts":"QhBEFV9OGRwRAEcOSERP","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	Lancaster Colony Corporation - Privacy Policy
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":632,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport" /><script type='text/javascript'>window.mobileRedirect = { mobileEnabled: 0, deepLinkUrl: '/m'}</script>
+    <script type="text/javascript" src="/js/mobileRedirect.js">
+    </script>
+    
+    <link type="text/css" rel="stylesheet" media="all" href="https://s3.amazonaws.com/icomoon.io/50912/Q4Lancaster/style.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/151907755/files/css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/151907755/files/css/jquery.fancybox.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Raleway:300" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Raleway:400" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Raleway:600" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Raleway:700" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Raleway:800" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Raleway:900" />
+<link type="image/x-icon" rel="icon" media="" href="//s21.q4cdn.com/151907755/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s21.q4cdn.com/151907755/files/favicon.ico" />
+<link rel="stylesheet" media="all" href="http://www.lancastercolony.com/css/default.css" />
+<link rel="stylesheet" media="print" href="//s21.q4cdn.com/151907755/files/css/print.css" />
+<!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s21.q4cdn.com/151907755/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="http://www.lancastercolony.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/151907755/files/css/global.css?v=21489" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/151907755/files/css/client.css?v=21513" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s21.q4cdn.com/151907755/files/css/print.css" /><script type="text/javascript" src="//s21.q4cdn.com/151907755/files/js/q4.core.js"></script>
+<script type="text/javascript" src="http://www.lancastercolony.com/js/doctracking.js"></script>
+<script type="text/javascript" src="//q4implementation.s3.amazonaws.com/widgets/latest/q4.email-validation.min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="http://www.lancastercolony.com/js/respond.proxy.js"></script>
+<script type="text/javascript" src="//s21.q4cdn.com/151907755/files/js/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-74614919-1'}];
+
+$.each(trackingCodes, function (i, data) {
+    if (data.qualifier == "Q4") {
+        ga('create', data.trackingCode, 'auto'); // Q4 tracker
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+    } else {
+        ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+        ga(data.qualifier + '.set', 'anonymizeIp', true);
+        ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+    }
+});</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="SectionHome PageDefault PagePrivacyPolicy LayoutThreeColumnLayout Languageen-US">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PagePrivacyPolicy SectionPrivacyPolicy ParentSection_Home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.27.0.2'; }
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="LayoutDefault LayoutThreeColumn">
+	<div class="LayoutDefaultInner">
+		<div class="HeaderContainer">
+			<div class="PaneHeader"><div class="container clearfix"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="HtmlTextContainer Logo">
+    
+    <div class="ContentContainer">
+        <a href="/Home/default.aspx"><img alt="Lancaster Logo" src="//s21.q4cdn.com/151907755/files/design/lancasterlogo.png"></a>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="HtmlTextContainer MobileToggle">
+    
+    <div class="ContentContainer">
+        <div class="aoda-btn"><span class="js-aoda-toggle aoda-toggle hoverfade" title="Toggle high contrast view" role="button" tabindex="0">&nbsp;</span></div>
+<i class="q4icon-icon-menu"></i>
+    </div>
+</div></span><span class='HeaderPaneDiv4'><nav class="MainNav"><ul class="level1">
+	<li class="has-children"><a href="http://www.lancastercolony.com/our-company/default.aspx">Our Company</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/our-company/employment-opportunities/default.aspx">Employment Opportunities</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/our-company/employment-opportunities/apply-online/default.aspx">Apply Online</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/our-company/faq/default.aspx">FAQ</a></li><li><a href="http://www.lancastercolony.com/our-company/contact-us/default.aspx">Contact Us</a></li>
+	</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/our-products/default.aspx">Our Products</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/our-products/retail-products/default.aspx">Retail Products</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/our-products/retail-products/marzetti-dips-dressings-and-croutons/default.aspx">Marzetti<sup>®</sup> Dips, Dressings and Croutons</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/new-york-brand-breads-and-croutons/default.aspx">New York Brand<sup>®</sup> Breads and Croutons</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/sister-schuberts-rolls/default.aspx">Sister Schubert’s<sup>®</sup> Rolls</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/flatout-flatbread/default.aspx">Flatout<sup>®</sup> Flatbread</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/our-products/foodservice-products/default.aspx">Foodservice Products</a></li>
+	</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Investors</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Stock Quote</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/stock-chart/default.aspx">Stock Chart</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/stock-splits/default.aspx">Stock Splits</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/dividend-history/default.aspx">Dividend History</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/investment-calculator/default.aspx">Investment Calculator</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/historical-price-lookup/default.aspx">Historical Price Lookup</a></li>
+		</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/sec-filings/default.aspx">SEC Filings and Annual Reports</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/sec-filings/default.aspx">SEC Filings</a></li><li><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/annual-reports/default.aspx">Annual Reports</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/investors/news/default.aspx">News</a></li><li><a href="http://www.lancastercolony.com/investors/financial-ratios-and-statistics/default.aspx">Financial Ratios and Statistics</a></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/corporate-governance/default.aspx">Corporate Governance</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/corporate-governance/governance-documents/default.aspx">Governance Documents</a></li><li><a href="http://www.lancastercolony.com/investors/corporate-governance/officers/default.aspx">Officers</a></li><li><a href="http://www.lancastercolony.com/investors/corporate-governance/board-of-directors/default.aspx">Board of Directors</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/investors/events-and-presentations/default.aspx">Events and Presentations</a></li><li><a href="//s21.q4cdn.com/151907755/files/doc_downloads/2019/LCC-Statement-on-Sustainability.pdf">Statement on Sustainability</a></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/other-investor-resources/shareholder-information-and-research-coverage/default.aspx">Other Investor Resources</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/other-investor-resources/shareholder-information-and-research-coverage/default.aspx">Shareholder Information and Research Coverage</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/investor-faq/default.aspx">Investor FAQ</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/contact-us/default.aspx">Contact Us</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/investor-email-alert-signup/default.aspx">Investor Email Alert Signup</a></li>
+		</ul></li>
+	</ul></li>
+</ul></nav>
+</span><span class='HeaderPaneDiv5'><nav class="MobileNav"><ul class="level1">
+	<li class="has-children"><a href="http://www.lancastercolony.com/our-company/default.aspx">Our Company</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/our-company/employment-opportunities/default.aspx">Employment Opportunities</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/our-company/employment-opportunities/apply-online/default.aspx">Apply Online</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/our-company/faq/default.aspx">FAQ</a></li><li><a href="http://www.lancastercolony.com/our-company/contact-us/default.aspx">Contact Us</a></li>
+	</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/our-products/default.aspx">Our Products</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/our-products/retail-products/default.aspx">Retail Products</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/our-products/retail-products/marzetti-dips-dressings-and-croutons/default.aspx">Marzetti<sup>®</sup> Dips, Dressings and Croutons</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/new-york-brand-breads-and-croutons/default.aspx">New York Brand<sup>®</sup> Breads and Croutons</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/sister-schuberts-rolls/default.aspx">Sister Schubert’s<sup>®</sup> Rolls</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/flatout-flatbread/default.aspx">Flatout<sup>®</sup> Flatbread</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/our-products/foodservice-products/default.aspx">Foodservice Products</a></li>
+	</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Investors</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Stock Quote</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/stock-chart/default.aspx">Stock Chart</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/stock-splits/default.aspx">Stock Splits</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/dividend-history/default.aspx">Dividend History</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/investment-calculator/default.aspx">Investment Calculator</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/historical-price-lookup/default.aspx">Historical Price Lookup</a></li>
+		</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/sec-filings/default.aspx">SEC Filings and Annual Reports</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/sec-filings/default.aspx">SEC Filings</a></li><li><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/annual-reports/default.aspx">Annual Reports</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/investors/news/default.aspx">News</a></li><li><a href="http://www.lancastercolony.com/investors/financial-ratios-and-statistics/default.aspx">Financial Ratios and Statistics</a></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/corporate-governance/default.aspx">Corporate Governance</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/corporate-governance/governance-documents/default.aspx">Governance Documents</a></li><li><a href="http://www.lancastercolony.com/investors/corporate-governance/officers/default.aspx">Officers</a></li><li><a href="http://www.lancastercolony.com/investors/corporate-governance/board-of-directors/default.aspx">Board of Directors</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/investors/events-and-presentations/default.aspx">Events and Presentations</a></li><li><a href="//s21.q4cdn.com/151907755/files/doc_downloads/2019/LCC-Statement-on-Sustainability.pdf">Statement on Sustainability</a></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/other-investor-resources/shareholder-information-and-research-coverage/default.aspx">Other Investor Resources</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/other-investor-resources/shareholder-information-and-research-coverage/default.aspx">Shareholder Information and Research Coverage</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/investor-faq/default.aspx">Investor FAQ</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/contact-us/default.aspx">Contact Us</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/investor-email-alert-signup/default.aspx">Investor Email Alert Signup</a></li>
+		</ul></li>
+	</ul></li>
+</ul></nav>
+</span></span></div></div>
+			<div class="PaneNavigation">
+			    <img class="sr-only" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="dark wood grain background, grated cheese, tomato and fresh basil">
+			    <div class="container clearfix"><span class='NavigationPaneDiv6'><div id="_ctrl0_ctl21_divModuleContainer" class="Breadcrumb PageTitle"><a href="http://www.lancastercolony.com/Home/default.aspx" id="_ctrl0_ctl21_hrefHome" class="BreadcrumbHomeLink">Home</a><span class='BreadcrumbSeparator'>&nbsp; > &nbsp;</span>Privacy Policy
+<div class="ClearFix"></div></div>
+</span></div>
+			</div>
+			<div class="PaneHeader2"><div class="container clearfix"><span class='HeaderPane2Div7'><nav class="SecondaryNav Level2Nav"><ul class="level1">
+	<li class="has-children"><a href="http://www.lancastercolony.com/our-company/default.aspx">Our Company</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/our-company/employment-opportunities/default.aspx">Employment Opportunities</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/our-company/employment-opportunities/apply-online/default.aspx">Apply Online</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/our-company/faq/default.aspx">FAQ</a></li><li><a href="http://www.lancastercolony.com/our-company/contact-us/default.aspx">Contact Us</a></li>
+	</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/our-products/default.aspx">Our Products</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/our-products/retail-products/default.aspx">Retail Products</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/our-products/retail-products/marzetti-dips-dressings-and-croutons/default.aspx">Marzetti<sup>®</sup> Dips, Dressings and Croutons</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/new-york-brand-breads-and-croutons/default.aspx">New York Brand<sup>®</sup> Breads and Croutons</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/sister-schuberts-rolls/default.aspx">Sister Schubert’s<sup>®</sup> Rolls</a></li><li><a href="http://www.lancastercolony.com/our-products/retail-products/flatout-flatbread/default.aspx">Flatout<sup>®</sup> Flatbread</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/our-products/foodservice-products/default.aspx">Foodservice Products</a></li>
+	</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Investors</a><ul class="level2">
+		<li class="has-children"><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Stock Quote</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/stock-chart/default.aspx">Stock Chart</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/stock-splits/default.aspx">Stock Splits</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/dividend-history/default.aspx">Dividend History</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/investment-calculator/default.aspx">Investment Calculator</a></li><li><a href="http://www.lancastercolony.com/investors/stock-information/historical-price-lookup/default.aspx">Historical Price Lookup</a></li>
+		</ul></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/sec-filings/default.aspx">SEC Filings and Annual Reports</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/sec-filings/default.aspx">SEC Filings</a></li><li><a href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/annual-reports/default.aspx">Annual Reports</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/investors/news/default.aspx">News</a></li><li><a href="http://www.lancastercolony.com/investors/financial-ratios-and-statistics/default.aspx">Financial Ratios and Statistics</a></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/corporate-governance/default.aspx">Corporate Governance</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/corporate-governance/governance-documents/default.aspx">Governance Documents</a></li><li><a href="http://www.lancastercolony.com/investors/corporate-governance/officers/default.aspx">Officers</a></li><li><a href="http://www.lancastercolony.com/investors/corporate-governance/board-of-directors/default.aspx">Board of Directors</a></li>
+		</ul></li><li><a href="http://www.lancastercolony.com/investors/events-and-presentations/default.aspx">Events and Presentations</a></li><li><a href="//s21.q4cdn.com/151907755/files/doc_downloads/2019/LCC-Statement-on-Sustainability.pdf">Statement on Sustainability</a></li><li class="has-children"><a href="http://www.lancastercolony.com/investors/other-investor-resources/shareholder-information-and-research-coverage/default.aspx">Other Investor Resources</a><ul class="level3">
+			<li><a href="http://www.lancastercolony.com/investors/other-investor-resources/shareholder-information-and-research-coverage/default.aspx">Shareholder Information and Research Coverage</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/investor-faq/default.aspx">Investor FAQ</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/contact-us/default.aspx">Contact Us</a></li><li><a href="http://www.lancastercolony.com/investors/other-investor-resources/investor-email-alert-signup/default.aspx">Investor Email Alert Signup</a></li>
+		</ul></li>
+	</ul></li>
+</ul></nav>
+</span><span class='HeaderPane2Div11'><div id="_ctrl0_ctl27_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=bk5ykw7ops4cfkipdf5hnq';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
+</div></span></div></div>
+		</div>
+		<div class="PaneContentInner"><div class="container clearfix">
+			<div class="PaneBreadcrumb"></div>
+			<div class="PaneLeft"><span class='LeftPaneDiv'></span></div>
+			<div class="PaneContent"><span class='ContentPaneDiv'><span class='ContentPaneDiv1'><div id="_ctrl0_ctl54_divModuleContainer" class="HtmlTextContainer">
+    
+    <div class="ContentContainer">
+        <p>Welcome to http://www.lancastercolony.com/ ("Website"), an interactive online service operated by Lancaster Colony Corporation ("us", "we", or "our"). Please read the following to learn more about our Privacy Policy, which includes compliance with California Privacy Rights (see also <a target="_blank" href="http://www.privacyprotection.ca.gov/">http://www.privacyprotection.ca.gov/</a>).
+We respect your privacy and are committed to protecting personally identifiable information you may provide us through our Website. We have adopted this Privacy Policy ("Privacy Policy") to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties. This Privacy Policy applies only to information we collect through our Website and does not apply to our collection of information from other sources.
+This Privacy Policy, together with the Terms of Use posted on our Website, sets forth the general rules and policies governing your use of our Website.  Depending on your activities when visiting our Website, you may be required to agree to additional terms and conditions. </p>
+<p>
+We generally keep this Privacy Policy posted on our Website and you should review it frequently, as it may change from time to time. Any changes will be effective immediately upon the posting of the revised Privacy Policy.  WHEN YOU ACCESS OUR WEBSITE, YOU AGREE TO THIS PRIVACY POLICY.  IF YOU DO NOT AGREE TO THIS PRIVACY POLICY, OR TO ANY CHANGES WE MAY SUBSEQUENTLY MAKE, IMMEDIATELY STOP ACCESSING OUR WEBSITE.   </p>
+<h4>A.    INFORMATION WE COLLECT</h4>
+
+<p>Our Website typically collects two kinds of information about you: (a) information that you provide that personally identifies you; and (b) information that does not personally identify you, but that we automatically collect when you visit our Website or that you provide us.<br>
+1.    Personally Identifiable Information: Our definition of personally identifiable information includes any information that may be used to specifically identify or contact you, such as your name, mail address, phone number, etc. As a general policy, we do not automatically collect your personally identifiable information when you visit our Website. In certain circumstances, we may request, allow or otherwise provide you an opportunity to submit your personally identifiable information in connection with a feature, program, promotion or some other aspect of our Website. For instance, you may: (a) provide your name, mail/shipping address, email address, credit card number and phone number when registering with our Website, using our online store, or in connection with a contest entry; (b) provide certain demographic information about you (e.g., age, gender, purchase preference, usage frequency, etc.) when participating in a survey, poll or joining a club; or (c) post a general comment and/or recommendation on our Website. Certain information may not be personally identifiable when standing alone (e.g., your age), but may become so when combined with other information (e.g., your age and name). Whether or not you provide this information is your choice; however, in many instances this type of information is required to participate in the particular activity, realize a benefit we may offer, or gain access to certain content on our Website.</p><p>
+2.    Non-Personal Information:  Our definition of non-personal information is any information that does not personally identify you.  Non-personal information can include certain personally identifiable information that has been de-identified; that is, information that has been rendered anonymous.  We obtain non-personal information about you from information that you provide us, either separately or together with your personally identifiable information.  We also automatically collect certain non-personal information from you when you access our Website.  This information can include, among other things, IP addresses, the type of browser you are using (e.g., Internet Explorer, Firefox, Safari, etc.), the third party website from which your visit originated, the operating system you are using (e.g., Vista, Windows XP, Mac OS, etc.), the domain name of your Internet service provider (e.g., America Online, NetZero, etc.), the search terms you use on our Website, the specific web pages you visit, and the duration of your visits.</p>
+
+<h4>B.    HOW WE USE &amp; SHARE THE INFORMATION COLLECTED</h4>
+<p>1.    Personally Identifiable Information: The personally identifiable information you submit to us is generally used to carry out your requests, respond to your inquiries, better serve you, or in other ways naturally associated with the circumstances in which you provided the information.  We may also use this information to later contact you for a variety of reasons, such as customer service, providing you promotional information for our products or those of our parent company, subsidiaries or other affiliated companies (“"affiliated companies”"), or to communicate with you about content or other information you have posted or shared with us via our Website. You may opt-out from receiving future promotional information from us or our affiliated companies, or direct that we not share your information with any affiliated companies, as set forth below. </p>
+<p>
+In certain instances we may also share your personally identifiable information with our third party vendors performing functions on our behalf (or on behalf of our affiliated companies) – e.g., vendors that process credit card orders, deliver our merchandise, administer our promotions, provide us marketing or promotional assistance, analyze our data, assist us with customer service, etc.  Our vendors agree to use this information, and we share information with them, only to carry out our requests.  In addition, we may share your personally identifiable information with participating sponsors to a program or promotion (e.g., a sweepstakes or contest) you enter via our Website, and with third parties who assist us in using the content or other information you have posted or shared with us via our Website (e.g., production companies we may use).  Except as provided in this Privacy Policy, our Terms of Use, or as set forth when you submit the information, your personally identifiable information will not be shared or sold to any third parties without your prior approval. </p>
+<p>2.    Non-Personal Information: We use non-personal information in a variety of ways, including to help analyze site traffic, understand customer needs and trends, carry out targeted promotional activities, and to improve our services. We may use your non-personal information by itself or aggregate it with information we have obtained from others. We may share your non-personal information with our affiliated companies and third parties to achieve these objectives and others, but remember that aggregate information is anonymous information that does not personally identify you.</p>
+<h4>C.    COOKIES AND PREFERENCE BASED ADVERTISING</h4>
+<p>1.    Cookies and Web Beacons: We automatically receive and store certain types of non-personally identifiable information whenever you interact with us. For example, like many websites, we use "cookies" and "web beacons" (also called “clear gifs” or “pixel tags”) to obtain certain types of information when your web browser accesses our Website. "Cookies" are small files that we transfer to your computer's hard drive or your web browser memory to enable our systems to recognize your browser and to provide convenience and other features to you. "Web beacons" are tiny graphics with a unique identifier, similar in function to cookies, and may be used to track the online movements of users, when an email has been opened, and to provide other information.</p>
+<p>Examples of the information we collect and analyze in this manner include the Internet Protocol (IP) address used to connect your computer to the Internet; computer and connection information such as browser type and version, operating system, and platform; your activities our Website, including the products you view or searched for, as well as the URL you come from and go to next (whether this URL is on our Website or not); and cookie number. It is important to note that the cookies and Web beacons that we use do not contain and are not tied to personally identifiable information about you.</p>
+
+<p>If you are concerned about the storage and use of cookies, you may be able to direct your internet browser to notify you and seek approval whenever a cookie is being sent to your web browser or hard drive. You may also delete a cookie manually from your hard drive through your internet browser or other programs. Please note, however, that some parts of our Website will not function properly or be available to you if you refuse to accept a cookie or choose to disable the acceptance of cookies.</p>
+<p>2.    Preference Based Advertising: We may work with third parties, including advertising companies and website analysis firms, who use cookies and web beacons to collect non-personally identifiable information when you visit our Website and third party sites. This non-personally identifiable information, collected through cookies and web beacons, is typically used by these third party advertising companies (i.e., advertising networks) to serve you with advertisements, while on our Website and third party sites tailored to meet your preferences and needs.  </p>
+<h4>D.    OTHER USES AND INFORMATION</h4>
+<p>1.    IP Addresses: An IP address is a number that is automatically assigned to your computer whenever you are surfing the Internet. Web servers (computers that "serve up" web pages) automatically identify your computer by its IP address. When visitors request pages from our Website, our servers typically log their IP addresses. We collect IP addresses for purposes of system administration, to report non-personal aggregate information to others, and to track the use of our Website.  IP addresses are considered non-personal information and may also be shared as provided above.  It is not our practice to link IP addresses to anything personally identifiable; that is, the visitor's session will be logged, but the visitor remains anonymous to us. However, we reserve the right to use IP addresses to identify a visitor when we feel it is necessary to enforce compliance with our Website rules or to: (a) fulfill a government request; (b) conform with the requirements of the law or legal process; (c) protect or defend our legal rights or property, our Website, or other users; or (d) in an emergency to protect the health and safety of our Website’s users or the general public.</p>
+<p>2.    Email Communications:  If you send us an email with questions or comments, we may use your personally identifiable information to respond to your questions or comments, and we may save your questions or comments for future reference.  For security reasons, we do not recommend that you send non-public personal information, such as passwords, social security numbers, or bank account information, to us by email.  However, aside from our reply to such an email, it is not our standard practice to send you email unless you request a particular service or sign up for a feature that involves email communications, it relates to purchases you have made with us (e.g., product updates, customer support, etc.), we are sending you information about our other products and services, or you consented to being contacted by email for a particular purpose. In certain instances, we may provide you with the option to set your preferences for receiving email communications from us; that is, agree to some communications but not others. You may "opt out" of receiving future commercial email communications from us by clicking the "unsubscribe" link included at the bottom of most emails we send, or as provided below; provided, however, we reserve the right to send you transactional emails such as customer service communications.</p>
+<p>3.     Transfer of Assets:  As we continue to develop our business, we may sell or purchase assets. If another entity acquires us or all (or substantially all) of our assets, the personally identifiable information and non-personal information we have about you will be transferred to and used by this acquiring entity, though we will take reasonable steps to ensure that your preferences are followed. Also, if any bankruptcy or reorganization proceeding is brought by or against us, all such information may be considered an asset of ours and as such may be sold or transferred to third parties.</p>
+<p>4.    Other: Notwithstanding anything herein to the contrary, we reserve the right to disclose any personally identifiable or non-personal information about you if we are required to do so by law, with respect to copyright and other intellectual property infringement claims, or if we believe that such action is necessary to: (a) fulfill a government request; (b) conform with the requirements of the law or legal process; (c) protect or defend our legal rights or property, our Website, or other users; or (d) in an emergency to protect the health and safety of our Website's users or the general public.</p>
+<p>5.     Your California Privacy Rights:  Residents of the State of California, under certain provisions of the California Civil Code, have the right to request from companies conducting business in California a list of all third parties to which the company has disclosed certain personally identifiable information as defined under California law during the preceding year for third party direct marketing purposes. You are limited to one request per calendar year. In your request, please attest to the fact that you are a California resident and provide a current California address for our response. You may request the information in writing as provided in Section H below.</p>
+<h4>E.    PUBLIC FORUMS</h4>
+<p>
+We may offer chat rooms, blogs, message boards, bulletin boards, or similar public forums where you and other users of our Website can communicate. The protections described in this Privacy Policy do not apply when you provide information (including personal information) in connection with your use of these public forums.  We may use personally identifiable and non-personal information about you to identify you with a posting in a public forum.  Any information you share in a public forum is public information and may be seen or collected by anyone, including third parties that do not adhere to our Privacy Policy. We are not responsible for events arising from the distribution of any information you choose to publicly post or share through our Website.</p>
+<h4>F.    CHILDREN</h4>
+
+<p>The features, programs, promotions and other aspects of our Website requiring the submission of personally identifiable information are not intended for children.  We do not knowingly collect personally identifiable information from children under the age of 13.  If you are a parent or guardian of a child under the age of 13 and believe he or she has disclosed personally identifiable information to us please contact us as provided in Section I below.  A parent or guardian of a child under the age of 13 may review and request deletion of such child's personally identifiable information as well as prohibit the use thereof.</p>
+<h4>G.    KEEPING YOUR INFORMATION SECURE</h4>
+
+<p>We have implemented security measures we consider reasonable and appropriate to protect against the loss, misuse and alteration of the information under our control.  Please be advised, however, that while we strive to protect your personally identifiable information and privacy, we cannot guarantee or warrant the security of any information you disclose or transmit to us online and are not responsible for the theft, destruction, or inadvertent disclosure of your personally identifiable information. In the unfortunate event that your "personally identifiable information" (as the term or similar terms are defined by any applicable law requiring notice upon a security breach) is compromised, we may notify you by email (at our sole and absolute discretion) to the last email address you have provided us in the most expedient time reasonable under the circumstances; provided, however, delays in notification may occur while we take necessary measures to determine the scope of the breach and restore reasonable integrity to the system as well as for the legitimate needs of law enforcement if notification would impede a criminal investigation. From time to time we evaluate new technology for protecting information, and when appropriate, we upgrade our information security systems.</p>
+<h4>H.    OTHER SITES/LINKS</h4>
+<p>
+Our Website may link to or contain links to other third party websites that we do not control or maintain, such as in connection with purchasing products referenced on our Website and banner advertisements. We are not responsible for the privacy practices employed by any third party website. We encourage you to note when you leave our Website and to read the privacy statements of all third party websites before submitting any personally identifiable information.</p>
+<h4>I.    CONTACT INFORMATION</h4>
+<p>
+You may Contact Us if: (a) you have questions or comments about our Privacy Policy; (b) wish to make corrections to any personally identifiable information you have provided; (c) want to opt-out from receiving future commercial correspondence, including emails, from us or our affiliated companies; or (d) wish to withdraw your consent to sharing your personally identifiable information with others.</p>
+<p>
+We will respond to your request and, if applicable and appropriate, make the requested change in our active databases as soon as reasonably practicable.  Please note that we may not be able to fulfill certain requests while allowing you access to certain benefits and features of our Website.</p>
+<h4>J.    SOLE STATEMENT</h4>
+<p>
+This Privacy Policy as posted on this Website is the sole statement of our privacy policy with respect to this Website, and no summary, modification, restatement or other version thereof, or other privacy statement or policy, in any form, is valid unless we post a new or revised policy to the Website.</p>
+    </div>
+</div></span></span></div>
+			<div class="PaneRight"><span class='RightPaneDiv'></span></div>
+		</div></div>
+		<div class="FooterContainer">
+			<div class="PaneFooter"><div class="container"><div class="row clearfix"><span class='FooterPaneDiv'><span class='FooterPaneDiv12'><div id="_ctrl0_ctl30_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl30_divModuleContainer" class="FooterLogos">
+	
+	<ul id="_ctrl0_ctl30_qlList" class="FooterLogos">
+		
+				
+				<li class="nobullet"><img src="//s21.q4cdn.com/151907755/files/images/marzettilogo_11-03-17.png" class="listimage FloatLeft" /><div style="display: block; float: left;"><a target="_blank" href="http://www.marzetti.com/">Visit Marzetti.com</a></div>
+				
+			
+				
+				<li class="nobullet"><img src="//s21.q4cdn.com/151907755/files/images/sisterschuberts.png" class="listimage FloatLeft" /><div style="display: block; float: left;"><a target="_blank" href="http://www.sisterschuberts.com/">Visit Sisterschuberts.com</a></div>
+				
+			
+				
+				<li class="nobullet"><img src="//s21.q4cdn.com/151907755/files/images/NYB-Travel-Logo-Sm.png" class="listimage FloatLeft" /><div style="display: block; float: left;"><a target="_blank" href="http://www.nybakery.com/">Visit Nybakery.com</a></div>
+				
+			
+				
+				<li class="nobullet"><img src="//s21.q4cdn.com/151907755/files/images/flatoutlogo.png" class="listimage FloatLeft" /><div style="display: block; float: left;"><a target="_blank" href="http://www.flatoutbread.com/">Visit flatoutbread.com</a></div>
+				
+			
+	</ul>
+</div>
+</span><span class='FooterPaneDiv13'><div id="_ctrl0_ctl33_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl33_divModuleContainer" class="LogosMob">
+	
+	<ul id="_ctrl0_ctl33_qlList" class="LogosMob">
+		
+				
+				<li class="nobullet"><img src="//s21.q4cdn.com/151907755/files/images/marzettilogo_11-03-17.png" class="listimage FloatLeft" /><div style="display: block; float: left;"><a target="_blank" href="http://www.marzetti.com/">Visit Marzetti.com</a></div>
+				
+			
+				
+				<li class="nobullet"><img src="//s21.q4cdn.com/151907755/files/images/schubertmobile.png" class="listimage FloatLeft" /><div style="display: block; float: left;"><a target="_blank" href="http://www.sisterschuberts.com/">Visit Sisterschuberts.com</a></div>
+				
+			
+				
+				<li class="nobullet"><img src="//s21.q4cdn.com/151907755/files/images/NYB-Travel-Logo-Sm.png" class="listimage FloatLeft" /><div style="display: block; float: left;"><a target="_blank" href="http://www.nybakery.com/">Visit Nybakery.com</a></div>
+				
+			
+				
+				<li class="nobullet"><img src="//s21.q4cdn.com/151907755/files/images/flatoutmobile.png" class="listimage FloatLeft" /><div style="display: block; float: left;"><a target="_blank" href="http://www.flatoutbread.com/">VISIT FLATOUTBREAD.COM</a></div>
+				
+			
+	</ul>
+</div>
+</span><span class='FooterPaneDiv14'>
+<div class="EditSubscriberContainer MailingListSignupContainer">
+<script language="javascript">
+    function enableValidators1()
+    {
+        // enable all validators
+        for( var i = 0; i < Page_Validators.length; i++ )
+        {
+            if (Page_Validators[i].id.indexOf('EmailValidator1') >= 0)
+            {
+                ValidatorEnable(Page_Validators[i], true);
+            }
+            else
+            {
+                ValidatorEnable(Page_Validators[i], false);
+            }
+        }
+    }
+</script>
+
+
+<div id="_ctrl0_ctl36_divModuleContainer" class="MailingListForm FooterMail">
+<h2 id="_ctrl0_ctl36_lblTitle"><span id="_ctrl0_ctl36_lblModuleTitle" class="ModuleTitle">Email Alerts</span><span id="_ctrl0_ctl36_lblHelpPage"></span></h2>
+    <table cellpadding="0" cellspacing="0" border="0" class="MailingListTable">
+        <tr><td colspan="2" class="IntroTextColumn"><span id="_ctrl0_ctl36_lblIntroText" class="IntroText"></span></td></tr>
+        <tr id="rowEmailAddress">
+            <td class="MailingListCol1"><label for="_ctrl0_ctl36_txtEmail" id="_ctrl0_ctl36_lblEmailAddressText">Email Address</label></td>
+            <td class="MailingListCol2">
+                <input name="_ctrl0$ctl36$txtEmail" type="text" id="_ctrl0_ctl36_txtEmail" />
+                <span id="_ctrl0_ctl36_lblRequiredEmailAddress" class="RequiredField">*</span>
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </table>
+    <table id="_ctrl0_ctl36_tableMailingLists" cellpadding="0" cellspacing="0" border="0" width="100%" class="MailingListListTable">
+	<tr id="_ctrl0_ctl36_rowMailingListLabel">
+		<td colspan="2">
+                <span id="_ctrl0_ctl36_lblMailingListsText" class="MailingListsHeading">Mailing Lists</span>
+                <span id="_ctrl0_ctl36_lblRequiredMailingLists" class="RequiredField">*</span>
+            </td>
+	</tr>
+	<tr id="_ctrl0_ctl36_rowMailingLists">
+		<td colspan="2">
+                <span id="_ctrl0_ctl36_chkLists"><input id="_ctrl0_ctl36_chkLists_0" type="checkbox" name="_ctrl0$ctl36$chkLists$0" checked="checked" value="31" /><label for="_ctrl0_ctl36_chkLists_0">Press Releases</label><br /><input id="_ctrl0_ctl36_chkLists_1" type="checkbox" name="_ctrl0$ctl36$chkLists$1" checked="checked" value="33" /><label for="_ctrl0_ctl36_chkLists_1">SEC Filings (10-K, 10-Q & Proxy)</label></span>
+                
+                
+            </td>
+	</tr>
+</table>
+
+    <br class="NoBr">
+    <div id="_ctrl0_ctl36_UCCaptcha_divModuleContainer" class="CaptchaContainer">
+<table id="_ctrl0_ctl36_UCCaptcha_Table1" cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2"><img src="http://www.lancastercolony.com/q4api/v4/captcha?clientId=_ctrl0_ctl36_UCCaptcha" id="_ctrl0_ctl36_UCCaptcha_Image1" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><b>Enter the code shown above.</b></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input name="_ctrl0$ctl36$UCCaptcha$txtCode" type="text" id="_ctrl0_ctl36_UCCaptcha_txtCode" />
+		</td>
+	</tr>
+</table>
+
+</div>
+    <br class="NoBr" />
+    <div class="GridActions">
+        <input type="submit" name="_ctrl0$ctl36$btnSubmit" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctrl0$ctl36$btnSubmit&quot;, &quot;&quot;, true, &quot;f4229133-f30a-4ea7-a67b-f9b761f980f3&quot;, &quot;&quot;, false, false))" id="_ctrl0_ctl36_btnSubmit" class="Button ActionButton" />
+    </div>
+    <a href="/investors/other-investor-resources/investor-email-alert-signup/default.aspx">Unsubscribe</a>
+    <p><small>If you have trouble viewing the captcha (or form), please contact <a href="mailto:support@q4inc.com">support@q4inc.com</a> to register.</small></p>
+</div>
+<div id="_ctrl0_ctl36_divEditSubscriberConfirmation" class="EditSubscriberConfirmation" style="DISPLAY:none;"></div>
+</div>
+<div id="_ctrl0_ctl36_div1" class="EditSubscriberConfirmation"></div></span><span class='FooterPaneDiv15'><div id="_ctrl0_ctl39_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl39_divModuleContainer" class="FooterLinks clearfix">
+	<h2 id="_ctrl0_ctl39_lblTitle"><span id="_ctrl0_ctl39_lblModuleTitle" class="ModuleTitle">Quick Links</span></h2>
+	<ul id="_ctrl0_ctl39_qlList" class="FooterLinks clearfix">
+		
+				
+				<li class="QuickLinkRow"><a target="_self" href="http://www.lancastercolony.com/our-company/contact-us/default.aspx">Contact Us</a>
+				
+			
+				
+				<li class="QuickLinkRowAlt"><a target="_self" href="http://www.lancastercolony.com/investors/sec-filings-and-annual-reports/sec-filings/default.aspx">SEC Filings and Annual Reports</a>
+				
+			
+				
+				<li class="QuickLinkRow"><a target="_self" href="http://www.lancastercolony.com/investors/events-and-presentations/default.aspx">Events & Presentations</a>
+				
+			
+				
+				<li class="QuickLinkRowAlt"><a target="_self" href="http://www.lancastercolony.com/investors/stock-information/stock-quote/default.aspx">Stock Information</a>
+				
+			
+	</ul>
+</div>
+</span></span></div></div></div>
+			<div class="PaneFooter2"><div class="container clearfix"></div></div>
+			<div class="PaneQ4Footer"><div class="container clearfix"><span class='Q4FooterDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="BlankModuleContainer">
+    
+    <script src="https://q4widgets.q4web.com/preview/js/toolbar.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script>
+    $('.PreviewToolBar').previewToolbar();
+    $(document).ready(function(){
+
+        //Mobile Navigation
+        $('.MobileToggle i').on('click', function(){
+            $('.MobileNav').slideToggle();
+            $(this).toggleClass('active');
+        });
+
+        $('.MobileNav').on('click', '.has-children > a', function(e) {
+            var $this = $(this),
+                $parent = $this.parent();
+                if (!$parent.hasClass('open')) {
+                    e.preventDefault();
+                    $parent.addClass('open').find('>ul').slideDown();
+                    $parent.siblings().removeClass('open').find('>ul').slideUp();
+                    $parent.siblings().find('.open').removeClass('open').find('ul').hide();
+                }
+        });
+
+        $('.MobileNav li.expanded > a').trigger('click');
+
+        $('.MainNav .level1, .MobileNav .level1').prepend('<li><a href="/Home/default.aspx">Home</a></li>');
+
+
+        $(window).resize(function(){
+            if($(window).width() > 767){
+                if($('.MobileToggle i').hasClass('active')){
+                    $('.MobileToggle i').trigger('click');
+                }
+            }
+        });
+
+
+        //Make Footer Links icons clickable
+        $('.FooterLogos li, .LogosMob li').each(function(){
+            var href = $(this).find('a').attr('href');
+            $(this).find('img').wrap('<a target="_blank" href="' + href + '"></a>');
+        });
+
+
+        //Footer Email Placeholder
+        function lang_focus(name, element) {
+            $(element).val(name);
+            $(element).focus(function() {
+                if (element.value == name) element.value = '';
+            });
+
+            $(element).blur(function() {
+                if (!element.value.length) element.value = name;
+            });
+        };
+
+        $('.FooterMail .MailingListCol2 input[type="text"]').filter(function() {
+            $(this).removeAttr('onkeypress');
+            var name = "Your Email Address";
+            lang_focus(name, this);
+        });
+
+
+        //Footer Email Functionality
+        function scrollToMail(){
+            $('html,body').animate({
+                scrollTop: $('.PaneFooter .MailingListSignupContainer').offset().top
+            },650);
+        }
+
+        $('.FooterMail .ActionButton').on('click', function(){
+            setTimeout(function(){
+                if($('.PaneFooter .ErrorContainer').css('display') == 'block'){
+                    scrollToMail();
+                }
+            }, 1);
+        });
+        $('.FooterMail input[type="text"]').keypress(function(e){
+            if(e.which == 13){
+                e.preventDefault();
+                $('.FooterMail .ActionButton').trigger('click');
+            }
+        });
+
+        if($('.PaneFooter .EditSubscriberConfirmation').css('display') == 'block'){
+            scrollToMail()
+        }
+
+
+        //Change captcha text
+        $('.CaptchaContainer b').text('Enter code here');
+        $('.CaptchaContainer img').attr('alt', 'Captcha');
+        $('.CaptchaContainer input[type="text"]').attr('aria-label', 'Captcha Text');
+        $('.CaptchaContainer table').removeAttr('cellpadding cellspacing border width');
+
+
+        //WCAG Accessibility
+        $('.MainNav, .MobileNav').on('focus', 'a' ,function() {
+            $(this).closest('ul').find('li').removeClass('focused');
+            $(this).closest('li').addClass('focused');
+            if ( $(this).closest('li').is(':last-child') && $(this).closest('ul').hasClass('level2') ) {
+                $(this).blur(function() {
+                    $(this).closest('ul').find('li').removeClass('focused');
+                });
+            }
+        });
+
+        // Patent infringment fix
+        $('.MainNav li.has-children').hover(
+            function() {
+                $(this).find('>ul').show();
+            },
+            function() {
+                $(this).find('>ul').hide();
+            }
+        );
+
+        $('.aoda-btn').on('click keypress','.aoda-toggle',function(e){
+            if (e.which == 13 || e.type == 'click') {
+                $('body').toggleClass('aoda');
+
+                if ($.cookie('aoda') == undefined || $.cookie('aoda') == "no") {
+                    $.cookie('aoda','yes');
+                    $("body").addClass("aoda");
+                }
+                else {
+                    $.cookie('aoda','no');
+                    $("body").removeClass("aoda");
+                }
+            }
+        });
+        if ($.cookie('aoda') == "yes") {
+            $("body").addClass("aoda");
+        }
+
+
+        //Page Title
+        $('.PageTitle').contents().filter(function(){ return this.nodeType !== 1; }).wrap('<h1></h1>');
+
+        var registered = $('.Breadcrumb h1').html();
+        if (registered) {
+            var registered2 = registered.replace('®','<sup>®</sup>');
+            $('.Breadcrumb').html(registered2);
+        }
+
+    });
+
+    $(window).load(function(){
+        $('.FooterLogos a img, .LogosMob a img').attr('alt','Brand Logo');
+    });
+
+</script>
+</div></span><span class='Q4FooterDiv16'><div id="_ctrl0_ctl42_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl42_divModuleContainer" class="BottomLinks clearfix">
+	
+	<ul id="_ctrl0_ctl42_qlList" class="BottomLinks clearfix">
+		
+				
+				<li class="QuickLinkRow"><a target="_self" href="http://www.lancastercolony.com/site-map/default.aspx">Site Map</a>
+				
+			
+				
+				<li class="QuickLinkRowAlt"><a target="_self" href="http://www.lancastercolony.com/our-company/faq/default.aspx">FAQ</a>
+				
+			
+				
+				<li class="QuickLinkRow"><a target="_self" href="http://www.lancastercolony.com/terms-of-use/default.aspx">Terms of Use</a>
+				
+			
+				
+				<li class="QuickLinkRowAlt"><a target="_self" href="http://www.lancastercolony.com/privacy-policy/default.aspx">Privacy Policy</a>
+				
+			
+				
+				<li class="QuickLinkRow"><a target="_self" href="http://www.lancastercolony.com/supply-chain-compliance/default.aspx">Supply Chain Compliance</a>
+				
+			
+				
+				<li class="QuickLinkRowAlt"><a target="_self" href="http://www.lancastercolony.com/our-company/employment-opportunities/default.aspx">Careers</a>
+				
+			
+	</ul>
+</div>
+</span><span class='Q4FooterDiv17'>
+<div class="Q4FooterContainer clearfix">
+	<a href="http://q4inc.com/Powered-by-Q4/" id="_ctrl0_ctl45_hrefWebsiteRecording" target="_blank"><span id="_ctrl0_ctl45_lblWebsiteRecording" class="WebsiteRecording">Powered By Q4 Inc.</span><span> </span><span id="_ctrl0_ctl45_lblVersion" class="Version">5.27.0.2</span></a>
+</div></span><span class='Q4FooterDiv18'><div id="_ctrl0_ctl48_divModuleContainer" class="ModuleContent aoda-btn">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <span class="js-aoda-toggle aoda-toggle hoverfade" title="Toggle high contrast view" role="button" tabindex="0">High Contrast</span>
+        </div>
+    </div>
+</div>
+</span><span class='Q4FooterDiv19'><div id="_ctrl0_ctl51_divModuleContainer" class="HtmlTextContainer Copyright">
+    
+    <div class="ContentContainer">
+        <p>© 2017 Lancaster Colony Corporation. All Rights Reserved. | 
+380 Polaris Parkway, Westerville, Ohio 43082</p>
+    </div>
+</div></span></div></div>
+		</div>
+	</div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

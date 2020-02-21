@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# video: http://ogp.me/ns/video# ya: http://webmaster.yandex.ru/vocabularies/" class="pages-corp" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"393deec9cb",applicationID:"330714021"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://www.dictionary.com/e/xmlrpc.php" />
+
+	<title>Terms of Service &amp; Privacy Policy - Everything After Z by Dictionary.com</title>
+<script>
+var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+window.crbAdLocations = {"test":false,"atw":false,"atw-landing":false,"atw-category":false,"slideshow":false,"article":false,"category":false,"homepage":false,"video":false,"crossword":false,"word-finder":false,"word-finder-scrabble":false,"word-finder-list":false,"crossword-solver":false,"wotd":false,"serp":true};
+</script>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v7.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.dictionary.com/e/terms/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Terms of Service &amp; Privacy Policy - Everything After Z by Dictionary.com" />
+<meta property="og:description" content="Privacy &amp; Cookie Policy Contact Information Terms of Service PRIVACY &amp; COOKIE POLICY Last Updated on: May 25, 2018 Dictionary.com, LLC (&#8220;Dictionary,&#8221; &#8220;we,&#8221; &#8220;us,&#8221; or &#8220;our&#8221;) respects your privacy and is committed to being transparent about the tracking technologies we use. This Privacy &amp; Cookie Policy describes our practices concerning the personal information collected through our websites, including Dictionary.com and Thesaurus.com (the “Sites”) and any &hellip;" />
+<meta property="og:url" content="https://www.dictionary.com/e/terms/" />
+<meta property="og:site_name" content="Everything After Z by Dictionary.com" />
+<meta property="article:publisher" content="https://www.facebook.com/dictionarycom" />
+<meta property="fb:app_id" content="267160383314960" />
+<meta property="og:image" content="https://www.dictionary.com/e/wp-content/uploads/2017/07/default_logo_1000x700.jpg" />
+<meta property="og:image:secure_url" content="https://www.dictionary.com/e/wp-content/uploads/2017/07/default_logo_1000x700.jpg" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="700" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Privacy &amp; Cookie Policy Contact Information Terms of Service PRIVACY &amp; COOKIE POLICY Last Updated on: May 25, 2018 Dictionary.com, LLC (&#8220;Dictionary,&#8221; &#8220;we,&#8221; &#8220;us,&#8221; or &#8220;our&#8221;) respects your privacy and is committed to being transparent about the tracking technologies we use. This Privacy &amp; Cookie Policy describes our practices concerning the personal information collected through our websites, including Dictionary.com and Thesaurus.com (the “Sites”) and any &hellip;" />
+<meta name="twitter:title" content="Terms of Service &amp; Privacy Policy - Everything After Z by Dictionary.com" />
+<meta name="twitter:site" content="@dictionarycom" />
+<meta name="twitter:image" content="https://www.dictionary.com/e/wp-content/uploads/2017/07/default_logo_1000x700.jpg" />
+<meta name="twitter:creator" content="@dictionarycom" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.dictionary.com\/e\/","sameAs":["https:\/\/www.facebook.com\/dictionarycom","https:\/\/www.instagram.com\/dictionarycom\/","https:\/\/www.pinterest.com\/dictionarycom\/","https:\/\/twitter.com\/dictionarycom"],"@id":"https:\/\/www.dictionary.com\/e\/#organization","name":"Dictionary.com","logo":"https:\/\/www.dictionary.com\/e\/wp-content\/uploads\/2017\/07\/default_logo_800x800.jpg"}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//cdn.polyfill.io' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Everything After Z by Dictionary.com &raquo; Feed" href="https://www.dictionary.com/e/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Everything After Z by Dictionary.com &raquo; Comments Feed" href="https://www.dictionary.com/e/comments/feed/" />
+<link rel="shortcut icon" href="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/favicon.ico?ver=1579204918" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.dictionary.com\/e\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.dictionary.com/e/wp-includes/css/dist/block-library/style.min.css?ver=5.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-parsely-style-css'  href='https://www.dictionary.com/e/wp-content/plugins/wp-parsely/wp-parsely.css?ver=1579205005' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-mCustomScrollbar-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/jquery.mCustomScrollbar.min.css?ver=1579204918' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-font-awesome-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/font-awesome.min.css?ver=1579204918' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-slick-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/slick.css?ver=1579204918' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/style.css?ver=1579204918' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-main-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle-main.css?ver=1579205020' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-corporate-common-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle-corporate-common.css?ver=1579205020' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-terms-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle-terms.css?ver=1579205020' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-marketing-message-styles-css'  href='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle-marketing-message.css?ver=1579205020' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/js/vendor/jquery.mCustomScrollbar.concat.min.js?ver=1579204918'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/js/vendor/slick.js?ver=1579204918'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/assets/bundle.js?ver=1579205016'></script>
+<script type='text/javascript' src='https://cdn.polyfill.io/v2/polyfill.min.js?ver=5.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var crb_tracking_arguments = {"tracking_enabled":"1","tracking_qr":"","tracking_ev":"p","tracking_pn":"","tracking_ct":""};
+var crb_theme_settings = {"homeurl":"https:\/\/www.dictionary.com\/e\/","editorialSearchUrl":"https:\/\/www.dictionary.com\/e\/?s={{query}}&post_type[]=post&post_type[]=page&post_type[]=attachment&post_type[]=crb_press&post_type[]=crb_videos&post_type[]=crb_slideshow&post_type[]=crb_wotd","dictionarySearchUrl":"https:\/\/www.dictionary.com\/browse\/{{query}}?s=t","thesaurusSearchUrl":"https:\/\/www.thesaurus.com\/browse\/{{query}}?s=t","ajaxurl":"https:\/\/www.dictionary.com\/e\/crb-ajax\/cached.php","cachebuster":"1579317306","click_token":"","ad_wrapper_url":"\/\/ads.pubmatic.com\/AdServer\/js\/pwt\/103207\/746","0":"scra"};
+var crb_parsely_settings = {"api_url":"https:\/\/api.parsely.com\/v2\/","profile_endpoint":"profile","related_endpoint":"related","api_key":"dictionary.com","boost":"","tag":"","history_key":"crb_posts_history","date":"2017-10-16T11:59","post_classes":["single-crb_slideshow","single-post"],"post_type":"page"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/js/build/bundle-theme-main.js?ver=1579205042'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.dictionary.com/e/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.dictionary.com/e/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.1" />
+<link rel='shortlink' href='https://www.dictionary.com/e/?p=51107' />
+<link rel="alternate" type="application/json+oembed" href="https://www.dictionary.com/e/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fterms%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.dictionary.com/e/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fterms%2F&#038;format=xml" />
+
+<!-- BEGIN wp-parsely Plugin Version 2.0 -->
+<meta name="wp-parsely_version" id="wp-parsely_version" content="2.0"/>
+			<script type="application/ld+json">
+		{"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.dictionary.com\/e\/terms\/"},"headline":"Terms of Service &amp; Privacy Policy","url":"https:\/\/www.dictionary.com\/e\/terms\/","dateCreated":"2017-10-16T18:59:07Z","datePublished":"2017-10-16T18:59:07Z","dateModified":"2019-12-23T11:38:02Z","articleSection":"Uncategorized","author":[{"@type":"Person","name":"Dictionary.com"}],"creator":["Dcom Support"],"keywords":["","affiliates employees agents third party","agents third party content","agents third party content providers","computer or mobile device","cookie policy","cookies","employees agents third party","employees agents third party content","information","material or information","mobile device","party content providers or licensors","personal information","privacy cookie","privacy cookie policy","process your personal information","services","site","third party","third party content providers"],"publisher":{"@type":"Organization","name":"Everything After Z by Dictionary.com","logo":{"@type":"ImageObject","url":""}},"custom_metadata":"{\"description\":\"Privacy &amp; Cookie Policy Contact Information Terms of Service PRIVACY &amp; COOKIE POLICY Last Updated on: May 25, 2018 Dictionary.com, LLC (&#8220;Dictionary,&#8221; &#8220;we,&#8221; &#8220;us,&#8221; or &#8220;our&#8221;) respects your privacy and is committed to being transparent about the tracking technologies we use. This Privacy &amp; Cookie Policy describes our practices concerning the personal information collected through our websites, including Dictionary.com and Thesaurus.com (the \\u201cSites\\u201d) and any &hellip;\"}"}
+		</script>
+
+					<meta name="parsely-metadata" content="{&quot;description&quot;:&quot;Privacy &amp; Cookie Policy Contact Information Terms of Service PRIVACY &amp; COOKIE POLICY Last Updated on: May 25, 2018 Dictionary.com, LLC (&#8220;Dictionary,&#8221; &#8220;we,&#8221; &#8220;us,&#8221; or &#8220;our&#8221;) respects your privacy and is committed to being transparent about the tracking technologies we use. This Privacy &amp; Cookie Policy describes our practices concerning the personal information collected through our websites, including Dictionary.com and Thesaurus.com (the \u201cSites\u201d) and any &hellip;&quot;}"/>
+			<!-- END wp-parsely Plugin Version 2.0 -->
+		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload { opacity: 0; }
+				.lazyloading {
+					border: 0 !important;
+					opacity: 1;
+					background: rgba(255, 255, 255, 0) url('https://www.dictionary.com/e/wp-content/plugins/wp-smushit/app/assets/images/smush-lazyloader-1.gif') no-repeat center !important;
+					background-size: 16px auto !important;
+				}
+					</style>
+		<script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script><script src="https://www.dictionary.com/e/wp-content/plugins/gravityforms/js/gravityforms.min.js"></script>  <link rel="preconnect" href="https://ak.sail-horizon.com">
+  <link rel="preconnect" href="https://api.sail-personalize.com">
+  <link rel="preconnect" href="https://track.dictionary.com">
+  <link rel="preconnect" href="https://api.parsely.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.googletagservices.com">
+<link rel="preconnect" href="https://ads.pubmatic.com"> 
+<link rel="preconnect" href="https://s.amazon-adsystem.com">
+<link rel="preconnect" href="https://tpc.googlesyndication.com">
+
+
+<script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script>
+<script>Sailthru.init({ customerId: '79cddfbc50ef558a5e8bef02e1ffa767' });</script>
+
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZVH87');</script>
+<!-- End Google Tag Manager -->
+
+<meta name="google-site-verification" content="CW6ZjP5DwCOJ8EiGWZuA54-ScKUf9H8kWiXsiX3Nadg"/>
+
+<meta property="article:tag" content="eaz-atw"/>
+<script>
+function loadjscssfile(filename, filetype){
+   if (filetype=="js"){ //if filename is a external JavaScript file
+       var fileref=document.createElement('script');
+       fileref.setAttribute("type","text/javascript");
+       fileref.setAttribute("src", filename);
+   }
+   else if (filetype=="css"){ //if filename is an external CSS file
+       var fileref=document.createElement("link");
+       fileref.setAttribute("rel", "stylesheet");
+       fileref.setAttribute("type", "text/css");
+       fileref.setAttribute("href", filename);
+   }
+   if (typeof fileref!="undefined") {
+    document.getElementsByTagName("head")[0].appendChild(fileref);
+   }
+}
+
+var PWT={}; //Initialize Namespace
+PWT.jsLoaded = function() { //PubMatic pwt.js on load callback is used to load GPT
+  var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+  (function() {
+    var useSSL = 'https:' == document.location.protocol;
+    var gptsrc = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+    loadjscssfile(gptsrc,'js');
+  })();
+
+  window.OWT.registerExternalBidders();
+}
+</script>
+<script>
+(function() {
+  var purl = window.location.href;
+  var url = window.crb_theme_settings.ad_wrapper_url;
+  var profileVersionId = '';
+
+  if(purl.indexOf('pwtv=')>0) {
+    var regexp = /pwtv=(.*?)(&|$)/g;
+    var matches = regexp.exec(purl);
+    if(matches.length >= 2 && matches[1].length > 0) {
+      profileVersionId = '/'+matches[1];
+    }
+  }
+  var pwtsrc = url+profileVersionId+'/pwt.js'; loadjscssfile(pwtsrc,'js');
+
+})();
+
+</script>
+</head>
+<body class="page-template page-template-templates page-template-terms-of-service page-template-templatesterms-of-service-php page page-id-51107" data-slug="terms-of-service-privacy-policy-everything-after-z-by-dictionary-com">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe  height="0" width="0" style="display:none;visibility:hidden" data-src="https://www.googletagmanager.com/ns.html?id=GTM-WZVH87" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZVH87" height="0" width="0" style="display:none;visibility:hidden"></noscript></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>
+var updateRefAndFire = function(url, urlref) {
+    var dictionary_com_re = new RegExp("https*://www.dictionary.com/(?!e\/)");
+    var is_from_main_site = dictionary_com_re.test(urlref);
+    var urlref = is_from_main_site ? "http://dictionary_core.com" : urlref;
+
+    PARSELY.beacon.trackPageView({
+        url: url,
+        urlref: urlref,
+        js: 1
+    });
+    return true;
+}
+
+PARSELY = {
+    autotrack: false,
+    onload: function() {
+        updateRefAndFire(location.href,document.referrer);
+        jQuery("button.slick-next").bind("click", function() {
+          var $slider = jQuery('.article .slides.slick-slides');
+          var id = $slider.find('.slide.slick-active').data('id');
+          var url = location.protocol+'//'+location.host+location.pathname+'#'+id+(location.search?location.search:"")
+
+          updateRefAndFire(url, location.href);
+        });
+    }
+};
+</script><div class="wrapper">
+  
+<div class="marketing-message" style="background-color: #FFD866">
+  <span class="marketing-message__before" style="background-color: #BE9D3C"></span>
+
+  <div class="marketing-message__content" style="color: #1A1A1A">
+    <span class="marketing-message__content__before" style="border-color: #FFD866 transparent transparent transparent"></span>
+    <span class="marketing-message__content__before--mobile" style="border-color: transparent #FFD866 transparent transparent"></span>
+
+    <p>
+      <a href="https://www.dictionary.com/e/top-searches-of-2019/" data-link-id="lnc8a5">
+        <i>See the</i><b> Most Searched Words</b><i> of 2019...</i>      </a>
+    </p>
+
+    <span class="marketing-message__content__after" style="border-color: transparent #FFD866 transparent transparent"></span>
+    <span class="marketing-message__content__after--mobile" style="border-color: transparent transparent #FFD866 transparent"></span>
+  </div>
+
+  <span class="marketing-message__after" style="background-color: #BE9D3C"></span>
+
+  <a class="marketing-message-close"></a>
+</div>
+
+  <div class="header header--search">
+		<nav class="nav-utilities">
+			<a href="#" class="toggle">
+				<span></span>
+				Menu			</a>
+
+			<ul id="menu-top-menu" class="menu"><li id="menu-item-21023" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-21023"><a href="https://www.dictionary.com/" data-linkid="tqks0v">Dictionary.com</a></li>
+<li id="menu-item-21024" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21024"><a href="https://www.thesaurus.com/" data-linkid="qxnxzj">Thesaurus.com</a></li>
+<li id="menu-item-21851" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-21851"><a href="https://www.dictionary.com/e/" data-linkid="9v7tke">Everything After Z</a></li>
+<li id="menu-item-120374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120374"><a href="https://www.dictionary.com/e/all-the-words/" data-linkid="f0ftiz">All The Words</a></li>
+</ul>		</nav><!-- /.nav-utilities -->
+
+		<div class="nav-panel"><ul id="menu-main-menu" class="menu"><li id="menu-item-21831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21831"><a href="https://www.dictionary.com/" data-linkid="lxabec">Dictionary.com</a>
+<ul class="sub-menu">
+	<li id="menu-item-21832" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21832"><a href="https://www.dictionary.com/e/word-of-the-day/" data-linkid="1498ik">Word of the Day</a></li>
+	<li id="menu-item-143845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143845"><a href="https://www.dictionary.com/games/quizzes/">Quizzes</a></li>
+	<li id="menu-item-136070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136070"><a href="https://www.dictionary.com/e/word-finder/">Word Finder &#038; Unscrambler</a></li>
+	<li id="menu-item-126384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126384"><a href="https://www.dictionary.com/e/crosswordsolver/" data-linkid="636f6c">Crossword Solver</a></li>
+	<li id="menu-item-126385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126385"><a href="https://www.dictionary.com/e/crossword/" data-linkid="636f6c">Daily Crossword Puzzle</a></li>
+</ul>
+</li>
+<li id="menu-item-21835" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21835"><a href="https://www.thesaurus.com/" data-linkid="c1drjk">Thesaurus.com</a></li>
+<li id="menu-item-21836" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-21836"><a href="https://www.dictionary.com/e/" data-linkid="t6ehki">Everything After Z</a>
+<ul class="sub-menu">
+	<li id="menu-item-126387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126387"><a href="https://www.dictionary.com/e/video/" data-linkid="t6ehki">Video</a></li>
+	<li id="menu-item-126389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-126389"><a href="https://www.dictionary.com/e/c/word-facts/" data-linkid="t6ehki">Word Facts</a></li>
+	<li id="menu-item-126388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126388"><a href="https://www.dictionary.com/e/grammar/" data-linkid="t6ehki">Grammar</a></li>
+</ul>
+</li>
+<li id="menu-item-110179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-110179"><a href="https://www.dictionary.com/e/all-the-words/" data-linkid="qnez9u">All The Words</a>
+<ul class="sub-menu">
+	<li id="menu-item-112728" class="menu-item menu-item-type-taxonomy menu-item-object-crb_word_category menu-item-112728"><a href="https://www.dictionary.com/e/slang/" data-linkid="qnez9u">Slang</a></li>
+	<li id="menu-item-112729" class="menu-item menu-item-type-taxonomy menu-item-object-crb_word_category menu-item-112729"><a href="https://www.dictionary.com/e/emoji/" data-linkid="bhng9k">Emoji</a></li>
+	<li id="menu-item-112730" class="menu-item menu-item-type-taxonomy menu-item-object-crb_word_category menu-item-112730"><a href="https://www.dictionary.com/e/gender-sexuality/" data-linkid="1l40im">Gender &#038; Sexuality</a></li>
+	<li id="menu-item-112731" class="menu-item menu-item-type-taxonomy menu-item-object-crb_word_category menu-item-112731"><a href="https://www.dictionary.com/e/acronyms/" data-linkid="8quzrn">Acronyms</a></li>
+</ul>
+</li>
+</ul></div>
+		<div class="shell">
+			<a href="https://www.dictionary.com/e/" class="logo notext">Everything After Z by Dictionary.com</a>
+
+			<div class="global-search">
+				<form action="https://www.dictionary.com/e/terms/" method="GET" target="_blank">
+					<a href="#" class="toggle">definitions</a>
+
+					<ul class="search__options">
+						<li class="mobile-item mobile-dictionary">
+							<label>
+								<input type="radio" name="search-site" data-value="http://www.dictionary.com/browse/" checked>
+
+								<span>definitions</span>
+							</label>
+						</li>
+
+						<li class="mobile-item mobile-thesaurus">
+							<label>
+								<input type="radio" name="search-site" data-value="http://www.thesaurus.com/browse/">
+
+								<span>synonyms</span>
+							</label>
+						</li>
+
+						<li>
+							<label>
+								<input type="radio" name="search-site" data-value="http://www.dictionary.com/e/?s=">
+
+								<span>editorial</span>
+							</label>
+						</li>
+					</ul>
+
+					<input type="text" name="q" placeholder="" class="search__field">
+
+					<input type="submit" value="Submit" class="search__btn">
+				</form>
+			</div><!-- /.global-search -->
+
+			<div class="clear"></div><!-- /.cl -->
+
+			<nav class="nav-pages"><ul id="menu-header-menu-corporate" class="menu"><li id="menu-item-51186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51186"><a href="https://www.dictionary.com/e/about/">About</a></li>
+<li id="menu-item-51190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51190"><a href="https://www.dictionary.com/e/careers/">Careers</a></li>
+<li id="menu-item-51187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51187"><a href="https://www.dictionary.com/e/contact/">Contact Us</a></li>
+<li id="menu-item-51188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51188"><a href="https://www.dictionary.com/e/press/">Press</a></li>
+<li id="menu-item-51191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51191"><a href="https://www.dictionary.com/e/apps/">Apps</a></li>
+</ul></nav>		</div><!-- /.shell -->
+	</div><!-- /.header -->
+
+<div class="main shell">
+	<div class="content content--full">
+									<article class="article article__single article--full article--list post-51107 page type-page status-publish hentry">
+					
+					<header class="article__head">
+						<h1 class="article__title">Terms of Service &amp; Privacy Policy</h1><!-- /.article__title -->
+					</header><!-- /.article__head -->
+
+					<div class="article__body">
+						<div class="article__entry">
+							<p>
+								<strong>
+									Last Updated on: May 25, 2018								</strong>
+							</p>
+
+							<ul>
+<li><a href="#privacy">Privacy &amp; Cookie Policy</a></li>
+<li><a href="#contact">Contact Information</a></li>
+<li><a href="#terms">Terms of Service</a></li>
+</ul>
+<h2><a id="privacy"/>PRIVACY &amp; COOKIE POLICY</a></h2>
+<p>Last Updated on: May 25, 2018</p>
+<p>Dictionary.com, LLC (&#8220;Dictionary,&#8221; &#8220;we,&#8221; &#8220;us,&#8221; or &#8220;our&#8221;) respects your privacy and is committed to being transparent about the tracking technologies we use. This Privacy &amp; Cookie Policy describes our practices concerning the personal information collected through our websites, including Dictionary.com and Thesaurus.com (the “Sites”) and any related Dictionary products and services including the Dictionary.com mobile app <a href="https://www.dictionary.com/e/apps/">available here</a> (provision of the Sites and related products and services, collectively the “Services.”) and explains why explains how cookies, web beacons, pixel tags, clear gifs, and other similar files or technologies may be used to collect and store the information automatically collected about your computer, device, and Service usage and how you can control the use of these technologies.</p>
+<p><strong>If you do not accept the use of cookies, please disable them as described in the <a id="cookie"/>Cookie Controls.</a></strong></p>
+<ol>
+<li><strong>INTRODUCTION AND SCOPE.</strong> Below we describe what information we collect when you use our Services, how we protect that information, how long we retain it, with whom we share it, and what your privacy and cookie options are. By using the Services, you consent to our collection and use of your information as described in this Privacy &amp; Cookie Policy.
+<p>The Services are controlled and offered by Dictionary.com, LLC from the United States of America and, regardless of your place of residence, your use of them is governed by the laws of the State of California, USA. Dictionary.com, LLC makes no representations that the Services are appropriate for use in other locations or are legal in all jurisdictions. Those who access or use the Services from other locations do so at their own risk and are responsible for compliance with local law. You hereby consent to the transfer and processing of your data in the United States of America and any other jurisdiction throughout the world, which may or may not have different levels of privacy protection than those in your jurisdiction.</p>
+<p>We will continue to evaluate this Privacy &amp; Cookie Policy against new technologies, applicable laws, business practices, and our user&#8217;s needs, and may make changes accordingly. Please check this page periodically for updates. If we make any material changes, we will post the updated Privacy &amp; Cookie Policy here, along with its effective date, and notify you by email or by means of a notice on the Sites. Except in connection with updates that materially change the ways in which we process your information, your continued use of the Services after our posting of changes to this Privacy &amp; Cookie Policy means that you agree to be bound by such changes. We will provide notice in advance of the effective date with regard to any updates that materially change the ways in which we process your personal information.</p>
+<p>The Services may provide links to third-party websites, plug-ins and applications. Clicking on those links or enabling those connections may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy practices.</p>
+<p>Our Services are intended for general audiences over the age of 16 years old. We do not knowingly collect information from children under the age of 16 years old.</p>
+<p>We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.</p>
+<p><center><u>IF YOU ARE NOT AT LEAST 16 YEARS OLD, DO NOT USE THE SERVICES.</u></center></li>
+<li><strong>YOUR PRIVACY CHOICES.</strong> You have choices when it comes to the privacy practices described in this Privacy &amp; Cookie Policy, including your choices related to:
+<ol type="A">
+<li>Targeted Advertising. See Web Browser Controls and Third Party Advertising Controls</li>
+<li>Website Analytics. See Web Browser Controls and Google Analytics Controls</li>
+</ol>
+</li>
+<li><strong>INFORMATION WE COLLECT AND MEANS OF COLLECTION.</strong> We collect information about you from a variety of sources, including from you directly providing it to us (e.g., when you open an account or contact us), from cookies and other tracking technologies that automatically collect information in the course of your use of the Services (skip to <a href="#cookies-trackers">Cookies and Other Trackers</a> section) and from various third parties and public sources. You can use some of the Services without directly providing any information, but if you do not provide certain information or limit the operation of some cookies, you may not be able to use some of the Services we offer.
+<ol type="A">
+<li><strong><u>Information you Provide directly to us.</u></strong> Access to the general content on our Sites does not require you to provide us any personal (e.g., name, date of birth), contact (e.g., email address, phone number) and/or account (username and password) information.You may provide personal information to us, if you choose to:
+<p>• open an account or sign up for one of our newsletters;<br />
+• sign up to receive any additional services like Dictionary.com Premium;<br />
+• submit a help request, a customer services inquiry or other inquiry to us, or fill in any other forms for the purposes of receiving our Services;<br />
+• participate in some of the features accessible via the Services (for example, message boards, chat groups, social networking, games, surveys, polls, promotions, contests, or sweepstakes);<br />
+• contact us about employment opportunities posted on the Sites; or<br />
+• otherwise use the Services in a manner that you have requested.</p>
+<p>Depending on which of these or any other Services you use, the personal information you provide may include your name, email address, user name, home address, telephone number, demographic information (age, gender, etc.), information posted by you on sites accessed via the Services and/or information provided by you in any help request or inquiry you make to us.</p>
+<table border="1">
+<tbody>
+<tr>
+<td>There is no need to provide to us, and we strongly discourage you from, providing any <u>sensitive information</u> about you or anyone else including, details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership or information about your health.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><strong><u>Information collected via automated technologies and interactions.</u></strong> As you interact with the Services, we may collect information via automated means about your computer or mobile device, your preference settings, your location and your activities, including:<br />
+• IP address of your computer;<br />
+• Unique mobile device identifier;<br />
+• Technical information about your computer or mobile device such as type of device, mobile device ID number, screen resolution, web browser information and operating system or platform;<br />
+• Your preferences and settings (time zone, language, etc.);<br />
+• Internet provider or mobile carrier name;<br />
+• The URL of the last webpage you visited before visiting the Site;<br />
+• Information about your activity on the Services (e.g., your search queries, mis-formatted DNS entries, search results selected, clicks, pages viewed, search history, comments);<br />
+• If you are using a mobile device, your mobile device’s geographic location (specific geographic location if you’ve enabled collection of that information, or general geographic location automatically); and<br />
+• If you installed an Application, we may also collect information about that Application (e.g. the specific release date and distribution source of your Application, a unique Application ID, Application partner ID, the ads you click on, and information contained in error log files or cookies, aggregate query or click data and erroneous domain name system requests).Third-parties who provide us with products and services may also place cookies, ad tags and/or beacons that collect the information outlined above in order to provide us with products and services including, analytics tools (<a href="https://support.google.com/analytics/answer/6004245?hl=en&amp;ref_topic=2919631" target="_blank" rel="noopener noreferrer">Google Analytics</a>), functionalities like playing video content (<a href="https://www.brightcove.com/en/legal/privacy" target="_blank" rel="noopener noreferrer">Brightcove</a>), and targeted advertising. These third parties may also collect information about you from other sources and combine it with other information collected about you from third party websites not affiliated with us. For example, advertiser and advertising networks, as well as data analytics companies who service them, may participate in Online Behavioral Advertising and track your activity across various sites and/or devices where they display ads and record your activities, so they can show ads that they consider relevant to you.</p>
+<p><u>Mobile Device Location Information:</u> When you use one of our location-enabled services (for example, when you access Services from a mobile device), we may need to collect and process information about your specific GPS location (including the latitude, longitude or altitude of your mobile device) and the time the location information was recorded, and we may use that information to customize the Services with location-based information, advertising, and features. Some of these services require us to associate location data with your device ID and other information we hold about you.</li>
+<li><strong><a id="cookies-trackers">Cookies and other Trackers</a>.</strong>
+<ol type="a">
+<li><u>WHAT IS A COOKIE?</u> <u>Cookies</u> are text files containing small amounts of information which are downloaded to your computer or mobile device when you visit a website. Cookies are then sent back to the originating website on each subsequent visit, or to another website that recognizes that cookie. A <u>pixel tag</u> (also called a <u>web beacon</u> or clear <u>GIF</u>) is a tiny graphic with a unique identifier, embedded invisibly on a webpage (or an online ad or email) that links web pages to particular web servers and their cookies, and may be used for a variety of purposes, such as counting the number of visitors to the Sites, analyzing how users navigate around the Sites, assessing what content or ads are viewed or clicked on by our visitors. Some ad companies and game developers use &#8220;<u>flash cookies</u>&#8221; for ads and games that use Flash media technology. <u>We use the term &#8220;cookies&#8221; in this policy to refer to cookies and all such similar technologies.</u>Cookies are widely used in order to make websites work, or to work more efficiently, as well as to provide information to the owners of the site. We use these technologies to let you navigate between pages efficiently, remember your preferences, track your use of the Services and generally improve your experience. Ad companies we work with place cookies on your computer to track your activities across various sites so that they can display ads on our Sites and third party websites that are more relevant to you and your interests.<br />
+There are two broad categories of cookies:<br />
+• First party cookies, served directly by us to your computer or mobile device.<br />
+• Third party cookies, which are served by a third party on our behalf. We use third party cookies for functionality, performance / analytics, advertising and social media purposes.</p>
+<p>Cookies can remain on your computer or mobile device for different periods of time. Some cookies are &#8216;session cookies&#8217;, meaning that they exist only while your browser is open. These are deleted automatically once you close your browser. Other cookies are &#8216;permanent cookies&#8217;, meaning that they survive after your browser is closed. They can be used by websites to recognize your computer when you open your browser and browse the Internet again.</li>
+<li><u>HOW DO WE USE COOKIES?</u> We use cookies to:<br />
+• track traffic flow and patterns of travel in connection with our Services;<br />
+• understand the total number of visitors to our sites on an ongoing basis and the types of internet browsers (e.g. Chrome, Safari or Edge), operating systems (e.g. Windows or Mac OS), and screen resolutions used by our visitors;<br />
+• monitor and analyze the performance of our Services and to continually improve them;<br />
+• customize and enhance your online experience; and<br />
+• enable Dictionary and third-party advertising both on and off our Sites.<br />
+Third parties whose products or services are accessible or advertised through the Services, including social networking services, may also use cookies or similar tools, and we advise you to check their privacy policies for information about their cookies and other practices. We do not control the practices of such partners and their privacy policies govern their interactions with you. We encourage you to read their privacy policies.</li>
+<li><u> WHAT TYPES OF COOKIES DO WE USE?</u> The types of cookies used by us and our partners in connection with the Services can be classified into one of the five categories below. We&#8217;ve set out some further information about each category, and the purposes of the cookies we and third parties set in the following table.<br />
+<table style="border: 1px solid black;" cellspacing="5" cellpadding="5">
+<tbody>
+<tr style="border: 1px solid black;">
+<th style="border: 1px solid black;">TYPE OF COOKIE</th>
+<th style="border: 1px solid black;">WHAT IT DOES</th>
+</tr>
+<tr style="border: 1px solid black;">
+<td style="border: 1px solid black;">Strictly Necessary Cookies</td>
+<td style="border: 1px solid black;">These cookies are essential to operate the Sites and provide the Services by helping us provide basic functionality such as loading and rendering pages on the Sites and enabling your navigation around the Sites and use of certain features. They are also used to identify and prevent fraud and improve security.</td>
+</tr>
+<tr>
+<td style="border: 1px solid black;">Functionality Cookies</td>
+<td style="border: 1px solid black;">Functionality cookies record information about choices you&#8217;ve made and allow us to tailor the Sites to you. These cookies mean that when you continue to use or come back to the Sites, we can provide you with our Services as you have asked for them to be provided. For example, these cookies allow us to store language preference. They may also be used to provide certain functionality such as playing video content.</td>
+</tr>
+<tr>
+<td style="border: 1px solid black;">Performance / Analytics Cookies</td>
+<td style="border: 1px solid black;">We use performance/analytics cookies to analyze how the Sites are accessed, used, or is performing in order to provide you with a better user experience and to maintain, operate and continually improve the Sites. For example, these cookies allow us to:<br />
+• Better understand our website visitors so that we can improve how we present our content;<br />
+• Test different design ideas for particular pages, such as our homepage;<br />
+• Collect information about site visitors such as where they are located and what browsers they are using;<br />
+• Determine the number of unique users of the Sites;<br />
+• Improve the Sites by measuring any errors that occur; and<br />
+• Conduct research and diagnostics to improve product offerings.
+</td>
+</tr>
+<tr>
+<td style="border: 1px solid black;">Advertising and Tracking Cookies</td>
+<td style="border: 1px solid black;">As you use our Sites, you will notice that it includes advertising. We allow third party advertising companies to place cookies on our Sites. These cookies enable such companies to track your activity across various sites where they display ads and record your activities so they can show ads that they consider relevant to you as you browse the web.<br />
+Cookies also allow us and third parties to know whether you&#8217;ve seen an ad or a type of ad, and how long it has been since you&#8217;ve last seen it. This information is used for frequency capping purposes, to help tailor the ads you see, and to measure the effectiveness of ads.</td>
+</tr>
+<tr>
+<td style="border: 1px solid black;">Social Media Cookies</td>
+<td style="border: 1px solid black;">Third parties that make their applications available through/on our Sites may set their own cookies in order to track the performance of their applications or customize those applications for you. For example, when you share an article using a social media sharing button on our Sites (e.g., Facebook, Twitter, or Instagram), the social network that has created the button will record that you have done this. Because of how cookies work, we cannot access these cookies, nor can the third parties access the data in cookies used by us. Some pages of our website may also contain embedded content, such as video content from YouTube, and these sites may set their own cookies.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><u>COOKIE CONTROLS.</u> You can control your cookie settings as explained below. We may disclose your opt-out choices to third parties so that they can honor your preferences in accordance with applicable laws.
+<ul>
+<li><u>Web Browser Controls.</u> Most browsers allow you to change your cookie settings. Users can usually set their browsers to block all third-party cookies (which are those set by third-party companies collecting information on websites operated by other companies), block all cookies (including first-party cookies such as the ones We uses to collect search activity information about its users), or block specific cookies. These settings will typically be found in the &#8220;options&#8221; or &#8220;preferences&#8221; menu of your browser. In order to understand these settings, the following links may be helpful, otherwise you should use the &#8220;Help&#8221; option in your browser for more details.
+<ul>
+<li><a href="https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy" target="_blank" rel="noopener noreferrer">Cookie settings in Microsoft Edge</a></li>
+<li>
+<a href="http://support.microsoft.com/kb/196955" target="_blank" rel="noopener noreferrer">Cookie settings in Internet Explorer</a></li>
+<li>
+<a href="http://support.mozilla.com/en-US/kb/Cookies" target="_blank" rel="noopener noreferrer">Cookie settings in Firefox</a></li>
+<li>
+<a href="http://www.google.com/support/chrome/bin/answer.py?hl=en&amp;answer=95647" target="_blank" rel="noopener noreferrer">Cookie settings in Chrome</a></li>
+<li>
+<a href="http://support.apple.com/kb/PH5042" target="_blank" rel="noopener noreferrer">Cookie settings in Safari web</a> and <a href="http://support.apple.com/kb/HT1677" target="_blank" rel="noopener noreferrer">iOS</a>.</li>
+</ul>
+<p>We note that an optional browser setting known as Do Not Track allows you to express your preferences regarding tracking by advertisers and other third-parties. However, we do not recognize or respond to browser-initiated DNT signals, as the Internet industry is currently still working toward defining exactly what DNT means, what it means to comply with DNT, and a common approach to responding to DNT.</li>
+<li><u>Flash Cookie Controls.</u> You can manage the use of Flash technologies with the Flash management tools available at Adobe&#8217;s website.</li>
+</ul>
+<p>• <u>Web-Beacons.</u> You can usually prevent the operation of web-beacons by changing your web-browser cookie settings and your ad choices, or for those in emails, by switching off images in your email client or viewing emails using only the &#8220;text&#8221; display (rather than &#8220;HTML&#8221; display&#8221;). See the &#8220;Help&#8221; section of your email client for instructions. Please see the All About Cookies website for further information about managing your options.<br />
+• <u>Mobile Apps.</u> With respect to our mobile apps, you can stop all collection of information via an app by uninstalling the app. Also, you may be able to exercise specific privacy choices, such as enabling or disabling certain location-based services, by adjusting the permissions in your mobile device.<br />
+• <u>Google Analytics Controls.</u> To see an overview of privacy at Google and how to opt out of certain Google practices, visit https://www.google.com/intl/en/policies/privacy. You can prevent your data from being collected by Google Analytics by downloading the Google Analytics Opt-out Browser Add-on. Opting-out is generally done by the third party dropping a cookie on your browser indicating your intent to opt-out. If you get a new device, install a new browser, erase, or otherwise alter the third party&#8217;s browser cookie file, you may clear the opt-out cookie and no longer be subject to its opt-out.</p>
+<p>• <u>Third Party Advertising Controls.</u> You may exercise choices regarding certain third party advertising cookies through the following organizations:<br />
+o Digital Advertising Alliance (&#8220;DAA&#8221;) Self-Regulatory Program for Online Behavioral Advertising. You exercise the DAA choices regarding Interest-based Advertising here. You can also download the DAA AppChoices app for control over how information about your interests is used for in-app advertising on your mobile device here.<br />
+o European Interactive Digital Advertising Alliance (“EDAA”). To learn more about the EDAA and your opt out options, see Your Online Choices.</p>
+<p>o Network Advertising Initiative (“NAI”). To learn more about the NAI and your opt out options for their members, see http://www.networkadvertising.org/choices/.</p>
+<p>Please be aware that, even if you are able to opt out of certain Interest/behavioral/targeted -based advertising, you may continue to receive other types of ads. Opting out only means that those selected members should no longer deliver certain Interest/behavioral/targeted -based ads to you, but does not mean you will no longer receive any targeted content and/or ads (e.g., from other ad networks). Dictionary is not responsible for effectiveness of, or compliance with, any third-parties&#8217; opt out options or programs or the accuracy of their statements regarding their programs.</p>
+<p>• <u>Promotional Communications.</u> You can opt-out of receiving certain promotional communications (e-mails and push notifications) from us at any time by (i) for e-mails, following the instructions as provided in e-mails to click on the unsubscribe link; and (ii) for push notifications or in-app messages, adjusting the permissions in your mobile device.</p>
+</li>
+</ol>
+</li>
+</ol>
+<li><strong>HOW WE USE YOUR INFORMATION.</strong> We may use your information for the following purposes:• Identification and authentication: We use your identification information to verify your identity when you access and use our Services and to ensure the security of your personal information. This is so we can comply with our contractual obligations to you.<br />
+• Provide the Services: We process your personal information to provide the Services you have requested. This is so we can comply with our contractual obligations to you.<br />
+• Improving our Services: We analyze information about how you use our Services to provide an improved experience for our customers of all our Services, including product testing and site analytics. It is in our legitimate business interests to use the information provided to us for this purpose, so we can understand any issues with our Services and improve them.<br />
+• Compensating our partners: We process your personal information for purposes of calculating compensation to be paid to our third party product/service providers and distributors and to analyze usage across products, services and distribution partner/channel. It is in our legitimate interest to appropriately determine amounts to be paid to our partners and inform our product roadmap and distribution strategy.<br />
+• Communicating with you: We may use your personal information when we communicate with you, for example if we are providing information about changes to the terms and conditions or if you contact us with questions. It is in our legitimate interest that we are able to provide you with appropriate responses and provide you with notices about our Services.<br />
+• Marketing: We may use your personal information to deliver relevant advertisements to you and measure the effectiveness of the advertising we serve to you. It is in our legitimate interest to provide more relevant and interesting advertising messages and inform our marketing strategy. We may use automated decision-making to deliver tailored advertisements based on your personal information. Where necessary, we will obtain your consent before sending such marketing messages.<br />
+• Exercising our rights: We may use your personal information to exercise our legal rights where it is necessary to do so, for example to detect, prevent and respond to fraud claims, intellectual property infringement claims or violations of law or our Terms of Service.<br />
+• Complying with our obligations: We may process your personal information to, for example, carry out fraud prevention checks or comply with other legal or regulatory requirements, where this is explicitly required by law.<br />
+• Customizing your experience: When you use the Services, we may use your personal information to improve your experience of the Services, such as by providing interactive or personalized elements on the Services and providing you with content based on your interests. We may use automated decision-making to customize your experience based on your personal information.<br />
+We may also aggregate and de-identify your information in such a way that you may not reasonably be re-identified by us or any other company, and may use this information for any other purpose.</li>
+<li><strong>HOW WE SHARE YOUR INFORMATION.</strong>We share user information with others for various reasons. What information we make available to other companies depends on the nature of our relationships with them.<br />
+• Service Providers: We may share your information with vendors who provide services on our behalf such as voice transcription, email messaging, customer service, trouble shooting, survey providers, video players.<br />
+• Contests/Sweepstakes Partners: When you sign up to participate in a contest or sweepstakes, your information may be provided to our sweepstakes or contest advertisers, operators, or sponsors and the use of that information will be also governed by those advertisers, operators, or sponsors’ privacy policies or practices.<br />
+• Group Companies: We may share your information with our affiliates, which are entities under common ownership or control of our ultimate parent company, Rock Holdings Inc. for security, internal reporting and regulatory compliance.<br />
+• Fraud prevention: We may disclose your information when we believe disclosure is necessary to investigate, prevent, or respond to suspected illegal or fraudulent activity or to protect the safety, rights, or property of us, our users, or others.<br />
+• Law enforcement purposes and public safety: If requested or required by government authorities, such as law enforcement authorities, courts, or regulators, or otherwise to comply with the law, we may disclose any information we have about our users. We may disclose information collected about you in order to exercise or protect legal rights or defend against legal claims. We also may be required to disclose an individual’s personal information in response to a lawful request by public authorities, including to meet national security or law enforcement requirements.<br />
+• Sale or merger of our business: We may transfer your information to a third party if we or any of our affiliates are involved in a corporate restructuring (e.g., a sale, merger, or other transfer of assets).<br />
+• Advertisers and advertising networks: Advertisers and advertising networks place ads on our Sites. These companies may collect information, such as your computer’s IP address, browser information, mobile device ID, and search queries, as you use our Site and Services. They also may use cookies and other technologies to collect this information when you use our Service as described above (Cookie &amp; other Trackers).<br />
+We require all third parties to respect your privacy and to treat your information in accordance with the law. We only permit third parties to process your personal data for specified purposes and in accordance with our agreements with them.</li>
+<li><strong>SECURITY.</strong> We take the security of your information seriously and use appropriate technical and organizational measures to protect your information against unauthorized or unlawful processing and against accidental loss, destruction or damage. We also limit access to information about you to employees who reasonably need access to it to provide products or services to you, or in order to do their jobs. However, because no security system can be 100% effective, we cannot completely guarantee the security of any information we may have collected from or about you.</li>
+<li><strong>RETENTION.</strong> We retain the information we collect about and from you for as long as necessary to fulfill the purpose we collected it for and for the purpose of satisfying any legal, accounting, or reporting requirements. To determine the appropriate retention period for personal information we process, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorized use or disclosure of your information, the purposes for which we process your personal data and whether we can achieve those purposes through other means, and the applicable legal, accounting, or reporting requirements.<br />
+In some circumstances we may aggregate and de-identify your information in such a way that you may not reasonably be re-identified by us or any other company in which case we may use this information indefinitely without further notice to you.<br />
+In some circumstances you can ask us to delete your data: see ACCESS, REVIEW, REVISION &amp; DELETION RIGHTS below for further information.</li>
+<li><strong> ACCESS, REVIEW, REVISION &amp; DELETION RIGHTS.</strong> If you would like to access, review, revise or delete personal information we have collected from you, please contact us as provided <a href="#contact">below</a>. Your specific rights regarding access, review, revision or deletion of your information is proscribed by local laws. Specific applicable local laws may be outlined below.<strong><u>Your California Privacy Rights.</u></strong>
+<p>If you are a resident of the State of California, under the California Civil Code, you have the right to request from companies conducting business in California a list of all third parties to which the company has disclosed personal information (as defined by California law) during the preceding year for direct marketing purposes. Alternatively, the law provides that if a company has a privacy policy that gives either an opt-out for use of your personal information by third parties for their own marketing purposes, the company may instead provide you with information on how to exercise your disclosure choice options. We qualify for the alternative option; If you are a California resident and you want to opt out of such sharing, please send your request via email or postal mail.</p>
+<p>To make such a request, please send an e-mail to LegalPrivacyTeam@quickenloans.com or write us:</p>
+<p>Quicken Loans Inc.<br />
+Attn: Legal Team<br />
+1050 Woodward Avenue<br />
+Detroit, MI 48226</p>
+<p><strong>All requests sent via regular mail must be labeled “Your California Privacy Rights” on the envelope or post card and clearly stated on the actual request.</strong> For all requests, please include your name, street address, city, state, and zip code (your street address is optional if you wish to receive a response to your request via email. Please include your zip code for our own record-keeping).</p>
+<p><strong><u>Legal rights applicable to personal data collected in the EEA.</u></strong> Pursuant to the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG&amp;toc=OJ:L:2016:119:TOC">EU General Data Protection Regulation (Regulation 2016/679)</a> (“GDPR”) natural persons (called data subjects) are afforded certain rights regarding their personal data, including the right to access, correct, delete, restrict or object to our use of, and receive a portable copy in a usable electronic format of your personal information. You also have the right to withdraw any consent that you have previously provided to us.</p>
+<p>If you would like to exercise any of the rights outlined above, and the law of your jurisdiction requires us to honor that request, please send your request in writing to the address above. To assist us in processing your request in timely manner, please make your request in English if you are able to do so. Your request should include any information relevant to your request, including, without limitation: (i) your name, email and postal address; (ii) the specific right you are asserting (e.g., removal); and (iii) if you are requesting removal, a brief explanation of why you believe such information should be removed.</p>
+<p>To help us prevent fraudulent removal requests, please also include a legible copy of a document that verifies your identity. You need not provide a government-issued document; a utility bill or similar mailing will suffice. You may also obscure parts of the document such as identifying numbers so long as the document continues to clearly identify you. If you are making the request on behalf of another person, please indicate your relationship to that person and provide evidence of your authority to make such request. All requests for removal will be reviewed by Dictionary’s legal and compliance team and we reserve the right, in compliance with applicable laws, to accept or reject, or make further inquiries regarding, any requests.</p>
+<p>You will not have to pay a fee to access your personal data (or to exercise any of the other rights). However, we may charge a reasonable fee if your request is clearly unfounded, repetitive, or excessive. Alternatively, we may refuse to comply with your request in these circumstances.</p>
+<p>We try to respond to all legitimate requests within one month. Occasionally it may take us longer than a month if your request is particularly complex or you have made a number of requests. In this case, we will notify you and keep you updated.</p>
+<p>We are committed to working with you to obtain a fair resolution of any complaint or concern about privacy. If, however, you believe that we have not been able to assist with your complaint or concern, you may have the right to make a complaint to the data protection authority of your country of residence.</li>
+<li><strong> INTERNATIONAL TRANSFER.</strong>If you are receiving the Services from outside the United States, your data will be transferred to and stored in our servers in the U.S. By using the Services, you consent to our collection and use of your data as described in this Privacy &amp; Cookie Policy.Further, if you are receiving the Services from the European Economic Area (the “EEA”) we note your information may be transferred to, stored, and processed in a country that is not regarded as providing the same level of protection for personal information as the laws of your home country, and may be available to the government of those countries under a lawful order made in those countries. However, whenever we transfer your personal data out of the EEA, we ensure a similar degree of protection is afforded to it by ensuring at least one of the following safeguards is implemented:
+<p>• Model Contracts. Where appropriate, we put in place specific contractual commitments in accordance with applicable legal requirements to provide adequate protections for your information. For further details, see European Commission: Model contracts for the transfer of personal data to third countries.<br />
+• Privacy Shield. We may also transfer data to the U.S. under the Privacy Shield framework which requires them to provide similar protection to personal data shared between the EU and the US.</li>
+<li><strong><a id="contact"/>CONTACT INFORMATION.</a> </strong>If you have any questions or concerns about this Privacy &amp; Cookie Policy or the manner in which your information is processed, collected (in the EEA), or would like to submit a request to us, please contact:<br />
+Quicken Loans Inc. Attn: Legal Team<br />
+1050 Woodward Avenue<br />
+Detroit, MI 48226</p>
+<p>Dictionary.com, LLC is the controller (as provided under laws applicable to EEA jurisdictions) responsible for the personal information we collect and process. Dictionary.com, LLC takes their clients’ (and the customers of their clients) data protection seriously, and has appointed DPR Group as their Data Protection Representative in the European Union which can be contacted by sending an email to DPR Group at <a href="mailto:dictionary@dpr.eu.com">dictionary@dpr.eu.com</a>. Please note that this email address is only for privacy-related inquiries.  General web site assistance can be obtained through our <a href="https://www.dictionary.com/e/contact/">Contact Us</a> web page or by emailing <a href="mailto:support@dictionary.zendesk.com">support@dictionary.zendesk.com</a>.</li>
+</ul>
+<h2><a id="terms"/>TERMS OF SERVICE </a></h2>
+<ol>
+<li>AGREEMENT AND GENERAL TERMS OF USE
+<ol type="A">
+<li>These Terms of Service (the “Terms”) constitute the agreement between Dictionary.com, LLC (“Dictionary,“ “we,” “us,” or “our”) and you as a user who accesses, subscribes to access, or otherwise establishes a connection (“user,” “you,” or “your”) to the world wide web sites known as Dictionary.com, Thesaurus.com (including any sub-domains) (the “Sites”) and any related Dictionary products and services including the Dictionary.com mobile app <a href="https://www.dictionary.com/e/apps/">available here</a>. Our provision of the Site and related products and services, collectively the “Services.”</li>
+<li>This Site may collect personal information from our users. By using this Services and/or agreeing to these Terms, you consent to the collection, storage, and processing of your data as set forth in our Privacy &amp; Cookie Policy.</li>
+<li>Our Services are intended for general audiences over the age of 16 years old. We do not knowingly collect information from children under the age of 16 years old.<br />
+<center>IF YOU ARE NOT AT LEAST 16 YEARS OLD, DO NOT USE THE SERVICES.</center></li>
+<li>You must agree to abide by all of the provisions of these Terms in order to remain an authorized user of the Site and your use of the Site constitutes your agreement to abide by these Terms. You are solely responsible for your use of the Site and for ensuring that your use complies fully with the provisions of these Terms. Your rights are personal and non-assignable. This means that you will be responsible for the acts of anyone accessing the Site through you or using your name and password.</li>
+<li>We reserve the right, in our sole discretion, to change any or all of the provisions of these Terms at any time. We will notify you of any material changes by posting them on the Site or through other reasonable means of providing notice. Any changes to these Terms will be effective immediately upon notice to you unless we advise otherwise. Your use of the Site after notice of changes to this agreement will be deemed your acceptance of the changes. We reserve the right, in our sole discretion, to change, limit, or discontinue any aspect, content, or feature of the Site, as well as any aspect pertaining to the use of the Services.</li>
+<li>IF YOU DO NOT AGREE TO THE PROVISIONS OF THESE TERMS OR ARE NOT SATISFIED WITH THE SITE OR SERVICES, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE YOUR USE OF THE SITE AND/OR SERVICES, AS APPLICABLE.</li>
+</ol>
+</li>
+<li>USER ACTIVITIES AND INFORMATION ON THE SITE; LINKS
+<ol type="A">
+<li>You will use the Site, Services and any tools, features, content, material, or information found on the Site solely for lawful, non-commercial purposes. You will not allow any third party to access the Site through your account, upload to, distribute to, or otherwise disseminate through the Site any material or information of any kind that is libelous, defamatory, obscene, pornographic, abusive, or otherwise violates any law or infringes or violates any rights of any other person or entity, or contains a solicitation of funds, advertising, or a solicitation for goods or services.</li>
+<li>You warrant that any material or information that you make available through the Site, including, for example, postings to comment sections and forums, is solely your original work, or that you have all necessary rights to make the material or information of any other person or entity available on the Site. You will be solely responsible for the content of any material or information that you make available through the Site. You will also be liable for any damage resulting from making any material or information available through the Site.</li>
+<li>By making any material or information available through the Site, you automatically grant to Dictionary a worldwide, royalty-free, perpetual, irrevocable, and non-exclusive right and license to use, reproduce, modify, adapt, publish, translate, distribute and sublicense any such material or information (in whole or in part) and/or to incorporate it in other works regardless of form, media, or technology. By making any material or information available through the Site, you also grant to users other than yourself the right and license to access, view, store, or reproduce your material and information for that user’s personal use.</li>
+<li>We have no obligation to, and does not and cannot, review every item of material or information that you and users other than yourself made available through the Site, and we are not responsible for any content of this material or information. However, we reserve the right to delete, move, or edit any material or information that it deems, in its sole discretion, unacceptable, libelous, defamatory, obscene, pornographic, abusive, or otherwise in violation of any law or that infringes or violates any rights of any other person or entity. Further, we reserve the right at all times to disclose any material or information as necessary to satisfy any law, regulation, or governmental request.</li>
+<li>We reserve the right to collect, use, and distribute demographic data about you and your use of the Site in forms that do not identify you individually or reveal your identity.</li>
+<li>The Site and Services may provide links to other sites or resources. Because we do not review nor have control over such sites and resources, we shall not be responsible or liable for use of or reliance on any content, products, services or information at such sites or resources. Inclusion of any links does not imply any endorsement, affiliation, approval, association or sponsorship by Dictionary of the linked websites, resources, their operators or owners. When you select a link, you may be leaving our Site. The information available on third party websites may have certain restrictions on its use or distribution which differ from this agreement.</li>
+</ol>
+</li>
+<li>RIGHTS IN SITE CONTENT AND THE SITE
+<ol type="A">
+<li>All content provided on the Site is protected by copyright, trademark, and other applicable intellectual property and proprietary rights laws and is owned, controlled, and/or licensed by Dictionary. The Site is protected by copyright, patent, trademark, and other applicable intellectual property and proprietary rights laws and is owned, controlled, and/or licensed by Dictionary. Any and all trademarks appearing on the Site are the property of Dictionary or their respective owners.</li>
+<li>You will not modify, publish, transmit, participate in the transfer or sale, create derivative works, or in any way exploit, any of the content, in whole or in part, found on the Site. You agree that all rights to the Site, content and any derivative work will remain with us. You will download copyrighted content solely for your personal use, but will make no other use of the content without the express written permission of Dictionary and the copyright owner. You will not make any changes to any content that you are permitted to download under these Terms, and in particular you will not delete or alter any proprietary rights or attribution notices in any content. You agree that you do not acquire any ownership rights in any downloaded content.</li>
+</ol>
+</li>
+<li>DISCLAIMER OF WARRANTIES &amp; LIMITATION OF LIABILITY
+<ol type="A">
+<li>YOU EXPRESSLY AGREE THAT USE OF THE SITE IS AT YOUR SOLE RISK. NEITHER DICTIONARY, NOR ANY OF ITS AFFILIATES, EMPLOYEES, AGENTS, THIRD PARTY CONTENT PROVIDERS, OR LICENSORS WARRANT THAT THE SITE WILL BE UNINTERRUPTED OR ERROR FREE NOR DO THEY MAKE ANY WARRANTY AS TO THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE SITE, OR AS TO THE ACCURACY, RELIABILITY, COMPLETENESS, OR CONTENTS OF ANY CONTENT, INFORMATION, MATERIAL, POSTINGS, OR POSTING RESPONSES FOUND ON THE SITE, ANY MERCHANDISE OR SERVICES PROVIDED THROUGH THE SITE, OR ANY LINKS TO OTHER SITES MADE AVAILABLE ON THE SITE.</li>
+<li>TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE SITE AND ALL CONTENT, MATERIAL, INFORMATION, POSTINGS, OR POSTING RESPONSES FOUND ON THE SITE ARE PROVIDED ON AN “AS IS” BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF TITLE OR NON-INFRINGEMENT OR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</li>
+<li>UNDER NO CIRCUMSTANCES, INCLUDING, BUT NOT LIMITED TO, NEGLIGENCE, WILL DICTIONARY. (OR ANY OF ITS PARENTS, SUBSIDIARIES, AFFILIATES, EMPLOYEES, AGENTS, THIRD PARTY CONTENT PROVIDERS, OR LICENSORS, AND THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES, AND AGENTS), BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES THAT RESULT FROM THE USE OF, OR THE INABILITY TO USE, ANY TOOL, CONTENT, INFORMATION, MATERIAL, POSTINGS, OR POSTING RESPONSES ON THE SITE OR THE SITE ITSELF. THESE LIMITATIONS APPLY REGARDLESS OF WHETHER THE PARTY LIABLE OR ALLEGEDLY LIABLE WAS ADVISED, HAD OTHER REASON TO KNOW, OR IN FACT KNEW OF THE POSSIBILITY OF SUCH DAMAGES. YOU SPECIFICALLY ACKNOWLEDGE AND AGREE THAT DICTIONARY (AND ANY OF ITS PARENTS, SUBSIDIARIES, AFFILIATES, EMPLOYEES, AGENTS, THIRD PARTY CONTENT PROVIDERS, OR LICENSORS, AND THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES, AND AGENTS), IS NOT LIABLE FOR ANY DEFAMATORY, OFFENSIVE OR ILLEGAL CONDUCT OF ANY USER, INCLUDING YOU.</li>
+</ol>
+</li>
+<li><strong>INDEMNIFICATION.</strong> You agree to defend, indemnify and hold harmless Dictionary (and any of its parents, subsidiaries, affiliates, employees, agents, third party content providers, or licensors, and their respective directors, officers, employees, and agents) from and against all claims, liability, and expenses, including attorneys’ fees and legal fees and costs, arising out of your use of the Site or your breach of any provision of this agreement. We reserve the right, in its sole discretion and at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you. You will cooperate as fully as reasonably required in the defense of any claim.</li>
+<li><strong>NOTICES BETWEEN US.</strong> You will contact us by submitting your message via <a href="https://www.dictionary.com/e/contact/">our form</a>. We will contact you by the e-mail address you provide to us, or by posting a notice on the Site.</li>
+<li><strong>TERMINATION.</strong> We may terminate this agreement and your use of the Site at any time. We also have the right to immediately terminate your use of the Site in the event of any conduct by you which we, in our sole discretion, consider to be unacceptable, or in the event of any breach by you of these Terms.</li>
+<li><strong>LAW GOVERNING PERFORMANCE AND DISPUTES.</strong> These Terms, your performance under it, and any disputes arising under it will be governed exclusively by the laws of the United States of America and the State of California, without giving effect to their conflict of laws principles. You expressly consent to the exclusive forum, jurisdiction, and venue of the Courts of the State of California and the United States District Court for the Northern District of California in any and all actions, disputes, or controversies relating to this agreement.</li>
+<li><strong>GENERAL TERMS.</strong> These Terms and any posted rules on the Site constitute the entire agreement of the parties with respect to the subject matter hereof. No waiver by Dictionary of any breach or default under these Terms will be deemed to be a waiver of any preceding or subsequent breach or default. Our agreement will be binding upon and inure to the benefit of Dictionary and its successors, trustees, and permitted assignees. We may assign this agreement or any of its rights or obligations under these Terms with or without notice to you.</li>
+</ol>
+						</div><!-- /.article__entry -->
+					</div><!-- /.article__body -->
+
+					<footer class="article__foot">
+					</footer><!-- /.article__foot -->
+				</article><!-- /.article -->
+						</div><!-- /.content -->
+</div><!-- /.main -->
+
+	<section class="section section-signup">
+		<div class="shell">
+			
+
+                <div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_1' ><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1'  action='/e/terms/'>
+                        <div class='gform_heading'>
+                            <span class='gform_description'>SIGN UP FOR A VOCABULARY BOOST IN YOUR EMAIL</span>
+                        </div>
+                        <div class='gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'><li id='field_1_1'  class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible gfield--email gfield--medium' ><label class='gfield_label' for='input_1_1' >Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_1' id='input_1_1' type='email' value='' class='medium' tabindex='1'  placeholder='Enter your email' aria-required="true" aria-invalid="false" />
+                        </div></li><li id='field_1_2'  class='gfield gform_hidden field_sublabel_below field_description_below gfield_visibility_visible gfield--hidden gfield--medium' ><input name='input_2' id='input_1_2' type='hidden' class='gform_hidden'  aria-invalid="false" value='uqg4bo' /></li><li id='field_1_3'  class='gfield gform_validation_container field_sublabel_below field_description_below gfield_visibility_visible gfield--honeypot gfield--' ><label class='gfield_label' for='input_1_3' >Phone</label><div class='ginput_container'><input name='input_3' id='input_1_3' type='text' value='' autocomplete='off'/></div><div class='gfield_description' id='gfield_description__3'>This field is for validation purposes and should be left unchanged.</div></li>
+                            </ul></div>
+        <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' value='I&#039;M IN' tabindex='2' onclick='if(window["gf_submitting_1"]){return false;}  if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_1"]){return false;} if( !jQuery("#gform_1")[0].checkValidity || jQuery("#gform_1")[0].checkValidity()){window["gf_submitting_1"]=true;}  jQuery("#gform_1").trigger("submit",[true]); }' /> <input type='hidden' name='gform_ajax' value='form_id=1&amp;title=&amp;description=1&amp;tabindex=1' />
+            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsImI4NDFhMDc0ODQ4ODY4ODYzNjM3OGI5MmQ5MGZkYmRjIl0=' />
+            <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+            <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+                <iframe style='display:none;width:0px;height:0px;'  name='gform_ajax_frame_1' id='gform_ajax_frame_1' title='Ajax Frame' data-src="about:blank" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1' id='gform_ajax_frame_1' title='Ajax Frame'></noscript>This iframe contains the logic required to handle Ajax powered Gravity Forms.</iframe>
+                <script type='text/javascript'>jQuery(document).ready(function($){gformInitSpinner( 1, 'https://www.dictionary.com/e/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery('#gform_ajax_frame_1').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_1');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_1').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_1').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_1').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_1').val();gformInitSpinner( 1, 'https://www.dictionary.com/e/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery(document).trigger('gform_page_loaded', [1, current_page]);window['gf_submitting_1'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_1').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [1]);window['gf_submitting_1'] = false;}, 50);}else{jQuery('#gform_1').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [1, current_page]);} );} );</script><script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>		</div><!-- /.shell -->
+	</section><!-- /.section section-signup -->
+
+	<footer class="footer">
+		<div class="shell">
+			<div class="copyright">
+				<p>&copy; 2020 Dictionary.com, LLC.</p>
+			</div><!-- /.copyright -->
+
+							<div class="footer__socials">
+					<ul>
+													<li>
+								<a href="https://www.facebook.com/dictionarycom" target="_blank">
+									<img  alt="facebook" data-src="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/temp/footer-facebook.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/temp/footer-facebook.png" alt="facebook" /></noscript>
+								</a>
+							</li>
+													<li>
+								<a href="https://twitter.com/dictionarycom" target="_blank">
+									<img  alt="twitter" data-src="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/temp/footer-twitter.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://www.dictionary.com/e/wp-content/themes/dictionary-com/images/temp/footer-twitter.png" alt="twitter" /></noscript>
+								</a>
+							</li>
+											</ul>
+
+									</div><!-- /.footer__socials -->
+			
+			<div class="nav-footer">
+				<ul id="menu-footer-menu" class="menu"><li id="menu-item-21158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21158"><a href="/e/about/" data-linkid="gy27eg ">About &amp; Contact</a></li>
+<li id="menu-item-21159" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-21159"><a href="/e/terms/" aria-current="page" data-linkid="gy27eg ">Cookies, Terms, &amp; Privacy</a></li>
+</ul>			</div><!-- /.nav-footer -->
+		</div><!-- /.shell -->
+	</footer><!-- /.footer -->
+</div><!-- /.wrapper -->
+
+<script>
+var crb_video_settings = {"default_script_src":"\/\/players.brightcove.net\/5660549791001\/HyAYCaubQ_default\/index.min.js"};
+</script>
+<script type="text/template" class="video-playlist-template">
+	<%
+	if(!items || !Array.isArray(items)) {
+		return;
+	}
+	%>
+	<ul>
+		<% items.forEach(function(item, index) { %>
+			<%
+			var itemClass = "playlist-item";
+			if (index === 0) {
+				itemClass += ' playing';
+			}
+			
+			if(!item.thumbnail) {
+				return;
+			}
+			%>
+			<li class="<%- itemClass %>">
+				<div class="item-container" data-video-id="<%- item.video_id %>">
+					<span class="video-thumbnail" style="background-image: url( <%= item.thumbnail %> );" >
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gETByMhHxuwUgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAPSURBVCjPY2AYBaOACgAAAkkAAQysdekAAAAASUVORK5CYII=">
+						<span class="play-btn btn"></span>
+						<span class="pause-btn btn"></span>
+					</span>
+					<%= item.title %>
+				</div>
+			</li>
+		<% }); %>
+	</ul>
+</script>
+<script type="text/template" class="video-description-template">
+	<%
+	if(!items || !Array.isArray(items)) {
+		return;
+	}
+
+  console.log(items[0].title);
+  // item.title.replace('&#038;', '%26')
+	%>
+
+	<div class="video-details show-less">
+		<% items.forEach(function(item) { %>
+			<div class="description">
+				<%= item.short_description %>
+
+				<div class="controls">
+					<a href="#" class="show-transcript show">Show Transcript</a>
+					<% if (item.link) { %>
+						<div class="socials socials-video">
+							<div class="share trigger-share-links">
+								<ul>
+									<li>
+										<a
+											href="https://facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(item.link) %>"
+											class="ico-facebook"
+											target="_blank"
+											data-linkid="begyaa"
+										></a>
+									</li>
+
+									<li>
+										<a
+											href="https://twitter.com/intent/tweet/?text=<%= encodeURIComponent(item.title) %>&amp;url=<%= encodeURIComponent(item.link) %>"
+											class="ico-twitter"
+											target="_blank"
+											data-linkid="agbu2i"
+										></a>
+									</li>
+
+									<li>
+										<a
+											href="mailto:?subject=<%= encodeURIComponent(item.title) %>&amp;body=<%= encodeURIComponent(item.link) %>"
+											class="ico-email"
+											target="_blank"
+											data-linkid="m52euo"
+										></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					<% } %>
+				</div>
+
+				<div class="transcript-wrapper">
+					<div class="transcript">
+						<h5>Transcript</h5>
+
+						<%= item.description %>
+					</div>
+					<div class="transcript__overlay"></div>
+					<a href="#" class="hide-transcript">x</a>
+				</div>
+			</div>
+		<% }); %>
+	</div>
+</script>
+<script type="text/template" class="video-mobile-playlist-template">
+	<div class="mobile-playlist">
+		<div class="list list-initial">
+			<%
+			var item = null;
+			for (var index = 0; index < Math.min(items.length, 5); index++) { %>
+				<%
+				item = items[index];
+				var itemClass = "playlist-item";
+				if (index === 0) {
+					itemClass += ' playing';
+				}
+
+				if(!item.thumbnail) {
+					continue;
+				}
+				%>
+				<div class="<%- itemClass %>">
+					<div class="item-container" data-video-id="<%- item.video_id %>">
+						<span class="video-thumbnail" style="background-image: url( <%= item.thumbnail %> );" >
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gETByMhHxuwUgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAPSURBVCjPY2AYBaOACgAAAkkAAQysdekAAAAASUVORK5CYII=">
+							<span class="play-btn btn"></span>
+							<span class="pause-btn btn"></span>
+						</span>
+
+						<div class="playlist-item-title">
+							<%= item.title %>
+						</div>
+					</div>
+				</div>
+			<% } %>
+
+			<% if (items.length > 5) {
+				for (var index = 5; index < items.length; index++) {
+					item = items[index];
+					var itemClass = "playlist-item hidden";
+
+					if(!item.thumbnail) {
+						continue;
+					}
+			%>
+					<div class="<%- itemClass %>">
+						<div class="item-container" data-video-id="<%- item.video_id %>">
+							<span class="video-thumbnail" style="background-image: url( <%= item.thumbnail %> );" >
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gETByMhHxuwUgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAPSURBVCjPY2AYBaOACgAAAkkAAQysdekAAAAASUVORK5CYII=">
+								<span class="play-btn btn"></span>
+								<span class="pause-btn btn"></span>
+							</span>
+
+							<div class="playlist-item-title">
+								<%= item.title %>
+							</div>
+						</div>
+					</div>
+				<% } %>
+			<% } %>
+		</div>
+
+		<%
+		var btnClass = "btn-expand";
+		if (items.length > 5) {
+			btnClass += " active";
+		}
+		%>
+		<a class="<%- btnClass %>">Expand For More Videos</a>
+	</div>
+</script>
+<script type="text/template" class="video-coming-up-template">
+	<%
+	if(!video) {
+		return;
+	}
+	%>
+
+	<div class="coming-up__top">
+		Coming Up Next	</div>
+
+	<div class="coming-up__thumb" style="background-image: url(<%= video.thumbnail %>);"></div>
+
+	<div class="coming-up__bottom">
+		<%= video.title %>
+	</div>
+
+</script>
+
+
+<!-- START Parse.ly Include: Standard -->
+	<script data-cfasync="false">
+
+		function uuidProfileCall() {
+			var rootUrl = 'https://api.parsely.com/v2/profile?apikey=dictionary.com';
+			var uuid = '&uuid=' + PARSELY.config.parsely_site_uuid;
+			var requestUrl = rootUrl + uuid + '&url=' + window.location.href;
+			jQuery.ajax({
+				url: requestUrl,
+				dataType: "jsonp"
+			});
+		}
+
+		if (typeof PARSELY == 'object') {
+			var oldonload = PARSELY.onload;
+			if (typeof PARSELY.onload != 'function') {
+				PARSELY.onload = uuidProfileCall
+			}
+			else {
+				PARSELY.onload = function () {
+					if (oldonload) {
+						oldonload();
+					}
+					uuidProfileCall();
+				};
+			}
+		}
+
+		else {
+			PARSELY = {
+				onload: uuidProfileCall
+			}
+		}
+	</script>
+
+<script data-cfasync="false" id="parsely-cfg" data-parsely-site="dictionary.com" src="//cdn.parsely.com/keys/dictionary.com/p.js"></script>
+
+<!-- END Parse.ly Include: Standard -->
+<script>
+  window.crbReloadAds = false;
+  var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [],
+    googletagCanAutoReload = 0;
+
+  var slotConfigs = {
+    desktop: [],
+    tablet: [],
+    mobile: []
+  };
+  var slotDefines = {};
+  slotDefines.slots = [];
+
+  var getCurrentDevice = function() {
+    var window_width = jQuery(window).width();
+
+    if ( window_width > 1024 ) {
+      return 'desktop';
+    }
+
+    if ( window_width > 767 ) {
+      return 'tablet';
+    }
+
+    return 'mobile';
+  }
+
+  var initDesktopConfig = function() {
+    var slotConfigs = [];
+    
+        slotConfigs.push({
+          slotID: 'crb-ad-slot-top',
+          sizes: [[728, 90]],
+          adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/serp',
+          targeting: [['pos', ['top']],['pos2', ['728x90_1', 'header_970x250_1']]]
+        });
+      
+        slotConfigs.push({
+          slotID: 'crb-ad-slot-middle',
+          sizes: [[300, 250],[300, 600]],
+          adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/serp',
+          targeting: [['pos', ['mid']],['pos2', ['300x250_1']]]
+        });
+      
+        slotConfigs.push({
+          slotID: 'crb-ad-slot-bottom',
+          sizes: [[728, 90]],
+          adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/serp',
+          targeting: [['pos', ['bot']],['pos2', ['728x90_2']]]
+        });
+          window.slotConfigs['desktop'] = slotConfigs;
+  };
+
+  var initTabletConfig = function() {
+    var slotConfigs = [];
+    
+        slotConfigs.push({
+          slotID: 'crb-ad-slot-top',
+          sizes: [[728, 90]],
+          adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/editorial_home_tablet/serp_tablet',
+          targeting: [['pos', ['top']],['pos2', ['728x90_1']]]
+        });
+      
+        slotConfigs.push({
+          slotID: 'crb-ad-slot-middle',
+          sizes: [[300, 600]],
+          adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/editorial_home_tablet/serp_tablet',
+          targeting: [['pos', ['mid']],['pos2', ['300x250_3']]]
+        });
+      
+        slotConfigs.push({
+          slotID: 'crb-ad-slot-bottom',
+          sizes: [[728, 90]],
+          adUnitPath: '/23219321/iac.dict.dictry.dw/editorial_home/editorial_home_tablet/serp_tablet',
+          targeting: [['pos', ['bot']],['pos2', ['728x90_2']]]
+        });
+          window.slotConfigs['tablet'] = slotConfigs;
+  };
+
+  var initMobileConfig = function() {
+    var slotConfigs = [];
+    
+        slotConfigs.push({
+          slotID: 'crb-ad-slot-bottom',
+          sizes: [[320, 50]],
+          adUnitPath: '/23219321/iac.dict.dictry.mw/editorial_home/serp',
+          targeting: [['pos', ['bot']],['pos2', ['320x50_1']]]
+        });
+          window.slotConfigs['mobile'] = slotConfigs;
+  };
+
+  initDesktopConfig();
+  initTabletConfig();
+  initMobileConfig();
+
+  
+  var isEU = 0;
+
+  /* setup onetrust consent wrapper */
+  if (isEU) {
+    function OptanonWrapper() { }
+  }
+
+  /* Personalize or Depersonalize Ads and Refresh */
+  var setGPTPersonalization = function(personalized) {
+    googletag.cmd.push(function() {
+    if (personalized === true || personalized === false) {
+      if (personalized) {
+        googletag.pubads().setRequestNonPersonalizedAds(0);
+      }
+      else {
+        googletag.pubads().setRequestNonPersonalizedAds(1);
+      }
+    } else {
+      googletag.pubads().setRequestNonPersonalizedAds(1);
+    }
+    googletag.pubads().refresh();
+    });
+  };
+
+
+  /**------A9 Integration-----------*/
+  ! function(a9, a, p, s, t, A, g) {
+    if (a[a9]) return;
+
+    function q(c, r) {
+      a[a9]._Q.push([c, r])
+    }
+    a[a9] = {
+      init: function() {
+        q("i", arguments)
+      },
+      fetchBids: function() {
+        q("f", arguments)
+      },
+      setDisplayBids: function() {},
+      _Q: []
+    };
+    A = p.createElement(s);
+    A.async = !0;
+    A.src = t;
+    g = p.getElementsByTagName(s)[0];
+    g.parentNode.insertBefore(A, g)
+  }("apstag", window, document, "script", "https://c.amazon-adsystem.com/aax2/apstag.js");
+  apstag.init({
+    pubID: '3067',
+    adServer: 'googletag',
+    bidTimeout: 1000
+  });
+
+  (function(){
+    var implementationDisabled = false;
+    if (implementationDisabled) {
+      return;
+    }
+
+    var dcomAdImplementation = function() {
+      var initializeDesktop = function() {
+        slotDefines.slots['crb-ad-slot-top'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/serp', [728, 90], 'crb-ad-slot-top').setTargeting('pos', ['top']).setTargeting('pos2', ['728x90_1', 'header_970x250_1']).addService(googletag.pubads());
+slotDefines.slots['crb-ad-slot-middle'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/serp', [[300, 250], [300, 600]], 'crb-ad-slot-middle').setTargeting('pos', ['mid']).setTargeting('pos2', ['300x250_1']).addService(googletag.pubads());
+slotDefines.slots['crb-ad-slot-bottom'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/serp', [728, 90], 'crb-ad-slot-bottom').setTargeting('pos', ['bot']).setTargeting('pos2', ['728x90_2']).addService(googletag.pubads());
+      }
+
+      var initializeTablet = function() {
+        slotDefines.slots['crb-ad-slot-top'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/editorial_home_tablet/serp_tablet', [728, 90], 'crb-ad-slot-top').setTargeting('pos', ['top']).setTargeting('pos2', ['728x90_1']).addService(googletag.pubads());
+slotDefines.slots['crb-ad-slot-middle'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/editorial_home_tablet/serp_tablet', [300, 600], 'crb-ad-slot-middle').setTargeting('pos', ['mid']).setTargeting('pos2', ['300x250_3']).addService(googletag.pubads());
+slotDefines.slots['crb-ad-slot-bottom'] = googletag.defineSlot('/23219321/iac.dict.dictry.dw/editorial_home/editorial_home_tablet/serp_tablet', [728, 90], 'crb-ad-slot-bottom').setTargeting('pos', ['bot']).setTargeting('pos2', ['728x90_2']).addService(googletag.pubads());
+      }
+
+      var initializeMobile = function() {
+        slotDefines.slots['crb-ad-slot-bottom'] = googletag.defineSlot('/23219321/iac.dict.dictry.mw/editorial_home/serp', [320, 50], 'crb-ad-slot-bottom').setTargeting('pos', ['bot']).setTargeting('pos2', ['320x50_1']).addService(googletag.pubads());
+      }
+
+      var getSlots = function() {
+        if (!slotDefines || !slotDefines.slots) {
+          return [];
+        }
+
+        var keys = Object.keys(slotDefines.slots);
+        var result = [];
+        for (var i = 0; i < keys.length; i++) {
+          result.push(slotDefines.slots[keys[i]]);
+        }
+        return result;
+      };
+
+      var destroySlots = function() {
+        var slots = getSlots();
+        if (!slots || !slots.length) {
+          return;
+        }
+        googletag.destroySlots(slots);
+      }
+
+      var refreshSlots = function() {
+        googletag.pubads().refresh();
+      }
+
+      var enableService = function() {
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().setTargeting('ptype', ['editorial']);
+        googletag.pubads().disableInitialLoad();
+        googletag.enableServices();
+      }
+
+      var current_size = false;
+
+
+      var switchADs = function( force ) {
+        var force = typeof force === "undefined" ? false : Boolean(force);
+
+        var initialized = Boolean(current_size);
+        if ( ! current_size || force === true ) {
+          current_size = getCurrentDevice();
+        } else if ( current_size !== getCurrentDevice() ) {
+          current_size = getCurrentDevice();
+        } else {
+          return;
+        }
+
+        if ( initialized ) {
+          destroySlots();
+        }
+
+        switch( current_size ) {
+          case 'mobile':
+            initializeMobile();
+            break;
+
+          case 'tablet':
+            initializeTablet();
+            break;
+
+          default:
+            initializeDesktop();
+        }
+
+        enableService();
+
+        if ( initialized ) {
+          refreshSlots();
+        }
+      }
+
+      // enable ads
+      switchADs();
+
+      var initRefreshListener = function() {
+        // checks if a reload ads has been triggered and actually switches the ads
+        // it's triggered when the slideshow changes slides
+        setInterval(function() {
+          if ( ! window.crbReloadAds ) {
+            return;
+          }
+
+          window.crbReloadAds = false;
+          switchADs( true );
+        }, 300);
+      };
+
+
+      var interval = false;
+      var adsIntervalFn = function() {
+        switchADs( true );
+      }
+      var adsIntervalReset = function() {
+        if ( ! googletagCanAutoReload ) {
+          return;
+        }
+
+        clearInterval(interval);
+        interval = setInterval(
+          adsIntervalFn,
+          20 * 1000
+        );
+      }
+      adsIntervalReset();
+
+      if ( ! googletagCanAutoReload ) {
+        initRefreshListener();
+      }
+
+      var timeout = false;
+      jQuery(window).resize(function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+          adsIntervalReset();
+          switchADs();
+        }, 500);
+      });
+    };
+
+    googletag.cmd.push(dcomAdImplementation);
+
+    googletag.cmd.push(function() {
+      googletag.display('crb-ad-slot-top');
+      googletag.display('crb-ad-slot-middle');
+      googletag.display('crb-ad-slot-aside');
+      googletag.display('crb-ad-slot-bottom');
+    });
+  })();
+
+
+  googletag.cmd.push(function() {
+    apstag.fetchBids({
+      slots: slotConfigs[getCurrentDevice()]
+    }, function(bids) {
+      /*Callback method that triggers the first DFP request for googletag's
+      disableInitialLoad integration after bids have been set*/
+
+      apstag.setDisplayBids();
+      window.OWT.notifyExternalBiddingComplete();
+
+      /*
+        Determine IAB consent if necessary, and trigger GPT ad refresh
+        if consent is provided.
+      */
+      if(isEU) {
+        try {
+          if (typeof __cmp === 'function') {
+            __cmp("getVendorConsents", {}, function(c) {
+            var consent = false;
+            if (typeof c.purposeConsents === 'array') {
+              consent = c.purposeConsents.includes('3:true');
+            } else if (typeof c.purposeConsents === 'object') {
+              consent = c.purposeConsents[3];
+            }
+            setGPTPersonalization(consent);
+            });
+          } else {
+            setGPTPersonalization(false);
+          }
+        } catch (error) {
+          console.error('personalization: ', error)
+          setGPTPersonalization(false);
+        }
+      } else {
+        setGPTPersonalization(true);
+      }
+
+      googletag.pubads().refresh();
+    });
+  });
+
+  googletag.cmd.push(function() {
+    if(!window.googletag || !googletag.pubadsReady) {
+      return;
+    }
+
+    var repositionPlayers = function() {
+      console.log('Repositioning video players after ad slot loaded');
+      window.crb_video_float_and_park.repositionPlayers();
+    };
+
+    googletag.pubads().addEventListener('slotOnload', function(event) {
+      if(window.crb_video_float_and_park && window.crb_video_float_and_park.repositionPlayers) {
+        repositionPlayers();
+        return;
+      }
+
+      var $body = document.querySelector('body');
+      var handler = function() {
+        repositionPlayers();
+        $body.removeEventListener('crb_float_and_park_ready', handler);
+      };
+      $body.addEventListener('crb_float_and_park_ready', handler);
+    });
+  });
+</script>
+<link rel='stylesheet' id='gforms_reset_css-css'  href='https://www.dictionary.com/e/wp-content/plugins/gravityforms/css/formreset.min.css?ver=2.4.10' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css'  href='https://www.dictionary.com/e/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=2.4.10' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css'  href='https://www.dictionary.com/e/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=2.4.10' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css'  href='https://www.dictionary.com/e/wp-content/plugins/gravityforms/css/browsers.min.css?ver=2.4.10' type='text/css' media='all' />
+<script type='text/javascript'>
+window.lazySizesConfig = window.lazySizesConfig || {};
+
+window.lazySizesConfig.lazyClass    = 'lazyload';
+window.lazySizesConfig.loadingClass = 'lazyloading';
+window.lazySizesConfig.loadedClass  = 'lazyloaded';
+
+lazySizesConfig.loadMode = 1;
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.4.2'></script>
+<script type='text/javascript'>
+lazySizes.init();
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/e\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/wp-util.min.js?ver=5.2.1'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/comment-reply.min.js?ver=5.2.1'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/themes/dictionary-com/js/parsely/override.js?ver=1.1.0'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-includes/js/wp-embed.min.js?ver=5.2.1'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.4.10'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/www.dictionary.com\/e\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.dictionary.com\/e\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.4.10'></script>
+<script type='text/javascript' src='https://www.dictionary.com/e/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.4.10'></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"393deec9cb","applicationID":"330714021","transactionName":"bwRQYUJRC0tSUhFcCVZOZ0dZHwxWV1QdGxZQEQ==","queueTime":0,"applicationTime":9,"atts":"Q0NTFwpLGEU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using memcached 
+
+Page cache debug info:
+Engine:             memcached
+Cache key:          ba44527e8f8260abb527147478aadebf_ssl
+Creation Time:      1579317306.000s
+Header info:
+Content-Type:        text/html; charset=UTF-8
+Link:                <https://www.dictionary.com/e/?p=51107>; rel=shortlink
+
+Minified using disk
+
+Served from: www.dictionary.com @ 2020-01-17 19:15:06 by W3 Total Cache
+-->

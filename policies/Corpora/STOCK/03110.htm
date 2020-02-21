@@ -1,0 +1,1755 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-us" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-us" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-us" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="en-us" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
+    <head>
+        <title>
+            
+                
+                    General Privacy Policy |
+                
+                Tempur-Pedic
+            
+        </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"eefb282186",applicationID:"22228597"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"eefb282186","applicationID":"22228597","transactionName":"NVUBZUpQWUZYUUAMWgwfJURWUkNcVlwbBlgRHhNQX1REG0xGXQlcFkk8QVlWUmpOW0ANahZfDF1aXk8PbEZdCVwWSTNQX1RgXE1aYApaDlIMSRZCUkdPVw==","queueTime":0,"applicationTime":83,"agent":""}</script>
+        <meta name="created" content="17th Jan 2020 11:48" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="google-site-verification" content="_Az9KWgfVcricVuyP9VwCOEW1ERzxfVlscgVXWkhfRE" />
+
+        <link rel="preconnect" href="https://storage.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://pro.ip-api.com">
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+        <link rel="preconnect" href="/static/img/favicon.da4e2e89dc78.ico">
+        <link rel="preconnect" href="https://prod.retaillocator.svc.tsiaws.com">
+        <link rel="dns-prefetch" href="https://prod.reviewsapi.svc.tsiaws.com/">
+        <link rel="dns-prefetch" href="https://prod.wfrsplccaapi.svc.tsiaws.com">
+
+        
+        
+        
+            <meta name="chatTags" content="default">
+        
+
+        
+
+        
+            
+        
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@TempurPedic" />
+        <meta name="twitter:title" content="General Privacy Policy" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:url" content="https://www.tempurpedic.com/customer-service/privacy-policy-general/" />
+
+        <meta property="og:title" content="General Privacy Policy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.tempurpedic.com/customer-service/privacy-policy-general/" />
+        <meta property="og:description"   content="" />
+        <meta property="og:site_name" content="tempurpedic.com" />
+
+        
+        
+
+        <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.da4e2e89dc78.ico" />
+
+        
+            <link type="text/css" href="/static/bundles/vendor.bd90464c.chunk.css" rel="stylesheet" integrity="sha384-2fWYSYjzpbGOX1dR0yrBj3lRFx/y+COQ8Q139b0480VwipjsrquehkZdRb/WoXiR" />
+            <link type="text/css" href="/static/bundles/app.f40cef35.chunk.css" rel="stylesheet" integrity="sha384-DoSqWRiyB3V1up1CObp3m0JmVQ321YytE9xCAwEFQE5W3Unj7m6IKzlHmt5Thway" />
+            <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6050616/6484592/css/fonts.css" />
+        
+
+        
+
+        
+            <script src="https://cdn.optimizely.com/js/5778791146.js" defer></script>
+
+            
+                <!-- START Rakuten Marketing Tracking -->
+<script type="text/javascript">
+    (function (url) {
+        /* Tracking Bootstrap Set Up DataLayer objects/properties here */
+        if (!window.DataLayer) {
+            window.DataLayer = {};
+        }
+        if (!DataLayer.events) {
+          DataLayer.events = {};
+        }
+        DataLayer.events.SPIVersion = DataLayer.events.SPIVersion || "3.2";
+        DataLayer.events.SiteSection = "1";
+        var loc, ct = document.createElement("script");
+        ct.type = "text/javascript";
+        ct.async = true; ct.src = url; loc = document.getElementsByTagName('script')[0];
+        loc.parentNode.insertBefore(ct, loc);
+    }(document.location.protocol + "//intljs.rmtag.com/117724.ct.js"));
+</script>
+<!-- END Rakuten Marketing Tracking -->
+
+            
+        
+    </head>
+
+    <body id="default"
+          data-version="tsi-tempurpedic:r2020.01.07.0"
+          data-environment="production"
+          data-sentry-dsn="https://9f81f9ff408146579784386ac72a3395@sentry.io/89321"
+          class="default">
+    
+        
+            <script type="text/javascript">
+    <!-- Google Tag Manager -->
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W74QWQ');
+    <!-- End Google Tag Manager -->
+</script>
+
+        
+        
+
+
+        <div class="layout">
+            
+
+
+
+
+
+
+
+
+
+
+    
+    
+        <div class="search-nav l-full-width" role="search">
+            <a class="screen-reader-skip" href="#main-content">Skip to main content</a>
+            <div class="search-nav__inner-container">
+                <div class="l-capped-width">
+                    
+                        
+                            
+                                <div class="search-nav__promo"><div class="rich-text"><p><a href="/finance-your-purchase/#terms_and_conditions">0% APR for 36 months</a><sup>1</sup> - <a href="/finance-your-purchase/">LEARN MORE &amp; APPLY</a></p></div></div>
+                                <div class="search-nav__promo search-nav__promo--mobile"><div class="rich-text"><p><a href="/finance-your-purchase/#terms_and_conditions">0% APR for 36 months</a><sup>1</sup></p></div></div>
+                            
+                        
+                    
+                    
+
+
+<div class="search-nav__content ">
+    <a href="/find-a-retailer/" title='Find A Retailer Near You' class="search-nav__retailers al-search-nav__link--find-a-retailer" data-place-react="nearby-stores-search">
+        
+
+<span>Several stores near <span class="search-nav__retailers__dropdown">you</span></span>
+
+    </a>
+
+    <button class="search-nav__search search-nav__search--button">
+        
+        
+<svg role="img" class="search-nav__icon" >
+    <title>Search Icon</title>
+    <use xlink:href="#icon-icon-search"></use>
+</svg>
+
+        <span class="search-nav__search-text">Search</span>
+    </button>
+</div>
+
+                </div>
+            </div>
+            <div class="search-nav__search-input-container search-nav__search-input-container--hidden l-capped-width">
+                <div class="search-nav__search-input-inner-container">
+                    <form class="search-nav__search-input" action="/search/" method="get">
+                        <div class="search-nav__search-input--background"></div>
+                        <input class="search-nav__search-input--text" type="text" name="query" title='Search Tempur-Pedic' placeholder='Find products, help, etc...'>
+                            
+                            <button type="submit" title='Submit Search' aria-label='Submit Search'>
+                                
+<svg role="img" class="search-nav__search-icon" >
+    <title>Submit Search</title>
+    <use xlink:href="#icon-icon-search"></use>
+</svg>
+
+                            </button>
+                    </form>
+                    <div class="search-nav__search-input-close">
+                        <button type="button" class="search-nav__close-icon" aria-label="Close Search Container"><span aria-hidden="true">x</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+
+
+<noscript>
+    <aside class="messages l-full-width">
+        <ul class="messages__list">
+            <li class="messages__item error">
+                <div class="messages__item__content l-capped-width">
+                    <p>
+                        <span class="messages__item__category messages__item__category--error">
+                            Error
+                        </span>
+                        Please enable Javascript
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </aside>
+</noscript>
+
+
+
+    <header class="l-full-width">
+        <nav class="site-nav ">
+            <div class="site-nav__content l-capped-width" role="list">
+                
+                <a title='Tempur-Pedic Home' class="site-nav__logo-link" href="/" aria-label='Tempur-Pedic Home' role="listitem">
+                    
+                    
+    <span class="ada-hidden">Tempur-Pedic Home</span>
+
+<svg role="img" class="site-nav__logo" >
+    <title>Tempur-Pedic Logo</title>
+    <use xlink:href="#icon-tempur-logo-full"></use>
+</svg>
+
+                </a>
+
+                
+                
+                <div class="site-nav__main-menu" data-place-react='main-menu-dropdown' data-menu-cms='[{&quot;type&quot;: &quot;nav_category&quot;, &quot;value&quot;: {&quot;title&quot;: &quot;Shop&quot;, &quot;sub_nav&quot;: [{&quot;type&quot;: &quot;page_link_with_image&quot;, &quot;value&quot;: {&quot;override_title&quot;: &quot;Mattresses&quot;, &quot;open_in_new_tab&quot;: false, &quot;page&quot;: {&quot;pk&quot;: 366, &quot;path&quot;: &quot;000100020003000R&quot;, &quot;depth&quot;: 4, &quot;numchild&quot;: 2, &quot;title&quot;: &quot;All Mattresses&quot;, &quot;draft_title&quot;: &quot;All Mattresses&quot;, &quot;slug&quot;: &quot;all&quot;, &quot;content_type&quot;: 278, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/shop-mattresses/all/&quot;, &quot;owner&quot;: 31370, &quot;seo_title&quot;: &quot;&quot;, &quot;show_in_menus&quot;: false, &quot;search_description&quot;: &quot;&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2017-11-20T21:32:09.437979+00:00&quot;, &quot;last_published_at&quot;: &quot;2020-01-16T11:17:30.889953+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2020-01-16T11:17:30.833661+00:00&quot;, &quot;live_revision&quot;: 38116, &quot;url&quot;: &quot;/shop-mattresses/all/&quot;}, &quot;image&quot;: {&quot;id&quot;: 2913, &quot;title&quot;: &quot;Tempur-Pedic Breeze Mattress&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/Tempur-Pedic_Mattresses.png&quot;}, &quot;badge&quot;: {&quot;title&quot;: &quot;Small - SAVE - SHOP NAV&quot;, &quot;image&quot;: {&quot;id&quot;: 1230, &quot;title&quot;: &quot;Savings callout&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/mini_badge-new-save.png&quot;}, &quot;position&quot;: &quot;top-left&quot;, &quot;mobile_text&quot;: &quot;SAVE&quot;}}}, {&quot;type&quot;: &quot;page_link_with_image&quot;, &quot;value&quot;: {&quot;override_title&quot;: &quot;Bed Bases&quot;, &quot;open_in_new_tab&quot;: false, &quot;page&quot;: {&quot;pk&quot;: 9, &quot;path&quot;: &quot;000100020004&quot;, &quot;depth&quot;: 3, &quot;numchild&quot;: 10, &quot;title&quot;: &quot;Bases and Foundations&quot;, &quot;draft_title&quot;: &quot;Bases and Foundations&quot;, &quot;slug&quot;: &quot;bases-and-foundations&quot;, &quot;content_type&quot;: 75, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/bases-and-foundations/&quot;, &quot;owner&quot;: null, &quot;seo_title&quot;: &quot;Mattress Bases, Adjustable Bases, Foundations&quot;, &quot;show_in_menus&quot;: false, &quot;search_description&quot;: &quot;Shop Flat and Adjustable Bed Bases including TEMPUR-Ergo Adjustable Bases, Foundations, TEMPUR-Ergo Accessories, and more.&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2016-07-06T19:59:40.364000+00:00&quot;, &quot;last_published_at&quot;: &quot;2019-12-18T20:43:45.868745+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2019-12-18T20:43:45.799877+00:00&quot;, &quot;live_revision&quot;: 37686, &quot;url&quot;: &quot;/bases-and-foundations/&quot;}, &quot;image&quot;: {&quot;id&quot;: 2912, &quot;title&quot;: &quot;Tempur-Pedic Adjustable Power Base&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/Tempur-Pedic_Adjustable_Power_Bases.png&quot;}, &quot;badge&quot;: {&quot;title&quot;: &quot;Small - SAVE - SHOP NAV&quot;, &quot;image&quot;: {&quot;id&quot;: 1230, &quot;title&quot;: &quot;Savings callout&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/mini_badge-new-save.png&quot;}, &quot;position&quot;: &quot;top-left&quot;, &quot;mobile_text&quot;: &quot;SAVE&quot;}}}, {&quot;type&quot;: &quot;page_link_with_image&quot;, &quot;value&quot;: {&quot;override_title&quot;: &quot;Pillows&quot;, &quot;open_in_new_tab&quot;: false, &quot;page&quot;: {&quot;pk&quot;: 351, &quot;path&quot;: &quot;000100020006&quot;, &quot;depth&quot;: 3, &quot;numchild&quot;: 28, &quot;title&quot;: &quot;Shop Pillows&quot;, &quot;draft_title&quot;: &quot;Shop Pillows&quot;, &quot;slug&quot;: &quot;shop-pillows&quot;, &quot;content_type&quot;: 254, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/shop-pillows/&quot;, &quot;owner&quot;: 13044, &quot;seo_title&quot;: &quot;Shop Tempur-Pedic Pillows&quot;, &quot;show_in_menus&quot;: false, &quot;search_description&quot;: &quot;LIKE SLEEPING ON A CLOUD:  Premium pillows made with the same legendary TEMPUR\u00ae material as our mattresses&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2017-09-20T23:37:21.485980+00:00&quot;, &quot;last_published_at&quot;: &quot;2020-01-02T14:32:56.611259+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2020-01-02T14:32:56.565842+00:00&quot;, &quot;live_revision&quot;: 37961, &quot;url&quot;: &quot;/shop-pillows/&quot;}, &quot;image&quot;: {&quot;id&quot;: 2915, &quot;title&quot;: &quot;Tempur-Cloud Pillow&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/Tempur-Pedic_Pillows.png&quot;}, &quot;badge&quot;: {&quot;title&quot;: &quot;2 for $99 callout&quot;, &quot;image&quot;: {&quot;id&quot;: 1448, &quot;title&quot;: &quot;Pink badge with text saying, \&quot;2 for $99\&quot;&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/mini_badge-new-new-2for99.png&quot;}, &quot;position&quot;: &quot;top-left&quot;, &quot;mobile_text&quot;: &quot;2 for $99&quot;}}}, {&quot;type&quot;: &quot;page_link_with_image&quot;, &quot;value&quot;: {&quot;override_title&quot;: &quot;Bedding&quot;, &quot;open_in_new_tab&quot;: false, &quot;page&quot;: {&quot;pk&quot;: 5, &quot;path&quot;: &quot;000100020007&quot;, &quot;depth&quot;: 3, &quot;numchild&quot;: 19, &quot;title&quot;: &quot;Bedding&quot;, &quot;draft_title&quot;: &quot;Bedding&quot;, &quot;slug&quot;: &quot;bedding&quot;, &quot;content_type&quot;: 80, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/bedding/&quot;, &quot;owner&quot;: null, &quot;seo_title&quot;: &quot;Bedding, Sheets, Pillow Cases, Covers&quot;, &quot;show_in_menus&quot;: true, &quot;search_description&quot;: &quot;Shop bedding made from premium-quality fabrics to fit your mattress, in a wide range of thread counts and finishes.&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2016-05-10T15:52:59.547000+00:00&quot;, &quot;last_published_at&quot;: &quot;2020-01-17T13:54:33.923217+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2020-01-17T13:54:33.843382+00:00&quot;, &quot;live_revision&quot;: 38149, &quot;url&quot;: &quot;/bedding/&quot;}, &quot;image&quot;: {&quot;id&quot;: 2925, &quot;title&quot;: &quot;A stack of Tempur-Pedic sheets&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/Sheetshrthdf.png&quot;}, &quot;badge&quot;: {&quot;title&quot;: &quot;Small - 25% off - Shop NAV&quot;, &quot;image&quot;: {&quot;id&quot;: 508, &quot;title&quot;: &quot;A pink badge with text saying, \&quot;25% off\&quot;&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/mini_badge-new-25perc.png&quot;}, &quot;position&quot;: &quot;top-left&quot;, &quot;mobile_text&quot;: &quot;25% off&quot;}}}, {&quot;type&quot;: &quot;page_link_with_image&quot;, &quot;value&quot;: {&quot;override_title&quot;: &quot;Toppers&quot;, &quot;open_in_new_tab&quot;: false, &quot;page&quot;: {&quot;pk&quot;: 41, &quot;path&quot;: &quot;000100020008001C&quot;, &quot;depth&quot;: 4, &quot;numchild&quot;: 0, &quot;title&quot;: &quot;TEMPUR-Topper Supreme&quot;, &quot;draft_title&quot;: &quot;TEMPUR-Topper Supreme&quot;, &quot;slug&quot;: &quot;tempur-topper-supreme&quot;, &quot;content_type&quot;: 68, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/other-products/tempur-topper-supreme/&quot;, &quot;owner&quot;: null, &quot;seo_title&quot;: &quot;TEMPUR-Topper Supreme&quot;, &quot;show_in_menus&quot;: false, &quot;search_description&quot;: &quot;Limited Time \u2013 Save 20% any size TEMPUR-Topper and get a free Cozy Collection Set (Sleep Mask + Cloud Pillow). The Topper Supreme features 3 inches of revolutionary TEMPUR\u00ae material, which is also found in all of our mattresses. Backed by 25 years of legendary Tempur-Pedic innovation.&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2016-08-26T17:58:24.603850+00:00&quot;, &quot;last_published_at&quot;: &quot;2020-01-07T21:04:01.623088+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2020-01-07T21:04:01.519960+00:00&quot;, &quot;live_revision&quot;: 38001, &quot;url&quot;: &quot;/other-products/tempur-topper-supreme/&quot;}, &quot;image&quot;: {&quot;id&quot;: 2926, &quot;title&quot;: &quot;The TEMPUR-Topper plus sleep set- A TEMPUR-Topper Supreme, Cloud Pillow and Sleep Mask&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/Topperghrthret.png&quot;}, &quot;badge&quot;: {&quot;title&quot;: &quot;Mini - 20% off toppers + gift - Shop Nav&quot;, &quot;image&quot;: {&quot;id&quot;: 1753, &quot;title&quot;: &quot;A pink badge with text saying, \&quot;toppers, 20% off + gift\&quot;&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/mini_badge-20perc-plus_gift-toppers.png&quot;}, &quot;position&quot;: &quot;top-left&quot;, &quot;mobile_text&quot;: &quot;20% off&quot;}}}, {&quot;type&quot;: &quot;page_link_with_image&quot;, &quot;value&quot;: {&quot;override_title&quot;: &quot;More from Tempur&quot;, &quot;open_in_new_tab&quot;: false, &quot;page&quot;: {&quot;pk&quot;: 8, &quot;path&quot;: &quot;000100020008&quot;, &quot;depth&quot;: 3, &quot;numchild&quot;: 35, &quot;title&quot;: &quot;More From Tempur&quot;, &quot;draft_title&quot;: &quot;More From Tempur&quot;, &quot;slug&quot;: &quot;other-products&quot;, &quot;content_type&quot;: 62, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/other-products/&quot;, &quot;owner&quot;: null, &quot;seo_title&quot;: &quot;Tempur-Pedic Products &amp; Accessories&quot;, &quot;show_in_menus&quot;: false, &quot;search_description&quot;: &quot;Enjoy the unmatched performance of TEMPUR\u00ae material with these innovative accessories, designed and purpose-built for incomparable comfort.&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2016-07-06T19:51:56.776000+00:00&quot;, &quot;last_published_at&quot;: &quot;2019-12-03T16:06:30.188800+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2019-12-03T16:06:30.163628+00:00&quot;, &quot;live_revision&quot;: 37308, &quot;url&quot;: &quot;/other-products/&quot;}, &quot;image&quot;: {&quot;id&quot;: 2914, &quot;title&quot;: &quot;Tempur-Pedic Weighted Blanket&quot;, &quot;url&quot;: &quot;https://assets-www.tempurpedic.com/media/original_images/Tempur-Pedic_Other_Products.png&quot;}, &quot;badge&quot;: null}}, {&quot;type&quot;: &quot;nav_advert&quot;, &quot;value&quot;: {&quot;html&quot;: &quot;&lt;img src=\&quot;https://assets-www.tempurpedic.com/media/images/thumbnail_20000_TP_CloseoutTile_v4.original.jpg\&quot;style=\&quot;width:100%;\&quot;alt=\&quot;Save 30% on breeze 2.0 closeout models - Through Monday!\&quot;&gt;\r\n\r\n&lt;!-- DO NOT DELETE THIS IS THE MOBILE NAV SHOP MENU FIX  --&gt;\r\n&lt;style&gt;\r\n@media (max-width: 500px) and (min-width: 0) {\r\n\t.menu-dropdown-block &gt; span {\r\n\t\tdisplay: inline-block;\r\n\t\tposition: absolute;\r\n\t\tright: 0;\r\n\t}\r\n}\r\n&lt;/style&gt;&quot;, &quot;page&quot;: {&quot;pk&quot;: 554, &quot;path&quot;: &quot;00010002000B&quot;, &quot;depth&quot;: 3, &quot;numchild&quot;: 0, &quot;title&quot;: &quot;Closeout&quot;, &quot;draft_title&quot;: &quot;Closeout&quot;, &quot;slug&quot;: &quot;closeout&quot;, &quot;content_type&quot;: 252, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/closeout/&quot;, &quot;owner&quot;: 81423607, &quot;seo_title&quot;: &quot;&quot;, &quot;show_in_menus&quot;: false, &quot;search_description&quot;: &quot;&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2019-06-13T13:24:12.924327+00:00&quot;, &quot;last_published_at&quot;: &quot;2020-01-16T13:19:46.298105+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2020-01-16T13:19:46.256194+00:00&quot;, &quot;live_revision&quot;: 38133, &quot;url&quot;: &quot;/closeout/&quot;}, &quot;external_link&quot;: &quot;&quot;}}]}}, {&quot;type&quot;: &quot;page_link&quot;, &quot;value&quot;: {&quot;override_title&quot;: &quot;Reviews&quot;, &quot;open_in_new_tab&quot;: false, &quot;page&quot;: {&quot;pk&quot;: 507, &quot;path&quot;: &quot;00010002000A&quot;, &quot;depth&quot;: 3, &quot;numchild&quot;: 3, &quot;title&quot;: &quot;Reviews&quot;, &quot;draft_title&quot;: &quot;Reviews&quot;, &quot;slug&quot;: &quot;reviews&quot;, &quot;content_type&quot;: 194, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/reviews/&quot;, &quot;owner&quot;: 31370, &quot;seo_title&quot;: &quot;Customer Reviews&quot;, &quot;show_in_menus&quot;: false, &quot;search_description&quot;: &quot;Read what our customers have to say about Tempur-Pedic&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2019-02-07T14:14:58.012627+00:00&quot;, &quot;last_published_at&quot;: &quot;2019-10-30T12:47:19.617763+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2019-10-30T12:47:19.554633+00:00&quot;, &quot;live_revision&quot;: 36476, &quot;url&quot;: &quot;/reviews/&quot;}}}, {&quot;type&quot;: &quot;page_link&quot;, &quot;value&quot;: {&quot;override_title&quot;: &quot;Offers&quot;, &quot;open_in_new_tab&quot;: false, &quot;page&quot;: {&quot;pk&quot;: 562, &quot;path&quot;: &quot;000100020009&quot;, &quot;depth&quot;: 3, &quot;numchild&quot;: 30, &quot;title&quot;: &quot;Offers&quot;, &quot;draft_title&quot;: &quot;Offers&quot;, &quot;slug&quot;: &quot;offers&quot;, &quot;content_type&quot;: 334, &quot;live&quot;: true, &quot;has_unpublished_changes&quot;: false, &quot;url_path&quot;: &quot;/homepage/offers/&quot;, &quot;owner&quot;: 14226, &quot;seo_title&quot;: &quot;&quot;, &quot;show_in_menus&quot;: false, &quot;search_description&quot;: &quot;&quot;, &quot;go_live_at&quot;: null, &quot;expire_at&quot;: null, &quot;expired&quot;: false, &quot;locked&quot;: false, &quot;first_published_at&quot;: &quot;2019-06-25T16:50:38.667812+00:00&quot;, &quot;last_published_at&quot;: &quot;2020-01-17T13:57:33.137621+00:00&quot;, &quot;latest_revision_created_at&quot;: &quot;2020-01-17T13:57:32.998643+00:00&quot;, &quot;live_revision&quot;: 38152, &quot;url&quot;: &quot;/offers/&quot;}}}]'>
+                    
+                    <div>
+                        <a title='Shop Menu' class="site-nav__main-menu-item site-nav__main-menu-item--mobile " data-main-menu="#main-dropdown-menu-shop" role="listitem">
+                            
+    <span class="ada-hidden">Shop Menu</span>
+
+<svg role="img" class="site-nav__mobile-toggle-icon" >
+    <title>Shop Menu</title>
+    <use xlink:href="#icon-bars"></use>
+</svg>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a title='Shop Menu' class="site-nav__main-menu-item " data-main-menu="#main-dropdown-menu-shop" role="listitem">
+                                Shop 
+    <span class="ada-hidden">Shop Menu</span>
+
+<svg role="img" class="site-nav__shop-icon" >
+    <title>Shop Menu</title>
+    <use xlink:href="#icon-caret-down"></use>
+</svg>
+
+                        </a>
+                    </div>
+                    <div>
+                        <a title="Product Reviews" class="site-nav__main-menu-item " href="/reviews/" role="listitem">
+                            Reviews
+                        </a>
+                    </div>
+                    <div>
+                        <a title="Product Offers" class="site-nav__main-menu-item " href="/offers/" role="listitem">
+                            Offers
+                        </a>
+                    </div>
+                </div>
+
+                <a title='Toggle Menu' class="site-nav__logo-link site-nav__logo-link--mobile" href="/" aria-label='Toggle Menu'>
+                    
+    <span class="ada-hidden">Tempur-Pedic Home</span>
+
+<svg role="img" class="site-nav__logo-mobile" >
+    <title>Tempur-Pedic Home</title>
+    <use xlink:href="#icon-tempur-logotype"></use>
+</svg>
+
+                </a>
+
+                <ul class="site-nav__secondary-menu">
+                    
+                    <li data-place-react="auth-login-menu-link" data-extra-classes="" class="site-nav__secondary-menu__item" >
+                        
+
+<a title="Login" class='site-nav__secondary-menu__item ' href="/store/accounts/login/">
+    <span class="site-nav__secondary-menu__item--desktop">
+        Account 
+<svg role="img" class="site-nav__my-icon" >
+    
+    <use xlink:href="#icon-caret-down"></use>
+</svg>
+
+    </span>
+    <span class="site-nav__secondary-menu__item--mobile">
+        
+<svg role="img" class="site-nav__my-icon" >
+    
+    <use xlink:href="#icon-mobile-account"></use>
+</svg>
+
+    </span>
+</a>
+
+                    </li>
+
+                    
+                    
+
+                    
+                    <li data-place-react='basket-menu-icon' data-extra-classes="" class="site-nav__secondary-menu__item">
+                        
+
+<a title="Number of items in cart" class='site-nav__secondary-menu__item ' href="/store/basket/">
+    <span class="cart-number">0</span>
+    
+    
+<svg role="img" class="site-nav__cart" >
+    <title>Shopping Cart Icon</title>
+    <use xlink:href="#icon-cart-open"></use>
+</svg>
+
+</a>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+            <div id="main-content"></div>
+            
+<div id="utility-page-with-toolbox">
+    
+        
+
+<section class="
+    aligned-rich-text-block 
+     
+    
+    
+">
+    <div class="rich-text"><h2>New General Privacy Policy</h2><p><b>Effective Date:</b> January 1, 2020</p><p>Welcome! An overview of this Privacy Policy is provided below. To see the full text, click on the links. This Privacy Policy applies to your use of any online services (<i>e.g.</i>, website or software) that posts a link to this Privacy Policy (<b>“Service”</b>) and is owned or operated by Tempur Sealy International, Inc., Sealy Ecommerce International, and/or Tempur-Pedic North America (collectively, “<b>Company</b>”, “<b>we</b>”, or “<b>us</b>” or “<b>our</b>”), regardless of how you access or use it. Click <a href="/customer-service/terms-of-use/"><b>here</b></a> to view our Terms of Use. </p><p><b>Your California Privacy Rights</b></p><p>Beginning January 1, 2020, California residents will have certain privacy rights detailed in our California Consumer Privacy Notice <a href="/customer-service/privacy-policy-california/"><b>here</b></a><b>.</b> To the extent that there is a conflict between this Privacy Policy and the California Consumer Privacy Notice, the California Consumer Privacy Notice will control.</p></div>
+</section>
+    
+        
+
+
+<section class="html-ad-bar-block ">
+    
+        <!-- OneTrust Privacy Notice start -->
+
+<!-- Container in which the privacy notice will be rendered -->
+<div id="otnotice-a863b2f8-c121-4608-b0b7-cac4181c95e0" class="otnotice"></div>
+
+<script src="https://appdeds545c.blob.core.cloudapi.de/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcHJpdmFjeXBvcnRhbC1kZS5vbmV0cnVzdC5jb20vcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    // To ensure external settings are loaded, use the Initialized promise:
+    OneTrust.NoticeApi.Initialized.then(function() {
+        OneTrust.NoticeApi.LoadNotices(["https://appdeds545c.blob.core.cloudapi.de/06f33c68-93f3-46c6-a3ad-8ae86016fdeb/privacy-notices/a863b2f8-c121-4608-b0b7-cac4181c95e0.json"]);
+    });
+</script>
+
+<!-- OneTrust Privacy Notice end -->
+    
+</section>
+
+    
+        
+
+
+<section class="html-ad-bar-block ">
+    
+        <style type="text/css">
+/*---- Styling to update list links to be denim and adjust look of list --*/
+li.otnotice-menu-section{
+    list-style: none; 
+    margin: .5rem 1rem;
+}
+li.otnotice-menu-section a {
+    color: #1b63cd;
+}
+</style>
+
+<style type="text/css">
+.html-ad-bar-block{
+padding: 0 0 4rem 0;
+}
+
+.aligned-rich-text-block{
+    max-width:1200px;
+    width:100%;
+    padding:4rem 1rem 1rem;
+}
+
+.otnotice a{
+    color:#1b63cd;    
+}
+
+.otnotice-content .otnotice-sections .otnotice-section-content p,
+.otnotice-content .otnotice-sections .otnotice-section-content td,
+.otnotice-content .otnotice-sections .otnotice-section-content th{
+    font-size:1em;
+    line-height:inherit;
+   margin: 1em 0;
+}
+</style>
+    
+</section>
+
+    
+</div>
+
+            
+
+
+
+
+
+
+    
+
+
+
+
+
+    <footer class="site-footer l-full-width" aria-labelledby="footer">
+        
+
+
+
+
+
+    <div class="footer-widgets">
+        <div class="l-capped-width">
+            
+                <div class="footer-widget">
+                    
+                    
+
+<div class="footer-widgets__offer">
+    
+        
+            
+                
+<svg role="img" class="footer-widget__icon footer-widgets__offer__icon" aria-hidden="true">
+    <title>Speech Bubbles Icon</title>
+    <use xlink:href="#icon-speech-bubbles-talk"></use>
+</svg>
+
+            
+        
+    
+    <div class="footer-widget__content">
+        
+
+        
+            <div class="footer-widget__header">
+                <h2><a href="javascript:void(0)" onClick="SnapEngage.startLink()">Talk to a Sleep Expert</a></h2>
+            </div>
+        
+
+        
+            <span class="footer-widget__copy">
+                <a class="footer-widgets__offer__copy-link" href="javascript:void(0)" onClick="SnapEngage.startLink()">Chat Live</a> or call
+            </span>
+        
+
+        
+            <a href="tel:+1-888-811-5053" class="text-link footer-widget__link">
+                (888) 811-5053
+            </a>
+        
+    </div>
+</div>
+
+                </div>
+            
+            
+                <div class="footer-widget" data-place-react="nearby-stores-ad">
+
+
+
+
+
+
+
+
+
+<div class="footer-widgets__offer">
+    
+        
+            
+                
+<svg role="img" class="footer-widget__icon footer-widgets__offer__icon" aria-hidden="true">
+    <title>Locate a Store Icon</title>
+    <use xlink:href="#icon-store_locator_footer"></use>
+</svg>
+
+            
+        
+    
+    <div class="footer-widget__content">
+        
+
+        
+            <div class="footer-widget__header">
+                Feel it for yourself
+            </div>
+        
+
+        
+            <span class="footer-widget__copy">
+                Several retailers near you
+            </span>
+        
+
+        
+            <a href="" class="text-link footer-widget__link">
+                See List
+            </a>
+        
+    </div>
+</div>
+
+</div>
+            
+        </div>
+    </div>
+
+
+
+        
+            <div class="footer-offers l-capped-width" data-place-react="tempur-me-signup">
+    <!-- React Component Loads Here -->
+</div>
+
+        
+            
+
+    <nav class="footer-nav l-capped-width">
+    <div class="footer-nav__col">
+        <ul class="footer-nav__list">
+            
+                <li class="site-footer__header" role="heading" aria-level="2">Shop by Feel</li>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/tempur-breeze" >
+        
+            Cooler
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/all/compare-tempur-pedic-mattresses/?tiles=2%2C3%2C4%2C5&amp;return_url=%2Fshop-mattresses%2Fall%2F" >
+        
+            Firmer
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/all/compare-tempur-pedic-mattresses/?tiles=2%2C3%2C5&amp;return_url=%2Fshop-mattresses%2Fall%2F" >
+        
+            Medium
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/all/compare-tempur-pedic-mattresses/?tiles=2%2C3%2C5&amp;return_url=%2Fshop-mattresses%2Fall%2F" >
+        
+            Softer
+        
+    </a>
+</li></div>
+            
+                <li class="site-footer__header" role="heading" aria-level="2">Shop By Collection</li>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/tempur-adapt/v/2602/" >
+        
+            TEMPUR-Adapt® Collection
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/tempur-proadapt/v/2593/" >
+        
+            TEMPUR-ProAdapt™ Collection
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/tempur-luxeadapt/v/3017/" >
+        
+            TEMPUR-LuxeAdapt™ Collection
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/tempur-breeze/v/3044/" >
+        
+            TEMPUR-breeze° Collection
+        
+    </a>
+</li></div>
+            
+                </ul>
+</div>
+<div class="footer-nav__col">
+  <ul class="footer-nav__list">
+            
+                <li class="site-footer__header" role="heading" aria-level="2">Shop By Category</li>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-mattresses/all/" >
+        
+            Mattresses
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/bases-and-foundations/" >
+        
+            Bed Bases
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shop-pillows/" >
+        
+            Shop Pillows
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/bedding/" >
+        
+            Bedding
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/other-products/s/mattress-toppers/" >
+        
+            Mattress Toppers
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/other-products/s/tempur-travel-collection/" >
+        
+            Travel Collection
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/other-products/s/slippers/" >
+        
+            Slippers
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/other-products/s/tempur-plush-collection/" >
+        
+            Tempur Plush
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/other-products/s/cushions/" >
+        
+            Cushions
+        
+    </a>
+</li></div>
+            
+                </ul>
+</div>
+<div class="footer-nav__col">
+  <ul class="footer-nav__list">
+            
+                <li class="site-footer__header" role="heading" aria-level="2">Customer Service</li>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/store/accounts/orders/" >
+        
+            Orders
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/shipping-and-delivery/" >
+        
+            Shipping and Delivery
+        
+    </a>
+</li></div>
+<div class="block-external_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="https://register.tempurpedic.com/" >
+        
+            Product Registration
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/warranties/" >
+        
+            Warranties
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/return-policy/" >
+        
+            Return Policy
+        
+    </a>
+</li></div>
+<div class="block-relative_url"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/locations/states/" >
+        
+            Retail Store Directory
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/faqs/" >
+        
+            FAQs
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/contact-us/" >
+        
+            Contact Us
+        
+    </a>
+</li></div>
+            
+                <li class="site-footer__header" role="heading" aria-level="2">California Consumer Rights</li>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/customer-service/privacy-policy-california/"target='_blank' >
+        
+            New California Consumer Privacy Notice
+        
+    </a>
+</li></div>
+<div class="block-external_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="https://privacyportalde-cdn.onetrust.com/dsarwebform/06f33c68-93f3-46c6-a3ad-8ae86016fdeb/022a722b-a735-46be-ac51-7c0520b8152f.html"target='_blank' >
+        
+            Opt-out of Marketing
+        
+    </a>
+</li></div>
+<div class="block-external_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="https://privacyportalde-cdn.onetrust.com/dsarwebform/06f33c68-93f3-46c6-a3ad-8ae86016fdeb/c10bbe1a-f441-49bc-9e28-21e177c28772.html"target='_blank' >
+        
+            Consumer Rights Request
+        
+    </a>
+</li></div>
+            
+                </ul>
+</div>
+<div class="footer-nav__col">
+  <ul class="footer-nav__list">
+            
+                <li class="site-footer__header" role="heading" aria-level="2">Learn</li>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/product-care/" >
+        
+            Product Care
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/finance-your-purchase/" >
+        
+            Pre-Qualification and Financing
+        
+    </a>
+</li></div>
+<div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="/offers/" >
+        
+            Offers
+        
+    </a>
+</li></div>
+<div class="block-html"><div class="block-page_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="https://admin-www.tempurpedic.com/documents/21/Tempur_GCC_11.21.19.pdf">
+        
+            CPSIA Certificates
+        
+    </a>
+</li></div></div>
+            
+                <li class="site-footer__header" role="heading" aria-level="2">Our Company</li>
+<div class="block-external_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="http://www.tempursealy.com/careers/" >
+        
+            Careers
+        
+    </a>
+</li></div>
+<div class="block-external_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="http://investor.tempursealy.com/" >
+        
+            Investors
+        
+    </a>
+</li></div>
+            
+                <li class="site-footer__header" role="heading" aria-level="2">More Ways to Shop</li>
+<div class="block-external_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="https://www.tempurpillows.com/"target='_blank' >
+        
+            Tempur-Pedic Pillows
+        
+    </a>
+</li></div>
+<div class="block-external_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="https://www.tempurpedicsale.com/"target='_blank' >
+        
+            Tempur-Pedic Sale
+        
+    </a>
+</li></div>
+<div class="block-external_link"><li class="footer-nav__item">
+    <a class="footer-nav__item-link" href="https://www.tempurpedictoppers.com/"target='_blank' >
+        
+            Tempur-Pedic Toppers
+        
+    </a>
+</li></div>
+            
+        </ul>
+    </div>
+</nav>
+
+
+<nav class="footer-nav-mobile u-margin-bottom--xl">
+    
+        
+            <div class="footer-nav-mobile__block">
+                <div class="footer-nav-mobile__header site-footer__header">Shop by Feel</div>
+                <div class="site-footer__dropdown">
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/tempur-breeze">
+                                
+                                    Cooler
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/all/compare-tempur-pedic-mattresses/?tiles=2%2C3%2C4%2C5&amp;return_url=%2Fshop-mattresses%2Fall%2F">
+                                
+                                    Firmer
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/all/compare-tempur-pedic-mattresses/?tiles=2%2C3%2C5&amp;return_url=%2Fshop-mattresses%2Fall%2F">
+                                
+                                    Medium
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/all/compare-tempur-pedic-mattresses/?tiles=2%2C3%2C5&amp;return_url=%2Fshop-mattresses%2Fall%2F">
+                                
+                                    Softer
+                                
+                            </a>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        
+    
+        
+            <div class="footer-nav-mobile__block">
+                <div class="footer-nav-mobile__header site-footer__header">Shop By Collection</div>
+                <div class="site-footer__dropdown">
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/tempur-adapt/v/2602/">
+                                
+                                    TEMPUR-Adapt® Collection
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/tempur-proadapt/v/2593/">
+                                
+                                    TEMPUR-ProAdapt™ Collection
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/tempur-luxeadapt/v/3017/">
+                                
+                                    TEMPUR-LuxeAdapt™ Collection
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/tempur-breeze/v/3044/">
+                                
+                                    TEMPUR-breeze° Collection
+                                
+                            </a>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        
+    
+        
+    
+        
+            <div class="footer-nav-mobile__block">
+                <div class="footer-nav-mobile__header site-footer__header">Shop By Category</div>
+                <div class="site-footer__dropdown">
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-mattresses/all/">
+                                
+                                    Mattresses
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/bases-and-foundations/">
+                                
+                                    Bed Bases
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shop-pillows/">
+                                
+                                    Shop Pillows
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/bedding/">
+                                
+                                    Bedding
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/other-products/s/mattress-toppers/">
+                                
+                                    Mattress Toppers
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/other-products/s/tempur-travel-collection/">
+                                
+                                    Travel Collection
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/other-products/s/slippers/">
+                                
+                                    Slippers
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/other-products/s/tempur-plush-collection/">
+                                
+                                    Tempur Plush
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/other-products/s/cushions/">
+                                
+                                    Cushions
+                                
+                            </a>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        
+    
+        
+    
+        
+            <div class="footer-nav-mobile__block">
+                <div class="footer-nav-mobile__header site-footer__header">Customer Service</div>
+                <div class="site-footer__dropdown">
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/store/accounts/orders/">
+                                
+                                    Orders
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/shipping-and-delivery/">
+                                
+                                    Shipping and Delivery
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="https://register.tempurpedic.com/">
+                                
+                                    Product Registration
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/warranties/">
+                                
+                                    Warranties
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/return-policy/">
+                                
+                                    Return Policy
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/locations/states/">
+                                
+                                    Retail Store Directory
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/faqs/">
+                                
+                                    FAQs
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/contact-us/">
+                                
+                                    Contact Us
+                                
+                            </a>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        
+    
+        
+            <div class="footer-nav-mobile__block">
+                <div class="footer-nav-mobile__header site-footer__header">California Consumer Rights</div>
+                <div class="site-footer__dropdown">
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/customer-service/privacy-policy-california/">
+                                
+                                    New California Consumer Privacy Notice
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="https://privacyportalde-cdn.onetrust.com/dsarwebform/06f33c68-93f3-46c6-a3ad-8ae86016fdeb/022a722b-a735-46be-ac51-7c0520b8152f.html">
+                                
+                                    Opt-out of Marketing
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="https://privacyportalde-cdn.onetrust.com/dsarwebform/06f33c68-93f3-46c6-a3ad-8ae86016fdeb/c10bbe1a-f441-49bc-9e28-21e177c28772.html">
+                                
+                                    Consumer Rights Request
+                                
+                            </a>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        
+    
+        
+    
+        
+            <div class="footer-nav-mobile__block">
+                <div class="footer-nav-mobile__header site-footer__header">Learn</div>
+                <div class="site-footer__dropdown">
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/product-care/">
+                                
+                                    Product Care
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/finance-your-purchase/">
+                                
+                                    Pre-Qualification and Financing
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="/offers/">
+                                
+                                    Offers
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                    
+                </div>
+            </div>
+        
+    
+        
+            <div class="footer-nav-mobile__block">
+                <div class="footer-nav-mobile__header site-footer__header">Our Company</div>
+                <div class="site-footer__dropdown">
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="http://www.tempursealy.com/careers/">
+                                
+                                    Careers
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="http://investor.tempursealy.com/">
+                                
+                                    Investors
+                                
+                            </a>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        
+    
+        
+            <div class="footer-nav-mobile__block">
+                <div class="footer-nav-mobile__header site-footer__header">More Ways to Shop</div>
+                <div class="site-footer__dropdown">
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="https://www.tempurpillows.com/">
+                                
+                                    Tempur-Pedic Pillows
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="https://www.tempurpedicsale.com/">
+                                
+                                    Tempur-Pedic Sale
+                                
+                            </a>
+                        </div>
+                        
+                    
+                        
+                        <div class="footer-nav__item footer-nav__item--mobile">
+                            <a class="footer-nav__item--mobile-link" href="https://www.tempurpedictoppers.com/">
+                                
+                                    Tempur-Pedic Toppers
+                                
+                            </a>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        
+    
+</nav>
+
+
+        
+            <div aria-hidden="true" class="footer-gcr l-capped-width">
+    <g:ratingbadge merchant_id="100738004"></g:ratingbadge>​
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var googleMerchantIframe = document.querySelector('iframe[ng-non-bindable]');
+        if (googleMerchantIframe != null) {
+            googleMerchantIframe.title = 'Google Merchant';
+        }
+    });
+</script>
+
+        
+            
+
+
+
+
+<div class="footer-legal l-capped-width">
+    <div class="footer-legal__copyright">
+        <ul class="footer-legal__list">
+            <li class="footer-legal__item">&copy; 2020 Tempur-Pedic North America, LLC. All Rights Reserved.</li>
+            <li class="footer-legal__item"><a title='Terms of Use' href="/legal/terms-of-use/">Terms of Use</a></li>
+            <li class="footer-legal__item"><a title='Privacy Policy' href="/legal/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+        <ul class="footer-social-list">
+            
+            <li class="footer-social-list__item">
+                <a title="Instagram" href="https://www.instagram.com/tempurpedic/" target="_blank">
+                    
+    <span class="ada-hidden">Instagram</span>
+
+<svg role="img" class="footer-social-list__icon" aria-hidden="true">
+    <title>Tempur-pedic Instagram</title>
+    <use xlink:href="#icon-instagram"></use>
+</svg>
+
+                </a>
+            </li>
+            <li class="footer-social-list__item">
+                <a title="Pinterest" href="https://www.pinterest.com/TempurPedic/" target="_blank">
+                    
+    <span class="ada-hidden">Pinterest</span>
+
+<svg role="img" class="footer-social-list__icon" aria-hidden="true">
+    <title>Tempur-pedic Pinterest</title>
+    <use xlink:href="#icon-pinterest-p"></use>
+</svg>
+
+                </a>
+            </li>
+            <li class="footer-social-list__item">
+                <a title="Twitter" href="https://twitter.com/tempurpedic" target="_blank">
+                    
+    <span class="ada-hidden">Twitter</span>
+
+<svg role="img" class="footer-social-list__icon" aria-hidden="true">
+    <title>Tempur-pedic Twitter</title>
+    <use xlink:href="#icon-twitter"></use>
+</svg>
+
+                </a>
+            </li>
+            <li class="footer-social-list__item">
+                <a title="Facebook" href="https://www.facebook.com/TempurPedic" target="_blank">
+                    
+    <span class="ada-hidden">Facebook</span>
+
+<svg role="img" class="footer-social-list__icon" aria-hidden="true">
+    <title>Tempur-pedic Facebook</title>
+    <use xlink:href="#icon-facebook-f"></use>
+</svg>
+
+                </a>
+            </li>
+            <li class="footer-social-list__item">
+                <a title="Youtube" href="https://www.youtube.com/tempurpedic" target="_blank">
+                    
+    <span class="ada-hidden">Youtube</span>
+
+<svg role="img" class="footer-social-list__icon" aria-hidden="true">
+    <title>Tempur-pedic YouTube</title>
+    <use xlink:href="#icon-youtube-play"></use>
+</svg>
+
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-legal__aux-copy">
+        
+        
+            <p><span class="fineprint">If you are vision-impaired or have some other impairment covered by the Americans with Disabilities Act or a similar law, and you wish to discuss potential accommodations related to using this website, please contact Customer Support at</span> <a href="tel:tel:+18883860356"><span class="fineprint">1-888-386-0356</span></a><span class="fineprint"> or DTCsupport@tempurpedic.com.</span></p>
+        
+            <p><span class="fineprint">§ Consumer Reviews and Testimonials</span></p><p><span class="fineprint">The comments expressed by consumers on this web site are not intended as advertisements. To the extent certain comments include endorsements by a consumer about the performance of an advertised product, those comments should not be interpreted as meaning that every person will have the same experience or achieve the same or similar results. A consumer testimonial is a representation of one person&#x27;s subjective experience.</span></p><p><span class="fineprint">* Among traditional mattress brands based on 2017-2019 Tempur Sealy Brand Tracker Report.</span></p><p><span class="fineprint">** Real product owners compensated for time</span></p><p><span class="fineprint">‡ In the 2017 Tempur Sealy Brand Tracker Report, 95% of people responded that they would recommend their Tempur-Pedic® mattress</span><br/></p>
+        
+            <p><span class="fineprint">The comments expressed by consumers in some advertising should not be interpreted as meaning that all consumers will have the same experience or achieve the same or similar results. Consumers represented in advertising may have received free product.</span></p>
+        
+            <p><span class="fineprint">++ LUXEbreeze feels up to 8 degrees cooler based on average heat index of TEMPUR-LUXEbreeze® compared to TEMPUR-ProAdapt® models measured over 8-hour period. PRObreeze® feels up to 3 degrees cooler based on average heat index of TEMPUR-PRObreeze® compared to TEMPUR-ProAdapt® models measured over 8-hour period.</span></p>
+        
+            <p><span class="fineprint">+ TEMPUR-Cloud&#x27;s top and second layer each provide more pressure relieving power than all layers in other compressed mattress models tested. TEMPUR-Cloud® provides greatest resistance to continued deflection after initial 50 mm deflection per BSI BSEN1957:2012 Load Deflection Analysis.</span></p>
+        
+            <p><span class="fineprint">‖ For J.D. Power 2019 award information, visit </span><a href="https://www.jdpower.com/business/ratings-and-awards"><span class="fineprint">jdpower.com/awards</span></a></p>
+        
+    </div>
+</div>
+
+        
+
+        
+        <div class="service-footer-container" data-place-react="service-footer">
+          <!-- React Component Loads Here -->
+        </div>
+        
+    </footer>
+
+
+
+
+        </div>
+
+        
+<span class="wfrs-plan-table">
+    
+        
+    
+        
+            <span class="wfrs-plan-table__plan"
+                data-threshold='1000.00'
+                data-length='12'
+                data-apr='0.00'
+                data-superscript='1'></span>
+        
+    
+        
+            <span class="wfrs-plan-table__plan"
+                data-threshold='1500.00'
+                data-length='24'
+                data-apr='0.00'
+                data-superscript='1'></span>
+        
+    
+        
+            <span class="wfrs-plan-table__plan"
+                data-threshold='2000.00'
+                data-length='36'
+                data-apr='0.00'
+                data-superscript='1'></span>
+        
+    
+</span>
+
+        
+
+
+
+<div id="common-page-urls" aria-hidden="true" style="display: none">
+    <a title='Home' href="/" class='home'>Home</a>
+    <a title='Basket Summary' href="/store/basket/" class='basket-summary'>Basket Summary</a>
+    <a title='Configure Gifts' href="/store/basket/configure-gifts/" class='configure-gifts'>Configure Gifts</a>
+    <a title='Checkout' href="/store/checkout/" class='checkout-index'>Checkout</a>
+    <a title='Checkout - Thank you' href="/store/checkout/thank-you/" class='checkout-thank-you'>Checkout - Thank you</a>
+    <a title='Customer Order List' href="/store/accounts/orders/" class='customer-order-list'>Customer Order List</a>
+    <a title='Customer Profile View' href="/store/accounts/profile/" class='customer-profile-view'>Customer Profile View</a>
+    <a title='Customer Login' href="/store/accounts/login/" class='customer-login'>Customer Login</a>
+    <a title='Customer Register' href="/store/accounts/register/" class='customer-register'>Customer Register</a>
+    <a title='Customer Logout' href="/store/accounts/logout/" class='customer-logout'>Customer Logout</a>
+    <a title='Password Reset' href="/store/password-reset/" class='password-reset'>Password Reset</a>
+    <a title='Shop Mattresses' href="/shop-mattresses/" class='mattresses-link'>Shop Mattresses</a>
+    <a title='Shop Pillows' href="/pillows/" class='pillows-link'>Shop Pillows</a>
+    <a title='Shop Bedding' href="/bedding/" class='bedding-link'>Shop Bedding</a>
+    <a title='Shop Other Products' href="/other-products/" class='other-products-link'>Shop Other Products</a>
+    <a title='Finance Your Purchase' href="/finance-your-purchase/#terms_and_conditions" class='finance-link'>Finance Your Purchase</a>
+    <a title='Find a Retailer' href="/find-a-retailer/" class='find-a-retailer'>Find a Retailer</a>
+    <a title='Tempur-Pedic Stores' href="/tempur-pedic-stores/" class='tempur-pedic-stores'>Find a Retailer</a>
+    <a title='Shop Bed Bases' href="/bases-and-foundations/" class='bed-bases-link'>Shop Bed Bases</a>
+    <a title='Offers' href="/offers/" class='offers-link'>Offers</a>
+    <a title='Contact Us' href="/contact-us/" class='contact-link'>Contact Us</a>
+    <a title='Return Policy' href="/return-policy/" class='return-policy'>Return Policy</a>
+    <a title='Shipping and Delivery' href="/shipping-and-delivery/" class='shipping-and-delivery'>Shipping and Delivery</a>
+    <a title='Reviews' href="/reviews/" class='reviews-link'>Reviews</a>
+</div>
+
+        
+
+
+
+
+<div id="common-page-settings" style="display: none">
+    
+    <span data-value="False" class='proactive-chat-decline'></span>
+    <span data-value="Hi, would you like any assistance in completing your order?" class='proactive-chat-decline-message'></span>
+    <span data-value="True" class='proactive-chat-wf-approved'></span>
+    <span data-value="Congratulations! Do you have any questions regarding your account or about financing options?" class='proactive-chat-wf-approved-message'></span>
+
+    
+    
+    <span data-value="(888) 811-5053" class='pre-order-phone-number-display'></span>
+    <span data-value="tel:+1-888-811-5053" class='pre-order-phone-number-link'></span>
+    <span data-value="(800) 821-6621" class='about-order-phone-number-display'></span>
+    <span data-value="tel:+1-800-821-6621" class='about-order-phone-number-link'></span>
+    <span data-value="(800) 821-6621" class='service-website-phone-number-display'></span>
+    <span data-value="tel:+1-800-821-6621" class='service-website-phone-number-link'></span>
+    <span data-value="(888) 824-2037" class='support-website-phone-number-display'></span>
+    <span data-value="tel:+1-888-824-2037" class='support-website-phone-number-link'></span>
+    <span data-value="Monday-Friday 9am - 9pm EST and Saturday, 9am - 6pm EST" class='support-contact-hours'></span>
+
+    
+    
+    <span data-value="2000.00" class='wfrs-default-plan-threshold'></span>
+    <span data-value="0.00" class='wfrs-default-plan-apr'></span>
+    <span data-value="36" class='wfrs-default-plan-term-months'></span>
+    <span data-value="Special rate of 0% APR with 36 equal monthly payments" class='wfrs-default-plan-description'></span>
+    <span data-value="1" class='wfrs-default-plan-superscript'></span>
+
+    
+    <span data-value="6LcGfR8UAAAAAAfB8jTA20Yxw-CcluZDBmRwdWmY" class='google-recaptcha-sitekey'></span>
+
+    
+    
+    <span data-value='{&quot;talk_modal_title_top&quot;: &quot;Talk to a Sleep Expert&quot;, &quot;talk_modal_text_top&quot;: &quot;&lt;p&gt;To get help finding your perfect mattress, or to place an order with one of our Sleep Experts via phone.&lt;/p&gt;&quot;, &quot;talk_modal_hours_top&quot;: &quot;&lt;p&gt;Monday : 9am - 9pm EST&lt;/p&gt;&lt;p&gt;Tuesday - Friday : 9am - 9pm EST&lt;br/&gt;Saturday : 9am - 6pm EST&lt;br/&gt;Sunday : 9am - 6pm EST&lt;/p&gt;&quot;, &quot;talk_modal_title_middle&quot;: &quot;Completing an Online Order&quot;, &quot;talk_modal_text_middle&quot;: &quot;&lt;p&gt;For help completing orders that you started online.&lt;/p&gt;&quot;, &quot;talk_modal_hours_middle&quot;: &quot;&lt;p&gt;Monday - Friday : 9am - 9pm EST&lt;br/&gt;Saturday : 9am - 6pm EST&lt;br/&gt;Sunday : 9am - 6pm EST&lt;/p&gt;&quot;, &quot;talk_modal_title_bottom&quot;: &quot;Past Order(s)&quot;, &quot;talk_modal_text_bottom&quot;: &quot;&lt;p&gt;For questions or help with an order you already placed.&lt;/p&gt;&quot;, &quot;talk_modal_hours_bottom&quot;: &quot;&lt;p&gt;Monday - Friday : 9am - 9pm EST&lt;br/&gt;Saturday : 9am - 6pm EST&lt;br/&gt;Sunday : Closed&lt;/p&gt;&quot;, &quot;talk_modal_links&quot;: [{&quot;id&quot;: &quot;7d8e24c4-aa95-4ca2-9bbc-2eb1bac6487b&quot;, &quot;title&quot;: &quot;Frequently Asked Questions&quot;, &quot;url&quot;: &quot;/faqs/&quot;}]}' class='footer-settings'></span>
+
+    
+    
+    <span data-value='<p><sup>1</sup> The Tempur-Pedic credit card is issued by Wells Fargo Bank, N.A. Special terms for 12 months apply to qualifying purchase of $1,000 or more charged with approved credit. Special terms for 24 months apply to qualifying purchase of $1,500 or more charged with approved credit. Special terms for 36 months apply to qualifying purchase of $2,000 or more charged with approved credit. Special terms for 60 months apply to qualifying purchase of $8,000 or more charged with approved credit. The special terms APR will continue to apply until all qualifying purchases are paid in full. The monthly payment for this purchase will be the amount that will pay for the purchase in full in equal payments during the promotional (special terms) period. The APR for Purchases will apply to certain fees such as a late payment fee or if you use the card for other transactions. For new accounts, the APR for Purchases is 28.99%. If you are charged interest in any billing cycle, the minimum interest charge will be $1.00. The information is accurate as of 01/01/2020 and is subject to change. For current information, call us at <a href="tel:+1-800-431-5921">1-800-431-5921</a> Offer expires 12/31/2020.</p><p><sup>2</sup> Monthly payment is based on purchase price alone excluding taxes and shipping. Credit purchases subject to credit approval. Other transactions may affect the monthly payment.</p><p><sup>3</sup> The Tempur-Pedic credit card is issued by Wells Fargo Bank, N.A. Special terms apply to qualifying mattress and Tempur-Ergo adjustable base purchases. The special terms APR will continue to apply until all qualifying purchases are paid in full. The monthly payment for this purchase will be the amount that will pay for the purchase in full in equal payments during the promotional (special terms) period. The APR for Purchases will apply to certain fees such as a late payment fee or if you use the card for other transactions. For new accounts, the APR for Purchases is 28.99%. If you are charged interest in any billing cycle, the minimum interest charge will be $1.00. This information is accurate as of 01/01/2020 and is subject to change. For current information, call us at <a href="tel:+1-800-431-5921">1-800-431-5921</a>. Offer expires 12/31/2020.</p>' class='basket-financing-fine-print'></span>
+    <span data-value='<p><sup>1</sup> The Tempur-Pedic credit card is issued by Wells Fargo Bank, N.A. Special terms for 12 months apply to qualifying purchase of $1,000 or more charged with approved credit. Special terms for 24 months apply to qualifying purchase of $1,500 or more charged with approved credit. Special terms for 36 months apply to qualifying purchase of $2,000 or more charged with approved credit. Special terms for 60 months apply to qualifying purchase of $8,000 or more charged with approved credit. The special terms APR will continue to apply until all qualifying purchases are paid in full. The monthly payment for this purchase will be the amount that will pay for the purchase in full in equal payments during the promotional (special terms) period. The APR for Purchases will apply to certain fees such as a late payment fee or if you use the card for other transactions. For new accounts, the APR for Purchases is 28.99%. If you are charged interest in any billing cycle, the minimum interest charge will be $1.00. The information is accurate as of 01/01/2020 and is subject to change. For current information, call us at <a href="tel:+1-800-431-5921">1-800-431-5921</a> Offer expires 12/31/2020.</p><p><sup>2</sup> Monthly payment is based on purchase price alone excluding taxes and shipping. Credit purchases subject to credit approval. Other transactions may affect the monthly payment.</p><p><sup>3</sup> The Tempur-Pedic credit card is issued by Wells Fargo Bank, N.A. Special terms apply to qualifying mattress and Tempur-Ergo adjustable base purchases. The special terms APR will continue to apply until all qualifying purchases are paid in full. The monthly payment for this purchase will be the amount that will pay for the purchase in full in equal payments during the promotional (special terms) period. The APR for Purchases will apply to certain fees such as a late payment fee or if you use the card for other transactions. For new accounts, the APR for Purchases is 28.99%. If you are charged interest in any billing cycle, the minimum interest charge will be $1.00. This information is accurate as of 01/01/2020 and is subject to change. For current information, call us at <a href="tel:+1-800-431-5921">1-800-431-5921</a>. Offer expires 12/31/2020.</p>' class='checkout-financing-fine-print'></span>
+    <span data-value='<p><sup>1</sup> The Tempur-Pedic credit card is issued by Wells Fargo Bank, N.A. Special terms for 12 months apply to qualifying purchase of $1,000 or more charged with approved credit. Special terms for 24 months apply to qualifying purchase of $1,500 or more charged with approved credit. Special terms for 36 months apply to qualifying purchase of $2,000 or more charged with approved credit. Special terms for 60 months apply to qualifying purchase of $8,000 or more charged with approved credit. The special terms APR will continue to apply until all qualifying purchases are paid in full. The monthly payment for this purchase will be the amount that will pay for the purchase in full in equal payments during the promotional (special terms) period. The APR for Purchases will apply to certain fees such as a late payment fee or if you use the card for other transactions. For new accounts, the APR for Purchases is 28.99%. If you are charged interest in any billing cycle, the minimum interest charge will be $1.00. The information is accurate as of 01/01/2020 and is subject to change. For current information, call us at <a href="tel:+1-800-431-5921">1-800-431-5921</a> Offer expires 12/31/2020.</p><p><sup>2</sup> Monthly payment is based on purchase price alone excluding taxes and shipping. Credit purchases subject to credit approval. Other transactions may affect the monthly payment.</p><p><sup>3</sup> The Tempur-Pedic credit card is issued by Wells Fargo Bank, N.A. Special terms apply to qualifying mattress and Tempur-Ergo adjustable base purchases. The special terms APR will continue to apply until all qualifying purchases are paid in full. The monthly payment for this purchase will be the amount that will pay for the purchase in full in equal payments during the promotional (special terms) period. The APR for Purchases will apply to certain fees such as a late payment fee or if you use the card for other transactions. For new accounts, the APR for Purchases is 28.99%. If you are charged interest in any billing cycle, the minimum interest charge will be $1.00. This information is accurate as of 01/01/2020 and is subject to change. For current information, call us at <a href="tel:+1-800-431-5921">1-800-431-5921</a>. Offer expires 12/31/2020.</p>' class='pre-approval-modal-fine-print'></span>
+    <span data-value='yes' class='enable-basket-id'></span>
+
+    
+    
+    <span data-value='False' class='show-pricing-promise'></span>
+    <span data-value='False' class='show-mattress-pricing-promise'></span>
+    <span data-value='<p>Rest assured that the pricing you see on Tempurpedic.com is the same pricing advertised by Tempur-Pedic Authorized Retailers, so you can shop with confidence no matter where you prefer.</p>' class='pricing-promise-copy'></span>
+
+    
+    <span data-value='yes' class='enable-basket-sidebar-questions-block'></span>
+    <span data-value='yes' class='enable-checkout-sidebar-questions-block'></span>
+    <span data-value='&lt;div class=&quot;rich-text&quot;&gt;&lt;p&gt;&lt;a href=&quot;/return-policy/&quot;&gt;What is your return policy?&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;' class='basket-sidebar-extra-content'></span>
+    <span data-value='&lt;div class=&quot;rich-text&quot;&gt;&lt;p&gt;What is your &lt;a href=&quot;/return-policy/&quot;&gt;return policy&lt;/a&gt;?&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;/shipping-and-delivery/&quot;&gt;When can I expect my order&lt;/a&gt;?&lt;/p&gt;&lt;p&gt;Need help completing your order? Call us at 888-824-2037.&lt;/p&gt;&lt;/div&gt;' class='checkout-sidebar-extra-content'></span>
+
+    
+    <span data-value='True' class='show-pre-approval'></span>
+    <span data-value='' class='show-pre-approval-v2-sdk'></span>
+
+    
+    
+    <span data-value='True' class='show-prequal-toolbox'></span>
+    <span data-value='True' class='show-prequal-cart'></span>
+    <span data-value='False' class='show-prequal-pdp'></span>
+    <span data-value='True' class='show-prequal-footer'></span>
+
+    
+    <span data-value='https://prod.reviewsapi.svc.tsiaws.com/' class='reviews-api'></span>
+
+    
+    
+    <span data-value="{&quot;sweepstakes&quot;: &quot;Sweepstakes Entry&quot;, &quot;sampling&quot;: &quot;Sampling&quot;}" class='reviews-disclosures-settings'></span>
+
+    
+    <span data-value='https://prod.retaillocator.svc.tsiaws.com' class='retail-locator-api'></span>
+
+    
+    <span data-value='https://prod.wfrsplccaapi.svc.tsiaws.com' class='wfrs-plcca-api'></span>
+
+    
+    <span data-value='https://retailservices.wellsfargo.com/ipq/update-customer-choice-value' class='wfrs-prescreen-api'></span>
+
+    
+    <span data-value='False' class='enable-split-pay'></span>
+</div>
+
+
+        <div class="session-keep-alive-modal" style="display: none;" data-place-react="session-keep-alive-modal">
+            <!-- React Component Loads Here -->
+        </div>
+
+        <div class="wfrs-plcca-modal-container" style="display: none;" data-place-react="wfrs-plcca-modal">
+            <!-- React Component Loads Here -->
+        </div>
+
+        <!--[if lt IE 10]> <script src=/static/js/browser_hacks/ie9.495cefba0532.js></script> <![endif]-->
+        
+            <script type='text/javascript'>
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('data-useragent', navigator.userAgent);
+                }
+                // Detect IE10 since HTML conditionals don't work in IE10
+                var isIE10 = false;
+                /*@cc_on
+                if (/^10/.test(@_jscript_version)) {
+                    isIE10 = true;
+                }@*/
+                if(isIE10){
+                    //append script tag to head if IE10
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = "/static/js/browser_hacks/ie9.495cefba0532.js";
+                    document.head.appendChild(script);
+                }
+            </script>
+            <script type="text/javascript" src="/i18n.js?query=tsi-tempurpedic%3Ar2020.01.07.0" defer="defer"></script>
+            <script type="text/javascript" src="/static/bundles/manifest.ee8ce4dc.js" integrity="sha384-yEK0+FEAFs0rKNMDkFJs8LJAT959YJhvxwLbaOEvGNyfJ2KTfH2cyfqF0oTUTIMZ" defer></script>
+            <script type="text/javascript" src="/static/bundles/vendor.bd90464c.chunk.js" integrity="sha384-+ypTf6qTOTr+CXsa85HB6pMB2CjO0ntEpSQvci2QVJ81XH0axG6Tmnq9Yd2k7Ci/" defer></script>
+            <script type="text/javascript" src="/static/bundles/app.f40cef35.chunk.js" integrity="sha384-CI7O7JqN9kNtcB4AhrCb/DuArmY+RFK/Ktgr9xElNyg1XoX/3aqFCUEldDE/Wmpt" defer></script>
+        
+        <!-- Web Font Loader -->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script>
+    WebFontConfig = {
+        google: {
+            families: [
+            'Roboto+Slab',
+            'Source+Sans+Pro:300,300i,400,400i,700,700i'
+            ]
+        },
+        // fonts.com
+        monotype: {
+            projectId: 'c7ea776e-a041-41c0-9510-3389ddce41bf',
+            loadAllFonts: true // optional, loads all project fonts
+        }
+    };
+</script>
+
+
+        <!-- BEGIN GCR Badge Code -->
+<script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
+
+        
+
+
+
+<div class="ie-container">
+    <div class="ie">
+        <a class="ie__close-btn" onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'>Close</a>
+        <h1 class="ie__title">Did you know that your browser is out of date?</h1>
+        <p class="ie__copy">Your browser is out of date, and may not be compatiable with our website.  A list of the most popular web browsers can be found below.
+        <br>
+        Just click on the icons to go to the download page and upgrade your browser.</p>
+
+        <ul class="ie__list">
+            <li class="ie__list-item">
+                <a title="Get Google Chrome" href="http://www.google.com/chrome" target="_blank">
+                    
+<noscript>
+    <img src="/static/img/icons/chrome_32x32.78250de97890.png"
+         
+             alt="Get Google Chrome"
+         
+             title="Get Google Chrome"
+         
+    />
+</noscript>
+<img data-sizes="auto"
+     data-src="/static/img/icons/chrome_32x32.78250de97890.png"
+     
+         alt="Get Google Chrome"
+     
+         title="Get Google Chrome"
+     
+         class=" lazyload"
+     
+/>
+
+                    <br />
+                    Google Chrome
+                </a>
+            </li>
+            <li class="ie__list-item">
+                <a title="Get Mozilla Firefox" href="http://www.firefox.com" target="_blank">
+                    
+<noscript>
+    <img src="/static/img/icons/firefox_32x32.f82f0993390a.png"
+         
+             alt="Get Mozilla Firefox"
+         
+             title="Get Mozilla Firefox"
+         
+    />
+</noscript>
+<img data-sizes="auto"
+     data-src="/static/img/icons/firefox_32x32.f82f0993390a.png"
+     
+         alt="Get Mozilla Firefox"
+     
+         title="Get Mozilla Firefox"
+     
+         class=" lazyload"
+     
+/>
+
+                    <br />
+                    Mozilla Firefox
+                </a>
+            </li>
+            <li class="ie__list-item">
+                <a title="Get Apple Safari" href="http://www.apple.com/safari/download" target="_blank">
+                    
+<noscript>
+    <img src="/static/img/icons/safari_32x32.e3c4df1dc5de.png"
+         
+             alt="Get Apple Safari"
+         
+             title="Get Apple Safari"
+         
+    />
+</noscript>
+<img data-sizes="auto"
+     data-src="/static/img/icons/safari_32x32.e3c4df1dc5de.png"
+     
+         alt="Get Apple Safari"
+     
+         title="Get Apple Safari"
+     
+         class=" lazyload"
+     
+/>
+
+                    <br />
+                    Apple Safari
+                </a>
+            </li>
+            <li class="ie__list-item">
+                <a title="Get Internet Explorer" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">
+                    
+<noscript>
+    <img src="/static/img/icons/edge_32x32.4048148c38ef.png"
+         
+             alt="Get Internet Explorer"
+         
+             title="Get Internet Explorer"
+         
+    />
+</noscript>
+<img data-sizes="auto"
+     data-src="/static/img/icons/edge_32x32.4048148c38ef.png"
+     
+         alt="Get Internet Explorer"
+     
+         title="Get Internet Explorer"
+     
+         class=" lazyload"
+     
+/>
+
+                    <br />
+                    Internet Explorer
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    
+    </body>
+</html>
