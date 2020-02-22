@@ -1,0 +1,34 @@
+Assessment short name	US	EU	WEB	STOCK	APP
+No PII collected	12	2	0	3	3
+PII collected for ads	21	0	8	42	12
+PII only collected for service	4	0	2	9	2
+Tracks users on other websites	16	0	1	8	1
+Several types of PII collected	21	0	25	94	17
+					
+No PII shared with third parties	2	0	0	0	1
+PII only shared for service	8	0	1	16	3
+Several types of PII shared	1	0	4	9	1
+Ad providers track users	0	0	0	1	1
+Only aggregated PII shared	5	0	1	4	3
+PII shared for marketing	6	0	9	44	11
+Health data shared	1	0	0	5	1
+Some PII aggregated before sharing	9	0	10	50	13
+No sharing in certain conditions	3	1	1	10	4
+Location or address shared	0	0	1	2	0
+Third parties do not receive PII	6	0	1	5	3
+					
+No choice	6	1	0	11	1
+Provides opt-in choices	8	3	10	40	9
+Provides opt-out choices	56	4	31	170	32
+Clear links to control data	61	3	25	79	14
+					
+Access and deletion of PII	40	20	31	223	44
+					
+PII retained for defined period	10	2	4	5	0
+PII retained indefinitely	106	5	19	83	25
+					
+Covers security measures	47	2	18	102	24
+					
+Notice when policy changes	3	1	0	2	2
+					
+Section on children's privacy	69	0	28	171	36
