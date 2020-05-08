@@ -1,4 +1,4 @@
-# SOUPS20GovVsCompanies
+# GovVsCompanies
 
 This repository contains the data for the following paper:
 
