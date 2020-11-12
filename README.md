@@ -2,7 +2,7 @@
 
 This repository contains the data for the following paper:
 
-Comparing Privacy Policies of Government Agencies and Companies: a Study Using Privacy Policy Analysis Tools
+Comparing Privacy Policies of Government Agencies and Companies: A Study Using Machine-Learning-Based Privacy Policy Analysis Tools
 
 We make our data, including links to all the privacy policies, their downloaded text used in the experiments, the results of running the tools on them, and the SPSS outputs publicly available.
 
